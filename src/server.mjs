@@ -8,6 +8,7 @@ import { createMeihuaChart } from "./domain/meihuaEngine.mjs";
 import { indexes, loadDomainData } from "./domain/dataStore.mjs";
 import { getBlogPost, getKnowledgeItem, getKnowledgeOverview, listBlogPosts, searchKnowledge } from "./domain/knowledge.mjs";
 import { buildLiuyaoReport, buildMeihuaReport } from "./domain/reportBuilder.mjs";
+import { createAnonymousAILimiter, generateGroundedAIReport, providerFromEnv, questionDigest } from "./domain/aiReport.mjs";
 import { loadRuleProfile, resolveFeatureFlags } from "./production/index.mjs";
 
 const ROOT = process.cwd();
@@ -27,10 +28,11 @@ const MIME = {
 
 const history = [];
 const records = new Map();
+const aiLimiter = createAnonymousAILimiter();
 
 const DEFAULT_SETTINGS = Object.freeze({
   version: "1.0.0",
-  timezone: "Asia/Shanghai",
+  timezone: "",
   defaultCastMethod: "liuyao_manual",
   terminology: "beginner",
   reportLanguage: "zh-CN",
@@ -42,6 +44,7 @@ const ERROR_CODE_BY_PATTERN = [
   [/values|coins|line|number|method/i, "VALIDATION_ERROR"],
   [/rule|profile|finding/i, "RULE_ANALYSIS_FAILED"],
   [/history|storage|persist|file/i, "STORAGE_WRITE_FAILED"],
+  [/AI_RATE_LIMITED|rate limit/i, "AI_RATE_LIMITED"],
 ];
 
 function buildNarrative(type, result) {
@@ -91,7 +94,9 @@ function saveSettings(settings) {
     terminology: settings.terminology,
     reportLanguage: settings.reportLanguage,
   };
-  if (!/^[A-Za-z_]+\/[A-Za-z0-9_+\-/]+$/u.test(next.timezone)) {
+  try {
+    new Intl.DateTimeFormat("en-US", { timeZone: next.timezone }).format(new Date());
+  } catch {
     const err = new Error("timezone must be an IANA timezone.");
     err.publicCode = "VALIDATION_ERROR";
     throw err;
@@ -136,6 +141,7 @@ function historySummary(record) {
     },
     evidenceCount: record.result.report?.evidenceBudget?.actual ?? record.result.report?.evidence?.length ?? 0,
     reportTemplateVersion: record.result.narrativeReport?.reportTemplateVersion,
+    aiStatus: record.result.aiReportBundle?.validationStatus ?? "NOT_GENERATED",
   };
 }
 
@@ -152,9 +158,21 @@ function error(res, status, code, message, details) {
 }
 
 function publicErrorCode(err) {
+  if (err.code === "AI_RATE_LIMITED") return "AI_RATE_LIMITED";
   if (err.publicCode) return err.publicCode;
   const message = String(err.message ?? "");
   return ERROR_CODE_BY_PATTERN.find(([pattern]) => pattern.test(message))?.[1] ?? "UNKNOWN_ERROR";
+}
+
+function requestIp(req) {
+  return String(req.headers["x-forwarded-for"] ?? req.socket.remoteAddress ?? "unknown").split(",")[0].trim();
+}
+
+function aiMockMode(req) {
+  if (process.env.NODE_ENV === "production") return null;
+  const mode = req.headers["x-six-ai-mock"];
+  if (!mode) return null;
+  return ["success", "slow_success", "throw", "empty", "invalid_json", "bad_fact", "bad_ref", "unsafe"].includes(mode) ? mode : null;
 }
 
 function notFound(res, message = "Resource not found.") {
@@ -251,7 +269,22 @@ function exportRecord(record) {
     templateReport: result.narrativeReport,
     engineVersion: result.engineVersions,
     calendarVersion: result.chart.calendar?.policyVersion,
+    calendarProvider: result.chart.calendar?.calendarProvider,
+    calendarProviderVersion: result.chart.calendar?.calendarVersion,
+    calendarPolicy: result.chart.calendar?.calendarPolicy,
+    calculatedFactsSnapshot: result.chart.calendar?.calculatedFactsSnapshot,
     ruleProfileVersion: result.engineVersions?.rules,
+    aiReport: result.aiReportBundle ? {
+      aiReport: result.aiReportBundle.aiReport,
+      aiSchemaVersion: result.aiReportBundle.aiSchemaVersion,
+      aiProvider: result.aiReportBundle.aiProvider,
+      aiModel: result.aiReportBundle.aiModel,
+      promptVersion: result.aiReportBundle.promptVersion,
+      generatedAt: result.aiReportBundle.generatedAt,
+      validationStatus: result.aiReportBundle.validationStatus,
+      fallbackUsed: result.aiReportBundle.fallbackUsed,
+      failureCode: result.aiReportBundle.failureCode,
+    } : null,
     createdAt: record.createdAt,
     updatedAt: record.updatedAt,
   };
@@ -533,7 +566,48 @@ async function route(req, res) {
           createdAt: record.createdAt,
           narrativeReport: record.result.narrativeReport ?? buildNarrative(record.type, record.result),
           result: record.result,
+          aiReportBundle: record.result.aiReportBundle ?? null,
         });
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/v1\/reports\/([^/]+)\/ai$/u);
+      if (req.method === "POST" && match) {
+        const record = records.get(match[1]);
+        if (!record) {
+          notFound(res);
+          return;
+        }
+        if (record.result.aiReportBundle?.validationStatus === "VALID") {
+          json(res, 200, { ...record.result.aiReportBundle, reused: true });
+          return;
+        }
+        aiLimiter.assertAllowed({
+          ip: requestIp(req),
+          deviceId: String(req.headers["x-six-device-id"] ?? "unknown"),
+        });
+        const provider = providerFromEnv({ rootDir: ROOT, mockMode: aiMockMode(req) });
+        const bundle = await generateGroundedAIReport({
+          result: record.result,
+          type: record.type,
+          provider,
+          language: loadSettings().reportLanguage,
+        });
+        record.result.aiReportBundle = bundle;
+        record.updatedAt = new Date().toISOString();
+        savePersistedRecords();
+        if (bundle.fallbackUsed) {
+          console.error("AI report fallback.", {
+            reportId: record.id,
+            type: record.type,
+            provider: bundle.aiProvider,
+            model: bundle.aiModel,
+            failureCode: bundle.failureCode,
+            question: questionDigest(record.question),
+          });
+        }
+        json(res, 200, bundle);
         return;
       }
     }
@@ -584,7 +658,7 @@ async function route(req, res) {
     serveStatic(req, res, url.pathname);
   } catch (err) {
     const code = publicErrorCode(err);
-    const status = code === "REPORT_NOT_FOUND" ? 404 : 400;
+    const status = code === "REPORT_NOT_FOUND" ? 404 : code === "AI_RATE_LIMITED" ? 429 : 400;
     console.error("Request failed.", { code, message: err.message });
     error(res, status, code, err.message, process.env.NODE_ENV === "production" ? undefined : err.details);
   }

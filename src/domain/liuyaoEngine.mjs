@@ -262,6 +262,9 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
       dataVersion: "v1.3",
       ruleProfile: bundle.profile.profile_code,
       calendarPolicy: calendar.policyVersion,
+      calendarProvider: calendar.calendarProvider,
+      calendarVersion: calendar.calendarVersion,
+      calculatedFactsSnapshot: calendar.calculatedFactsSnapshot,
       sourceFiles: ["hexagrams-64.json", "eight-palaces.json", "najia-rules.json", "six-spirits.json"],
     },
   };

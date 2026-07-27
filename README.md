@@ -4,6 +4,12 @@ This repository now contains the v1.3 `LIUYAO_CORE_V1` production whitelist impl
 
 Current local Web status: `LOCAL_PRODUCT_COMPLETE` for the W1 local-only product scope.
 
+Current Public Beta P1 status: `PRODUCTION_CALENDAR_READY`.
+
+Current Public Beta P2 implementation status: `GROUNDED_AI_REPORT_READY`.
+
+Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, and UI behavior without external network dependency.
+
 ## Scope
 
 - Explicit `RuleProfileLoader`, defaulting to `LIUYAO_CORE_V1`.
@@ -19,6 +25,9 @@ Current local Web status: `LOCAL_PRODUCT_COMPLETE` for the W1 local-only product
 - File-backed local history and report replay in `data/runtime/history.json`.
 - Structured narrative reports with section-level `findingIds`, `knowledgeIds`, engine versions, and report template versions.
 - Playwright E2E coverage for Liuyao coin/manual flows, invalid input, Meihua two-number/time flows, history replay, friendly errors, content detail routes, settings, export/clear history, and mobile viewports 360/390/430.
+- Production calendar provider `CAL_STD_V1` with structured Gregorian, IANA timezone, four-pillar, solar-term boundary, month-build, day-chen, xun, xun-kong, day-change policy, provider version, and calculated-facts snapshot output.
+- Calendar golden QA with 240 fixtures, including 144 `lunar_python@1.4.8` cross-checked Asia/Shanghai anchor/boundary cases and timezone/DST expansion cases.
+- Grounded AI report pipeline with AI input contract, OpenAI provider, deterministic fallback provider, schema validation, fact fidelity validation, safety validation, anonymous rate limits, prompt versioning, report-level reuse, and fallback-safe UI.
 
 ## Commands
 
@@ -26,7 +35,12 @@ Current local Web status: `LOCAL_PRODUCT_COMPLETE` for the W1 local-only product
 npm run validate:v13
 npm test
 npm run test:e2e
+npm run test:ai
+npm run test:calendar
+npm run fixtures:calendar
 npm run validate
+npm run validate:p1
+npm run validate:p2
 npm run validate:w1
 npm run dev
 ```
@@ -35,4 +49,4 @@ npm run dev
 
 Production code executes rules only through `data/production/core-v1-rule-profile.json` and its `core-v1-*` datasets. Candidate rule pools are present only for whitelist traceability checks and remain outside the executable rule set.
 
-The current calendar adapter is `CAL_STD_V1_LIGHT`: it covers timezone normalization and local MVP chart context, but it is not a full solar-term calendar provider for production astrology QA. Runtime history under `data/runtime/` is local development state and can be cleared without changing source seed data.
+New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CAL_STD_V1_LIGHT` remain readable and are not rewritten. Runtime history under `data/runtime/` is local development state and can be cleared without changing source seed data.

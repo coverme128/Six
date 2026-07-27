@@ -1,17 +1,36 @@
 import { createHash } from "node:crypto";
 
-const STEM_ZH = new Map([
-  ["jia", "甲"], ["yi", "乙"], ["bing", "丙"], ["ding", "丁"], ["wu", "戊"],
-  ["ji", "己"], ["geng", "庚"], ["xin", "辛"], ["ren", "壬"], ["gui", "癸"],
+import { LunarUtil, Solar } from "lunar-javascript";
+
+const CALENDAR_POLICY = "CAL_STD_V1";
+const PROVIDER_NAME = "lunar-javascript";
+const PROVIDER_VERSION = "1.7.7";
+const SUPPORTED_YEAR_RANGE = Object.freeze({ start: 1901, end: 2099 });
+
+const STEM_ZH_TO_CODE = new Map([
+  ["甲", "jia"], ["乙", "yi"], ["丙", "bing"], ["丁", "ding"], ["戊", "wu"],
+  ["己", "ji"], ["庚", "geng"], ["辛", "xin"], ["壬", "ren"], ["癸", "gui"],
 ]);
 
-const BRANCH_ZH = new Map([
-  ["zi", "子"], ["chou", "丑"], ["yin", "寅"], ["mao", "卯"], ["chen", "辰"], ["si", "巳"],
-  ["wu", "午"], ["wei", "未"], ["shen", "申"], ["you", "酉"], ["xu", "戌"], ["hai", "亥"],
+const BRANCH_ZH_TO_CODE = new Map([
+  ["子", "zi"], ["丑", "chou"], ["寅", "yin"], ["卯", "mao"], ["辰", "chen"], ["巳", "si"],
+  ["午", "wu"], ["未", "wei"], ["申", "shen"], ["酉", "you"], ["戌", "xu"], ["亥", "hai"],
 ]);
 
-function mod(value, base) {
-  return ((value % base) + base) % base;
+const BRANCH_CODE_TO_ZH = new Map([...BRANCH_ZH_TO_CODE.entries()].map(([key, value]) => [value, key]));
+
+function assertValidTimezone(timeZone) {
+  try {
+    new Intl.DateTimeFormat("en-US", { timeZone }).format(new Date("2026-01-01T00:00:00Z"));
+  } catch {
+    const err = new Error("timezone must be a valid IANA timezone.");
+    err.publicCode = "CALENDAR_CALCULATION_FAILED";
+    throw err;
+  }
+}
+
+function pad(value) {
+  return String(value).padStart(2, "0");
 }
 
 function localParts(date, timeZone) {
@@ -36,53 +55,208 @@ function localParts(date, timeZone) {
   };
 }
 
-function sexagenaryAt(sexagenary, indexOneBased) {
-  return sexagenary[mod(indexOneBased - 1, 60)];
+function offsetMinutes(date, parts) {
+  const localAsUtc = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour, parts.minute, parts.second);
+  return Math.round((localAsUtc - date.getTime()) / 60000);
 }
 
-function pillarName(item) {
-  return `${STEM_ZH.get(item.stem)}${BRANCH_ZH.get(item.branch)}`;
+function offsetText(minutes) {
+  const sign = minutes >= 0 ? "+" : "-";
+  const abs = Math.abs(minutes);
+  return `${sign}${pad(Math.floor(abs / 60))}:${pad(abs % 60)}`;
 }
 
-function hourBranch(hour) {
-  const branches = ["zi", "chou", "yin", "mao", "chen", "si", "wu", "wei", "shen", "you", "xu", "hai"];
-  return branches[Math.floor(((hour + 1) % 24) / 2)];
+function localIso(parts, offset) {
+  return `${parts.year}-${pad(parts.month)}-${pad(parts.day)}T${pad(parts.hour)}:${pad(parts.minute)}:${pad(parts.second)}${offsetText(offset)}`;
 }
 
-export function buildCalendarContext({ instantUtc, timezone = "Asia/Shanghai" }, data) {
+function splitPillar(name) {
+  const stemName = name.slice(0, 1);
+  const branchName = name.slice(1, 2);
+  return {
+    name,
+    stem: STEM_ZH_TO_CODE.get(stemName),
+    stemName,
+    branch: BRANCH_ZH_TO_CODE.get(branchName),
+    branchName,
+  };
+}
+
+function parseVoidBranches(value) {
+  return [...String(value)].map((branchName) => ({
+    branch: BRANCH_ZH_TO_CODE.get(branchName),
+    branchName,
+  }));
+}
+
+function solarToStruct(solar) {
+  return {
+    year: solar.getYear(),
+    month: solar.getMonth(),
+    day: solar.getDay(),
+    hour: solar.getHour(),
+    minute: solar.getMinute(),
+    second: solar.getSecond(),
+    localDateTime: `${solar.toYmd()}T${pad(solar.getHour())}:${pad(solar.getMinute())}:${pad(solar.getSecond())}`,
+  };
+}
+
+function termStruct(term) {
+  if (!term) return null;
+  return {
+    name: term.getName(),
+    isJie: term.isJie(),
+    isQi: term.isQi(),
+    local: solarToStruct(term.getSolar()),
+  };
+}
+
+function currentTerm(lunar, parts) {
+  const table = lunar.getJieQiTable();
+  const current = `${parts.year}-${pad(parts.month)}-${pad(parts.day)} ${pad(parts.hour)}:${pad(parts.minute)}:${pad(parts.second)}`;
+  for (const [name, solar] of Object.entries(table)) {
+    if (solar.toYmdHms() === current) return { name, solar };
+  }
+  return null;
+}
+
+function validateSupportedDate(parts) {
+  if (parts.year < SUPPORTED_YEAR_RANGE.start || parts.year > SUPPORTED_YEAR_RANGE.end) {
+    const err = new Error(`CAL_STD_V1 supports years ${SUPPORTED_YEAR_RANGE.start}-${SUPPORTED_YEAR_RANGE.end}.`);
+    err.publicCode = "CALENDAR_CALCULATION_FAILED";
+    throw err;
+  }
+}
+
+function buildSnapshot(context) {
+  return {
+    gregorian: context.gregorian,
+    timezone: context.timezone,
+    pillars: context.pillars,
+    solarTerm: context.solarTerm,
+    monthBuild: context.monthBuild,
+    dayChen: context.dayChen,
+    xun: context.xun,
+    dayChangePolicy: context.dayChangePolicy,
+    provider: context.provider,
+  };
+}
+
+export function buildCalendarContext({ instantUtc, timezone = "Asia/Shanghai" } = {}) {
+  assertValidTimezone(timezone);
   const date = instantUtc ? new Date(instantUtc) : new Date();
   if (Number.isNaN(date.getTime())) {
-    throw new Error("instantUtc must be a valid ISO date string.");
+    const err = new Error("instantUtc must be a valid ISO date string.");
+    err.publicCode = "CALENDAR_CALCULATION_FAILED";
+    throw err;
   }
 
   const parts = localParts(date, timezone);
-  const localNoonUtc = Date.UTC(parts.year, parts.month - 1, parts.day, 12);
-  const anchorNoonUtc = Date.UTC(2025, 0, 1, 12);
-  const dayOffset = Math.round((localNoonUtc - anchorNoonUtc) / 86400000);
-  const anchorIndex = 7; // 2025-01-01 fixture is 庚午.
-  const dayPillar = sexagenaryAt(data.sexagenary, anchorIndex + dayOffset);
+  validateSupportedDate(parts);
+  const offset = offsetMinutes(date, parts);
+  const solar = Solar.fromYmdHms(parts.year, parts.month, parts.day, parts.hour, parts.minute, parts.second);
+  const lunar = solar.getLunar();
+  const eightChar = lunar.getEightChar();
+  eightChar.setSect(2);
 
-  const monthBranchByCivilMonth = ["chou", "yin", "mao", "chen", "si", "wu", "wei", "shen", "you", "xu", "hai", "zi"];
-  const monthBranch = monthBranchByCivilMonth[parts.month - 1];
-  const hour = hourBranch(parts.hour);
-  const hash = createHash("sha256").update(JSON.stringify({ instantUtc: date.toISOString(), timezone, parts, dayPillar })).digest("hex");
+  const pillars = {
+    year: splitPillar(eightChar.getYear()),
+    month: splitPillar(eightChar.getMonth()),
+    day: splitPillar(eightChar.getDay()),
+    hour: splitPillar(eightChar.getTime()),
+  };
+  const xunName = LunarUtil.getXun(pillars.day.name);
+  const xunKongName = LunarUtil.getXunKong(pillars.day.name);
+  const current = currentTerm(lunar, parts);
 
-  return {
-    policyVersion: "CAL_STD_V1_LIGHT",
-    note: "Lightweight calendar adapter for local MVP. Replace with CalendarProviderAdapter before production astrology QA.",
+  const context = {
+    policyVersion: CALENDAR_POLICY,
+    calendarPolicy: CALENDAR_POLICY,
+    calendarProvider: PROVIDER_NAME,
+    calendarVersion: PROVIDER_VERSION,
     instantUtc: date.toISOString(),
     timezone,
     local: parts,
-    year: parts.year,
-    monthBranch,
-    dayStem: dayPillar.stem,
-    dayBranch: dayPillar.branch,
-    dayPillar: pillarName(dayPillar),
-    hourBranch: hour,
+    gregorian: {
+      instantUtc: date.toISOString(),
+      timezone,
+      offsetMinutes: offset,
+      offset: offsetText(offset),
+      localDateTime: localIso(parts, offset),
+      parts,
+    },
+    pillars,
+    yearPillar: pillars.year.name,
+    monthPillar: pillars.month.name,
+    dayPillar: pillars.day.name,
+    hourPillar: pillars.hour.name,
+    yearStem: pillars.year.stem,
+    yearBranch: pillars.year.branch,
+    monthStem: pillars.month.stem,
+    monthBranch: pillars.month.branch,
+    dayStem: pillars.day.stem,
+    dayBranch: pillars.day.branch,
+    hourStem: pillars.hour.stem,
+    hourBranch: pillars.hour.branch,
+    solarTerm: {
+      current: current ? { name: current.name, local: solarToStruct(current.solar) } : null,
+      previousJie: termStruct(lunar.getPrevJie(false)),
+      nextJie: termStruct(lunar.getNextJie(false)),
+      previousJieQi: termStruct(lunar.getPrevJieQi(false)),
+      nextJieQi: termStruct(lunar.getNextJieQi(false)),
+      boundaryPrecision: "second",
+      source: `${PROVIDER_NAME}@${PROVIDER_VERSION}`,
+    },
+    monthBuild: {
+      branch: pillars.month.branch,
+      branchName: pillars.month.branchName,
+      source: "month_pillar_branch_by_solar_jie_boundary",
+    },
+    dayChen: {
+      branch: pillars.day.branch,
+      branchName: pillars.day.branchName,
+      source: "day_pillar_branch",
+    },
+    xun: {
+      name: xunName,
+      voidBranches: parseVoidBranches(xunKongName),
+      voidBranchNames: xunKongName,
+    },
+    dayChangePolicy: {
+      dateChange: "midnight",
+      ziHourStart: "23:00",
+      earlyZiHour: "00:00-00:59",
+      lateZiHour: "23:00-23:59",
+      lateZiChangesDayPillar: false,
+      lateZiHourPillarUsesNextDayStem: true,
+      trueSolarTimeSupported: false,
+      supportedYearRange: SUPPORTED_YEAR_RANGE,
+    },
     provider: {
-      name: "six-light-calendar",
-      version: "1.0.0",
-      outputHash: hash,
+      name: PROVIDER_NAME,
+      version: PROVIDER_VERSION,
+      policyVersion: CALENDAR_POLICY,
+      dataSource: "lunar-javascript ShouXing solar-term calculation",
+      crossCheck: "fixtures/calendar/calendar-golden-asia-shanghai-v1.json lunar_python@1.4.8-crosscheck",
     },
   };
+  context.calculatedFactsSnapshot = buildSnapshot(context);
+  context.provider.outputHash = createHash("sha256").update(JSON.stringify(context.calculatedFactsSnapshot)).digest("hex");
+  return context;
 }
+
+export const calendarProviderDecision = Object.freeze({
+  policyVersion: CALENDAR_POLICY,
+  provider: PROVIDER_NAME,
+  providerVersion: PROVIDER_VERSION,
+  defaultTimezoneSource: "browser_detected_iana_timezone",
+  serverFallbackTimezone: "Asia/Shanghai",
+  monthPillarBoundary: "solar_jie_boundary",
+  dayChange: "midnight",
+  lateZiChangesDayPillar: false,
+  lateZiHourPillarUsesNextDayStem: true,
+  trueSolarTimeSupported: false,
+  supportedYearRange: SUPPORTED_YEAR_RANGE,
+});
+
+export { BRANCH_CODE_TO_ZH };

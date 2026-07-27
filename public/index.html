@@ -313,6 +313,7 @@
         RULE_ANALYSIS_FAILED: "排盘已完成，但详细分析暂时不可用。",
         STORAGE_READ_FAILED: "暂时无法读取历史记录。",
         STORAGE_WRITE_FAILED: "结果已生成，但保存失败。",
+        AI_RATE_LIMITED: "智能解读请求过于频繁，请稍后再试。",
         NETWORK_ERROR: "网络连接异常，请稍后重试。",
         UNKNOWN_ERROR: "出现了未预期的问题，请重试。"
       };
@@ -413,6 +414,35 @@
         return true;
       }
 
+      function browserTimezone() {
+        return Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Shanghai";
+      }
+
+      function normalizeSettings(settings) {
+        const detected = browserTimezone();
+        return {
+          ...settings,
+          timezone: settings?.timezone || detected,
+          timezoneSource: settings?.timezone ? "saved" : "browser"
+        };
+      }
+
+      function deviceId() {
+        const key = "six_device_id";
+        const existing = localStorage.getItem(key);
+        if (existing) return existing;
+        const next = `dev_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+        localStorage.setItem(key, next);
+        return next;
+      }
+
+      function aiHeaders() {
+        const headers = { "x-six-device-id": deviceId() };
+        const mock = localStorage.getItem("six_ai_mock");
+        if (mock && location.hostname === "127.0.0.1") headers["x-six-ai-mock"] = mock;
+        return headers;
+      }
+
       function renderLineInputs(values = [7, 8, 9, 7, 8, 6]) {
         lineInputs.replaceChildren();
         values.forEach((value, index) => {
@@ -477,7 +507,7 @@
           ]));
         }
         return el("div", { class: "card" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: "核心结论" }), chip(narrativeReport.reportTemplateVersion, "signal")]),
+          el("div", { class: "card-head" }, [el("h3", { text: "基础规则分析" }), chip(narrativeReport.reportTemplateVersion, "signal")]),
           list
         ]);
       }
@@ -539,6 +569,50 @@
         ]);
       }
 
+      function renderAIReportCard(bundle, onRetry) {
+        if (!bundle) {
+          return el("div", { class: "card", "data-testid": "ai-report-card" }, [
+            el("div", { class: "card-head" }, [el("h3", { text: "AI 智能解读" }), chip("loading", "timing")]),
+            el("p", { text: "正在生成智能解读..." })
+          ]);
+        }
+        if (bundle.fallbackUsed || !bundle.aiReport) {
+          return el("div", { class: "card safety", "data-testid": "ai-report-card" }, [
+            el("div", { class: "card-head" }, [el("h3", { text: "AI 智能解读" }), chip("fallback", "timing")]),
+            el("p", { text: "智能解读暂时不可用，以下内容由确定性排盘和基础规则生成。" }),
+            el("div", { class: "meta" }, [chip(bundle.aiProvider ?? "provider"), chip(bundle.failureCode ?? "fallback")]),
+            onRetry ? el("div", { class: "actions" }, [actionButton("重试智能解读", onRetry, true)]) : null
+          ]);
+        }
+        const report = bundle.aiReport;
+        return el("section", { class: "panel", "data-testid": "ai-report-card" }, [
+          el("div", { class: "panel-head" }, [el("h2", { text: "AI 智能解读" }), chip(bundle.aiProvider ?? "ai", "signal")]),
+          el("div", { class: "panel-body" }, [
+            el("div", { class: "card" }, [el("h3", { text: "概要" }), el("p", { text: report.summary })]),
+            el("div", { class: "card" }, [el("h3", { text: "当前态势" }), el("p", { text: report.currentSituation })]),
+            el("div", { class: "summary-band" }, [
+              el("div", { class: "card" }, [el("h3", { text: "支持因素" }), el("div", { class: "list" }, report.supportingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), el("div", { class: "meta" }, item.evidenceRefs.map((ref) => chip(ref)))])))]),
+              el("div", { class: "card" }, [el("h3", { text: "阻碍因素" }), el("div", { class: "list" }, report.blockingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), el("div", { class: "meta" }, item.evidenceRefs.map((ref) => chip(ref)))])))]),
+              el("div", { class: "card" }, [el("h3", { text: "趋势" }), el("div", { class: "meta" }, [chip(report.outcomeTrend.label, "signal")]), el("p", { text: report.outcomeTrend.text })])
+            ]),
+            el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: report.changeDirection })]),
+            report.timingWindows.length ? el("div", { class: "card" }, [el("h3", { text: "时间窗口" }), el("div", { class: "list" }, report.timingWindows.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), chip(item.candidateRef, "timing")])) )]) : null,
+            el("div", { class: "card" }, [el("h3", { text: "行动建议" }), el("div", { class: "list" }, report.actionSuggestions.map((item) => el("div", { class: "item" }, [el("p", { text: item })])))]),
+            el("div", { class: "card safety" }, [el("h3", { text: "限制说明" }), el("p", { text: [...report.limitations, report.disclaimer].join(" ") })])
+          ])
+        ]);
+      }
+
+      async function generateAIReport(id, mount) {
+        mount.replaceChildren(renderAIReportCard(null));
+        try {
+          const bundle = await requestJson(`/api/v1/reports/${encodeURIComponent(id)}/ai`, { method: "POST", headers: aiHeaders() });
+          mount.replaceChildren(renderAIReportCard(bundle, () => generateAIReport(id, mount)));
+        } catch (error) {
+          mount.replaceChildren(errorPanel(error, [{ label: "重试智能解读", onClick: () => generateAIReport(id, mount) }]));
+        }
+      }
+
       async function renderReportRoute(id) {
         showView("reportView");
         activeNav("/reports");
@@ -556,6 +630,7 @@
           const support = reportSection(narrative, "support");
           const blocking = reportSection(narrative, "blocking");
           const change = reportSection(narrative, "change");
+          const aiMount = el("div", { "data-testid": "ai-report-mount" });
           view.replaceChildren(el("div", { class: "result-grid", "data-testid": "report-page" }, [
             el("div", { class: "route-title" }, [
               el("h2", { text: data.type === "liuyao" ? "六爻报告" : "梅花报告" }),
@@ -573,6 +648,7 @@
               el("div", { class: "card" }, [el("h3", { text: "主要阻碍" }), el("p", { text: blocking?.text ?? "暂无明确阻碍项。" })]),
               el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: change?.text ?? "变化方向需要继续观察。" })])
             ]),
+            aiMount,
             renderNarrativeReport(narrative),
             renderEvidenceSummary(data),
             renderTiming(data),
@@ -587,6 +663,11 @@
               actionButton("返回历史", () => navigate("/history"), true)
             ])
           ]));
+          if (data.aiReportBundle ?? result.aiReportBundle) {
+            aiMount.replaceChildren(renderAIReportCard(data.aiReportBundle ?? result.aiReportBundle, () => generateAIReport(id, aiMount)));
+          } else {
+            generateAIReport(id, aiMount);
+          }
           setStatus("ready", "ok");
         } catch (error) {
           view.replaceChildren(errorPanel(error, [
@@ -621,7 +702,7 @@
               topic: liuyaoForm.elements.topic.value,
               subtype: liuyaoForm.elements.subtype.value,
               ...castPayload,
-              calendar: { timezone: state.settings?.timezone ?? "Asia/Shanghai" }
+              calendar: { timezone: state.settings?.timezone || browserTimezone() }
             })
           });
           navigate(`/reports/${result.chart.id}`);
@@ -816,7 +897,7 @@
       async function renderSettings() {
         showView("settingsView"); activeNav("/app/settings"); setTitle("设置", "本地偏好和历史数据管理。");
         const view = document.querySelector("#settingsView");
-        const settings = state.settings ?? await requestJson("/api/v1/settings");
+        const settings = normalizeSettings(state.settings ?? await requestJson("/api/v1/settings"));
         const form = el("form", { class: "panel", id: "settingsForm" });
         form.append(el("div", { class: "panel-head" }, [el("h2", { text: "设置" }), chip("local")]));
         form.append(el("div", { class: "panel-body" }, [
@@ -833,7 +914,7 @@
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
           try {
-            state.settings = await requestJson("/api/v1/settings", { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+          state.settings = normalizeSettings(await requestJson("/api/v1/settings", { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form))) }));
             applySettings();
             setStatus("settings saved", "ok");
           } catch (error) {
@@ -884,7 +965,7 @@
         const [metadata, topics, settings] = await Promise.all([requestJson("/api/metadata"), requestJson("/api/topics"), requestJson("/api/v1/settings")]);
         state.metadata = metadata;
         state.topics = topics.items;
-        state.settings = settings;
+        state.settings = normalizeSettings(settings);
         profileLabel.textContent = metadata.profile;
         totalCount.textContent = metadata.counts.total;
         topicCount.textContent = metadata.counts.yongshenMappings;
