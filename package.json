@@ -7,7 +7,12 @@
     "dev": "node src/server.mjs",
     "start": "node src/server.mjs",
     "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "validate:w1": "npm run validate && npm run test:e2e",
     "validate:v13": "python3 scripts/production/validate_v13_core.py",
     "validate": "npm run validate:v13 && npm test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0"
   }
 }

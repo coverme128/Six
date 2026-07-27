@@ -3,274 +3,933 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIX CORE_V1</title>
+    <title>SIX Local Product</title>
     <style>
       :root {
         color-scheme: light;
-        --ink: #1f2933;
-        --muted: #65758b;
-        --line: #d6dde8;
+        --bg: #f4f7f9;
         --panel: #ffffff;
-        --soft: #f4f7fb;
+        --soft: #f8fafc;
+        --ink: #17212b;
+        --muted: #64748b;
+        --line: #d6dee8;
+        --line-strong: #b8c4d2;
         --accent: #0f766e;
-        --warn: #a15c07;
+        --accent-dark: #115e59;
+        --blue: #315a92;
+        --amber: #9a5b10;
+        --red: #a23a3a;
+        --green-soft: #e8f5f2;
+        --blue-soft: #e9f0fb;
+        --amber-soft: #fff4dc;
+        --red-soft: #fae8e8;
+        --shadow: 0 12px 30px rgba(26, 37, 52, 0.08);
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
+      [hidden] { display: none !important; }
 
       body {
         margin: 0;
-        background: var(--soft);
+        background: var(--bg);
         color: var(--ink);
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.5;
+        line-height: 1.48;
       }
 
-      main {
-        width: min(1120px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 32px 0;
+      button, input, select, textarea { font: inherit; }
+      input, select, textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        padding: 9px 10px;
       }
-
-      header {
-        display: grid;
-        gap: 8px;
-        margin-bottom: 24px;
-      }
-
-      h1,
-      h2 {
-        margin: 0;
-        letter-spacing: 0;
-      }
-
-      h1 {
-        font-size: clamp(30px, 6vw, 48px);
-        line-height: 1.08;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-
-      p {
-        margin: 0;
-        color: var(--muted);
-      }
+      textarea { min-height: 82px; resize: vertical; }
+      label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; font-weight: 700; }
+      h1, h2, h3, p { margin: 0; }
+      h1 { font-size: 28px; line-height: 1.08; letter-spacing: 0; }
+      h2 { font-size: 19px; letter-spacing: 0; }
+      h3 { font-size: 15px; letter-spacing: 0; }
+      p { color: var(--muted); }
 
       button {
         min-height: 40px;
         border: 0;
         border-radius: 6px;
-        padding: 0 14px;
+        padding: 0 13px;
         background: var(--accent);
-        color: #ffffff;
-        font: inherit;
-        font-weight: 650;
+        color: #fff;
+        font-weight: 750;
         cursor: pointer;
       }
+      button:hover { background: var(--accent-dark); }
+      button:disabled { cursor: wait; opacity: .62; }
+      a { color: var(--accent); text-decoration: none; font-weight: 750; }
+      a:hover { text-decoration: underline; }
 
-      button:disabled {
-        cursor: wait;
-        opacity: 0.65;
-      }
-
-      .toolbar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0;
-      }
-
-      .grid {
+      .app { min-height: 100vh; display: grid; grid-template-columns: 248px minmax(0, 1fr); }
+      .sidebar { border-right: 1px solid var(--line); background: #fff; padding: 20px 16px; }
+      .brand { display: grid; gap: 4px; margin-bottom: 20px; }
+      .brand small { color: var(--muted); font-weight: 750; }
+      .nav { display: grid; gap: 6px; }
+      .nav button {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: 22px 1fr;
+        align-items: center;
+        width: 100%;
+        border: 1px solid transparent;
+        background: transparent;
+        color: var(--ink);
+        text-align: left;
       }
+      .nav button:hover, .nav button.active { border-color: var(--line); background: var(--soft); }
+      .main { min-width: 0; padding: 22px; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+      .status, .chip {
+        display: inline-flex;
+        align-items: center;
+        max-width: 100%;
+        min-height: 26px;
+        border-radius: 999px;
+        padding: 0 9px;
+        background: var(--soft);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .status { min-height: 28px; border: 1px solid var(--line); background: #fff; font-size: 13px; }
+      .chip { justify-content: center; overflow-wrap: anywhere; text-align: center; white-space: normal; }
+      .status.ok, .chip.fact { background: var(--green-soft); color: var(--accent); }
+      .status.warn, .chip.timing { background: var(--amber-soft); color: var(--amber); }
+      .chip.signal { background: var(--blue-soft); color: var(--blue); }
+      .chip.danger { background: var(--red-soft); color: var(--red); }
 
-      .panel,
-      .metric,
-      .output {
+      .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
+      .metric, .panel, .card, .item {
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--panel);
       }
+      .metric { min-height: 78px; padding: 12px; }
+      .metric b { display: block; margin-bottom: 4px; font-size: 22px; line-height: 1.15; }
+      .metric span { color: var(--muted); font-size: 13px; font-weight: 750; }
 
-      .panel {
-        padding: 18px;
-      }
+      .workspace { display: grid; grid-template-columns: minmax(320px, 420px) minmax(0, 1fr); gap: 14px; }
+      .panel { min-width: 0; box-shadow: var(--shadow); }
+      .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--line); padding: 13px 14px; }
+      .panel-body, .stack { display: grid; gap: 12px; }
+      .panel-body { padding: 14px; }
+      .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .line-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+      .actions, .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .secondary { border: 1px solid var(--line); background: #fff; color: var(--ink); }
+      .secondary:hover { background: var(--soft); }
+      .danger-soft { background: var(--red-soft); color: var(--red); }
+      .danger-soft:hover { background: #f6d8d8; }
 
-      .metric {
-        min-height: 92px;
-        padding: 14px;
-      }
-
-      .metric b {
-        display: block;
-        font-size: 26px;
-        line-height: 1.2;
-      }
-
-      .metric span {
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .output {
-        min-height: 180px;
+      .view { display: none; }
+      .view.active { display: block; }
+      .result-grid, .list { display: grid; gap: 10px; min-width: 0; }
+      .summary-band { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+      .dimension-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .card, .item { padding: 12px; }
+      .card, .item, .route-title, details { min-width: 0; max-width: 100%; }
+      .card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+      .item { display: grid; gap: 6px; }
+      .item strong { font-size: 14px; overflow-wrap: anywhere; }
+      .card p, .item p, .route-title p { overflow-wrap: anywhere; }
+      .empty { border: 1px dashed var(--line-strong); border-radius: 8px; padding: 18px; color: var(--muted); background: var(--soft); }
+      .safety { border-left: 4px solid var(--amber); background: var(--amber-soft); }
+      .error-box { border-left: 4px solid var(--red); background: var(--red-soft); }
+      .compact { font-size: 13px; }
+      .raw {
+        max-height: 420px;
         overflow: auto;
-        padding: 14px;
-        white-space: pre-wrap;
-        font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      }
-
-      .status {
-        display: inline-flex;
-        align-items: center;
-        min-height: 28px;
         border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 0 10px;
-        background: #ffffff;
-        color: var(--muted);
-        font-size: 13px;
+        border-radius: 8px;
+        background: #101820;
+        color: #d7e4ef;
+        padding: 12px;
+        white-space: pre-wrap;
+        font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       }
+      .scroll-x { overflow-x: auto; padding-bottom: 3px; }
+      .route-title { display: grid; gap: 4px; margin-bottom: 12px; }
+      .toc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 
-      .status.ok {
-        border-color: #86c7bd;
-        color: var(--accent);
+      @media (max-width: 980px) {
+        .app { grid-template-columns: 1fr; }
+        .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
+        .nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .workspace, .metrics, .summary-band, .dimension-grid, .toc { grid-template-columns: 1fr; }
       }
-
-      .status.warn {
-        border-color: #e7c48b;
-        color: var(--warn);
-      }
-
-      @media (max-width: 760px) {
-        main {
-          width: min(100% - 20px, 1120px);
-          padding: 22px 0;
-        }
-
-        .grid {
-          grid-template-columns: 1fr;
-        }
+      @media (max-width: 620px) {
+        .main { padding: 14px 10px; }
+        .topbar, .panel-head { align-items: flex-start; flex-direction: column; }
+        .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .form-grid, .line-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        button { min-height: 42px; }
       }
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <span id="status" class="status">loading</span>
-        <h1>SIX CORE_V1</h1>
-        <p>LIUYAO_CORE_V1 生产白名单、本地 API 与报告证据预算验收入口。</p>
-      </header>
-
-      <section class="grid" aria-label="CORE_V1 counts">
-        <div class="metric">
-          <b id="total">-</b>
-          <span>生产单元</span>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>SIX</h1>
+          <small id="profileLabel">LIUYAO_CORE_V1</small>
         </div>
-        <div class="metric">
-          <b id="profile">-</b>
-          <span>默认 profile</span>
-        </div>
-        <div class="metric">
-          <b id="knowledge">-</b>
-          <span>知识节点</span>
-        </div>
-      </section>
+        <nav class="nav" aria-label="Main views">
+          <button type="button" data-route="/"><span>☰</span><span>六爻</span></button>
+          <button type="button" data-route="/meihua"><span>◇</span><span>梅花</span></button>
+          <button type="button" data-route="/history"><span>◷</span><span>历史</span></button>
+          <button type="button" data-route="/blog"><span>▤</span><span>Blog</span></button>
+          <button type="button" data-route="/knowledge"><span>⌕</span><span>知识</span></button>
+          <button type="button" data-route="/app/settings"><span>⚙</span><span>设置</span></button>
+        </nav>
+      </aside>
 
-      <div class="toolbar">
-        <button id="reload" type="button">刷新元数据</button>
-        <button id="smoke" type="button">运行六爻烟测</button>
-      </div>
+      <main class="main">
+        <div class="topbar">
+          <div>
+            <h2 id="viewTitle">六爻起卦</h2>
+            <p id="viewSubtitle">CORE_V1 白名单报告，证据预算 6-12 条，硬上限 15。</p>
+          </div>
+          <span id="status" class="status">loading</span>
+        </div>
 
-      <section class="panel">
-        <h2>输出</h2>
-        <pre id="output" class="output">等待 API 响应...</pre>
-      </section>
-    </main>
+        <section class="metrics" aria-label="Runtime metadata">
+          <div class="metric"><b id="totalCount">-</b><span>生产单元</span></div>
+          <div class="metric"><b id="topicCount">-</b><span>问题映射</span></div>
+          <div class="metric"><b id="knowledgeCount">-</b><span>知识节点</span></div>
+          <div class="metric"><b id="timingLimit">5</b><span>应期候选上限</span></div>
+        </section>
+
+        <section id="liuyaoView" class="view">
+          <div class="workspace">
+            <form id="liuyaoForm" class="panel" novalidate>
+              <div class="panel-head">
+                <h2>六爻输入</h2>
+                <span class="chip fact">CORE_V1</span>
+              </div>
+              <div class="panel-body">
+                <label>问题<textarea name="question" data-field="question">最近求职推进如何？</textarea></label>
+                <p id="liuyaoQuestionError" class="compact" hidden></p>
+                <div class="form-grid">
+                  <label>主题<select name="topic"></select></label>
+                  <label>子类<select name="subtype"></select></label>
+                </div>
+                <label>输入方式<select name="castMode">
+                  <option value="values">6/7/8/9 手工录入</option>
+                  <option value="coins">逐枚铜钱录入</option>
+                </select></label>
+                <div class="line-grid" id="lineInputs"></div>
+                <div class="line-grid" id="coinInputs" hidden></div>
+                <div class="actions">
+                  <button type="submit">生成报告</button>
+                  <button class="secondary" type="button" id="randomLines">随机铜钱</button>
+                  <button class="secondary" type="button" id="stableLines">示例卦</button>
+                </div>
+              </div>
+            </form>
+            <section class="panel">
+              <div class="panel-head">
+                <h2>起卦说明</h2>
+                <span class="chip">local</span>
+              </div>
+              <div class="panel-body">
+                <div class="empty">起卦后会进入正式报告 URL，可刷新、复制和从历史页回放。</div>
+                <div id="liuyaoInlineError"></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="meihuaView" class="view">
+          <div class="workspace">
+            <form id="meihuaForm" class="panel" novalidate>
+              <div class="panel-head">
+                <h2>梅花输入</h2>
+                <span class="chip signal">LIGHT_V1</span>
+              </div>
+              <div class="panel-body">
+                <label>问题<textarea name="question">这件事当前态势如何？</textarea></label>
+                <p id="meihuaQuestionError" class="compact" hidden></p>
+                <label>起卦方式<select name="methodCode">
+                  <option value="MEIHUA_TWO_NUMBER_V1">两数起卦</option>
+                  <option value="MEIHUA_TIME_LUNAR_BRANCH_V1">年月日时起卦</option>
+                </select></label>
+                <div class="form-grid" data-meihua-mode="numbers">
+                  <label>上数<input name="number_a" type="number" min="1" value="7"></label>
+                  <label>下数<input name="number_b" type="number" min="1" value="12"></label>
+                </div>
+                <div class="form-grid" data-meihua-mode="time" hidden>
+                  <label>年支序<input name="year_branch_ordinal" type="number" min="1" value="7"></label>
+                  <label>农历月<input name="lunar_month" type="number" min="1" value="6"></label>
+                  <label>农历日<input name="lunar_day" type="number" min="1" value="18"></label>
+                  <label>时支序<input name="hour_branch_ordinal" type="number" min="1" value="6"></label>
+                </div>
+                <div class="actions">
+                  <button type="submit">生成报告</button>
+                  <button class="secondary" type="button" id="meihuaSample">示例</button>
+                </div>
+              </div>
+            </form>
+            <section class="panel">
+              <div class="panel-head">
+                <h2>梅花说明</h2>
+                <span class="chip">local</span>
+              </div>
+              <div class="panel-body">
+                <div class="empty">梅花报告和六爻使用同一个正式报告容器。</div>
+                <div id="meihuaInlineError"></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="reportView" class="view"></section>
+        <section id="historyView" class="view"></section>
+        <section id="blogView" class="view"></section>
+        <section id="blogDetailView" class="view"></section>
+        <section id="knowledgeView" class="view"></section>
+        <section id="knowledgeDetailView" class="view"></section>
+        <section id="hexagramView" class="view"></section>
+        <section id="settingsView" class="view"></section>
+        <section id="errorView" class="view"></section>
+      </main>
+    </div>
 
     <script>
-      const statusEl = document.querySelector("#status");
-      const outputEl = document.querySelector("#output");
-      const totalEl = document.querySelector("#total");
-      const profileEl = document.querySelector("#profile");
-      const knowledgeEl = document.querySelector("#knowledge");
-      const reloadButton = document.querySelector("#reload");
-      const smokeButton = document.querySelector("#smoke");
+      const ERROR_MESSAGES = {
+        VALIDATION_ERROR: "输入内容不完整，请检查后重试。",
+        REPORT_NOT_FOUND: "未找到该报告，它可能已被删除。",
+        REPORT_DATA_INVALID: "报告数据不完整，暂时无法展示。",
+        CALENDAR_CALCULATION_FAILED: "时间信息计算失败，请检查日期和时区。",
+        DIVINATION_CALCULATION_FAILED: "排盘未能完成，请检查输入后重试。",
+        RULE_ANALYSIS_FAILED: "排盘已完成，但详细分析暂时不可用。",
+        STORAGE_READ_FAILED: "暂时无法读取历史记录。",
+        STORAGE_WRITE_FAILED: "结果已生成，但保存失败。",
+        NETWORK_ERROR: "网络连接异常，请稍后重试。",
+        UNKNOWN_ERROR: "出现了未预期的问题，请重试。"
+      };
 
-      function setStatus(text, type = "") {
-        statusEl.textContent = text;
-        statusEl.className = `status ${type}`.trim();
+      const state = { topics: [], metadata: null, settings: null, currentRoute: "/" };
+      const views = ["liuyaoView", "meihuaView", "reportView", "historyView", "blogView", "blogDetailView", "knowledgeView", "knowledgeDetailView", "hexagramView", "settingsView", "errorView"];
+      const dimensionLabels = {
+        subject_state: "主体状态",
+        target_state: "目标状态",
+        supporting_forces: "支持因素",
+        blocking_forces: "阻碍因素",
+        change_direction: "变化方向",
+        timing_state: "时间候选"
+      };
+      const topicNames = { career: "事业", wealth: "财务", business: "商业", relationship: "关系", study: "学习", property: "房产", legal: "法律", health: "健康", goods: "物品", travel: "出行", people: "人物" };
+
+      const statusEl = document.querySelector("#status");
+      const profileLabel = document.querySelector("#profileLabel");
+      const totalCount = document.querySelector("#totalCount");
+      const topicCount = document.querySelector("#topicCount");
+      const knowledgeCount = document.querySelector("#knowledgeCount");
+      const liuyaoForm = document.querySelector("#liuyaoForm");
+      const meihuaForm = document.querySelector("#meihuaForm");
+      const lineInputs = document.querySelector("#lineInputs");
+      const coinInputs = document.querySelector("#coinInputs");
+
+      function setStatus(text, type = "") { statusEl.textContent = text; statusEl.className = `status ${type}`.trim(); }
+      function setTitle(title, subtitle) { document.querySelector("#viewTitle").textContent = title; document.querySelector("#viewSubtitle").textContent = subtitle; }
+      function el(tag, attrs = {}, children = []) {
+        const node = document.createElement(tag);
+        for (const [key, value] of Object.entries(attrs)) {
+          if (key === "class") node.className = value;
+          else if (key === "text") node.textContent = value;
+          else if (key === "html") node.innerHTML = value;
+          else if (key === "dataset") Object.assign(node.dataset, value);
+          else node.setAttribute(key, value);
+        }
+        for (const child of children.filter(Boolean)) node.append(child);
+        return node;
+      }
+      function chip(text, type = "") { return el("span", { class: `chip ${type}`.trim(), text: String(text) }); }
+      function showView(id) { views.forEach((view) => document.querySelector(`#${view}`).classList.toggle("active", view === id)); }
+      function navigate(path) { history.pushState({}, "", path); route(); }
+      function activeNav(path) {
+        document.querySelectorAll(".nav button").forEach((button) => {
+          const route = button.dataset.route;
+          button.classList.toggle("active", route === path || (route !== "/" && path.startsWith(route)));
+        });
       }
 
-      function writeOutput(value) {
-        outputEl.textContent = typeof value === "string" ? value : JSON.stringify(value, null, 2);
+      function normalizeError(error) {
+        if (!navigator.onLine) return { code: "NETWORK_ERROR", message: ERROR_MESSAGES.NETWORK_ERROR };
+        const code = error?.code && ERROR_MESSAGES[error.code] ? error.code : "UNKNOWN_ERROR";
+        return { code, message: ERROR_MESSAGES[code], traceId: error?.traceId };
+      }
+
+      function errorPanel(error, actions = []) {
+        const normalized = normalizeError(error);
+        const buttons = actions.map((action) => {
+          const button = el("button", { class: action.secondary ? "secondary" : "", type: "button", text: action.label });
+          button.addEventListener("click", action.onClick);
+          return button;
+        });
+        return el("div", { class: "card error-box" }, [
+          el("div", { class: "card-head" }, [el("h3", { text: normalized.message }), chip(normalized.code, "danger")]),
+          el("p", { text: normalized.traceId ? `追踪编号：${normalized.traceId}` : "请检查输入或稍后重试。" }),
+          buttons.length ? el("div", { class: "actions" }, buttons) : null
+        ]);
       }
 
       async function requestJson(path, options) {
-        const response = await fetch(path, options);
-        const body = await response.json();
-        if (!response.ok) {
-          throw body;
-        }
-        return body;
-      }
-
-      async function loadMetadata() {
-        reloadButton.disabled = true;
         try {
-          const metadata = await requestJson("/api/metadata");
-          totalEl.textContent = metadata.counts.total;
-          profileEl.textContent = metadata.profile;
-          knowledgeEl.textContent = metadata.knowledge.nodes ?? 0;
-          setStatus("CORE_V1 ready", "ok");
-          writeOutput(metadata);
+          const response = await fetch(path, options);
+          const body = await response.json();
+          if (!response.ok) throw body;
+          return body;
         } catch (error) {
-          setStatus("API error", "warn");
-          writeOutput(error);
-        } finally {
-          reloadButton.disabled = false;
+          if (error instanceof TypeError) throw { code: "NETWORK_ERROR" };
+          throw error;
         }
       }
 
-      async function smokeTest() {
-        smokeButton.disabled = true;
+      function validateQuestion(form, errorId) {
+        const question = String(form.elements.question.value).trim();
+        const errorEl = document.querySelector(`#${errorId}`);
+        errorEl.hidden = true;
+        errorEl.textContent = "";
+        if (!question) {
+          errorEl.textContent = "问题不能为空。";
+          errorEl.hidden = false;
+          return false;
+        }
+        if (question.length > 200) {
+          errorEl.textContent = "问题不能超过 200 字。";
+          errorEl.hidden = false;
+          return false;
+        }
+        return true;
+      }
+
+      function renderLineInputs(values = [7, 8, 9, 7, 8, 6]) {
+        lineInputs.replaceChildren();
+        values.forEach((value, index) => {
+          const select = el("select", { name: `line_${index + 1}`, "data-testid": `line-${index + 1}` });
+          for (const optionValue of [6, 7, 8, 9]) {
+            const option = el("option", { value: optionValue, text: `${index + 1}爻 ${optionValue}` });
+            if (optionValue === value) option.selected = true;
+            select.append(option);
+          }
+          lineInputs.append(el("label", { text: `${index + 1}爻` }, [select]));
+        });
+      }
+
+      function renderCoinInputs(coins = [[3, 2, 2], [3, 3, 2], [3, 3, 3], [3, 2, 2], [3, 3, 2], [2, 2, 2]]) {
+        coinInputs.replaceChildren();
+        coins.forEach((round, lineIndex) => {
+          const group = el("label", { text: `${lineIndex + 1}爻` });
+          const wrap = el("div", { class: "form-grid" });
+          round.forEach((value, coinIndex) => {
+            const select = el("select", { name: `coin_${lineIndex + 1}_${coinIndex + 1}`, "data-testid": `coin-${lineIndex + 1}-${coinIndex + 1}` });
+            for (const coinValue of [2, 3]) {
+              const option = el("option", { value: coinValue, text: coinValue === 3 ? "阳" : "阴" });
+              if (coinValue === value) option.selected = true;
+              select.append(option);
+            }
+            wrap.append(select);
+          });
+          group.append(wrap);
+          coinInputs.append(group);
+        });
+      }
+
+      function populateTopics() {
+        const topicSelect = liuyaoForm.elements.topic;
+        const subtypeSelect = liuyaoForm.elements.subtype;
+        const topics = [...new Set(state.topics.map((item) => item.topic))];
+        topicSelect.replaceChildren(...topics.map((topic) => el("option", { value: topic, text: topicNames[topic] ?? topic })));
+        function syncSubtypes() {
+          const active = state.topics.filter((item) => item.topic === topicSelect.value);
+          subtypeSelect.replaceChildren(...active.map((item) => el("option", { value: item.subtype, text: item.subtype.replaceAll("_", " ") })));
+        }
+        topicSelect.onchange = syncSubtypes;
+        topicSelect.value = topics.includes("career") ? "career" : topics[0];
+        syncSubtypes();
+        subtypeSelect.value = "job_search";
+      }
+
+      function reportSection(narrative, code) {
+        return narrative.sections.find((section) => section.code === code);
+      }
+
+      function renderNarrativeReport(narrativeReport) {
+        const list = el("div", { class: "list" });
+        for (const section of narrativeReport.sections) {
+          list.append(el("div", { class: `item ${section.code === "safety" ? "safety" : ""}`.trim() }, [
+            el("div", { class: "card-head" }, [el("strong", { text: section.title }), chip(section.code)]),
+            el("p", { text: section.text }),
+            el("div", { class: "meta" }, [
+              ...(section.findingIds ?? []).slice(0, 6).map((id) => chip(id, "fact")),
+              ...(section.knowledgeIds ?? []).slice(0, 4).map((id) => chip(id, "signal"))
+            ])
+          ]));
+        }
+        return el("div", { class: "card" }, [
+          el("div", { class: "card-head" }, [el("h3", { text: "核心结论" }), chip(narrativeReport.reportTemplateVersion, "signal")]),
+          list
+        ]);
+      }
+
+      function renderLiuyaoBoard(chart) {
+        const rows = [...chart.lines].reverse().map((line) => {
+          const marks = [];
+          if (line.isWorld) marks.push(chip("世", "fact"));
+          if (line.isResponse) marks.push(chip("应", "signal"));
+          if (line.moving) marks.push(chip("动", "timing"));
+          if (line.isVoid) marks.push(chip("空"));
+          return el("div", { class: "item" }, [
+            el("div", { class: "card-head" }, [el("strong", { text: `${line.position}爻 ${line.name}` }), el("div", { class: "meta" }, marks)]),
+            el("div", { class: "meta" }, [chip(line.sixSpiritName), chip(line.sixRelationName, "fact"), chip(`${line.stem}/${line.branchName}`), chip(line.element), chip(`${line.originalBit}→${line.changedBit}`)])
+          ]);
+        });
+        return el("div", { class: "card scroll-x" }, [
+          el("div", { class: "card-head" }, [el("h3", { text: "详细排盘" }), chip("上爻在上")]),
+          el("div", { class: "list" }, rows)
+        ]);
+      }
+
+      function renderMeihuaDetails(chart) {
+        return el("div", { class: "card" }, [
+          el("div", { class: "card-head" }, [el("h3", { text: "梅花排盘" }), chip(chart.methodCode)]),
+          el("div", { class: "summary-band" }, [
+            el("div", { class: "item" }, [el("strong", { text: "本卦" }), el("p", { text: chart.originalHexagram.name_zh })]),
+            el("div", { class: "item" }, [el("strong", { text: "互卦" }), el("p", { text: chart.mutualHexagram.name_zh })]),
+            el("div", { class: "item" }, [el("strong", { text: "变卦" }), el("p", { text: chart.changedHexagram.name_zh })])
+          ]),
+          el("div", { class: "meta" }, [chip(`动爻 ${chart.movingLine}`), chip(`体 ${chart.bodyTrigram.name_zh}`, "fact"), chip(`用 ${chart.useTrigram.name_zh}`, "signal")])
+        ]);
+      }
+
+      function renderEvidenceSummary(result) {
+        if (result.type === "meihua" || !result.result.report.dimensions) return null;
+        const dimensions = result.result.report.dimensions;
+        return el("div", { class: "dimension-grid" }, Object.entries(dimensions).map(([code, findings]) => {
+          const list = findings.length ? findings.map((finding) => el("div", { class: "item" }, [
+            el("div", { class: "card-head" }, [el("strong", { text: finding.summary }), chip(finding.output_role === "CANDIDATE_OR_GUARDRAIL" ? "candidate" : finding.output_role.toLowerCase(), finding.output_role === "CANDIDATE_OR_GUARDRAIL" ? "timing" : "fact")]),
+            el("div", { class: "meta" }, [chip(finding.rule_code), chip(finding.rule_version ?? "1.3.0")])
+          ])) : [el("div", { class: "empty compact", text: "暂无证据。" })];
+          return el("div", { class: "card" }, [
+            el("div", { class: "card-head" }, [el("h3", { text: dimensionLabels[code] ?? code }), chip(findings.length)]),
+            el("div", { class: "list" }, list)
+          ]);
+        }));
+      }
+
+      function renderTiming(result) {
+        const candidates = result.result.timingCandidates ?? [];
+        return el("div", { class: "card" }, [
+          el("div", { class: "card-head" }, [el("h3", { text: "时间候选" }), chip(candidates.length, "timing")]),
+          candidates.length ? el("div", { class: "list" }, candidates.map((candidate) => el("div", { class: "item" }, [
+            el("strong", { text: candidate.window }),
+            el("div", { class: "meta" }, [chip(`rank ${candidate.rank}`, "timing"), chip(Array.isArray(candidate.granularity) ? candidate.granularity.join("/") : candidate.granularity)]),
+            el("p", { class: "compact", text: candidate.limitation })
+          ]))) : el("div", { class: "empty", text: "暂无应期候选。" })
+        ]);
+      }
+
+      async function renderReportRoute(id) {
+        showView("reportView");
+        activeNav("/reports");
+        setTitle("报告详情", "正式报告 URL，可刷新和复制。");
+        const view = document.querySelector("#reportView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载报告..." }));
+        setStatus("loading", "warn");
         try {
-          const result = await requestJson("/api/liuyao/chart", {
+          const data = await requestJson(`/api/v1/reports/${encodeURIComponent(id)}`);
+          if (!data?.result?.chart || !data.narrativeReport) throw { code: "REPORT_DATA_INVALID" };
+          const result = data.result;
+          const chart = result.chart;
+          const narrative = data.narrativeReport;
+          const overview = reportSection(narrative, "overview");
+          const support = reportSection(narrative, "support");
+          const blocking = reportSection(narrative, "blocking");
+          const change = reportSection(narrative, "change");
+          view.replaceChildren(el("div", { class: "result-grid", "data-testid": "report-page" }, [
+            el("div", { class: "route-title" }, [
+              el("h2", { text: data.type === "liuyao" ? "六爻报告" : "梅花报告" }),
+              el("p", { text: chart.question || "(empty question)" }),
+              el("div", { class: "meta" }, [chip(data.type), chip(chart.methodCode), chip(new Date(data.createdAt).toLocaleString())])
+            ]),
+            el("div", { class: "summary-band" }, [
+              el("div", { class: "card" }, [el("h3", { text: "本卦" }), el("p", { text: `${chart.originalHexagram.name_zh} (${chart.originalHexagram.code})` })]),
+              data.type === "meihua" ? el("div", { class: "card" }, [el("h3", { text: "互卦" }), el("p", { text: chart.mutualHexagram.name_zh })]) : null,
+              el("div", { class: "card" }, [el("h3", { text: "变卦" }), el("p", { text: `${chart.changedHexagram.name_zh} (${chart.changedHexagram.code})` })]),
+              el("div", { class: "card" }, [el("h3", { text: "核心结论" }), el("p", { text: overview?.text ?? "报告正在整理。" })])
+            ]),
+            el("div", { class: "summary-band" }, [
+              el("div", { class: "card" }, [el("h3", { text: "主要支持" }), el("p", { text: support?.text ?? "暂无明确支持项。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "主要阻碍" }), el("p", { text: blocking?.text ?? "暂无明确阻碍项。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: change?.text ?? "变化方向需要继续观察。" })])
+            ]),
+            renderNarrativeReport(narrative),
+            renderEvidenceSummary(data),
+            renderTiming(data),
+            data.type === "liuyao" ? renderLiuyaoBoard(chart) : renderMeihuaDetails(chart),
+            el("div", { class: "card" }, [
+              el("div", { class: "card-head" }, [el("h3", { text: "版本信息" }), chip(narrative.reportTemplateVersion, "signal")]),
+              el("div", { class: "meta" }, [chip(chart.generationEvidence?.ruleProfile ?? "MEIHUA"), chip(chart.calendar?.policyVersion ?? "MEIHUA_LIGHT"), chip(JSON.stringify(result.engineVersions))])
+            ]),
+            el("details", {}, [el("summary", { text: "规则依据 / JSON" }), el("pre", { class: "raw", text: JSON.stringify(data, null, 2) })]),
+            el("div", { class: "actions" }, [
+              actionButton("返回起卦页", () => navigate(data.type === "liuyao" ? "/" : "/meihua")),
+              actionButton("返回历史", () => navigate("/history"), true)
+            ])
+          ]));
+          setStatus("ready", "ok");
+        } catch (error) {
+          view.replaceChildren(errorPanel(error, [
+            { label: "重试", onClick: () => renderReportRoute(id) },
+            { label: "返回起卦页", secondary: true, onClick: () => navigate("/") }
+          ]));
+          setStatus("error", "warn");
+        }
+      }
+
+      function actionButton(label, onClick, secondary = false) {
+        const button = el("button", { type: "button", class: secondary ? "secondary" : "", text: label });
+        button.addEventListener("click", onClick);
+        return button;
+      }
+
+      async function runLiuyao(event) {
+        event.preventDefault();
+        document.querySelector("#liuyaoInlineError").replaceChildren();
+        if (!validateQuestion(liuyaoForm, "liuyaoQuestionError")) return;
+        setStatus("casting", "warn");
+        try {
+          const castMode = liuyaoForm.elements.castMode.value;
+          const castPayload = castMode === "coins"
+            ? { coins: Array.from({ length: 6 }, (_, lineIndex) => Array.from({ length: 3 }, (_, coinIndex) => Number(liuyaoForm.elements[`coin_${lineIndex + 1}_${coinIndex + 1}`].value))) }
+            : { values: Array.from({ length: 6 }, (_, index) => Number(liuyaoForm.elements[`line_${index + 1}`].value)) };
+          const result = await requestJson("/api/v1/liuyao/charts", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
-              question: "本地 CORE_V1 烟测",
-              topic: "career",
-              subtype: "job_search",
-              values: [7, 8, 9, 7, 8, 6],
-              calendar: { timezone: "Asia/Shanghai" }
+              question: liuyaoForm.elements.question.value.trim(),
+              topic: liuyaoForm.elements.topic.value,
+              subtype: liuyaoForm.elements.subtype.value,
+              ...castPayload,
+              calendar: { timezone: state.settings?.timezone ?? "Asia/Shanghai" }
             })
           });
-          setStatus("smoke passed", "ok");
-          writeOutput({
-            profile: result.chart.generationEvidence.ruleProfile,
-            findings: result.findings.length,
-            evidenceBudget: result.report.evidenceBudget,
-            timingCandidates: result.timingCandidates.length,
-            engineVersions: result.engineVersions
-          });
+          navigate(`/reports/${result.chart.id}`);
         } catch (error) {
-          setStatus("smoke failed", "warn");
-          writeOutput(error);
-        } finally {
-          smokeButton.disabled = false;
+          document.querySelector("#liuyaoInlineError").replaceChildren(errorPanel(error, [{ label: "重试", onClick: () => liuyaoForm.requestSubmit() }]));
+          setStatus("error", "warn");
         }
       }
 
-      reloadButton.addEventListener("click", loadMetadata);
-      smokeButton.addEventListener("click", smokeTest);
-      loadMetadata();
+      async function runMeihua(event) {
+        event.preventDefault();
+        document.querySelector("#meihuaInlineError").replaceChildren();
+        if (!validateQuestion(meihuaForm, "meihuaQuestionError")) return;
+        setStatus("casting", "warn");
+        try {
+          const methodCode = meihuaForm.elements.methodCode.value;
+          const payload = { question: meihuaForm.elements.question.value.trim(), methodCode };
+          const fields = methodCode === "MEIHUA_TIME_LUNAR_BRANCH_V1"
+            ? ["year_branch_ordinal", "lunar_month", "lunar_day", "hour_branch_ordinal"]
+            : ["number_a", "number_b"];
+          for (const field of fields) payload[field] = Number(meihuaForm.elements[field].value);
+          const result = await requestJson("/api/v1/meihua/charts", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
+          navigate(`/reports/${result.chart.id}`);
+        } catch (error) {
+          document.querySelector("#meihuaInlineError").replaceChildren(errorPanel(error, [{ label: "重试", onClick: () => meihuaForm.requestSubmit() }]));
+          setStatus("error", "warn");
+        }
+      }
+
+      async function renderHistory() {
+        showView("historyView"); activeNav("/history"); setTitle("历史记录", "本地持久化报告，可回放和清空。");
+        const view = document.querySelector("#historyView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在读取历史..." }));
+        try {
+          const data = await requestJson("/api/history");
+          const clearButton = actionButton("清空历史", async () => {
+            if (!confirm("清空历史不可撤销，但不会删除静态规则和知识数据。继续？")) return;
+            await requestJson("/api/v1/history/clear", { method: "POST" });
+            renderHistory();
+          }, true);
+          const exportButton = actionButton("导出 JSON", exportData);
+          view.replaceChildren(el("section", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: "历史记录" }), el("div", { class: "actions" }, [exportButton, clearButton])]),
+            el("div", { class: "panel-body" }, [
+              data.items.length ? el("div", { class: "list" }, data.items.map((item) => {
+                const button = actionButton("打开报告", () => navigate(`/reports/${item.id}`));
+                return el("div", { class: "item", "data-testid": "history-item" }, [
+                  el("div", { class: "card-head" }, [el("strong", { text: item.question || "(empty question)" }), chip(item.type)]),
+                  el("p", { text: `${item.chart.originalHexagram?.name_zh ?? "-"} → ${item.chart.changedHexagram?.name_zh ?? "-"}` }),
+                  el("div", { class: "meta" }, [chip(new Date(item.createdAt).toLocaleString()), chip(`${item.evidenceCount} evidence`)]),
+                  el("div", { class: "actions" }, [button])
+                ]);
+              })) : el("div", { class: "empty", text: "暂无历史记录。" })
+            ])
+          ]));
+          setStatus("ready", "ok");
+        } catch (error) {
+          view.replaceChildren(errorPanel({ code: "STORAGE_READ_FAILED" }, [{ label: "重试", onClick: renderHistory }]));
+        }
+      }
+
+      async function exportData() {
+        try {
+          const data = await requestJson("/api/v1/export");
+          const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+          const link = el("a", { href: URL.createObjectURL(blob), download: `six-export-${Date.now()}.json` });
+          document.body.append(link);
+          link.click();
+          link.remove();
+          setStatus("exported", "ok");
+        } catch (error) {
+          document.querySelector("#historyView").prepend(errorPanel(error));
+        }
+      }
+
+      async function renderBlogList() {
+        showView("blogView"); activeNav("/blog"); setTitle("Blog", "结构化知识生成的本地内容列表。");
+        const view = document.querySelector("#blogView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载 Blog..." }));
+        try {
+          const data = await requestJson("/api/v1/blog/posts");
+          view.replaceChildren(el("section", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: "Blog" }), chip(data.items.length)]),
+            el("div", { class: "panel-body" }, [el("div", { class: "list" }, data.items.map((post) => {
+              const link = actionButton("阅读", () => navigate(`/blog/${encodeURIComponent(post.slug)}`));
+              return el("div", { class: "item" }, [el("div", { class: "card-head" }, [el("strong", { text: post.title_zh }), chip(post.category ?? "blog")]), el("p", { text: post.summary ?? "详细内容正在整理。" }), el("div", { class: "actions" }, [link])]);
+            }))])
+          ]));
+        } catch (error) {
+          view.replaceChildren(errorPanel(error, [{ label: "重试", onClick: renderBlogList }]));
+        }
+      }
+
+      async function renderBlogDetail(slug) {
+        showView("blogDetailView"); activeNav("/blog"); setTitle("文章详情", "内容数据不足时不会伪造已审核正文。");
+        const view = document.querySelector("#blogDetailView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载文章..." }));
+        try {
+          const [post, posts] = await Promise.all([requestJson(`/api/v1/blog/posts/${encodeURIComponent(slug)}`), requestJson("/api/v1/blog/posts")]);
+          const index = posts.items.findIndex((item) => item.slug === post.slug);
+          const prev = posts.items[index - 1];
+          const next = posts.items[index + 1];
+          view.replaceChildren(el("article", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: post.title_zh }), chip(post.category ?? "blog")]),
+            el("div", { class: "panel-body" }, [
+              el("p", { text: post.summary ?? "详细内容正在整理。" }),
+              el("div", { class: "meta" }, [chip(`发布 ${post.version ?? "1.2.0"}`), chip(`更新 ${post.version ?? "1.2.0"}`)]),
+              el("div", { class: "toc" }, ["直接答案", "解释", "相关知识"].map((item) => el("div", { class: "item" }, [el("strong", { text: item })]))),
+              el("div", { class: "card" }, [el("h3", { text: "正文" }), el("p", { text: post.summary ? `${post.summary} 详细内容正在整理。` : "详细内容正在整理。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "相关知识" }), el("div", { class: "meta" }, [chip(post.code ?? post.slug)])]),
+              el("div", { class: "actions" }, [
+                actionButton("返回 Blog", () => navigate("/blog"), true),
+                prev ? actionButton("上一篇", () => navigate(`/blog/${prev.slug}`), true) : null,
+                next ? actionButton("下一篇", () => navigate(`/blog/${next.slug}`), true) : null,
+                actionButton("进入六爻工具", () => navigate("/")),
+                actionButton("进入梅花工具", () => navigate("/meihua"), true)
+              ])
+            ])
+          ]));
+        } catch (error) {
+          view.replaceChildren(errorPanel(error, [{ label: "返回 Blog", onClick: () => navigate("/blog") }]));
+        }
+      }
+
+      async function renderKnowledgeList() {
+        showView("knowledgeView"); activeNav("/knowledge"); setTitle("知识搜索", "查询本地知识节点与术语条目。");
+        const view = document.querySelector("#knowledgeView");
+        const input = el("input", { id: "knowledgeQuery", value: "用神" });
+        const list = el("div", { class: "list" });
+        async function search() {
+          list.replaceChildren(el("div", { class: "empty", text: "搜索中..." }));
+          const data = await requestJson(`/api/v1/knowledge/search?q=${encodeURIComponent(input.value)}`);
+          const nodes = data.items.length ? data.items.map((item) => {
+            const button = actionButton("查看", () => navigate(`/knowledge/${encodeURIComponent(item.code ?? item.slug ?? item.id)}`));
+            return el("div", { class: "item" }, [el("div", { class: "card-head" }, [el("strong", { text: item.title_zh ?? item.name_zh ?? item.code }), chip(item.category ?? "node")]), el("p", { text: item.summary ?? item.summary_zh ?? "详细内容正在整理。" }), el("div", { class: "actions" }, [button])]);
+          }) : [el("div", { class: "empty", text: "没有匹配条目。" })];
+          list.replaceChildren(...nodes);
+        }
+        const searchButton = actionButton("搜索", () => search());
+        view.replaceChildren(el("section", { class: "panel" }, [
+          el("div", { class: "panel-head" }, [el("h2", { text: "知识搜索" }), chip("local")]),
+          el("div", { class: "panel-body" }, [el("div", { class: "form-grid" }, [el("label", { text: "关键词" }, [input]), el("label", { text: "操作" }, [searchButton])]), list])
+        ]));
+        input.addEventListener("keydown", (event) => { if (event.key === "Enter") search(); });
+        search().catch((error) => list.replaceChildren(errorPanel(error)));
+      }
+
+      async function renderKnowledgeDetail(slug) {
+        showView("knowledgeDetailView"); activeNav("/knowledge"); setTitle("知识详情", "展示结构化知识，不伪造正文。");
+        const view = document.querySelector("#knowledgeDetailView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载知识..." }));
+        try {
+          const item = await requestJson(`/api/v1/knowledge/${encodeURIComponent(slug)}`);
+          view.replaceChildren(el("section", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: item.title_zh ?? item.name_zh ?? item.code }), chip(item.domain ?? item.category ?? "knowledge")]),
+            el("div", { class: "panel-body" }, [
+              el("div", { class: "card" }, [el("h3", { text: "一句话定义" }), el("p", { text: item.summary ?? item.definition_zh ?? "详细内容正在整理。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "核心作用" }), el("p", { text: item.category ?? item.domain ?? "详细内容正在整理。" })]),
+              el("div", { class: "meta" }, (item.prerequisites ?? []).map((code) => chip(code))),
+              el("div", { class: "card" }, [el("h3", { text: "常见错误" }), el("p", { text: "详细内容正在整理。" })]),
+              el("div", { class: "actions" }, [actionButton("返回知识", () => navigate("/knowledge"), true), actionButton("相关 Blog", () => navigate("/blog"))])
+            ])
+          ]));
+        } catch (error) {
+          view.replaceChildren(errorPanel(error, [{ label: "返回知识", onClick: () => navigate("/knowledge") }]));
+        }
+      }
+
+      async function renderHexagram(slug) {
+        showView("hexagramView"); activeNav("/knowledge"); setTitle("六十四卦详情", "优先展示已有结构化数据。");
+        const view = document.querySelector("#hexagramView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载卦象..." }));
+        try {
+          const item = await requestJson(`/api/v1/hexagrams/${encodeURIComponent(slug)}`);
+          view.replaceChildren(el("section", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: `${item.sequence}. ${item.name_zh}` }), chip(item.code)]),
+            el("div", { class: "panel-body" }, [
+              el("div", { class: "summary-band" }, [
+                el("div", { class: "card" }, [el("h3", { text: "上卦" }), el("p", { text: item.upperTrigram?.name_zh ?? item.upper_trigram })]),
+                el("div", { class: "card" }, [el("h3", { text: "下卦" }), el("p", { text: item.lowerTrigram?.name_zh ?? item.lower_trigram })]),
+                el("div", { class: "card" }, [el("h3", { text: "爻结构" }), el("p", { text: item.lineStructure })])
+              ]),
+              el("div", { class: "card" }, [el("h3", { text: "正文" }), el("p", { text: item.detailStatus })]),
+              el("div", { class: "actions" }, [actionButton("返回知识", () => navigate("/knowledge"), true)])
+            ])
+          ]));
+        } catch (error) {
+          view.replaceChildren(errorPanel(error, [{ label: "返回知识", onClick: () => navigate("/knowledge") }]));
+        }
+      }
+
+      async function renderSettings() {
+        showView("settingsView"); activeNav("/app/settings"); setTitle("设置", "本地偏好和历史数据管理。");
+        const view = document.querySelector("#settingsView");
+        const settings = state.settings ?? await requestJson("/api/v1/settings");
+        const form = el("form", { class: "panel", id: "settingsForm" });
+        form.append(el("div", { class: "panel-head" }, [el("h2", { text: "设置" }), chip("local")]));
+        form.append(el("div", { class: "panel-body" }, [
+          el("label", { text: "默认时区" }, [el("input", { name: "timezone", value: settings.timezone })]),
+          el("label", { text: "默认起卦方式" }, [selectWith("defaultCastMethod", [["liuyao_manual", "六爻手工"], ["liuyao_coin", "六爻铜钱"], ["meihua_two_number", "梅花两数"], ["meihua_time", "梅花时间"]], settings.defaultCastMethod)]),
+          el("label", { text: "专业术语显示" }, [selectWith("terminology", [["beginner", "入门"], ["professional", "专业"]], settings.terminology)]),
+          el("label", { text: "报告语言" }, [selectWith("reportLanguage", [["zh-CN", "中文"], ["en-US", "English"]], settings.reportLanguage)]),
+          el("div", { class: "actions" }, [el("button", { type: "submit", text: "保存设置" }), actionButton("导出 JSON", exportData, true), actionButton("清空本地历史", async () => {
+            if (!confirm("清空历史不可撤销，设置会保留。继续？")) return;
+            await requestJson("/api/v1/history/clear", { method: "POST" });
+            setStatus("history cleared", "ok");
+          }, true)])
+        ]));
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          try {
+            state.settings = await requestJson("/api/v1/settings", { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+            applySettings();
+            setStatus("settings saved", "ok");
+          } catch (error) {
+            view.prepend(errorPanel(error));
+          }
+        });
+        view.replaceChildren(form);
+      }
+
+      function selectWith(name, options, value) {
+        const select = el("select", { name });
+        for (const [optionValue, label] of options) {
+          const option = el("option", { value: optionValue, text: label });
+          if (optionValue === value) option.selected = true;
+          select.append(option);
+        }
+        return select;
+      }
+
+      function applySettings() {
+        if (!state.settings) return;
+        if (state.settings.defaultCastMethod === "liuyao_coin") liuyaoForm.elements.castMode.value = "coins";
+        if (state.settings.defaultCastMethod === "liuyao_manual") liuyaoForm.elements.castMode.value = "values";
+        liuyaoForm.elements.castMode.dispatchEvent(new Event("change"));
+        if (state.settings.defaultCastMethod === "meihua_time") meihuaForm.elements.methodCode.value = "MEIHUA_TIME_LUNAR_BRANCH_V1";
+        if (state.settings.defaultCastMethod === "meihua_two_number") meihuaForm.elements.methodCode.value = "MEIHUA_TWO_NUMBER_V1";
+        meihuaForm.elements.methodCode.dispatchEvent(new Event("change"));
+      }
+
+      function route() {
+        const path = window.location.pathname;
+        state.currentRoute = path;
+        if (path === "/" || path === "/app/liuyao/new") { showView("liuyaoView"); activeNav("/"); setTitle("六爻起卦", "CORE_V1 白名单报告，证据预算 6-12 条，硬上限 15。"); setStatus("ready", "ok"); return; }
+        if (path === "/meihua" || path === "/app/meihua/new") { showView("meihuaView"); activeNav("/meihua"); setTitle("梅花起卦", "轻量梅花排盘与体用关系报告。"); setStatus("ready", "ok"); return; }
+        if (path === "/history" || path === "/app/history") return renderHistory();
+        if (path === "/blog") return renderBlogList();
+        if (path.startsWith("/blog/")) return renderBlogDetail(decodeURIComponent(path.split("/").at(-1)));
+        if (path === "/knowledge") return renderKnowledgeList();
+        if (path.startsWith("/knowledge/")) return renderKnowledgeDetail(decodeURIComponent(path.split("/").at(-1)));
+        if (path.startsWith("/hexagrams/")) return renderHexagram(decodeURIComponent(path.split("/").at(-1)));
+        if (path.startsWith("/glossary/")) return renderKnowledgeDetail(decodeURIComponent(path.split("/").at(-1)));
+        if (path === "/app/settings") return renderSettings();
+        if (path.startsWith("/reports/") || path.startsWith("/app/reports/")) return renderReportRoute(decodeURIComponent(path.split("/").at(-1)));
+        showView("errorView"); activeNav(""); setTitle("页面不存在", "请返回起卦页。"); document.querySelector("#errorView").replaceChildren(errorPanel({ code: "REPORT_NOT_FOUND" }, [{ label: "返回起卦页", onClick: () => navigate("/") }]));
+      }
+
+      async function loadMetadata() {
+        const [metadata, topics, settings] = await Promise.all([requestJson("/api/metadata"), requestJson("/api/topics"), requestJson("/api/v1/settings")]);
+        state.metadata = metadata;
+        state.topics = topics.items;
+        state.settings = settings;
+        profileLabel.textContent = metadata.profile;
+        totalCount.textContent = metadata.counts.total;
+        topicCount.textContent = metadata.counts.yongshenMappings;
+        knowledgeCount.textContent = metadata.knowledge.nodes;
+        populateTopics();
+        applySettings();
+      }
+
+      document.querySelectorAll(".nav button").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.route)));
+      liuyaoForm.addEventListener("submit", runLiuyao);
+      meihuaForm.addEventListener("submit", runMeihua);
+      liuyaoForm.elements.castMode.addEventListener("change", () => {
+        const coinMode = liuyaoForm.elements.castMode.value === "coins";
+        lineInputs.hidden = coinMode;
+        coinInputs.hidden = !coinMode;
+      });
+      meihuaForm.elements.methodCode.addEventListener("change", () => {
+        const timeMode = meihuaForm.elements.methodCode.value === "MEIHUA_TIME_LUNAR_BRANCH_V1";
+        document.querySelector('[data-meihua-mode="numbers"]').hidden = timeMode;
+        document.querySelector('[data-meihua-mode="time"]').hidden = !timeMode;
+      });
+      document.querySelector("#randomLines").addEventListener("click", async () => {
+        const cast = await requestJson("/api/v1/liuyao/casts/random", { method: "POST" });
+        renderLineInputs(cast.values); renderCoinInputs(cast.coins);
+        liuyaoForm.elements.castMode.value = "coins";
+        liuyaoForm.elements.castMode.dispatchEvent(new Event("change"));
+      });
+      document.querySelector("#stableLines").addEventListener("click", () => {
+        renderLineInputs(); liuyaoForm.elements.castMode.value = "values"; liuyaoForm.elements.castMode.dispatchEvent(new Event("change"));
+      });
+      document.querySelector("#meihuaSample").addEventListener("click", () => {
+        meihuaForm.elements.methodCode.value = "MEIHUA_TWO_NUMBER_V1";
+        meihuaForm.elements.number_a.value = 8;
+        meihuaForm.elements.number_b.value = 8;
+        meihuaForm.elements.methodCode.dispatchEvent(new Event("change"));
+      });
+      window.addEventListener("popstate", route);
+
+      renderLineInputs();
+      renderCoinInputs();
+      loadMetadata().then(route).catch((error) => {
+        showView("errorView");
+        document.querySelector("#errorView").replaceChildren(errorPanel(error, [{ label: "重试", onClick: () => window.location.reload() }]));
+        setStatus("error", "warn");
+      });
     </script>
   </body>
 </html>

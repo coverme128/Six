@@ -38,6 +38,7 @@ export function loadDomainData(rootDir = process.cwd()) {
     knowledgeNodes: Array.isArray(knowledgeNodes) ? knowledgeNodes : knowledgeNodes.items,
     knowledgeEdges: Array.isArray(knowledgeEdges) ? knowledgeEdges : knowledgeEdges.items,
     blogTaxonomy: readJson("data/content/blog-taxonomy.json", rootDir),
+    glossary: readJson("data/content/glossary.json", rootDir).items,
   };
 }
 

@@ -9,6 +9,8 @@ import {
   loadRuleProfile,
   validateAiInput,
 } from "../src/production/index.mjs";
+import { createLiuyaoChart } from "../src/domain/liuyaoEngine.mjs";
+import { buildLiuyaoReport } from "../src/domain/reportBuilder.mjs";
 
 const ROOT = process.cwd();
 
@@ -94,6 +96,23 @@ test("health questions include a non-diagnostic safety boundary", () => {
   });
 
   assert.match(report.safetyBoundary, /不能替代医生诊断/u);
+});
+
+test("structured report binds natural-language sections to findings and versions", () => {
+  const result = createLiuyaoChart({
+    question: "测试结构化报告",
+    topic: "career",
+    subtype: "job_search",
+    values: [7, 8, 9, 7, 8, 6],
+    calendar: { instantUtc: "2026-07-21T01:00:00Z", timezone: "Asia/Shanghai" },
+  }, ROOT);
+  const narrative = buildLiuyaoReport(result);
+
+  assert.equal(narrative.reportTemplateVersion, "CORE_V1_REPORT_TEMPLATE_LIGHT");
+  assert.equal(narrative.chartId, result.chart.id);
+  assert.ok(narrative.sections.length >= 9);
+  assert.ok(narrative.sections.some((section) => section.findingIds.length > 0));
+  assert.match(narrative.sections.at(-1).text, /1\.3\.0/u);
 });
 
 test("timing candidates must stay candidates, not guaranteed dates", () => {

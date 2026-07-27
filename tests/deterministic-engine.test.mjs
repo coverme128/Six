@@ -60,6 +60,22 @@ test("v1.2 coin method fixtures produce deterministic hexagram bits and moving l
   }
 });
 
+test("three-coin round input is preserved and normalized to 6/7/8/9 values", () => {
+  const coins = [[3, 2, 2], [3, 3, 2], [3, 3, 3], [3, 2, 2], [3, 3, 2], [2, 2, 2]];
+  const result = createLiuyaoChart({
+    coins,
+    topic: "career",
+    subtype: "job_search",
+    calendar: { instantUtc: "2026-07-21T01:00:00Z", timezone: "Asia/Shanghai" },
+  }, ROOT);
+
+  assert.deepEqual(result.chart.rawCast.coins, coins);
+  assert.deepEqual(result.chart.rawCast.values, [7, 8, 9, 7, 8, 6]);
+  assert.equal(result.chart.rawCast.inputMode, "coins");
+  assert.equal(result.chart.originalBits, "101100");
+  assert.equal(result.chart.changedBits, "100101");
+});
+
 test("v1.2 najia pure-hexagram fixtures match stems, branches, elements and six relations", () => {
   const data = loadDomainData(ROOT);
   const idx = indexes(data);

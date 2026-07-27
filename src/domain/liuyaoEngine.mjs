@@ -24,19 +24,42 @@ function assert(condition, message) {
   }
 }
 
-function normalizeValues(input) {
+function normalizeCast(input) {
+  if (Array.isArray(input?.coins) || Array.isArray(input?.coinRounds)) {
+    const coins = input.coins ?? input.coinRounds;
+    assert(coins.length === 6, "coins must contain six coin rounds from bottom to top.");
+    const normalizedCoins = coins.map((round) => {
+      assert(Array.isArray(round) && round.length === 3, "Each coin round must contain three coin values.");
+      return round.map((coin) => {
+        const numeric = Number(coin);
+        assert([2, 3].includes(numeric), "Each coin value must be 2 or 3.");
+        return numeric;
+      });
+    });
+    return {
+      values: normalizedCoins.map((round) => round.reduce((sum, value) => sum + value, 0)),
+      coins: normalizedCoins,
+      inputMode: "coins",
+    };
+  }
   if (Array.isArray(input?.values)) {
     assert(input.values.length === 6, "values must contain six line sums from bottom to top.");
-    return input.values.map((value) => {
-      const numeric = Number(value);
-      assert([6, 7, 8, 9].includes(numeric), "Each line sum must be 6, 7, 8, or 9.");
-      return numeric;
-    });
+    return {
+      values: input.values.map((value) => {
+        const numeric = Number(value);
+        assert([6, 7, 8, 9].includes(numeric), "Each line sum must be 6, 7, 8, or 9.");
+        return numeric;
+      }),
+      coins: null,
+      inputMode: "values",
+    };
   }
-  return Array.from({ length: 6 }, () => {
-    const coins = [randomInt(2, 4), randomInt(2, 4), randomInt(2, 4)];
-    return coins.reduce((sum, value) => sum + value, 0);
-  });
+  const coins = Array.from({ length: 6 }, () => [randomInt(2, 4), randomInt(2, 4), randomInt(2, 4)]);
+  return {
+    values: coins.map((round) => round.reduce((sum, value) => sum + value, 0)),
+    coins,
+    inputMode: "random_coins",
+  };
 }
 
 function elementRelation(selfElement, targetElement, elementByCode) {
@@ -177,7 +200,8 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
   const data = loadDomainData(rootDir);
   const idx = indexes(data);
   const bundle = loadRuleProfile({ rootDir });
-  const values = normalizeValues(input);
+  const cast = normalizeCast(input);
+  const values = cast.values;
   const mapped = values.map((value, index) => ({
     position: index + 1,
     sum: value,
@@ -224,7 +248,7 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
     question: input.question ?? "",
     topic: input.topic ?? "career",
     subtype: input.subtype ?? "job_search",
-    rawCast: { values, lineOrder: "bottom_up" },
+    rawCast: { values, coins: cast.coins, inputMode: cast.inputMode, lineOrder: "bottom_up" },
     originalBits,
     changedBits,
     originalHexagram,
