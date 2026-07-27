@@ -1,0 +1,15 @@
+{
+  "version": "p3-a-lite",
+  "routes": [
+    { "method": "GET", "path": "/health" },
+    { "method": "GET", "path": "/ready" },
+    { "method": "GET", "path": "/internal/status" },
+    { "method": "POST", "path": "/api/v1/liuyao/charts" },
+    { "method": "POST", "path": "/api/v1/meihua/charts" },
+    { "method": "GET", "path": "/api/v1/reports/:id" },
+    { "method": "POST", "path": "/api/v1/reports/:id/ai" }
+  ],
+  "errorShape": {
+    "required": ["code", "message", "traceId"]
+  }
+}

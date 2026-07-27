@@ -133,10 +133,13 @@ test("valid AI report can be saved and reused for the same report", async () => 
   const result = liuyaoResult();
   const first = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "success" }) });
   assert.equal(first.validationStatus, "VALID");
+  assert.equal(first.reportSource, "OPENAI_LIVE");
+  assert.ok(Number.isFinite(first.latencyMs));
   result.aiReportBundle = first;
   const second = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "throw" }) });
   assert.equal(second.reused, true);
   assert.equal(second.validationStatus, "VALID");
+  assert.equal(second.reportSource, "CACHE_REUSE");
 });
 
 test("anonymous AI limiter enforces device and IP short-window limits", () => {

@@ -17,6 +17,10 @@ const RUNTIME_DIR = resolve(ROOT, "data/runtime");
 const HISTORY_FILE = join(RUNTIME_DIR, "history.json");
 const SETTINGS_FILE = join(RUNTIME_DIR, "settings.json");
 const PORT = Number(process.env.PORT ?? 3000);
+const APP_ENV = process.env.APP_ENV ?? "development";
+const STARTED_AT = new Date().toISOString();
+const PACKAGE = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
+const GIT_COMMIT = process.env.GIT_COMMIT ?? process.env.VERCEL_GIT_COMMIT_SHA ?? "local";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -28,7 +32,31 @@ const MIME = {
 
 const history = [];
 const records = new Map();
-const aiLimiter = createAnonymousAILimiter();
+const aiLimiter = createAnonymousAILimiter({
+  maxPerIp: Number(process.env.AI_RATE_LIMIT_MAX_PER_IP ?? process.env.AI_RATE_LIMIT_MAX ?? 100),
+  maxPerDevice: Number(process.env.AI_RATE_LIMIT_MAX_PER_DEVICE ?? process.env.AI_RATE_LIMIT_MAX ?? 20),
+  windowMs: Number(process.env.AI_RATE_LIMIT_WINDOW_MS ?? 60 * 60 * 1000),
+});
+const divinationLimiter = createAnonymousAILimiter({
+  maxPerIp: Number(process.env.DIVINATION_RATE_LIMIT_MAX_PER_IP ?? process.env.DIVINATION_RATE_LIMIT_MAX ?? 300),
+  maxPerDevice: Number(process.env.DIVINATION_RATE_LIMIT_MAX_PER_DEVICE ?? process.env.DIVINATION_RATE_LIMIT_MAX ?? 100),
+  windowMs: Number(process.env.DIVINATION_RATE_LIMIT_WINDOW_MS ?? 60 * 60 * 1000),
+});
+
+const metrics = {
+  divinationRequests: 0,
+  aiRequests: 0,
+  aiSuccess: 0,
+  aiFallback: 0,
+  aiSchemaFailures: 0,
+  aiFidelityFailures: 0,
+  aiSafetyFailures: 0,
+  aiLatencyTotalMs: 0,
+  aiTokenTotalEstimate: 0,
+  aiDailyCount: 0,
+  aiDailyWindow: new Date().toISOString().slice(0, 10),
+};
+let activeAIRequests = 0;
 
 const DEFAULT_SETTINGS = Object.freeze({
   version: "1.0.0",
@@ -49,6 +77,62 @@ const ERROR_CODE_BY_PATTERN = [
 
 function buildNarrative(type, result) {
   return type === "liuyao" ? buildLiuyaoReport(result) : buildMeihuaReport(result);
+}
+
+function logEvent(level, event, fields = {}) {
+  const entry = {
+    timestamp: new Date().toISOString(),
+    level,
+    event,
+    appEnv: APP_ENV,
+    ...fields,
+  };
+  console[level === "error" ? "error" : "log"](JSON.stringify(entry));
+}
+
+function resetDailyBudgetIfNeeded() {
+  const today = new Date().toISOString().slice(0, 10);
+  if (metrics.aiDailyWindow !== today) {
+    metrics.aiDailyWindow = today;
+    metrics.aiDailyCount = 0;
+  }
+}
+
+function aiBudgetAvailable() {
+  resetDailyBudgetIfNeeded();
+  return metrics.aiDailyCount < Number(process.env.AI_DAILY_BUDGET_LIMIT ?? 1000);
+}
+
+function aiConcurrencyAvailable() {
+  return activeAIRequests < Number(process.env.AI_CONCURRENCY_MAX ?? 4);
+}
+
+function recordAIOutcome(bundle) {
+  metrics.aiRequests += 1;
+  metrics.aiLatencyTotalMs += bundle.latencyMs ?? 0;
+  metrics.aiTokenTotalEstimate += bundle.tokenUsage?.totalTokens ?? bundle.tokenUsage?.outputTokenEstimate ?? bundle.tokenUsage?.inputTokenEstimate ?? 0;
+  if (bundle.fallbackUsed) {
+    metrics.aiFallback += 1;
+    if (/SCHEMA|JSON|EMPTY/u.test(bundle.failureCode ?? "")) metrics.aiSchemaFailures += 1;
+    if (/FACT|FIDELITY|RULE|TIMING|TYPE/u.test(bundle.failureCode ?? "")) metrics.aiFidelityFailures += 1;
+    if (/SAFETY/u.test(bundle.failureCode ?? "")) metrics.aiSafetyFailures += 1;
+  } else {
+    metrics.aiSuccess += 1;
+    metrics.aiDailyCount += 1;
+  }
+}
+
+function publicMetrics() {
+  return {
+    divinationRequests: metrics.divinationRequests,
+    aiRequests: metrics.aiRequests,
+    aiSuccess: metrics.aiSuccess,
+    aiFallback: metrics.aiFallback,
+    aiSchemaFailures: metrics.aiSchemaFailures,
+    aiFidelityFailures: metrics.aiFidelityFailures,
+    activeAIRequests,
+    averageAiLatencyMs: metrics.aiRequests ? Math.round(metrics.aiLatencyTotalMs / metrics.aiRequests) : 0,
+  };
 }
 
 function loadPersistedRecords() {
@@ -168,11 +252,49 @@ function requestIp(req) {
   return String(req.headers["x-forwarded-for"] ?? req.socket.remoteAddress ?? "unknown").split(",")[0].trim();
 }
 
+function deviceId(req) {
+  return String(req.headers["x-six-device-id"] ?? "unknown");
+}
+
+function assertDivinationAllowed(req) {
+  try {
+    divinationLimiter.assertAllowed({ ip: requestIp(req), deviceId: deviceId(req) });
+  } catch (err) {
+    err.publicCode = "AI_RATE_LIMITED";
+    throw err;
+  }
+}
+
 function aiMockMode(req) {
   if (process.env.NODE_ENV === "production") return null;
   const mode = req.headers["x-six-ai-mock"];
   if (!mode) return null;
   return ["success", "slow_success", "throw", "empty", "invalid_json", "bad_fact", "bad_ref", "unsafe"].includes(mode) ? mode : null;
+}
+
+function configuredAIProvider() {
+  return process.env.AI_PROVIDER ?? (process.env.OPENAI_API_KEY ? "openai" : "deterministic");
+}
+
+function internalStatusAllowed(req) {
+  const token = process.env.INTERNAL_STATUS_TOKEN;
+  if (token) return String(req.headers["x-internal-status-token"] ?? "") === token;
+  return !["staging", "production"].includes(APP_ENV);
+}
+
+function readyStatus() {
+  const bundle = loadRuleProfile({ rootDir: ROOT });
+  const data = loadDomainData(ROOT);
+  return {
+    status: "ok",
+    appVersion: PACKAGE.version,
+    gitCommit: GIT_COMMIT,
+    environment: APP_ENV,
+    coreProfileLoaded: bundle.profile.profile_code === "LIUYAO_CORE_V1",
+    calendarPolicy: "CAL_STD_V1",
+    aiProviderConfigured: Boolean(process.env.OPENAI_API_KEY) || (process.env.AI_PROVIDER ?? "deterministic") !== "openai",
+    contentReadable: data.knowledgeNodes.length > 0,
+  };
 }
 
 function notFound(res, message = "Resource not found.") {
@@ -282,6 +404,9 @@ function exportRecord(record) {
       promptVersion: result.aiReportBundle.promptVersion,
       generatedAt: result.aiReportBundle.generatedAt,
       validationStatus: result.aiReportBundle.validationStatus,
+      reportSource: result.aiReportBundle.reportSource,
+      latencyMs: result.aiReportBundle.latencyMs,
+      tokenUsage: result.aiReportBundle.tokenUsage,
       fallbackUsed: result.aiReportBundle.fallbackUsed,
       failureCode: result.aiReportBundle.failureCode,
     } : null,
@@ -371,7 +496,40 @@ function serveStatic(req, res, pathname) {
 
 async function route(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
+  const requestId = randomUUID();
+  const startedAt = Date.now();
   try {
+    if (req.method === "GET" && url.pathname === "/health") {
+      json(res, 200, { status: "ok" });
+      return;
+    }
+    if (req.method === "GET" && url.pathname === "/ready") {
+      json(res, 200, readyStatus());
+      return;
+    }
+    if (req.method === "GET" && url.pathname === "/internal/status") {
+      if (!internalStatusAllowed(req)) {
+        error(res, 403, "FORBIDDEN", "Internal status is protected.");
+        return;
+      }
+      const bundle = loadRuleProfile({ rootDir: ROOT });
+      json(res, 200, {
+        appVersion: PACKAGE.version,
+        gitCommit: GIT_COMMIT,
+        environment: APP_ENV,
+        engineVersion: "LIUYAO_ENGINE_LIGHT_V1",
+        calendarProvider: "lunar-javascript",
+        calendarVersion: "1.7.7",
+        ruleProfile: bundle.profile.profile_code,
+        aiProvider: configuredAIProvider(),
+        aiModel: process.env.AI_MODEL ?? "development-default",
+        promptVersion: { liuyao: "liuyao-report-v1", meihua: "meihua-report-v1" },
+        aiSchemaVersion: "AI_REPORT_V1",
+        lastStartupAt: STARTED_AT,
+        metrics: publicMetrics(),
+      });
+      return;
+    }
     if (req.method === "GET" && url.pathname === "/api/metadata") {
       const bundle = loadRuleProfile({ rootDir: ROOT });
       json(res, 200, {
@@ -420,6 +578,8 @@ async function route(req, res) {
       return;
     }
     if (req.method === "POST" && url.pathname === "/api/v1/liuyao/charts") {
+      assertDivinationAllowed(req);
+      metrics.divinationRequests += 1;
       const body = await parseJson(req);
       validateQuestion(body);
       const result = createLiuyaoChart(body, ROOT);
@@ -471,6 +631,8 @@ async function route(req, res) {
       }
     }
     if (req.method === "POST" && url.pathname === "/api/v1/meihua/charts") {
+      assertDivinationAllowed(req);
+      metrics.divinationRequests += 1;
       const body = await parseJson(req);
       validateQuestion(body);
       const result = createMeihuaChart(body, ROOT);
@@ -580,30 +742,53 @@ async function route(req, res) {
           return;
         }
         if (record.result.aiReportBundle?.validationStatus === "VALID") {
-          json(res, 200, { ...record.result.aiReportBundle, reused: true });
+          json(res, 200, { ...record.result.aiReportBundle, reportSource: "CACHE_REUSE", reused: true });
           return;
         }
         aiLimiter.assertAllowed({
           ip: requestIp(req),
-          deviceId: String(req.headers["x-six-device-id"] ?? "unknown"),
+          deviceId: deviceId(req),
         });
-        const provider = providerFromEnv({ rootDir: ROOT, mockMode: aiMockMode(req) });
-        const bundle = await generateGroundedAIReport({
-          result: record.result,
-          type: record.type,
-          provider,
-          language: loadSettings().reportLanguage,
-        });
+        const budgetAvailable = aiBudgetAvailable();
+        const concurrencyAvailable = aiConcurrencyAvailable();
+        const aiCallAllowed = budgetAvailable && concurrencyAvailable;
+        if (!aiCallAllowed) {
+          logEvent("warn", "ai_report_provider_skipped", {
+            requestId,
+            reportId: record.id,
+            type: record.type,
+            reason: budgetAvailable ? "AI_CONCURRENCY_LIMIT" : "AI_DAILY_BUDGET_LIMIT",
+          });
+        }
+        let bundle;
+        if (aiCallAllowed) activeAIRequests += 1;
+        try {
+          const provider = aiCallAllowed
+            ? providerFromEnv({ rootDir: ROOT, mockMode: aiMockMode(req) })
+            : providerFromEnv({ rootDir: ROOT, mockMode: "throw" });
+          bundle = await generateGroundedAIReport({
+            result: record.result,
+            type: record.type,
+            provider,
+            language: loadSettings().reportLanguage,
+          });
+        } finally {
+          if (aiCallAllowed) activeAIRequests -= 1;
+        }
         record.result.aiReportBundle = bundle;
         record.updatedAt = new Date().toISOString();
         savePersistedRecords();
+        recordAIOutcome(bundle);
         if (bundle.fallbackUsed) {
-          console.error("AI report fallback.", {
+          logEvent("error", "ai_report_fallback", {
+            requestId,
             reportId: record.id,
             type: record.type,
             provider: bundle.aiProvider,
             model: bundle.aiModel,
             failureCode: bundle.failureCode,
+            fallbackUsed: true,
+            latencyMs: bundle.latencyMs,
             question: questionDigest(record.question),
           });
         }
@@ -624,6 +809,8 @@ async function route(req, res) {
       }
     }
     if (req.method === "POST" && url.pathname === "/api/liuyao/chart") {
+      assertDivinationAllowed(req);
+      metrics.divinationRequests += 1;
       const body = await parseJson(req);
       validateQuestion(body);
       const result = createLiuyaoChart(body, ROOT);
@@ -632,6 +819,8 @@ async function route(req, res) {
       return;
     }
     if (req.method === "POST" && url.pathname === "/api/meihua/chart") {
+      assertDivinationAllowed(req);
+      metrics.divinationRequests += 1;
       const body = await parseJson(req);
       validateQuestion(body);
       const result = createMeihuaChart(body, ROOT);
@@ -659,7 +848,13 @@ async function route(req, res) {
   } catch (err) {
     const code = publicErrorCode(err);
     const status = code === "REPORT_NOT_FOUND" ? 404 : code === "AI_RATE_LIMITED" ? 429 : 400;
-    console.error("Request failed.", { code, message: err.message });
+    logEvent("error", "request_failed", {
+      requestId,
+      route: url.pathname,
+      status,
+      errorCode: code,
+      latencyMs: Date.now() - startedAt,
+    });
     error(res, status, code, err.message, process.env.NODE_ENV === "production" ? undefined : err.details);
   }
 }
@@ -667,5 +862,6 @@ async function route(req, res) {
 loadPersistedRecords();
 
 createServer(route).listen(PORT, () => {
+  logEvent("info", "startup", { port: PORT, appVersion: PACKAGE.version, gitCommit: GIT_COMMIT, environment: APP_ENV });
   console.log(`SIX running at http://localhost:${PORT}`);
 });

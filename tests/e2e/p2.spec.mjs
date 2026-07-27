@@ -39,6 +39,9 @@ test("AI 成功生成后刷新恢复已保存报告", async ({ page, request }, 
   await page.reload();
   await expect(page.getByTestId("ai-report-card")).toContainText("AI 智能解读");
   await expect(page.getByTestId("ai-report-card")).toContainText("概要");
+  const bundle = await request.post(`/api/v1/reports/${id}/ai`, { headers: { "x-six-ai-mock": "success", "x-six-device-id": "p2-success" } });
+  const json = await bundle.json();
+  expect(json.reportSource).toBe("CACHE_REUSE");
 });
 
 test("AI 加载状态可见", async ({ page, request }, testInfo) => {
@@ -57,6 +60,26 @@ test("AI 失败后显示确定性降级报告", async ({ page, request }, testIn
   await page.goto(`/reports/${id}`);
   await expect(page.getByTestId("ai-report-card")).toContainText("智能解读暂时不可用");
   await expect(page.getByText("基础规则分析")).toBeVisible();
+  const report = await request.get(`/api/v1/reports/${id}`);
+  const json = await report.json();
+  expect(json.aiReportBundle.reportSource).toBe("DETERMINISTIC_FALLBACK");
+});
+
+test("健康检查、就绪检查和内部状态不泄露敏感信息", async ({ request }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop P3-A coverage");
+  const health = await request.get("/health");
+  expect(await health.json()).toEqual({ status: "ok" });
+
+  const ready = await request.get("/ready");
+  const readyJson = await ready.json();
+  expect(readyJson.status).toBe("ok");
+  expect(JSON.stringify(readyJson)).not.toContain("OPENAI_API_KEY");
+
+  const status = await request.get("/internal/status");
+  const statusJson = await status.json();
+  expect(statusJson.aiSchemaVersion).toBe("AI_REPORT_V1");
+  expect(statusJson.metrics).toBeTruthy();
+  expect(JSON.stringify(statusJson)).not.toContain("OPENAI_API_KEY");
 });
 
 test("移动端可查看 AI 智能解读", async ({ page, request }, testInfo) => {

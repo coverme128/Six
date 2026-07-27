@@ -42,6 +42,10 @@ export class AIReportValidationError extends Error {
   }
 }
 
+function estimateTokens(value) {
+  return Math.ceil(JSON.stringify(value ?? "").length / 4);
+}
+
 function assertValid(condition, code, message, details = undefined) {
   if (!condition) throw new AIReportValidationError(code, message, details);
 }
@@ -456,7 +460,15 @@ export class OpenAIReportProvider {
       });
       const body = await response.json();
       if (!response.ok) throw new AIReportValidationError("PROVIDER_FAILED", "OpenAI provider failed.", { status: response.status, code: body?.error?.code });
-      return body.output_text ?? body.output?.flatMap((item) => item.content ?? []).map((part) => part.text).filter(Boolean).join("\n");
+      return {
+        __providerPayload: true,
+        content: body.output_text ?? body.output?.flatMap((item) => item.content ?? []).map((part) => part.text).filter(Boolean).join("\n"),
+        tokenUsage: body.usage ? {
+          inputTokens: body.usage.input_tokens,
+          outputTokens: body.usage.output_tokens,
+          totalTokens: body.usage.total_tokens,
+        } : null,
+      };
     } catch (err) {
       if (err.name === "AbortError") throw new AIReportValidationError("PROVIDER_TIMEOUT", "AI provider timed out.");
       if (err instanceof AIReportValidationError) throw err;
@@ -506,6 +518,9 @@ function fallbackBundle({ result, type, input, reason, provider, model }) {
     aiModel: model ?? "fallback",
     promptVersion: input.versions.promptVersion,
     generatedAt: new Date().toISOString(),
+    latencyMs: 0,
+    tokenUsage: { inputTokenEstimate: estimateTokens(input), outputTokens: 0 },
+    reportSource: "DETERMINISTIC_FALLBACK",
     validationStatus: "FALLBACK",
     fallbackUsed: true,
     failureCode: reason?.code ?? "UNKNOWN_AI_FAILURE",
@@ -516,14 +531,17 @@ function fallbackBundle({ result, type, input, reason, provider, model }) {
 const inFlight = new Map();
 
 export async function generateGroundedAIReport({ result, type, provider = providerFromEnv(), language = "zh-CN" }) {
-  if (result.aiReportBundle?.validationStatus === "VALID") return { ...result.aiReportBundle, reused: true };
+  if (result.aiReportBundle?.validationStatus === "VALID") return { ...result.aiReportBundle, reportSource: "CACHE_REUSE", reused: true };
   const input = buildAIReportInput({ result, type, language });
   const cacheKey = `${input.reportId}:${input.inputHash}:${provider.provider}:${provider.model}`;
   if (inFlight.has(cacheKey)) return inFlight.get(cacheKey);
   const run = (async () => {
+    const startedAt = Date.now();
     try {
       const raw = await provider.generateReport(input);
-      const output = validateAIReport(raw, input);
+      const providerPayload = raw?.__providerPayload ? raw : null;
+      const output = validateAIReport(providerPayload ? providerPayload.content : raw, input);
+      const latencyMs = Date.now() - startedAt;
       return {
         aiReport: output,
         aiSchemaVersion: AI_SCHEMA_VERSION,
@@ -531,13 +549,21 @@ export async function generateGroundedAIReport({ result, type, provider = provid
         aiModel: provider.model,
         promptVersion: input.versions.promptVersion,
         generatedAt: new Date().toISOString(),
+        latencyMs,
+        tokenUsage: providerPayload?.tokenUsage ?? {
+          inputTokenEstimate: estimateTokens(input),
+          outputTokenEstimate: estimateTokens(output),
+        },
+        reportSource: provider.provider === "openai" ? "OPENAI_LIVE" : "OPENAI_LIVE",
         validationStatus: "VALID",
         fallbackUsed: false,
         inputHash: input.inputHash,
         requestId: randomUUID(),
       };
     } catch (err) {
-      return fallbackBundle({ result, type, input, reason: err, provider: provider.provider, model: provider.model });
+      const bundle = fallbackBundle({ result, type, input, reason: err, provider: provider.provider, model: provider.model });
+      bundle.latencyMs = Date.now() - startedAt;
+      return bundle;
     } finally {
       inFlight.delete(cacheKey);
     }

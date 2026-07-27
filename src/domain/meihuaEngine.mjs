@@ -31,6 +31,7 @@ export function createMeihuaChart(input = {}, rootDir = process.cwd()) {
   const methodCode = input.methodCode ?? input.method_code ?? "MEIHUA_TWO_NUMBER_V1";
   let numberA;
   let numberB;
+  let numberC = null;
   let movingBase;
 
   if (methodCode === "MEIHUA_TIME_LUNAR_BRANCH_V1") {
@@ -44,6 +45,14 @@ export function createMeihuaChart(input = {}, rootDir = process.cwd()) {
     numberA = yearBranchOrdinal + lunarMonth + lunarDay;
     numberB = numberA + hourBranchOrdinal;
     movingBase = numberB;
+  } else if (methodCode === "MEIHUA_THREE_NUMBER_V1") {
+    numberA = Number(input.number_a ?? input.numberA ?? 1);
+    numberB = Number(input.number_b ?? input.numberB ?? 1);
+    numberC = Number(input.number_c ?? input.numberC ?? 1);
+    assert(Number.isFinite(numberA) && numberA > 0, "number_a must be a positive number.");
+    assert(Number.isFinite(numberB) && numberB > 0, "number_b must be a positive number.");
+    assert(Number.isFinite(numberC) && numberC > 0, "number_c must be a positive number.");
+    movingBase = numberC;
   } else {
     numberA = Number(input.number_a ?? input.numberA ?? 1);
     numberB = Number(input.number_b ?? input.numberB ?? 1);
@@ -77,7 +86,7 @@ export function createMeihuaChart(input = {}, rootDir = process.cwd()) {
     id: `mh_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`,
     methodCode,
     question: input.question ?? "",
-    input: { number_a: numberA, number_b: numberB },
+    input: numberC == null ? { number_a: numberA, number_b: numberB } : { number_a: numberA, number_b: numberB, number_c: numberC },
     upperTrigram: upper,
     lowerTrigram: lower,
     movingLine,
