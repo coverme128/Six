@@ -1,0 +1,342 @@
+{
+  "version": "1.1.0",
+  "count": 56,
+  "items": [
+    {
+      "code": "RETURN_GENERATION",
+      "condition": "changed.element generates original.element",
+      "meaning_zh": "回头生",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RETURN_CONTROL",
+      "condition": "changed.element controls original.element",
+      "meaning_zh": "回头克",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGINAL_GENERATES_CHANGED",
+      "condition": "original.element generates changed.element",
+      "meaning_zh": "化泄/生出候选",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ORIGINAL_CONTROLS_CHANGED",
+      "condition": "original.element controls changed.element",
+      "meaning_zh": "化克出候选",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "TRANSFORM_SAME_ELEMENT",
+      "condition": "changed.element == original.element",
+      "meaning_zh": "化比和",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "TRANSFORM_TO_VOID",
+      "condition": "changed.branch in day_xun_void",
+      "meaning_zh": "化空",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TRANSFORM_TO_MONTH_BREAK",
+      "condition": "clash(changed.branch, month.branch)",
+      "meaning_zh": "化破",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TRANSFORM_TO_DAY_CLASH",
+      "condition": "clash(changed.branch, day.branch)",
+      "meaning_zh": "化日冲",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "TRANSFORM_TO_DAY_HARMONY",
+      "condition": "six_harmony(changed.branch, day.branch)",
+      "meaning_zh": "化日合",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ADVANCE_YIN_WOOD",
+      "condition": "original.branch==mao and changed.branch==yin",
+      "meaning_zh": "化进候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ADVANCE_YANG_WOOD",
+      "condition": "original.branch==yin and changed.branch==mao",
+      "meaning_zh": "化进候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ADVANCE_FIRE",
+      "condition": "configured advance pair in fire sequence",
+      "meaning_zh": "化进候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ADVANCE_METAL",
+      "condition": "configured advance pair in metal sequence",
+      "meaning_zh": "化进候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ADVANCE_WATER",
+      "condition": "configured advance pair in water sequence",
+      "meaning_zh": "化进候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RETREAT_TRANSFORMATION",
+      "condition": "branch pair matches configured retreat pair",
+      "meaning_zh": "化退候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_TOMB",
+      "condition": "changed.branch == configured_tomb(original.element)",
+      "meaning_zh": "化墓候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_ABSOLUTE",
+      "condition": "changed.branch == configured_jue(original.element)",
+      "meaning_zh": "化绝候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SAME_TRIGRAM_REPEAT",
+      "condition": "changed_trigram == original_trigram",
+      "meaning_zh": "局部伏吟候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRIGRAM_OPPOSITION",
+      "condition": "changed_trigram == opposite(original_trigram)",
+      "meaning_zh": "局部反吟候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HEXAGRAM_REPEAT",
+      "condition": "changed_hexagram == original_hexagram",
+      "meaning_zh": "伏吟候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HEXAGRAM_OPPOSITION",
+      "condition": "changed_hexagram == opposite_hexagram(original)",
+      "meaning_zh": "反吟候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_WEALTH",
+      "condition": "changed.six_relation == wealth",
+      "meaning_zh": "化财",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_OFFICER",
+      "condition": "changed.six_relation == officer_ghost",
+      "meaning_zh": "化官",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_PARENT",
+      "condition": "changed.six_relation == parent",
+      "meaning_zh": "化父",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_CHILD",
+      "condition": "changed.six_relation == child",
+      "meaning_zh": "化子",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_SIBLING",
+      "condition": "changed.six_relation == sibling",
+      "meaning_zh": "化兄",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "TRANSFORM_SIX_HARMONY_DAY",
+      "condition": "six_harmony(changed.branch, day.branch)",
+      "meaning_zh": "变爻与日六合候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_SIX_HARMONY_MONTH",
+      "condition": "six_harmony(changed.branch, month.branch)",
+      "meaning_zh": "变爻与月六合候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_CLASH_DAY",
+      "condition": "clash(changed.branch, day.branch)",
+      "meaning_zh": "变爻与日六冲候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_CLASH_MONTH",
+      "condition": "clash(changed.branch, month.branch)",
+      "meaning_zh": "变爻与月六冲候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_HARM_DAY",
+      "condition": "harm(changed.branch, day.branch)",
+      "meaning_zh": "变爻与日相害候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_HARM_MONTH",
+      "condition": "harm(changed.branch, month.branch)",
+      "meaning_zh": "变爻与月相害候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_BREAK_DAY",
+      "condition": "break(changed.branch, day.branch)",
+      "meaning_zh": "变爻与日相破候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_BREAK_MONTH",
+      "condition": "break(changed.branch, month.branch)",
+      "meaning_zh": "变爻与月相破候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_PUNISHMENT_DAY",
+      "condition": "punishment(changed.branch, day.branch)",
+      "meaning_zh": "变爻与日相刑候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_PUNISHMENT_MONTH",
+      "condition": "punishment(changed.branch, month.branch)",
+      "meaning_zh": "变爻与月相刑候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PARENT_TRANSFORM_VOID",
+      "condition": "original.six_relation == parent and changed line is void",
+      "meaning_zh": "parent 化空",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PARENT_TRANSFORM_BREAK",
+      "condition": "original.six_relation == parent and changed line is month break",
+      "meaning_zh": "parent 化破",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PARENT_TRANSFORM_SUPPORTED",
+      "condition": "original.six_relation == parent and changed line receives strong support",
+      "meaning_zh": "parent 化旺候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PARENT_TRANSFORM_SUPPRESSED",
+      "condition": "original.six_relation == parent and changed line receives strong suppression",
+      "meaning_zh": "parent 化衰候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIBLING_TRANSFORM_VOID",
+      "condition": "original.six_relation == sibling and changed line is void",
+      "meaning_zh": "sibling 化空",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIBLING_TRANSFORM_BREAK",
+      "condition": "original.six_relation == sibling and changed line is month break",
+      "meaning_zh": "sibling 化破",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIBLING_TRANSFORM_SUPPORTED",
+      "condition": "original.six_relation == sibling and changed line receives strong support",
+      "meaning_zh": "sibling 化旺候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIBLING_TRANSFORM_SUPPRESSED",
+      "condition": "original.six_relation == sibling and changed line receives strong suppression",
+      "meaning_zh": "sibling 化衰候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHILD_TRANSFORM_VOID",
+      "condition": "original.six_relation == child and changed line is void",
+      "meaning_zh": "child 化空",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHILD_TRANSFORM_BREAK",
+      "condition": "original.six_relation == child and changed line is month break",
+      "meaning_zh": "child 化破",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHILD_TRANSFORM_SUPPORTED",
+      "condition": "original.six_relation == child and changed line receives strong support",
+      "meaning_zh": "child 化旺候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHILD_TRANSFORM_SUPPRESSED",
+      "condition": "original.six_relation == child and changed line receives strong suppression",
+      "meaning_zh": "child 化衰候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_TRANSFORM_VOID",
+      "condition": "original.six_relation == wealth and changed line is void",
+      "meaning_zh": "wealth 化空",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_TRANSFORM_BREAK",
+      "condition": "original.six_relation == wealth and changed line is month break",
+      "meaning_zh": "wealth 化破",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_TRANSFORM_SUPPORTED",
+      "condition": "original.six_relation == wealth and changed line receives strong support",
+      "meaning_zh": "wealth 化旺候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_TRANSFORM_SUPPRESSED",
+      "condition": "original.six_relation == wealth and changed line receives strong suppression",
+      "meaning_zh": "wealth 化衰候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "OFFICER_GHOST_TRANSFORM_VOID",
+      "condition": "original.six_relation == officer_ghost and changed line is void",
+      "meaning_zh": "officer_ghost 化空",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "OFFICER_GHOST_TRANSFORM_BREAK",
+      "condition": "original.six_relation == officer_ghost and changed line is month break",
+      "meaning_zh": "officer_ghost 化破",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "OFFICER_GHOST_TRANSFORM_SUPPORTED",
+      "condition": "original.six_relation == officer_ghost and changed line receives strong support",
+      "meaning_zh": "officer_ghost 化旺候选",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "OFFICER_GHOST_TRANSFORM_SUPPRESSED",
+      "condition": "original.six_relation == officer_ghost and changed line receives strong suppression",
+      "meaning_zh": "officer_ghost 化衰候选",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

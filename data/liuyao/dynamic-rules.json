@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "code": "RETURN_GENERATION",
+      "condition": "changed_line.element generates original_line.element",
+      "meaning_zh": "回头生",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RETURN_CONTROL",
+      "condition": "changed_line.element controls original_line.element",
+      "meaning_zh": "回头克",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ADVANCE_TRANSFORMATION",
+      "condition": "branch pair matches configured advance pair",
+      "meaning_zh": "化进",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RETREAT_TRANSFORMATION",
+      "condition": "branch pair matches configured retreat pair",
+      "meaning_zh": "化退",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRANSFORM_TO_VOID",
+      "condition": "changed_line.branch in day_xun_void",
+      "meaning_zh": "化空",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TRANSFORM_TO_MONTH_BREAK",
+      "condition": "changed_line.branch clashes month.branch",
+      "meaning_zh": "化破",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TRANSFORM_SAME_BRANCH",
+      "condition": "changed_line.branch == original_line.branch",
+      "meaning_zh": "伏吟候选",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

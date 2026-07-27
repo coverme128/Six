@@ -1,0 +1,366 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "index": 1,
+      "stem": "jia",
+      "branch": "zi",
+      "name_zh": "甲子"
+    },
+    {
+      "index": 2,
+      "stem": "yi",
+      "branch": "chou",
+      "name_zh": "乙丑"
+    },
+    {
+      "index": 3,
+      "stem": "bing",
+      "branch": "yin",
+      "name_zh": "丙寅"
+    },
+    {
+      "index": 4,
+      "stem": "ding",
+      "branch": "mao",
+      "name_zh": "丁卯"
+    },
+    {
+      "index": 5,
+      "stem": "wu",
+      "branch": "chen",
+      "name_zh": "戊辰"
+    },
+    {
+      "index": 6,
+      "stem": "ji",
+      "branch": "si",
+      "name_zh": "己巳"
+    },
+    {
+      "index": 7,
+      "stem": "geng",
+      "branch": "wu",
+      "name_zh": "庚午"
+    },
+    {
+      "index": 8,
+      "stem": "xin",
+      "branch": "wei",
+      "name_zh": "辛未"
+    },
+    {
+      "index": 9,
+      "stem": "ren",
+      "branch": "shen",
+      "name_zh": "壬申"
+    },
+    {
+      "index": 10,
+      "stem": "gui",
+      "branch": "you",
+      "name_zh": "癸酉"
+    },
+    {
+      "index": 11,
+      "stem": "jia",
+      "branch": "xu",
+      "name_zh": "甲戌"
+    },
+    {
+      "index": 12,
+      "stem": "yi",
+      "branch": "hai",
+      "name_zh": "乙亥"
+    },
+    {
+      "index": 13,
+      "stem": "bing",
+      "branch": "zi",
+      "name_zh": "丙子"
+    },
+    {
+      "index": 14,
+      "stem": "ding",
+      "branch": "chou",
+      "name_zh": "丁丑"
+    },
+    {
+      "index": 15,
+      "stem": "wu",
+      "branch": "yin",
+      "name_zh": "戊寅"
+    },
+    {
+      "index": 16,
+      "stem": "ji",
+      "branch": "mao",
+      "name_zh": "己卯"
+    },
+    {
+      "index": 17,
+      "stem": "geng",
+      "branch": "chen",
+      "name_zh": "庚辰"
+    },
+    {
+      "index": 18,
+      "stem": "xin",
+      "branch": "si",
+      "name_zh": "辛巳"
+    },
+    {
+      "index": 19,
+      "stem": "ren",
+      "branch": "wu",
+      "name_zh": "壬午"
+    },
+    {
+      "index": 20,
+      "stem": "gui",
+      "branch": "wei",
+      "name_zh": "癸未"
+    },
+    {
+      "index": 21,
+      "stem": "jia",
+      "branch": "shen",
+      "name_zh": "甲申"
+    },
+    {
+      "index": 22,
+      "stem": "yi",
+      "branch": "you",
+      "name_zh": "乙酉"
+    },
+    {
+      "index": 23,
+      "stem": "bing",
+      "branch": "xu",
+      "name_zh": "丙戌"
+    },
+    {
+      "index": 24,
+      "stem": "ding",
+      "branch": "hai",
+      "name_zh": "丁亥"
+    },
+    {
+      "index": 25,
+      "stem": "wu",
+      "branch": "zi",
+      "name_zh": "戊子"
+    },
+    {
+      "index": 26,
+      "stem": "ji",
+      "branch": "chou",
+      "name_zh": "己丑"
+    },
+    {
+      "index": 27,
+      "stem": "geng",
+      "branch": "yin",
+      "name_zh": "庚寅"
+    },
+    {
+      "index": 28,
+      "stem": "xin",
+      "branch": "mao",
+      "name_zh": "辛卯"
+    },
+    {
+      "index": 29,
+      "stem": "ren",
+      "branch": "chen",
+      "name_zh": "壬辰"
+    },
+    {
+      "index": 30,
+      "stem": "gui",
+      "branch": "si",
+      "name_zh": "癸巳"
+    },
+    {
+      "index": 31,
+      "stem": "jia",
+      "branch": "wu",
+      "name_zh": "甲午"
+    },
+    {
+      "index": 32,
+      "stem": "yi",
+      "branch": "wei",
+      "name_zh": "乙未"
+    },
+    {
+      "index": 33,
+      "stem": "bing",
+      "branch": "shen",
+      "name_zh": "丙申"
+    },
+    {
+      "index": 34,
+      "stem": "ding",
+      "branch": "you",
+      "name_zh": "丁酉"
+    },
+    {
+      "index": 35,
+      "stem": "wu",
+      "branch": "xu",
+      "name_zh": "戊戌"
+    },
+    {
+      "index": 36,
+      "stem": "ji",
+      "branch": "hai",
+      "name_zh": "己亥"
+    },
+    {
+      "index": 37,
+      "stem": "geng",
+      "branch": "zi",
+      "name_zh": "庚子"
+    },
+    {
+      "index": 38,
+      "stem": "xin",
+      "branch": "chou",
+      "name_zh": "辛丑"
+    },
+    {
+      "index": 39,
+      "stem": "ren",
+      "branch": "yin",
+      "name_zh": "壬寅"
+    },
+    {
+      "index": 40,
+      "stem": "gui",
+      "branch": "mao",
+      "name_zh": "癸卯"
+    },
+    {
+      "index": 41,
+      "stem": "jia",
+      "branch": "chen",
+      "name_zh": "甲辰"
+    },
+    {
+      "index": 42,
+      "stem": "yi",
+      "branch": "si",
+      "name_zh": "乙巳"
+    },
+    {
+      "index": 43,
+      "stem": "bing",
+      "branch": "wu",
+      "name_zh": "丙午"
+    },
+    {
+      "index": 44,
+      "stem": "ding",
+      "branch": "wei",
+      "name_zh": "丁未"
+    },
+    {
+      "index": 45,
+      "stem": "wu",
+      "branch": "shen",
+      "name_zh": "戊申"
+    },
+    {
+      "index": 46,
+      "stem": "ji",
+      "branch": "you",
+      "name_zh": "己酉"
+    },
+    {
+      "index": 47,
+      "stem": "geng",
+      "branch": "xu",
+      "name_zh": "庚戌"
+    },
+    {
+      "index": 48,
+      "stem": "xin",
+      "branch": "hai",
+      "name_zh": "辛亥"
+    },
+    {
+      "index": 49,
+      "stem": "ren",
+      "branch": "zi",
+      "name_zh": "壬子"
+    },
+    {
+      "index": 50,
+      "stem": "gui",
+      "branch": "chou",
+      "name_zh": "癸丑"
+    },
+    {
+      "index": 51,
+      "stem": "jia",
+      "branch": "yin",
+      "name_zh": "甲寅"
+    },
+    {
+      "index": 52,
+      "stem": "yi",
+      "branch": "mao",
+      "name_zh": "乙卯"
+    },
+    {
+      "index": 53,
+      "stem": "bing",
+      "branch": "chen",
+      "name_zh": "丙辰"
+    },
+    {
+      "index": 54,
+      "stem": "ding",
+      "branch": "si",
+      "name_zh": "丁巳"
+    },
+    {
+      "index": 55,
+      "stem": "wu",
+      "branch": "wu",
+      "name_zh": "戊午"
+    },
+    {
+      "index": 56,
+      "stem": "ji",
+      "branch": "wei",
+      "name_zh": "己未"
+    },
+    {
+      "index": 57,
+      "stem": "geng",
+      "branch": "shen",
+      "name_zh": "庚申"
+    },
+    {
+      "index": 58,
+      "stem": "xin",
+      "branch": "you",
+      "name_zh": "辛酉"
+    },
+    {
+      "index": 59,
+      "stem": "ren",
+      "branch": "xu",
+      "name_zh": "壬戌"
+    },
+    {
+      "index": 60,
+      "stem": "gui",
+      "branch": "hai",
+      "name_zh": "癸亥"
+    }
+  ]
+}

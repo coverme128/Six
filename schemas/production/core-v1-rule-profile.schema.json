@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Core V1 Rule Profile",
+  "type": "object",
+  "required": [
+    "version",
+    "profile_code",
+    "rule_counts",
+    "supported_user_questions",
+    "enabled_datasets",
+    "hard_policies",
+    "stop_line"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "profile_code": {
+      "const": "LIUYAO_CORE_V1"
+    },
+    "name_zh": {
+      "type": "string"
+    },
+    "rule_counts": {
+      "type": "object",
+      "required": [
+        "total_production_units"
+      ],
+      "properties": {
+        "total_production_units": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 150
+        }
+      }
+    },
+    "supported_user_questions": {
+      "type": "object"
+    },
+    "enabled_datasets": {
+      "type": "object"
+    },
+    "hard_policies": {
+      "type": "array"
+    },
+    "stop_line": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "dimensions": [
+    {
+      "code": "subject_state",
+      "label_zh": "主体状态",
+      "question": "用户当前是否有主动权与承受力？",
+      "max_evidence": 2
+    },
+    {
+      "code": "target_state",
+      "label_zh": "目标状态",
+      "question": "所求对象是否出现、是否有力、是否可兑现？",
+      "max_evidence": 3
+    },
+    {
+      "code": "supporting_forces",
+      "label_zh": "支持力量",
+      "question": "哪些因素在帮助目标？",
+      "max_evidence": 2
+    },
+    {
+      "code": "blocking_forces",
+      "label_zh": "阻碍力量",
+      "question": "哪些因素在压制、消耗或延迟目标？",
+      "max_evidence": 2
+    },
+    {
+      "code": "change_direction",
+      "label_zh": "变化方向",
+      "question": "事情正在增强、减弱、反复还是保持稳定？",
+      "max_evidence": 2
+    },
+    {
+      "code": "timing_state",
+      "label_zh": "时间状态",
+      "question": "现在能否兑现，可能在哪个窗口变化？",
+      "max_evidence": 2
+    }
+  ],
+  "ranking_order": [
+    "direct_target_fact",
+    "world_response_fact",
+    "strength_fact",
+    "moving_change_fact",
+    "support_block_signal",
+    "symbolism"
+  ],
+  "deduplication": [
+    "Merge multiple month/day support facts into one strength statement.",
+    "Merge relation-specific supported/suppressed signals under one target-state statement.",
+    "Do not show the same factual evidence in both support and outcome sections."
+  ],
+  "output_sections": [
+    "one_sentence_summary",
+    "current_state",
+    "supporting_factors",
+    "blocking_factors",
+    "change_direction",
+    "timing_candidates",
+    "action_guidance",
+    "evidence"
+  ],
+  "language_policy": {
+    "avoid_absolute_certainty": true,
+    "avoid_fear_language": true,
+    "plain_language_first": true,
+    "technical_details_collapsible": true
+  }
+}

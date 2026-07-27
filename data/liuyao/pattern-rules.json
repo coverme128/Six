@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "code": "YONGSHEN_HOLDS_WORLD",
+      "conditions": [
+        "world_line is selected_yongshen"
+      ],
+      "name_zh": "用神持世",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_GENERATES_RESPONSE",
+      "conditions": [
+        "world.element generates response.element"
+      ],
+      "name_zh": "世生应",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_GENERATES_WORLD",
+      "conditions": [
+        "response.element generates world.element"
+      ],
+      "name_zh": "应生世",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_CONTROLS_RESPONSE",
+      "conditions": [
+        "world.element controls response.element"
+      ],
+      "name_zh": "世克应",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_CONTROLS_WORLD",
+      "conditions": [
+        "response.element controls world.element"
+      ],
+      "name_zh": "应克世",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_RESPONSE_SIX_HARMONY",
+      "conditions": [
+        "world.branch harmonizes response.branch"
+      ],
+      "name_zh": "世应相合",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_RESPONSE_SIX_CLASH",
+      "conditions": [
+        "world.branch clashes response.branch"
+      ],
+      "name_zh": "世应相冲",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_VOID",
+      "conditions": [
+        "selected_yongshen is void"
+      ],
+      "name_zh": "用神旬空",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_MONTH_BREAK",
+      "conditions": [
+        "selected_yongshen month_break_candidate"
+      ],
+      "name_zh": "用神月破候选",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGINAL_HEXAGRAM_SIX_CLASH",
+      "conditions": [
+        "hexagram_code in configured_six_clash_hexagrams"
+      ],
+      "name_zh": "六冲卦",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ORIGINAL_HEXAGRAM_SIX_HARMONY",
+      "conditions": [
+        "hexagram_code in configured_six_harmony_hexagrams"
+      ],
+      "name_zh": "六合卦",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MULTIPLE_MOVING_LINES",
+      "conditions": [
+        "moving_line_count >= 3"
+      ],
+      "name_zh": "多爻发动",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SINGLE_MOVING_LINE",
+      "conditions": [
+        "moving_line_count == 1"
+      ],
+      "name_zh": "独发",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    }
+  ]
+}

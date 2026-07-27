@@ -1,0 +1,3415 @@
+{
+  "version": "1.3.0",
+  "count": 383,
+  "items": [
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "job_search"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "interview"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "offer"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "promotion"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "job_change"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "resignation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "work_stability"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "manager_relation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "colleague_relation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "performance_review"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "career_direction"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "income"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "business_profit"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "payment_collection"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "salary_raise"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "investment_outcome"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "cashflow"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "debt_repayment"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "refund"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "price_negotiation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "side_income"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "partnership"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "customer_acquisition"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "contract_signing"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "project_success"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "project_delivery"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "competition"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "supplier"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "market_launch"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "business_expansion"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "merger_acquisition"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "dating"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "marriage"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "reconciliation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "counterparty_attitude"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "relationship_stability"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "breakup"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "third_party"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "family_approval"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "exam"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "admission"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "application"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "certificate"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "study_progress"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "teacher_relation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "research"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "buy_house"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "sell_house"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "rent_house"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "move_house"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "renovation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "land"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "property_document"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "lawsuit"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "dispute"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "contract_dispute"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "complaint"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "regulatory"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "health",
+        "self_health"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "health",
+        "family_health"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "health",
+        "recovery"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "health",
+        "treatment"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "health",
+        "medical_check"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "parents"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "children"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "siblings"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "family_conflict"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "pregnancy"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "childbirth"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "purchase"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "sale"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "delivery"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "quality"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "lost_item"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "return_goods"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "trip"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "visa"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "relocation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "flight_train"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "business_trip"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "people",
+        "find_person"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "people",
+        "contact_person"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "people",
+        "friend"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "people",
+        "enemy_competitor"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "weather",
+        "weather_general"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "weather",
+        "rain"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "weather",
+        "event_weather"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "go_or_stay"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "choose_a_b"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "timing_decision"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "risk_assessment"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "remote_work"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "probation"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "career",
+        "layoff_risk"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "bonus"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "commission"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "wealth",
+        "loan_approval"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "fundraising"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "product_market_fit"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "advertising_campaign"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "business",
+        "cross_border_trade"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "long_distance"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "relationship",
+        "engagement"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "scholarship"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "study",
+        "study_abroad"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "mortgage"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "property",
+        "property_investment"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "legal",
+        "settlement"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "family",
+        "inheritance"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "goods",
+        "customs_clearance"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "travel",
+        "immigration"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "launch_or_delay"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "decision",
+        "hire_or_not"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "people",
+        "new_partner_background"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "yongshen",
+      "key": [
+        "weather",
+        "outdoor_event"
+      ],
+      "source_status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_SAME_BRANCH",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_CLASH",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_GENERATES_LINE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "LINE_GENERATES_MONTH",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_CONTROLS_LINE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "LINE_CONTROLS_MONTH",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_SAME_BRANCH",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_GENERATES_LINE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "LINE_GENERATES_DAY",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_CONTROLS_LINE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "LINE_CONTROLS_DAY",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_CLASH",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_HARMONY",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_HARMONY",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "XUN_VOID",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MOVING_LINE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "CHANGED_GENERATES_ORIGINAL",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "CHANGED_CONTROLS_ORIGINAL",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ORIGINAL_GENERATES_CHANGED",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ORIGINAL_CONTROLS_CHANGED",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_GENERATES",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_CONTROLS",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_SAME_ELEMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_BLOCKED_BY_FLYING",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_GENERATED_BY_FLYING",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TOMB_BY_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TOMB_BY_CHANGED_BRANCH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "ABSOLUTE_BY_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "THREE_HARMONY_SUPPORT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "SIX_HARMONY_BOUND",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "SIX_CLASH_RELEASE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_BREAK_WITH_DAY_SUPPORT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "VOID_WITH_ACTIVE_MOVEMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "VOID_FILLED_BY_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "SEASONAL_SAME_ELEMENT",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "SEASONAL_GENERATED_ELEMENT",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_THREE_HARMONY_MEMBER",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_THREE_HARMONY_MEMBER",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_HARM",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_HARM",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MONTH_PUNISHMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "DAY_PUNISHMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MOVING_LINE_GENERATES_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "MOVING_LINE_CONTROLS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "CHANGED_LINE_GENERATES_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "CHANGED_LINE_CONTROLS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "WORLD_SUPPORTS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "RESPONSE_SUPPORTS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "WORLD_CONTROLS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "RESPONSE_CONTROLS_TARGET",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TARGET_GENERATES_WORLD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TARGET_GENERATES_RESPONSE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TARGET_CONTROLS_WORLD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "strength",
+      "key": "TARGET_CONTROLS_RESPONSE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RETURN_GENERATION",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RETURN_CONTROL",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ORIGINAL_GENERATES_CHANGED",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ORIGINAL_CONTROLS_CHANGED",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_SAME_ELEMENT",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_VOID",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_MONTH_BREAK",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_DAY_CLASH",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_DAY_HARMONY",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ADVANCE_YIN_WOOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ADVANCE_YANG_WOOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ADVANCE_FIRE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ADVANCE_METAL",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "ADVANCE_WATER",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RETREAT_TRANSFORMATION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TOMB",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_ABSOLUTE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "SAME_TRIGRAM_REPEAT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRIGRAM_OPPOSITION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "HEXAGRAM_REPEAT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "HEXAGRAM_OPPOSITION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_WEALTH",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_OFFICER",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_PARENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_CHILD",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_SIBLING",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_SIX_HARMONY_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_SIX_HARMONY_MONTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_CLASH_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_CLASH_MONTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_HARM_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_HARM_MONTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_BREAK_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_BREAK_MONTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_PUNISHMENT_DAY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_PUNISHMENT_MONTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "PARENT_TRANSFORM_VOID",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "PARENT_TRANSFORM_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "PARENT_TRANSFORM_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "PARENT_TRANSFORM_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "SIBLING_TRANSFORM_VOID",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "SIBLING_TRANSFORM_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "SIBLING_TRANSFORM_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "SIBLING_TRANSFORM_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "CHILD_TRANSFORM_VOID",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "CHILD_TRANSFORM_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "CHILD_TRANSFORM_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "CHILD_TRANSFORM_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "WEALTH_TRANSFORM_VOID",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "WEALTH_TRANSFORM_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "WEALTH_TRANSFORM_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "WEALTH_TRANSFORM_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "OFFICER_GHOST_TRANSFORM_VOID",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "OFFICER_GHOST_TRANSFORM_BREAK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "OFFICER_GHOST_TRANSFORM_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "dynamic",
+      "key": "OFFICER_GHOST_TRANSFORM_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_HOLDS_WORLD",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_AT_RESPONSE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_GENERATES_RESPONSE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_GENERATES_WORLD",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_CONTROLS_RESPONSE",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_CONTROLS_WORLD",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_HARMONY",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_CLASH",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_SAME_ELEMENT",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_VOID",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MONTH_BREAK",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MOVING",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_RETURN_GENERATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_RETURN_CONTROL",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "ORIGIN_SPIRIT_MOVING",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "TABOO_SPIRIT_MOVING",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "ORIGIN_GENERATES_YONGSHEN",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "TABOO_CONTROLS_YONGSHEN",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SINGLE_MOVING_LINE",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "DOUBLE_MOVING_LINES",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "MULTIPLE_MOVING_LINES",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "ALL_LINES_STATIC",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_HOLDS_WORLD",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_HOLDS_WORLD",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_HOLDS_WORLD",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_HOLDS_WORLD",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_GHOST_HOLDS_WORLD",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "ORIGINAL_SIX_CLASH",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "ORIGINAL_SIX_HARMONY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHANGED_SIX_CLASH",
+      "source_status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHANGED_SIX_HARMONY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "THREE_HARMONY_ACTIVE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "FLYING_HIDDEN_PRESENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_VOID",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_VOID",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_MONTH_BREAK",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_MONTH_BREAK",
+      "source_status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_STRONG_SIGNAL",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_WEAK_SIGNAL",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_VOID_SIGNAL",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MONTH_BREAK_SIGNAL",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_TOMB_SIGNAL",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_AZURE_DRAGON",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_VERMILION_BIRD",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_HOOKED_EARTH",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_SOARING_SERPENT",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_WHITE_TIGER",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "YONGSHEN_ON_BLACK_TORTOISE",
+      "source_status": "REVIEWED_SYMBOLISM_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CONTRACT_PARENT_ACTIVE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_WITH_SIBLING_PRESSURE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CAREER_OFFICER_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RELATION_WORLD_RESPONSE_INTERACTION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "HEALTH_CHILD_SUPPORT_SIGNAL",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_MOVING_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_VOID_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_MONTH_BREAK_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_SUPPORTED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PARENT_SUPPRESSED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_MOVING_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_VOID_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_MONTH_BREAK_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_SUPPORTED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "SIBLING_SUPPRESSED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_MOVING_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_VOID_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_MONTH_BREAK_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_SUPPORTED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CHILD_SUPPRESSED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_MOVING_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_VOID_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_MONTH_BREAK_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_SUPPORTED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_SUPPRESSED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_MOVING_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_VOID_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_MONTH_BREAK_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_SUPPORTED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "OFFICER_SUPPRESSED_PRESENT",
+      "source_status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_PARENT_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_PARENT_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_SIBLING_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_SIBLING_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_CHILD_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_CHILD_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_WEALTH_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_WEALTH_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_OFFICER_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "RESPONSE_OFFICER_RELATION",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "CAREER_PARENT_AND_OFFICER",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WEALTH_CHILD_GENERATES_WEALTH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "BUSINESS_WORLD_RESPONSE_HARMONY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "BUSINESS_WORLD_RESPONSE_CLASH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "STUDY_PARENT_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PROPERTY_PARENT_ACTIVE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "TRAVEL_WORLD_ACTIVE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "GOODS_PARENT_RESPONSE_LINK",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "FAMILY_SIBLING_PRESSURE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "DECISION_MULTIPLE_MOVEMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PRIMARY_AND_SECONDARY_TARGET_CONFLICT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "PRIMARY_AND_SECONDARY_TARGET_CONVERGENCE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_AND_YONGSHEN_BOTH_SUPPORTED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "pattern",
+      "key": "WORLD_SUPPORTED_YONGSHEN_SUPPRESSED",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TARGET_BRANCH_VALUE",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "VOID_FILL",
+      "source_status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "VOID_CLASH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MONTH_BREAK_EXIT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MONTH_BREAK_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "BOUND_RELEASE_BY_CLASH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "CLASH_STABILIZED_BY_HARMONY",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MOVING_CHANGED_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MOVING_ORIGINAL_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TOMB_RELEASE_BY_CLASH",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TARGET_RECEIVES_GENERATION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TARGET_RECEIVES_SAME_ELEMENT",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TABOO_WEAKENS",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "ORIGIN_BECOMES_ACTIVE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "HIDDEN_SPIRIT_EMERGES",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "THREE_HARMONY_COMPLETION",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "SIX_HARMONY_DATE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "SIX_CLASH_DATE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "DAY_LEVEL_ONLY_WHEN_NEAR_TERM",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MONTH_LEVEL_FOR_MEDIUM_HORIZON",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "YEAR_LEVEL_FOR_LONG_HORIZON",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "NO_TIMING_WITHOUT_TARGET",
+      "source_status": "VERIFIED_PRODUCT_GUARDRAIL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "NO_SINGLE_CERTAIN_DATE",
+      "source_status": "VERIFIED_PRODUCT_GUARDRAIL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_DIRECT_TARGET",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_MULTIPLE_EVIDENCE",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_CONFLICT_PENALTY",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_PRECISION_PENALTY",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_NEARER_PERIOD",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RANK_CHANGED_LINE_DECISIVE",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "ADVANCED_BETA",
+      "enabled_by_default": false,
+      "reason": "valid_candidate_but_not_required_for_core_user_value"
+    },
+    {
+      "rule_type": "timing",
+      "key": "DAY_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MONTH_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "YEAR_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "CHANGED_LINE_SUPPORTED_PERIOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "ORIGINAL_LINE_SUPPORTED_PERIOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TABOO_CLASHED_PERIOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TABOO_VOID_PERIOD",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "ORIGIN_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "RESPONSE_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "WORLD_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "CONTRACT_PARENT_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "OFFICER_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "WEALTH_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "CHILD_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "SIBLING_BRANCH_VALUE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "AFTER_NEXT_JIE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "BEFORE_NEXT_JIE",
+      "source_status": "REVIEW_REQUIRED",
+      "release_tier": "REVIEW_REQUIRED",
+      "enabled_by_default": false,
+      "reason": "traditional_boundary_or_machine_contract_not_locked"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TWO_RULE_CONVERGENCE",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "THREE_RULE_CONVERGENCE",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "CONFLICTING_TARGETS_SPLIT",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "NO_PAST_CANDIDATE",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "MAX_CANDIDATES",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "TIMEZONE_RENDERING",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    },
+    {
+      "rule_type": "timing",
+      "key": "SOLAR_MONTH_BOUNDARY",
+      "source_status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "reason": "high_frequency_or_core_fact_and_not_review_required"
+    }
+  ]
+}

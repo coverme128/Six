@@ -1,0 +1,1375 @@
+[
+  {
+    "code": "core-yinyang",
+    "domain": "易学基础",
+    "title_zh": "阴阳",
+    "category": "foundation",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "summary": "阴阳是卦爻与变化判断的最基础抽象。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-five-elements",
+    "domain": "易学基础",
+    "title_zh": "五行",
+    "category": "foundation",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-yinyang"
+    ],
+    "summary": "木火土金水及生克关系的公共基础。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-eight-trigrams",
+    "domain": "易学基础",
+    "title_zh": "八卦",
+    "category": "foundation",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-yinyang"
+    ],
+    "summary": "乾坤震巽坎离艮兑的基础结构与属性。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-hexagrams",
+    "domain": "易学基础",
+    "title_zh": "六十四卦",
+    "category": "foundation",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-eight-trigrams"
+    ],
+    "summary": "由上下经卦组成的六十四卦结构。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-stems",
+    "domain": "易学基础",
+    "title_zh": "天干",
+    "category": "calendar",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-five-elements"
+    ],
+    "summary": "十天干及其阴阳五行属性。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-branches",
+    "domain": "易学基础",
+    "title_zh": "地支",
+    "category": "calendar",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-five-elements"
+    ],
+    "summary": "十二地支及其五行、时令和关系。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-branch-relations",
+    "domain": "易学基础",
+    "title_zh": "地支关系",
+    "category": "calendar",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-branches"
+    ],
+    "summary": "冲、合、刑、害、破等关系的统一知识节点。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-solar-terms",
+    "domain": "易学基础",
+    "title_zh": "节气与月建",
+    "category": "calendar",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-stems",
+      "core-branches"
+    ],
+    "summary": "用于历法上下文和月建判断的节气体系。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-sexagenary-cycle",
+    "domain": "易学基础",
+    "title_zh": "六十甲子",
+    "category": "calendar",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-stems",
+      "core-branches"
+    ],
+    "summary": "天干地支组合形成的六十甲子。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "core-xunkong",
+    "domain": "易学基础",
+    "title_zh": "旬空",
+    "category": "calendar",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-sexagenary-cycle"
+    ],
+    "summary": "按旬计算空亡的基础知识。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-overview",
+    "domain": "六爻",
+    "title_zh": "六爻是什么",
+    "category": "overview",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-hexagrams"
+    ],
+    "summary": "六爻方法的整体结构、适用场景与推演流程。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-casting",
+    "domain": "六爻",
+    "title_zh": "起卦",
+    "category": "casting",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-overview"
+    ],
+    "summary": "生成六个爻位及动爻状态的入口。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-coin-method",
+    "domain": "六爻",
+    "title_zh": "三枚铜钱法",
+    "category": "casting",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-casting"
+    ],
+    "summary": "以三枚铜钱生成6/7/8/9四种爻值。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-line-values",
+    "domain": "六爻",
+    "title_zh": "老阴少阳少阴老阳",
+    "category": "casting",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-coin-method"
+    ],
+    "summary": "6/7/8/9与阴阳、动静的映射。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-original-changed",
+    "domain": "六爻",
+    "title_zh": "本卦与变卦",
+    "category": "casting",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-line-values"
+    ],
+    "summary": "由动爻生成变卦并保留本卦。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-najia",
+    "domain": "六爻",
+    "title_zh": "纳甲",
+    "category": "chart",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-original-changed",
+      "core-stems",
+      "core-branches"
+    ],
+    "summary": "为各爻装配干支与五行属性。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-eight-palaces",
+    "domain": "六爻",
+    "title_zh": "八宫",
+    "category": "chart",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-najia"
+    ],
+    "summary": "确定卦宫、宫五行与八宫序列。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-world-response",
+    "domain": "六爻",
+    "title_zh": "世应",
+    "category": "chart",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-eight-palaces"
+    ],
+    "summary": "建立主体与客体的位置关系。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-six-relations",
+    "domain": "六爻",
+    "title_zh": "六亲",
+    "category": "role",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-eight-palaces",
+      "core-five-elements"
+    ],
+    "summary": "以宫五行与爻五行关系映射父母、兄弟、子孙、妻财、官鬼。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-six-spirits",
+    "domain": "六爻",
+    "title_zh": "六神",
+    "category": "role",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-stems"
+    ],
+    "summary": "按日干布六神，用于补充事件表现特征。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-question-classification",
+    "domain": "六爻",
+    "title_zh": "问题分类",
+    "category": "semantic",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-six-relations"
+    ],
+    "summary": "把自然语言问题映射为可复用的占问主题与子类型。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-yongshen",
+    "domain": "六爻",
+    "title_zh": "用神",
+    "category": "focus",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-question-classification",
+      "liuyao-six-relations"
+    ],
+    "summary": "根据问题确定主要观察对象。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-yuanshen",
+    "domain": "六爻",
+    "title_zh": "原神",
+    "category": "focus",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-yongshen",
+      "core-five-elements"
+    ],
+    "summary": "生扶用神的作用角色。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-jishen",
+    "domain": "六爻",
+    "title_zh": "忌神",
+    "category": "focus",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-yongshen",
+      "core-five-elements"
+    ],
+    "summary": "克制或不利于用神的作用角色。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-choushen",
+    "domain": "六爻",
+    "title_zh": "仇神",
+    "category": "focus",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-yuanshen",
+      "liuyao-jishen"
+    ],
+    "summary": "制约原神并间接影响用神的作用角色。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-strength-overview",
+    "domain": "六爻",
+    "title_zh": "旺衰",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-yongshen",
+      "core-solar-terms"
+    ],
+    "summary": "判断爻在时间与关系环境中的实际力量。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-month-command",
+    "domain": "六爻",
+    "title_zh": "月建",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-strength-overview",
+      "core-solar-terms"
+    ],
+    "summary": "以节气月形成的月令环境。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-day-support",
+    "domain": "六爻",
+    "title_zh": "日辰",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-strength-overview",
+      "core-sexagenary-cycle"
+    ],
+    "summary": "日支对爻的生克冲合等影响。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-void",
+    "domain": "六爻",
+    "title_zh": "旬空",
+    "category": "strength",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-strength-overview",
+      "core-xunkong"
+    ],
+    "summary": "空亡作为状态事实及其后续应期条件。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-month-break",
+    "domain": "六爻",
+    "title_zh": "月破",
+    "category": "strength",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-month-command",
+      "core-branch-relations"
+    ],
+    "summary": "月建相冲形成的破损状态。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-tomb-storage",
+    "domain": "六爻",
+    "title_zh": "墓库",
+    "category": "strength",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-strength-overview",
+      "core-branches"
+    ],
+    "summary": "入墓、出墓等状态的结构化表达。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-moving-lines",
+    "domain": "六爻",
+    "title_zh": "动爻",
+    "category": "change",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-original-changed"
+    ],
+    "summary": "标识正在变化的爻位与变化来源。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-changed-lines",
+    "domain": "六爻",
+    "title_zh": "变爻",
+    "category": "change",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-moving-lines"
+    ],
+    "summary": "动爻变化后的新状态。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-return-generate-control",
+    "domain": "六爻",
+    "title_zh": "回头生与回头克",
+    "category": "change",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-changed-lines",
+      "core-five-elements"
+    ],
+    "summary": "变爻对原动爻形成生扶或克制。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-advance-retreat",
+    "domain": "六爻",
+    "title_zh": "化进与化退",
+    "category": "change",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-changed-lines"
+    ],
+    "summary": "部分地支变化中的进退趋势，具体口径受审核控制。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-relations-engine",
+    "domain": "六爻",
+    "title_zh": "生克制化",
+    "category": "relation",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-six-relations",
+      "liuyao-strength-overview",
+      "core-branch-relations"
+    ],
+    "summary": "组合五行、冲合与强弱形成关系证据。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-clash-harmony",
+    "domain": "六爻",
+    "title_zh": "冲合关系",
+    "category": "relation",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-relations-engine"
+    ],
+    "summary": "处理世应、用神及关键爻之间的冲合。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-patterns",
+    "domain": "六爻",
+    "title_zh": "格局与模式",
+    "category": "pattern",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-relations-engine",
+      "liuyao-moving-lines"
+    ],
+    "summary": "从多个事实与关系中识别整体局面。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-outcome",
+    "domain": "六爻",
+    "title_zh": "结果判断",
+    "category": "outcome",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-yongshen",
+      "liuyao-strength-overview",
+      "liuyao-patterns"
+    ],
+    "summary": "把结构化证据组织为趋势、支持、阻碍和结果。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-timing",
+    "domain": "六爻",
+    "title_zh": "应期",
+    "category": "timing",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-outcome",
+      "liuyao-void",
+      "liuyao-moving-lines"
+    ],
+    "summary": "根据状态与触发条件生成候选时间窗口。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "liuyao-reading-workflow",
+    "domain": "六爻",
+    "title_zh": "完整断卦流程",
+    "category": "workflow",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "liuyao-timing"
+    ],
+    "summary": "从排盘、取用、旺衰、动变到应期的完整工作流。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-overview",
+    "domain": "梅花易数",
+    "title_zh": "梅花易数是什么",
+    "category": "overview",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "core-eight-trigrams"
+    ],
+    "summary": "梅花易数的象数、体用与变化推演框架。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-number-casting",
+    "domain": "梅花易数",
+    "title_zh": "数字起卦",
+    "category": "casting",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "meihua-overview"
+    ],
+    "summary": "按版本化算法以数字确定上下卦和动爻。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-time-casting",
+    "domain": "梅花易数",
+    "title_zh": "时间起卦",
+    "category": "casting",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "meihua-overview",
+      "core-sexagenary-cycle"
+    ],
+    "summary": "按明确算法版本使用时间信息起卦。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-original-mutual-changed",
+    "domain": "梅花易数",
+    "title_zh": "本卦互卦变卦",
+    "category": "chart",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "meihua-number-casting"
+    ],
+    "summary": "建立起始、过程和变化结果三个观察结构。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-body-use",
+    "domain": "梅花易数",
+    "title_zh": "体用",
+    "category": "focus",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "meihua-original-mutual-changed"
+    ],
+    "summary": "确定主体与外部作用关系。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-five-element-relation",
+    "domain": "梅花易数",
+    "title_zh": "体用五行生克",
+    "category": "relation",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "meihua-body-use",
+      "core-five-elements"
+    ],
+    "summary": "判断用生体、体生用、体克用、用克体与比和。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-seasonal-strength",
+    "domain": "梅花易数",
+    "title_zh": "卦气与旺衰",
+    "category": "strength",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "meihua-five-element-relation",
+      "core-solar-terms"
+    ],
+    "summary": "把时令因素加入体用关系判断。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-symbolism",
+    "domain": "梅花易数",
+    "title_zh": "万物类象",
+    "category": "symbolism",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "core-eight-trigrams"
+    ],
+    "summary": "将八卦映射到人物、地点、物品、事件等多维象义。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-external-signs",
+    "domain": "梅花易数",
+    "title_zh": "外应",
+    "category": "symbolism",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "meihua-symbolism"
+    ],
+    "summary": "对声音、方位、人物、动作等现场信息做结构化记录。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-interpretation",
+    "domain": "梅花易数",
+    "title_zh": "综合解读",
+    "category": "outcome",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "meihua-body-use",
+      "meihua-seasonal-strength",
+      "meihua-symbolism"
+    ],
+    "summary": "综合体用、本互变、旺衰与象义形成判断。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "meihua-timing",
+    "domain": "梅花易数",
+    "title_zh": "梅花应期",
+    "category": "timing",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "meihua-interpretation"
+    ],
+    "summary": "按算法版本输出时间候选并保留依据。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "method-liuyao-vs-meihua",
+    "domain": "方法比较",
+    "title_zh": "六爻与梅花的核心区别",
+    "category": "comparison",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-overview",
+      "meihua-overview"
+    ],
+    "summary": "比较结构化关系推演与象数体用推演。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "content-how-to-read-chart",
+    "domain": "应用教程",
+    "title_zh": "如何读懂一张六爻盘",
+    "category": "application",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-world-response",
+      "liuyao-six-relations",
+      "liuyao-six-spirits"
+    ],
+    "summary": "面向用户界面的盘面阅读教程。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "content-how-to-ask",
+    "domain": "应用教程",
+    "title_zh": "如何提出适合占问的问题",
+    "category": "application",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "liuyao-question-classification"
+    ],
+    "summary": "帮助用户形成单一、明确、可追踪的问题。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  },
+  {
+    "code": "content-evidence-reading",
+    "domain": "应用教程",
+    "title_zh": "如何阅读判断依据",
+    "category": "application",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "liuyao-outcome"
+    ],
+    "summary": "解释系统输出的事实、规则命中与结论之间的关系。",
+    "canonical_status": "ACTIVE",
+    "content_readiness": "OUTLINE_READY",
+    "source_refs": [],
+    "rule_refs": [],
+    "data_refs": [],
+    "recommended_surfaces": [
+      "tutorial",
+      "blog",
+      "glossary",
+      "knowledge_card",
+      "case_linking"
+    ],
+    "version": "1.2.0"
+  }
+]

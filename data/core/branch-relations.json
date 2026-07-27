@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "status": "REVIEWED_TRADITIONAL_BASE",
+  "six_harmonies": [
+    [
+      "zi",
+      "chou"
+    ],
+    [
+      "yin",
+      "hai"
+    ],
+    [
+      "mao",
+      "xu"
+    ],
+    [
+      "chen",
+      "you"
+    ],
+    [
+      "si",
+      "shen"
+    ],
+    [
+      "wu",
+      "wei"
+    ]
+  ],
+  "six_clashes": [
+    [
+      "zi",
+      "wu"
+    ],
+    [
+      "chou",
+      "wei"
+    ],
+    [
+      "yin",
+      "shen"
+    ],
+    [
+      "mao",
+      "you"
+    ],
+    [
+      "chen",
+      "xu"
+    ],
+    [
+      "si",
+      "hai"
+    ]
+  ],
+  "six_harms": [
+    [
+      "zi",
+      "wei"
+    ],
+    [
+      "chou",
+      "wu"
+    ],
+    [
+      "yin",
+      "si"
+    ],
+    [
+      "mao",
+      "chen"
+    ],
+    [
+      "shen",
+      "hai"
+    ],
+    [
+      "you",
+      "xu"
+    ]
+  ],
+  "six_breaks": [
+    [
+      "zi",
+      "you"
+    ],
+    [
+      "chou",
+      "chen"
+    ],
+    [
+      "yin",
+      "hai"
+    ],
+    [
+      "mao",
+      "wu"
+    ],
+    [
+      "si",
+      "shen"
+    ],
+    [
+      "wei",
+      "xu"
+    ]
+  ],
+  "three_harmonies": [
+    {
+      "branches": [
+        "shen",
+        "zi",
+        "chen"
+      ],
+      "element": "water"
+    },
+    {
+      "branches": [
+        "hai",
+        "mao",
+        "wei"
+      ],
+      "element": "wood"
+    },
+    {
+      "branches": [
+        "yin",
+        "wu",
+        "xu"
+      ],
+      "element": "fire"
+    },
+    {
+      "branches": [
+        "si",
+        "you",
+        "chou"
+      ],
+      "element": "metal"
+    }
+  ],
+  "three_meetings": [
+    {
+      "branches": [
+        "yin",
+        "mao",
+        "chen"
+      ],
+      "element": "wood"
+    },
+    {
+      "branches": [
+        "si",
+        "wu",
+        "wei"
+      ],
+      "element": "fire"
+    },
+    {
+      "branches": [
+        "shen",
+        "you",
+        "xu"
+      ],
+      "element": "metal"
+    },
+    {
+      "branches": [
+        "hai",
+        "zi",
+        "chou"
+      ],
+      "element": "water"
+    }
+  ],
+  "punishments": [
+    {
+      "branches": [
+        "yin",
+        "si",
+        "shen"
+      ],
+      "kind": "mutual_punishment"
+    },
+    {
+      "branches": [
+        "chou",
+        "xu",
+        "wei"
+      ],
+      "kind": "mutual_punishment"
+    },
+    {
+      "branches": [
+        "zi",
+        "mao"
+      ],
+      "kind": "mutual_punishment"
+    },
+    {
+      "branches": [
+        "chen"
+      ],
+      "kind": "self_punishment"
+    },
+    {
+      "branches": [
+        "wu"
+      ],
+      "kind": "self_punishment"
+    },
+    {
+      "branches": [
+        "you"
+      ],
+      "kind": "self_punishment"
+    },
+    {
+      "branches": [
+        "hai"
+      ],
+      "kind": "self_punishment"
+    }
+  ],
+  "relation_status": {
+    "six_harmonies": "VERIFIED_TRADITIONAL_BASE",
+    "six_clashes": "VERIFIED_TRADITIONAL_BASE",
+    "six_harms": "REVIEWED_TRADITIONAL_BASE",
+    "six_breaks": "REVIEW_REQUIRED_VARIANT",
+    "three_harmonies": "REVIEWED_TRADITIONAL_BASE",
+    "three_meetings": "REVIEWED_TRADITIONAL_BASE",
+    "punishments": "REVIEW_REQUIRED_VARIANT"
+  }
+}

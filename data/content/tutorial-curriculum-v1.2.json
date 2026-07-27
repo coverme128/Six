@@ -1,0 +1,1630 @@
+[
+  {
+    "code": "LESSON-001",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M1",
+    "order": 1,
+    "title": "六爻是什么",
+    "primary_knowledge_node": "liuyao-overview",
+    "supporting_nodes": [
+      "core-hexagrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六爻是什么的核心作用",
+      "能在实际盘面或内容中识别六爻是什么"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-002",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M1",
+    "order": 2,
+    "title": "六爻与梅花的核心区别",
+    "primary_knowledge_node": "method-liuyao-vs-meihua",
+    "supporting_nodes": [
+      "liuyao-overview",
+      "meihua-overview"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六爻与梅花的核心区别的核心作用",
+      "能在实际盘面或内容中识别六爻与梅花的核心区别"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-003",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M1",
+    "order": 3,
+    "title": "如何提出适合占问的问题",
+    "primary_knowledge_node": "content-how-to-ask",
+    "supporting_nodes": [
+      "liuyao-question-classification"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解如何提出适合占问的问题的核心作用",
+      "能在实际盘面或内容中识别如何提出适合占问的问题"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-004",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M2",
+    "order": 4,
+    "title": "起卦",
+    "primary_knowledge_node": "liuyao-casting",
+    "supporting_nodes": [
+      "liuyao-overview"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解起卦的核心作用",
+      "能在实际盘面或内容中识别起卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-005",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M2",
+    "order": 5,
+    "title": "三枚铜钱法",
+    "primary_knowledge_node": "liuyao-coin-method",
+    "supporting_nodes": [
+      "liuyao-casting"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解三枚铜钱法的核心作用",
+      "能在实际盘面或内容中识别三枚铜钱法"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-006",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M2",
+    "order": 6,
+    "title": "老阴少阳少阴老阳",
+    "primary_knowledge_node": "liuyao-line-values",
+    "supporting_nodes": [
+      "liuyao-coin-method"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解老阴少阳少阴老阳的核心作用",
+      "能在实际盘面或内容中识别老阴少阳少阴老阳"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-007",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M2",
+    "order": 7,
+    "title": "本卦与变卦",
+    "primary_knowledge_node": "liuyao-original-changed",
+    "supporting_nodes": [
+      "liuyao-line-values"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解本卦与变卦的核心作用",
+      "能在实际盘面或内容中识别本卦与变卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-008",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 8,
+    "title": "纳甲",
+    "primary_knowledge_node": "liuyao-najia",
+    "supporting_nodes": [
+      "liuyao-original-changed",
+      "core-stems",
+      "core-branches"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解纳甲的核心作用",
+      "能在实际盘面或内容中识别纳甲"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-009",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 9,
+    "title": "八宫",
+    "primary_knowledge_node": "liuyao-eight-palaces",
+    "supporting_nodes": [
+      "liuyao-najia"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解八宫的核心作用",
+      "能在实际盘面或内容中识别八宫"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-010",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 10,
+    "title": "世应",
+    "primary_knowledge_node": "liuyao-world-response",
+    "supporting_nodes": [
+      "liuyao-eight-palaces"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解世应的核心作用",
+      "能在实际盘面或内容中识别世应"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-011",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 11,
+    "title": "六亲",
+    "primary_knowledge_node": "liuyao-six-relations",
+    "supporting_nodes": [
+      "liuyao-eight-palaces",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六亲的核心作用",
+      "能在实际盘面或内容中识别六亲"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-012",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 12,
+    "title": "六神",
+    "primary_knowledge_node": "liuyao-six-spirits",
+    "supporting_nodes": [
+      "core-stems"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六神的核心作用",
+      "能在实际盘面或内容中识别六神"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-013",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M3",
+    "order": 13,
+    "title": "如何读懂一张六爻盘",
+    "primary_knowledge_node": "content-how-to-read-chart",
+    "supporting_nodes": [
+      "liuyao-world-response",
+      "liuyao-six-relations",
+      "liuyao-six-spirits"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解如何读懂一张六爻盘的核心作用",
+      "能在实际盘面或内容中识别如何读懂一张六爻盘"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-014",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M4",
+    "order": 14,
+    "title": "问题分类",
+    "primary_knowledge_node": "liuyao-question-classification",
+    "supporting_nodes": [
+      "liuyao-six-relations"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解问题分类的核心作用",
+      "能在实际盘面或内容中识别问题分类"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-015",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M4",
+    "order": 15,
+    "title": "用神",
+    "primary_knowledge_node": "liuyao-yongshen",
+    "supporting_nodes": [
+      "liuyao-question-classification",
+      "liuyao-six-relations"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解用神的核心作用",
+      "能在实际盘面或内容中识别用神"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-016",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M4",
+    "order": 16,
+    "title": "原神",
+    "primary_knowledge_node": "liuyao-yuanshen",
+    "supporting_nodes": [
+      "liuyao-yongshen",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解原神的核心作用",
+      "能在实际盘面或内容中识别原神"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-017",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M4",
+    "order": 17,
+    "title": "忌神",
+    "primary_knowledge_node": "liuyao-jishen",
+    "supporting_nodes": [
+      "liuyao-yongshen",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解忌神的核心作用",
+      "能在实际盘面或内容中识别忌神"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-018",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M5",
+    "order": 18,
+    "title": "旺衰",
+    "primary_knowledge_node": "liuyao-strength-overview",
+    "supporting_nodes": [
+      "liuyao-yongshen",
+      "core-solar-terms"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解旺衰的核心作用",
+      "能在实际盘面或内容中识别旺衰"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-019",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M5",
+    "order": 19,
+    "title": "月建",
+    "primary_knowledge_node": "liuyao-month-command",
+    "supporting_nodes": [
+      "liuyao-strength-overview",
+      "core-solar-terms"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解月建的核心作用",
+      "能在实际盘面或内容中识别月建"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-020",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M5",
+    "order": 20,
+    "title": "日辰",
+    "primary_knowledge_node": "liuyao-day-support",
+    "supporting_nodes": [
+      "liuyao-strength-overview",
+      "core-sexagenary-cycle"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解日辰的核心作用",
+      "能在实际盘面或内容中识别日辰"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-021",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M5",
+    "order": 21,
+    "title": "旬空",
+    "primary_knowledge_node": "liuyao-void",
+    "supporting_nodes": [
+      "liuyao-strength-overview",
+      "core-xunkong"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解旬空的核心作用",
+      "能在实际盘面或内容中识别旬空"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-022",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M5",
+    "order": 22,
+    "title": "月破",
+    "primary_knowledge_node": "liuyao-month-break",
+    "supporting_nodes": [
+      "liuyao-month-command",
+      "core-branch-relations"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解月破的核心作用",
+      "能在实际盘面或内容中识别月破"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-023",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M6",
+    "order": 23,
+    "title": "动爻",
+    "primary_knowledge_node": "liuyao-moving-lines",
+    "supporting_nodes": [
+      "liuyao-original-changed"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解动爻的核心作用",
+      "能在实际盘面或内容中识别动爻"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-024",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M6",
+    "order": 24,
+    "title": "变爻",
+    "primary_knowledge_node": "liuyao-changed-lines",
+    "supporting_nodes": [
+      "liuyao-moving-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解变爻的核心作用",
+      "能在实际盘面或内容中识别变爻"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-025",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M6",
+    "order": 25,
+    "title": "回头生与回头克",
+    "primary_knowledge_node": "liuyao-return-generate-control",
+    "supporting_nodes": [
+      "liuyao-changed-lines",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解回头生与回头克的核心作用",
+      "能在实际盘面或内容中识别回头生与回头克"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-026",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M6",
+    "order": 26,
+    "title": "生克制化",
+    "primary_knowledge_node": "liuyao-relations-engine",
+    "supporting_nodes": [
+      "liuyao-six-relations",
+      "liuyao-strength-overview",
+      "core-branch-relations"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解生克制化的核心作用",
+      "能在实际盘面或内容中识别生克制化"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-027",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M7",
+    "order": 27,
+    "title": "格局与模式",
+    "primary_knowledge_node": "liuyao-patterns",
+    "supporting_nodes": [
+      "liuyao-relations-engine",
+      "liuyao-moving-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解格局与模式的核心作用",
+      "能在实际盘面或内容中识别格局与模式"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-028",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M7",
+    "order": 28,
+    "title": "结果判断",
+    "primary_knowledge_node": "liuyao-outcome",
+    "supporting_nodes": [
+      "liuyao-yongshen",
+      "liuyao-strength-overview",
+      "liuyao-patterns"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解结果判断的核心作用",
+      "能在实际盘面或内容中识别结果判断"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-029",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M7",
+    "order": 29,
+    "title": "应期",
+    "primary_knowledge_node": "liuyao-timing",
+    "supporting_nodes": [
+      "liuyao-outcome",
+      "liuyao-void",
+      "liuyao-moving-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解应期的核心作用",
+      "能在实际盘面或内容中识别应期"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-030",
+    "learning_path_code": "LP-LY-BEGINNER",
+    "module_code": "M7",
+    "order": 30,
+    "title": "如何阅读判断依据",
+    "primary_knowledge_node": "content-evidence-reading",
+    "supporting_nodes": [
+      "liuyao-outcome"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解如何阅读判断依据的核心作用",
+      "能在实际盘面或内容中识别如何阅读判断依据"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-031",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A1",
+    "order": 1,
+    "title": "墓库",
+    "primary_knowledge_node": "liuyao-tomb-storage",
+    "supporting_nodes": [
+      "liuyao-strength-overview",
+      "core-branches"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解墓库的核心作用",
+      "能在实际盘面或内容中识别墓库"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-032",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A1",
+    "order": 2,
+    "title": "月破",
+    "primary_knowledge_node": "liuyao-month-break",
+    "supporting_nodes": [
+      "liuyao-month-command",
+      "core-branch-relations"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解月破的核心作用",
+      "能在实际盘面或内容中识别月破"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-033",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A1",
+    "order": 3,
+    "title": "旬空",
+    "primary_knowledge_node": "liuyao-void",
+    "supporting_nodes": [
+      "liuyao-strength-overview",
+      "core-xunkong"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解旬空的核心作用",
+      "能在实际盘面或内容中识别旬空"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-034",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A2",
+    "order": 4,
+    "title": "回头生与回头克",
+    "primary_knowledge_node": "liuyao-return-generate-control",
+    "supporting_nodes": [
+      "liuyao-changed-lines",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解回头生与回头克的核心作用",
+      "能在实际盘面或内容中识别回头生与回头克"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-035",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A2",
+    "order": 5,
+    "title": "化进与化退",
+    "primary_knowledge_node": "liuyao-advance-retreat",
+    "supporting_nodes": [
+      "liuyao-changed-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解化进与化退的核心作用",
+      "能在实际盘面或内容中识别化进与化退"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-036",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A3",
+    "order": 6,
+    "title": "冲合关系",
+    "primary_knowledge_node": "liuyao-clash-harmony",
+    "supporting_nodes": [
+      "liuyao-relations-engine"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解冲合关系的核心作用",
+      "能在实际盘面或内容中识别冲合关系"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-037",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A3",
+    "order": 7,
+    "title": "格局与模式",
+    "primary_knowledge_node": "liuyao-patterns",
+    "supporting_nodes": [
+      "liuyao-relations-engine",
+      "liuyao-moving-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解格局与模式的核心作用",
+      "能在实际盘面或内容中识别格局与模式"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-038",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A4",
+    "order": 8,
+    "title": "结果判断",
+    "primary_knowledge_node": "liuyao-outcome",
+    "supporting_nodes": [
+      "liuyao-yongshen",
+      "liuyao-strength-overview",
+      "liuyao-patterns"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解结果判断的核心作用",
+      "能在实际盘面或内容中识别结果判断"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-039",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A4",
+    "order": 9,
+    "title": "应期",
+    "primary_knowledge_node": "liuyao-timing",
+    "supporting_nodes": [
+      "liuyao-outcome",
+      "liuyao-void",
+      "liuyao-moving-lines"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解应期的核心作用",
+      "能在实际盘面或内容中识别应期"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-040",
+    "learning_path_code": "LP-LY-ADVANCED",
+    "module_code": "A4",
+    "order": 10,
+    "title": "完整断卦流程",
+    "primary_knowledge_node": "liuyao-reading-workflow",
+    "supporting_nodes": [
+      "liuyao-timing"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解完整断卦流程的核心作用",
+      "能在实际盘面或内容中识别完整断卦流程"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-041",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH1",
+    "order": 1,
+    "title": "梅花易数是什么",
+    "primary_knowledge_node": "meihua-overview",
+    "supporting_nodes": [
+      "core-eight-trigrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解梅花易数是什么的核心作用",
+      "能在实际盘面或内容中识别梅花易数是什么"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-042",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH1",
+    "order": 2,
+    "title": "八卦",
+    "primary_knowledge_node": "core-eight-trigrams",
+    "supporting_nodes": [
+      "core-yinyang"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解八卦的核心作用",
+      "能在实际盘面或内容中识别八卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-043",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH1",
+    "order": 3,
+    "title": "数字起卦",
+    "primary_knowledge_node": "meihua-number-casting",
+    "supporting_nodes": [
+      "meihua-overview"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解数字起卦的核心作用",
+      "能在实际盘面或内容中识别数字起卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-044",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH1",
+    "order": 4,
+    "title": "时间起卦",
+    "primary_knowledge_node": "meihua-time-casting",
+    "supporting_nodes": [
+      "meihua-overview",
+      "core-sexagenary-cycle"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解时间起卦的核心作用",
+      "能在实际盘面或内容中识别时间起卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-045",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH2",
+    "order": 5,
+    "title": "本卦互卦变卦",
+    "primary_knowledge_node": "meihua-original-mutual-changed",
+    "supporting_nodes": [
+      "meihua-number-casting"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解本卦互卦变卦的核心作用",
+      "能在实际盘面或内容中识别本卦互卦变卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-046",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH2",
+    "order": 6,
+    "title": "体用",
+    "primary_knowledge_node": "meihua-body-use",
+    "supporting_nodes": [
+      "meihua-original-mutual-changed"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解体用的核心作用",
+      "能在实际盘面或内容中识别体用"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-047",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH2",
+    "order": 7,
+    "title": "体用五行生克",
+    "primary_knowledge_node": "meihua-five-element-relation",
+    "supporting_nodes": [
+      "meihua-body-use",
+      "core-five-elements"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解体用五行生克的核心作用",
+      "能在实际盘面或内容中识别体用五行生克"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-048",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH3",
+    "order": 8,
+    "title": "卦气与旺衰",
+    "primary_knowledge_node": "meihua-seasonal-strength",
+    "supporting_nodes": [
+      "meihua-five-element-relation",
+      "core-solar-terms"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解卦气与旺衰的核心作用",
+      "能在实际盘面或内容中识别卦气与旺衰"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-049",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH3",
+    "order": 9,
+    "title": "万物类象",
+    "primary_knowledge_node": "meihua-symbolism",
+    "supporting_nodes": [
+      "core-eight-trigrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解万物类象的核心作用",
+      "能在实际盘面或内容中识别万物类象"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-050",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH3",
+    "order": 10,
+    "title": "外应",
+    "primary_knowledge_node": "meihua-external-signs",
+    "supporting_nodes": [
+      "meihua-symbolism"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解外应的核心作用",
+      "能在实际盘面或内容中识别外应"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-051",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH4",
+    "order": 11,
+    "title": "综合解读",
+    "primary_knowledge_node": "meihua-interpretation",
+    "supporting_nodes": [
+      "meihua-body-use",
+      "meihua-seasonal-strength",
+      "meihua-symbolism"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解综合解读的核心作用",
+      "能在实际盘面或内容中识别综合解读"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-052",
+    "learning_path_code": "LP-MH-BEGINNER",
+    "module_code": "MH4",
+    "order": 12,
+    "title": "梅花应期",
+    "primary_knowledge_node": "meihua-timing",
+    "supporting_nodes": [
+      "meihua-interpretation"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解梅花应期的核心作用",
+      "能在实际盘面或内容中识别梅花应期"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-053",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C1",
+    "order": 1,
+    "title": "阴阳",
+    "primary_knowledge_node": "core-yinyang",
+    "supporting_nodes": [],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解阴阳的核心作用",
+      "能在实际盘面或内容中识别阴阳"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-054",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C1",
+    "order": 2,
+    "title": "五行",
+    "primary_knowledge_node": "core-five-elements",
+    "supporting_nodes": [
+      "core-yinyang"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解五行的核心作用",
+      "能在实际盘面或内容中识别五行"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-055",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C1",
+    "order": 3,
+    "title": "八卦",
+    "primary_knowledge_node": "core-eight-trigrams",
+    "supporting_nodes": [
+      "core-yinyang"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解八卦的核心作用",
+      "能在实际盘面或内容中识别八卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-056",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C1",
+    "order": 4,
+    "title": "六十四卦",
+    "primary_knowledge_node": "core-hexagrams",
+    "supporting_nodes": [
+      "core-eight-trigrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六十四卦的核心作用",
+      "能在实际盘面或内容中识别六十四卦"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-057",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C2",
+    "order": 5,
+    "title": "六爻是什么",
+    "primary_knowledge_node": "liuyao-overview",
+    "supporting_nodes": [
+      "core-hexagrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六爻是什么的核心作用",
+      "能在实际盘面或内容中识别六爻是什么"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-058",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C2",
+    "order": 6,
+    "title": "梅花易数是什么",
+    "primary_knowledge_node": "meihua-overview",
+    "supporting_nodes": [
+      "core-eight-trigrams"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解梅花易数是什么的核心作用",
+      "能在实际盘面或内容中识别梅花易数是什么"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  },
+  {
+    "code": "LESSON-059",
+    "learning_path_code": "LP-COMPARE",
+    "module_code": "C2",
+    "order": 7,
+    "title": "六爻与梅花的核心区别",
+    "primary_knowledge_node": "method-liuyao-vs-meihua",
+    "supporting_nodes": [
+      "liuyao-overview",
+      "meihua-overview"
+    ],
+    "lesson_type": "CONCEPT_AND_EXAMPLE",
+    "objectives": [
+      "理解六爻与梅花的核心区别的核心作用",
+      "能在实际盘面或内容中识别六爻与梅花的核心区别"
+    ],
+    "required_blocks": [
+      "hook",
+      "definition",
+      "why_it_matters",
+      "worked_example",
+      "common_mistake",
+      "summary",
+      "quick_check"
+    ],
+    "status": "PLANNED",
+    "version": "1.2.0"
+  }
+]

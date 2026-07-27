@@ -1,0 +1,40 @@
+{
+  "version": "1.1.0",
+  "plans": [
+    {
+      "code": "free",
+      "entitlements": {
+        "casts_per_day": 5,
+        "ai_reports_per_day": 1,
+        "followups_per_report": 0,
+        "history_days": 30,
+        "advanced_timing": false,
+        "export_pdf": false
+      }
+    },
+    {
+      "code": "plus",
+      "entitlements": {
+        "casts_per_day": 50,
+        "ai_reports_per_day": 20,
+        "followups_per_report": 5,
+        "history_days": 3650,
+        "advanced_timing": true,
+        "export_pdf": true
+      }
+    },
+    {
+      "code": "pro",
+      "entitlements": {
+        "casts_per_day": 200,
+        "ai_reports_per_day": 100,
+        "followups_per_report": 20,
+        "history_days": 3650,
+        "advanced_timing": true,
+        "export_pdf": true,
+        "expert_mode": true
+      }
+    }
+  ],
+  "policy": "limits_are_product_defaults_and_must_be_remote_configurable"
+}

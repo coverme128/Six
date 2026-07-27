@@ -1,0 +1,126 @@
+{
+  "version": "1.3.0",
+  "profile_code": "LIUYAO_CORE_V1",
+  "name_zh": "六爻首版核心价值规则白名单",
+  "purpose": "以用户核心价值与可解释性为准，限制生产默认启用范围，避免规则和工程过度细化。",
+  "production_status": "PUBLIC_BETA_SCOPE_CANDIDATE",
+  "rule_counts": {
+    "question_yongshen_mappings": 45,
+    "strength_rules": 24,
+    "dynamic_rules": 14,
+    "pattern_rules": 47,
+    "timing_and_guardrail_rules": 18,
+    "total_production_units": 148
+  },
+  "supported_user_questions": {
+    "career": [
+      "job_search",
+      "interview",
+      "offer",
+      "promotion",
+      "job_change",
+      "resignation",
+      "work_stability"
+    ],
+    "wealth": [
+      "income",
+      "business_profit",
+      "payment_collection",
+      "salary_raise",
+      "investment_outcome",
+      "cashflow",
+      "debt_repayment"
+    ],
+    "business": [
+      "partnership",
+      "customer_acquisition",
+      "contract_signing",
+      "project_success",
+      "project_delivery",
+      "competition"
+    ],
+    "relationship": [
+      "dating",
+      "marriage",
+      "reconciliation",
+      "counterparty_attitude",
+      "relationship_stability",
+      "breakup"
+    ],
+    "study": [
+      "exam",
+      "admission",
+      "application",
+      "certificate"
+    ],
+    "property": [
+      "buy_house",
+      "sell_house",
+      "rent_house",
+      "property_document"
+    ],
+    "legal": [
+      "lawsuit",
+      "dispute",
+      "contract_dispute"
+    ],
+    "health": [
+      "self_health",
+      "recovery",
+      "treatment"
+    ],
+    "goods": [
+      "purchase",
+      "lost_item"
+    ],
+    "travel": [
+      "trip",
+      "visa"
+    ],
+    "people": [
+      "contact_person"
+    ]
+  },
+  "enabled_datasets": {
+    "question_topics": "core-v1-question-topics.json",
+    "yongshen": "core-v1-yongshen-rules.json",
+    "strength": "core-v1-strength-rules.json",
+    "dynamic": "core-v1-dynamic-rules.json",
+    "patterns": "core-v1-pattern-rules.json",
+    "timing": "core-v1-timing-rules.json"
+  },
+  "user_value_dimensions": [
+    "subject_state",
+    "target_state",
+    "supporting_forces",
+    "blocking_forces",
+    "change_direction",
+    "timing_state"
+  ],
+  "report_evidence_budget": {
+    "minimum": 6,
+    "recommended_maximum": 12,
+    "hard_maximum": 15
+  },
+  "hard_policies": [
+    "Only rules present in this whitelist may affect the default report.",
+    "REVIEW_REQUIRED rules remain disabled.",
+    "Timing output is a ranked candidate window, never a guaranteed date.",
+    "Health and legal topics use non-diagnostic/non-legal-advice guardrails.",
+    "AI may summarize findings but may not create chart facts or unmatched rules."
+  ],
+  "stop_line": {
+    "do_not_expand_before_public_beta": true,
+    "expansion_triggers": [
+      "repeated_user_feedback_gap",
+      "verified_false_negative",
+      "expert-reviewed_new_golden_cases",
+      "measurable_report_quality_gain"
+    ],
+    "not_valid_triggers": [
+      "rule_exists_in_traditional_book",
+      "desire_for_higher_rule_count",
+      "future_possible_use"
+    ]
+  }
+}

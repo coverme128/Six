@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "code": "ORIGINAL_AS_INITIAL_STATE",
+      "fact": "original_hexagram",
+      "role": "initial_state",
+      "status": "REVIEWED_PRODUCT_BASE"
+    },
+    {
+      "code": "MUTUAL_AS_INTERNAL_PROCESS",
+      "fact": "mutual_hexagram",
+      "role": "internal_process",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "CHANGED_AS_LATER_TREND",
+      "fact": "changed_hexagram",
+      "role": "later_trend",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MOVING_TRIGRAM_AS_USE",
+      "fact": "moving line belongs to trigram",
+      "role": "use",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "STATIC_TRIGRAM_AS_BODY",
+      "fact": "other trigram",
+      "role": "body",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "code": "CASE-TEMPLATE-01",
+    "topic": "career",
+    "title_pattern": "求职/面试类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-02",
+    "topic": "career",
+    "title_pattern": "岗位变动类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-03",
+    "topic": "business",
+    "title_pattern": "合作类标准案例模板",
+    "method": "MEIHUA",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-04",
+    "topic": "finance",
+    "title_pattern": "求财类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-05",
+    "topic": "relationship",
+    "title_pattern": "感情发展类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-06",
+    "topic": "relationship",
+    "title_pattern": "复合类标准案例模板",
+    "method": "MEIHUA",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-07",
+    "topic": "study",
+    "title_pattern": "考试类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-08",
+    "topic": "study",
+    "title_pattern": "升学类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-09",
+    "topic": "property",
+    "title_pattern": "买房类标准案例模板",
+    "method": "MEIHUA",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-10",
+    "topic": "property",
+    "title_pattern": "卖房类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-11",
+    "topic": "travel",
+    "title_pattern": "出行类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-12",
+    "topic": "legal",
+    "title_pattern": "纠纷类标准案例模板",
+    "method": "MEIHUA",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-13",
+    "topic": "health",
+    "title_pattern": "健康问题类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-14",
+    "topic": "lost",
+    "title_pattern": "失物类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-15",
+    "topic": "project",
+    "title_pattern": "项目推进类标准案例模板",
+    "method": "MEIHUA",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  },
+  {
+    "code": "CASE-TEMPLATE-16",
+    "topic": "business",
+    "title_pattern": "客户成交类标准案例模板",
+    "method": "LIUYAO",
+    "required_fields": [
+      "question",
+      "context",
+      "method_version",
+      "chart_snapshot",
+      "facts",
+      "rule_findings",
+      "interpretation",
+      "knowledge_node_codes",
+      "expert_review_status"
+    ],
+    "privacy_requirement": "ANONYMIZED_OR_SYNTHETIC",
+    "publication_status": "TEMPLATE_ONLY",
+    "version": "1.2.0"
+  }
+]

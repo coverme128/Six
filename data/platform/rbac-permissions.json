@@ -1,0 +1,68 @@
+{
+  "version": "1.1.0",
+  "roles": [
+    {
+      "code": "guest",
+      "permissions": [
+        "cast:create_limited",
+        "knowledge:read_public",
+        "blog:read_public"
+      ]
+    },
+    {
+      "code": "user",
+      "permissions": [
+        "cast:create",
+        "cast:read_own",
+        "cast:delete_own",
+        "report:create_limited",
+        "favorite:manage_own"
+      ]
+    },
+    {
+      "code": "member",
+      "permissions": [
+        "cast:create",
+        "cast:read_own",
+        "report:create",
+        "report:followup",
+        "history:extended",
+        "favorite:manage_own"
+      ]
+    },
+    {
+      "code": "editor",
+      "permissions": [
+        "content:read_draft",
+        "content:create",
+        "content:edit",
+        "content:submit_review"
+      ]
+    },
+    {
+      "code": "expert_reviewer",
+      "permissions": [
+        "rules:review",
+        "knowledge:review",
+        "content:approve_domain",
+        "fixture:approve_golden"
+      ]
+    },
+    {
+      "code": "admin",
+      "permissions": [
+        "content:publish",
+        "users:support",
+        "rules:activate_reviewed",
+        "billing:read",
+        "audit:read"
+      ]
+    },
+    {
+      "code": "super_admin",
+      "permissions": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "code": "original_hexagram",
+      "name_zh": "本卦",
+      "definition_zh": "起卦得到的初始六爻结构。"
+    },
+    {
+      "code": "changed_hexagram",
+      "name_zh": "变卦",
+      "definition_zh": "动爻阴阳翻转后形成的卦。"
+    },
+    {
+      "code": "moving_line",
+      "name_zh": "动爻",
+      "definition_zh": "六爻值为6或9、发生变化的爻。"
+    },
+    {
+      "code": "najia",
+      "name_zh": "纳甲",
+      "definition_zh": "将八卦六爻配置天干地支的装卦体系。"
+    },
+    {
+      "code": "eight_palaces",
+      "name_zh": "八宫",
+      "definition_zh": "六十四卦按八个纯卦宫系组织的体系。"
+    },
+    {
+      "code": "world_line",
+      "name_zh": "世爻",
+      "definition_zh": "盘中代表求测主体或我方的核心位置。"
+    },
+    {
+      "code": "response_line",
+      "name_zh": "应爻",
+      "definition_zh": "盘中代表对方、外部或相对方的位置。"
+    },
+    {
+      "code": "six_relations",
+      "name_zh": "六亲",
+      "definition_zh": "父母、兄弟、子孙、妻财、官鬼的角色映射体系。"
+    },
+    {
+      "code": "six_spirits",
+      "name_zh": "六神",
+      "definition_zh": "青龙、朱雀、勾陈、螣蛇、白虎、玄武，用于补充状态表现。"
+    },
+    {
+      "code": "useful_god",
+      "name_zh": "用神",
+      "definition_zh": "针对具体问题选定的主要观察角色或爻。"
+    },
+    {
+      "code": "source_god",
+      "name_zh": "原神",
+      "definition_zh": "生扶用神的六亲/力量角色。"
+    },
+    {
+      "code": "avoid_god",
+      "name_zh": "忌神",
+      "definition_zh": "对用神形成主要克制的角色。"
+    },
+    {
+      "code": "strength",
+      "name_zh": "旺衰",
+      "definition_zh": "根据月建、日辰、动静等证据判断爻的有效力量状态。"
+    },
+    {
+      "code": "month_command",
+      "name_zh": "月建",
+      "definition_zh": "六爻中以节气月为基础的月令事实。"
+    },
+    {
+      "code": "day_influence",
+      "name_zh": "日辰",
+      "definition_zh": "起卦当日干支对盘中各爻的作用事实。"
+    },
+    {
+      "code": "xun_void",
+      "name_zh": "旬空",
+      "definition_zh": "按日柱所属旬计算的两个空亡地支。"
+    },
+    {
+      "code": "month_break",
+      "name_zh": "月破",
+      "definition_zh": "地支与月建相冲形成的传统状态候选。"
+    },
+    {
+      "code": "return_generation",
+      "name_zh": "回头生",
+      "definition_zh": "变爻五行反过来生原动爻。"
+    },
+    {
+      "code": "return_control",
+      "name_zh": "回头克",
+      "definition_zh": "变爻五行反过来克原动爻。"
+    },
+    {
+      "code": "six_clash",
+      "name_zh": "六冲",
+      "definition_zh": "六组地支相冲关系或特定卦类概念，具体格局需版本化。"
+    },
+    {
+      "code": "six_harmony",
+      "name_zh": "六合",
+      "definition_zh": "六组地支相合关系或特定卦类概念，具体格局需版本化。"
+    },
+    {
+      "code": "timing",
+      "name_zh": "应期",
+      "definition_zh": "根据盘中状态生成事件可能对应时间窗口的传统推断。"
+    },
+    {
+      "code": "mutual_hexagram",
+      "name_zh": "互卦",
+      "definition_zh": "梅花中由二三四爻与三四五爻组成的中间结构。"
+    },
+    {
+      "code": "body_trigram",
+      "name_zh": "体卦",
+      "definition_zh": "梅花中用于表示主体的一卦。"
+    },
+    {
+      "code": "use_trigram",
+      "name_zh": "用卦",
+      "definition_zh": "梅花中用于表示外部作用或事件对象的一卦。"
+    },
+    {
+      "code": "external_sign",
+      "name_zh": "外应",
+      "definition_zh": "起卦时或问事过程中出现的外部现象，被作为象义候选。"
+    },
+    {
+      "code": "evidence",
+      "name_zh": "证据",
+      "definition_zh": "系统用于解释规则命中的结构化事实。"
+    },
+    {
+      "code": "chart_hash",
+      "name_zh": "盘哈希",
+      "definition_zh": "由标准化输入与算法版本生成的可复现标识。"
+    },
+    {
+      "code": "golden_fixture",
+      "name_zh": "黄金样本",
+      "definition_zh": "经人工或权威基准确认、用于回归测试的样本。"
+    },
+    {
+      "code": "generated_fixture",
+      "name_zh": "生成测试样本",
+      "definition_zh": "由固定规则自动生成，仅用于算法一致性测试。"
+    }
+  ]
+}

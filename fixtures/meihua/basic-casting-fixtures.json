@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "status": "GENERATED_FIXTURE",
+  "items": [
+    {
+      "id": "two_number_1_1",
+      "methodCode": "MEIHUA_TWO_NUMBER_V1",
+      "input": {
+        "number_a": 1,
+        "number_b": 1
+      },
+      "expected": {
+        "upper": "qian",
+        "lower": "qian",
+        "movingLine": 2,
+        "originalHexagram": "qian",
+        "changedHexagram": "tongren",
+        "body": "upper_trigram",
+        "use": "lower_trigram"
+      }
+    },
+    {
+      "id": "two_number_8_8",
+      "methodCode": "MEIHUA_TWO_NUMBER_V1",
+      "input": {
+        "number_a": 8,
+        "number_b": 8
+      },
+      "expected": {
+        "upper": "kun",
+        "lower": "kun",
+        "movingLine": 4,
+        "originalHexagram": "kun",
+        "changedHexagram": "yu",
+        "body": "lower_trigram",
+        "use": "upper_trigram"
+      }
+    },
+    {
+      "id": "time_1_1_1_1",
+      "methodCode": "MEIHUA_TIME_LUNAR_BRANCH_V1",
+      "input": {
+        "year_branch_ordinal": 1,
+        "lunar_month": 1,
+        "lunar_day": 1,
+        "hour_branch_ordinal": 1
+      },
+      "expected": {
+        "upper": "li",
+        "lower": "zhen",
+        "movingLine": 4,
+        "originalHexagram": "shike",
+        "changedHexagram": "yi_hex",
+        "body": "lower_trigram",
+        "use": "upper_trigram"
+      }
+    }
+  ]
+}

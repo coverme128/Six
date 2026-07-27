@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0",
+  "engine_policy": "evidence_first_no_single_magic_score",
+  "items": [
+    {
+      "code": "MONTH_SAME_BRANCH",
+      "priority": 100,
+      "fact": "line.branch == month.branch",
+      "effect": "strong_support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MONTH_CLASH",
+      "priority": 100,
+      "fact": "line.branch clashes month.branch",
+      "effect": "month_break_candidate",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MONTH_GENERATES_LINE",
+      "priority": 80,
+      "fact": "month.element generates line.element",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_GENERATES_MONTH",
+      "priority": 60,
+      "fact": "line.element generates month.element",
+      "effect": "drain",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "MONTH_CONTROLS_LINE",
+      "priority": 90,
+      "fact": "month.element controls line.element",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_CONTROLS_MONTH",
+      "priority": 50,
+      "fact": "line.element controls month.element",
+      "effect": "consumption",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "DAY_SAME_BRANCH",
+      "priority": 95,
+      "fact": "line.branch == day.branch",
+      "effect": "day_support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "DAY_GENERATES_LINE",
+      "priority": 80,
+      "fact": "day.element generates line.element",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "DAY_CONTROLS_LINE",
+      "priority": 85,
+      "fact": "day.element controls line.element",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "DAY_CLASH",
+      "priority": 70,
+      "fact": "line.branch clashes day.branch",
+      "effect": "day_clash",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "XUN_VOID",
+      "priority": 90,
+      "fact": "line.branch in day_xun_void",
+      "effect": "void_state",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MOVING_LINE",
+      "priority": 70,
+      "fact": "line.isMoving == true",
+      "effect": "active",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "SAME_ELEMENT_SUPPORT",
+      "priority": 40,
+      "fact": "another_active_line.element == line.element",
+      "effect": "peer_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TOMB_STATE",
+      "priority": 40,
+      "fact": "line branch enters configured tomb relation",
+      "effect": "tomb_candidate",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

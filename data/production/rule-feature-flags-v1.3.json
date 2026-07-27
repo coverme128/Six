@@ -1,0 +1,46 @@
+{
+  "version": "1.3.0",
+  "default_profile": "LIUYAO_CORE_V1",
+  "flags": [
+    {
+      "code": "liuyao.core_v1",
+      "default": true,
+      "environment": [
+        "development",
+        "staging",
+        "production"
+      ]
+    },
+    {
+      "code": "liuyao.advanced_beta",
+      "default": false,
+      "environment": [
+        "development",
+        "staging"
+      ]
+    },
+    {
+      "code": "liuyao.review_required",
+      "default": false,
+      "environment": []
+    },
+    {
+      "code": "liuyao.precise_timing",
+      "default": false,
+      "environment": []
+    },
+    {
+      "code": "liuyao.health_diagnostic_language",
+      "default": false,
+      "environment": []
+    },
+    {
+      "code": "liuyao.rule_debug_panel",
+      "default": false,
+      "environment": [
+        "development",
+        "staging"
+      ]
+    }
+  ]
+}

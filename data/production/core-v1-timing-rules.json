@@ -1,0 +1,240 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "status": "PRODUCT_SCOPE_LOCKED_NOT_EXPERT_GOLDEN_COMPLETE",
+  "default_enabled": true,
+  "count": 18,
+  "items": [
+    {
+      "code": "TARGET_BRANCH_VALUE",
+      "trigger": "target branch is central evidence",
+      "candidate": "period matching target branch",
+      "base_rank": 80,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "VOID_FILL",
+      "trigger": "target is void",
+      "candidate": "period when target void branch becomes in-force",
+      "base_rank": 95,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "DAY_LEVEL_ONLY_WHEN_NEAR_TERM",
+      "trigger": "question horizon <= 30 days",
+      "candidate": "prioritize day candidates",
+      "base_rank": 90,
+      "granularity": [
+        "day"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "MONTH_LEVEL_FOR_MEDIUM_HORIZON",
+      "trigger": "question horizon 31-365 days",
+      "candidate": "prioritize month candidates",
+      "base_rank": 85,
+      "granularity": [
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "YEAR_LEVEL_FOR_LONG_HORIZON",
+      "trigger": "question horizon > 365 days",
+      "candidate": "allow year candidates but lower precision",
+      "base_rank": 65,
+      "granularity": [
+        "year"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "NO_TIMING_WITHOUT_TARGET",
+      "trigger": "no selected target/yongshen",
+      "candidate": "do not emit timing forecast",
+      "base_rank": 100,
+      "granularity": [],
+      "status": "VERIFIED_PRODUCT_GUARDRAIL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "NO_SINGLE_CERTAIN_DATE",
+      "trigger": "multiple comparable candidates",
+      "candidate": "return ranked window, not certainty",
+      "base_rank": 100,
+      "granularity": [],
+      "status": "VERIFIED_PRODUCT_GUARDRAIL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "RANK_DIRECT_TARGET",
+      "trigger": "candidate directly activates target",
+      "candidate": "+20 ranking modifier",
+      "base_rank": 20,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "RANK_MULTIPLE_EVIDENCE",
+      "trigger": "candidate supported by >=2 independent rules",
+      "candidate": "+15 ranking modifier",
+      "base_rank": 15,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "RANK_CONFLICT_PENALTY",
+      "trigger": "candidate simultaneously strengthens decisive taboo",
+      "candidate": "-20 ranking modifier",
+      "base_rank": -20,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "RANK_NEARER_PERIOD",
+      "trigger": "equal evidence candidates",
+      "candidate": "nearer period wins tie",
+      "base_rank": 5,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "TWO_RULE_CONVERGENCE",
+      "trigger": "two independent timing rules point to same branch",
+      "candidate": "merge into one higher-ranked candidate",
+      "base_rank": 18,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "THREE_RULE_CONVERGENCE",
+      "trigger": "three or more independent rules point to same branch",
+      "candidate": "merge into one highest-ranked candidate",
+      "base_rank": 25,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "CONFLICTING_TARGETS_SPLIT",
+      "trigger": "primary and secondary targets point to different times",
+      "candidate": "return separate labeled windows",
+      "base_rank": 0,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "NO_PAST_CANDIDATE",
+      "trigger": "candidate resolves before cast instant",
+      "candidate": "discard candidate",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "MAX_CANDIDATES",
+      "trigger": "more than five candidates remain",
+      "candidate": "return top five plus alternatives internally",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "TIMEZONE_RENDERING",
+      "trigger": "candidate instant is stored in UTC",
+      "candidate": "render in user timezone",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    },
+    {
+      "code": "SOLAR_MONTH_BOUNDARY",
+      "trigger": "month-level candidate",
+      "candidate": "use exact jie boundary rather than Gregorian first day",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "CANDIDATE_OR_GUARDRAIL"
+    }
+  ]
+}

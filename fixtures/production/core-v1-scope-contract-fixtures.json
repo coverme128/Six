@@ -1,0 +1,1331 @@
+{
+  "version": "1.3.0",
+  "note": "These validate release scope and guardrails, not expert divination correctness.",
+  "count": 168,
+  "items": [
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_001",
+      "rule_type": "yongshen",
+      "key": "career:job_search",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_002",
+      "rule_type": "yongshen",
+      "key": "career:interview",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_003",
+      "rule_type": "yongshen",
+      "key": "career:offer",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_004",
+      "rule_type": "yongshen",
+      "key": "career:promotion",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_005",
+      "rule_type": "yongshen",
+      "key": "career:job_change",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_006",
+      "rule_type": "yongshen",
+      "key": "career:resignation",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_007",
+      "rule_type": "yongshen",
+      "key": "career:work_stability",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_008",
+      "rule_type": "yongshen",
+      "key": "wealth:income",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_009",
+      "rule_type": "yongshen",
+      "key": "wealth:business_profit",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_010",
+      "rule_type": "yongshen",
+      "key": "wealth:payment_collection",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_011",
+      "rule_type": "yongshen",
+      "key": "wealth:salary_raise",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_012",
+      "rule_type": "yongshen",
+      "key": "wealth:investment_outcome",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_013",
+      "rule_type": "yongshen",
+      "key": "wealth:cashflow",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_014",
+      "rule_type": "yongshen",
+      "key": "wealth:debt_repayment",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_015",
+      "rule_type": "yongshen",
+      "key": "business:partnership",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_016",
+      "rule_type": "yongshen",
+      "key": "business:customer_acquisition",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_017",
+      "rule_type": "yongshen",
+      "key": "business:contract_signing",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_018",
+      "rule_type": "yongshen",
+      "key": "business:project_success",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_019",
+      "rule_type": "yongshen",
+      "key": "business:project_delivery",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_020",
+      "rule_type": "yongshen",
+      "key": "business:competition",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_021",
+      "rule_type": "yongshen",
+      "key": "relationship:dating",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_022",
+      "rule_type": "yongshen",
+      "key": "relationship:marriage",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_023",
+      "rule_type": "yongshen",
+      "key": "relationship:reconciliation",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_024",
+      "rule_type": "yongshen",
+      "key": "relationship:counterparty_attitude",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_025",
+      "rule_type": "yongshen",
+      "key": "relationship:relationship_stability",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_026",
+      "rule_type": "yongshen",
+      "key": "relationship:breakup",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_027",
+      "rule_type": "yongshen",
+      "key": "study:exam",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_028",
+      "rule_type": "yongshen",
+      "key": "study:admission",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_029",
+      "rule_type": "yongshen",
+      "key": "study:application",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_030",
+      "rule_type": "yongshen",
+      "key": "study:certificate",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_031",
+      "rule_type": "yongshen",
+      "key": "property:buy_house",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_032",
+      "rule_type": "yongshen",
+      "key": "property:sell_house",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_033",
+      "rule_type": "yongshen",
+      "key": "property:rent_house",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_034",
+      "rule_type": "yongshen",
+      "key": "property:property_document",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_035",
+      "rule_type": "yongshen",
+      "key": "legal:lawsuit",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_036",
+      "rule_type": "yongshen",
+      "key": "legal:dispute",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_037",
+      "rule_type": "yongshen",
+      "key": "legal:contract_dispute",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_038",
+      "rule_type": "yongshen",
+      "key": "health:self_health",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_039",
+      "rule_type": "yongshen",
+      "key": "health:recovery",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_040",
+      "rule_type": "yongshen",
+      "key": "health:treatment",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_041",
+      "rule_type": "yongshen",
+      "key": "goods:purchase",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_042",
+      "rule_type": "yongshen",
+      "key": "goods:lost_item",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_043",
+      "rule_type": "yongshen",
+      "key": "travel:trip",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_044",
+      "rule_type": "yongshen",
+      "key": "travel:visa",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_YONGSHEN_045",
+      "rule_type": "yongshen",
+      "key": "people:contact_person",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_046",
+      "rule_type": "strength",
+      "key": "MONTH_SAME_BRANCH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_047",
+      "rule_type": "strength",
+      "key": "MONTH_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_048",
+      "rule_type": "strength",
+      "key": "MONTH_GENERATES_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_049",
+      "rule_type": "strength",
+      "key": "LINE_GENERATES_MONTH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_050",
+      "rule_type": "strength",
+      "key": "MONTH_CONTROLS_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_051",
+      "rule_type": "strength",
+      "key": "LINE_CONTROLS_MONTH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_052",
+      "rule_type": "strength",
+      "key": "DAY_SAME_BRANCH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_053",
+      "rule_type": "strength",
+      "key": "DAY_GENERATES_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_054",
+      "rule_type": "strength",
+      "key": "LINE_GENERATES_DAY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_055",
+      "rule_type": "strength",
+      "key": "DAY_CONTROLS_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_056",
+      "rule_type": "strength",
+      "key": "LINE_CONTROLS_DAY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_057",
+      "rule_type": "strength",
+      "key": "DAY_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_058",
+      "rule_type": "strength",
+      "key": "DAY_HARMONY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_059",
+      "rule_type": "strength",
+      "key": "MONTH_HARMONY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_060",
+      "rule_type": "strength",
+      "key": "XUN_VOID",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_061",
+      "rule_type": "strength",
+      "key": "MOVING_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_062",
+      "rule_type": "strength",
+      "key": "CHANGED_GENERATES_ORIGINAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_063",
+      "rule_type": "strength",
+      "key": "CHANGED_CONTROLS_ORIGINAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_064",
+      "rule_type": "strength",
+      "key": "ORIGINAL_GENERATES_CHANGED",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_065",
+      "rule_type": "strength",
+      "key": "ORIGINAL_CONTROLS_CHANGED",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_066",
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_GENERATES",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_067",
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_CONTROLS",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_068",
+      "rule_type": "strength",
+      "key": "SEASONAL_SAME_ELEMENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_STRENGTH_069",
+      "rule_type": "strength",
+      "key": "SEASONAL_GENERATED_ELEMENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_070",
+      "rule_type": "dynamic",
+      "key": "RETURN_GENERATION",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_071",
+      "rule_type": "dynamic",
+      "key": "RETURN_CONTROL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_072",
+      "rule_type": "dynamic",
+      "key": "ORIGINAL_GENERATES_CHANGED",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_073",
+      "rule_type": "dynamic",
+      "key": "ORIGINAL_CONTROLS_CHANGED",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_074",
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_SAME_ELEMENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_075",
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_VOID",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_076",
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_MONTH_BREAK",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_077",
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_DAY_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_078",
+      "rule_type": "dynamic",
+      "key": "TRANSFORM_TO_DAY_HARMONY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_079",
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_WEALTH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_080",
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_OFFICER",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_081",
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_PARENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_082",
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_CHILD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_DYNAMIC_083",
+      "rule_type": "dynamic",
+      "key": "RELATION_CHANGES_TO_SIBLING",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_084",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_085",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_AT_RESPONSE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_086",
+      "rule_type": "pattern",
+      "key": "WORLD_GENERATES_RESPONSE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_087",
+      "rule_type": "pattern",
+      "key": "RESPONSE_GENERATES_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_088",
+      "rule_type": "pattern",
+      "key": "WORLD_CONTROLS_RESPONSE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_089",
+      "rule_type": "pattern",
+      "key": "RESPONSE_CONTROLS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_090",
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_HARMONY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_091",
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_092",
+      "rule_type": "pattern",
+      "key": "WORLD_RESPONSE_SAME_ELEMENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_093",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_VOID",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_094",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MONTH_BREAK",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_095",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MOVING",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_096",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_RETURN_GENERATION",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_097",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_RETURN_CONTROL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_098",
+      "rule_type": "pattern",
+      "key": "ORIGIN_SPIRIT_MOVING",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_099",
+      "rule_type": "pattern",
+      "key": "TABOO_SPIRIT_MOVING",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_100",
+      "rule_type": "pattern",
+      "key": "ORIGIN_GENERATES_YONGSHEN",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_101",
+      "rule_type": "pattern",
+      "key": "TABOO_CONTROLS_YONGSHEN",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_102",
+      "rule_type": "pattern",
+      "key": "SINGLE_MOVING_LINE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_103",
+      "rule_type": "pattern",
+      "key": "DOUBLE_MOVING_LINES",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_104",
+      "rule_type": "pattern",
+      "key": "MULTIPLE_MOVING_LINES",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_105",
+      "rule_type": "pattern",
+      "key": "ALL_LINES_STATIC",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_106",
+      "rule_type": "pattern",
+      "key": "PARENT_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_107",
+      "rule_type": "pattern",
+      "key": "SIBLING_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_108",
+      "rule_type": "pattern",
+      "key": "CHILD_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_109",
+      "rule_type": "pattern",
+      "key": "WEALTH_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_110",
+      "rule_type": "pattern",
+      "key": "OFFICER_GHOST_HOLDS_WORLD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_111",
+      "rule_type": "pattern",
+      "key": "ORIGINAL_SIX_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_112",
+      "rule_type": "pattern",
+      "key": "CHANGED_SIX_CLASH",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_113",
+      "rule_type": "pattern",
+      "key": "WORLD_VOID",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_114",
+      "rule_type": "pattern",
+      "key": "RESPONSE_VOID",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_115",
+      "rule_type": "pattern",
+      "key": "WORLD_MONTH_BREAK",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_116",
+      "rule_type": "pattern",
+      "key": "RESPONSE_MONTH_BREAK",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_117",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_STRONG_SIGNAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_118",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_WEAK_SIGNAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_119",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_VOID_SIGNAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_120",
+      "rule_type": "pattern",
+      "key": "YONGSHEN_MONTH_BREAK_SIGNAL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_121",
+      "rule_type": "pattern",
+      "key": "PARENT_SUPPORTED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_122",
+      "rule_type": "pattern",
+      "key": "PARENT_SUPPRESSED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_123",
+      "rule_type": "pattern",
+      "key": "SIBLING_SUPPORTED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_124",
+      "rule_type": "pattern",
+      "key": "SIBLING_SUPPRESSED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_125",
+      "rule_type": "pattern",
+      "key": "CHILD_SUPPORTED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_126",
+      "rule_type": "pattern",
+      "key": "CHILD_SUPPRESSED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_127",
+      "rule_type": "pattern",
+      "key": "WEALTH_SUPPORTED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_128",
+      "rule_type": "pattern",
+      "key": "WEALTH_SUPPRESSED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_129",
+      "rule_type": "pattern",
+      "key": "OFFICER_SUPPORTED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_PATTERN_130",
+      "rule_type": "pattern",
+      "key": "OFFICER_SUPPRESSED_PRESENT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_131",
+      "rule_type": "timing",
+      "key": "TARGET_BRANCH_VALUE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_132",
+      "rule_type": "timing",
+      "key": "VOID_FILL",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_133",
+      "rule_type": "timing",
+      "key": "DAY_LEVEL_ONLY_WHEN_NEAR_TERM",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_134",
+      "rule_type": "timing",
+      "key": "MONTH_LEVEL_FOR_MEDIUM_HORIZON",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_135",
+      "rule_type": "timing",
+      "key": "YEAR_LEVEL_FOR_LONG_HORIZON",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_136",
+      "rule_type": "timing",
+      "key": "NO_TIMING_WITHOUT_TARGET",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_137",
+      "rule_type": "timing",
+      "key": "NO_SINGLE_CERTAIN_DATE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_138",
+      "rule_type": "timing",
+      "key": "RANK_DIRECT_TARGET",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_139",
+      "rule_type": "timing",
+      "key": "RANK_MULTIPLE_EVIDENCE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_140",
+      "rule_type": "timing",
+      "key": "RANK_CONFLICT_PENALTY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_141",
+      "rule_type": "timing",
+      "key": "RANK_NEARER_PERIOD",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_142",
+      "rule_type": "timing",
+      "key": "TWO_RULE_CONVERGENCE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_143",
+      "rule_type": "timing",
+      "key": "THREE_RULE_CONVERGENCE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_144",
+      "rule_type": "timing",
+      "key": "CONFLICTING_TARGETS_SPLIT",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_145",
+      "rule_type": "timing",
+      "key": "NO_PAST_CANDIDATE",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_146",
+      "rule_type": "timing",
+      "key": "MAX_CANDIDATES",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_147",
+      "rule_type": "timing",
+      "key": "TIMEZONE_RENDERING",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "CORE_SCOPE_TIMING_148",
+      "rule_type": "timing",
+      "key": "SOLAR_MONTH_BOUNDARY",
+      "expected_release_tier": "CORE_V1",
+      "expected_enabled_by_default": true,
+      "must_not_have_status": "REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "REVIEW_BLOCK_STRENGTH_149",
+      "rule_type": "strength",
+      "key": "ACTIVE_PEER_SAME_ELEMENT",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_STRENGTH_150",
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_SUPPORTED",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_STRENGTH_151",
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_BLOCKED_BY_FLYING",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_STRENGTH_152",
+      "rule_type": "strength",
+      "key": "HIDDEN_SPIRIT_GENERATED_BY_FLYING",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_STRENGTH_153",
+      "rule_type": "strength",
+      "key": "TOMB_BY_DAY",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_DYNAMIC_154",
+      "rule_type": "dynamic",
+      "key": "ADVANCE_YIN_WOOD",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_DYNAMIC_155",
+      "rule_type": "dynamic",
+      "key": "ADVANCE_YANG_WOOD",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_DYNAMIC_156",
+      "rule_type": "dynamic",
+      "key": "ADVANCE_FIRE",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_DYNAMIC_157",
+      "rule_type": "dynamic",
+      "key": "ADVANCE_METAL",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_DYNAMIC_158",
+      "rule_type": "dynamic",
+      "key": "ADVANCE_WATER",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_PATTERN_159",
+      "rule_type": "pattern",
+      "key": "ORIGINAL_SIX_HARMONY",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_PATTERN_160",
+      "rule_type": "pattern",
+      "key": "CHANGED_SIX_HARMONY",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_PATTERN_161",
+      "rule_type": "pattern",
+      "key": "THREE_HARMONY_ACTIVE",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_PATTERN_162",
+      "rule_type": "pattern",
+      "key": "FLYING_HIDDEN_PRESENT",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_PATTERN_163",
+      "rule_type": "pattern",
+      "key": "CONTRACT_PARENT_ACTIVE",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_TIMING_164",
+      "rule_type": "timing",
+      "key": "VOID_CLASH",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_TIMING_165",
+      "rule_type": "timing",
+      "key": "MONTH_BREAK_EXIT",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_TIMING_166",
+      "rule_type": "timing",
+      "key": "MONTH_BREAK_BRANCH_VALUE",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_TIMING_167",
+      "rule_type": "timing",
+      "key": "BOUND_RELEASE_BY_CLASH",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    },
+    {
+      "case_id": "REVIEW_BLOCK_TIMING_168",
+      "rule_type": "timing",
+      "key": "CLASH_STABILIZED_BY_HARMONY",
+      "expected_release_tier": "REVIEW_REQUIRED",
+      "expected_enabled_by_default": false
+    }
+  ]
+}

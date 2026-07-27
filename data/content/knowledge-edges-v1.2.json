@@ -1,0 +1,688 @@
+[
+  {
+    "from": "core-five-elements",
+    "to": "core-yinyang",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-eight-trigrams",
+    "to": "core-yinyang",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-hexagrams",
+    "to": "core-eight-trigrams",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-stems",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-branches",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-branch-relations",
+    "to": "core-branches",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-solar-terms",
+    "to": "core-stems",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-solar-terms",
+    "to": "core-branches",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-sexagenary-cycle",
+    "to": "core-stems",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-sexagenary-cycle",
+    "to": "core-branches",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-xunkong",
+    "to": "core-sexagenary-cycle",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-overview",
+    "to": "core-hexagrams",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-casting",
+    "to": "liuyao-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-coin-method",
+    "to": "liuyao-casting",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-line-values",
+    "to": "liuyao-coin-method",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-original-changed",
+    "to": "liuyao-line-values",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-najia",
+    "to": "liuyao-original-changed",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-najia",
+    "to": "core-stems",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-najia",
+    "to": "core-branches",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-eight-palaces",
+    "to": "liuyao-najia",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-world-response",
+    "to": "liuyao-eight-palaces",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-six-relations",
+    "to": "liuyao-eight-palaces",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-six-relations",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-six-spirits",
+    "to": "core-stems",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-question-classification",
+    "to": "liuyao-six-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-yongshen",
+    "to": "liuyao-question-classification",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-yongshen",
+    "to": "liuyao-six-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-yuanshen",
+    "to": "liuyao-yongshen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-yuanshen",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-jishen",
+    "to": "liuyao-yongshen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-jishen",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-choushen",
+    "to": "liuyao-yuanshen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-choushen",
+    "to": "liuyao-jishen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-strength-overview",
+    "to": "liuyao-yongshen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-strength-overview",
+    "to": "core-solar-terms",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-month-command",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-month-command",
+    "to": "core-solar-terms",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-day-support",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-day-support",
+    "to": "core-sexagenary-cycle",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-void",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-void",
+    "to": "core-xunkong",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-month-break",
+    "to": "liuyao-month-command",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-month-break",
+    "to": "core-branch-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-tomb-storage",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-tomb-storage",
+    "to": "core-branches",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-moving-lines",
+    "to": "liuyao-original-changed",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-changed-lines",
+    "to": "liuyao-moving-lines",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-return-generate-control",
+    "to": "liuyao-changed-lines",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-return-generate-control",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-advance-retreat",
+    "to": "liuyao-changed-lines",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-relations-engine",
+    "to": "liuyao-six-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-relations-engine",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-relations-engine",
+    "to": "core-branch-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-clash-harmony",
+    "to": "liuyao-relations-engine",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-patterns",
+    "to": "liuyao-relations-engine",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-patterns",
+    "to": "liuyao-moving-lines",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-outcome",
+    "to": "liuyao-yongshen",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-outcome",
+    "to": "liuyao-strength-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-outcome",
+    "to": "liuyao-patterns",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-timing",
+    "to": "liuyao-outcome",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-timing",
+    "to": "liuyao-void",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-timing",
+    "to": "liuyao-moving-lines",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-reading-workflow",
+    "to": "liuyao-timing",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-overview",
+    "to": "core-eight-trigrams",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-number-casting",
+    "to": "meihua-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-time-casting",
+    "to": "meihua-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-time-casting",
+    "to": "core-sexagenary-cycle",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-original-mutual-changed",
+    "to": "meihua-number-casting",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-body-use",
+    "to": "meihua-original-mutual-changed",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-five-element-relation",
+    "to": "meihua-body-use",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-five-element-relation",
+    "to": "core-five-elements",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-seasonal-strength",
+    "to": "meihua-five-element-relation",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-seasonal-strength",
+    "to": "core-solar-terms",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-symbolism",
+    "to": "core-eight-trigrams",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-external-signs",
+    "to": "meihua-symbolism",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-interpretation",
+    "to": "meihua-body-use",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-interpretation",
+    "to": "meihua-seasonal-strength",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-interpretation",
+    "to": "meihua-symbolism",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "meihua-timing",
+    "to": "meihua-interpretation",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "method-liuyao-vs-meihua",
+    "to": "liuyao-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "method-liuyao-vs-meihua",
+    "to": "meihua-overview",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-read-chart",
+    "to": "liuyao-world-response",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-read-chart",
+    "to": "liuyao-six-relations",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-read-chart",
+    "to": "liuyao-six-spirits",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-ask",
+    "to": "liuyao-question-classification",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-evidence-reading",
+    "to": "liuyao-outcome",
+    "relation": "requires",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-yongshen",
+    "to": "liuyao-six-relations",
+    "relation": "depends_on",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-six-spirits",
+    "to": "liuyao-six-relations",
+    "relation": "complements",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-world-response",
+    "to": "meihua-body-use",
+    "relation": "contrasts_with",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-outcome",
+    "to": "meihua-interpretation",
+    "relation": "contrasts_with",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-coin-method",
+    "to": "meihua-number-casting",
+    "relation": "contrasts_with",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-strength-overview",
+    "to": "meihua-seasonal-strength",
+    "relation": "related_to",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "liuyao-timing",
+    "to": "meihua-timing",
+    "relation": "related_to",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-eight-trigrams",
+    "to": "meihua-symbolism",
+    "relation": "supports",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-hexagrams",
+    "to": "liuyao-original-changed",
+    "relation": "supports",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "core-branch-relations",
+    "to": "liuyao-relations-engine",
+    "relation": "supports",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-read-chart",
+    "to": "content-evidence-reading",
+    "relation": "next_step",
+    "weight": 1.0,
+    "version": "1.2.0"
+  },
+  {
+    "from": "content-how-to-ask",
+    "to": "liuyao-question-classification",
+    "relation": "supports",
+    "weight": 1.0,
+    "version": "1.2.0"
+  }
+]

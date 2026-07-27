@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "status": "REVIEWED_PRODUCT_SCHEMA",
+  "items": [
+    {
+      "dimension": "sound",
+      "examples": [
+        "次数",
+        "远近",
+        "急缓",
+        "清浊"
+      ],
+      "ai_task": "extract observable facts only"
+    },
+    {
+      "dimension": "direction",
+      "examples": [
+        "东",
+        "西",
+        "南",
+        "北",
+        "八方"
+      ],
+      "ai_task": "normalize direction"
+    },
+    {
+      "dimension": "person",
+      "examples": [
+        "年龄象",
+        "角色",
+        "动作"
+      ],
+      "ai_task": "describe without identity assumptions"
+    },
+    {
+      "dimension": "animal",
+      "examples": [
+        "种类",
+        "数量",
+        "行动"
+      ],
+      "ai_task": "map to symbolism candidates"
+    },
+    {
+      "dimension": "object",
+      "examples": [
+        "材质",
+        "形状",
+        "颜色",
+        "用途"
+      ],
+      "ai_task": "map to trigram candidates"
+    },
+    {
+      "dimension": "weather",
+      "examples": [
+        "风",
+        "雨",
+        "雷",
+        "晴暗"
+      ],
+      "ai_task": "map to nature symbolism"
+    },
+    {
+      "dimension": "number",
+      "examples": [
+        "次数",
+        "编号",
+        "时间数字"
+      ],
+      "ai_task": "keep raw number and method code"
+    }
+  ]
+}

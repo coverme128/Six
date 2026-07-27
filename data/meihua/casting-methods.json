@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "code": "MEIHUA_TWO_NUMBER_V1",
+      "inputs": [
+        "number_a",
+        "number_b"
+      ],
+      "upper": "mod8(number_a)",
+      "lower": "mod8(number_b)",
+      "moving": "mod6(number_a + number_b)",
+      "zero_remainder_rule": {
+        "trigram": 8,
+        "line": 6
+      },
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MEIHUA_THREE_NUMBER_V1",
+      "inputs": [
+        "number_a",
+        "number_b",
+        "number_c"
+      ],
+      "upper": "mod8(number_a)",
+      "lower": "mod8(number_b)",
+      "moving": "mod6(number_c)",
+      "zero_remainder_rule": {
+        "trigram": 8,
+        "line": 6
+      },
+      "status": "REVIEW_REQUIRED_VARIANT"
+    },
+    {
+      "code": "MEIHUA_TIME_LUNAR_BRANCH_V1",
+      "inputs": [
+        "year_branch_ordinal",
+        "lunar_month",
+        "lunar_day",
+        "hour_branch_ordinal"
+      ],
+      "upper": "mod8(year + month + day)",
+      "lower": "mod8(year + month + day + hour)",
+      "moving": "mod6(year + month + day + hour)",
+      "zero_remainder_rule": {
+        "trigram": 8,
+        "line": 6
+      },
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "note": "时间起卦流派存在差异，必须保留 method_code。"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "all_7_qian",
+      "round_sums": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "original_bits": "111111",
+      "changed_bits": "111111",
+      "original_hexagram": "qian",
+      "changed_hexagram": "qian",
+      "moving_lines": []
+    },
+    {
+      "id": "all_8_kun",
+      "round_sums": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "original_bits": "000000",
+      "changed_bits": "000000",
+      "original_hexagram": "kun",
+      "changed_hexagram": "kun",
+      "moving_lines": []
+    },
+    {
+      "id": "all_9_qian_to_kun",
+      "round_sums": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "original_bits": "111111",
+      "changed_bits": "000000",
+      "original_hexagram": "qian",
+      "changed_hexagram": "kun",
+      "moving_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "all_6_kun_to_qian",
+      "round_sums": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "original_bits": "000000",
+      "changed_bits": "111111",
+      "original_hexagram": "kun",
+      "changed_hexagram": "qian",
+      "moving_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "jiji_static",
+      "round_sums": [
+        7,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "original_bits": "101010",
+      "changed_bits": "101010",
+      "original_hexagram": "jiji",
+      "changed_hexagram": "jiji",
+      "moving_lines": []
+    },
+    {
+      "id": "weiji_static",
+      "round_sums": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "original_bits": "010101",
+      "changed_bits": "010101",
+      "original_hexagram": "weiji",
+      "changed_hexagram": "weiji",
+      "moving_lines": []
+    }
+  ]
+}

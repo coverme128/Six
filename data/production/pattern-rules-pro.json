@@ -1,0 +1,943 @@
+{
+  "version": "1.1.0",
+  "count": 102,
+  "items": [
+    {
+      "code": "YONGSHEN_HOLDS_WORLD",
+      "name_zh": "用神持世",
+      "conditions": [
+        "world_line is selected_yongshen"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_AT_RESPONSE",
+      "name_zh": "用神临应",
+      "conditions": [
+        "response_line is selected_yongshen"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_GENERATES_RESPONSE",
+      "name_zh": "世生应",
+      "conditions": [
+        "generates(world.element,response.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_GENERATES_WORLD",
+      "name_zh": "应生世",
+      "conditions": [
+        "generates(response.element,world.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_CONTROLS_RESPONSE",
+      "name_zh": "世克应",
+      "conditions": [
+        "controls(world.element,response.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_CONTROLS_WORLD",
+      "name_zh": "应克世",
+      "conditions": [
+        "controls(response.element,world.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_RESPONSE_HARMONY",
+      "name_zh": "世应相合",
+      "conditions": [
+        "six_harmony(world.branch,response.branch)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_RESPONSE_CLASH",
+      "name_zh": "世应相冲",
+      "conditions": [
+        "clash(world.branch,response.branch)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_RESPONSE_SAME_ELEMENT",
+      "name_zh": "世应比和",
+      "conditions": [
+        "world.element == response.element"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_VOID",
+      "name_zh": "用神旬空",
+      "conditions": [
+        "selected_yongshen is void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_MONTH_BREAK",
+      "name_zh": "用神月破候选",
+      "conditions": [
+        "selected_yongshen is month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_MOVING",
+      "name_zh": "用神发动",
+      "conditions": [
+        "selected_yongshen is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_RETURN_GENERATION",
+      "name_zh": "用神动化回头生",
+      "conditions": [
+        "selected_yongshen dynamic has RETURN_GENERATION"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_RETURN_CONTROL",
+      "name_zh": "用神动化回头克",
+      "conditions": [
+        "selected_yongshen dynamic has RETURN_CONTROL"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGIN_SPIRIT_MOVING",
+      "name_zh": "原神发动",
+      "conditions": [
+        "selected_origin_spirit is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TABOO_SPIRIT_MOVING",
+      "name_zh": "忌神发动",
+      "conditions": [
+        "selected_taboo_spirit is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGIN_GENERATES_YONGSHEN",
+      "name_zh": "原神生用神",
+      "conditions": [
+        "origin.element generates yongshen.element"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "TABOO_CONTROLS_YONGSHEN",
+      "name_zh": "忌神克用神",
+      "conditions": [
+        "taboo.element controls yongshen.element"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "SINGLE_MOVING_LINE",
+      "name_zh": "独发",
+      "conditions": [
+        "moving_line_count == 1"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "DOUBLE_MOVING_LINES",
+      "name_zh": "两爻发动",
+      "conditions": [
+        "moving_line_count == 2"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "MULTIPLE_MOVING_LINES",
+      "name_zh": "多爻发动",
+      "conditions": [
+        "moving_line_count >= 3"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "ALL_LINES_STATIC",
+      "name_zh": "六爻安静",
+      "conditions": [
+        "moving_line_count == 0"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "PARENT_HOLDS_WORLD",
+      "name_zh": "父母持世",
+      "conditions": [
+        "world.six_relation == parent"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "SIBLING_HOLDS_WORLD",
+      "name_zh": "兄弟持世",
+      "conditions": [
+        "world.six_relation == sibling"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "CHILD_HOLDS_WORLD",
+      "name_zh": "子孙持世",
+      "conditions": [
+        "world.six_relation == child"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WEALTH_HOLDS_WORLD",
+      "name_zh": "妻财持世",
+      "conditions": [
+        "world.six_relation == wealth"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "OFFICER_GHOST_HOLDS_WORLD",
+      "name_zh": "官鬼持世",
+      "conditions": [
+        "world.six_relation == officer_ghost"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGINAL_SIX_CLASH",
+      "name_zh": "六冲卦",
+      "conditions": [
+        "original_hexagram in six_clash_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGINAL_SIX_HARMONY",
+      "name_zh": "六合卦",
+      "conditions": [
+        "original_hexagram in six_harmony_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHANGED_SIX_CLASH",
+      "name_zh": "变卦六冲",
+      "conditions": [
+        "changed_hexagram in six_clash_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "CHANGED_SIX_HARMONY",
+      "name_zh": "变卦六合",
+      "conditions": [
+        "changed_hexagram in six_harmony_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "THREE_HARMONY_ACTIVE",
+      "name_zh": "三合局候选",
+      "conditions": [
+        "active branches complete configured three_harmony set"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "FLYING_HIDDEN_PRESENT",
+      "name_zh": "飞伏同现",
+      "conditions": [
+        "hidden_spirit exists"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_VOID",
+      "name_zh": "世爻旬空",
+      "conditions": [
+        "world is void"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_VOID",
+      "name_zh": "应爻旬空",
+      "conditions": [
+        "response is void"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_MONTH_BREAK",
+      "name_zh": "世爻月破",
+      "conditions": [
+        "world is month_break"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_MONTH_BREAK",
+      "name_zh": "应爻月破",
+      "conditions": [
+        "response is month_break"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "YONGSHEN_STRONG_SIGNAL",
+      "name_zh": "用神旺信号",
+      "conditions": [
+        "yongshen has strong evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_WEAK_SIGNAL",
+      "name_zh": "用神弱信号",
+      "conditions": [
+        "yongshen has weak evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_VOID_SIGNAL",
+      "name_zh": "用神空信号",
+      "conditions": [
+        "yongshen has void evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_MONTH_BREAK_SIGNAL",
+      "name_zh": "用神破信号",
+      "conditions": [
+        "yongshen has month_break evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_TOMB_SIGNAL",
+      "name_zh": "用神墓信号",
+      "conditions": [
+        "yongshen has tomb evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_ON_AZURE_DRAGON",
+      "name_zh": "用神临青龙",
+      "conditions": [
+        "yongshen.six_spirit == azure_dragon"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "YONGSHEN_ON_VERMILION_BIRD",
+      "name_zh": "用神临朱雀",
+      "conditions": [
+        "yongshen.six_spirit == vermilion_bird"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "YONGSHEN_ON_HOOKED_EARTH",
+      "name_zh": "用神临勾陈",
+      "conditions": [
+        "yongshen.six_spirit == hooked_earth"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "YONGSHEN_ON_SOARING_SERPENT",
+      "name_zh": "用神临腾蛇",
+      "conditions": [
+        "yongshen.six_spirit == soaring_serpent"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "YONGSHEN_ON_WHITE_TIGER",
+      "name_zh": "用神临白虎",
+      "conditions": [
+        "yongshen.six_spirit == white_tiger"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "YONGSHEN_ON_BLACK_TORTOISE",
+      "name_zh": "用神临玄武",
+      "conditions": [
+        "yongshen.six_spirit == black_tortoise"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "code": "CONTRACT_PARENT_ACTIVE",
+      "name_zh": "合同文书发动",
+      "conditions": [
+        "topic in business/legal/property",
+        "active parent line exists"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_WITH_SIBLING_PRESSURE",
+      "name_zh": "财受兄弟压力",
+      "conditions": [
+        "wealth is yongshen",
+        "active sibling controls or consumes wealth"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CAREER_OFFICER_SUPPORTED",
+      "name_zh": "官鬼得生扶",
+      "conditions": [
+        "topic == career",
+        "officer_ghost is yongshen",
+        "yongshen receives support"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RELATION_WORLD_RESPONSE_INTERACTION",
+      "name_zh": "感情世应互动",
+      "conditions": [
+        "topic == relationship",
+        "world and response have interaction"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HEALTH_CHILD_SUPPORT_SIGNAL",
+      "name_zh": "子孙解忧信号",
+      "conditions": [
+        "topic == health",
+        "active child line supports selected target"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PARENT_MOVING_PRESENT",
+      "name_zh": "父母发动信号",
+      "conditions": [
+        "parent line exists and has moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "PARENT_VOID_PRESENT",
+      "name_zh": "父母旬空信号",
+      "conditions": [
+        "parent line exists and has void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "PARENT_MONTH_BREAK_PRESENT",
+      "name_zh": "父母月破信号",
+      "conditions": [
+        "parent line exists and has month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "PARENT_SUPPORTED_PRESENT",
+      "name_zh": "父母得生扶信号",
+      "conditions": [
+        "parent line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "PARENT_SUPPRESSED_PRESENT",
+      "name_zh": "父母受制信号",
+      "conditions": [
+        "parent line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SIBLING_MOVING_PRESENT",
+      "name_zh": "兄弟发动信号",
+      "conditions": [
+        "sibling line exists and has moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SIBLING_VOID_PRESENT",
+      "name_zh": "兄弟旬空信号",
+      "conditions": [
+        "sibling line exists and has void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SIBLING_MONTH_BREAK_PRESENT",
+      "name_zh": "兄弟月破信号",
+      "conditions": [
+        "sibling line exists and has month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SIBLING_SUPPORTED_PRESENT",
+      "name_zh": "兄弟得生扶信号",
+      "conditions": [
+        "sibling line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "SIBLING_SUPPRESSED_PRESENT",
+      "name_zh": "兄弟受制信号",
+      "conditions": [
+        "sibling line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "CHILD_MOVING_PRESENT",
+      "name_zh": "子孙发动信号",
+      "conditions": [
+        "child line exists and has moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "CHILD_VOID_PRESENT",
+      "name_zh": "子孙旬空信号",
+      "conditions": [
+        "child line exists and has void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "CHILD_MONTH_BREAK_PRESENT",
+      "name_zh": "子孙月破信号",
+      "conditions": [
+        "child line exists and has month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "CHILD_SUPPORTED_PRESENT",
+      "name_zh": "子孙得生扶信号",
+      "conditions": [
+        "child line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "CHILD_SUPPRESSED_PRESENT",
+      "name_zh": "子孙受制信号",
+      "conditions": [
+        "child line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WEALTH_MOVING_PRESENT",
+      "name_zh": "妻财发动信号",
+      "conditions": [
+        "wealth line exists and has moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WEALTH_VOID_PRESENT",
+      "name_zh": "妻财旬空信号",
+      "conditions": [
+        "wealth line exists and has void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WEALTH_MONTH_BREAK_PRESENT",
+      "name_zh": "妻财月破信号",
+      "conditions": [
+        "wealth line exists and has month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WEALTH_SUPPORTED_PRESENT",
+      "name_zh": "妻财得生扶信号",
+      "conditions": [
+        "wealth line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WEALTH_SUPPRESSED_PRESENT",
+      "name_zh": "妻财受制信号",
+      "conditions": [
+        "wealth line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "OFFICER_MOVING_PRESENT",
+      "name_zh": "官鬼发动信号",
+      "conditions": [
+        "officer_ghost line exists and has moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "OFFICER_VOID_PRESENT",
+      "name_zh": "官鬼旬空信号",
+      "conditions": [
+        "officer_ghost line exists and has void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "OFFICER_MONTH_BREAK_PRESENT",
+      "name_zh": "官鬼月破信号",
+      "conditions": [
+        "officer_ghost line exists and has month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "OFFICER_SUPPORTED_PRESENT",
+      "name_zh": "官鬼得生扶信号",
+      "conditions": [
+        "officer_ghost line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "OFFICER_SUPPRESSED_PRESENT",
+      "name_zh": "官鬼受制信号",
+      "conditions": [
+        "officer_ghost line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL"
+    },
+    {
+      "code": "WORLD_PARENT_RELATION",
+      "name_zh": "世爻临父母",
+      "conditions": [
+        "world.six_relation == parent"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_PARENT_RELATION",
+      "name_zh": "应爻临父母",
+      "conditions": [
+        "response.six_relation == parent"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_SIBLING_RELATION",
+      "name_zh": "世爻临兄弟",
+      "conditions": [
+        "world.six_relation == sibling"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_SIBLING_RELATION",
+      "name_zh": "应爻临兄弟",
+      "conditions": [
+        "response.six_relation == sibling"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_CHILD_RELATION",
+      "name_zh": "世爻临子孙",
+      "conditions": [
+        "world.six_relation == child"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_CHILD_RELATION",
+      "name_zh": "应爻临子孙",
+      "conditions": [
+        "response.six_relation == child"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_WEALTH_RELATION",
+      "name_zh": "世爻临妻财",
+      "conditions": [
+        "world.six_relation == wealth"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_WEALTH_RELATION",
+      "name_zh": "应爻临妻财",
+      "conditions": [
+        "response.six_relation == wealth"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "WORLD_OFFICER_RELATION",
+      "name_zh": "世爻临官鬼",
+      "conditions": [
+        "world.six_relation == officer_ghost"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "RESPONSE_OFFICER_RELATION",
+      "name_zh": "应爻临官鬼",
+      "conditions": [
+        "response.six_relation == officer_ghost"
+      ],
+      "scope": "line",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "CAREER_PARENT_AND_OFFICER",
+      "name_zh": "事业官父同现",
+      "conditions": [
+        "topic == career",
+        "officer_ghost line exists",
+        "parent line exists"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_CHILD_GENERATES_WEALTH",
+      "name_zh": "财源相生候选",
+      "conditions": [
+        "topic == wealth",
+        "child generates wealth"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "BUSINESS_WORLD_RESPONSE_HARMONY",
+      "name_zh": "合作世应相合",
+      "conditions": [
+        "topic == business",
+        "world-response harmony"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "BUSINESS_WORLD_RESPONSE_CLASH",
+      "name_zh": "合作世应相冲",
+      "conditions": [
+        "topic == business",
+        "world-response clash"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "STUDY_PARENT_SUPPORTED",
+      "name_zh": "学业父母得扶",
+      "conditions": [
+        "topic == study",
+        "parent yongshen supported"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PROPERTY_PARENT_ACTIVE",
+      "name_zh": "房产父母发动",
+      "conditions": [
+        "topic == property",
+        "parent yongshen moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TRAVEL_WORLD_ACTIVE",
+      "name_zh": "出行世爻发动",
+      "conditions": [
+        "topic == travel",
+        "world moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "GOODS_PARENT_RESPONSE_LINK",
+      "name_zh": "货物文书与应方联动",
+      "conditions": [
+        "topic == goods",
+        "parent interacts with response"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "FAMILY_SIBLING_PRESSURE",
+      "name_zh": "家庭兄弟压力信号",
+      "conditions": [
+        "topic == family",
+        "active sibling pressure exists"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DECISION_MULTIPLE_MOVEMENT",
+      "name_zh": "决策多动复杂度",
+      "conditions": [
+        "topic == decision",
+        "moving_line_count >= 3"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PRIMARY_AND_SECONDARY_TARGET_CONFLICT",
+      "name_zh": "主辅用神信号冲突",
+      "conditions": [
+        "primary and secondary targets have opposing decisive evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "PRIMARY_AND_SECONDARY_TARGET_CONVERGENCE",
+      "name_zh": "主辅用神信号同向",
+      "conditions": [
+        "primary and secondary targets share supporting decisive evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_AND_YONGSHEN_BOTH_SUPPORTED",
+      "name_zh": "世与用神同得扶",
+      "conditions": [
+        "world has support",
+        "yongshen has support"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_SUPPORTED_YONGSHEN_SUPPRESSED",
+      "name_zh": "世强用弱候选",
+      "conditions": [
+        "world supported",
+        "yongshen suppressed"
+      ],
+      "scope": "chart",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

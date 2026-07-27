@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "index": 1,
+      "code": "zi",
+      "name_zh": "子",
+      "element": "water",
+      "yin_yang": "yang",
+      "direction": "north"
+    },
+    {
+      "index": 2,
+      "code": "chou",
+      "name_zh": "丑",
+      "element": "earth",
+      "yin_yang": "yin",
+      "direction": "northeast"
+    },
+    {
+      "index": 3,
+      "code": "yin",
+      "name_zh": "寅",
+      "element": "wood",
+      "yin_yang": "yang",
+      "direction": "northeast"
+    },
+    {
+      "index": 4,
+      "code": "mao",
+      "name_zh": "卯",
+      "element": "wood",
+      "yin_yang": "yin",
+      "direction": "east"
+    },
+    {
+      "index": 5,
+      "code": "chen",
+      "name_zh": "辰",
+      "element": "earth",
+      "yin_yang": "yang",
+      "direction": "southeast"
+    },
+    {
+      "index": 6,
+      "code": "si",
+      "name_zh": "巳",
+      "element": "fire",
+      "yin_yang": "yin",
+      "direction": "southeast"
+    },
+    {
+      "index": 7,
+      "code": "wu",
+      "name_zh": "午",
+      "element": "fire",
+      "yin_yang": "yang",
+      "direction": "south"
+    },
+    {
+      "index": 8,
+      "code": "wei",
+      "name_zh": "未",
+      "element": "earth",
+      "yin_yang": "yin",
+      "direction": "southwest"
+    },
+    {
+      "index": 9,
+      "code": "shen",
+      "name_zh": "申",
+      "element": "metal",
+      "yin_yang": "yang",
+      "direction": "southwest"
+    },
+    {
+      "index": 10,
+      "code": "you",
+      "name_zh": "酉",
+      "element": "metal",
+      "yin_yang": "yin",
+      "direction": "west"
+    },
+    {
+      "index": 11,
+      "code": "xu",
+      "name_zh": "戌",
+      "element": "earth",
+      "yin_yang": "yang",
+      "direction": "northwest"
+    },
+    {
+      "index": 12,
+      "code": "hai",
+      "name_zh": "亥",
+      "element": "water",
+      "yin_yang": "yin",
+      "direction": "northwest"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "code": "wood",
+      "name_zh": "木",
+      "generates": "fire",
+      "controls": "earth"
+    },
+    {
+      "code": "fire",
+      "name_zh": "火",
+      "generates": "earth",
+      "controls": "metal"
+    },
+    {
+      "code": "earth",
+      "name_zh": "土",
+      "generates": "metal",
+      "controls": "water"
+    },
+    {
+      "code": "metal",
+      "name_zh": "金",
+      "generates": "water",
+      "controls": "wood"
+    },
+    {
+      "code": "water",
+      "name_zh": "水",
+      "generates": "wood",
+      "controls": "fire"
+    }
+  ]
+}

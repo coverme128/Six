@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "routes": [
+    "/blog/iching",
+    "/blog/liuyao",
+    "/blog/meihua",
+    "/blog/cases",
+    "/iching/trigrams/[slug]",
+    "/iching/hexagrams/[slug]",
+    "/liuyao/knowledge/[slug]",
+    "/meihua/knowledge/[slug]"
+  ],
+  "categories": [
+    {
+      "code": "iching_basics",
+      "name_zh": "易经基础",
+      "topics": [
+        "阴阳",
+        "五行",
+        "八卦",
+        "六十四卦",
+        "天干地支"
+      ]
+    },
+    {
+      "code": "liuyao_basics",
+      "name_zh": "六爻基础",
+      "topics": [
+        "起卦",
+        "纳甲",
+        "八宫",
+        "世应",
+        "六亲",
+        "六神",
+        "用神",
+        "旺衰",
+        "动变",
+        "生克制化",
+        "格局",
+        "应期"
+      ]
+    },
+    {
+      "code": "meihua_basics",
+      "name_zh": "梅花易数",
+      "topics": [
+        "时间起卦",
+        "数字起卦",
+        "体用",
+        "本互变",
+        "万物类象",
+        "外应"
+      ]
+    },
+    {
+      "code": "cases",
+      "name_zh": "案例复盘",
+      "topics": [
+        "事业",
+        "财运",
+        "感情",
+        "学习",
+        "合同",
+        "出行"
+      ]
+    }
+  ]
+}

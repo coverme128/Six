@@ -1,0 +1,518 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "sequence": 1,
+      "code": "qian",
+      "name_zh": "乾",
+      "upper_trigram": "qian",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111111"
+    },
+    {
+      "sequence": 2,
+      "code": "kun",
+      "name_zh": "坤",
+      "upper_trigram": "kun",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000000"
+    },
+    {
+      "sequence": 3,
+      "code": "zhun",
+      "name_zh": "屯",
+      "upper_trigram": "kan",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100010"
+    },
+    {
+      "sequence": 4,
+      "code": "meng",
+      "name_zh": "蒙",
+      "upper_trigram": "gen",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010001"
+    },
+    {
+      "sequence": 5,
+      "code": "xu",
+      "name_zh": "需",
+      "upper_trigram": "kan",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111010"
+    },
+    {
+      "sequence": 6,
+      "code": "song",
+      "name_zh": "讼",
+      "upper_trigram": "qian",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010111"
+    },
+    {
+      "sequence": 7,
+      "code": "shi",
+      "name_zh": "师",
+      "upper_trigram": "kun",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010000"
+    },
+    {
+      "sequence": 8,
+      "code": "bi",
+      "name_zh": "比",
+      "upper_trigram": "kan",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000010"
+    },
+    {
+      "sequence": 9,
+      "code": "xiaoxu",
+      "name_zh": "小畜",
+      "upper_trigram": "xun",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111011"
+    },
+    {
+      "sequence": 10,
+      "code": "lv",
+      "name_zh": "履",
+      "upper_trigram": "qian",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110111"
+    },
+    {
+      "sequence": 11,
+      "code": "tai",
+      "name_zh": "泰",
+      "upper_trigram": "kun",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111000"
+    },
+    {
+      "sequence": 12,
+      "code": "pi",
+      "name_zh": "否",
+      "upper_trigram": "qian",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000111"
+    },
+    {
+      "sequence": 13,
+      "code": "tongren",
+      "name_zh": "同人",
+      "upper_trigram": "qian",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101111"
+    },
+    {
+      "sequence": 14,
+      "code": "dayou",
+      "name_zh": "大有",
+      "upper_trigram": "li",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111101"
+    },
+    {
+      "sequence": 15,
+      "code": "qian_hex",
+      "name_zh": "谦",
+      "upper_trigram": "kun",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001000"
+    },
+    {
+      "sequence": 16,
+      "code": "yu",
+      "name_zh": "豫",
+      "upper_trigram": "zhen",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000100"
+    },
+    {
+      "sequence": 17,
+      "code": "sui",
+      "name_zh": "随",
+      "upper_trigram": "dui",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100110"
+    },
+    {
+      "sequence": 18,
+      "code": "gu",
+      "name_zh": "蛊",
+      "upper_trigram": "gen",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011001"
+    },
+    {
+      "sequence": 19,
+      "code": "lin",
+      "name_zh": "临",
+      "upper_trigram": "kun",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110000"
+    },
+    {
+      "sequence": 20,
+      "code": "guan",
+      "name_zh": "观",
+      "upper_trigram": "xun",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000011"
+    },
+    {
+      "sequence": 21,
+      "code": "shike",
+      "name_zh": "噬嗑",
+      "upper_trigram": "li",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100101"
+    },
+    {
+      "sequence": 22,
+      "code": "bi_hex",
+      "name_zh": "贲",
+      "upper_trigram": "gen",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101001"
+    },
+    {
+      "sequence": 23,
+      "code": "bo",
+      "name_zh": "剥",
+      "upper_trigram": "gen",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000001"
+    },
+    {
+      "sequence": 24,
+      "code": "fu",
+      "name_zh": "复",
+      "upper_trigram": "kun",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100000"
+    },
+    {
+      "sequence": 25,
+      "code": "wuwang",
+      "name_zh": "无妄",
+      "upper_trigram": "qian",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100111"
+    },
+    {
+      "sequence": 26,
+      "code": "daxu",
+      "name_zh": "大畜",
+      "upper_trigram": "gen",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111001"
+    },
+    {
+      "sequence": 27,
+      "code": "yi_hex",
+      "name_zh": "颐",
+      "upper_trigram": "gen",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100001"
+    },
+    {
+      "sequence": 28,
+      "code": "daguo",
+      "name_zh": "大过",
+      "upper_trigram": "dui",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011110"
+    },
+    {
+      "sequence": 29,
+      "code": "kan_hex",
+      "name_zh": "坎",
+      "upper_trigram": "kan",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010010"
+    },
+    {
+      "sequence": 30,
+      "code": "li_hex",
+      "name_zh": "离",
+      "upper_trigram": "li",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101101"
+    },
+    {
+      "sequence": 31,
+      "code": "xian",
+      "name_zh": "咸",
+      "upper_trigram": "dui",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001110"
+    },
+    {
+      "sequence": 32,
+      "code": "heng",
+      "name_zh": "恒",
+      "upper_trigram": "zhen",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011100"
+    },
+    {
+      "sequence": 33,
+      "code": "dun",
+      "name_zh": "遁",
+      "upper_trigram": "qian",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001111"
+    },
+    {
+      "sequence": 34,
+      "code": "dazhuang",
+      "name_zh": "大壮",
+      "upper_trigram": "zhen",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111100"
+    },
+    {
+      "sequence": 35,
+      "code": "jin",
+      "name_zh": "晋",
+      "upper_trigram": "li",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000101"
+    },
+    {
+      "sequence": 36,
+      "code": "mingyi",
+      "name_zh": "明夷",
+      "upper_trigram": "kun",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101000"
+    },
+    {
+      "sequence": 37,
+      "code": "jiaren",
+      "name_zh": "家人",
+      "upper_trigram": "xun",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101011"
+    },
+    {
+      "sequence": 38,
+      "code": "kui",
+      "name_zh": "睽",
+      "upper_trigram": "li",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110101"
+    },
+    {
+      "sequence": 39,
+      "code": "jian",
+      "name_zh": "蹇",
+      "upper_trigram": "kan",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001010"
+    },
+    {
+      "sequence": 40,
+      "code": "jie",
+      "name_zh": "解",
+      "upper_trigram": "zhen",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010100"
+    },
+    {
+      "sequence": 41,
+      "code": "sun",
+      "name_zh": "损",
+      "upper_trigram": "gen",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110001"
+    },
+    {
+      "sequence": 42,
+      "code": "yi_gain",
+      "name_zh": "益",
+      "upper_trigram": "xun",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100011"
+    },
+    {
+      "sequence": 43,
+      "code": "guai",
+      "name_zh": "夬",
+      "upper_trigram": "dui",
+      "lower_trigram": "qian",
+      "bits_bottom_up": "111110"
+    },
+    {
+      "sequence": 44,
+      "code": "gou",
+      "name_zh": "姤",
+      "upper_trigram": "qian",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011111"
+    },
+    {
+      "sequence": 45,
+      "code": "cui",
+      "name_zh": "萃",
+      "upper_trigram": "dui",
+      "lower_trigram": "kun",
+      "bits_bottom_up": "000110"
+    },
+    {
+      "sequence": 46,
+      "code": "sheng",
+      "name_zh": "升",
+      "upper_trigram": "kun",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011000"
+    },
+    {
+      "sequence": 47,
+      "code": "kun_trapped",
+      "name_zh": "困",
+      "upper_trigram": "dui",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010110"
+    },
+    {
+      "sequence": 48,
+      "code": "jing",
+      "name_zh": "井",
+      "upper_trigram": "kan",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011010"
+    },
+    {
+      "sequence": 49,
+      "code": "ge",
+      "name_zh": "革",
+      "upper_trigram": "dui",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101110"
+    },
+    {
+      "sequence": 50,
+      "code": "ding",
+      "name_zh": "鼎",
+      "upper_trigram": "li",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011101"
+    },
+    {
+      "sequence": 51,
+      "code": "zhen_hex",
+      "name_zh": "震",
+      "upper_trigram": "zhen",
+      "lower_trigram": "zhen",
+      "bits_bottom_up": "100100"
+    },
+    {
+      "sequence": 52,
+      "code": "gen_hex",
+      "name_zh": "艮",
+      "upper_trigram": "gen",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001001"
+    },
+    {
+      "sequence": 53,
+      "code": "jian_gradual",
+      "name_zh": "渐",
+      "upper_trigram": "xun",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001011"
+    },
+    {
+      "sequence": 54,
+      "code": "guimei",
+      "name_zh": "归妹",
+      "upper_trigram": "zhen",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110100"
+    },
+    {
+      "sequence": 55,
+      "code": "feng",
+      "name_zh": "丰",
+      "upper_trigram": "zhen",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101100"
+    },
+    {
+      "sequence": 56,
+      "code": "lv_travel",
+      "name_zh": "旅",
+      "upper_trigram": "li",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001101"
+    },
+    {
+      "sequence": 57,
+      "code": "xun_hex",
+      "name_zh": "巽",
+      "upper_trigram": "xun",
+      "lower_trigram": "xun",
+      "bits_bottom_up": "011011"
+    },
+    {
+      "sequence": 58,
+      "code": "dui_hex",
+      "name_zh": "兑",
+      "upper_trigram": "dui",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110110"
+    },
+    {
+      "sequence": 59,
+      "code": "huan",
+      "name_zh": "涣",
+      "upper_trigram": "xun",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010011"
+    },
+    {
+      "sequence": 60,
+      "code": "jie_limit",
+      "name_zh": "节",
+      "upper_trigram": "kan",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110010"
+    },
+    {
+      "sequence": 61,
+      "code": "zhongfu",
+      "name_zh": "中孚",
+      "upper_trigram": "xun",
+      "lower_trigram": "dui",
+      "bits_bottom_up": "110011"
+    },
+    {
+      "sequence": 62,
+      "code": "xiaoguo",
+      "name_zh": "小过",
+      "upper_trigram": "zhen",
+      "lower_trigram": "gen",
+      "bits_bottom_up": "001100"
+    },
+    {
+      "sequence": 63,
+      "code": "jiji",
+      "name_zh": "既济",
+      "upper_trigram": "kan",
+      "lower_trigram": "li",
+      "bits_bottom_up": "101010"
+    },
+    {
+      "sequence": 64,
+      "code": "weiji",
+      "name_zh": "未济",
+      "upper_trigram": "li",
+      "lower_trigram": "kan",
+      "bits_bottom_up": "010101"
+    }
+  ]
+}

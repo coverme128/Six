@@ -1,0 +1,249 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "status": "PRODUCT_SCOPE_LOCKED_NOT_EXPERT_GOLDEN_COMPLETE",
+  "default_enabled": true,
+  "count": 24,
+  "items": [
+    {
+      "code": "MONTH_SAME_BRANCH",
+      "priority": 100,
+      "fact": "line.branch == month.branch",
+      "effect": "strong_support",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "MONTH_CLASH",
+      "priority": 100,
+      "fact": "clash(line.branch, month.branch)",
+      "effect": "month_break_candidate",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "MONTH_GENERATES_LINE",
+      "priority": 90,
+      "fact": "generates(month.element, line.element)",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "LINE_GENERATES_MONTH",
+      "priority": 55,
+      "fact": "generates(line.element, month.element)",
+      "effect": "drain",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "MONTH_CONTROLS_LINE",
+      "priority": 95,
+      "fact": "controls(month.element, line.element)",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "LINE_CONTROLS_MONTH",
+      "priority": 50,
+      "fact": "controls(line.element, month.element)",
+      "effect": "consumption",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "DAY_SAME_BRANCH",
+      "priority": 95,
+      "fact": "line.branch == day.branch",
+      "effect": "day_support",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "DAY_GENERATES_LINE",
+      "priority": 85,
+      "fact": "generates(day.element, line.element)",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "LINE_GENERATES_DAY",
+      "priority": 45,
+      "fact": "generates(line.element, day.element)",
+      "effect": "drain",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "DAY_CONTROLS_LINE",
+      "priority": 90,
+      "fact": "controls(day.element, line.element)",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "LINE_CONTROLS_DAY",
+      "priority": 45,
+      "fact": "controls(line.element, day.element)",
+      "effect": "consumption",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "DAY_CLASH",
+      "priority": 75,
+      "fact": "clash(line.branch, day.branch)",
+      "effect": "day_clash",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "DAY_HARMONY",
+      "priority": 70,
+      "fact": "six_harmony(line.branch, day.branch)",
+      "effect": "day_harmony",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "MONTH_HARMONY",
+      "priority": 65,
+      "fact": "six_harmony(line.branch, month.branch)",
+      "effect": "month_harmony",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "XUN_VOID",
+      "priority": 95,
+      "fact": "line.branch in day_xun_void",
+      "effect": "void_state",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "MOVING_LINE",
+      "priority": 75,
+      "fact": "line.isMoving",
+      "effect": "active",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "CHANGED_GENERATES_ORIGINAL",
+      "priority": 80,
+      "fact": "changed.element generates original.element",
+      "effect": "return_support",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "CHANGED_CONTROLS_ORIGINAL",
+      "priority": 90,
+      "fact": "changed.element controls original.element",
+      "effect": "return_suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "ORIGINAL_GENERATES_CHANGED",
+      "priority": 55,
+      "fact": "original.element generates changed.element",
+      "effect": "outward_drain",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "ORIGINAL_CONTROLS_CHANGED",
+      "priority": 50,
+      "fact": "original.element controls changed.element",
+      "effect": "outward_control",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "ACTIVE_PEER_GENERATES",
+      "priority": 65,
+      "fact": "active_other.element generates line.element",
+      "effect": "active_support_candidate",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "ACTIVE_PEER_CONTROLS",
+      "priority": 70,
+      "fact": "active_other.element controls line.element",
+      "effect": "active_suppression_candidate",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "SEASONAL_SAME_ELEMENT",
+      "priority": 45,
+      "fact": "line.element is season dominant element",
+      "effect": "season_support",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    },
+    {
+      "code": "SEASONAL_GENERATED_ELEMENT",
+      "priority": 35,
+      "fact": "season dominant element generates line.element",
+      "effect": "season_secondary_support",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT_OR_SIGNAL"
+    }
+  ]
+}

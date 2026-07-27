@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "index": 1,
+      "code": "jia",
+      "name_zh": "甲",
+      "element": "wood",
+      "yin_yang": "yang"
+    },
+    {
+      "index": 2,
+      "code": "yi",
+      "name_zh": "乙",
+      "element": "wood",
+      "yin_yang": "yin"
+    },
+    {
+      "index": 3,
+      "code": "bing",
+      "name_zh": "丙",
+      "element": "fire",
+      "yin_yang": "yang"
+    },
+    {
+      "index": 4,
+      "code": "ding",
+      "name_zh": "丁",
+      "element": "fire",
+      "yin_yang": "yin"
+    },
+    {
+      "index": 5,
+      "code": "wu",
+      "name_zh": "戊",
+      "element": "earth",
+      "yin_yang": "yang"
+    },
+    {
+      "index": 6,
+      "code": "ji",
+      "name_zh": "己",
+      "element": "earth",
+      "yin_yang": "yin"
+    },
+    {
+      "index": 7,
+      "code": "geng",
+      "name_zh": "庚",
+      "element": "metal",
+      "yin_yang": "yang"
+    },
+    {
+      "index": 8,
+      "code": "xin",
+      "name_zh": "辛",
+      "element": "metal",
+      "yin_yang": "yin"
+    },
+    {
+      "index": 9,
+      "code": "ren",
+      "name_zh": "壬",
+      "element": "water",
+      "yin_yang": "yang"
+    },
+    {
+      "index": 10,
+      "code": "gui",
+      "name_zh": "癸",
+      "element": "water",
+      "yin_yang": "yin"
+    }
+  ]
+}

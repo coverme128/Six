@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "xun_start": "甲子",
+      "void_branches": [
+        "xu",
+        "hai"
+      ]
+    },
+    {
+      "xun_start": "甲戌",
+      "void_branches": [
+        "shen",
+        "you"
+      ]
+    },
+    {
+      "xun_start": "甲申",
+      "void_branches": [
+        "wu",
+        "wei"
+      ]
+    },
+    {
+      "xun_start": "甲午",
+      "void_branches": [
+        "chen",
+        "si"
+      ]
+    },
+    {
+      "xun_start": "甲辰",
+      "void_branches": [
+        "yin",
+        "mao"
+      ]
+    },
+    {
+      "xun_start": "甲寅",
+      "void_branches": [
+        "zi",
+        "chou"
+      ]
+    }
+  ]
+}

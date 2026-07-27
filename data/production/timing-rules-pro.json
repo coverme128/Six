@@ -1,0 +1,563 @@
+{
+  "version": "1.1.0",
+  "policy": "ranked_candidates_not_certainties",
+  "count": 53,
+  "items": [
+    {
+      "code": "TARGET_BRANCH_VALUE",
+      "trigger": "target branch is central evidence",
+      "candidate": "period matching target branch",
+      "base_rank": 80,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "VOID_FILL",
+      "trigger": "target is void",
+      "candidate": "period when target void branch becomes in-force",
+      "base_rank": 95,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "VOID_CLASH",
+      "trigger": "target is void",
+      "candidate": "period effectively clashing the void branch",
+      "base_rank": 70,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BREAK_EXIT",
+      "trigger": "target is month break",
+      "candidate": "after current solar month boundary",
+      "base_rank": 75,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BREAK_BRANCH_VALUE",
+      "trigger": "target is month break",
+      "candidate": "later period matching target branch",
+      "base_rank": 80,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "BOUND_RELEASE_BY_CLASH",
+      "trigger": "target is strongly bound",
+      "candidate": "period that effectively clashes bound branch",
+      "base_rank": 75,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CLASH_STABILIZED_BY_HARMONY",
+      "trigger": "target is strongly clashed",
+      "candidate": "period that harmonizes target branch",
+      "base_rank": 65,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MOVING_CHANGED_BRANCH_VALUE",
+      "trigger": "decisive moving line exists",
+      "candidate": "period matching changed branch",
+      "base_rank": 78,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MOVING_ORIGINAL_BRANCH_VALUE",
+      "trigger": "decisive moving line exists",
+      "candidate": "period matching original moving branch",
+      "base_rank": 72,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TOMB_RELEASE_BY_CLASH",
+      "trigger": "target is in tomb candidate",
+      "candidate": "period that opens/clashes configured tomb",
+      "base_rank": 70,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_RECEIVES_GENERATION",
+      "trigger": "target weak and needs support",
+      "candidate": "period whose element generates target element",
+      "base_rank": 60,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_RECEIVES_SAME_ELEMENT",
+      "trigger": "target weak and needs peer support",
+      "candidate": "period of same element/branch family",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TABOO_WEAKENS",
+      "trigger": "taboo decisive and strong",
+      "candidate": "period when taboo loses seasonal support",
+      "base_rank": 50,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ORIGIN_BECOMES_ACTIVE",
+      "trigger": "origin spirit decisive but unavailable",
+      "candidate": "period activating origin branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HIDDEN_SPIRIT_EMERGES",
+      "trigger": "target hidden spirit",
+      "candidate": "period when flying obstruction is removed or hidden branch gains force",
+      "base_rank": 65,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "THREE_HARMONY_COMPLETION",
+      "trigger": "two branches of relevant combination present",
+      "candidate": "period supplying missing combination branch",
+      "base_rank": 65,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIX_HARMONY_DATE",
+      "trigger": "target seeks joining/stability",
+      "candidate": "period harmonizing target branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIX_CLASH_DATE",
+      "trigger": "target seeks movement/release",
+      "candidate": "period clashing target branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DAY_LEVEL_ONLY_WHEN_NEAR_TERM",
+      "trigger": "question horizon <= 30 days",
+      "candidate": "prioritize day candidates",
+      "base_rank": 90,
+      "granularity": [
+        "day"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "MONTH_LEVEL_FOR_MEDIUM_HORIZON",
+      "trigger": "question horizon 31-365 days",
+      "candidate": "prioritize month candidates",
+      "base_rank": 85,
+      "granularity": [
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "YEAR_LEVEL_FOR_LONG_HORIZON",
+      "trigger": "question horizon > 365 days",
+      "candidate": "allow year candidates but lower precision",
+      "base_rank": 65,
+      "granularity": [
+        "year"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "NO_TIMING_WITHOUT_TARGET",
+      "trigger": "no selected target/yongshen",
+      "candidate": "do not emit timing forecast",
+      "base_rank": 100,
+      "granularity": [],
+      "status": "VERIFIED_PRODUCT_GUARDRAIL"
+    },
+    {
+      "code": "NO_SINGLE_CERTAIN_DATE",
+      "trigger": "multiple comparable candidates",
+      "candidate": "return ranked window, not certainty",
+      "base_rank": 100,
+      "granularity": [],
+      "status": "VERIFIED_PRODUCT_GUARDRAIL"
+    },
+    {
+      "code": "RANK_DIRECT_TARGET",
+      "trigger": "candidate directly activates target",
+      "candidate": "+20 ranking modifier",
+      "base_rank": 20,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "RANK_MULTIPLE_EVIDENCE",
+      "trigger": "candidate supported by >=2 independent rules",
+      "candidate": "+15 ranking modifier",
+      "base_rank": 15,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "RANK_CONFLICT_PENALTY",
+      "trigger": "candidate simultaneously strengthens decisive taboo",
+      "candidate": "-20 ranking modifier",
+      "base_rank": -20,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "RANK_PRECISION_PENALTY",
+      "trigger": "candidate outside question horizon",
+      "candidate": "-30 ranking modifier",
+      "base_rank": -30,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "RANK_NEARER_PERIOD",
+      "trigger": "equal evidence candidates",
+      "candidate": "nearer period wins tie",
+      "base_rank": 5,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "RANK_CHANGED_LINE_DECISIVE",
+      "trigger": "changed line marked decisive",
+      "candidate": "+10 for changed-branch candidate",
+      "base_rank": 10,
+      "granularity": [],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "DAY_BRANCH_VALUE",
+      "trigger": "target branch decisive and horizon short",
+      "candidate": "day matching target branch",
+      "base_rank": 76,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BRANCH_VALUE",
+      "trigger": "target branch decisive and horizon medium",
+      "candidate": "solar month matching target branch",
+      "base_rank": 74,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "YEAR_BRANCH_VALUE",
+      "trigger": "target branch decisive and horizon long",
+      "candidate": "year matching target branch",
+      "base_rank": 58,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHANGED_LINE_SUPPORTED_PERIOD",
+      "trigger": "changed line decisive and weak",
+      "candidate": "period supporting changed line element",
+      "base_rank": 58,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ORIGINAL_LINE_SUPPORTED_PERIOD",
+      "trigger": "original target weak",
+      "candidate": "period supporting original line element",
+      "base_rank": 58,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TABOO_CLASHED_PERIOD",
+      "trigger": "taboo line blocks target",
+      "candidate": "period effectively clashing taboo branch",
+      "base_rank": 52,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TABOO_VOID_PERIOD",
+      "trigger": "taboo becomes ineffective by configured void condition",
+      "candidate": "candidate window where taboo is weakened",
+      "base_rank": 50,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ORIGIN_BRANCH_VALUE",
+      "trigger": "origin spirit useful",
+      "candidate": "period matching origin branch",
+      "base_rank": 57,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RESPONSE_BRANCH_VALUE",
+      "trigger": "counterparty timing central",
+      "candidate": "period matching response branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_BRANCH_VALUE",
+      "trigger": "subject timing central",
+      "candidate": "period matching world branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CONTRACT_PARENT_BRANCH_VALUE",
+      "trigger": "topic requires document/contract and parent line decisive",
+      "candidate": "period matching decisive parent branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "OFFICER_BRANCH_VALUE",
+      "trigger": "career/legal officer line decisive",
+      "candidate": "period matching decisive officer branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WEALTH_BRANCH_VALUE",
+      "trigger": "wealth line decisive",
+      "candidate": "period matching decisive wealth branch",
+      "base_rank": 55,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHILD_BRANCH_VALUE",
+      "trigger": "child line decisive",
+      "candidate": "period matching decisive child branch",
+      "base_rank": 52,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIBLING_BRANCH_VALUE",
+      "trigger": "competition/sibling line decisive",
+      "candidate": "period matching decisive sibling branch",
+      "base_rank": 50,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "AFTER_NEXT_JIE",
+      "trigger": "month-state is blocking target",
+      "candidate": "first solar-month boundary after cast",
+      "base_rank": 48,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "BEFORE_NEXT_JIE",
+      "trigger": "question asks immediate outcome and current month supports target",
+      "candidate": "window before next solar-month boundary",
+      "base_rank": 48,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TWO_RULE_CONVERGENCE",
+      "trigger": "two independent timing rules point to same branch",
+      "candidate": "merge into one higher-ranked candidate",
+      "base_rank": 18,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "THREE_RULE_CONVERGENCE",
+      "trigger": "three or more independent rules point to same branch",
+      "candidate": "merge into one highest-ranked candidate",
+      "base_rank": 25,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "CONFLICTING_TARGETS_SPLIT",
+      "trigger": "primary and secondary targets point to different times",
+      "candidate": "return separate labeled windows",
+      "base_rank": 0,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "NO_PAST_CANDIDATE",
+      "trigger": "candidate resolves before cast instant",
+      "candidate": "discard candidate",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "MAX_CANDIDATES",
+      "trigger": "more than five candidates remain",
+      "candidate": "return top five plus alternatives internally",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "TIMEZONE_RENDERING",
+      "trigger": "candidate instant is stored in UTC",
+      "candidate": "render in user timezone",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    },
+    {
+      "code": "SOLAR_MONTH_BOUNDARY",
+      "trigger": "month-level candidate",
+      "candidate": "use exact jie boundary rather than Gregorian first day",
+      "base_rank": 100,
+      "granularity": [
+        "day",
+        "month"
+      ],
+      "status": "REVIEWED_PRODUCT_POLICY"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "status": "PRODUCT_SCOPE_LOCKED_NOT_EXPERT_GOLDEN_COMPLETE",
+  "default_enabled": true,
+  "count": 47,
+  "items": [
+    {
+      "code": "YONGSHEN_HOLDS_WORLD",
+      "name_zh": "用神持世",
+      "conditions": [
+        "world_line is selected_yongshen"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "YONGSHEN_AT_RESPONSE",
+      "name_zh": "用神临应",
+      "conditions": [
+        "response_line is selected_yongshen"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_GENERATES_RESPONSE",
+      "name_zh": "世生应",
+      "conditions": [
+        "generates(world.element,response.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "RESPONSE_GENERATES_WORLD",
+      "name_zh": "应生世",
+      "conditions": [
+        "generates(response.element,world.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_CONTROLS_RESPONSE",
+      "name_zh": "世克应",
+      "conditions": [
+        "controls(world.element,response.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "RESPONSE_CONTROLS_WORLD",
+      "name_zh": "应克世",
+      "conditions": [
+        "controls(response.element,world.element)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_RESPONSE_HARMONY",
+      "name_zh": "世应相合",
+      "conditions": [
+        "six_harmony(world.branch,response.branch)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_RESPONSE_CLASH",
+      "name_zh": "世应相冲",
+      "conditions": [
+        "clash(world.branch,response.branch)"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_RESPONSE_SAME_ELEMENT",
+      "name_zh": "世应比和",
+      "conditions": [
+        "world.element == response.element"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "YONGSHEN_VOID",
+      "name_zh": "用神旬空",
+      "conditions": [
+        "selected_yongshen is void"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_MONTH_BREAK",
+      "name_zh": "用神月破候选",
+      "conditions": [
+        "selected_yongshen is month_break"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_MOVING",
+      "name_zh": "用神发动",
+      "conditions": [
+        "selected_yongshen is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_RETURN_GENERATION",
+      "name_zh": "用神动化回头生",
+      "conditions": [
+        "selected_yongshen dynamic has RETURN_GENERATION"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_RETURN_CONTROL",
+      "name_zh": "用神动化回头克",
+      "conditions": [
+        "selected_yongshen dynamic has RETURN_CONTROL"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "ORIGIN_SPIRIT_MOVING",
+      "name_zh": "原神发动",
+      "conditions": [
+        "selected_origin_spirit is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "TABOO_SPIRIT_MOVING",
+      "name_zh": "忌神发动",
+      "conditions": [
+        "selected_taboo_spirit is moving"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "ORIGIN_GENERATES_YONGSHEN",
+      "name_zh": "原神生用神",
+      "conditions": [
+        "origin.element generates yongshen.element"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "TABOO_CONTROLS_YONGSHEN",
+      "name_zh": "忌神克用神",
+      "conditions": [
+        "taboo.element controls yongshen.element"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "SINGLE_MOVING_LINE",
+      "name_zh": "独发",
+      "conditions": [
+        "moving_line_count == 1"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "DOUBLE_MOVING_LINES",
+      "name_zh": "两爻发动",
+      "conditions": [
+        "moving_line_count == 2"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "MULTIPLE_MOVING_LINES",
+      "name_zh": "多爻发动",
+      "conditions": [
+        "moving_line_count >= 3"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "ALL_LINES_STATIC",
+      "name_zh": "六爻安静",
+      "conditions": [
+        "moving_line_count == 0"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "PARENT_HOLDS_WORLD",
+      "name_zh": "父母持世",
+      "conditions": [
+        "world.six_relation == parent"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "SIBLING_HOLDS_WORLD",
+      "name_zh": "兄弟持世",
+      "conditions": [
+        "world.six_relation == sibling"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "CHILD_HOLDS_WORLD",
+      "name_zh": "子孙持世",
+      "conditions": [
+        "world.six_relation == child"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "WEALTH_HOLDS_WORLD",
+      "name_zh": "妻财持世",
+      "conditions": [
+        "world.six_relation == wealth"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "OFFICER_GHOST_HOLDS_WORLD",
+      "name_zh": "官鬼持世",
+      "conditions": [
+        "world.six_relation == officer_ghost"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "ORIGINAL_SIX_CLASH",
+      "name_zh": "六冲卦",
+      "conditions": [
+        "original_hexagram in six_clash_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "CHANGED_SIX_CLASH",
+      "name_zh": "变卦六冲",
+      "conditions": [
+        "changed_hexagram in six_clash_set"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "WORLD_VOID",
+      "name_zh": "世爻旬空",
+      "conditions": [
+        "world is void"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "RESPONSE_VOID",
+      "name_zh": "应爻旬空",
+      "conditions": [
+        "response is void"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "WORLD_MONTH_BREAK",
+      "name_zh": "世爻月破",
+      "conditions": [
+        "world is month_break"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "RESPONSE_MONTH_BREAK",
+      "name_zh": "应爻月破",
+      "conditions": [
+        "response is month_break"
+      ],
+      "scope": "chart",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "YONGSHEN_STRONG_SIGNAL",
+      "name_zh": "用神旺信号",
+      "conditions": [
+        "yongshen has strong evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_WEAK_SIGNAL",
+      "name_zh": "用神弱信号",
+      "conditions": [
+        "yongshen has weak evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_VOID_SIGNAL",
+      "name_zh": "用神空信号",
+      "conditions": [
+        "yongshen has void evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "YONGSHEN_MONTH_BREAK_SIGNAL",
+      "name_zh": "用神破信号",
+      "conditions": [
+        "yongshen has month_break evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "PARENT_SUPPORTED_PRESENT",
+      "name_zh": "父母得生扶信号",
+      "conditions": [
+        "parent line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "PARENT_SUPPRESSED_PRESENT",
+      "name_zh": "父母受制信号",
+      "conditions": [
+        "parent line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "SIBLING_SUPPORTED_PRESENT",
+      "name_zh": "兄弟得生扶信号",
+      "conditions": [
+        "sibling line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "SIBLING_SUPPRESSED_PRESENT",
+      "name_zh": "兄弟受制信号",
+      "conditions": [
+        "sibling line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "CHILD_SUPPORTED_PRESENT",
+      "name_zh": "子孙得生扶信号",
+      "conditions": [
+        "child line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "CHILD_SUPPRESSED_PRESENT",
+      "name_zh": "子孙受制信号",
+      "conditions": [
+        "child line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "WEALTH_SUPPORTED_PRESENT",
+      "name_zh": "妻财得生扶信号",
+      "conditions": [
+        "wealth line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "WEALTH_SUPPRESSED_PRESENT",
+      "name_zh": "妻财受制信号",
+      "conditions": [
+        "wealth line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "OFFICER_SUPPORTED_PRESENT",
+      "name_zh": "官鬼得生扶信号",
+      "conditions": [
+        "officer_ghost line exists and has strong support evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "OFFICER_SUPPRESSED_PRESENT",
+      "name_zh": "官鬼受制信号",
+      "conditions": [
+        "officer_ghost line exists and has strong suppression evidence"
+      ],
+      "scope": "chart",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    }
+  ]
+}

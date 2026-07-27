@@ -1,0 +1,130 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "palace_element": "wood",
+      "line_element": "wood",
+      "expected_relation": "sibling"
+    },
+    {
+      "palace_element": "wood",
+      "line_element": "fire",
+      "expected_relation": "child"
+    },
+    {
+      "palace_element": "wood",
+      "line_element": "earth",
+      "expected_relation": "wealth"
+    },
+    {
+      "palace_element": "wood",
+      "line_element": "metal",
+      "expected_relation": "officer_ghost"
+    },
+    {
+      "palace_element": "wood",
+      "line_element": "water",
+      "expected_relation": "parent"
+    },
+    {
+      "palace_element": "fire",
+      "line_element": "wood",
+      "expected_relation": "parent"
+    },
+    {
+      "palace_element": "fire",
+      "line_element": "fire",
+      "expected_relation": "sibling"
+    },
+    {
+      "palace_element": "fire",
+      "line_element": "earth",
+      "expected_relation": "child"
+    },
+    {
+      "palace_element": "fire",
+      "line_element": "metal",
+      "expected_relation": "wealth"
+    },
+    {
+      "palace_element": "fire",
+      "line_element": "water",
+      "expected_relation": "officer_ghost"
+    },
+    {
+      "palace_element": "earth",
+      "line_element": "wood",
+      "expected_relation": "officer_ghost"
+    },
+    {
+      "palace_element": "earth",
+      "line_element": "fire",
+      "expected_relation": "parent"
+    },
+    {
+      "palace_element": "earth",
+      "line_element": "earth",
+      "expected_relation": "sibling"
+    },
+    {
+      "palace_element": "earth",
+      "line_element": "metal",
+      "expected_relation": "child"
+    },
+    {
+      "palace_element": "earth",
+      "line_element": "water",
+      "expected_relation": "wealth"
+    },
+    {
+      "palace_element": "metal",
+      "line_element": "wood",
+      "expected_relation": "wealth"
+    },
+    {
+      "palace_element": "metal",
+      "line_element": "fire",
+      "expected_relation": "officer_ghost"
+    },
+    {
+      "palace_element": "metal",
+      "line_element": "earth",
+      "expected_relation": "parent"
+    },
+    {
+      "palace_element": "metal",
+      "line_element": "metal",
+      "expected_relation": "sibling"
+    },
+    {
+      "palace_element": "metal",
+      "line_element": "water",
+      "expected_relation": "child"
+    },
+    {
+      "palace_element": "water",
+      "line_element": "wood",
+      "expected_relation": "child"
+    },
+    {
+      "palace_element": "water",
+      "line_element": "fire",
+      "expected_relation": "wealth"
+    },
+    {
+      "palace_element": "water",
+      "line_element": "earth",
+      "expected_relation": "officer_ghost"
+    },
+    {
+      "palace_element": "water",
+      "line_element": "metal",
+      "expected_relation": "parent"
+    },
+    {
+      "palace_element": "water",
+      "line_element": "water",
+      "expected_relation": "sibling"
+    }
+  ]
+}

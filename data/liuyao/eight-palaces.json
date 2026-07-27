@@ -1,0 +1,518 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "hexagram_code": "qian",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "gou",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "dun",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "pi",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "guan",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "bo",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "jin",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "dayou",
+      "palace": "qian",
+      "palace_element": "metal",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "dui_hex",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "kun_trapped",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "cui",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "xian",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "jian",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "qian_hex",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "xiaoguo",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "guimei",
+      "palace": "dui",
+      "palace_element": "metal",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "li_hex",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "lv_travel",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "ding",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "weiji",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "meng",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "huan",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "song",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "tongren",
+      "palace": "li",
+      "palace_element": "fire",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "zhen_hex",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "yu",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "jie",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "heng",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "sheng",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "jing",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "daguo",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "sui",
+      "palace": "zhen",
+      "palace_element": "wood",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "xun_hex",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "xiaoxu",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "jiaren",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "yi_gain",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "wuwang",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "shike",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "yi_hex",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "gu",
+      "palace": "xun",
+      "palace_element": "wood",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "kan_hex",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "jie_limit",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "zhun",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "jiji",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "ge",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "feng",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "mingyi",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "shi",
+      "palace": "kan",
+      "palace_element": "water",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "gen_hex",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "bi_hex",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "daxu",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "sun",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "kui",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "lv",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "zhongfu",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "jian_gradual",
+      "palace": "gen",
+      "palace_element": "earth",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "kun",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "pure",
+      "world_line": 6,
+      "response_line": 3
+    },
+    {
+      "hexagram_code": "fu",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "first",
+      "world_line": 1,
+      "response_line": 4
+    },
+    {
+      "hexagram_code": "lin",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "second",
+      "world_line": 2,
+      "response_line": 5
+    },
+    {
+      "hexagram_code": "tai",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "third",
+      "world_line": 3,
+      "response_line": 6
+    },
+    {
+      "hexagram_code": "dazhuang",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "fourth",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "guai",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "fifth",
+      "world_line": 5,
+      "response_line": 2
+    },
+    {
+      "hexagram_code": "xu",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "wandering_soul",
+      "world_line": 4,
+      "response_line": 1
+    },
+    {
+      "hexagram_code": "bi",
+      "palace": "kun",
+      "palace_element": "earth",
+      "generation": "returning_soul",
+      "world_line": 3,
+      "response_line": 6
+    }
+  ]
+}

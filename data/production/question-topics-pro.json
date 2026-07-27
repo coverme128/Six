@@ -1,0 +1,696 @@
+{
+  "version": "1.1.0",
+  "count": 115,
+  "items": [
+    {
+      "topic": "career",
+      "subtype": "job_search",
+      "label_zh": "job_search",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "interview",
+      "label_zh": "interview",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "offer",
+      "label_zh": "offer",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "promotion",
+      "label_zh": "promotion",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "job_change",
+      "label_zh": "job_change",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "resignation",
+      "label_zh": "resignation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "work_stability",
+      "label_zh": "work_stability",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "manager_relation",
+      "label_zh": "manager_relation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "colleague_relation",
+      "label_zh": "colleague_relation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "performance_review",
+      "label_zh": "performance_review",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "career_direction",
+      "label_zh": "career_direction",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "income",
+      "label_zh": "income",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "business_profit",
+      "label_zh": "business_profit",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "payment_collection",
+      "label_zh": "payment_collection",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "salary_raise",
+      "label_zh": "salary_raise",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "investment_outcome",
+      "label_zh": "investment_outcome",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "cashflow",
+      "label_zh": "cashflow",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "debt_repayment",
+      "label_zh": "debt_repayment",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "refund",
+      "label_zh": "refund",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "price_negotiation",
+      "label_zh": "price_negotiation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "side_income",
+      "label_zh": "side_income",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "partnership",
+      "label_zh": "partnership",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "customer_acquisition",
+      "label_zh": "customer_acquisition",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "contract_signing",
+      "label_zh": "contract_signing",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "project_success",
+      "label_zh": "project_success",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "project_delivery",
+      "label_zh": "project_delivery",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "competition",
+      "label_zh": "competition",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "supplier",
+      "label_zh": "supplier",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "market_launch",
+      "label_zh": "market_launch",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "business_expansion",
+      "label_zh": "business_expansion",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "merger_acquisition",
+      "label_zh": "merger_acquisition",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "dating",
+      "label_zh": "dating",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "marriage",
+      "label_zh": "marriage",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "reconciliation",
+      "label_zh": "reconciliation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "counterparty_attitude",
+      "label_zh": "counterparty_attitude",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "relationship_stability",
+      "label_zh": "relationship_stability",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "breakup",
+      "label_zh": "breakup",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "third_party",
+      "label_zh": "third_party",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "family_approval",
+      "label_zh": "family_approval",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "exam",
+      "label_zh": "exam",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "admission",
+      "label_zh": "admission",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "application",
+      "label_zh": "application",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "certificate",
+      "label_zh": "certificate",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "study_progress",
+      "label_zh": "study_progress",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "teacher_relation",
+      "label_zh": "teacher_relation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "research",
+      "label_zh": "research",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "buy_house",
+      "label_zh": "buy_house",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "sell_house",
+      "label_zh": "sell_house",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "rent_house",
+      "label_zh": "rent_house",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "move_house",
+      "label_zh": "move_house",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "renovation",
+      "label_zh": "renovation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "land",
+      "label_zh": "land",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "property_document",
+      "label_zh": "property_document",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "lawsuit",
+      "label_zh": "lawsuit",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "dispute",
+      "label_zh": "dispute",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "contract_dispute",
+      "label_zh": "contract_dispute",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "complaint",
+      "label_zh": "complaint",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "regulatory",
+      "label_zh": "regulatory",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "health",
+      "subtype": "self_health",
+      "label_zh": "self_health",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "health",
+      "subtype": "family_health",
+      "label_zh": "family_health",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "health",
+      "subtype": "recovery",
+      "label_zh": "recovery",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "health",
+      "subtype": "treatment",
+      "label_zh": "treatment",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "health",
+      "subtype": "medical_check",
+      "label_zh": "medical_check",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "parents",
+      "label_zh": "parents",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "children",
+      "label_zh": "children",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "siblings",
+      "label_zh": "siblings",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "family_conflict",
+      "label_zh": "family_conflict",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "pregnancy",
+      "label_zh": "pregnancy",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "childbirth",
+      "label_zh": "childbirth",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "purchase",
+      "label_zh": "purchase",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "sale",
+      "label_zh": "sale",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "delivery",
+      "label_zh": "delivery",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "quality",
+      "label_zh": "quality",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "lost_item",
+      "label_zh": "lost_item",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "return_goods",
+      "label_zh": "return_goods",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "trip",
+      "label_zh": "trip",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "visa",
+      "label_zh": "visa",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "relocation",
+      "label_zh": "relocation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "flight_train",
+      "label_zh": "flight_train",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "business_trip",
+      "label_zh": "business_trip",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "people",
+      "subtype": "find_person",
+      "label_zh": "find_person",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "people",
+      "subtype": "contact_person",
+      "label_zh": "contact_person",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "people",
+      "subtype": "friend",
+      "label_zh": "friend",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "people",
+      "subtype": "enemy_competitor",
+      "label_zh": "enemy_competitor",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "weather",
+      "subtype": "weather_general",
+      "label_zh": "weather_general",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "weather",
+      "subtype": "rain",
+      "label_zh": "rain",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "weather",
+      "subtype": "event_weather",
+      "label_zh": "event_weather",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "go_or_stay",
+      "label_zh": "go_or_stay",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "choose_a_b",
+      "label_zh": "choose_a_b",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "timing_decision",
+      "label_zh": "timing_decision",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "risk_assessment",
+      "label_zh": "risk_assessment",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "remote_work",
+      "label_zh": "remote_work",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "probation",
+      "label_zh": "probation",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "career",
+      "subtype": "layoff_risk",
+      "label_zh": "layoff_risk",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "bonus",
+      "label_zh": "bonus",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "commission",
+      "label_zh": "commission",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "loan_approval",
+      "label_zh": "loan_approval",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "fundraising",
+      "label_zh": "fundraising",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "product_market_fit",
+      "label_zh": "product_market_fit",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "advertising_campaign",
+      "label_zh": "advertising_campaign",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "business",
+      "subtype": "cross_border_trade",
+      "label_zh": "cross_border_trade",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "long_distance",
+      "label_zh": "long_distance",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "engagement",
+      "label_zh": "engagement",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "scholarship",
+      "label_zh": "scholarship",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study",
+      "subtype": "study_abroad",
+      "label_zh": "study_abroad",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "mortgage",
+      "label_zh": "mortgage",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "property",
+      "subtype": "property_investment",
+      "label_zh": "property_investment",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "legal",
+      "subtype": "settlement",
+      "label_zh": "settlement",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "inheritance",
+      "label_zh": "inheritance",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "goods",
+      "subtype": "customs_clearance",
+      "label_zh": "customs_clearance",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "travel",
+      "subtype": "immigration",
+      "label_zh": "immigration",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "launch_or_delay",
+      "label_zh": "launch_or_delay",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "decision",
+      "subtype": "hire_or_not",
+      "label_zh": "hire_or_not",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "people",
+      "subtype": "new_partner_background",
+      "label_zh": "new_partner_background",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "weather",
+      "subtype": "outdoor_event",
+      "label_zh": "outdoor_event",
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    }
+  ]
+}

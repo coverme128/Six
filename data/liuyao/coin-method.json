@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "method_code": "LIUYAO_THREE_COIN_V1",
+  "coin_side_values": {
+    "text_obverse": 2,
+    "back_reverse": 3
+  },
+  "rounds": 6,
+  "coins_per_round": 3,
+  "line_order": "bottom_up",
+  "sum_mapping": {
+    "6": {
+      "name_zh": "老阴",
+      "original_bit": 0,
+      "changed_bit": 1,
+      "moving": true
+    },
+    "7": {
+      "name_zh": "少阳",
+      "original_bit": 1,
+      "changed_bit": 1,
+      "moving": false
+    },
+    "8": {
+      "name_zh": "少阴",
+      "original_bit": 0,
+      "changed_bit": 0,
+      "moving": false
+    },
+    "9": {
+      "name_zh": "老阳",
+      "original_bit": 1,
+      "changed_bit": 0,
+      "moving": true
+    }
+  },
+  "probabilities": {
+    "6": "1/8",
+    "7": "3/8",
+    "8": "3/8",
+    "9": "1/8"
+  },
+  "requirements": [
+    "生产随机模式使用密码学安全随机源",
+    "保存每次三枚硬币的原始面值以便复现",
+    "测试模式允许显式 seed，但不得与生产随机混用"
+  ]
+}

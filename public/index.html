@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIX CORE_V1</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1f2933;
+        --muted: #65758b;
+        --line: #d6dde8;
+        --panel: #ffffff;
+        --soft: #f4f7fb;
+        --accent: #0f766e;
+        --warn: #a15c07;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--soft);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0;
+      }
+
+      header {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: clamp(30px, 6vw, 48px);
+        line-height: 1.08;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      button {
+        min-height: 40px;
+        border: 0;
+        border-radius: 6px;
+        padding: 0 14px;
+        background: var(--accent);
+        color: #ffffff;
+        font: inherit;
+        font-weight: 650;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: wait;
+        opacity: 0.65;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .panel,
+      .metric,
+      .output {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .panel {
+        padding: 18px;
+      }
+
+      .metric {
+        min-height: 92px;
+        padding: 14px;
+      }
+
+      .metric b {
+        display: block;
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .output {
+        min-height: 180px;
+        overflow: auto;
+        padding: 14px;
+        white-space: pre-wrap;
+        font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0 10px;
+        background: #ffffff;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status.ok {
+        border-color: #86c7bd;
+        color: var(--accent);
+      }
+
+      .status.warn {
+        border-color: #e7c48b;
+        color: var(--warn);
+      }
+
+      @media (max-width: 760px) {
+        main {
+          width: min(100% - 20px, 1120px);
+          padding: 22px 0;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span id="status" class="status">loading</span>
+        <h1>SIX CORE_V1</h1>
+        <p>LIUYAO_CORE_V1 生产白名单、本地 API 与报告证据预算验收入口。</p>
+      </header>
+
+      <section class="grid" aria-label="CORE_V1 counts">
+        <div class="metric">
+          <b id="total">-</b>
+          <span>生产单元</span>
+        </div>
+        <div class="metric">
+          <b id="profile">-</b>
+          <span>默认 profile</span>
+        </div>
+        <div class="metric">
+          <b id="knowledge">-</b>
+          <span>知识节点</span>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <button id="reload" type="button">刷新元数据</button>
+        <button id="smoke" type="button">运行六爻烟测</button>
+      </div>
+
+      <section class="panel">
+        <h2>输出</h2>
+        <pre id="output" class="output">等待 API 响应...</pre>
+      </section>
+    </main>
+
+    <script>
+      const statusEl = document.querySelector("#status");
+      const outputEl = document.querySelector("#output");
+      const totalEl = document.querySelector("#total");
+      const profileEl = document.querySelector("#profile");
+      const knowledgeEl = document.querySelector("#knowledge");
+      const reloadButton = document.querySelector("#reload");
+      const smokeButton = document.querySelector("#smoke");
+
+      function setStatus(text, type = "") {
+        statusEl.textContent = text;
+        statusEl.className = `status ${type}`.trim();
+      }
+
+      function writeOutput(value) {
+        outputEl.textContent = typeof value === "string" ? value : JSON.stringify(value, null, 2);
+      }
+
+      async function requestJson(path, options) {
+        const response = await fetch(path, options);
+        const body = await response.json();
+        if (!response.ok) {
+          throw body;
+        }
+        return body;
+      }
+
+      async function loadMetadata() {
+        reloadButton.disabled = true;
+        try {
+          const metadata = await requestJson("/api/metadata");
+          totalEl.textContent = metadata.counts.total;
+          profileEl.textContent = metadata.profile;
+          knowledgeEl.textContent = metadata.knowledge.nodes ?? 0;
+          setStatus("CORE_V1 ready", "ok");
+          writeOutput(metadata);
+        } catch (error) {
+          setStatus("API error", "warn");
+          writeOutput(error);
+        } finally {
+          reloadButton.disabled = false;
+        }
+      }
+
+      async function smokeTest() {
+        smokeButton.disabled = true;
+        try {
+          const result = await requestJson("/api/liuyao/chart", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              question: "本地 CORE_V1 烟测",
+              topic: "career",
+              subtype: "job_search",
+              values: [7, 8, 9, 7, 8, 6],
+              calendar: { timezone: "Asia/Shanghai" }
+            })
+          });
+          setStatus("smoke passed", "ok");
+          writeOutput({
+            profile: result.chart.generationEvidence.ruleProfile,
+            findings: result.findings.length,
+            evidenceBudget: result.report.evidenceBudget,
+            timingCandidates: result.timingCandidates.length,
+            engineVersions: result.engineVersions
+          });
+        } catch (error) {
+          setStatus("smoke failed", "warn");
+          writeOutput(error);
+        } finally {
+          smokeButton.disabled = false;
+        }
+      }
+
+      reloadButton.addEventListener("click", loadMetadata);
+      smokeButton.addEventListener("click", smokeTest);
+      loadMetadata();
+    </script>
+  </body>
+</html>

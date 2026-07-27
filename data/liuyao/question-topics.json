@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "status": "REVIEWED_PRODUCT_TAXONOMY",
+  "items": [
+    {
+      "code": "career",
+      "name_zh": "事业工作",
+      "subtypes": [
+        "job_search",
+        "promotion",
+        "job_change",
+        "work_stability",
+        "project_role"
+      ]
+    },
+    {
+      "code": "wealth",
+      "name_zh": "财运经营",
+      "subtypes": [
+        "income",
+        "business_profit",
+        "sales",
+        "payment_collection",
+        "investment_question"
+      ]
+    },
+    {
+      "code": "relationship",
+      "name_zh": "感情婚姻",
+      "subtypes": [
+        "dating",
+        "relationship_status",
+        "marriage",
+        "reconciliation",
+        "counterparty_attitude"
+      ]
+    },
+    {
+      "code": "study_exam",
+      "name_zh": "学习考试",
+      "subtypes": [
+        "exam_result",
+        "admission",
+        "certificate",
+        "study_progress"
+      ]
+    },
+    {
+      "code": "contract_document",
+      "name_zh": "合同文书",
+      "subtypes": [
+        "contract_signing",
+        "approval",
+        "license",
+        "document_result"
+      ]
+    },
+    {
+      "code": "property",
+      "name_zh": "房产住所",
+      "subtypes": [
+        "buy_house",
+        "sell_house",
+        "rent",
+        "move",
+        "property_issue"
+      ]
+    },
+    {
+      "code": "health_culture",
+      "name_zh": "健康传统文化解读",
+      "subtypes": [
+        "wellbeing_trend",
+        "recovery_symbolism"
+      ]
+    },
+    {
+      "code": "legal_dispute",
+      "name_zh": "争议诉讼",
+      "subtypes": [
+        "lawsuit",
+        "complaint",
+        "negotiation_dispute"
+      ]
+    },
+    {
+      "code": "travel",
+      "name_zh": "出行迁移",
+      "subtypes": [
+        "trip",
+        "relocation",
+        "return_time"
+      ]
+    },
+    {
+      "code": "lost_item",
+      "name_zh": "失物寻物",
+      "subtypes": [
+        "valuable",
+        "document",
+        "general_item"
+      ]
+    },
+    {
+      "code": "family",
+      "name_zh": "家人与六亲",
+      "subtypes": [
+        "parent",
+        "child",
+        "sibling",
+        "spouse"
+      ]
+    },
+    {
+      "code": "other",
+      "name_zh": "其他",
+      "subtypes": [
+        "general_question"
+      ]
+    }
+  ]
+}

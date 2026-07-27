@@ -1,0 +1,1507 @@
+{
+  "version": "1.1.0",
+  "default_policy": "system_recommends_user_can_confirm_or_edit",
+  "count": 115,
+  "items": [
+    {
+      "topic": "career",
+      "subtype": "job_search",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "interview",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "offer",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "promotion",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "job_change",
+      "primary": [
+        "officer_ghost",
+        "world"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "resignation",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "work_stability",
+      "primary": [
+        "officer_ghost",
+        "world"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "manager_relation",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "colleague_relation",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "performance_review",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "career_direction",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "income",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "business_profit",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "payment_collection",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "salary_raise",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "investment_outcome",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "world",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "cashflow",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "sibling"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "debt_repayment",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "refund",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "price_negotiation",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "side_income",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "partnership",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world",
+        "wealth",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "customer_acquisition",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "contract_signing",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "response",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "project_success",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "parent",
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "project_delivery",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "child",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "competition",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world",
+        "wealth"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "supplier",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "parent",
+        "wealth"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "market_launch",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "wealth",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "business_expansion",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "world",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "merger_acquisition",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "wealth",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "dating",
+      "primary": [],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": true,
+      "conditional": {
+        "male_query": "wealth",
+        "female_query": "officer_ghost",
+        "unspecified": "world_response"
+      }
+    },
+    {
+      "topic": "relationship",
+      "subtype": "marriage",
+      "primary": [],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": true,
+      "conditional": {
+        "male_query": "wealth",
+        "female_query": "officer_ghost",
+        "unspecified": "world_response"
+      }
+    },
+    {
+      "topic": "relationship",
+      "subtype": "reconciliation",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "counterparty_attitude",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "relationship_stability",
+      "primary": [
+        "world",
+        "response"
+      ],
+      "secondary": [],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "breakup",
+      "primary": [
+        "world",
+        "response"
+      ],
+      "secondary": [],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "third_party",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "family_approval",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "exam",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "admission",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "application",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "response",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "certificate",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "study_progress",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "teacher_relation",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "response",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "research",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "child",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "buy_house",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "sell_house",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "rent_house",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "move_house",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "renovation",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "child",
+        "wealth"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "land",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "property_document",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "legal",
+      "subtype": "lawsuit",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代法律意见。"
+    },
+    {
+      "topic": "legal",
+      "subtype": "dispute",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代法律意见。"
+    },
+    {
+      "topic": "legal",
+      "subtype": "contract_dispute",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代法律意见。"
+    },
+    {
+      "topic": "legal",
+      "subtype": "complaint",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代法律意见。"
+    },
+    {
+      "topic": "legal",
+      "subtype": "regulatory",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代法律意见。"
+    },
+    {
+      "topic": "health",
+      "subtype": "self_health",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代医疗诊断或治疗。"
+    },
+    {
+      "topic": "health",
+      "subtype": "family_health",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代医疗诊断或治疗。"
+    },
+    {
+      "topic": "health",
+      "subtype": "recovery",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "child",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代医疗诊断或治疗。"
+    },
+    {
+      "topic": "health",
+      "subtype": "treatment",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "world",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代医疗诊断或治疗。"
+    },
+    {
+      "topic": "health",
+      "subtype": "medical_check",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false,
+      "safety_note": "仅作传统文化解释，不替代医疗诊断或治疗。"
+    },
+    {
+      "topic": "family",
+      "subtype": "parents",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "children",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "siblings",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "family_conflict",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "parent",
+        "sibling",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "pregnancy",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "world",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "childbirth",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "world",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "purchase",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "sale",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "delivery",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "quality",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "lost_item",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "return_goods",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "trip",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "visa",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "relocation",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "flight_train",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "business_trip",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "people",
+      "subtype": "find_person",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "people",
+      "subtype": "contact_person",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "people",
+      "subtype": "friend",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "people",
+      "subtype": "enemy_competitor",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "weather",
+      "subtype": "weather_general",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "weather",
+      "subtype": "rain",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "weather",
+      "subtype": "event_weather",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "go_or_stay",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "choose_a_b",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "timing_decision",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "risk_assessment",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "child"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "remote_work",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "probation",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "career",
+      "subtype": "layoff_risk",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "bonus",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "commission",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "wealth",
+      "subtype": "loan_approval",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "fundraising",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "product_market_fit",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "wealth",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "advertising_campaign",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "wealth",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "business",
+      "subtype": "cross_border_trade",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "parent",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "long_distance",
+      "primary": [
+        "world",
+        "response"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "relationship",
+      "subtype": "engagement",
+      "primary": [
+        "world",
+        "response"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "scholarship",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "study",
+      "subtype": "study_abroad",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "mortgage",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "property",
+      "subtype": "property_investment",
+      "primary": [
+        "parent",
+        "wealth"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "legal",
+      "subtype": "settlement",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "world",
+        "response",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "family",
+      "subtype": "inheritance",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "sibling"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "goods",
+      "subtype": "customs_clearance",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "travel",
+      "subtype": "immigration",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "launch_or_delay",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "child",
+        "parent"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "decision",
+      "subtype": "hire_or_not",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world",
+        "officer_ghost"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "people",
+      "subtype": "new_partner_background",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "parent",
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    },
+    {
+      "topic": "weather",
+      "subtype": "outdoor_event",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "requires_user_confirmation": false
+    }
+  ]
+}

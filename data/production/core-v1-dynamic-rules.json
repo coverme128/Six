@@ -1,0 +1,135 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "status": "PRODUCT_SCOPE_LOCKED_NOT_EXPERT_GOLDEN_COMPLETE",
+  "default_enabled": true,
+  "count": 14,
+  "items": [
+    {
+      "code": "RETURN_GENERATION",
+      "condition": "changed.element generates original.element",
+      "meaning_zh": "回头生",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "RETURN_CONTROL",
+      "condition": "changed.element controls original.element",
+      "meaning_zh": "回头克",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "ORIGINAL_GENERATES_CHANGED",
+      "condition": "original.element generates changed.element",
+      "meaning_zh": "化泄/生出候选",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "ORIGINAL_CONTROLS_CHANGED",
+      "condition": "original.element controls changed.element",
+      "meaning_zh": "化克出候选",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "TRANSFORM_SAME_ELEMENT",
+      "condition": "changed.element == original.element",
+      "meaning_zh": "化比和",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "TRANSFORM_TO_VOID",
+      "condition": "changed.branch in day_xun_void",
+      "meaning_zh": "化空",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "TRANSFORM_TO_MONTH_BREAK",
+      "condition": "clash(changed.branch, month.branch)",
+      "meaning_zh": "化破",
+      "status": "VERIFIED_TRADITIONAL_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "FACT"
+    },
+    {
+      "code": "TRANSFORM_TO_DAY_CLASH",
+      "condition": "clash(changed.branch, day.branch)",
+      "meaning_zh": "化日冲",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "TRANSFORM_TO_DAY_HARMONY",
+      "condition": "six_harmony(changed.branch, day.branch)",
+      "meaning_zh": "化日合",
+      "status": "REVIEWED_RULE_BASE",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_WEALTH",
+      "condition": "changed.six_relation == wealth",
+      "meaning_zh": "化财",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_OFFICER",
+      "condition": "changed.six_relation == officer_ghost",
+      "meaning_zh": "化官",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_PARENT",
+      "condition": "changed.six_relation == parent",
+      "meaning_zh": "化父",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_CHILD",
+      "condition": "changed.six_relation == child",
+      "meaning_zh": "化子",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    },
+    {
+      "code": "RELATION_CHANGES_TO_SIBLING",
+      "condition": "changed.six_relation == sibling",
+      "meaning_zh": "化兄",
+      "status": "REVIEWED_PRODUCT_SIGNAL",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true,
+      "output_role": "SIGNAL"
+    }
+  ]
+}

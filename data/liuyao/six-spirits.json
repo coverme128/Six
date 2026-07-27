@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "sequence": [
+    "qinglong",
+    "zhuque",
+    "gouchen",
+    "tengshe",
+    "baihu",
+    "xuanwu"
+  ],
+  "day_stem_start": {
+    "jia": "qinglong",
+    "yi": "qinglong",
+    "bing": "zhuque",
+    "ding": "zhuque",
+    "wu": "gouchen",
+    "ji": "tengshe",
+    "geng": "baihu",
+    "xin": "baihu",
+    "ren": "xuanwu",
+    "gui": "xuanwu"
+  },
+  "items": [
+    {
+      "code": "qinglong",
+      "name_zh": "青龙",
+      "state_expression": {
+        "tone": [
+          "喜庆",
+          "顺畅",
+          "体面"
+        ],
+        "visibility": "open_positive",
+        "pace": "smooth",
+        "communication": "friendly"
+      },
+      "domains": [
+        "喜事",
+        "礼遇",
+        "享受",
+        "资源"
+      ],
+      "warning": "不独立决定吉凶，需结合六亲、旺衰和动静。"
+    },
+    {
+      "code": "zhuque",
+      "name_zh": "朱雀",
+      "state_expression": {
+        "tone": [
+          "显性",
+          "言语驱动"
+        ],
+        "visibility": "public",
+        "pace": "fast_message",
+        "communication": "high"
+      },
+      "domains": [
+        "消息",
+        "文书",
+        "表达",
+        "争辩",
+        "传播"
+      ],
+      "warning": "吉凶取决于所临六亲与关系，不能等同于口舌凶。"
+    },
+    {
+      "code": "gouchen",
+      "name_zh": "勾陈",
+      "state_expression": {
+        "tone": [
+          "滞重",
+          "牵连",
+          "旧事"
+        ],
+        "visibility": "material",
+        "pace": "slow",
+        "communication": "sticky"
+      },
+      "domains": [
+        "土地",
+        "房产",
+        "拖延",
+        "纠缠",
+        "存量问题"
+      ],
+      "warning": "表示状态与领域倾向，不自动判定失败。"
+    },
+    {
+      "code": "tengshe",
+      "name_zh": "螣蛇",
+      "state_expression": {
+        "tone": [
+          "反复",
+          "疑虑",
+          "虚实难辨"
+        ],
+        "visibility": "ambiguous",
+        "pace": "unstable",
+        "communication": "indirect"
+      },
+      "domains": [
+        "惊疑",
+        "想象",
+        "反复",
+        "复杂信息"
+      ],
+      "warning": "需区分真实风险与主观不确定。"
+    },
+    {
+      "code": "baihu",
+      "name_zh": "白虎",
+      "state_expression": {
+        "tone": [
+          "强硬",
+          "压力",
+          "损伤风险"
+        ],
+        "visibility": "direct",
+        "pace": "forceful",
+        "communication": "confrontational"
+      },
+      "domains": [
+        "冲突",
+        "伤病象",
+        "强制",
+        "损耗"
+      ],
+      "warning": "健康等高风险场景只作传统文化解释，不构成诊断。"
+    },
+    {
+      "code": "xuanwu",
+      "name_zh": "玄武",
+      "state_expression": {
+        "tone": [
+          "隐蔽",
+          "私下",
+          "信息不全"
+        ],
+        "visibility": "hidden",
+        "pace": "covert",
+        "communication": "low_transparency"
+      },
+      "domains": [
+        "隐情",
+        "秘密",
+        "幕后",
+        "欺瞒象",
+        "流动"
+      ],
+      "warning": "不得直接据此指控具体个人欺诈或不忠。"
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "qian_pure_najia",
+      "hexagram_code": "qian",
+      "palace": "qian",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "jia",
+          "branch": "zi",
+          "element": "water",
+          "sixRelation": "child"
+        },
+        {
+          "position": 2,
+          "stem": "jia",
+          "branch": "yin",
+          "element": "wood",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 3,
+          "stem": "jia",
+          "branch": "chen",
+          "element": "earth",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 4,
+          "stem": "ren",
+          "branch": "wu",
+          "element": "fire",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 5,
+          "stem": "ren",
+          "branch": "shen",
+          "element": "metal",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 6,
+          "stem": "ren",
+          "branch": "xu",
+          "element": "earth",
+          "sixRelation": "parent"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "dui_pure_najia",
+      "hexagram_code": "dui_hex",
+      "palace": "dui",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "ding",
+          "branch": "si",
+          "element": "fire",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 2,
+          "stem": "ding",
+          "branch": "mao",
+          "element": "wood",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 3,
+          "stem": "ding",
+          "branch": "chou",
+          "element": "earth",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 4,
+          "stem": "ding",
+          "branch": "hai",
+          "element": "water",
+          "sixRelation": "child"
+        },
+        {
+          "position": 5,
+          "stem": "ding",
+          "branch": "you",
+          "element": "metal",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 6,
+          "stem": "ding",
+          "branch": "wei",
+          "element": "earth",
+          "sixRelation": "parent"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "li_pure_najia",
+      "hexagram_code": "li_hex",
+      "palace": "li",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "ji",
+          "branch": "mao",
+          "element": "wood",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 2,
+          "stem": "ji",
+          "branch": "chou",
+          "element": "earth",
+          "sixRelation": "child"
+        },
+        {
+          "position": 3,
+          "stem": "ji",
+          "branch": "hai",
+          "element": "water",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 4,
+          "stem": "ji",
+          "branch": "you",
+          "element": "metal",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 5,
+          "stem": "ji",
+          "branch": "wei",
+          "element": "earth",
+          "sixRelation": "child"
+        },
+        {
+          "position": 6,
+          "stem": "ji",
+          "branch": "si",
+          "element": "fire",
+          "sixRelation": "sibling"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "zhen_pure_najia",
+      "hexagram_code": "zhen_hex",
+      "palace": "zhen",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "geng",
+          "branch": "zi",
+          "element": "water",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 2,
+          "stem": "geng",
+          "branch": "yin",
+          "element": "wood",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 3,
+          "stem": "geng",
+          "branch": "chen",
+          "element": "earth",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 4,
+          "stem": "geng",
+          "branch": "wu",
+          "element": "fire",
+          "sixRelation": "child"
+        },
+        {
+          "position": 5,
+          "stem": "geng",
+          "branch": "shen",
+          "element": "metal",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 6,
+          "stem": "geng",
+          "branch": "xu",
+          "element": "earth",
+          "sixRelation": "wealth"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "xun_pure_najia",
+      "hexagram_code": "xun_hex",
+      "palace": "xun",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "xin",
+          "branch": "chou",
+          "element": "earth",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 2,
+          "stem": "xin",
+          "branch": "hai",
+          "element": "water",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 3,
+          "stem": "xin",
+          "branch": "you",
+          "element": "metal",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 4,
+          "stem": "xin",
+          "branch": "wei",
+          "element": "earth",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 5,
+          "stem": "xin",
+          "branch": "si",
+          "element": "fire",
+          "sixRelation": "child"
+        },
+        {
+          "position": 6,
+          "stem": "xin",
+          "branch": "mao",
+          "element": "wood",
+          "sixRelation": "sibling"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "kan_pure_najia",
+      "hexagram_code": "kan_hex",
+      "palace": "kan",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "wu",
+          "branch": "yin",
+          "element": "wood",
+          "sixRelation": "child"
+        },
+        {
+          "position": 2,
+          "stem": "wu",
+          "branch": "chen",
+          "element": "earth",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 3,
+          "stem": "wu",
+          "branch": "wu",
+          "element": "fire",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 4,
+          "stem": "wu",
+          "branch": "shen",
+          "element": "metal",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 5,
+          "stem": "wu",
+          "branch": "xu",
+          "element": "earth",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 6,
+          "stem": "wu",
+          "branch": "zi",
+          "element": "water",
+          "sixRelation": "sibling"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "gen_pure_najia",
+      "hexagram_code": "gen_hex",
+      "palace": "gen",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "bing",
+          "branch": "chen",
+          "element": "earth",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 2,
+          "stem": "bing",
+          "branch": "wu",
+          "element": "fire",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 3,
+          "stem": "bing",
+          "branch": "shen",
+          "element": "metal",
+          "sixRelation": "child"
+        },
+        {
+          "position": 4,
+          "stem": "bing",
+          "branch": "xu",
+          "element": "earth",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 5,
+          "stem": "bing",
+          "branch": "zi",
+          "element": "water",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 6,
+          "stem": "bing",
+          "branch": "yin",
+          "element": "wood",
+          "sixRelation": "officer_ghost"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    },
+    {
+      "id": "kun_pure_najia",
+      "hexagram_code": "kun",
+      "palace": "kun",
+      "lines": [
+        {
+          "position": 1,
+          "stem": "yi",
+          "branch": "wei",
+          "element": "earth",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 2,
+          "stem": "yi",
+          "branch": "si",
+          "element": "fire",
+          "sixRelation": "parent"
+        },
+        {
+          "position": 3,
+          "stem": "yi",
+          "branch": "mao",
+          "element": "wood",
+          "sixRelation": "officer_ghost"
+        },
+        {
+          "position": 4,
+          "stem": "gui",
+          "branch": "chou",
+          "element": "earth",
+          "sixRelation": "sibling"
+        },
+        {
+          "position": 5,
+          "stem": "gui",
+          "branch": "hai",
+          "element": "water",
+          "sixRelation": "wealth"
+        },
+        {
+          "position": 6,
+          "stem": "gui",
+          "branch": "you",
+          "element": "metal",
+          "sixRelation": "child"
+        }
+      ],
+      "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE"
+    }
+  ]
+}

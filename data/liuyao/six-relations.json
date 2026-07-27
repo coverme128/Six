@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "perspective": "palace_element_as_self",
+  "derivation": [
+    {
+      "condition": "line_element == palace_element",
+      "relation": "sibling",
+      "name_zh": "兄弟"
+    },
+    {
+      "condition": "line_element generates palace_element",
+      "relation": "parent",
+      "name_zh": "父母"
+    },
+    {
+      "condition": "palace_element generates line_element",
+      "relation": "child",
+      "name_zh": "子孙"
+    },
+    {
+      "condition": "palace_element controls line_element",
+      "relation": "wealth",
+      "name_zh": "妻财"
+    },
+    {
+      "condition": "line_element controls palace_element",
+      "relation": "officer_ghost",
+      "name_zh": "官鬼"
+    }
+  ]
+}

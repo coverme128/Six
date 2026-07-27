@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "items": [
+    {
+      "code": "qian",
+      "name_zh": "乾",
+      "symbol": "☰",
+      "bits_bottom_up": "111",
+      "element": "metal",
+      "yin_yang": "yang",
+      "direction": "northwest",
+      "family": "father",
+      "nature": "heaven",
+      "meihua_number": 1
+    },
+    {
+      "code": "dui",
+      "name_zh": "兑",
+      "symbol": "☱",
+      "bits_bottom_up": "110",
+      "element": "metal",
+      "yin_yang": "yin",
+      "direction": "west",
+      "family": "youngest_daughter",
+      "nature": "lake",
+      "meihua_number": 2
+    },
+    {
+      "code": "li",
+      "name_zh": "离",
+      "symbol": "☲",
+      "bits_bottom_up": "101",
+      "element": "fire",
+      "yin_yang": "yin",
+      "direction": "south",
+      "family": "middle_daughter",
+      "nature": "fire",
+      "meihua_number": 3
+    },
+    {
+      "code": "zhen",
+      "name_zh": "震",
+      "symbol": "☳",
+      "bits_bottom_up": "100",
+      "element": "wood",
+      "yin_yang": "yang",
+      "direction": "east",
+      "family": "eldest_son",
+      "nature": "thunder",
+      "meihua_number": 4
+    },
+    {
+      "code": "xun",
+      "name_zh": "巽",
+      "symbol": "☴",
+      "bits_bottom_up": "011",
+      "element": "wood",
+      "yin_yang": "yin",
+      "direction": "southeast",
+      "family": "eldest_daughter",
+      "nature": "wind",
+      "meihua_number": 5
+    },
+    {
+      "code": "kan",
+      "name_zh": "坎",
+      "symbol": "☵",
+      "bits_bottom_up": "010",
+      "element": "water",
+      "yin_yang": "yang",
+      "direction": "north",
+      "family": "middle_son",
+      "nature": "water",
+      "meihua_number": 6
+    },
+    {
+      "code": "gen",
+      "name_zh": "艮",
+      "symbol": "☶",
+      "bits_bottom_up": "001",
+      "element": "earth",
+      "yin_yang": "yang",
+      "direction": "northeast",
+      "family": "youngest_son",
+      "nature": "mountain",
+      "meihua_number": 7
+    },
+    {
+      "code": "kun",
+      "name_zh": "坤",
+      "symbol": "☷",
+      "bits_bottom_up": "000",
+      "element": "earth",
+      "yin_yang": "yin",
+      "direction": "southwest",
+      "family": "mother",
+      "nature": "earth",
+      "meihua_number": 8
+    }
+  ]
+}

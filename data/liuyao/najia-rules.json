@@ -1,0 +1,119 @@
+{
+  "version": "1.0.0",
+  "status": "VERIFIED_TRADITIONAL_BASE",
+  "line_order": "bottom_up",
+  "rules": {
+    "qian": {
+      "inner_stem": "jia",
+      "outer_stem": "ren",
+      "inner_branches": [
+        "zi",
+        "yin",
+        "chen"
+      ],
+      "outer_branches": [
+        "wu",
+        "shen",
+        "xu"
+      ]
+    },
+    "kun": {
+      "inner_stem": "yi",
+      "outer_stem": "gui",
+      "inner_branches": [
+        "wei",
+        "si",
+        "mao"
+      ],
+      "outer_branches": [
+        "chou",
+        "hai",
+        "you"
+      ]
+    },
+    "zhen": {
+      "inner_stem": "geng",
+      "outer_stem": "geng",
+      "inner_branches": [
+        "zi",
+        "yin",
+        "chen"
+      ],
+      "outer_branches": [
+        "wu",
+        "shen",
+        "xu"
+      ]
+    },
+    "xun": {
+      "inner_stem": "xin",
+      "outer_stem": "xin",
+      "inner_branches": [
+        "chou",
+        "hai",
+        "you"
+      ],
+      "outer_branches": [
+        "wei",
+        "si",
+        "mao"
+      ]
+    },
+    "kan": {
+      "inner_stem": "wu",
+      "outer_stem": "wu",
+      "inner_branches": [
+        "yin",
+        "chen",
+        "wu"
+      ],
+      "outer_branches": [
+        "shen",
+        "xu",
+        "zi"
+      ]
+    },
+    "li": {
+      "inner_stem": "ji",
+      "outer_stem": "ji",
+      "inner_branches": [
+        "mao",
+        "chou",
+        "hai"
+      ],
+      "outer_branches": [
+        "you",
+        "wei",
+        "si"
+      ]
+    },
+    "gen": {
+      "inner_stem": "bing",
+      "outer_stem": "bing",
+      "inner_branches": [
+        "chen",
+        "wu",
+        "shen"
+      ],
+      "outer_branches": [
+        "xu",
+        "zi",
+        "yin"
+      ]
+    },
+    "dui": {
+      "inner_stem": "ding",
+      "outer_stem": "ding",
+      "inner_branches": [
+        "si",
+        "mao",
+        "chou"
+      ],
+      "outer_branches": [
+        "hai",
+        "you",
+        "wei"
+      ]
+    }
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "version": "1.1.0",
+  "engine_policy": "evidence_first_no_single_magic_score",
+  "count": 57,
+  "items": [
+    {
+      "code": "MONTH_SAME_BRANCH",
+      "priority": 100,
+      "fact": "line.branch == month.branch",
+      "effect": "strong_support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MONTH_CLASH",
+      "priority": 100,
+      "fact": "clash(line.branch, month.branch)",
+      "effect": "month_break_candidate",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MONTH_GENERATES_LINE",
+      "priority": 90,
+      "fact": "generates(month.element, line.element)",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_GENERATES_MONTH",
+      "priority": 55,
+      "fact": "generates(line.element, month.element)",
+      "effect": "drain",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "MONTH_CONTROLS_LINE",
+      "priority": 95,
+      "fact": "controls(month.element, line.element)",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_CONTROLS_MONTH",
+      "priority": 50,
+      "fact": "controls(line.element, month.element)",
+      "effect": "consumption",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "DAY_SAME_BRANCH",
+      "priority": 95,
+      "fact": "line.branch == day.branch",
+      "effect": "day_support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "DAY_GENERATES_LINE",
+      "priority": 85,
+      "fact": "generates(day.element, line.element)",
+      "effect": "support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_GENERATES_DAY",
+      "priority": 45,
+      "fact": "generates(line.element, day.element)",
+      "effect": "drain",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "DAY_CONTROLS_LINE",
+      "priority": 90,
+      "fact": "controls(day.element, line.element)",
+      "effect": "suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "LINE_CONTROLS_DAY",
+      "priority": 45,
+      "fact": "controls(line.element, day.element)",
+      "effect": "consumption",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "DAY_CLASH",
+      "priority": 75,
+      "fact": "clash(line.branch, day.branch)",
+      "effect": "day_clash",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "DAY_HARMONY",
+      "priority": 70,
+      "fact": "six_harmony(line.branch, day.branch)",
+      "effect": "day_harmony",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MONTH_HARMONY",
+      "priority": 65,
+      "fact": "six_harmony(line.branch, month.branch)",
+      "effect": "month_harmony",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "XUN_VOID",
+      "priority": 95,
+      "fact": "line.branch in day_xun_void",
+      "effect": "void_state",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MOVING_LINE",
+      "priority": 75,
+      "fact": "line.isMoving",
+      "effect": "active",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "CHANGED_GENERATES_ORIGINAL",
+      "priority": 80,
+      "fact": "changed.element generates original.element",
+      "effect": "return_support",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "CHANGED_CONTROLS_ORIGINAL",
+      "priority": 90,
+      "fact": "changed.element controls original.element",
+      "effect": "return_suppression",
+      "status": "VERIFIED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "ORIGINAL_GENERATES_CHANGED",
+      "priority": 55,
+      "fact": "original.element generates changed.element",
+      "effect": "outward_drain",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ORIGINAL_CONTROLS_CHANGED",
+      "priority": 50,
+      "fact": "original.element controls changed.element",
+      "effect": "outward_control",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ACTIVE_PEER_GENERATES",
+      "priority": 65,
+      "fact": "active_other.element generates line.element",
+      "effect": "active_support_candidate",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ACTIVE_PEER_CONTROLS",
+      "priority": 70,
+      "fact": "active_other.element controls line.element",
+      "effect": "active_suppression_candidate",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "ACTIVE_PEER_SAME_ELEMENT",
+      "priority": 45,
+      "fact": "active_other.element == line.element",
+      "effect": "peer_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HIDDEN_SPIRIT_SUPPORTED",
+      "priority": 55,
+      "fact": "hidden_line exists and receives month/day support",
+      "effect": "hidden_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HIDDEN_SPIRIT_BLOCKED_BY_FLYING",
+      "priority": 60,
+      "fact": "flying_line controls hidden_line",
+      "effect": "hidden_blocked_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HIDDEN_SPIRIT_GENERATED_BY_FLYING",
+      "priority": 55,
+      "fact": "flying_line generates hidden_line",
+      "effect": "hidden_supported_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TOMB_BY_DAY",
+      "priority": 55,
+      "fact": "configured_tomb(line.element) == day.branch",
+      "effect": "tomb_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TOMB_BY_CHANGED_BRANCH",
+      "priority": 55,
+      "fact": "configured_tomb(original.element) == changed.branch",
+      "effect": "transform_tomb_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "ABSOLUTE_BY_DAY",
+      "priority": 50,
+      "fact": "configured_jue(line.element) == day.branch",
+      "effect": "jue_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "THREE_HARMONY_SUPPORT",
+      "priority": 70,
+      "fact": "line participates in completed active three_harmony set",
+      "effect": "combination_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIX_HARMONY_BOUND",
+      "priority": 60,
+      "fact": "line strongly bound by active/day relation",
+      "effect": "bound_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SIX_CLASH_RELEASE",
+      "priority": 65,
+      "fact": "bound line receives effective clash",
+      "effect": "release_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BREAK_WITH_DAY_SUPPORT",
+      "priority": 75,
+      "fact": "month_break and receives strong day support",
+      "effect": "break_mitigated_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "VOID_WITH_ACTIVE_MOVEMENT",
+      "priority": 70,
+      "fact": "void and moving",
+      "effect": "active_void_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "VOID_FILLED_BY_DAY",
+      "priority": 80,
+      "fact": "void and day.branch == line.branch",
+      "effect": "void_filled_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "SEASONAL_SAME_ELEMENT",
+      "priority": 45,
+      "fact": "line.element is season dominant element",
+      "effect": "season_support",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "SEASONAL_GENERATED_ELEMENT",
+      "priority": 35,
+      "fact": "season dominant element generates line.element",
+      "effect": "season_secondary_support",
+      "status": "REVIEWED_RULE_BASE"
+    },
+    {
+      "code": "MONTH_THREE_HARMONY_MEMBER",
+      "priority": 50,
+      "fact": "line.branch participates with month in configured three_harmony relation",
+      "effect": "combination_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DAY_THREE_HARMONY_MEMBER",
+      "priority": 50,
+      "fact": "line.branch participates with day in configured three_harmony relation",
+      "effect": "combination_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_HARM",
+      "priority": 45,
+      "fact": "harm(line.branch, month.branch)",
+      "effect": "harm_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DAY_HARM",
+      "priority": 45,
+      "fact": "harm(line.branch, day.branch)",
+      "effect": "harm_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BREAK",
+      "priority": 45,
+      "fact": "break_relation(line.branch, month.branch)",
+      "effect": "break_relation_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DAY_BREAK",
+      "priority": 45,
+      "fact": "break_relation(line.branch, day.branch)",
+      "effect": "break_relation_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_PUNISHMENT",
+      "priority": 45,
+      "fact": "punishment(line.branch, month.branch)",
+      "effect": "punishment_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "DAY_PUNISHMENT",
+      "priority": 45,
+      "fact": "punishment(line.branch, day.branch)",
+      "effect": "punishment_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MOVING_LINE_GENERATES_TARGET",
+      "priority": 65,
+      "fact": "moving_other.element generates target.element",
+      "effect": "moving_support",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MOVING_LINE_CONTROLS_TARGET",
+      "priority": 70,
+      "fact": "moving_other.element controls target.element",
+      "effect": "moving_suppression",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHANGED_LINE_GENERATES_TARGET",
+      "priority": 65,
+      "fact": "changed_other.element generates target.element",
+      "effect": "changed_support",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CHANGED_LINE_CONTROLS_TARGET",
+      "priority": 70,
+      "fact": "changed_other.element controls target.element",
+      "effect": "changed_suppression",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_SUPPORTS_TARGET",
+      "priority": 55,
+      "fact": "world.element generates target.element",
+      "effect": "world_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RESPONSE_SUPPORTS_TARGET",
+      "priority": 55,
+      "fact": "response.element generates target.element",
+      "effect": "response_support_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "WORLD_CONTROLS_TARGET",
+      "priority": 60,
+      "fact": "world.element controls target.element",
+      "effect": "world_suppression_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "RESPONSE_CONTROLS_TARGET",
+      "priority": 60,
+      "fact": "response.element controls target.element",
+      "effect": "response_suppression_candidate",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_GENERATES_WORLD",
+      "priority": 45,
+      "fact": "target.element generates world.element",
+      "effect": "target_drain_to_world",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_GENERATES_RESPONSE",
+      "priority": 45,
+      "fact": "target.element generates response.element",
+      "effect": "target_drain_to_response",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_CONTROLS_WORLD",
+      "priority": 45,
+      "fact": "target.element controls world.element",
+      "effect": "target_effort_on_world",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "TARGET_CONTROLS_RESPONSE",
+      "priority": 45,
+      "fact": "target.element controls response.element",
+      "effect": "target_effort_on_response",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

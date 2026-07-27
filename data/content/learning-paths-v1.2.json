@@ -1,0 +1,199 @@
+[
+  {
+    "code": "LP-LY-BEGINNER",
+    "title": "六爻零基础到能读盘",
+    "domain": "六爻",
+    "level": "beginner",
+    "estimated_lessons": 22,
+    "modules": [
+      {
+        "code": "M1",
+        "title": "认识六爻",
+        "node_codes": [
+          "liuyao-overview",
+          "method-liuyao-vs-meihua",
+          "content-how-to-ask"
+        ]
+      },
+      {
+        "code": "M2",
+        "title": "学会起卦",
+        "node_codes": [
+          "liuyao-casting",
+          "liuyao-coin-method",
+          "liuyao-line-values",
+          "liuyao-original-changed"
+        ]
+      },
+      {
+        "code": "M3",
+        "title": "看懂一张盘",
+        "node_codes": [
+          "liuyao-najia",
+          "liuyao-eight-palaces",
+          "liuyao-world-response",
+          "liuyao-six-relations",
+          "liuyao-six-spirits",
+          "content-how-to-read-chart"
+        ]
+      },
+      {
+        "code": "M4",
+        "title": "找到问题重点",
+        "node_codes": [
+          "liuyao-question-classification",
+          "liuyao-yongshen",
+          "liuyao-yuanshen",
+          "liuyao-jishen"
+        ]
+      },
+      {
+        "code": "M5",
+        "title": "判断力量",
+        "node_codes": [
+          "liuyao-strength-overview",
+          "liuyao-month-command",
+          "liuyao-day-support",
+          "liuyao-void",
+          "liuyao-month-break"
+        ]
+      },
+      {
+        "code": "M6",
+        "title": "判断变化",
+        "node_codes": [
+          "liuyao-moving-lines",
+          "liuyao-changed-lines",
+          "liuyao-return-generate-control",
+          "liuyao-relations-engine"
+        ]
+      },
+      {
+        "code": "M7",
+        "title": "综合与时间",
+        "node_codes": [
+          "liuyao-patterns",
+          "liuyao-outcome",
+          "liuyao-timing",
+          "content-evidence-reading"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LP-LY-ADVANCED",
+    "title": "六爻规则引擎进阶",
+    "domain": "六爻",
+    "level": "advanced",
+    "estimated_lessons": 16,
+    "modules": [
+      {
+        "code": "A1",
+        "title": "复杂旺衰",
+        "node_codes": [
+          "liuyao-tomb-storage",
+          "liuyao-month-break",
+          "liuyao-void"
+        ]
+      },
+      {
+        "code": "A2",
+        "title": "复杂动变",
+        "node_codes": [
+          "liuyao-return-generate-control",
+          "liuyao-advance-retreat"
+        ]
+      },
+      {
+        "code": "A3",
+        "title": "关系与格局",
+        "node_codes": [
+          "liuyao-clash-harmony",
+          "liuyao-patterns"
+        ]
+      },
+      {
+        "code": "A4",
+        "title": "结果与应期",
+        "node_codes": [
+          "liuyao-outcome",
+          "liuyao-timing",
+          "liuyao-reading-workflow"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LP-MH-BEGINNER",
+    "title": "梅花易数入门学习路径",
+    "domain": "梅花易数",
+    "level": "beginner",
+    "estimated_lessons": 14,
+    "modules": [
+      {
+        "code": "MH1",
+        "title": "基础",
+        "node_codes": [
+          "meihua-overview",
+          "core-eight-trigrams",
+          "meihua-number-casting",
+          "meihua-time-casting"
+        ]
+      },
+      {
+        "code": "MH2",
+        "title": "结构",
+        "node_codes": [
+          "meihua-original-mutual-changed",
+          "meihua-body-use",
+          "meihua-five-element-relation"
+        ]
+      },
+      {
+        "code": "MH3",
+        "title": "象与时令",
+        "node_codes": [
+          "meihua-seasonal-strength",
+          "meihua-symbolism",
+          "meihua-external-signs"
+        ]
+      },
+      {
+        "code": "MH4",
+        "title": "综合判断",
+        "node_codes": [
+          "meihua-interpretation",
+          "meihua-timing"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "LP-COMPARE",
+    "title": "六爻与梅花双方法理解",
+    "domain": "方法比较",
+    "level": "beginner",
+    "estimated_lessons": 8,
+    "modules": [
+      {
+        "code": "C1",
+        "title": "共同基础",
+        "node_codes": [
+          "core-yinyang",
+          "core-five-elements",
+          "core-eight-trigrams",
+          "core-hexagrams"
+        ]
+      },
+      {
+        "code": "C2",
+        "title": "方法差异",
+        "node_codes": [
+          "liuyao-overview",
+          "meihua-overview",
+          "method-liuyao-vs-meihua"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1259 @@
+{
+  "version": "1.1.0",
+  "count": 179,
+  "items": [
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/qian",
+      "source_code": "qian",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/kun",
+      "source_code": "kun",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/zhun",
+      "source_code": "zhun",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/meng",
+      "source_code": "meng",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/xu",
+      "source_code": "xu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/song",
+      "source_code": "song",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/shi",
+      "source_code": "shi",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/bi",
+      "source_code": "bi",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/xiaoxu",
+      "source_code": "xiaoxu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/lv",
+      "source_code": "lv",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/tai",
+      "source_code": "tai",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/pi",
+      "source_code": "pi",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/tongren",
+      "source_code": "tongren",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/dayou",
+      "source_code": "dayou",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/qian_hex",
+      "source_code": "qian_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/yu",
+      "source_code": "yu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/sui",
+      "source_code": "sui",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/gu",
+      "source_code": "gu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/lin",
+      "source_code": "lin",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/guan",
+      "source_code": "guan",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/shike",
+      "source_code": "shike",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/bi_hex",
+      "source_code": "bi_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/bo",
+      "source_code": "bo",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/fu",
+      "source_code": "fu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/wuwang",
+      "source_code": "wuwang",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/daxu",
+      "source_code": "daxu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/yi_hex",
+      "source_code": "yi_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/daguo",
+      "source_code": "daguo",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/kan_hex",
+      "source_code": "kan_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/li_hex",
+      "source_code": "li_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/xian",
+      "source_code": "xian",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/heng",
+      "source_code": "heng",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/dun",
+      "source_code": "dun",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/dazhuang",
+      "source_code": "dazhuang",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jin",
+      "source_code": "jin",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/mingyi",
+      "source_code": "mingyi",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jiaren",
+      "source_code": "jiaren",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/kui",
+      "source_code": "kui",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jian",
+      "source_code": "jian",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jie",
+      "source_code": "jie",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/sun",
+      "source_code": "sun",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/yi_gain",
+      "source_code": "yi_gain",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/guai",
+      "source_code": "guai",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/gou",
+      "source_code": "gou",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/cui",
+      "source_code": "cui",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/sheng",
+      "source_code": "sheng",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/kun_trapped",
+      "source_code": "kun_trapped",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jing",
+      "source_code": "jing",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/ge",
+      "source_code": "ge",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/ding",
+      "source_code": "ding",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/zhen_hex",
+      "source_code": "zhen_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/gen_hex",
+      "source_code": "gen_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jian_gradual",
+      "source_code": "jian_gradual",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/guimei",
+      "source_code": "guimei",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/feng",
+      "source_code": "feng",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/lv_travel",
+      "source_code": "lv_travel",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/xun_hex",
+      "source_code": "xun_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/dui_hex",
+      "source_code": "dui_hex",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/huan",
+      "source_code": "huan",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jie_limit",
+      "source_code": "jie_limit",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/zhongfu",
+      "source_code": "zhongfu",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/xiaoguo",
+      "source_code": "xiaoguo",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/jiji",
+      "source_code": "jiji",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "hexagram",
+      "slug": "/iching/hexagrams/weiji",
+      "source_code": "weiji",
+      "launch_tier": "T1",
+      "publish_requirement": "structural_complete"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/qian",
+      "source_code": "qian",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/dui",
+      "source_code": "dui",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/li",
+      "source_code": "li",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/zhen",
+      "source_code": "zhen",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/xun",
+      "source_code": "xun",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/kan",
+      "source_code": "kan",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/gen",
+      "source_code": "gen",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "trigram",
+      "slug": "/iching/trigrams/kun",
+      "source_code": "kun",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/job_search",
+      "source_code": "career.job_search",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/interview",
+      "source_code": "career.interview",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/offer",
+      "source_code": "career.offer",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/promotion",
+      "source_code": "career.promotion",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/job_change",
+      "source_code": "career.job_change",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/resignation",
+      "source_code": "career.resignation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/work_stability",
+      "source_code": "career.work_stability",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/manager_relation",
+      "source_code": "career.manager_relation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/colleague_relation",
+      "source_code": "career.colleague_relation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/performance_review",
+      "source_code": "career.performance_review",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/career/career_direction",
+      "source_code": "career.career_direction",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/income",
+      "source_code": "wealth.income",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/business_profit",
+      "source_code": "wealth.business_profit",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/payment_collection",
+      "source_code": "wealth.payment_collection",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/salary_raise",
+      "source_code": "wealth.salary_raise",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/investment_outcome",
+      "source_code": "wealth.investment_outcome",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/cashflow",
+      "source_code": "wealth.cashflow",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/debt_repayment",
+      "source_code": "wealth.debt_repayment",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/refund",
+      "source_code": "wealth.refund",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/price_negotiation",
+      "source_code": "wealth.price_negotiation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/wealth/side_income",
+      "source_code": "wealth.side_income",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/partnership",
+      "source_code": "business.partnership",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/customer_acquisition",
+      "source_code": "business.customer_acquisition",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/contract_signing",
+      "source_code": "business.contract_signing",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/project_success",
+      "source_code": "business.project_success",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/project_delivery",
+      "source_code": "business.project_delivery",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/competition",
+      "source_code": "business.competition",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/supplier",
+      "source_code": "business.supplier",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/market_launch",
+      "source_code": "business.market_launch",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/business_expansion",
+      "source_code": "business.business_expansion",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/business/merger_acquisition",
+      "source_code": "business.merger_acquisition",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/dating",
+      "source_code": "relationship.dating",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/marriage",
+      "source_code": "relationship.marriage",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/reconciliation",
+      "source_code": "relationship.reconciliation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/counterparty_attitude",
+      "source_code": "relationship.counterparty_attitude",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/relationship_stability",
+      "source_code": "relationship.relationship_stability",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/breakup",
+      "source_code": "relationship.breakup",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/third_party",
+      "source_code": "relationship.third_party",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/relationship/family_approval",
+      "source_code": "relationship.family_approval",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/exam",
+      "source_code": "study.exam",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/admission",
+      "source_code": "study.admission",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/application",
+      "source_code": "study.application",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/certificate",
+      "source_code": "study.certificate",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/study_progress",
+      "source_code": "study.study_progress",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/teacher_relation",
+      "source_code": "study.teacher_relation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/study/research",
+      "source_code": "study.research",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/buy_house",
+      "source_code": "property.buy_house",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/sell_house",
+      "source_code": "property.sell_house",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/rent_house",
+      "source_code": "property.rent_house",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/move_house",
+      "source_code": "property.move_house",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/renovation",
+      "source_code": "property.renovation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/land",
+      "source_code": "property.land",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/property/property_document",
+      "source_code": "property.property_document",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/legal/lawsuit",
+      "source_code": "legal.lawsuit",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/legal/dispute",
+      "source_code": "legal.dispute",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/legal/contract_dispute",
+      "source_code": "legal.contract_dispute",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/legal/complaint",
+      "source_code": "legal.complaint",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/legal/regulatory",
+      "source_code": "legal.regulatory",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/health/self_health",
+      "source_code": "health.self_health",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/health/family_health",
+      "source_code": "health.family_health",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/health/recovery",
+      "source_code": "health.recovery",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/health/treatment",
+      "source_code": "health.treatment",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/health/medical_check",
+      "source_code": "health.medical_check",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/parents",
+      "source_code": "family.parents",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/children",
+      "source_code": "family.children",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/siblings",
+      "source_code": "family.siblings",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/family_conflict",
+      "source_code": "family.family_conflict",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/pregnancy",
+      "source_code": "family.pregnancy",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/family/childbirth",
+      "source_code": "family.childbirth",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/purchase",
+      "source_code": "goods.purchase",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/sale",
+      "source_code": "goods.sale",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/delivery",
+      "source_code": "goods.delivery",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/quality",
+      "source_code": "goods.quality",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/lost_item",
+      "source_code": "goods.lost_item",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/goods/return_goods",
+      "source_code": "goods.return_goods",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/travel/trip",
+      "source_code": "travel.trip",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/travel/visa",
+      "source_code": "travel.visa",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/travel/relocation",
+      "source_code": "travel.relocation",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/travel/flight_train",
+      "source_code": "travel.flight_train",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/travel/business_trip",
+      "source_code": "travel.business_trip",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/people/find_person",
+      "source_code": "people.find_person",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/people/contact_person",
+      "source_code": "people.contact_person",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/people/friend",
+      "source_code": "people.friend",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/people/enemy_competitor",
+      "source_code": "people.enemy_competitor",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/weather/weather_general",
+      "source_code": "weather.weather_general",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/weather/rain",
+      "source_code": "weather.rain",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/weather/event_weather",
+      "source_code": "weather.event_weather",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/decision/go_or_stay",
+      "source_code": "decision.go_or_stay",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/decision/choose_a_b",
+      "source_code": "decision.choose_a_b",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/decision/timing_decision",
+      "source_code": "decision.timing_decision",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "question_guide",
+      "slug": "/guides/decision/risk_assessment",
+      "source_code": "decision.risk_assessment",
+      "launch_tier": "T2",
+      "publish_requirement": "editorial_review"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/coin-method",
+      "source_code": "coin-method",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/najia",
+      "source_code": "najia",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/eight-palaces",
+      "source_code": "eight-palaces",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/world-response",
+      "source_code": "world-response",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/six-relations",
+      "source_code": "six-relations",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/six-spirits",
+      "source_code": "six-spirits",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/yongshen",
+      "source_code": "yongshen",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/strength",
+      "source_code": "strength",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/moving-lines",
+      "source_code": "moving-lines",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/relations",
+      "source_code": "relations",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/patterns",
+      "source_code": "patterns",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/timing",
+      "source_code": "timing",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/meihua-casting",
+      "source_code": "meihua-casting",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/body-use",
+      "source_code": "body-use",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/mutual-hexagram",
+      "source_code": "mutual-hexagram",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    },
+    {
+      "type": "core_guide",
+      "slug": "/knowledge/external-signs",
+      "source_code": "external-signs",
+      "launch_tier": "T1",
+      "publish_requirement": "reviewed"
+    }
+  ]
+}

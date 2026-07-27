@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "status": "GENERATED_FIXTURE_FROM_VERIFIED_TABLE",
+  "items": [
+    {
+      "day_stem": "jia",
+      "line_order": "bottom_up",
+      "spirits": [
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu",
+        "xuanwu"
+      ]
+    },
+    {
+      "day_stem": "yi",
+      "line_order": "bottom_up",
+      "spirits": [
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu",
+        "xuanwu"
+      ]
+    },
+    {
+      "day_stem": "bing",
+      "line_order": "bottom_up",
+      "spirits": [
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu",
+        "xuanwu",
+        "qinglong"
+      ]
+    },
+    {
+      "day_stem": "ding",
+      "line_order": "bottom_up",
+      "spirits": [
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu",
+        "xuanwu",
+        "qinglong"
+      ]
+    },
+    {
+      "day_stem": "wu",
+      "line_order": "bottom_up",
+      "spirits": [
+        "gouchen",
+        "tengshe",
+        "baihu",
+        "xuanwu",
+        "qinglong",
+        "zhuque"
+      ]
+    },
+    {
+      "day_stem": "ji",
+      "line_order": "bottom_up",
+      "spirits": [
+        "tengshe",
+        "baihu",
+        "xuanwu",
+        "qinglong",
+        "zhuque",
+        "gouchen"
+      ]
+    },
+    {
+      "day_stem": "geng",
+      "line_order": "bottom_up",
+      "spirits": [
+        "baihu",
+        "xuanwu",
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe"
+      ]
+    },
+    {
+      "day_stem": "xin",
+      "line_order": "bottom_up",
+      "spirits": [
+        "baihu",
+        "xuanwu",
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe"
+      ]
+    },
+    {
+      "day_stem": "ren",
+      "line_order": "bottom_up",
+      "spirits": [
+        "xuanwu",
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu"
+      ]
+    },
+    {
+      "day_stem": "gui",
+      "line_order": "bottom_up",
+      "spirits": [
+        "xuanwu",
+        "qinglong",
+        "zhuque",
+        "gouchen",
+        "tengshe",
+        "baihu"
+      ]
+    }
+  ]
+}

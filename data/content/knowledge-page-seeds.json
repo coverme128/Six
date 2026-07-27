@@ -1,0 +1,149 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "slug": "casting",
+      "title_zh": "起卦",
+      "category": "liuyao_basics",
+      "order": 1,
+      "core_purpose": "生成六爻原始数据",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "najia",
+      "title_zh": "纳甲",
+      "category": "liuyao_basics",
+      "order": 2,
+      "core_purpose": "给爻配置干支五行",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "eight_palaces",
+      "title_zh": "八宫",
+      "category": "liuyao_basics",
+      "order": 3,
+      "core_purpose": "确定宫五行与卦序位置",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "world_response",
+      "title_zh": "世应",
+      "category": "liuyao_basics",
+      "order": 4,
+      "core_purpose": "建立主体与相对方",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "six_relations",
+      "title_zh": "六亲",
+      "category": "liuyao_basics",
+      "order": 5,
+      "core_purpose": "映射现实角色",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "six_spirits",
+      "title_zh": "六神",
+      "category": "liuyao_basics",
+      "order": 6,
+      "core_purpose": "描述事情表现状态",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "useful_god",
+      "title_zh": "用神",
+      "category": "liuyao_basics",
+      "order": 7,
+      "core_purpose": "定位本次问题的核心观察对象",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "strength",
+      "title_zh": "旺衰",
+      "category": "liuyao_basics",
+      "order": 8,
+      "core_purpose": "判断力量与有效性",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "dynamic_change",
+      "title_zh": "动变",
+      "category": "liuyao_basics",
+      "order": 9,
+      "core_purpose": "判断变化方向",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "relations",
+      "title_zh": "生克制化",
+      "category": "liuyao_basics",
+      "order": 10,
+      "core_purpose": "计算角色之间的作用",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "patterns",
+      "title_zh": "格局",
+      "category": "liuyao_basics",
+      "order": 11,
+      "core_purpose": "识别整体组合结构",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "timing",
+      "title_zh": "应期",
+      "category": "liuyao_basics",
+      "order": 12,
+      "core_purpose": "生成时间候选",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "casting_methods",
+      "title_zh": "梅花起卦",
+      "category": "meihua_basics",
+      "order": 1,
+      "core_purpose": "版本化数字与时间起卦",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "original_mutual_changed",
+      "title_zh": "本互变",
+      "category": "meihua_basics",
+      "order": 2,
+      "core_purpose": "建立起始、过程、后续结构",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "body_use",
+      "title_zh": "体用",
+      "category": "meihua_basics",
+      "order": 3,
+      "core_purpose": "建立主体与外部作用",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "five_element_relation",
+      "title_zh": "体用生克",
+      "category": "meihua_basics",
+      "order": 4,
+      "core_purpose": "判断基本支持与压力关系",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "symbolism",
+      "title_zh": "万物类象",
+      "category": "meihua_basics",
+      "order": 5,
+      "core_purpose": "提供语义候选",
+      "status": "CONTENT_SEED"
+    },
+    {
+      "slug": "external_signs",
+      "title_zh": "外应",
+      "category": "meihua_basics",
+      "order": 6,
+      "core_purpose": "接收现实外部现象",
+      "status": "CONTENT_SEED"
+    }
+  ]
+}

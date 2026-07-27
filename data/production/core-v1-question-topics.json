@@ -1,0 +1,369 @@
+{
+  "version": "1.3.0",
+  "profile": "LIUYAO_CORE_V1",
+  "status": "PRODUCT_SCOPE_LOCKED_NOT_EXPERT_GOLDEN_COMPLETE",
+  "default_enabled": true,
+  "count": 45,
+  "items": [
+    {
+      "topic": "career",
+      "subtype": "job_search",
+      "label_zh": "job_search",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "interview",
+      "label_zh": "interview",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "offer",
+      "label_zh": "offer",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "promotion",
+      "label_zh": "promotion",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "job_change",
+      "label_zh": "job_change",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "resignation",
+      "label_zh": "resignation",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "career",
+      "subtype": "work_stability",
+      "label_zh": "work_stability",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "income",
+      "label_zh": "income",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "business_profit",
+      "label_zh": "business_profit",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "payment_collection",
+      "label_zh": "payment_collection",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "salary_raise",
+      "label_zh": "salary_raise",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "investment_outcome",
+      "label_zh": "investment_outcome",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "cashflow",
+      "label_zh": "cashflow",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "wealth",
+      "subtype": "debt_repayment",
+      "label_zh": "debt_repayment",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "partnership",
+      "label_zh": "partnership",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "customer_acquisition",
+      "label_zh": "customer_acquisition",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "contract_signing",
+      "label_zh": "contract_signing",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "project_success",
+      "label_zh": "project_success",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "project_delivery",
+      "label_zh": "project_delivery",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "business",
+      "subtype": "competition",
+      "label_zh": "competition",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "dating",
+      "label_zh": "dating",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "marriage",
+      "label_zh": "marriage",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "reconciliation",
+      "label_zh": "reconciliation",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "counterparty_attitude",
+      "label_zh": "counterparty_attitude",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "relationship_stability",
+      "label_zh": "relationship_stability",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "relationship",
+      "subtype": "breakup",
+      "label_zh": "breakup",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "study",
+      "subtype": "exam",
+      "label_zh": "exam",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "study",
+      "subtype": "admission",
+      "label_zh": "admission",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "study",
+      "subtype": "application",
+      "label_zh": "application",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "study",
+      "subtype": "certificate",
+      "label_zh": "certificate",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "property",
+      "subtype": "buy_house",
+      "label_zh": "buy_house",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "property",
+      "subtype": "sell_house",
+      "label_zh": "sell_house",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "property",
+      "subtype": "rent_house",
+      "label_zh": "rent_house",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "property",
+      "subtype": "property_document",
+      "label_zh": "property_document",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "legal",
+      "subtype": "lawsuit",
+      "label_zh": "lawsuit",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "legal",
+      "subtype": "dispute",
+      "label_zh": "dispute",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "legal",
+      "subtype": "contract_dispute",
+      "label_zh": "contract_dispute",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "health",
+      "subtype": "self_health",
+      "label_zh": "self_health",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "health",
+      "subtype": "recovery",
+      "label_zh": "recovery",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "health",
+      "subtype": "treatment",
+      "label_zh": "treatment",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "goods",
+      "subtype": "purchase",
+      "label_zh": "purchase",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "goods",
+      "subtype": "lost_item",
+      "label_zh": "lost_item",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "travel",
+      "subtype": "trip",
+      "label_zh": "trip",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "travel",
+      "subtype": "visa",
+      "label_zh": "visa",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    },
+    {
+      "topic": "people",
+      "subtype": "contact_person",
+      "label_zh": "contact_person",
+      "status": "REVIEWED_PRODUCT_MAPPING",
+      "release_tier": "CORE_V1",
+      "enabled_by_default": true
+    }
+  ]
+}

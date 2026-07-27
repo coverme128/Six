@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "policy": "generate_ranked_candidates_not_certainties",
+  "items": [
+    {
+      "code": "VOID_FILL",
+      "candidate": "date/month when void branch becomes in-force",
+      "trigger": "target line is void",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "VOID_CLASH",
+      "candidate": "date/month that clashes void branch",
+      "trigger": "target line is void",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "CLASH_RELEASES_HARMONY",
+      "candidate": "date/month that clashes bound branch",
+      "trigger": "target is strongly harmonized/bound",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "HARMONY_STABILIZES_CLASH",
+      "candidate": "date/month that harmonizes clashed branch",
+      "trigger": "target is clashed",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "BRANCH_VALUE",
+      "candidate": "date/month matching target branch",
+      "trigger": "target branch is central evidence",
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "code": "MOVING_CHANGED_BRANCH_VALUE",
+      "candidate": "date/month matching changed branch",
+      "trigger": "moving line is decisive",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "code": "MONTH_BREAK_RECOVERY",
+      "candidate": "after leaving current month or when branch receives support",
+      "trigger": "target is month break",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

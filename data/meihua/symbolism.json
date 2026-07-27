@@ -1,0 +1,470 @@
+{
+  "version": "1.0.0",
+  "items": [
+    {
+      "trigram": "qian",
+      "dimension": "people",
+      "symbols": [
+        "领导者",
+        "父亲象",
+        "负责人"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "qian",
+      "dimension": "career",
+      "symbols": [
+        "决策",
+        "权力",
+        "大型机构",
+        "规则"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "qian",
+      "dimension": "objects",
+      "symbols": [
+        "圆形物",
+        "金属",
+        "高价值物"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "qian",
+      "dimension": "places",
+      "symbols": [
+        "高处",
+        "西北",
+        "大型建筑"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "qian",
+      "dimension": "body",
+      "symbols": [
+        "头部象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "qian",
+      "dimension": "tone",
+      "symbols": [
+        "刚健",
+        "主动",
+        "高位"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "people",
+      "symbols": [
+        "少女象",
+        "表达者",
+        "销售者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "career",
+      "symbols": [
+        "沟通",
+        "销售",
+        "娱乐",
+        "服务"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "objects",
+      "symbols": [
+        "开口之物",
+        "饮食器具"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "places",
+      "symbols": [
+        "水边",
+        "娱乐场所",
+        "西方"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "body",
+      "symbols": [
+        "口舌象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "dui",
+      "dimension": "tone",
+      "symbols": [
+        "悦",
+        "交流",
+        "表面轻松"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "people",
+      "symbols": [
+        "中女象",
+        "知识传播者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "career",
+      "symbols": [
+        "内容",
+        "媒体",
+        "视觉",
+        "科技展示"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "objects",
+      "symbols": [
+        "发光物",
+        "屏幕",
+        "文书图像"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "places",
+      "symbols": [
+        "南方",
+        "明亮处"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "body",
+      "symbols": [
+        "目象",
+        "心象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "li",
+      "dimension": "tone",
+      "symbols": [
+        "明",
+        "依附",
+        "显现"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "people",
+      "symbols": [
+        "长男象",
+        "行动者",
+        "创业者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "career",
+      "symbols": [
+        "启动",
+        "执行",
+        "突发变化"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "objects",
+      "symbols": [
+        "会动之物",
+        "车辆象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "places",
+      "symbols": [
+        "东方",
+        "道路"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "body",
+      "symbols": [
+        "足象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "zhen",
+      "dimension": "tone",
+      "symbols": [
+        "动",
+        "惊",
+        "快速启动"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "people",
+      "symbols": [
+        "长女象",
+        "协调者",
+        "传播者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "career",
+      "symbols": [
+        "渠道",
+        "传播",
+        "咨询",
+        "渗透"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "objects",
+      "symbols": [
+        "长条物",
+        "绳线象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "places",
+      "symbols": [
+        "东南",
+        "通风处"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "body",
+      "symbols": [
+        "股象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "xun",
+      "dimension": "tone",
+      "symbols": [
+        "入",
+        "渐进",
+        "扩散"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "people",
+      "symbols": [
+        "中男象",
+        "风险承担者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "career",
+      "symbols": [
+        "流动",
+        "运输",
+        "风险",
+        "隐性问题"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "objects",
+      "symbols": [
+        "液体",
+        "沟渠",
+        "流动系统"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "places",
+      "symbols": [
+        "北方",
+        "低处",
+        "水边"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "body",
+      "symbols": [
+        "耳象",
+        "肾水象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kan",
+      "dimension": "tone",
+      "symbols": [
+        "险",
+        "深",
+        "反复"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "people",
+      "symbols": [
+        "少男象",
+        "守门者",
+        "停止者"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "career",
+      "symbols": [
+        "边界",
+        "审核",
+        "地产山地",
+        "终止"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "objects",
+      "symbols": [
+        "石块",
+        "门槛",
+        "固定物"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "places",
+      "symbols": [
+        "东北",
+        "山地",
+        "门口"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "body",
+      "symbols": [
+        "手背象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "gen",
+      "dimension": "tone",
+      "symbols": [
+        "止",
+        "界限",
+        "沉静"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "people",
+      "symbols": [
+        "母亲象",
+        "承载者",
+        "大众"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "career",
+      "symbols": [
+        "运营",
+        "土地",
+        "后勤",
+        "承载"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "objects",
+      "symbols": [
+        "方形物",
+        "柔软承载物"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "places",
+      "symbols": [
+        "西南",
+        "田地",
+        "广场"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "body",
+      "symbols": [
+        "腹象"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    },
+    {
+      "trigram": "kun",
+      "dimension": "tone",
+      "symbols": [
+        "顺",
+        "承载",
+        "包容"
+      ],
+      "status": "REVIEWED_SYMBOLISM_BASE"
+    }
+  ],
+  "warning": "象义是候选语义，不得脱离问题上下文机械套用。"
+}

@@ -1,0 +1,260 @@
+{
+  "version": "1.0.0",
+  "default_policy": "system_recommends_user_can_confirm_or_edit",
+  "items": [
+    {
+      "topic": "career",
+      "subtype": "job_search",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world"
+      ],
+      "supporting": [
+        "response"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "career",
+      "subtype": "promotion",
+      "primary": [
+        "officer_ghost"
+      ],
+      "secondary": [
+        "parent",
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "career",
+      "subtype": "job_change",
+      "primary": [
+        "officer_ghost",
+        "world"
+      ],
+      "secondary": [
+        "response"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "income",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "world"
+      ],
+      "opposition": [
+        "sibling"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "business_profit",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "child",
+        "world",
+        "response"
+      ],
+      "opposition": [
+        "sibling"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "wealth",
+      "subtype": "payment_collection",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "response",
+        "parent"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "dating",
+      "conditional": {
+        "male_query": "wealth",
+        "female_query": "officer_ghost",
+        "unspecified": "world_response"
+      },
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "marriage",
+      "conditional": {
+        "male_query": "wealth",
+        "female_query": "officer_ghost",
+        "unspecified": "world_response"
+      },
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "relationship",
+      "subtype": "counterparty_attitude",
+      "primary": [
+        "response"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "study_exam",
+      "subtype": "exam_result",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "study_exam",
+      "subtype": "admission",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "contract_document",
+      "subtype": "contract_signing",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "property",
+      "subtype": "buy_house",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "wealth",
+        "world",
+        "response"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "topic": "health_culture",
+      "subtype": "wellbeing_trend",
+      "primary": [
+        "world"
+      ],
+      "secondary": [
+        "officer_ghost",
+        "child"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE",
+      "safety": "no_medical_diagnosis"
+    },
+    {
+      "topic": "legal_dispute",
+      "subtype": "lawsuit",
+      "primary": [
+        "officer_ghost",
+        "world",
+        "response"
+      ],
+      "secondary": [
+        "parent"
+      ],
+      "status": "REVIEW_REQUIRED",
+      "safety": "no_legal_advice"
+    },
+    {
+      "topic": "lost_item",
+      "subtype": "valuable",
+      "primary": [
+        "wealth"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "lost_item",
+      "subtype": "document",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world",
+        "response"
+      ],
+      "status": "REVIEWED_PRODUCT_MAPPING"
+    },
+    {
+      "topic": "family",
+      "subtype": "parent",
+      "primary": [
+        "parent"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "family",
+      "subtype": "child",
+      "primary": [
+        "child"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    },
+    {
+      "topic": "family",
+      "subtype": "sibling",
+      "primary": [
+        "sibling"
+      ],
+      "secondary": [
+        "world"
+      ],
+      "status": "REVIEWED_TRADITIONAL_BASE"
+    }
+  ]
+}

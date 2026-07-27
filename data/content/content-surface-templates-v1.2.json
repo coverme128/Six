@@ -1,0 +1,68 @@
+{
+  "version": "1.2.0",
+  "templates": [
+    {
+      "code": "TUTORIAL_LESSON",
+      "required_blocks": [
+        "learning_objectives",
+        "prerequisites",
+        "concept",
+        "why_it_matters",
+        "step_by_step",
+        "worked_example",
+        "common_mistakes",
+        "quick_check",
+        "next_lesson"
+      ],
+      "primary_source": "knowledge_nodes"
+    },
+    {
+      "code": "BLOG_ARTICLE",
+      "required_blocks": [
+        "search_intent",
+        "direct_answer",
+        "explanation",
+        "example",
+        "related_concepts",
+        "faq",
+        "tool_cta"
+      ],
+      "primary_source": "knowledge_nodes+content_clusters"
+    },
+    {
+      "code": "CASE_STUDY",
+      "required_blocks": [
+        "question",
+        "context",
+        "chart_snapshot",
+        "facts",
+        "rule_findings",
+        "interpretation",
+        "outcome_or_status",
+        "knowledge_links",
+        "review_status"
+      ],
+      "primary_source": "divination+reviewed knowledge"
+    },
+    {
+      "code": "GLOSSARY",
+      "required_blocks": [
+        "definition",
+        "why_it_matters",
+        "related_terms",
+        "example"
+      ],
+      "primary_source": "knowledge_nodes"
+    },
+    {
+      "code": "KNOWLEDGE_CARD",
+      "required_blocks": [
+        "one_line",
+        "3_to_6_bullets",
+        "example",
+        "related_node"
+      ],
+      "primary_source": "knowledge_nodes"
+    }
+  ]
+}
