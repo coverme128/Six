@@ -1,13 +1,22 @@
 {
-  "version": "p3-a-lite",
+  "version": "p4-framework",
   "routes": [
     { "method": "GET", "path": "/health" },
     { "method": "GET", "path": "/ready" },
     { "method": "GET", "path": "/internal/status" },
+    { "method": "GET", "path": "/robots.txt" },
+    { "method": "GET", "path": "/sitemap.xml" },
     { "method": "POST", "path": "/api/v1/liuyao/charts" },
     { "method": "POST", "path": "/api/v1/meihua/charts" },
     { "method": "GET", "path": "/api/v1/reports/:id" },
-    { "method": "POST", "path": "/api/v1/reports/:id/ai" }
+    { "method": "POST", "path": "/api/v1/reports/:id/ai" },
+    { "method": "GET", "path": "/api/content" },
+    { "method": "GET", "path": "/api/content/search" },
+    { "method": "GET", "path": "/api/content/:id/related" },
+    { "method": "GET", "path": "/api/content/:type/:slug" },
+    { "method": "GET", "path": "/api/content-preview/:id" },
+    { "method": "GET", "path": "/api/learning-paths/:id" },
+    { "method": "GET", "path": "/api/reports/:id/content-recommendations" }
   ],
   "errorShape": {
     "required": ["code", "message", "traceId"]

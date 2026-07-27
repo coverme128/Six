@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "pathId": "demo-path-liuyao",
+      "title": "Demo 六爻入门路径",
+      "domain": "liuyao",
+      "summary": "DEMO_ONLY：学习路径模板测试。",
+      "audience": "BEGINNER",
+      "contentIds": ["demo-knowledge-yinyang", "demo-tutorial-liuyao", "demo-blog-casting"],
+      "estimatedMinutes": 18,
+      "reviewStatus": "DEMO_ONLY"
+    }
+  ]
+}

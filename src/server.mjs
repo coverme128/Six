@@ -9,6 +9,7 @@ import { indexes, loadDomainData } from "./domain/dataStore.mjs";
 import { getBlogPost, getKnowledgeItem, getKnowledgeOverview, listBlogPosts, searchKnowledge } from "./domain/knowledge.mjs";
 import { buildLiuyaoReport, buildMeihuaReport } from "./domain/reportBuilder.mjs";
 import { createAnonymousAILimiter, generateGroundedAIReport, providerFromEnv, questionDigest } from "./domain/aiReport.mjs";
+import { HybridContentRepository, buildSEOMetadata, buildStructuredData, reportContentRecommendations, robotsTxt, sitemapXml } from "./domain/contentFramework.mjs";
 import { loadRuleProfile, resolveFeatureFlags } from "./production/index.mjs";
 
 const ROOT = process.cwd();
@@ -237,6 +238,14 @@ function json(res, status, body) {
   res.end(JSON.stringify(body, null, 2));
 }
 
+function text(res, status, body, contentType = "text/plain; charset=utf-8") {
+  res.writeHead(status, {
+    "content-type": contentType,
+    "cache-control": "no-store",
+  });
+  res.end(body);
+}
+
 function error(res, status, code, message, details) {
   json(res, status, { code, message, traceId: randomUUID(), details });
 }
@@ -294,6 +303,48 @@ function readyStatus() {
     calendarPolicy: "CAL_STD_V1",
     aiProviderConfigured: Boolean(process.env.OPENAI_API_KEY) || (process.env.AI_PROVIDER ?? "deterministic") !== "openai",
     contentReadable: data.knowledgeNodes.length > 0,
+  };
+}
+
+function contentRepository({ preview = false } = {}) {
+  return new HybridContentRepository({ rootDir: ROOT, includePreview: preview && APP_ENV !== "beta" && APP_ENV !== "production" });
+}
+
+function contentSummary(entry) {
+  return {
+    contentId: entry.contentId,
+    contentType: entry.contentType,
+    title: entry.title,
+    slug: entry.slug,
+    canonicalPath: entry.canonicalPath,
+    summary: entry.summary,
+    domain: entry.domain,
+    category: entry.category,
+    difficulty: entry.difficulty,
+    funnelStage: entry.funnelStage,
+    searchIntent: entry.searchIntent,
+    reviewStatus: entry.reviewStatus,
+    seoMetadata: buildSEOMetadata(entry, { baseUrl: process.env.APP_BASE_URL ?? "" }),
+  };
+}
+
+function contentDetail(entry) {
+  return {
+    ...contentSummary(entry),
+    body: entry.body,
+    tags: entry.tags,
+    audience: entry.audience,
+    primaryConversion: entry.primaryConversion,
+    secondaryConversion: entry.secondaryConversion,
+    relatedKnowledgeIds: entry.relatedKnowledgeIds,
+    relatedContentIds: entry.relatedContentIds,
+    prerequisiteContentIds: entry.prerequisiteContentIds,
+    nextContentId: entry.nextContentId,
+    previousContentId: entry.previousContentId,
+    faqIds: entry.faqIds,
+    sourceRefs: entry.sourceRefs,
+    knownLimitations: entry.knownLimitations,
+    structuredData: buildStructuredData(entry, { baseUrl: process.env.APP_BASE_URL ?? "" }),
   };
 }
 
@@ -503,6 +554,15 @@ async function route(req, res) {
       json(res, 200, { status: "ok" });
       return;
     }
+    if (req.method === "GET" && url.pathname === "/robots.txt") {
+      text(res, 200, robotsTxt({ appEnv: APP_ENV }));
+      return;
+    }
+    if (req.method === "GET" && url.pathname === "/sitemap.xml") {
+      const repository = contentRepository();
+      text(res, 200, sitemapXml(repository.list(), { baseUrl: process.env.APP_BASE_URL ?? "" }), "application/xml; charset=utf-8");
+      return;
+    }
     if (req.method === "GET" && url.pathname === "/ready") {
       json(res, 200, readyStatus());
       return;
@@ -674,6 +734,66 @@ async function route(req, res) {
       json(res, 200, searchKnowledge(url.searchParams.get("q") ?? "", ROOT));
       return;
     }
+    if (req.method === "GET" && url.pathname === "/api/content") {
+      const repository = contentRepository();
+      json(res, 200, { items: repository.list(Object.fromEntries(url.searchParams)).map(contentSummary) });
+      return;
+    }
+    if (req.method === "GET" && url.pathname === "/api/content/search") {
+      const repository = contentRepository();
+      json(res, 200, {
+        query: url.searchParams.get("q") ?? "",
+        items: repository.search(url.searchParams.get("q") ?? "", Object.fromEntries(url.searchParams)).map(contentSummary),
+      });
+      return;
+    }
+    {
+      const match = url.pathname.match(/^\/api\/content-preview\/([^/]+)$/u);
+      if (req.method === "GET" && match) {
+        const repository = contentRepository({ preview: true });
+        const item = repository.getById(decodeURIComponent(match[1]));
+        if (!item) {
+          notFound(res, "Content not found.");
+          return;
+        }
+        json(res, 200, contentDetail(item));
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/content\/([^/]+)\/related$/u);
+      if (req.method === "GET" && match) {
+        const repository = contentRepository();
+        json(res, 200, { items: repository.getRelated(decodeURIComponent(match[1])).map(contentSummary) });
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/content\/([^/]+)\/([^/]+)$/u);
+      if (req.method === "GET" && match) {
+        const repository = contentRepository();
+        const item = repository.getBySlug(decodeURIComponent(match[1]), decodeURIComponent(match[2]));
+        if (!item) {
+          notFound(res, "Content not found.");
+          return;
+        }
+        json(res, 200, contentDetail(item));
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/learning-paths\/([^/]+)$/u);
+      if (req.method === "GET" && match) {
+        const repository = contentRepository();
+        const item = repository.getLearningPath(decodeURIComponent(match[1]));
+        if (!item) {
+          notFound(res, "Learning path not found.");
+          return;
+        }
+        json(res, 200, contentDetail(item));
+        return;
+      }
+    }
     {
       const match = url.pathname.match(/^\/api\/v1\/knowledge\/([^/]+)$/u);
       if (req.method === "GET" && match) {
@@ -730,6 +850,18 @@ async function route(req, res) {
           result: record.result,
           aiReportBundle: record.result.aiReportBundle ?? null,
         });
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/reports\/([^/]+)\/content-recommendations$/u);
+      if (req.method === "GET" && match) {
+        const record = records.get(match[1]);
+        if (!record) {
+          notFound(res);
+          return;
+        }
+        json(res, 200, reportContentRecommendations({ report: record, repository: contentRepository({ preview: APP_ENV === "development" }) }));
         return;
       }
     }

@@ -1,0 +1,29 @@
+{
+  "total": 158,
+  "byContentType": {
+    "KNOWLEDGE": 56,
+    "GLOSSARY": 30,
+    "TRIGRAM": 8,
+    "HEXAGRAM": 64
+  },
+  "byDomain": {
+    "iching": 116,
+    "liuyao": 31,
+    "meihua": 11
+  },
+  "byFunnelStage": {
+    "EDUCATION": 158
+  },
+  "bySearchIntent": {
+    "INFORMATIONAL": 158
+  },
+  "byReviewStatus": {
+    "DEMO_ONLY": 158
+  },
+  "byPrimaryCTA": {
+    "unknown": 158
+  },
+  "isolatedContentCount": 117,
+  "noIncomingLinksCount": 117,
+  "noOutgoingLinksCount": 103
+}

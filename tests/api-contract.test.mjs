@@ -7,6 +7,11 @@ const contract = JSON.parse(readFileSync("schemas/public-api-contract.json", "ut
 const routePatterns = new Map([
   ["/api/v1/reports/:id", String.raw`^\/api\/v1\/reports\/([^/]+)$`],
   ["/api/v1/reports/:id/ai", String.raw`^\/api\/v1\/reports\/([^/]+)\/ai$`],
+  ["/api/content/:id/related", String.raw`^\/api\/content\/([^/]+)\/related$`],
+  ["/api/content/:type/:slug", String.raw`^\/api\/content\/([^/]+)\/([^/]+)$`],
+  ["/api/content-preview/:id", String.raw`^\/api\/content-preview\/([^/]+)$`],
+  ["/api/learning-paths/:id", String.raw`^\/api\/learning-paths\/([^/]+)$`],
+  ["/api/reports/:id/content-recommendations", String.raw`^\/api\/reports\/([^/]+)\/content-recommendations$`],
 ]);
 
 test("P3-A lite API contract routes are implemented", () => {

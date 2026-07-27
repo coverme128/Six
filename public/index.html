@@ -159,12 +159,23 @@
       .scroll-x { overflow-x: auto; padding-bottom: 3px; }
       .route-title { display: grid; gap: 4px; margin-bottom: 12px; }
       .toc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        margin-top: 18px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+        font-size: 13px;
+      }
+      .content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 
       @media (max-width: 980px) {
         .app { grid-template-columns: 1fr; }
         .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
         .nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
         .workspace, .metrics, .summary-band, .dimension-grid, .toc { grid-template-columns: 1fr; }
+        .content-grid { grid-template-columns: 1fr; }
       }
       @media (max-width: 620px) {
         .main { padding: 14px 10px; }
@@ -186,8 +197,11 @@
           <button type="button" data-route="/"><span>☰</span><span>六爻</span></button>
           <button type="button" data-route="/meihua"><span>◇</span><span>梅花</span></button>
           <button type="button" data-route="/history"><span>◷</span><span>历史</span></button>
+          <button type="button" data-route="/learn"><span>↧</span><span>学习</span></button>
           <button type="button" data-route="/blog"><span>▤</span><span>Blog</span></button>
           <button type="button" data-route="/knowledge"><span>⌕</span><span>知识</span></button>
+          <button type="button" data-route="/trigrams"><span>☷</span><span>八卦</span></button>
+          <button type="button" data-route="/hexagrams"><span>䷀</span><span>六十四卦</span></button>
           <button type="button" data-route="/app/settings"><span>⚙</span><span>设置</span></button>
         </nav>
       </aside>
@@ -297,9 +311,24 @@
         <section id="blogDetailView" class="view"></section>
         <section id="knowledgeView" class="view"></section>
         <section id="knowledgeDetailView" class="view"></section>
+        <section id="contentView" class="view"></section>
+        <section id="contentDetailView" class="view"></section>
         <section id="hexagramView" class="view"></section>
         <section id="settingsView" class="view"></section>
         <section id="errorView" class="view"></section>
+        <footer class="footer" aria-label="Footer links">
+          <a href="/" data-link>六爻</a>
+          <a href="/meihua" data-link>梅花</a>
+          <a href="/learn" data-link>学习</a>
+          <a href="/knowledge" data-link>知识</a>
+          <a href="/blog" data-link>Blog</a>
+          <a href="/how-it-works" data-link>如何工作</a>
+          <a href="/why-trust-this" data-link>为什么可信</a>
+          <a href="/privacy" data-link>隐私</a>
+          <a href="/terms" data-link>条款</a>
+          <a href="/disclaimer" data-link>免责声明</a>
+          <a href="/feedback" data-link>反馈</a>
+        </footer>
       </main>
     </div>
 
@@ -319,7 +348,7 @@
       };
 
       const state = { topics: [], metadata: null, settings: null, currentRoute: "/" };
-      const views = ["liuyaoView", "meihuaView", "reportView", "historyView", "blogView", "blogDetailView", "knowledgeView", "knowledgeDetailView", "hexagramView", "settingsView", "errorView"];
+      const views = ["liuyaoView", "meihuaView", "reportView", "historyView", "blogView", "blogDetailView", "knowledgeView", "knowledgeDetailView", "contentView", "contentDetailView", "hexagramView", "settingsView", "errorView"];
       const dimensionLabels = {
         subject_state: "主体状态",
         target_state: "目标状态",
@@ -363,6 +392,14 @@
           button.classList.toggle("active", route === path || (route !== "/" && path.startsWith(route)));
         });
       }
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a[data-link]");
+        if (!link) return;
+        const url = new URL(link.href);
+        if (url.origin !== location.origin) return;
+        event.preventDefault();
+        navigate(url.pathname);
+      });
 
       function normalizeError(error) {
         if (!navigator.onLine) return { code: "NETWORK_ERROR", message: ERROR_MESSAGES.NETWORK_ERROR };
@@ -603,6 +640,28 @@
         ]);
       }
 
+      async function renderReportContentRecommendations(id) {
+        try {
+          const data = await requestJson(`/api/reports/${encodeURIComponent(id)}/content-recommendations`);
+          if (!data.items.length) {
+            return el("div", { class: "card", "data-testid": "report-content-recommendations" }, [
+              el("div", { class: "card-head" }, [el("h3", { text: "相关知识" }), chip("content")]),
+              el("p", { text: "相关内容正在整理中。你仍然可以查看基础排盘、规则依据和知识搜索。" })
+            ]);
+          }
+          return el("div", { class: "card", "data-testid": "report-content-recommendations" }, [
+            el("div", { class: "card-head" }, [el("h3", { text: "相关知识" }), chip(data.items.length)]),
+            el("div", { class: "list" }, data.items.map((item) => el("div", { class: "item" }, [
+              el("strong", { text: item.title }),
+              el("p", { text: item.reasonCode }),
+              el("div", { class: "actions" }, [actionButton("查看", () => navigate(item.url), true)])
+            ])))
+          ]);
+        } catch {
+          return null;
+        }
+      }
+
       async function generateAIReport(id, mount) {
         mount.replaceChildren(renderAIReportCard(null));
         try {
@@ -631,6 +690,7 @@
           const blocking = reportSection(narrative, "blocking");
           const change = reportSection(narrative, "change");
           const aiMount = el("div", { "data-testid": "ai-report-mount" });
+          const recommendationsMount = el("div", { "data-testid": "report-content-mount" });
           view.replaceChildren(el("div", { class: "result-grid", "data-testid": "report-page" }, [
             el("div", { class: "route-title" }, [
               el("h2", { text: data.type === "liuyao" ? "六爻报告" : "梅花报告" }),
@@ -649,6 +709,7 @@
               el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: change?.text ?? "变化方向需要继续观察。" })])
             ]),
             aiMount,
+            recommendationsMount,
             renderNarrativeReport(narrative),
             renderEvidenceSummary(data),
             renderTiming(data),
@@ -663,6 +724,7 @@
               actionButton("返回历史", () => navigate("/history"), true)
             ])
           ]));
+          renderReportContentRecommendations(id).then((node) => { if (node) recommendationsMount.replaceChildren(node); });
           if (data.aiReportBundle ?? result.aiReportBundle) {
             aiMount.replaceChildren(renderAIReportCard(data.aiReportBundle ?? result.aiReportBundle, () => generateAIReport(id, aiMount)));
           } else {
@@ -850,6 +912,89 @@
         search().catch((error) => list.replaceChildren(errorPanel(error)));
       }
 
+      function contentEmpty(title) {
+        return el("section", { class: "panel" }, [
+          el("div", { class: "panel-head" }, [el("h2", { text: title }), chip("noindex", "timing")]),
+          el("div", { class: "panel-body" }, [
+            el("div", { class: "empty" }, [
+              el("strong", { text: "相关内容正在整理中。" }),
+              el("p", { text: "正式内容包导入前，这里只展示框架和入口，不发布未经审核正文。" }),
+              el("div", { class: "actions" }, [actionButton("使用六爻工具", () => navigate("/")), actionButton("使用梅花工具", () => navigate("/meihua"), true)])
+            ])
+          ])
+        ]);
+      }
+
+      function contentCard(item) {
+        return el("div", { class: "item" }, [
+          el("div", { class: "card-head" }, [el("strong", { text: item.title }), chip(item.contentType)]),
+          el("p", { text: item.summary || "内容正在整理。" }),
+          el("div", { class: "meta" }, [chip(item.domain), chip(item.difficulty), chip(item.funnelStage)]),
+          el("div", { class: "actions" }, [actionButton("打开", () => navigate(item.canonicalPath), true)])
+        ]);
+      }
+
+      async function renderContentList({ title, subtitle, contentType, path }) {
+        showView("contentView"); activeNav(path); setTitle(title, subtitle);
+        const view = document.querySelector("#contentView");
+        view.replaceChildren(el("div", { class: "empty", text: "正在加载内容框架..." }));
+        try {
+          const data = await requestJson(`/api/content?contentType=${encodeURIComponent(contentType)}`);
+          view.replaceChildren(data.items.length ? el("section", { class: "panel" }, [
+            el("div", { class: "panel-head" }, [el("h2", { text: title }), chip(data.items.length)]),
+            el("div", { class: "panel-body" }, [el("div", { class: "content-grid" }, data.items.map(contentCard))])
+          ]) : contentEmpty(title));
+          setStatus("ready", "ok");
+        } catch (error) {
+          view.replaceChildren(errorPanel(error));
+        }
+      }
+
+      async function renderContentSearch() {
+        showView("contentView"); activeNav("/learn"); setTitle("学习", "Tutorial、Learning Path 与内容搜索框架。");
+        const view = document.querySelector("#contentView");
+        const input = el("input", { value: "六爻", "aria-label": "内容搜索关键词" });
+        const list = el("div", { class: "list" });
+        async function search() {
+          const data = await requestJson(`/api/content/search?q=${encodeURIComponent(input.value)}`);
+          list.replaceChildren(...(data.items.length ? data.items.map(contentCard) : [el("div", { class: "empty", text: "正式内容包尚未导入，暂无可公开搜索结果。" })]));
+        }
+        view.replaceChildren(el("section", { class: "panel" }, [
+          el("div", { class: "panel-head" }, [el("h2", { text: "学习中心" }), chip("framework")]),
+          el("div", { class: "panel-body" }, [
+            el("div", { class: "form-grid" }, [el("label", { text: "关键词" }, [input]), el("label", { text: "操作" }, [actionButton("搜索", search)])]),
+            list,
+            el("div", { class: "summary-band" }, [
+              el("div", { class: "card" }, [el("h3", { text: "Tutorial" }), el("p", { text: "教程模板已就绪，等待 PUBLICATION_READY 内容。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "Learning Path" }), el("p", { text: "学习进度首版保存在浏览器本地。" })]),
+              el("div", { class: "card" }, [el("h3", { text: "CTA" }), el("p", { text: "内容到工具入口通过 CTA Code 统一映射。" })])
+            ])
+          ])
+        ]));
+        search().catch((error) => list.replaceChildren(errorPanel(error)));
+      }
+
+      function renderTrustPage(kind) {
+        const copy = {
+          "/how-it-works": ["如何工作", "系统先做确定性排盘，再用 CORE_V1 生成证据化报告；AI 只在已校验事实内改写表达，失败时回到 deterministic fallback。"],
+          "/why-trust-this": ["为什么可信", "可信边界来自 CAL_STD_V1、CORE_V1 白名单、Schema/Fidelity/Safety 校验，以及不保证结果的限制说明。"],
+          "/privacy": ["隐私", "问题会发送到服务端用于当前排盘与报告生成；浏览器本地保存历史；服务端普通日志不记录完整问题、Prompt 或 AI 输出。"],
+          "/terms": ["条款", "本服务处于 Beta 准备阶段，仅供文化、娱乐和自我反思参考；服务可能变更或中断，不得用于违法用途。"],
+          "/disclaimer": ["免责声明", "不构成医疗诊断、法律意见、投资或财务建议；不保证结果或精确应期，重大决定应咨询合格专业人士。"],
+          "/feedback": ["反馈", "反馈入口框架已预留；正式 Beta 前需接入受保护的轻量反馈服务或第三方表单。"]
+        };
+        const [title, body] = copy[kind] ?? ["内容页面", "内容正在整理中。"];
+        showView("contentDetailView"); activeNav(""); setTitle(title, "信任与合规页面模板。");
+        document.querySelector("#contentDetailView").replaceChildren(el("article", { class: "panel" }, [
+          el("div", { class: "panel-head" }, [el("h2", { text: title }), chip("trust")]),
+          el("div", { class: "panel-body" }, [
+            el("div", { class: "card" }, [el("p", { text: body })]),
+            el("div", { class: "card safety" }, [el("h3", { text: "边界" }), el("p", { text: "页面正文可由未来内容包替换；未审核内容不会进入 sitemap。" })]),
+            el("div", { class: "actions" }, [actionButton("开始六爻", () => navigate("/")), actionButton("开始梅花", () => navigate("/meihua"), true)])
+          ])
+        ]));
+      }
+
       async function renderKnowledgeDetail(slug) {
         showView("knowledgeDetailView"); activeNav("/knowledge"); setTitle("知识详情", "展示结构化知识，不伪造正文。");
         const view = document.querySelector("#knowledgeDetailView");
@@ -949,13 +1094,25 @@
         state.currentRoute = path;
         if (path === "/" || path === "/app/liuyao/new") { showView("liuyaoView"); activeNav("/"); setTitle("六爻起卦", "CORE_V1 白名单报告，证据预算 6-12 条，硬上限 15。"); setStatus("ready", "ok"); return; }
         if (path === "/meihua" || path === "/app/meihua/new") { showView("meihuaView"); activeNav("/meihua"); setTitle("梅花起卦", "轻量梅花排盘与体用关系报告。"); setStatus("ready", "ok"); return; }
+        if (["/liuyao", "/liuyao-online"].includes(path)) { showView("liuyaoView"); activeNav("/"); setTitle("六爻在线起卦", "落地页框架已接入，正式内容包导入前直接进入工具。"); setStatus("ready", "ok"); return; }
+        if (path === "/meihua-online") { showView("meihuaView"); activeNav("/meihua"); setTitle("梅花在线起卦", "落地页框架已接入，正式内容包导入前直接进入工具。"); setStatus("ready", "ok"); return; }
+        if (["/liuyao-vs-meihua", "/how-it-works", "/why-trust-this", "/privacy", "/terms", "/disclaimer", "/feedback"].includes(path)) return renderTrustPage(path);
+        if (path === "/learn") return renderContentSearch();
+        if (path === "/learn/liuyao") return renderContentList({ title: "六爻教程", subtitle: "Tutorial 页面模板。", contentType: "TUTORIAL", path: "/learn" });
+        if (path === "/learn/meihua") return renderContentList({ title: "梅花教程", subtitle: "Tutorial 页面模板。", contentType: "TUTORIAL", path: "/learn" });
+        if (path.startsWith("/learn/liuyao/") || path.startsWith("/learn/meihua/")) return renderContentList({ title: "教程详情", subtitle: "正式内容包尚未导入。", contentType: "TUTORIAL", path: "/learn" });
         if (path === "/history" || path === "/app/history") return renderHistory();
         if (path === "/blog") return renderBlogList();
+        if (path.startsWith("/blog/category/")) return renderBlogList();
         if (path.startsWith("/blog/")) return renderBlogDetail(decodeURIComponent(path.split("/").at(-1)));
         if (path === "/knowledge") return renderKnowledgeList();
         if (path.startsWith("/knowledge/")) return renderKnowledgeDetail(decodeURIComponent(path.split("/").at(-1)));
-        if (path.startsWith("/hexagrams/")) return renderHexagram(decodeURIComponent(path.split("/").at(-1)));
+        if (path === "/glossary") return renderContentList({ title: "术语表", subtitle: "Glossary 页面模板。", contentType: "GLOSSARY", path: "/knowledge" });
         if (path.startsWith("/glossary/")) return renderKnowledgeDetail(decodeURIComponent(path.split("/").at(-1)));
+        if (path === "/trigrams") return renderContentList({ title: "八卦", subtitle: "Trigram 页面模板。", contentType: "TRIGRAM", path: "/trigrams" });
+        if (path.startsWith("/trigrams/")) return renderContentList({ title: "八卦详情", subtitle: "正式八卦正文尚未导入。", contentType: "TRIGRAM", path: "/trigrams" });
+        if (path === "/hexagrams") return renderContentList({ title: "六十四卦", subtitle: "Hexagram 页面模板。", contentType: "HEXAGRAM", path: "/hexagrams" });
+        if (path.startsWith("/hexagrams/")) return renderHexagram(decodeURIComponent(path.split("/").at(-1)));
         if (path === "/app/settings") return renderSettings();
         if (path.startsWith("/reports/") || path.startsWith("/app/reports/")) return renderReportRoute(decodeURIComponent(path.split("/").at(-1)));
         showView("errorView"); activeNav(""); setTitle("页面不存在", "请返回起卦页。"); document.querySelector("#errorView").replaceChildren(errorPanel({ code: "REPORT_NOT_FOUND" }, [{ label: "返回起卦页", onClick: () => navigate("/") }]));

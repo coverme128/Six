@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "faqId": "demo-faq-privacy",
+      "question": "Demo：问题会公开吗？",
+      "answer": "DEMO_ONLY：默认不会作为公开案例或 Blog。",
+      "domain": "platform",
+      "relatedContentIds": ["demo-landing-liuyao"],
+      "reviewStatus": "DEMO_ONLY",
+      "seoEligible": false
+    },
+    {
+      "faqId": "demo-faq-ai",
+      "question": "Demo：AI 失败怎么办？",
+      "answer": "DEMO_ONLY：系统返回 deterministic fallback。",
+      "domain": "platform",
+      "relatedContentIds": ["demo-trust-how-it-works"],
+      "reviewStatus": "DEMO_ONLY",
+      "seoEligible": false
+    },
+    {
+      "faqId": "demo-faq-index",
+      "question": "Demo 内容会进 sitemap 吗？",
+      "answer": "DEMO_ONLY：不会，只有 PUBLICATION_READY 且 index=true 的内容会进入 sitemap。",
+      "domain": "platform",
+      "relatedContentIds": [],
+      "reviewStatus": "DEMO_ONLY",
+      "seoEligible": false
+    }
+  ]
+}

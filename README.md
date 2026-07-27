@@ -10,6 +10,8 @@ Current Public Beta P2 implementation status: `GROUNDED_AI_REPORT_CODE_READY`.
 
 Current Public Beta P2.1/P3-A status: `LIVE_PROVIDER_SMOKE_PENDING`. The local staging foundation is implemented, but a real OpenAI smoke run and a HTTPS staging deployment still require secure environment configuration outside Git.
 
+Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
+
 Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
 
 ## Scope
@@ -32,6 +34,7 @@ Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock prov
 - Grounded AI report pipeline with AI input contract, OpenAI provider, deterministic fallback provider, schema validation, fact fidelity validation, safety validation, anonymous rate limits, prompt versioning, report-level reuse, and fallback-safe UI.
 - P2.1 audit fields on AI report bundles: `reportSource`, `latencyMs`, `tokenUsage`, `provider`, `model`, `promptVersion`, `aiSchemaVersion`, `fallbackUsed`, and `validationStatus`.
 - P3-A local staging foundation with `GET /health`, `GET /ready`, protected-capable `GET /internal/status`, structured JSON logs, aggregate AI metrics, divination and AI rate limits, daily AI budget fallback, and AI concurrency fallback.
+- P4-A content, SEO and growth framework with `CONTENT_SCHEMA_V1`, file-based content repository, content package importer, QA reports, CTA registry, analytics event allowlist, metadata/structured data helpers, `robots.txt`, `sitemap.xml`, content APIs, report-to-content recommendations, and noindex demo fixtures.
 
 ## Commands
 
@@ -44,14 +47,23 @@ npm run test:ai
 npm run test:calendar
 npm run fixtures:calendar
 npm run smoke:ai:live
+npm run content:validate
+npm run content:dry-run
+npm run content:import
+npm run content:qa
+npm run content:seo
+npm run content:rehearsal
 npm run validate
 npm run validate:p1
 npm run validate:p2
+npm run validate:p4-framework
 npm run validate:w1
 npm run dev
 ```
 
 `npm run smoke:ai:live` exits as skipped when `OPENAI_API_KEY` is absent. A passing P2.1 run must execute all 8 live smoke cases and confirm `reportSource = OPENAI_LIVE` for successful outputs.
+
+P4-A demo content under `fixtures/content/p4-demo-package/` is `DEMO_ONLY`, validates checksums, and is used for isolated import rehearsal. It is not indexed and is not published by default.
 
 ## Runtime Checks
 

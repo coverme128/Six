@@ -1,0 +1,22 @@
+{
+  "packageVersion": "0.0.1-demo",
+  "schemaVersion": "CONTENT_SCHEMA_V1",
+  "createdAt": "2026-07-27T00:00:00.000Z",
+  "files": [
+    {
+      "path": "content-entries.json",
+      "kind": "contentEntries",
+      "sha256": "4ba1bb77a3e8f1941e74ac80f713874e861eb925cb07bb27346c7a6bcb192ed8"
+    },
+    {
+      "path": "faq-entries.json",
+      "kind": "faqEntries",
+      "sha256": "e88cea09a6d46be1fcf114e1809ffc9108e97e79c22c478637e6a1d80692a5d7"
+    },
+    {
+      "path": "learning-paths.json",
+      "kind": "learningPaths",
+      "sha256": "8ce45e807af6f9bcc1fe22d28f09a44029c8d37991730855c2126cb62c1dded7"
+    }
+  ]
+}
