@@ -9,6 +9,7 @@
     { "method": "POST", "path": "/api/v1/liuyao/charts" },
     { "method": "POST", "path": "/api/v1/meihua/charts" },
     { "method": "GET", "path": "/api/v1/reports/:id" },
+    { "method": "GET", "path": "/api/v1/reports/:id/experience" },
     { "method": "POST", "path": "/api/v1/reports/:id/ai" },
     { "method": "GET", "path": "/api/content" },
     { "method": "GET", "path": "/api/content/search" },

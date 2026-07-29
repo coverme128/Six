@@ -1,0 +1,140 @@
+# P4-X Product Presentation and UX Orchestration
+
+Status: `PRODUCT_PRESENTATION_UX_ORCHESTRATION_READY`
+
+This phase reorganizes existing deterministic chart, calendar, CORE_V1, evidence, timing, AI, and content facts into product-facing presentation contracts. It does not alter CAL_STD_V1, deterministic divination, CORE_V1 rule scope, AI fact validation, or timing semantics.
+
+## Gap Audit
+
+Before P4-X, report presentation logic was spread across the browser report route, narrative rendering helpers, evidence cards, timing cards, Meihua-specific cards, AI card rendering, history labels, and error panels. Page priority mostly followed source array order and component order. Rule codes, method codes, report versions, provider status, and evidence references could appear in user-facing report UI through legacy renderers or AI card details.
+
+The implemented fix introduces a formal facts-to-viewmodel pipeline:
+
+```text
+Domain result
+→ DivinationResultFacts
+→ priority + dedup + terminology formatting
+→ GuidedViewModel / ProfessionalViewModel / AdminViewModel
+→ UI
+```
+
+## Product Facts
+
+`DivinationResultFacts` is built from existing chart facts, calendar facts, rule findings, narrative report sections, timing candidates, knowledge references, and AI report state. It only maps and normalizes existing facts. It does not recalculate hexagrams, calendar data, useful-god logic, rule matches, evidence, or timing windows.
+
+Liuyao facts map original and changed hexagrams, moving lines, world/response lines, method, findings by dimension, narrative sections, timing candidates, and knowledge references. Meihua facts map original, mutual, and changed hexagrams, body/use trigrams, relationship, method, narrative sections, timing candidates, and knowledge references.
+
+## Priority And Dedup
+
+The result priority engine assigns:
+
+```text
+P0: headline-driving outcome and method/chart anchors
+P1: signals that directly affect the current question
+P2: supporting explanation and professional context
+P3: internal or deep evidence
+```
+
+Guided mode shows P0 plus the strongest P1 signals, capped to avoid repetitive lists. Professional mode includes P0/P1 plus necessary P2 context. Admin mode can inspect the complete facts bundle.
+
+The evidence deduplicator merges repeated user-facing signals by normalized text, polarity, and dimension. Merged entries keep their child `sourceRefs`, so presentation dedup never deletes underlying evidence.
+
+## Terminology
+
+The terminology registry contains 41 entries:
+
+```text
+calendar: 5
+chart: 4
+liuyao: 8
+meihua: 3
+method: 6
+relationship: 7
+status: 8
+```
+
+Formatters cover status, findings, evidence, timing, relationships, methods, and public errors. Unknown values fall back to user-readable text instead of raw internal codes.
+
+## ViewModels
+
+GuidedViewModel contains headline, summary, current situation, main supports, main risks, change direction, timing hint, recommended actions, simplified evidence, and next actions. It excludes rule codes, raw JSON, provider details, prompt versions, request IDs, and internal versions.
+
+ProfessionalViewModel contains chart summary, relationships, grouped evidence, timing candidates, and knowledge references. It is intended for deeper reading, not developer debugging, and still excludes provider debug, prompt versions, stack traces, and raw JSON.
+
+AdminViewModel contains raw fact references and source versions. It is only returned by protected `/internal/*` presentation routes or explicit internal construction.
+
+## Page Contracts
+
+Formal page experience contracts now cover:
+
+```text
+casting.liuyao
+casting.meihua
+report.detail
+history
+content.knowledge
+content.tutorial
+```
+
+Each contract defines page goal, primary question, primary action, visual hierarchy, default state, loading, empty, error, and mobile-relevant behavior. The report page contract prioritizes: headline, current situation, main supports, main risks, change direction, and recommended actions.
+
+## State And Visibility
+
+The shared state contract covers:
+
+```text
+INITIAL
+LOADING
+PROCESSING
+PARTIAL
+COMPLETED
+EMPTY
+FAILED
+NOT_FOUND
+DELETED
+```
+
+Every state defines the user message, available action, retry behavior, input preservation, and fallback behavior.
+
+Visibility remains:
+
+```text
+Guided: user summary and simplified evidence
+Professional: chart structure and professional evidence
+Admin/Internal: raw facts, versions, provider, validation, debug
+```
+
+No payment, entitlement, login, or RBAC is introduced.
+
+## UX QA
+
+`npm run validate:experience` covers:
+
+```text
+Internal leakage scan
+Public/internal presentation separation
+Duplicate presentation QA
+Next action presence
+10-second guided comprehension surface
+Mobile comprehension at 360, 390, and 430 widths
+```
+
+The public report page now leads with the conclusion and next actions, folds professional evidence behind a details control, and keeps AI fallback flowing through the same product presentation surface.
+
+## Verification
+
+Run:
+
+```bash
+npm run validate:experience
+npm run validate
+npm run test:e2e
+```
+
+`npm run smoke:ai:live` remains dependent on `OPENAI_API_KEY`; without the key it should skip rather than block local P4-X validation.
+
+## Deferred Scope
+
+P4-X explicitly did not implement PostgreSQL, login, RBAC, paid access, subscriptions, complex Admin/CMS, Advanced Rules, Review Rules, new calendar algorithms, new divination algorithms, new CORE_V1 rules, or production content import.
+
+The next allowed phase is `P4-B | Production Content Package Import`.

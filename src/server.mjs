@@ -10,6 +10,7 @@ import { getBlogPost, getKnowledgeItem, getKnowledgeOverview, listBlogPosts, sea
 import { buildLiuyaoReport, buildMeihuaReport } from "./domain/reportBuilder.mjs";
 import { createAnonymousAILimiter, generateGroundedAIReport, providerFromEnv, questionDigest } from "./domain/aiReport.mjs";
 import { HybridContentRepository, buildSEOMetadata, buildStructuredData, reportContentRecommendations, robotsTxt, sitemapXml } from "./domain/contentFramework.mjs";
+import { buildExperienceBundle } from "./domain/presentation/index.mjs";
 import { loadRuleProfile, resolveFeatureFlags } from "./production/index.mjs";
 
 const ROOT = process.cwd();
@@ -345,6 +346,26 @@ function contentDetail(entry) {
     sourceRefs: entry.sourceRefs,
     knownLimitations: entry.knownLimitations,
     structuredData: buildStructuredData(entry, { baseUrl: process.env.APP_BASE_URL ?? "" }),
+  };
+}
+
+function publicAIReportBundle(bundle) {
+  if (!bundle) return null;
+  return {
+    validationStatus: bundle.validationStatus,
+    fallbackUsed: bundle.fallbackUsed,
+    aiReport: bundle.aiReport ? {
+      summary: bundle.aiReport.summary,
+      currentSituation: bundle.aiReport.currentSituation,
+      supportingFactors: (bundle.aiReport.supportingFactors ?? []).map((item) => ({ text: item.text })),
+      blockingFactors: (bundle.aiReport.blockingFactors ?? []).map((item) => ({ text: item.text })),
+      outcomeTrend: bundle.aiReport.outcomeTrend,
+      changeDirection: bundle.aiReport.changeDirection,
+      timingWindows: (bundle.aiReport.timingWindows ?? []).map((item) => ({ text: item.text })),
+      actionSuggestions: bundle.aiReport.actionSuggestions ?? [],
+      limitations: bundle.aiReport.limitations ?? [],
+      disclaimer: bundle.aiReport.disclaimer,
+    } : null,
   };
 }
 
@@ -850,6 +871,40 @@ async function route(req, res) {
           result: record.result,
           aiReportBundle: record.result.aiReportBundle ?? null,
         });
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/api\/v1\/reports\/([^/]+)\/experience$/u);
+      if (req.method === "GET" && match) {
+        const record = records.get(match[1]);
+        if (!record) {
+          notFound(res);
+          return;
+        }
+        json(res, 200, {
+          id: record.id,
+          type: record.type,
+          createdAt: record.createdAt,
+          experience: buildExperienceBundle({ result: record.result, type: record.type }),
+          aiReportBundle: publicAIReportBundle(record.result.aiReportBundle),
+        });
+        return;
+      }
+    }
+    {
+      const match = url.pathname.match(/^\/internal\/reports\/([^/]+)\/presentation$/u);
+      if (req.method === "GET" && match) {
+        if (!internalStatusAllowed(req)) {
+          error(res, 403, "FORBIDDEN", "Internal presentation is protected.");
+          return;
+        }
+        const record = records.get(match[1]);
+        if (!record) {
+          notFound(res);
+          return;
+        }
+        json(res, 200, buildExperienceBundle({ result: record.result, type: record.type, includeAdmin: true }));
         return;
       }
     }

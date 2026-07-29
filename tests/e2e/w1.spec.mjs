@@ -38,7 +38,7 @@ test("六爻铜钱起卦进入正式报告，刷新后仍可恢复", async ({ pa
   await expect(page).toHaveURL(/\/reports\/ly_/u);
   await expect(page.getByTestId("report-page")).toContainText("六爻报告");
   await page.reload();
-  await expect(page.getByTestId("report-page")).toContainText("核心结论");
+  await expect(page.getByTestId("report-page")).toContainText("一句话结论");
 });
 
 test("六爻手工起卦和输入错误提示可用", async ({ page }, testInfo) => {
@@ -70,15 +70,16 @@ test("梅花两数和时间起卦都生成统一报告页", async ({ page }, tes
   await form.locator('textarea[name="question"]').fill("时间起卦是否能生成报告？");
   await form.getByRole("button", { name: "生成报告" }).click();
   await expect(page).toHaveURL(/\/reports\/mh_/u);
-  await expect(page.getByRole("heading", { name: "互卦" })).toBeVisible();
+  await expect(page.locator("#reportView summary")).toContainText("专业依据");
 });
 
 test("历史列表可回放报告，404 使用友好错误", async ({ page, request }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop", "desktop flow coverage");
   const id = await createLiuyaoReport(request, "历史回放是否正常？");
   await page.goto("/history");
-  await expect(page.getByTestId("history-item")).toContainText("历史回放是否正常");
-  await page.getByRole("button", { name: "打开报告" }).first().click();
+  const item = page.getByTestId("history-item").filter({ hasText: "历史回放是否正常" });
+  await expect(item).toContainText("历史回放是否正常");
+  await item.getByRole("button", { name: "打开报告" }).click();
   await expect(page).toHaveURL(new RegExp(`/reports/${id}$`, "u"));
   await expect(page.getByRole("heading", { name: "六爻报告" })).toBeVisible();
 

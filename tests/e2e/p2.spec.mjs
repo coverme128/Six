@@ -34,7 +34,8 @@ test("AI 成功生成后刷新恢复已保存报告", async ({ page, request }, 
   await page.goto(`/reports/${id}`);
   await expect(page.getByTestId("ai-report-card")).toContainText("AI 智能解读");
   await expect(page.getByTestId("ai-report-card")).toContainText("概要");
-  await expect(page.getByTestId("ai-report-card")).toContainText("mock");
+  await expect(page.getByTestId("ai-report-card")).toContainText("已校验");
+  await expect(page.getByTestId("report-page")).not.toContainText("mock");
 
   await page.reload();
   await expect(page.getByTestId("ai-report-card")).toContainText("AI 智能解读");
@@ -59,7 +60,7 @@ test("AI 失败后显示确定性降级报告", async ({ page, request }, testIn
   const id = await createLiuyaoReport(request, "AI 失败是否能降级？");
   await page.goto(`/reports/${id}`);
   await expect(page.getByTestId("ai-report-card")).toContainText("智能解读暂时不可用");
-  await expect(page.getByText("基础规则分析")).toBeVisible();
+  await expect(page.getByText("专业依据")).toBeVisible();
   const report = await request.get(`/api/v1/reports/${id}`);
   const json = await report.json();
   expect(json.aiReportBundle.reportSource).toBe("DETERMINISTIC_FALLBACK");

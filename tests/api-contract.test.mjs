@@ -6,6 +6,7 @@ const serverSource = readFileSync("src/server.mjs", "utf8");
 const contract = JSON.parse(readFileSync("schemas/public-api-contract.json", "utf8"));
 const routePatterns = new Map([
   ["/api/v1/reports/:id", String.raw`^\/api\/v1\/reports\/([^/]+)$`],
+  ["/api/v1/reports/:id/experience", String.raw`^\/api\/v1\/reports\/([^/]+)\/experience$`],
   ["/api/v1/reports/:id/ai", String.raw`^\/api\/v1\/reports\/([^/]+)\/ai$`],
   ["/api/content/:id/related", String.raw`^\/api\/content\/([^/]+)\/related$`],
   ["/api/content/:type/:slug", String.raw`^\/api\/content\/([^/]+)\/([^/]+)$`],

@@ -10,6 +10,7 @@
     "test:e2e": "playwright test",
     "test:ai": "node --test tests/ai-report.test.mjs",
     "test:contract": "node --test tests/api-contract.test.mjs",
+    "test:experience": "node --test tests/presentation.test.mjs",
     "test:calendar": "node --test tests/calendar-provider.test.mjs",
     "fixtures:calendar": "node scripts/calendar/generate_cal_std_v1_fixtures.mjs",
     "content:validate": "node scripts/content/manage.mjs validate",
@@ -24,6 +25,7 @@
     "validate:p1": "npm run fixtures:calendar && npm run validate",
     "validate:p2": "npm run validate:p1 && npm run test:e2e",
     "validate:p4-framework": "npm run validate && npm run content:rehearsal && npm run content:qa && npm run content:seo && npm run test:e2e",
+    "validate:experience": "npm run test:experience && playwright test tests/e2e/experience.spec.mjs",
     "validate:w1": "npm run validate && npm run test:e2e",
     "validate:v13": "python3 scripts/production/validate_v13_core.py",
     "validate": "npm run validate:v13 && npm test"

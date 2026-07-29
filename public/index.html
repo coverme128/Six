@@ -358,6 +358,7 @@
         timing_state: "时间候选"
       };
       const topicNames = { career: "事业", wealth: "财务", business: "商业", relationship: "关系", study: "学习", property: "房产", legal: "法律", health: "健康", goods: "物品", travel: "出行", people: "人物" };
+      const reportTypeNames = { liuyao: "六爻", meihua: "梅花", LIUYAO: "六爻", MEIHUA: "梅花" };
 
       const statusEl = document.querySelector("#status");
       const profileLabel = document.querySelector("#profileLabel");
@@ -384,6 +385,7 @@
         return node;
       }
       function chip(text, type = "") { return el("span", { class: `chip ${type}`.trim(), text: String(text) }); }
+      function displayReportType(type) { return reportTypeNames[type] ?? "报告"; }
       function showView(id) { views.forEach((view) => document.querySelector(`#${view}`).classList.toggle("active", view === id)); }
       function navigate(path) { history.pushState({}, "", path); route(); }
       function activeNav(path) {
@@ -415,8 +417,8 @@
           return button;
         });
         return el("div", { class: "card error-box" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: normalized.message }), chip(normalized.code, "danger")]),
-          el("p", { text: normalized.traceId ? `追踪编号：${normalized.traceId}` : "请检查输入或稍后重试。" }),
+          el("div", { class: "card-head" }, [el("h3", { text: normalized.message }), chip("可重试", "danger")]),
+          el("p", { text: "请检查输入、返回上一页，或稍后重试。" }),
           buttons.length ? el("div", { class: "actions" }, buttons) : null
         ]);
       }
@@ -527,85 +529,6 @@
         subtypeSelect.value = "job_search";
       }
 
-      function reportSection(narrative, code) {
-        return narrative.sections.find((section) => section.code === code);
-      }
-
-      function renderNarrativeReport(narrativeReport) {
-        const list = el("div", { class: "list" });
-        for (const section of narrativeReport.sections) {
-          list.append(el("div", { class: `item ${section.code === "safety" ? "safety" : ""}`.trim() }, [
-            el("div", { class: "card-head" }, [el("strong", { text: section.title }), chip(section.code)]),
-            el("p", { text: section.text }),
-            el("div", { class: "meta" }, [
-              ...(section.findingIds ?? []).slice(0, 6).map((id) => chip(id, "fact")),
-              ...(section.knowledgeIds ?? []).slice(0, 4).map((id) => chip(id, "signal"))
-            ])
-          ]));
-        }
-        return el("div", { class: "card" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: "基础规则分析" }), chip(narrativeReport.reportTemplateVersion, "signal")]),
-          list
-        ]);
-      }
-
-      function renderLiuyaoBoard(chart) {
-        const rows = [...chart.lines].reverse().map((line) => {
-          const marks = [];
-          if (line.isWorld) marks.push(chip("世", "fact"));
-          if (line.isResponse) marks.push(chip("应", "signal"));
-          if (line.moving) marks.push(chip("动", "timing"));
-          if (line.isVoid) marks.push(chip("空"));
-          return el("div", { class: "item" }, [
-            el("div", { class: "card-head" }, [el("strong", { text: `${line.position}爻 ${line.name}` }), el("div", { class: "meta" }, marks)]),
-            el("div", { class: "meta" }, [chip(line.sixSpiritName), chip(line.sixRelationName, "fact"), chip(`${line.stem}/${line.branchName}`), chip(line.element), chip(`${line.originalBit}→${line.changedBit}`)])
-          ]);
-        });
-        return el("div", { class: "card scroll-x" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: "详细排盘" }), chip("上爻在上")]),
-          el("div", { class: "list" }, rows)
-        ]);
-      }
-
-      function renderMeihuaDetails(chart) {
-        return el("div", { class: "card" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: "梅花排盘" }), chip(chart.methodCode)]),
-          el("div", { class: "summary-band" }, [
-            el("div", { class: "item" }, [el("strong", { text: "本卦" }), el("p", { text: chart.originalHexagram.name_zh })]),
-            el("div", { class: "item" }, [el("strong", { text: "互卦" }), el("p", { text: chart.mutualHexagram.name_zh })]),
-            el("div", { class: "item" }, [el("strong", { text: "变卦" }), el("p", { text: chart.changedHexagram.name_zh })])
-          ]),
-          el("div", { class: "meta" }, [chip(`动爻 ${chart.movingLine}`), chip(`体 ${chart.bodyTrigram.name_zh}`, "fact"), chip(`用 ${chart.useTrigram.name_zh}`, "signal")])
-        ]);
-      }
-
-      function renderEvidenceSummary(result) {
-        if (result.type === "meihua" || !result.result.report.dimensions) return null;
-        const dimensions = result.result.report.dimensions;
-        return el("div", { class: "dimension-grid" }, Object.entries(dimensions).map(([code, findings]) => {
-          const list = findings.length ? findings.map((finding) => el("div", { class: "item" }, [
-            el("div", { class: "card-head" }, [el("strong", { text: finding.summary }), chip(finding.output_role === "CANDIDATE_OR_GUARDRAIL" ? "candidate" : finding.output_role.toLowerCase(), finding.output_role === "CANDIDATE_OR_GUARDRAIL" ? "timing" : "fact")]),
-            el("div", { class: "meta" }, [chip(finding.rule_code), chip(finding.rule_version ?? "1.3.0")])
-          ])) : [el("div", { class: "empty compact", text: "暂无证据。" })];
-          return el("div", { class: "card" }, [
-            el("div", { class: "card-head" }, [el("h3", { text: dimensionLabels[code] ?? code }), chip(findings.length)]),
-            el("div", { class: "list" }, list)
-          ]);
-        }));
-      }
-
-      function renderTiming(result) {
-        const candidates = result.result.timingCandidates ?? [];
-        return el("div", { class: "card" }, [
-          el("div", { class: "card-head" }, [el("h3", { text: "时间候选" }), chip(candidates.length, "timing")]),
-          candidates.length ? el("div", { class: "list" }, candidates.map((candidate) => el("div", { class: "item" }, [
-            el("strong", { text: candidate.window }),
-            el("div", { class: "meta" }, [chip(`rank ${candidate.rank}`, "timing"), chip(Array.isArray(candidate.granularity) ? candidate.granularity.join("/") : candidate.granularity)]),
-            el("p", { class: "compact", text: candidate.limitation })
-          ]))) : el("div", { class: "empty", text: "暂无应期候选。" })
-        ]);
-      }
-
       function renderAIReportCard(bundle, onRetry) {
         if (!bundle) {
           return el("div", { class: "card", "data-testid": "ai-report-card" }, [
@@ -615,27 +538,60 @@
         }
         if (bundle.fallbackUsed || !bundle.aiReport) {
           return el("div", { class: "card safety", "data-testid": "ai-report-card" }, [
-            el("div", { class: "card-head" }, [el("h3", { text: "AI 智能解读" }), chip("fallback", "timing")]),
+            el("div", { class: "card-head" }, [el("h3", { text: "AI 智能解读" }), chip("降级解读", "timing")]),
             el("p", { text: "智能解读暂时不可用，以下内容由确定性排盘和基础规则生成。" }),
-            el("div", { class: "meta" }, [chip(bundle.aiProvider ?? "provider"), chip(bundle.failureCode ?? "fallback")]),
             onRetry ? el("div", { class: "actions" }, [actionButton("重试智能解读", onRetry, true)]) : null
           ]);
         }
         const report = bundle.aiReport;
         return el("section", { class: "panel", "data-testid": "ai-report-card" }, [
-          el("div", { class: "panel-head" }, [el("h2", { text: "AI 智能解读" }), chip(bundle.aiProvider ?? "ai", "signal")]),
+          el("div", { class: "panel-head" }, [el("h2", { text: "AI 智能解读" }), chip("已校验", "signal")]),
           el("div", { class: "panel-body" }, [
             el("div", { class: "card" }, [el("h3", { text: "概要" }), el("p", { text: report.summary })]),
             el("div", { class: "card" }, [el("h3", { text: "当前态势" }), el("p", { text: report.currentSituation })]),
             el("div", { class: "summary-band" }, [
-              el("div", { class: "card" }, [el("h3", { text: "支持因素" }), el("div", { class: "list" }, report.supportingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), el("div", { class: "meta" }, item.evidenceRefs.map((ref) => chip(ref)))])))]),
-              el("div", { class: "card" }, [el("h3", { text: "阻碍因素" }), el("div", { class: "list" }, report.blockingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), el("div", { class: "meta" }, item.evidenceRefs.map((ref) => chip(ref)))])))]),
+              el("div", { class: "card" }, [el("h3", { text: "支持因素" }), el("div", { class: "list" }, report.supportingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text })])))]),
+              el("div", { class: "card" }, [el("h3", { text: "阻碍因素" }), el("div", { class: "list" }, report.blockingFactors.map((item) => el("div", { class: "item" }, [el("p", { text: item.text })])))]),
               el("div", { class: "card" }, [el("h3", { text: "趋势" }), el("div", { class: "meta" }, [chip(report.outcomeTrend.label, "signal")]), el("p", { text: report.outcomeTrend.text })])
             ]),
             el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: report.changeDirection })]),
-            report.timingWindows.length ? el("div", { class: "card" }, [el("h3", { text: "时间窗口" }), el("div", { class: "list" }, report.timingWindows.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), chip(item.candidateRef, "timing")])) )]) : null,
+            report.timingWindows.length ? el("div", { class: "card" }, [el("h3", { text: "时间窗口" }), el("div", { class: "list" }, report.timingWindows.map((item) => el("div", { class: "item" }, [el("p", { text: item.text }), chip("候选窗口", "timing")])) )]) : null,
             el("div", { class: "card" }, [el("h3", { text: "行动建议" }), el("div", { class: "list" }, report.actionSuggestions.map((item) => el("div", { class: "item" }, [el("p", { text: item })])))]),
             el("div", { class: "card safety" }, [el("h3", { text: "限制说明" }), el("p", { text: [...report.limitations, report.disclaimer].join(" ") })])
+          ])
+        ]);
+      }
+
+      function renderSignalList(items, emptyText) {
+        return items.length ? el("div", { class: "list" }, items.map((item) => el("div", { class: "item" }, [
+          el("strong", { text: item.title || "关键信息" }),
+          el("p", { text: item.text || "这条信息用于辅助理解结果。" }),
+          item.mergedCount > 1 ? el("div", { class: "meta" }, [chip(`已合并 ${item.mergedCount} 条依据`, "signal")]) : null
+        ]))) : el("div", { class: "empty", text: emptyText });
+      }
+
+      function renderProfessionalExperience(professional) {
+        const evidence = professional.evidenceGroups ?? { supports: [], risks: [], other: [] };
+        return el("details", { class: "panel" }, [
+          el("summary", { text: "专业依据" }),
+          el("div", { class: "panel-body" }, [
+            el("div", { class: "summary-band" }, [
+              el("div", { class: "card" }, [el("h3", { text: "卦象结构" }), el("p", { text: professional.chartSummary?.title || "卦象结构已生成。" })]),
+              professional.chartSummary?.relationship ? el("div", { class: "card" }, [el("h3", { text: "关键关系" }), el("p", { text: professional.chartSummary.relationship })]) : null,
+              el("div", { class: "card" }, [el("h3", { text: "起卦方式" }), el("p", { text: professional.method || "已记录。" })])
+            ]),
+            professional.relationships?.length ? el("div", { class: "card" }, [
+              el("div", { class: "card-head" }, [el("h3", { text: "关系提示" }), chip(professional.relationships.length)]),
+              renderSignalList(professional.relationships, "暂无关系提示。")
+            ]) : null,
+            el("div", { class: "dimension-grid" }, [
+              el("div", { class: "card" }, [el("div", { class: "card-head" }, [el("h3", { text: "支持依据" }), chip(evidence.supports.length)]), renderSignalList(evidence.supports, "暂无明确支持依据。")]),
+              el("div", { class: "card" }, [el("div", { class: "card-head" }, [el("h3", { text: "阻碍依据" }), chip(evidence.risks.length)]), renderSignalList(evidence.risks, "暂无明确阻碍依据。")])
+            ]),
+            professional.timingCandidates?.length ? el("div", { class: "card" }, [
+              el("div", { class: "card-head" }, [el("h3", { text: "时间候选" }), chip(professional.timingCandidates.length, "timing")]),
+              el("div", { class: "list" }, professional.timingCandidates.map((item) => el("div", { class: "item" }, [el("strong", { text: item.title }), el("p", { text: item.text })])))
+            ]) : null
           ])
         ]);
       }
@@ -653,7 +609,7 @@
             el("div", { class: "card-head" }, [el("h3", { text: "相关知识" }), chip(data.items.length)]),
             el("div", { class: "list" }, data.items.map((item) => el("div", { class: "item" }, [
               el("strong", { text: item.title }),
-              el("p", { text: item.reasonCode }),
+              el("p", { text: item.reasonCode === "RULE_EVIDENCE" ? "来自本次报告依据" : "与本次问题相关" }),
               el("div", { class: "actions" }, [actionButton("查看", () => navigate(item.url), true)])
             ])))
           ]);
@@ -675,58 +631,50 @@
       async function renderReportRoute(id) {
         showView("reportView");
         activeNav("/reports");
-        setTitle("报告详情", "正式报告 URL，可刷新和复制。");
+        setTitle("报告详情", "先看结论，再展开依据。");
         const view = document.querySelector("#reportView");
         view.replaceChildren(el("div", { class: "empty", text: "正在加载报告..." }));
         setStatus("loading", "warn");
         try {
-          const data = await requestJson(`/api/v1/reports/${encodeURIComponent(id)}`);
-          if (!data?.result?.chart || !data.narrativeReport) throw { code: "REPORT_DATA_INVALID" };
-          const result = data.result;
-          const chart = result.chart;
-          const narrative = data.narrativeReport;
-          const overview = reportSection(narrative, "overview");
-          const support = reportSection(narrative, "support");
-          const blocking = reportSection(narrative, "blocking");
-          const change = reportSection(narrative, "change");
+          const data = await requestJson(`/api/v1/reports/${encodeURIComponent(id)}/experience`);
+          const experience = data.experience;
+          const guided = experience.guidedViewModel;
+          const professional = experience.professionalViewModel;
           const aiMount = el("div", { "data-testid": "ai-report-mount" });
           const recommendationsMount = el("div", { "data-testid": "report-content-mount" });
           view.replaceChildren(el("div", { class: "result-grid", "data-testid": "report-page" }, [
             el("div", { class: "route-title" }, [
-              el("h2", { text: data.type === "liuyao" ? "六爻报告" : "梅花报告" }),
-              el("p", { text: chart.question || "(empty question)" }),
-              el("div", { class: "meta" }, [chip(data.type), chip(chart.methodCode), chip(new Date(data.createdAt).toLocaleString())])
+              el("h2", { text: `${displayReportType(data.type)}报告` }),
+              el("p", { text: guided.question || "未填写问题" }),
+              el("div", { class: "meta" }, [chip(guided.reportType), chip(professional.method), chip(new Date(data.createdAt).toLocaleString())])
             ]),
             el("div", { class: "summary-band" }, [
-              el("div", { class: "card" }, [el("h3", { text: "本卦" }), el("p", { text: `${chart.originalHexagram.name_zh} (${chart.originalHexagram.code})` })]),
-              data.type === "meihua" ? el("div", { class: "card" }, [el("h3", { text: "互卦" }), el("p", { text: chart.mutualHexagram.name_zh })]) : null,
-              el("div", { class: "card" }, [el("h3", { text: "变卦" }), el("p", { text: `${chart.changedHexagram.name_zh} (${chart.changedHexagram.code})` })]),
-              el("div", { class: "card" }, [el("h3", { text: "核心结论" }), el("p", { text: overview?.text ?? "报告正在整理。" })])
+              el("div", { class: "card" }, [el("h3", { text: "一句话结论" }), el("p", { text: guided.headline })]),
+              el("div", { class: "card" }, [el("h3", { text: "当前局势" }), el("p", { text: guided.currentSituation })]),
+              el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: guided.changeDirection })])
+            ]),
+            el("div", { class: "dimension-grid" }, [
+              el("div", { class: "card" }, [el("div", { class: "card-head" }, [el("h3", { text: "主要支持" }), chip(guided.mainSupports.length, "fact")]), renderSignalList(guided.mainSupports, "暂无明确支持项。")]),
+              el("div", { class: "card" }, [el("div", { class: "card-head" }, [el("h3", { text: "主要阻碍" }), chip(guided.mainRisks.length, "timing")]), renderSignalList(guided.mainRisks, "暂无明确阻碍项。")])
             ]),
             el("div", { class: "summary-band" }, [
-              el("div", { class: "card" }, [el("h3", { text: "主要支持" }), el("p", { text: support?.text ?? "暂无明确支持项。" })]),
-              el("div", { class: "card" }, [el("h3", { text: "主要阻碍" }), el("p", { text: blocking?.text ?? "暂无明确阻碍项。" })]),
-              el("div", { class: "card" }, [el("h3", { text: "变化方向" }), el("p", { text: change?.text ?? "变化方向需要继续观察。" })])
+              el("div", { class: "card" }, [el("h3", { text: "时间提示" }), el("p", { text: guided.timingHint })]),
+              el("div", { class: "card" }, [el("h3", { text: "下一步建议" }), el("div", { class: "list" }, guided.recommendedActions.slice(0, 3).map((item) => el("div", { class: "item" }, [el("p", { text: item })])))]),
+              el("div", { class: "card" }, [el("h3", { text: "理解路径" }), el("p", { text: experience.pageExperience.primaryAction })])
             ]),
             aiMount,
             recommendationsMount,
-            renderNarrativeReport(narrative),
-            renderEvidenceSummary(data),
-            renderTiming(data),
-            data.type === "liuyao" ? renderLiuyaoBoard(chart) : renderMeihuaDetails(chart),
-            el("div", { class: "card" }, [
-              el("div", { class: "card-head" }, [el("h3", { text: "版本信息" }), chip(narrative.reportTemplateVersion, "signal")]),
-              el("div", { class: "meta" }, [chip(chart.generationEvidence?.ruleProfile ?? "MEIHUA"), chip(chart.calendar?.policyVersion ?? "MEIHUA_LIGHT"), chip(JSON.stringify(result.engineVersions))])
-            ]),
-            el("details", {}, [el("summary", { text: "规则依据 / JSON" }), el("pre", { class: "raw", text: JSON.stringify(data, null, 2) })]),
+            renderProfessionalExperience(professional),
             el("div", { class: "actions" }, [
-              actionButton("返回起卦页", () => navigate(data.type === "liuyao" ? "/" : "/meihua")),
+              actionButton("查看依据", () => document.querySelector("#reportView details")?.setAttribute("open", "")),
+              actionButton("继续学习", () => navigate("/learn"), true),
+              actionButton("返回起卦页", () => navigate(data.type === "liuyao" ? "/" : "/meihua"), true),
               actionButton("返回历史", () => navigate("/history"), true)
             ])
           ]));
           renderReportContentRecommendations(id).then((node) => { if (node) recommendationsMount.replaceChildren(node); });
-          if (data.aiReportBundle ?? result.aiReportBundle) {
-            aiMount.replaceChildren(renderAIReportCard(data.aiReportBundle ?? result.aiReportBundle, () => generateAIReport(id, aiMount)));
+          if (data.aiReportBundle) {
+            aiMount.replaceChildren(renderAIReportCard(data.aiReportBundle, () => generateAIReport(id, aiMount)));
           } else {
             generateAIReport(id, aiMount);
           }
@@ -812,9 +760,9 @@
               data.items.length ? el("div", { class: "list" }, data.items.map((item) => {
                 const button = actionButton("打开报告", () => navigate(`/reports/${item.id}`));
                 return el("div", { class: "item", "data-testid": "history-item" }, [
-                  el("div", { class: "card-head" }, [el("strong", { text: item.question || "(empty question)" }), chip(item.type)]),
+                  el("div", { class: "card-head" }, [el("strong", { text: item.question || "未填写问题" }), chip(displayReportType(item.type))]),
                   el("p", { text: `${item.chart.originalHexagram?.name_zh ?? "-"} → ${item.chart.changedHexagram?.name_zh ?? "-"}` }),
-                  el("div", { class: "meta" }, [chip(new Date(item.createdAt).toLocaleString()), chip(`${item.evidenceCount} evidence`)]),
+                  el("div", { class: "meta" }, [chip(new Date(item.createdAt).toLocaleString()), chip(`${item.evidenceCount} 条依据`)]),
                   el("div", { class: "actions" }, [button])
                 ]);
               })) : el("div", { class: "empty", text: "暂无历史记录。" })
@@ -976,7 +924,7 @@
 
       function renderTrustPage(kind) {
         const copy = {
-          "/how-it-works": ["如何工作", "系统先做确定性排盘，再用 CORE_V1 生成证据化报告；AI 只在已校验事实内改写表达，失败时回到 deterministic fallback。"],
+          "/how-it-works": ["如何工作", "系统先做确定性排盘，再用生产规则白名单生成证据化报告；智能解读只在已校验事实内改写表达，失败时回到确定性降级报告。"],
           "/why-trust-this": ["为什么可信", "可信边界来自 CAL_STD_V1、CORE_V1 白名单、Schema/Fidelity/Safety 校验，以及不保证结果的限制说明。"],
           "/privacy": ["隐私", "问题会发送到服务端用于当前排盘与报告生成；浏览器本地保存历史；服务端普通日志不记录完整问题、Prompt 或 AI 输出。"],
           "/terms": ["条款", "本服务处于 Beta 准备阶段，仅供文化、娱乐和自我反思参考；服务可能变更或中断，不得用于违法用途。"],
