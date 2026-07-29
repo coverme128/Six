@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ReportType {
+  LIUYAO
+  MEIHUA
+}
+
+enum AnalysisStatus {
+  QUEUED
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum ContentStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+}
+
+model AnonymousDevice {
+  id        String   @id @default(cuid())
+  deviceId  String   @unique
+  createdAt DateTime @default(now())
+  reports   Report[]
+
+  @@map("anonymous_devices")
+}
+
+model Report {
+  id            String           @id
+  type          ReportType
+  question      String
+  chartHash     String
+  result        Json
+  narrativeReport Json?          @map("narrative_report")
+  aiReport      Json?
+  experience    Json?
+  status        AnalysisStatus   @default(COMPLETED)
+  deviceId      String?
+  device        AnonymousDevice? @relation(fields: [deviceId], references: [id])
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([type, createdAt])
+  @@map("reports")
+}
+
+model ContentEntry {
+  id          String        @id
+  type        String
+  slug        String
+  title       String
+  summary     String
+  status      ContentStatus @default(DRAFT)
+  payload     Json
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@unique([type, slug])
+  @@map("content_entries")
+}
+
+model UsageEvent {
+  id        String   @id @default(cuid())
+  eventType String
+  subjectId String?
+  metadata  Json
+  createdAt DateTime @default(now())
+
+  @@index([eventType, createdAt])
+  @@map("usage_events")
+}
+
+model AppSetting {
+  key       String   @id
+  value     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("app_settings")
+}

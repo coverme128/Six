@@ -1,0 +1,10 @@
+declare module "@six/domain/ai-report";
+declare module "@six/domain/calendar";
+declare module "@six/domain/content-framework";
+declare module "@six/domain/data-store";
+declare module "@six/domain/knowledge";
+declare module "@six/domain/liuyao";
+declare module "@six/domain/meihua";
+declare module "@six/domain/presentation";
+declare module "@six/domain/production";
+declare module "@six/domain/report-builder";

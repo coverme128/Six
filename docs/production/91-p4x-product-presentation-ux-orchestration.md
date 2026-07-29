@@ -108,7 +108,7 @@ No payment, entitlement, login, or RBAC is introduced.
 
 ## UX QA
 
-`npm run validate:experience` covers:
+`pnpm run validate:experience` covers:
 
 ```text
 Internal leakage scan
@@ -126,12 +126,12 @@ The public report page now leads with the conclusion and next actions, folds pro
 Run:
 
 ```bash
-npm run validate:experience
-npm run validate
-npm run test:e2e
+pnpm run validate:experience
+pnpm run validate
+pnpm run test:e2e
 ```
 
-`npm run smoke:ai:live` remains dependent on `OPENAI_API_KEY`; without the key it should skip rather than block local P4-X validation.
+`pnpm run smoke:ai:live` remains dependent on `OPENAI_API_KEY`; without the key it should skip rather than block local P4-X validation.
 
 ## Deferred Scope
 

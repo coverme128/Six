@@ -78,7 +78,7 @@ The manifest must include `schemaVersion`, `packageVersion`, file list, file kin
 Run:
 
 ```bash
-npm run validate:p4-framework
+pnpm run validate:p4-framework
 ```
 
 The command aggregates CORE_V1, CAL_STD_V1, AI schema/fidelity/safety unit tests, synthetic content import rehearsal, content QA, SEO checks, and Playwright desktop/mobile regression.

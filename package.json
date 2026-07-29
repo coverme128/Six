@@ -1,12 +1,22 @@
 {
-  "name": "six-core-v1",
+  "name": "six-professional-v2",
   "version": "1.3.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "dev": "node src/server.mjs",
-    "start": "node src/server.mjs",
-    "test": "node --test tests/*.test.mjs",
+    "dev": "turbo run dev --parallel",
+    "dev:web": "pnpm --filter @six/web dev",
+    "dev:admin": "pnpm --filter @six/admin dev",
+    "dev:api": "pnpm --filter @six/api dev",
+    "dev:worker": "pnpm --filter @six/worker dev",
+    "dev:legacy": "node src/server.mjs",
+    "start": "pnpm run dev:api",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:legacy": "node --test tests/*.test.mjs",
     "test:e2e": "playwright test",
     "test:ai": "node --test tests/ai-report.test.mjs",
     "test:contract": "node --test tests/api-contract.test.mjs",
@@ -22,18 +32,33 @@
     "content:qa": "node scripts/content/manage.mjs qa",
     "content:rehearsal": "node scripts/content/manage.mjs rehearsal",
     "smoke:ai:live": "node scripts/ai/live-smoke.mjs",
-    "validate:p1": "npm run fixtures:calendar && npm run validate",
-    "validate:p2": "npm run validate:p1 && npm run test:e2e",
-    "validate:p4-framework": "npm run validate && npm run content:rehearsal && npm run content:qa && npm run content:seo && npm run test:e2e",
-    "validate:experience": "npm run test:experience && playwright test tests/e2e/experience.spec.mjs",
-    "validate:w1": "npm run validate && npm run test:e2e",
+    "validate:p1": "pnpm run fixtures:calendar && pnpm run validate",
+    "validate:p2": "pnpm run validate:p1 && pnpm run test:e2e",
+    "validate:p4-framework": "pnpm run validate && pnpm run content:rehearsal && pnpm run content:qa && pnpm run content:seo && pnpm run test:e2e",
+    "validate:experience": "pnpm run test:experience && playwright test tests/e2e/experience.spec.mjs",
+    "validate:w1": "pnpm run validate && pnpm run test:e2e",
     "validate:v13": "python3 scripts/production/validate_v13_core.py",
-    "validate": "npm run validate:v13 && npm test"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.62.0"
+    "validate": "pnpm run validate:v13 && pnpm run test:legacy",
+    "db:generate": "PRISMA_ENGINES_CACHE_DIR=./.prisma-cache pnpm --filter @six/database db:generate",
+    "db:migrate": "PRISMA_ENGINES_CACHE_DIR=./.prisma-cache pnpm --filter @six/database db:migrate",
+    "db:seed": "pnpm --filter @six/database db:seed"
   },
   "dependencies": {
     "lunar-javascript": "^1.7.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "@vitest/coverage-v8": "2.1.9",
+    "eslint": "^9.18.0",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
   }
 }

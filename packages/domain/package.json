@@ -1,0 +1,27 @@
+{
+  "name": "@six/domain",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./ai-report": "./src/domain/aiReport.mjs",
+    "./calendar": "./src/domain/calendar.mjs",
+    "./content-framework": "./src/domain/contentFramework.mjs",
+    "./data-store": "./src/domain/dataStore.mjs",
+    "./knowledge": "./src/domain/knowledge.mjs",
+    "./liuyao": "./src/domain/liuyaoEngine.mjs",
+    "./meihua": "./src/domain/meihuaEngine.mjs",
+    "./presentation": "./src/domain/presentation/index.mjs",
+    "./production": "./src/production/index.mjs",
+    "./report-builder": "./src/domain/reportBuilder.mjs"
+  },
+  "scripts": {
+    "build": "node --check src/domain/liuyaoEngine.mjs && node --check src/domain/meihuaEngine.mjs && node --check src/domain/presentation/index.mjs",
+    "lint": "node --check src/domain/liuyaoEngine.mjs",
+    "typecheck": "node --check src/domain/liuyaoEngine.mjs",
+    "test": "cd ../.. && node --test tests/deterministic-engine.test.mjs tests/report-and-ai.test.mjs tests/presentation.test.mjs"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7"
+  }
+}

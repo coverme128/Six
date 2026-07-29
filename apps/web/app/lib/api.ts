@@ -1,0 +1,119 @@
+export type DivinationMode = "liuyao" | "meihua";
+
+export type GuidedViewModel = {
+  headline?: string;
+  summary?: string;
+  currentSituation?: string;
+  changeDirection?: string;
+  timingHint?: string;
+  recommendedActions?: string[];
+  mainSupports?: Array<{ title?: string; text?: string }>;
+  mainRisks?: Array<{ title?: string; text?: string }>;
+};
+
+export type ProfessionalViewModel = {
+  method?: string;
+  chartSummary?: {
+    title?: string;
+    originalHexagram?: string;
+    changedHexagram?: string;
+    mutualHexagram?: string | null;
+    movingLines?: number[];
+    worldLine?: number | null;
+    responseLine?: number | null;
+    bodyTrigram?: string | null;
+    useTrigram?: string | null;
+    relationship?: string | null;
+  };
+  relationships?: Array<{ title?: string; text?: string }>;
+  evidenceGroups?: {
+    supports?: Array<{ title?: string; text?: string }>;
+    risks?: Array<{ title?: string; text?: string }>;
+    other?: Array<{ title?: string; text?: string }>;
+  };
+  timingCandidates?: Array<{ title?: string; text?: string }>;
+  knowledgeRefs?: Array<{ id?: string; title?: string }>;
+};
+
+export type ExperienceResponse = {
+  id: string;
+  type: DivinationMode;
+  createdAt?: string;
+  persistence?: string;
+  aiReportBundle?: {
+    reportSource?: string;
+    validationStatus?: string;
+    fallbackUsed?: boolean;
+    generatedAt?: string;
+    latencyMs?: number;
+    aiReport?: {
+      summary?: string;
+      currentSituation?: string;
+      changeDirection?: string;
+      actionSuggestions?: string[];
+      disclaimer?: string;
+    } | null;
+  } | null;
+  experience?: {
+    guidedViewModel?: GuidedViewModel;
+    professionalViewModel?: ProfessionalViewModel;
+  };
+};
+
+export type ReportSummary = {
+  id: string;
+  type: DivinationMode;
+  question: string;
+  chartHash: string;
+  createdAt: string;
+  persistence?: string;
+};
+
+export type ContentSummary = {
+  contentId: string;
+  contentType: string;
+  title: string;
+  slug: string;
+  canonicalPath?: string;
+  summary?: string;
+  domain?: string;
+  category?: string;
+  difficulty?: string;
+  reviewStatus?: string;
+};
+
+export type ContentDetail = ContentSummary & {
+  body?: unknown;
+  tags?: string[];
+  sourceRefs?: Array<{ title?: string; url?: string }>;
+  knownLimitations?: string[];
+  relatedContentIds?: string[];
+  relatedKnowledgeIds?: string[];
+};
+
+export type PublicSettings = {
+  timezone: string;
+  defaultCastMethod: "liuyao_manual" | "meihua_two_number";
+  terminology: "beginner" | "professional";
+  reportLanguage: "zh-CN" | "en-US";
+};
+
+export type ApiErrorResponse = {
+  message?: string | string[];
+  code?: string;
+  error?: string;
+};
+
+export function apiBase() {
+  return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000/api/v1";
+}
+
+export async function readError(response: Response) {
+  try {
+    const body = (await response.json()) as ApiErrorResponse;
+    const message = Array.isArray(body.message) ? body.message[0] : body.message;
+    return message ?? body.error ?? "请求失败";
+  } catch {
+    return "请求失败";
+  }
+}

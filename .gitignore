@@ -1,7 +1,17 @@
 node_modules/
+.pnpm-store/
+.turbo/
+.next/
+dist/
+*.tsbuildinfo
 test-results/
 playwright-report/
 data/runtime/*.json
 .env
 .env.*
 !.env.example
+apps/*/.next/
+apps/*/.turbo/
+apps/*/dist/
+packages/*/.turbo/
+packages/*/dist/

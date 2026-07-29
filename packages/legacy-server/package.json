@@ -1,0 +1,16 @@
+{
+  "name": "@six/legacy-server",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../src/server.mjs",
+    "build": "node --check ../../src/server.mjs",
+    "lint": "node --check ../../src/server.mjs",
+    "typecheck": "node --check ../../src/server.mjs",
+    "test": "cd ../.. && node --test tests/api-contract.test.mjs"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7"
+  }
+}

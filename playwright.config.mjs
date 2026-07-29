@@ -14,7 +14,7 @@ export default defineConfig({
   timeout: 45_000,
   expect: { timeout: 10_000 },
   webServer: {
-    command: "PORT=3100 npm run dev",
+    command: "PORT=3100 pnpm run dev:legacy",
     url: `${baseURL}/api/metadata`,
     reuseExistingServer: !process.env.CI,
     timeout: 20_000,
