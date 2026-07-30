@@ -4,11 +4,35 @@ export type GuidedViewModel = {
   headline?: string;
   summary?: string;
   currentSituation?: string;
+  observationFocus?: ObservationFocus | null;
   changeDirection?: string;
   timingHint?: string;
   recommendedActions?: string[];
   mainSupports?: Array<{ title?: string; text?: string }>;
   mainRisks?: Array<{ title?: string; text?: string }>;
+};
+
+export type ObservationFocus = {
+  summary?: string;
+  selectionSource?: string;
+  userEditable?: string;
+  roles?: Array<{
+    label?: string;
+    meaning?: string;
+    importance?: string;
+    lines?: Array<{
+      position?: number;
+      branchName?: string;
+      sixRelationName?: string;
+      moving?: boolean;
+      isWorld?: boolean;
+      isResponse?: boolean;
+      isVoid?: boolean;
+      monthText?: string;
+      dayText?: string;
+      changedText?: string;
+    }>;
+  }>;
 };
 
 export type ProfessionalViewModel = {
@@ -25,6 +49,7 @@ export type ProfessionalViewModel = {
     useTrigram?: string | null;
     relationship?: string | null;
   };
+  observationFocus?: ObservationFocus | null;
   relationships?: Array<{ title?: string; text?: string }>;
   evidenceGroups?: {
     supports?: Array<{ title?: string; text?: string }>;
@@ -43,17 +68,30 @@ export type LiuyaoChartViewModel = {
   movingLines?: number[];
   worldLine?: number | null;
   responseLine?: number | null;
+  observationFocus?: ObservationFocus | null;
   lines?: Array<{
     position?: number;
     value?: number;
     yinYang?: string;
     moving?: boolean;
+    stem?: string;
     sixRelationName?: string;
     sixSpiritName?: string;
     branchName?: string;
+    elementName?: string;
     isWorld?: boolean;
     isResponse?: boolean;
     isVoid?: boolean;
+    monthInfluence?: string;
+    dayInfluence?: string;
+    changed?: {
+      stem?: string;
+      branchName?: string;
+      elementName?: string;
+      sixRelationName?: string;
+      returnInfluence?: string;
+      returnInfluenceName?: string;
+    };
   }>;
 };
 

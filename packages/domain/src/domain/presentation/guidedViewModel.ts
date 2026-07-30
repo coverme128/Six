@@ -12,6 +12,12 @@ function publicSignal(signal) {
   };
 }
 
+function buildSummary(facts, supports, risks) {
+  const supportText = supports[0]?.text ?? "盘面中已有可用的支持条件。";
+  const riskText = risks[0]?.text ?? "暂无特别突出的单一阻碍。";
+  return `${supportText} ${riskText} 建议先看结论与下一步，再按需展开专业依据。`;
+}
+
 export function buildGuidedViewModel(facts) {
   const supports = guidedSignals(deduplicateSignals(facts.positiveSignals)).slice(0, 4).map(publicSignal);
   const risks = guidedSignals(deduplicateSignals(facts.negativeSignals)).slice(0, 4).map(publicSignal);
@@ -22,8 +28,17 @@ export function buildGuidedViewModel(facts) {
     reportType: facts.resultType === "MEIHUA" ? "梅花" : "六爻",
     question: facts.question,
     headline: assembleHeadline(facts),
-    summary: facts.situation.headline,
+    summary: buildSummary(facts, supports, risks),
     currentSituation: facts.situation.currentSituation,
+    observationFocus: facts.observationFocus ? {
+      summary: facts.observationFocus.summary,
+      roles: facts.observationFocus.roles.slice(0, 4).map((role) => ({
+        label: role.label,
+        meaning: role.meaning,
+        importance: role.importance,
+        lines: role.lines.slice(0, 3),
+      })),
+    } : null,
     mainSupports: supports,
     mainRisks: risks,
     changeDirection: facts.situation.changeDirection,

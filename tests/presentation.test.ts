@@ -42,9 +42,42 @@ test("Experience bundle builds guided and professional viewmodels without admin 
   assert.equal(bundle.adminViewModel, undefined);
   assert.equal(bundle.pageExperience.visualHierarchy.Admin, undefined);
   const publicText = JSON.stringify({ guided: bundle.guidedViewModel, professional: bundle.professionalViewModel });
-  for (const forbidden of ["AI_REPORT_V1", "OPENAI_LIVE", "promptVersion", "requestId", "ruleFindingId", "subject_state"]) {
+  for (const forbidden of [
+    "AI_REPORT_V1",
+    "OPENAI_LIVE",
+    "promptVersion",
+    "requestId",
+    "ruleFindingId",
+    "subject_state",
+    "Candidate window",
+    "officer_ghost",
+    "CORE_V1_REPORT_TEMPLATE_LIGHT",
+    "月建关系作为时间环境证据",
+    "日辰关系作为短期压力",
+  ]) {
     assert.ok(!publicText.includes(forbidden), forbidden);
   }
+  assert.match(bundle.guidedViewModel.timingHint, /不是保证日期/u);
+  assert.ok(bundle.professionalViewModel.knowledgeRefs.every((item) => /卦$/u.test(item.title)));
+});
+
+test("Liuyao scene selection drives automatic observation focus without user yongshen confirmation", () => {
+  const result = createLiuyaoChart({
+    question: "这笔收入能否顺利到账？",
+    topic: "wealth",
+    subtype: "income",
+    values: [7, 8, 9, 7, 8, 6],
+    calendar: { timezone: "Asia/Shanghai" },
+  });
+  result.narrativeReport = buildLiuyaoReport(result);
+  const bundle = buildExperienceBundle({ result, type: "liuyao" });
+  const publicText = JSON.stringify({ guided: bundle.guidedViewModel, professional: bundle.professionalViewModel });
+
+  assert.match(bundle.guidedViewModel.observationFocus.summary, /妻财/u);
+  assert.match(bundle.guidedViewModel.observationFocus.summary, /世爻/u);
+  assert.ok(!publicText.includes("job_search"));
+  assert.ok(!publicText.includes("officer_ghost"));
+  assert.ok(!publicText.includes("请确认用神"));
 });
 
 test("Admin viewmodel is only present when explicitly requested", () => {

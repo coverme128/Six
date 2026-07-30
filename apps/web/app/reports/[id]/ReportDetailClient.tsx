@@ -25,6 +25,9 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     "## 当前局势",
     guided?.currentSituation ?? "",
     "",
+    "## 观察重点",
+    guided?.observationFocus?.summary ?? "",
+    "",
     "## 变化方向",
     guided?.changeDirection ?? "",
     "",
@@ -85,6 +88,17 @@ function HexagramLine({ yinYang, moving }: { yinYang?: string; moving?: boolean 
       )}
     </span>
   );
+}
+
+function LineTags({ line }: { line: NonNullable<Extract<ChartViewModel, { type: "liuyao" }>["lines"]>[number] }) {
+  const tags = [
+    line.branchName ? `${line.stem ?? ""}${line.branchName}${line.elementName ? ` / ${line.elementName}` : ""}` : "",
+    line.isWorld ? "世" : "",
+    line.isResponse ? "应" : "",
+    line.isVoid ? "空" : "",
+    line.moving ? "动" : ""
+  ].filter(Boolean);
+  return <small>{tags.join(" / ") || "-"}</small>;
 }
 
 function ChartPanel({ chart }: { chart?: ChartViewModel }) {
@@ -150,12 +164,11 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
               <strong>
                 {line.sixSpiritName ?? "-"} / {line.sixRelationName ?? "-"}
               </strong>
+              <LineTags line={line} />
               <small>
-                {line.branchName ?? "-"}
-                {line.isWorld ? " / 世" : ""}
-                {line.isResponse ? " / 应" : ""}
-                {line.isVoid ? " / 空" : ""}
-                {line.moving ? " / 动" : ""}
+                {line.monthInfluence ? `月：${line.monthInfluence}` : "月：-"}
+                {line.dayInfluence ? ` / 日：${line.dayInfluence}` : ""}
+                {line.moving && line.changed?.returnInfluenceName ? ` / ${line.changed.returnInfluenceName}` : ""}
               </small>
             </div>
           ))}
@@ -262,9 +275,20 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
 
       {guided ? (
         <section className="panel report-section">
-          <h2>一句话结论</h2>
-          <p className="section-kicker">先理解当前判断，再查看关键因素；专业盘面和证据放在后面。</p>
+          <h2>结论摘要</h2>
+          <p className="section-kicker">先看判断含义和下一步，专业盘面与证据用于复核来源。</p>
           <div className="preview-grid">
+            {guided.observationFocus ? (
+              <div>
+                <h3>观察重点</h3>
+                <p>{guided.observationFocus.summary}</p>
+                {(guided.observationFocus.roles ?? []).slice(0, 3).map((role) => (
+                  <p key={`${role.label}-${role.importance}`}>
+                    {role.label}：{role.meaning}
+                  </p>
+                ))}
+              </div>
+            ) : null}
             <div>
               <h3>当前局势</h3>
               <p>{guided.currentSituation}</p>
@@ -356,7 +380,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       {professional ? (
         <section className="panel report-section" id="professional-evidence">
           <h2>专业依据</h2>
-          <p className="section-kicker">这里用于复核“为什么这样判断”。默认先看摘要，完整证据按需展开。</p>
+          <p className="section-kicker">这里用于复核判断来源。默认收起细节，需要时再展开。</p>
           <div className="fact-strip">
             <span>{professional.method}</span>
             <span>{professional.chartSummary?.title}</span>
@@ -364,6 +388,34 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               <span>动爻 {professional.chartSummary.movingLines.join(", ")}</span>
             ) : null}
           </div>
+          {professional.observationFocus ? (
+            <details className="evidence-details" open>
+              <summary>本次观察重点</summary>
+              <div className="preview-grid">
+                {(professional.observationFocus.roles ?? []).map((role) => (
+                  <div key={`${role.label}-${role.importance}`}>
+                    <h3>{role.label}</h3>
+                    <p>{role.meaning}</p>
+                    {role.lines?.length ? (
+                      role.lines.map((line) => (
+                        <p key={`${role.label}-${line.position}`}>
+                          第 {line.position} 爻
+                          {line.branchName ? ` / ${line.branchName}` : ""}
+                          {line.moving ? " / 动" : ""}
+                          {line.isWorld ? " / 世" : ""}
+                          {line.isResponse ? " / 应" : ""}
+                          {line.isVoid ? " / 空" : ""}
+                        </p>
+                      ))
+                    ) : (
+                      <p>本盘未见对应爻位，需结合世应与动爻观察。</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="empty">观察重点由系统按场景自动确定；专业模式后续可开放自定义，不作为普通用户必经步骤。</p>
+            </details>
+          ) : null}
           <details className="evidence-details">
             <summary>查看完整证据</summary>
             <div className="preview-grid">

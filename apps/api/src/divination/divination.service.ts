@@ -13,18 +13,29 @@ function chartHashOf(result: any): string {
   return result?.chart?.chartHash ?? "";
 }
 
+function publicCreatedReport(record: PublicReportRecord) {
+  return {
+    id: record.id,
+    type: record.type,
+    question: record.question,
+    chartHash: record.chartHash,
+    createdAt: record.createdAt,
+    persistence: record.persistence
+  };
+}
+
 @Injectable()
 export class DivinationService {
   constructor(@Inject(ReportStoreService) private readonly reportStore: ReportStoreService) {}
 
   async createLiuyao(input: LiuyaoChartRequest) {
     const result = createLiuyaoChart(input, process.env.SIX_ROOT);
-    return this.storeReport("liuyao", result);
+    return publicCreatedReport(await this.storeReport("liuyao", result));
   }
 
   async createMeihua(input: MeihuaChartRequest) {
     const result = createMeihuaChart(input, process.env.SIX_ROOT);
-    return this.storeReport("meihua", result);
+    return publicCreatedReport(await this.storeReport("meihua", result));
   }
 
   async createDemo() {
@@ -39,7 +50,7 @@ export class DivinationService {
       process.env.SIX_ROOT
     );
     const record = await this.storeReport("liuyao", result);
-    return { ...record, requestId: randomUUID() };
+    return { ...publicCreatedReport(record), requestId: randomUUID() };
   }
 
   private async storeReport(type: DivinationType, result: any): Promise<PublicReportRecord> {

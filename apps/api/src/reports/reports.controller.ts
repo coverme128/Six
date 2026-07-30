@@ -4,10 +4,7 @@ import { buildExperienceBundle } from "@six/domain/presentation";
 import { AiReportService } from "../ai/ai-report.service.js";
 import { ReportStoreService } from "./report-store.service.js";
 import type { DivinationType, PublicReportRecord } from "./report.types.js";
-
-function objectValue(value: unknown): Record<string, unknown> {
-  return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
-}
+import { objectValue, publicExperience, publicObservationFocus } from "./public-experience.js";
 
 function text(value: unknown): string | undefined {
   return typeof value === "string" && value.trim() ? value : undefined;
@@ -84,12 +81,24 @@ function publicChartView(report: PublicReportRecord) {
       value: line.sum,
       yinYang: bitText(line.originalBit) === "1" ? "阳" : "阴",
       moving: Boolean(line.moving),
+      stem: text(line.stem),
       sixRelationName: text(line.sixRelationName),
       sixSpiritName: text(line.sixSpiritName),
       branchName: text(line.branchName),
+      elementName: text(line.elementName),
       isWorld: Boolean(line.isWorld),
       isResponse: Boolean(line.isResponse),
-      isVoid: Boolean(line.isVoid)
+      isVoid: Boolean(line.isVoid),
+      monthInfluence: objectValue(line.monthInfluence).text,
+      dayInfluence: objectValue(line.dayInfluence).text,
+      changed: {
+        stem: text(objectValue(line.changed).stem),
+        branchName: text(objectValue(line.changed).branchName),
+        elementName: text(objectValue(line.changed).elementName),
+        sixRelationName: text(objectValue(line.changed).sixRelationName),
+        returnInfluence: text(objectValue(objectValue(line.changed).returnInfluence).text),
+        returnInfluenceName: text(objectValue(objectValue(line.changed).returnInfluence).name)
+      }
     };
   }) : [];
 
@@ -101,6 +110,7 @@ function publicChartView(report: PublicReportRecord) {
     movingLines: Array.isArray(chart.movingLines) ? chart.movingLines : [],
     worldLine: objectValue(chart.worldResponse).worldLine,
     responseLine: objectValue(chart.worldResponse).responseLine,
+    observationFocus: publicObservationFocus(chart.observationFocus),
     lines
   };
 }
@@ -184,7 +194,7 @@ export class ReportsController {
       persistence: report.persistence,
       aiReportBundle: report.aiReportBundle,
       chartViewModel: publicChartView(report),
-      experience: report.experience
+      experience: publicExperience(report.experience)
     };
   }
 

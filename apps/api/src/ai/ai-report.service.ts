@@ -9,6 +9,7 @@ import { buildExperienceBundle } from "@six/domain/presentation";
 import { enqueueAIReportJob } from "@six/queue";
 
 import { ReportStoreService } from "../reports/report-store.service.js";
+import { publicExperience } from "../reports/public-experience.js";
 
 type GenerateAIOptions = {
   language?: "zh-CN" | "en-US";
@@ -111,7 +112,7 @@ export class AiReportService {
       reportType: updated.type,
       persistence: updated.persistence,
       aiReportBundle,
-      experience: updated.experience
+      experience: publicExperience(updated.experience)
     };
   }
 }

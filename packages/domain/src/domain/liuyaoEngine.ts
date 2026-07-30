@@ -19,6 +19,43 @@ const RELATION_ZH = {
   officer_ghost: "官鬼",
 };
 
+const OBSERVATION_ZH = {
+  sibling: "兄弟",
+  parent: "父母",
+  child: "子孙",
+  child_grandchild: "子孙",
+  wealth: "妻财",
+  officer_ghost: "官鬼",
+  world: "世爻",
+  response: "应爻",
+};
+
+const OBSERVATION_MEANING = {
+  sibling: "竞争、同辈、消耗或同类力量",
+  parent: "文书、流程、凭据、保护条件",
+  child: "结果表现、释放压力、产出与反馈",
+  child_grandchild: "结果表现、释放压力、产出与反馈",
+  wealth: "收益、资源、现实可得之物",
+  officer_ghost: "目标压力、职位、约束、规则或风险",
+  world: "当事人自身状态与主动性",
+  response: "对方、外部回应或事件对象",
+};
+
+const CLASH_PAIRS = new Map([
+  ["zi", "wu"],
+  ["wu", "zi"],
+  ["chou", "wei"],
+  ["wei", "chou"],
+  ["yin", "shen"],
+  ["shen", "yin"],
+  ["mao", "you"],
+  ["you", "mao"],
+  ["chen", "xu"],
+  ["xu", "chen"],
+  ["si", "hai"],
+  ["hai", "si"],
+]);
+
 function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
@@ -74,6 +111,49 @@ function elementRelation(selfElement, targetElement, elementByCode) {
   return "unknown";
 }
 
+function relationMeaning(relation, actorLabel, targetLabel) {
+  const labels = {
+    sibling: `${actorLabel}与${targetLabel}同气`,
+    parent: `${actorLabel}生扶${targetLabel}`,
+    child: `${targetLabel}泄于${actorLabel}`,
+    wealth: `${targetLabel}受${actorLabel}制`,
+    officer_ghost: `${actorLabel}克制${targetLabel}`,
+    unknown: `${actorLabel}与${targetLabel}关系待定`,
+  };
+  return labels[relation] ?? labels.unknown;
+}
+
+function branchInfluence(actorBranchCode, actorBranchName, targetLine, idx) {
+  const actorBranch = idx.branchByCode.get(actorBranchCode);
+  if (!actorBranch || !targetLine?.element) {
+    return { relation: "unknown", relationName: "待定", isSame: false, isClash: false, text: `${actorBranchName ?? "时间"}作用待定` };
+  }
+  const relation = elementRelation(actorBranch.element, targetLine.element, idx.elementByCode);
+  const isSame = actorBranchCode === targetLine.branch;
+  const isClash = CLASH_PAIRS.get(actorBranchCode) === targetLine.branch;
+  const relationName = isClash ? "冲" : (isSame ? "同支" : (RELATION_ZH[relation] ?? relation));
+  const prefix = actorBranchName ?? actorBranch.name_zh;
+  const action = isClash ? `${prefix}冲${targetLine.branchName}` : relationMeaning(relation, prefix, targetLine.branchName);
+  return {
+    relation,
+    relationName,
+    isSame,
+    isClash,
+    text: action,
+  };
+}
+
+function returnInfluence(originalLine, changedLine, idx) {
+  if (!originalLine?.element || !changedLine?.element || originalLine.branch === changedLine.branch) {
+    return { code: "unchanged", name: "不变", text: "本爻纳支未变。" };
+  }
+  const changedToOriginal = elementRelation(changedLine.element, originalLine.element, idx.elementByCode);
+  if (changedToOriginal === "parent") return { code: "return_generate", name: "回头生", text: `变爻${changedLine.branchName}生扶原爻${originalLine.branchName}。` };
+  if (changedToOriginal === "officer_ghost") return { code: "return_control", name: "回头克", text: `变爻${changedLine.branchName}克制原爻${originalLine.branchName}。` };
+  if (changedToOriginal === "sibling") return { code: "return_same", name: "回头同气", text: `变爻${changedLine.branchName}与原爻${originalLine.branchName}同气。` };
+  return { code: changedToOriginal, name: RELATION_ZH[changedToOriginal] ?? "回头关系", text: relationMeaning(changedToOriginal, changedLine.branchName, originalLine.branchName) };
+}
+
 function rotateSpirit(start, position, spirits) {
   const sequence = spirits.sequence;
   const index = sequence.indexOf(start);
@@ -98,6 +178,86 @@ function lineNajia(trigramCode, isOuter, lineIndex, najia) {
   };
 }
 
+function buildLineNajiaFacts({ mapped, hexagram, palaceElement, idx, data }) {
+  return mapped.map((line) => {
+    const isOuter = line.position > 3;
+    const trigramCode = isOuter ? hexagram.upper_trigram : hexagram.lower_trigram;
+    const najia = lineNajia(trigramCode, isOuter, (line.position - 1) % 3, data.najia);
+    const branch = idx.branchByCode.get(najia.branch);
+    const relation = elementRelation(palaceElement, branch.element, idx.elementByCode);
+    return {
+      ...line,
+      trigram: trigramCode,
+      stem: najia.stem,
+      branch: najia.branch,
+      branchName: branch.name_zh,
+      element: branch.element,
+      elementName: idx.elementByCode.get(branch.element)?.name_zh ?? branch.element,
+      sixRelation: relation,
+      sixRelationName: RELATION_ZH[relation] ?? relation,
+    };
+  });
+}
+
+function normalizeObservationRole(role) {
+  return role === "child_grandchild" ? "child" : role;
+}
+
+function matchingLinesForRole(role, lines) {
+  const normalized = normalizeObservationRole(role);
+  if (normalized === "world") return lines.filter((line) => line.isWorld);
+  if (normalized === "response") return lines.filter((line) => line.isResponse);
+  return lines.filter((line) => line.sixRelation === normalized);
+}
+
+function buildObservationFocus({ chart, yongshen }) {
+  if (!yongshen) {
+    return {
+      topic: chart.topic,
+      subtype: chart.subtype,
+      primary: [],
+      secondary: [],
+      roles: [],
+      summary: "系统暂未命中明确场景，先以世爻、应爻和动爻观察本次问题。",
+      selectionSource: "system_default",
+    };
+  }
+  const primary = yongshen.primary ?? [];
+  const secondary = yongshen.secondary ?? [];
+  const roles = [...primary, ...secondary].slice(0, 6).map((role, index) => {
+    const lines = matchingLinesForRole(role, chart.lines).map((line) => ({
+      position: line.position,
+      branchName: line.branchName,
+      sixRelationName: line.sixRelationName,
+      isWorld: line.isWorld,
+      isResponse: line.isResponse,
+      moving: line.moving,
+      isVoid: line.isVoid,
+      monthInfluence: line.monthInfluence,
+      dayInfluence: line.dayInfluence,
+      changed: line.changed,
+    }));
+    return {
+      role,
+      label: OBSERVATION_ZH[role] ?? role,
+      meaning: OBSERVATION_MEANING[role] ?? "本次问题的观察对象",
+      importance: index < primary.length ? "primary" : "secondary",
+      lines,
+    };
+  });
+  const labels = roles.map((item) => item.label).filter(Boolean);
+  return {
+    topic: chart.topic,
+    subtype: chart.subtype,
+    primary,
+    secondary,
+    roles,
+    summary: labels.length ? `系统按问题场景自动聚焦：${labels.join("、")}。` : "系统已自动确定本次观察重点。",
+    selectionSource: "system_auto",
+    userEditable: "professional_mode_only",
+  };
+}
+
 function hexagramFromBits(bits, idx) {
   const hex = idx.hexagramByBits.get(bits);
   assert(hex, `Cannot find hexagram for bits ${bits}.`);
@@ -119,9 +279,20 @@ function evaluateCoreFindings({ bundle, chart, topic, subtype }) {
       rule_version: bundle.profile.version,
       output_role: "FACT",
       dimension: "target_state",
-      summary: `用神建议：${[...(yongshen.primary ?? []), ...(yongshen.secondary ?? [])].slice(0, 4).join(" / ")}`,
+      summary: chart.observationFocus?.summary ?? "系统已自动确定本次观察重点。",
       evidence_kind: "direct_target_fact",
-      input_facts: { topic, subtype },
+      input_facts: {
+        topic,
+        subtype,
+        primary: yongshen.primary ?? [],
+        secondary: yongshen.secondary ?? [],
+        roles: chart.observationFocus?.roles?.map((item) => ({
+          label: item.label,
+          importance: item.importance,
+          linePositions: item.lines.map((line) => line.position),
+        })) ?? [],
+        selectionSource: chart.observationFocus?.selectionSource ?? "system_auto",
+      },
     });
   }
 
@@ -218,28 +389,35 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
   const startSpirit = data.sixSpirits.day_stem_start[calendar.dayStem] ?? "qinglong";
   const voidBranches = xunVoid(calendar.dayPillar, data.xunKong, data.sexagenary);
 
-  const lines = mapped.map((line) => {
-    const isOuter = line.position > 3;
-    const trigramCode = isOuter ? originalHexagram.upper_trigram : originalHexagram.lower_trigram;
-    const najia = lineNajia(trigramCode, isOuter, (line.position - 1) % 3, data.najia);
-    const branch = idx.branchByCode.get(najia.branch);
-    const relation = elementRelation(palace.palace_element, branch.element, idx.elementByCode);
+  const originalNajiaLines = buildLineNajiaFacts({ mapped, hexagram: originalHexagram, palaceElement: palace.palace_element, idx, data });
+  const changedNajiaLines = buildLineNajiaFacts({ mapped, hexagram: changedHexagram, palaceElement: palace.palace_element, idx, data });
+
+  const lines = originalNajiaLines.map((line, index) => {
     const spiritCode = rotateSpirit(startSpirit, line.position, data.sixSpirits);
     const spirit = data.sixSpirits.items.find((item) => item.code === spiritCode);
+    const changed = changedNajiaLines[index];
+    const monthInfluence = branchInfluence(calendar.monthBranch, calendar.monthBuild?.branchName, line, idx);
+    const dayInfluence = branchInfluence(calendar.dayBranch, calendar.dayChen?.branchName, line, idx);
+    const changedFact = {
+      stem: changed.stem,
+      branch: changed.branch,
+      branchName: changed.branchName,
+      element: changed.element,
+      elementName: changed.elementName,
+      sixRelation: changed.sixRelation,
+      sixRelationName: changed.sixRelationName,
+      returnInfluence: line.moving ? returnInfluence(line, changed, idx) : null,
+    };
     return {
       ...line,
-      trigram: trigramCode,
-      stem: najia.stem,
-      branch: najia.branch,
-      branchName: branch.name_zh,
-      element: branch.element,
-      sixRelation: relation,
-      sixRelationName: RELATION_ZH[relation] ?? relation,
       sixSpirit: spiritCode,
       sixSpiritName: spirit?.name_zh ?? spiritCode,
       isWorld: palace.world_line === line.position,
       isResponse: palace.response_line === line.position,
-      isVoid: voidBranches.includes(najia.branch),
+      isVoid: voidBranches.includes(line.branch),
+      monthInfluence,
+      dayInfluence,
+      changed: changedFact,
     };
   });
 
@@ -269,6 +447,8 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
       sourceFiles: ["hexagrams-64.json", "eight-palaces.json", "najia-rules.json", "six-spirits.json"],
     },
   };
+  const yongshen = bundle.rulesByType.get("yongshen")?.get(`${chart.topic}:${chart.subtype}`);
+  chart.observationFocus = buildObservationFocus({ chart, yongshen });
   chart.chartHash = chartHash(chart);
 
   const findings = evaluateCoreFindings({ bundle, chart, topic: chart.topic, subtype: chart.subtype });

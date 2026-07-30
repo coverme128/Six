@@ -397,7 +397,7 @@ summary:focus-visible {
 }
 
 button:disabled {
-  cursor: wait;
+  cursor: not-allowed;
   opacity: 0.65;
 }
 
@@ -537,6 +537,42 @@ select:focus {
   margin: 8px 0 16px;
 }
 
+.scenario-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 8px 0 10px;
+}
+
+.scenario-option {
+  align-items: start;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  display: grid;
+  gap: 6px;
+  justify-content: stretch;
+  min-height: 76px;
+  padding: 12px;
+  text-align: left;
+}
+
+.scenario-option.active {
+  background: var(--accent-soft);
+  border-color: rgba(36, 93, 82, 0.34);
+}
+
+.scenario-option strong {
+  color: var(--ink-soft);
+}
+
+.scenario-option span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
 .cast-flow {
   display: grid;
   gap: 14px;
@@ -599,6 +635,44 @@ select:focus {
   background: white;
 }
 
+.completion-badge {
+  align-items: center;
+  background: var(--accent-soft);
+  border: 1px solid rgba(36, 93, 82, 0.28);
+  border-radius: 999px;
+  color: var(--accent-ink);
+  display: inline-flex;
+  font-weight: 650;
+  min-height: 40px;
+  padding: 0 14px;
+}
+
+.ritual-panel {
+  align-items: center;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.ritual-panel div {
+  display: grid;
+  gap: 5px;
+}
+
+.ritual-panel strong {
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.ritual-panel span {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .line-token small,
 .coin-number-line small {
   color: var(--muted);
@@ -641,6 +715,31 @@ button.coin-button.yang {
 }
 
 button.coin-button.yin {
+  background: white;
+  color: var(--ink-soft);
+}
+
+.coin-face {
+  align-items: center;
+  background: #fffdf6;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 650;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.coin-face.yang {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.coin-face.yin {
   background: white;
   color: var(--ink-soft);
 }
@@ -1085,7 +1184,7 @@ article p:last-child {
   border-bottom: 1px solid var(--line);
   display: grid;
   gap: 10px;
-  grid-template-columns: 74px 132px minmax(120px, 1fr) minmax(100px, 1fr);
+  grid-template-columns: 74px 132px minmax(110px, 0.8fr) minmax(110px, 1fr) minmax(180px, 1.2fr);
   min-height: 54px;
   padding: 8px 12px;
 }

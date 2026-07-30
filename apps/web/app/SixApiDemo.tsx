@@ -15,6 +15,23 @@ const branchOrdinals = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", 
 type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
 type MeihuaMethod = "MEIHUA_TWO_NUMBER_V1" | "MEIHUA_THREE_NUMBER_V1" | "MEIHUA_TIME_LUNAR_BRANCH_V1";
 
+const scenarios = [
+  { id: "career:job_search", topic: "career", subtype: "job_search", label: "事业 / 工作", hint: "机会、岗位、面试、升迁" },
+  { id: "wealth:income", topic: "wealth", subtype: "income", label: "求财 / 收入", hint: "收入、回款、现金流" },
+  { id: "business:partnership", topic: "business", subtype: "partnership", label: "合作 / 项目", hint: "合作方、合同、项目推进" },
+  { id: "relationship:relationship_stability", topic: "relationship", subtype: "relationship_stability", label: "感情 / 关系", hint: "关系状态、对方态度" },
+  { id: "study:exam", topic: "study", subtype: "exam", label: "学业 / 考试", hint: "考试、申请、证书" },
+  { id: "property:buy_house", topic: "property", subtype: "buy_house", label: "房产 / 居所", hint: "买卖、租住、搬迁" },
+  { id: "legal:dispute", topic: "legal", subtype: "dispute", label: "纠纷 / 法律", hint: "争议、程序、协商" },
+  { id: "health:self_health", topic: "health", subtype: "self_health", label: "健康 / 恢复", hint: "仅作趋势参考" },
+  { id: "goods:lost_item", topic: "goods", subtype: "lost_item", label: "寻物 / 物品", hint: "遗失、购买、交付" },
+  { id: "travel:trip", topic: "travel", subtype: "trip", label: "出行 / 行程", hint: "旅行、签证、迁移" }
+];
+
+function scenarioById(id: string) {
+  return scenarios.find((item) => item.id === id) ?? scenarios[0]!;
+}
+
 function tossCoins() {
   return Array.from({ length: 3 }, () => (Math.random() > 0.5 ? 3 : 2));
 }
@@ -37,11 +54,17 @@ function coinFace(value: string) {
   return "未";
 }
 
+function autoDigitalCoinLines() {
+  return Array.from({ length: 6 }, () => tossCoins().map(String));
+}
+
 export function SixApiDemo() {
   const [mode, setMode] = useState<DivinationMode>("liuyao");
   const [question, setQuestion] = useState("");
+  const [scenarioId, setScenarioId] = useState(scenarios[0]!.id);
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("coins");
   const [coinLines, setCoinLines] = useState<number[][]>([]);
+  const [digitalCoinsStarted, setDigitalCoinsStarted] = useState(false);
   const [digitalCoinLines, setDigitalCoinLines] = useState<string[][]>(
     Array.from({ length: 6 }, () => ["", "", ""])
   );
@@ -59,6 +82,7 @@ export function SixApiDemo() {
   const [report, setReport] = useState<ExperienceResponse | null>(null);
 
   const guided = report?.experience?.guidedViewModel;
+  const scenario = scenarioById(scenarioId);
   const supports = useMemo(() => guided?.mainSupports?.slice(0, 3) ?? [], [guided]);
   const risks = useMemo(() => guided?.mainRisks?.slice(0, 3) ?? [], [guided]);
   const castValues = useMemo(
@@ -69,7 +93,7 @@ export function SixApiDemo() {
     },
     [coinLines, digitalCoinLines, liuyaoCastMode, liuyaoValues]
   );
-  const digitalCoinsReady = digitalCoinLines.every((coins) => coins.length === 3 && coins.every((coin) => coin === "2" || coin === "3"));
+  const digitalCoinsReady = digitalCoinsStarted && digitalCoinLines.every((coins) => coins.length === 3 && coins.every((coin) => coin === "2" || coin === "3"));
   const manualReady = liuyaoValues.every((item) => ["6", "7", "8", "9"].includes(item));
   const liuyaoReady = liuyaoCastMode === "manual" ? manualReady : (liuyaoCastMode === "digitalCoins" ? digitalCoinsReady : coinLines.length === 6);
   const meihuaReady =
@@ -96,6 +120,7 @@ export function SixApiDemo() {
   function switchLiuyaoCastMode(nextMode: LiuyaoCastMode) {
     setLiuyaoCastMode(nextMode);
     setCoinLines([]);
+    setDigitalCoinsStarted(false);
     setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
     setLiuyaoValues(["", "", "", "", "", ""]);
     setError("");
@@ -120,15 +145,15 @@ export function SixApiDemo() {
     setReport(null);
   }
 
-  function toggleDigitalCoin(lineIndex: number, coinIndex: number) {
-    const next = digitalCoinLines.map((line) => [...line]);
-    if (!next[lineIndex]) return;
-    next[lineIndex][coinIndex] = next[lineIndex][coinIndex] === "3" ? "2" : "3";
-    setDigitalCoinLines(next);
+  function startDigitalCoins() {
+    setDigitalCoinsStarted(true);
+    setDigitalCoinLines(autoDigitalCoinLines());
+    setError("");
     setReport(null);
   }
 
   function resetDigitalCoins() {
+    setDigitalCoinsStarted(false);
     setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
     setReport(null);
   }
@@ -149,8 +174,8 @@ export function SixApiDemo() {
       mode === "liuyao"
         ? {
             question,
-            topic: "career",
-            subtype: "job_search",
+            topic: scenario.topic,
+            subtype: scenario.subtype,
             ...(liuyaoCastMode === "manual" ? { values: castValues } : {}),
             ...(liuyaoCastMode === "digitalCoins" ? { coins: digitalCoinLines.map((line) => line.map(Number)) } : {}),
             ...(liuyaoCastMode === "coins" || liuyaoCastMode === "auto" ? { coins: coinLines } : {}),
@@ -238,6 +263,31 @@ export function SixApiDemo() {
           </p>
         </label>
 
+        <fieldset>
+          <legend>问题场景</legend>
+          <div className="scenario-grid" role="radiogroup" aria-label="选择问题场景">
+            {scenarios.map((item) => (
+              <button
+                type="button"
+                className={scenarioId === item.id ? "scenario-option active" : "scenario-option"}
+                key={item.id}
+                onClick={() => {
+                  setScenarioId(item.id);
+                  setReport(null);
+                }}
+                role="radio"
+                aria-checked={scenarioId === item.id}
+              >
+                <strong>{item.label}</strong>
+                <span>{item.hint}</span>
+              </button>
+            ))}
+          </div>
+          <p className="section-kicker">
+            系统会按场景自动确定观察重点，普通用户不需要确认或修改专业用神。
+          </p>
+        </fieldset>
+
         {mode === "liuyao" ? (
           <fieldset>
             <legend>六爻生成方式</legend>
@@ -285,42 +335,57 @@ export function SixApiDemo() {
               </div>
             ) : liuyaoCastMode === "digitalCoins" ? (
               <div className="cast-flow">
-                <p className="section-kicker">
-                  每爻点三枚铜钱，阳面记 3，阴面记 2。点击铜钱可切换阴阳；系统按初爻到上爻排盘。
-                </p>
-                <div className="coin-number-grid" aria-label="数字铜钱法">
-                  {digitalCoinLines.map((coins, lineIndex) => {
-                    const complete = coins.every(Boolean);
-                    const value = complete ? lineValue(coins.map(Number)) : 0;
-                    const info = lineInfo(value);
-                    return (
-                      <div className="coin-number-line" key={`digital-line-${lineIndex}`}>
-                        <strong>第 {lineIndex + 1} 爻</strong>
-                        <div className="coin-buttons">
-                          {coins.map((coin, coinIndex) => (
-                            <button
-                              aria-label={`第 ${lineIndex + 1} 爻第 ${coinIndex + 1} 枚铜钱，当前${coinFace(coin)}`}
-                              className={coin === "3" ? "coin-button yang" : coin === "2" ? "coin-button yin" : "coin-button"}
-                              key={`digital-line-${lineIndex}-coin-${coinIndex}`}
-                              onClick={() => toggleDigitalCoin(lineIndex, coinIndex)}
-                              type="button"
-                            >
-                              {coinFace(coin)}
-                            </button>
-                          ))}
-                        </div>
-                        <small>
-                          {complete ? `${coinText(coins.map(Number))} / ${info.short} ${value}${info.moving ? " / 动爻" : ""}` : "点击三枚铜钱定阴阳"}
-                        </small>
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="form-actions">
-                  <button type="button" className="secondary" onClick={resetDigitalCoins} disabled={!digitalCoinLines.some((line) => line.some(Boolean))}>
-                    重新开始
-                  </button>
-                </div>
+                {digitalCoinsStarted ? (
+                  <>
+                    <p className="section-kicker">
+                      系统已按数字铜钱法自动生成六爻，阳面记 3，阴面记 2。确认后即可生成报告。
+                    </p>
+                    <div className="coin-number-grid" aria-label="数字铜钱法">
+                      {digitalCoinLines.map((coins, lineIndex) => {
+                        const complete = coins.every(Boolean);
+                        const value = complete ? lineValue(coins.map(Number)) : 0;
+                        const info = lineInfo(value);
+                        return (
+                          <div className="coin-number-line" key={`digital-line-${lineIndex}`}>
+                            <strong>第 {lineIndex + 1} 爻</strong>
+                            <div className="coin-buttons">
+                              {coins.map((coin, coinIndex) => (
+                                <span
+                                  aria-label={`第 ${lineIndex + 1} 爻第 ${coinIndex + 1} 枚铜钱，当前${coinFace(coin)}`}
+                                  className={coin === "3" ? "coin-face yang" : coin === "2" ? "coin-face yin" : "coin-face"}
+                                  key={`digital-line-${lineIndex}-coin-${coinIndex}`}
+                                >
+                                  {coinFace(coin)}
+                                </span>
+                              ))}
+                            </div>
+                            <small>
+                              {complete ? `${coinText(coins.map(Number))} / ${info.short} ${value}${info.moving ? " / 动爻" : ""}` : "点击三枚铜钱定阴阳"}
+                            </small>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="form-actions">
+                      <button type="button" onClick={startDigitalCoins}>
+                        重新生成一次
+                      </button>
+                      <button type="button" className="secondary" onClick={resetDigitalCoins}>
+                        重新开始
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div className="ritual-panel">
+                    <div>
+                      <strong>数字铜钱法</strong>
+                      <span>点击开始后，系统会一次生成六爻铜钱面；你只需确认问题，再生成报告。</span>
+                    </div>
+                    <button type="button" onClick={startDigitalCoins}>
+                      开始数字铜钱法
+                    </button>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="cast-flow">
@@ -354,11 +419,15 @@ export function SixApiDemo() {
                   })}
                 </div>
                 <div className="form-actions">
-                  {liuyaoCastMode === "auto" ? (
-                    <button type="button" onClick={autoCastSixLines}>
-                      {coinLines.length === 6 ? "重新代摇一次" : "开始代摇六爻"}
-                    </button>
-                  ) : (
+                  {liuyaoCastMode === "auto"
+                    ? (
+                      <button type="button" onClick={autoCastSixLines}>
+                        {coinLines.length === 6 ? "重新代摇一次" : "开始代摇六爻"}
+                      </button>
+                    )
+                    : coinLines.length >= 6 ? (
+                      <span className="completion-badge">六爻已完成</span>
+                    ) : (
                     <button type="button" onClick={addCoinLine} disabled={coinLines.length >= 6}>
                       {coinLines.length >= 6 ? "六爻已完成" : `摇第 ${coinLines.length + 1} 爻`}
                     </button>
@@ -455,12 +524,12 @@ export function SixApiDemo() {
 
         <div className="confirmation-strip">
           <strong>起卦确认</strong>
-          <span>{mode === "liuyao" ? `六爻 / ${liuyaoReady ? castValues.map((item) => lineInfo(item).short).join("、") : "尚未完成六爻"}` : `梅花 / ${meihuaReady ? "输入已完成" : "尚未完成输入"}`}</span>
+          <span>{mode === "liuyao" ? `六爻 / ${scenario.label} / ${liuyaoReady ? castValues.map((item) => lineInfo(item).short).join("、") : "尚未完成六爻"}` : `梅花 / ${scenario.label} / ${meihuaReady ? "输入已完成" : "尚未完成输入"}`}</span>
         </div>
 
         <div className="form-actions">
-          <button type="submit" disabled={loading || !canGenerate}>
-            {loading ? "正在整理报告" : "生成报告"}
+          <button type="submit" disabled={loading || !inputReady}>
+            {loading ? "正在整理报告" : inputReady ? "生成报告" : "请先完成起卦"}
           </button>
           <button type="button" className="secondary" onClick={() => setReport(null)} disabled={loading || !report}>
             清空结果
@@ -492,6 +561,12 @@ export function SixApiDemo() {
             <a className="text-link" href={`/reports/${encodeURIComponent(report.id)}#professional-evidence`}>查看依据</a>
           </div>
           <div className="preview-grid compact">
+            {guided.observationFocus ? (
+              <div>
+                <strong>观察重点</strong>
+                <p>{guided.observationFocus.summary}</p>
+              </div>
+            ) : null}
             <div>
               <strong>当前局势</strong>
               <p>{guided.currentSituation}</p>
