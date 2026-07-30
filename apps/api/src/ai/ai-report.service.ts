@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
+import { BadRequestException, Inject, Injectable, NotFoundException } from "@nestjs/common";
 import {
   AIReportValidationError,
   createAnonymousAILimiter,
@@ -38,7 +38,7 @@ function attachAiReportBundle(result: unknown, aiReportBundle: unknown) {
 
 @Injectable()
 export class AiReportService {
-  constructor(private readonly reportStore: ReportStoreService) {}
+  constructor(@Inject(ReportStoreService) private readonly reportStore: ReportStoreService) {}
 
   async enqueueForReport(reportId: string, options: GenerateAIOptions = {}) {
     const report = await this.reportStore.find(reportId);

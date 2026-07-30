@@ -72,7 +72,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   }
 
   return (
-    <main className="shell">
+    <main className="shell" data-testid="report-page">
       <nav className="top-nav">
         <a href="/">起卦</a>
         <a href="/history">历史</a>
@@ -91,42 +91,45 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
 
       {guided ? (
         <section className="panel report-section">
-          <h2>引导解读</h2>
+          <h2>一句话结论</h2>
           <div className="preview-grid">
             <div>
-              <strong>当前局势</strong>
+              <h3>当前局势</h3>
               <p>{guided.currentSituation}</p>
             </div>
             <div>
-              <strong>变化方向</strong>
+              <h3>变化方向</h3>
               <p>{guided.changeDirection}</p>
             </div>
             <div>
-              <strong>时间提示</strong>
+              <h3>时间提示</h3>
               <p>{guided.timingHint}</p>
             </div>
           </div>
           <div className="preview-grid">
             <div>
-              <strong>主要支持</strong>
+              <h3>主要支持</h3>
               {(guided.mainSupports ?? []).map((item, index) => (
                 <p key={`${item.title}-${index}`}>{item.text ?? item.title}</p>
               ))}
             </div>
             <div>
-              <strong>主要阻碍</strong>
+              <h3>主要阻碍</h3>
               {(guided.mainRisks ?? []).map((item, index) => (
                 <p key={`${item.title}-${index}`}>{item.text ?? item.title}</p>
               ))}
             </div>
             <div>
-              <strong>下一步</strong>
+              <h3>下一步</h3>
               {(guided.recommendedActions ?? []).map((item) => (
                 <p key={item}>{item}</p>
               ))}
             </div>
           </div>
           <div className="inline-actions">
+            <a className="primary-link" href="#professional-evidence">
+              查看依据
+            </a>
             <button type="button" onClick={generateAIReport} disabled={aiLoading}>
               {aiLoading ? "生成中" : report?.aiReportBundle ? "重新生成 AI 解读" : "生成 AI 解读"}
             </button>
@@ -148,15 +151,15 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           </div>
           <div className="preview-grid">
             <div>
-              <strong>摘要</strong>
+              <h3>摘要</h3>
               <p>{aiReport?.summary ?? "已使用确定性报告作为兜底。"}</p>
             </div>
             <div>
-              <strong>变化方向</strong>
+              <h3>变化方向</h3>
               <p>{aiReport?.changeDirection ?? guided?.changeDirection}</p>
             </div>
             <div>
-              <strong>行动建议</strong>
+              <h3>行动建议</h3>
               {(aiReport?.actionSuggestions ?? guided?.recommendedActions ?? []).map((item) => (
                 <p key={item}>{item}</p>
               ))}
@@ -166,8 +169,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       ) : null}
 
       {professional ? (
-        <section className="panel report-section">
-          <h2>专业摘要</h2>
+        <section className="panel report-section" id="professional-evidence">
+          <h2>专业依据</h2>
           <div className="fact-strip">
             <span>{professional.method}</span>
             <span>{professional.chartSummary?.title}</span>
@@ -177,19 +180,19 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           </div>
           <div className="preview-grid">
             <div>
-              <strong>支持证据</strong>
+              <h3>支持证据</h3>
               {supports.map((item, index) => (
                 <p key={`${item.title}-${index}`}>{item.text ?? item.title}</p>
               ))}
             </div>
             <div>
-              <strong>风险证据</strong>
+              <h3>风险证据</h3>
               {risks.map((item, index) => (
                 <p key={`${item.title}-${index}`}>{item.text ?? item.title}</p>
               ))}
             </div>
             <div>
-              <strong>其他依据</strong>
+              <h3>其他依据</h3>
               {otherEvidence.map((item, index) => (
                 <p key={`${item.title}-${index}`}>{item.text ?? item.title}</p>
               ))}

@@ -47,7 +47,7 @@ It contains 240 cases:
 - 144 Asia/Shanghai anchor and solar-term boundary cases cross-checked with `lunar_python@1.4.8`.
 - 96 timezone, DST, leap-day, cross-day, cross-month, and cross-year cases.
 
-Validation is implemented in `tests/calendar-provider.test.mjs` and includes:
+Validation is implemented in `tests/calendar-provider.test.ts` and includes:
 
 - Required output shape.
 - 200+ fixture count.

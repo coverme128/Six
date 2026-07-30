@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { Inject, Injectable } from "@nestjs/common";
 import { randomUUID } from "node:crypto";
 import { createLiuyaoChart } from "@six/domain/liuyao";
 import { createMeihuaChart } from "@six/domain/meihua";
@@ -15,7 +15,7 @@ function chartHashOf(result: any): string {
 
 @Injectable()
 export class DivinationService {
-  constructor(private readonly reportStore: ReportStoreService) {}
+  constructor(@Inject(ReportStoreService) private readonly reportStore: ReportStoreService) {}
 
   async createLiuyao(input: LiuyaoChartRequest) {
     const result = createLiuyaoChart(input, process.env.SIX_ROOT);

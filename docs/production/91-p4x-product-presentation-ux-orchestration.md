@@ -1,6 +1,6 @@
 # P4-X Product Presentation and UX Orchestration
 
-Status: `PRODUCT_PRESENTATION_UX_ORCHESTRATION_READY`
+Status: `PRODUCT_PRESENTATION_UX_ORCHESTRATION_READY` + `P4X_ARCHITECTURE_REBASE_READY`
 
 This phase reorganizes existing deterministic chart, calendar, CORE_V1, evidence, timing, AI, and content facts into product-facing presentation contracts. It does not alter CAL_STD_V1, deterministic divination, CORE_V1 rule scope, AI fact validation, or timing semantics.
 
@@ -17,6 +17,28 @@ Domain result
 → GuidedViewModel / ProfessionalViewModel / AdminViewModel
 → UI
 ```
+
+## Architecture Rebase
+
+The original P4-X upgrade package was written before the project moved to the pnpm/Turborepo, Next.js, NestJS, Prisma, PostgreSQL, Redis, and BullMQ architecture. The upgrade still applies, but its runtime boundary is now:
+
+```text
+apps/web / apps/admin
+        ↓
+apps/api NestJS endpoints
+        ↓
+packages/domain deterministic engines + P4-X presentation
+        ↓
+packages/database Prisma persistence
+        ↓
+apps/worker BullMQ AI regeneration path
+```
+
+`packages/domain/src/domain/presentation` remains the only implementation owner for DivinationResultFacts, priority, deduplication, terminology, ViewModels, visibility, and page experience contracts. Next.js pages and NestJS controllers consume the built experience bundle; they do not recalculate product priority or expose raw domain/debug fields.
+
+When PostgreSQL is configured, `reports.experience` stores the generated P4-X bundle alongside the deterministic result and narrative report. The stored bundle is a cached presentation artifact. The source of truth remains the deterministic `result`, `narrativeReport`, validated `aiReport`, and versioned domain code. When the Worker updates `reports.aiReport`, it attaches the AI bundle to `result.aiReportBundle`, rebuilds the P4-X experience bundle through `buildExperienceBundle`, and writes both back through Prisma.
+
+This means the upgrade requires documentation and contract updates after the architecture migration, but does not require changes to CAL_STD_V1, deterministic Liuyao/Meihua charting, CORE_V1 rules, AI fact validation, or timing semantics.
 
 ## Product Facts
 
@@ -80,16 +102,23 @@ Each contract defines page goal, primary question, primary action, visual hierar
 
 ## State And Visibility
 
-The shared state contract covers:
+The shared state contract now covers the full upgrade-package state set plus the existing anonymous-report extensions:
 
 ```text
 INITIAL
 LOADING
+PARSING
+NEEDS_CONFIRMATION
 PROCESSING
 PARTIAL
 COMPLETED
 EMPTY
+LOCKED
+UNAUTHORIZED
+FORBIDDEN
 FAILED
+EXPIRED
+ARCHIVED
 NOT_FOUND
 DELETED
 ```
@@ -104,7 +133,7 @@ Professional: chart structure and professional evidence
 Admin/Internal: raw facts, versions, provider, validation, debug
 ```
 
-No payment, entitlement, login, or RBAC is introduced.
+No payment, entitlement, login, or RBAC is introduced by P4-X. The new Admin app and Prisma database exist as platform architecture, but public report presentation still defaults to Guided and Professional surfaces only. AdminViewModel must remain behind internal routes or future protected Admin surfaces.
 
 ## UX QA
 
@@ -135,6 +164,19 @@ pnpm run test:e2e
 
 ## Deferred Scope
 
-P4-X explicitly did not implement PostgreSQL, login, RBAC, paid access, subscriptions, complex Admin/CMS, Advanced Rules, Review Rules, new calendar algorithms, new divination algorithms, new CORE_V1 rules, or production content import.
+After the monorepo migration, PostgreSQL/Prisma persistence, the Next.js Web shell, NestJS API, Redis/BullMQ Worker, and the Admin shell exist. They are architecture capabilities, not new P4-X fact rules.
 
-The next allowed phase is `P4-B | Production Content Package Import`.
+Still deferred from the P4-X contract:
+
+```text
+Protected production Admin workflows
+Login, RBAC, paid access, and subscriptions
+Advanced Rules and Review Rules
+New calendar algorithms
+New divination algorithms
+New CORE_V1 rules
+Real PUBLICATION_READY content package import
+Production OpenAI live smoke with secrets and HTTPS staging
+```
+
+The next product-content phase remains `P4-B | Production Content Package Import`; the next platform hardening phase is protected Admin/auth/RBAC only when explicitly authorized.

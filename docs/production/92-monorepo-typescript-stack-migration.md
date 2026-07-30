@@ -1,8 +1,8 @@
 # Six TypeScript Monorepo Stack Migration
 
-Status: `PNPM_TURBO_TYPESCRIPT_STACK_READY` + `API_REPORT_STORE_BRIDGE_READY` + `NEXT_WEB_CAST_WORKBENCH_READY` + `NEXT_WEB_HISTORY_DETAIL_READY` + `NEXT_WEB_CONTENT_SETTINGS_EXPORT_READY` + `PRISMA_PERSISTENCE_READY` + `API_WORKER_AI_REPORT_READY`
+Status: `PNPM_TURBO_TYPESCRIPT_STACK_READY` + `DOMAIN_TYPESCRIPT_PACKAGE_READY` + `API_REPORT_STORE_BRIDGE_READY` + `NEXT_WEB_CAST_WORKBENCH_READY` + `NEXT_WEB_HISTORY_DETAIL_READY` + `NEXT_WEB_CONTENT_SETTINGS_EXPORT_READY` + `PRISMA_PERSISTENCE_READY` + `API_WORKER_AI_REPORT_READY` + `LEGACY_MJS_RUNTIME_REMOVED`
 
-This migration aligns Six with the professional workspace architecture used by the QI project while preserving the existing deterministic Liuyao/Meihua implementation and local Public Beta regression path.
+This migration aligns Six with the professional workspace architecture used by the QI project. The active runtime is now the TypeScript monorepo stack.
 
 ## Target Stack
 
@@ -27,27 +27,19 @@ apps/web              Next.js public product shell
 apps/admin            Next.js internal admin shell
 apps/api              NestJS API service
 apps/worker           BullMQ worker
-packages/domain       Existing deterministic domain and presentation modules
+packages/domain       TypeScript deterministic domain and presentation package
 packages/shared       Zod schemas and shared constants
 packages/database     Prisma schema and database package
 packages/queue        Redis/BullMQ queue package
 packages/ui           Shared React UI package
 packages/testing      Shared test helpers
-packages/legacy-server Legacy local Public Beta server wrapper
 ```
 
-## Compatibility Strategy
+## Cutover Strategy
 
-The existing `src/server.mjs` remains available as the legacy Public Beta server. Playwright regression still runs against it through:
+The deterministic domain code has been migrated into `@six/domain` as TypeScript source with `dist` package exports and generated declarations. Nest API, Worker, database seed, scripts, and tests consume the workspace package instead of the removed root runtime.
 
-```bash
-pnpm run dev:legacy
-pnpm run test:e2e
-```
-
-This keeps current Liuyao, Meihua, CAL_STD_V1, CORE_V1, grounded AI fallback, P4-A content/SEO, and P4-X presentation behavior intact while the new Next/Nest/Prisma stack is introduced.
-
-The deterministic domain code is also exposed through `@six/domain`, so the new Nest API can reuse the same fact chain instead of reimplementing rules in API or frontend code.
+Playwright regression now starts the Nest API and Next Web app as separate services. API requests use `http://127.0.0.1:4100/api/v1`; browser navigation uses `http://127.0.0.1:3000`.
 
 ## Infrastructure
 
@@ -167,6 +159,14 @@ The panel renders the Guided ViewModel from the P4-X experience bundle, proving 
 
 Request validation failures now return HTTP 400 with `code: "VALIDATION_ERROR"` instead of a generic server error.
 
+Public API errors are normalized by `PublicExceptionFilter` as:
+
+```text
+code
+message
+traceId
+```
+
 Report detail pages expose a JSON export entry that opens `GET /api/v1/reports/:id/export`. The export payload includes report metadata, chart hash, persistence mode, deterministic result, narrative report, and P4-X experience bundle.
 
 Report detail pages also expose grounded AI generation. The UI calls `POST /api/v1/reports/:id/ai`, then renders the persisted AI bundle status and summary from the refreshed experience response.
@@ -245,7 +245,7 @@ Browser smoke with system Chrome verified:
 The stack is in place, but these are intentionally deferred to keep deterministic behavior stable:
 
 ```text
-Move full legacy report parity into apps/web
+Move full historical report visual coverage into apps/web
 Move AdminViewModel and content governance into apps/admin
 Import a real `PUBLICATION_READY` content package for public indexed content
 Run real OpenAI live smoke with production secrets and HTTPS staging

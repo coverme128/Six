@@ -3,23 +3,55 @@
   "version": "1.3.0",
   "private": true,
   "type": "module",
+  "main": "./dist/domain/liuyaoEngine.js",
+  "types": "./dist/domain/liuyaoEngine.d.ts",
   "exports": {
-    "./ai-report": "./src/domain/aiReport.mjs",
-    "./calendar": "./src/domain/calendar.mjs",
-    "./content-framework": "./src/domain/contentFramework.mjs",
-    "./data-store": "./src/domain/dataStore.mjs",
-    "./knowledge": "./src/domain/knowledge.mjs",
-    "./liuyao": "./src/domain/liuyaoEngine.mjs",
-    "./meihua": "./src/domain/meihuaEngine.mjs",
-    "./presentation": "./src/domain/presentation/index.mjs",
-    "./production": "./src/production/index.mjs",
-    "./report-builder": "./src/domain/reportBuilder.mjs"
+    "./ai-report": {
+      "types": "./dist/domain/aiReport.d.ts",
+      "import": "./dist/domain/aiReport.js"
+    },
+    "./calendar": {
+      "types": "./dist/domain/calendar.d.ts",
+      "import": "./dist/domain/calendar.js"
+    },
+    "./content-framework": {
+      "types": "./dist/domain/contentFramework.d.ts",
+      "import": "./dist/domain/contentFramework.js"
+    },
+    "./data-store": {
+      "types": "./dist/domain/dataStore.d.ts",
+      "import": "./dist/domain/dataStore.js"
+    },
+    "./knowledge": {
+      "types": "./dist/domain/knowledge.d.ts",
+      "import": "./dist/domain/knowledge.js"
+    },
+    "./liuyao": {
+      "types": "./dist/domain/liuyaoEngine.d.ts",
+      "import": "./dist/domain/liuyaoEngine.js"
+    },
+    "./meihua": {
+      "types": "./dist/domain/meihuaEngine.d.ts",
+      "import": "./dist/domain/meihuaEngine.js"
+    },
+    "./presentation": {
+      "types": "./dist/domain/presentation/index.d.ts",
+      "import": "./dist/domain/presentation/index.js"
+    },
+    "./production": {
+      "types": "./dist/production/index.d.ts",
+      "import": "./dist/production/index.js"
+    },
+    "./report-builder": {
+      "types": "./dist/domain/reportBuilder.d.ts",
+      "import": "./dist/domain/reportBuilder.js"
+    }
   },
   "scripts": {
-    "build": "node --check src/domain/liuyaoEngine.mjs && node --check src/domain/meihuaEngine.mjs && node --check src/domain/presentation/index.mjs",
-    "lint": "node --check src/domain/liuyaoEngine.mjs",
-    "typecheck": "node --check src/domain/liuyaoEngine.mjs",
-    "test": "cd ../.. && node --test tests/deterministic-engine.test.mjs tests/report-and-ai.test.mjs tests/presentation.test.mjs"
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --pass-on-no-patterns",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm run build && cd ../.. && node --import tsx --test tests/deterministic-engine.test.ts tests/report-and-ai.test.ts tests/calendar-provider.test.ts tests/core-v1-loader.test.ts tests/ai-report.test.ts tests/content-framework.test.ts tests/presentation.test.ts"
   },
   "dependencies": {
     "lunar-javascript": "^1.7.7"

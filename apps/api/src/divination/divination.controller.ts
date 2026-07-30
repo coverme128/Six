@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Post } from "@nestjs/common";
+import { BadRequestException, Body, Controller, Inject, Post } from "@nestjs/common";
 import { LiuyaoChartRequestSchema, MeihuaChartRequestSchema } from "@six/shared";
 import type { z, ZodTypeAny } from "zod";
 
@@ -18,7 +18,7 @@ function parseRequest<TSchema extends ZodTypeAny>(schema: TSchema, body: unknown
 
 @Controller()
 export class DivinationController {
-  constructor(private readonly divinationService: DivinationService) {}
+  constructor(@Inject(DivinationService) private readonly divinationService: DivinationService) {}
 
   @Post("liuyao/charts")
   async createLiuyao(@Body() body: unknown) {

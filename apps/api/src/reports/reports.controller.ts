@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Headers, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { Body, Controller, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { buildExperienceBundle } from "@six/domain/presentation";
 
 import { AiReportService } from "../ai/ai-report.service.js";
 import { ReportStoreService } from "./report-store.service.js";
@@ -6,7 +7,9 @@ import { ReportStoreService } from "./report-store.service.js";
 @Controller("reports")
 export class ReportsController {
   constructor(
+    @Inject(ReportStoreService)
     private readonly reportStore: ReportStoreService,
+    @Inject(AiReportService)
     private readonly aiReport: AiReportService
   ) {}
 
@@ -84,5 +87,12 @@ export class ReportsController {
       aiReportBundle: report.aiReportBundle,
       experience: report.experience
     };
+  }
+
+  @Get(":id/internal-presentation")
+  async getInternalPresentation(@Param("id") id: string) {
+    const report = await this.reportStore.find(id);
+    if (!report) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
+    return buildExperienceBundle({ result: report.result, type: report.type, includeAdmin: true });
   }
 }
