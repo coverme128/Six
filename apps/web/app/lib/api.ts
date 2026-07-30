@@ -35,11 +35,49 @@ export type ProfessionalViewModel = {
   knowledgeRefs?: Array<{ id?: string; title?: string }>;
 };
 
+export type LiuyaoChartViewModel = {
+  type: "liuyao";
+  methodCode?: string;
+  originalHexagram?: string;
+  changedHexagram?: string;
+  movingLines?: number[];
+  worldLine?: number | null;
+  responseLine?: number | null;
+  lines?: Array<{
+    position?: number;
+    value?: number;
+    yinYang?: string;
+    moving?: boolean;
+    sixRelationName?: string;
+    sixSpiritName?: string;
+    branchName?: string;
+    isWorld?: boolean;
+    isResponse?: boolean;
+    isVoid?: boolean;
+  }>;
+};
+
+export type MeihuaChartViewModel = {
+  type: "meihua";
+  methodCode?: string;
+  originalHexagram?: string;
+  mutualHexagram?: string;
+  changedHexagram?: string;
+  movingLine?: number;
+  bodyTrigram?: string;
+  useTrigram?: string;
+  relationship?: string;
+  input?: unknown;
+};
+
+export type ChartViewModel = LiuyaoChartViewModel | MeihuaChartViewModel;
+
 export type ExperienceResponse = {
   id: string;
   type: DivinationMode;
   createdAt?: string;
   persistence?: string;
+  chartViewModel?: ChartViewModel;
   aiReportBundle?: {
     reportSource?: string;
     validationStatus?: string;

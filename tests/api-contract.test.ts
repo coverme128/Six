@@ -48,3 +48,16 @@ test("API source does not expose provider secrets in public responses", () => {
   assert.ok(!publicResponseSource.includes("OPENAI_API_KEY"));
   assert.ok(!publicResponseSource.includes("promptFor(input)"));
 });
+
+test("internal presentation and public export stay separated", () => {
+  const reportsController = readFileSync("apps/api/src/reports/reports.controller.ts", "utf8");
+  assert.ok(reportsController.includes("assertInternalAccess(token)"));
+  assert.ok(reportsController.includes("ForbiddenException"));
+  assert.ok(reportsController.includes("INTERNAL_PRESENTATION_TOKEN"));
+
+  const exportBody = reportsController.slice(reportsController.indexOf("function publicReportExport"), reportsController.indexOf("function publicChartView"));
+  assert.ok(exportBody.includes("PUBLIC_REPORT_EXPORT_V1"));
+  assert.ok(exportBody.includes("chartViewModel"));
+  assert.ok(!exportBody.includes("result: report.result"));
+  assert.ok(!exportBody.includes("narrativeReport: report.narrativeReport"));
+});

@@ -136,6 +136,33 @@ export class ReportStoreService {
     }
   }
 
+  async delete(id: string): Promise<boolean> {
+    const hadMemoryRecord = reports.delete(id);
+    const prisma = getPrismaClient();
+    if (!prisma) return hadMemoryRecord;
+
+    try {
+      await prisma.report.delete({ where: { id } });
+      return true;
+    } catch {
+      return hadMemoryRecord;
+    }
+  }
+
+  async clear(): Promise<number> {
+    const memoryCount = reports.size;
+    reports.clear();
+    const prisma = getPrismaClient();
+    if (!prisma) return memoryCount;
+
+    try {
+      const deleted = await prisma.report.deleteMany();
+      return Math.max(memoryCount, deleted.count);
+    } catch {
+      return memoryCount;
+    }
+  }
+
   async updateAiReport(id: string, aiReportBundle: unknown, result: unknown, experience: unknown): Promise<PublicReportRecord | null> {
     const current = await this.find(id);
     if (!current) return null;

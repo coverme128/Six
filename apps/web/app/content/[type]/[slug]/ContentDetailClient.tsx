@@ -1,12 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { AppNav } from "../../../AppNav";
 import { apiBase, readError, type ContentDetail } from "../../../lib/api";
 
-function renderBody(body: unknown) {
-  if (!body || (typeof body === "object" && Object.keys(body).length === 0)) return "暂无正文结构。";
-  if (typeof body === "string") return body;
-  return JSON.stringify(body, null, 2);
+function readableValue(value: unknown): string {
+  if (Array.isArray(value)) return value.map(readableValue).filter(Boolean).join("、");
+  if (value && typeof value === "object") return Object.values(value).map(readableValue).filter(Boolean).join("；");
+  return String(value ?? "");
+}
+
+function bodyEntries(body: unknown) {
+  if (!body || typeof body !== "object" || Array.isArray(body)) return [];
+  return Object.entries(body as Record<string, unknown>).filter(([, value]) => readableValue(value).trim());
 }
 
 export function ContentDetailClient({ type, slug }: { type: string; slug: string }) {
@@ -39,12 +45,7 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
 
   return (
     <main className="shell">
-      <nav className="top-nav">
-        <a href="/">起卦</a>
-        <a href="/history">历史</a>
-        <a href="/content">内容</a>
-        <a href="/settings">设置</a>
-      </nav>
+      <AppNav current="content" />
 
       <section className="hero compact">
         <p className="eyebrow">{item?.contentType ?? apiType}</p>
@@ -63,17 +64,48 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
             <span>{item.difficulty}</span>
             <span>{item.reviewStatus}</span>
           </div>
-          <pre className="content-body">{renderBody(item.body)}</pre>
+          <article className="content-article">
+            <h2>{item.title}</h2>
+            <p>{item.summary || "该条目正在整理正式正文，当前先保留结构化摘要与边界说明。"}</p>
+            {typeof item.body === "string" && item.body.trim() ? <p>{item.body}</p> : null}
+            {bodyEntries(item.body).length ? (
+              <dl>
+                {bodyEntries(item.body).map(([key, value]) => (
+                  <div key={key}>
+                    <dt>{key.replaceAll("_", " ")}</dt>
+                    <dd>{readableValue(value)}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : (
+              <p className="empty">正式正文尚未发布。当前内容可作为术语定位，深入判断仍以报告依据为准。</p>
+            )}
+          </article>
           {item.knownLimitations?.length ? (
-            <div className="preview-grid">
+            <details className="evidence-details">
+              <summary>边界说明</summary>
               <div>
-                <strong>边界说明</strong>
                 {item.knownLimitations.map((text) => (
                   <p key={text}>{text}</p>
                 ))}
               </div>
+            </details>
+          ) : null}
+          {item.tags?.length ? (
+            <div className="chips report-section">
+              {item.tags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
             </div>
           ) : null}
+          <div className="inline-actions">
+            <a className="primary-link" href="/">
+              开始起卦
+            </a>
+            <a className="text-link" href="/content">
+              返回内容
+            </a>
+          </div>
         </section>
       ) : null}
     </main>

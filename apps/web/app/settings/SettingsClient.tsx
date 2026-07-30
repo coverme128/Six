@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AppNav } from "../AppNav";
 import { apiBase, readError, type PublicSettings } from "../lib/api";
 
 const defaultSettings: PublicSettings = {
@@ -47,20 +48,17 @@ export function SettingsClient() {
 
   return (
     <main className="shell">
-      <nav className="top-nav">
-        <a href="/">起卦</a>
-        <a href="/history">历史</a>
-        <a href="/content">内容</a>
-        <a href="/settings">设置</a>
-      </nav>
+      <AppNav current="settings" />
 
       <section className="hero compact">
-        <p className="eyebrow">Anonymous Beta</p>
+        <p className="eyebrow">Preference</p>
         <h1>设置</h1>
-        <p>当前为匿名本地设置，后续可迁入用户配置或设备配置表。</p>
+        <p>这些偏好会影响起卦默认方式、术语深度和报告语言。匿名使用时仍尽量保持输入简单、结果可读。</p>
       </section>
 
       <section className="panel report-section">
+        <h2>报告偏好</h2>
+        <p className="section-kicker">修改后会作为后续报告的默认设置。</p>
         <div className="workbench-form">
           <label>
             <span>时区</span>

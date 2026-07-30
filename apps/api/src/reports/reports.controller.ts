@@ -1,8 +1,119 @@
-import { Body, Controller, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
 import { buildExperienceBundle } from "@six/domain/presentation";
 
 import { AiReportService } from "../ai/ai-report.service.js";
 import { ReportStoreService } from "./report-store.service.js";
+import type { DivinationType, PublicReportRecord } from "./report.types.js";
+
+function objectValue(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
+}
+
+function text(value: unknown): string | undefined {
+  return typeof value === "string" && value.trim() ? value : undefined;
+}
+
+function bitText(value: unknown): string {
+  return String(value ?? "");
+}
+
+function publicReportExport(report: PublicReportRecord) {
+  const experience = objectValue(report.experience);
+  const guided = objectValue(experience.guidedViewModel);
+  const professional = objectValue(experience.professionalViewModel);
+  return {
+    exportVersion: "PUBLIC_REPORT_EXPORT_V1",
+    exportedAt: new Date().toISOString(),
+    reportId: report.id,
+    reportType: report.type,
+    question: report.question,
+    createdAt: report.createdAt,
+    persistence: report.persistence,
+    conclusion: {
+      headline: guided.headline,
+      summary: guided.summary,
+      currentSituation: guided.currentSituation,
+      changeDirection: guided.changeDirection,
+      timingHint: guided.timingHint,
+      mainSupports: guided.mainSupports,
+      mainRisks: guided.mainRisks,
+      recommendedActions: guided.recommendedActions
+    },
+    chartViewModel: publicChartView(report),
+    professionalEvidence: {
+      method: professional.method,
+      chartSummary: professional.chartSummary,
+      evidenceGroups: professional.evidenceGroups,
+      timingCandidates: professional.timingCandidates,
+      knowledgeRefs: professional.knowledgeRefs
+    },
+    aiExpression: report.aiReportBundle ?? null,
+    boundary: "本报告仅供传统文化研究与个人参考，不替代医疗、法律、投资等现实专业决策。"
+  };
+}
+
+function publicChartView(report: PublicReportRecord) {
+  const result = objectValue(report.result);
+  const chart = objectValue(result.chart);
+  const original = objectValue(chart.originalHexagram);
+  const changed = objectValue(chart.changedHexagram);
+
+  if (report.type === "meihua") {
+    const mutual = objectValue(chart.mutualHexagram);
+    const bodyTrigram = objectValue(chart.bodyTrigram);
+    const useTrigram = objectValue(chart.useTrigram);
+    const relation = objectValue(chart.bodyUseRelation);
+    return {
+      type: "meihua" as DivinationType,
+      methodCode: text(chart.methodCode),
+      originalHexagram: text(original.name_zh),
+      mutualHexagram: text(mutual.name_zh),
+      changedHexagram: text(changed.name_zh),
+      movingLine: chart.movingLine,
+      bodyTrigram: text(bodyTrigram.name_zh),
+      useTrigram: text(useTrigram.name_zh),
+      relationship: text(relation.meaning_zh),
+      input: chart.input
+    };
+  }
+
+  const lines = Array.isArray(chart.lines) ? chart.lines.map((item) => {
+    const line = objectValue(item);
+    return {
+      position: line.position,
+      value: line.sum,
+      yinYang: bitText(line.originalBit) === "1" ? "阳" : "阴",
+      moving: Boolean(line.moving),
+      sixRelationName: text(line.sixRelationName),
+      sixSpiritName: text(line.sixSpiritName),
+      branchName: text(line.branchName),
+      isWorld: Boolean(line.isWorld),
+      isResponse: Boolean(line.isResponse),
+      isVoid: Boolean(line.isVoid)
+    };
+  }) : [];
+
+  return {
+    type: "liuyao" as DivinationType,
+    methodCode: text(chart.methodCode),
+    originalHexagram: text(original.name_zh),
+    changedHexagram: text(changed.name_zh),
+    movingLines: Array.isArray(chart.movingLines) ? chart.movingLines : [],
+    worldLine: objectValue(chart.worldResponse).worldLine,
+    responseLine: objectValue(chart.worldResponse).responseLine,
+    lines
+  };
+}
+
+function assertInternalAccess(token?: string) {
+  const expected = process.env.INTERNAL_PRESENTATION_TOKEN;
+  if (expected && token !== expected) {
+    throw new ForbiddenException({ code: "INTERNAL_ACCESS_REQUIRED", message: "该报告视图仅限内部访问。" });
+  }
+  if (process.env.APP_ENV === "production" && !expected) {
+    throw new ForbiddenException({ code: "INTERNAL_ACCESS_REQUIRED", message: "生产环境未启用内部访问令牌。" });
+  }
+}
 
 @Controller("reports")
 export class ReportsController {
@@ -32,20 +143,7 @@ export class ReportsController {
   async exportReport(@Param("id") id: string) {
     const report = await this.reportStore.find(id);
     if (!report) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
-    return {
-      exportVersion: "2.0.0",
-      exportedAt: new Date().toISOString(),
-      reportId: report.id,
-      reportType: report.type,
-      question: report.question,
-      chartHash: report.chartHash,
-      createdAt: report.createdAt,
-      persistence: report.persistence,
-      result: report.result,
-      narrativeReport: report.narrativeReport,
-      aiReportBundle: report.aiReportBundle,
-      experience: report.experience
-    };
+    return publicReportExport(report);
   }
 
   @Post(":id/ai")
@@ -85,12 +183,26 @@ export class ReportsController {
       createdAt: report.createdAt,
       persistence: report.persistence,
       aiReportBundle: report.aiReportBundle,
+      chartViewModel: publicChartView(report),
       experience: report.experience
     };
   }
 
+  @Delete()
+  async clearReports() {
+    return { deleted: await this.reportStore.clear() };
+  }
+
+  @Delete(":id")
+  async deleteReport(@Param("id") id: string) {
+    const deleted = await this.reportStore.delete(id);
+    if (!deleted) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
+    return { deleted: true };
+  }
+
   @Get(":id/internal-presentation")
-  async getInternalPresentation(@Param("id") id: string) {
+  async getInternalPresentation(@Param("id") id: string, @Headers("x-internal-admin") token?: string) {
+    assertInternalAccess(token);
     const report = await this.reportStore.find(id);
     if (!report) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
     return buildExperienceBundle({ result: report.result, type: report.type, includeAdmin: true });

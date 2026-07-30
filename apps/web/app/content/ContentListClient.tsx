@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AppNav } from "../AppNav";
 import { apiBase, readError, type ContentSummary } from "../lib/api";
 
 export function ContentListClient() {
@@ -33,17 +34,12 @@ export function ContentListClient() {
 
   return (
     <main className="shell">
-      <nav className="top-nav">
-        <a href="/">起卦</a>
-        <a href="/history">历史</a>
-        <a href="/content">内容</a>
-        <a href="/settings">设置</a>
-      </nav>
+      <AppNav current="content" />
 
       <section className="hero compact">
-        <p className="eyebrow">Content Framework</p>
+        <p className="eyebrow">Knowledge</p>
         <h1>内容与知识</h1>
-        <p>读取 Nest API 内容框架和知识种子，用于报告后的继续学习。</p>
+        <p>内容用于解释报告中的术语、规则和边界。它不是主任务入口，而是帮助你在需要时继续验证和学习。</p>
       </section>
 
       <form
@@ -73,6 +69,7 @@ export function ContentListClient() {
           </a>
         ))}
       </section>
+      {!loading && !error && items.length === 0 ? <p className="empty">暂未找到相关内容。可以换一个术语或返回报告查看依据。</p> : null}
     </main>
   );
 }
