@@ -1,0 +1,117 @@
+{
+  "runtimeId": "LIUYAO_CORE_PRODUCT_CLOSURE_RUNTIME_V1",
+  "version": "1.0.0",
+  "scope": "Presentation and assessment closure over existing CORE_V1 facts. This file does not add CORE_V1 rules.",
+  "assessmentPatterns": [
+    {
+      "patternId": "LYX_ASSESS_TRANSITIONAL_MIXED",
+      "overallState": "TRANSITIONAL",
+      "baseState": "MIXED",
+      "dynamicDirection": "CHANGING",
+      "displayName": "有利有阻，正在变化",
+      "condition": "support and blocking evidence coexist while moving evidence is present",
+      "summary": "当前基础状态不是单向顺逆，支持与阻碍同时存在，并且动爻提示事情正在进入变化过程。"
+    },
+    {
+      "patternId": "LYX_ASSESS_MIXED",
+      "overallState": "MIXED",
+      "baseState": "MIXED",
+      "dynamicDirection": "STATIC_OR_UNCLEAR",
+      "displayName": "有利有阻",
+      "condition": "support and blocking evidence coexist",
+      "summary": "当前支持与阻碍并存，需要并看双方依据，不能只按单一方向判断。"
+    },
+    {
+      "patternId": "LYX_ASSESS_FAVORABLE_WITH_SUPPORT",
+      "overallState": "FAVORABLE",
+      "baseState": "SUPPORTED",
+      "dynamicDirection": "STATIC_OR_UNCLEAR",
+      "displayName": "偏有利",
+      "condition": "support evidence exists and no blocking evidence is dominant",
+      "summary": "当前已有明确支持条件，可在保留限制的前提下小步推进。"
+    },
+    {
+      "patternId": "LYX_ASSESS_CAUTIOUS_WITH_BLOCK",
+      "overallState": "CAUTIOUS",
+      "baseState": "PRESSURED",
+      "dynamicDirection": "STATIC_OR_UNCLEAR",
+      "displayName": "偏谨慎",
+      "condition": "blocking evidence exists and no support evidence is dominant",
+      "summary": "当前阻碍较突出，适合先处理风险、条件和节奏问题。"
+    },
+    {
+      "patternId": "LYX_ASSESS_UNCLEAR",
+      "overallState": "UNCLEAR",
+      "baseState": "UNCLEAR",
+      "dynamicDirection": "STATIC_OR_UNCLEAR",
+      "displayName": "暂不明朗",
+      "condition": "not enough public evidence to determine support or blocking",
+      "summary": "当前公开证据不足以形成清晰方向，应先补充现实问题边界并继续观察。"
+    }
+  ],
+  "conflictPolicies": [
+    {
+      "policyId": "LYX_CONFLICT_SUPPORT_AND_BLOCK_COEXIST_V1",
+      "displayName": "支持阻碍并存",
+      "state": "UNRESOLVED",
+      "rule": "When support and blocking evidence both exist, keep both sides visible and do not collapse to a numeric score.",
+      "dominanceOrder": [
+        "direct_target_fact",
+        "world_response_fact",
+        "strength_fact",
+        "moving_change_fact",
+        "support_block_signal",
+        "symbolism"
+      ]
+    },
+    {
+      "policyId": "LYX_CONFLICT_SINGLE_DIRECTION_V1",
+      "displayName": "单向证据",
+      "state": "NONE",
+      "rule": "When only one side is present, preserve limitations and still keep traceable evidence references."
+    }
+  ],
+  "actionGuidance": [
+    {
+      "state": "TRANSITIONAL",
+      "items": [
+        "先区分能主动调整的部分和外部正在变化的部分。",
+        "优先处理主要阻碍，再利用已有支持小步推进。",
+        "设置一个复盘节点，观察动爻对应的变化是否出现。"
+      ]
+    },
+    {
+      "state": "MIXED",
+      "items": [
+        "不要只看有利项，先把主要阻碍对应的现实条件列出来。",
+        "推进可以分阶段进行，每一步都保留复核依据。"
+      ]
+    },
+    {
+      "state": "FAVORABLE",
+      "items": [
+        "可以围绕主要支持项小步推进。",
+        "同时保留时间窗口和限制说明，避免把支持理解为保证结果。"
+      ]
+    },
+    {
+      "state": "CAUTIOUS",
+      "items": [
+        "先处理阻碍项对应的现实压力、流程或沟通问题。",
+        "暂时避免一次性押注，适合先做可验证的小动作。"
+      ]
+    },
+    {
+      "state": "UNCLEAR",
+      "items": [
+        "先把问题对象、时间范围和可行动部分说清楚。",
+        "当前只适合做参考观察，不适合据此下最终决定。"
+      ]
+    }
+  ],
+  "timingPolicy": {
+    "version": "CORE_V1_TIMING_EXPLANATION_CLOSURE_V1",
+    "defaultLimitation": "时间窗口只代表候选观察期，不代表保证日期。",
+    "requiresPolicyRef": true
+  }
+}

@@ -9,6 +9,7 @@ import { deduplicateSignals } from "@six/domain/presentation";
 import { PAGE_EXPERIENCE_CONTRACTS, PAGE_STATE_CONTRACT } from "@six/domain/presentation";
 import { TERMINOLOGY_REGISTRY } from "@six/domain/presentation";
 import { formatRelationship, formatStatus } from "@six/domain/presentation";
+import { judgmentFactsSignature } from "@six/domain/presentation";
 
 function liuyaoResult() {
   const result = createLiuyaoChart({
@@ -36,9 +37,15 @@ function meihuaResult() {
 test("Experience bundle builds guided and professional viewmodels without admin leakage", () => {
   const bundle = buildExperienceBundle({ result: liuyaoResult(), type: "liuyao" });
   assert.equal(bundle.experienceVersion, "EXPERIENCE_ORCHESTRATION_V1");
+  assert.equal(bundle.productResultFacts.productFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V1");
+  assert.ok(judgmentFactsSignature(bundle.productResultFacts)?.overallState);
+  assert.ok(bundle.guidedViewModel.overallAssessment?.label);
   assert.ok(bundle.guidedViewModel.headline);
   assert.ok(bundle.guidedViewModel.nextActions.length >= 3);
   assert.ok(bundle.professionalViewModel.chartSummary.title);
+  assert.ok(bundle.professionalViewModel.auditChain?.overallAssessment?.patternName);
+  assert.ok(bundle.professionalViewModel.auditChain?.evidenceResolution?.summary);
+  assert.ok(bundle.professionalViewModel.auditChain?.timing);
   assert.equal(bundle.adminViewModel, undefined);
   assert.equal(bundle.pageExperience.visualHierarchy.Admin, undefined);
   const publicText = JSON.stringify({ guided: bundle.guidedViewModel, professional: bundle.professionalViewModel });

@@ -37,6 +37,13 @@ function attachAiReportBundle(result: unknown, aiReportBundle: unknown) {
   return { ...result, aiReportBundle };
 }
 
+function attachProductResultFacts(result: unknown, experience: unknown) {
+  if (!result || typeof result !== "object" || Array.isArray(result)) return result;
+  if (!experience || typeof experience !== "object" || Array.isArray(experience)) return result;
+  const productResultFacts = (experience as Record<string, unknown>).productResultFacts;
+  return productResultFacts ? { ...result, productResultFacts } : result;
+}
+
 @Injectable()
 export class AiReportService {
   constructor(@Inject(ReportStoreService) private readonly reportStore: ReportStoreService) {}
@@ -94,7 +101,7 @@ export class AiReportService {
       throw error;
     }
 
-    const result = attachAiReportBundle(report.result, report.aiReportBundle);
+    const result = attachProductResultFacts(attachAiReportBundle(report.result, report.aiReportBundle), report.experience);
     const provider = providerFromEnv({ rootDir: rootDir(), mockMode: allowMockMode() ? options.mockMode : undefined });
     const aiReportBundle = await generateGroundedAIReport({
       result,

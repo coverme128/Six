@@ -27,19 +27,23 @@ function publicReportExport(report: PublicReportRecord) {
     createdAt: report.createdAt,
     persistence: report.persistence,
     conclusion: {
+      overallAssessment: guided.overallAssessment,
       headline: guided.headline,
       summary: guided.summary,
+      coreMatter: guided.coreMatter,
       currentSituation: guided.currentSituation,
       changeDirection: guided.changeDirection,
       timingHint: guided.timingHint,
       mainSupports: guided.mainSupports,
       mainRisks: guided.mainRisks,
-      recommendedActions: guided.recommendedActions
+      recommendedActions: guided.recommendedActions,
+      whyThisAssessment: guided.whyThisAssessment
     },
     chartViewModel: publicChartView(report),
     professionalEvidence: {
       method: professional.method,
       chartSummary: professional.chartSummary,
+      auditChain: professional.auditChain,
       evidenceGroups: professional.evidenceGroups,
       timingCandidates: professional.timingCandidates,
       knowledgeRefs: professional.knowledgeRefs

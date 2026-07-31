@@ -25,11 +25,12 @@ test("Guided and Professional report DOM does not leak internal implementation f
   test.skip(testInfo.project.name !== "desktop", "desktop experience leakage coverage");
   const id = await createReport(request);
   await page.goto(`/reports/${id}`);
-  await expect(page.getByRole("heading", { name: "一句话结论" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "总体判断" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "主要支持" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "主要阻碍" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "为什么这样判断" })).toBeVisible();
   await expect(page.getByRole("link", { name: "查看依据" })).toBeVisible();
-  await expect(page.getByText("专业依据")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "专业依据" })).toBeVisible();
   const text = await reportText(page);
   for (const forbidden of ["LIUYAO_RULE_", "ruleFindingId", "subject_state", "AI_REPORT_V1", "OPENAI_LIVE", "promptVersion", "undefined", "null", "requestId"]) {
     expect(text).not.toContain(forbidden);
@@ -53,7 +54,7 @@ test("Mobile report keeps conclusion and next action reachable without overflow"
   test.skip(!testInfo.project.name.startsWith("mobile"), "mobile experience coverage");
   const id = await createReport(request);
   await page.goto(`/reports/${id}`);
-  await expect(page.getByText("一句话结论")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "总体判断" })).toBeVisible();
   await expect(page.getByRole("link", { name: "查看依据" })).toBeVisible();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);

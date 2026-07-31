@@ -38,6 +38,8 @@
     "validate:w1": "pnpm run validate && pnpm run test:e2e",
     "validate:v13": "python3 scripts/production/validate_v13_core.py",
     "validate:liuyao-interpretation-assets": "pnpm --filter @six/domain build && tsx scripts/liuyao/validate-interpretation-assets.ts",
+    "audit:liuyao-product-closure": "pnpm --filter @six/domain build && tsx scripts/liuyao/audit-product-closure.ts",
+    "validate:liuyao-product-closure": "pnpm run audit:liuyao-product-closure && pnpm run test:experience && pnpm run test:ai",
     "validate": "pnpm run validate:v13 && pnpm run typecheck && pnpm run test:domain && pnpm run test:contract",
     "db:generate": "PRISMA_ENGINES_CACHE_DIR=./.prisma-cache pnpm --filter @six/database db:generate",
     "db:migrate": "PRISMA_ENGINES_CACHE_DIR=./.prisma-cache pnpm --filter @six/database db:migrate",

@@ -19,6 +19,11 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     `类型：${report.type === "meihua" ? "梅花" : "六爻"}`,
     report.createdAt ? `生成时间：${new Date(report.createdAt).toLocaleString("zh-CN")}` : "",
     "",
+    "## 总体判断",
+    guided?.overallAssessment?.label ?? "",
+    guided?.overallAssessment?.baseState ?? "",
+    guided?.overallAssessment?.dynamicDirection ?? "",
+    "",
     "## 一句话结论",
     guided?.summary ?? "",
     "",
@@ -45,6 +50,10 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     "",
     "## 下一步",
     (guided?.recommendedActions ?? []).map((item) => `- ${item}`).join("\n"),
+    "",
+    "## 为什么这样判断",
+    guided?.whyThisAssessment?.conflictResolution ?? "",
+    (guided?.whyThisAssessment?.basis ?? []).map((item) => `- ${item}`).join("\n"),
     "",
     "## 专业盘面",
     chart?.type === "liuyao"
@@ -281,6 +290,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           <h2>结论摘要</h2>
           <p className="section-kicker">先看判断含义和下一步，专业盘面与证据用于复核来源。</p>
           <div className="preview-grid">
+            {guided.overallAssessment ? (
+              <div>
+                <h3>总体判断</h3>
+                <p>{guided.overallAssessment.label}</p>
+                <p>{guided.overallAssessment.baseState}</p>
+                <p>{guided.overallAssessment.dynamicDirection}</p>
+              </div>
+            ) : null}
             {guided.coreMatter ? (
               <div>
                 <h3>核心事项</h3>
@@ -335,6 +352,15 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                 <p key={item}>{item}</p>
               ))}
             </div>
+            {guided.whyThisAssessment ? (
+              <div>
+                <h3>为什么这样判断</h3>
+                <p>{guided.whyThisAssessment.conflictResolution}</p>
+                {(guided.whyThisAssessment.basis ?? []).slice(0, 3).map((item) => (
+                  <p key={item}>{item}</p>
+                ))}
+              </div>
+            ) : null}
           </div>
           <div className="inline-actions">
             <a className="primary-link" href="#professional-evidence">
@@ -428,6 +454,36 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                 ))}
               </div>
               <p className="empty">观察重点由系统按场景自动确定；专业模式后续可开放自定义，不作为普通用户必经步骤。</p>
+            </details>
+          ) : null}
+          {professional.auditChain ? (
+            <details className="evidence-details" open>
+              <summary>综合判断审计链</summary>
+              <div className="preview-grid">
+                <div>
+                  <h3>问题与用神</h3>
+                  <p>{professional.auditChain.question?.topic}</p>
+                  <p>{professional.auditChain.yongshenSelection?.explanation}</p>
+                </div>
+                <div>
+                  <h3>冲突裁决</h3>
+                  <p>{professional.auditChain.evidenceResolution?.summary}</p>
+                </div>
+                <div>
+                  <h3>Assessment Pattern</h3>
+                  <p>{professional.auditChain.overallAssessment?.patternName}</p>
+                  <p>{professional.auditChain.overallAssessment?.summary}</p>
+                </div>
+                <div>
+                  <h3>Timing Basis</h3>
+                  {(professional.auditChain.timing ?? []).slice(0, 3).map((item) => (
+                    <p key={`${item.window}-${item.precision}`}>{item.explanation}</p>
+                  ))}
+                </div>
+              </div>
+              {(professional.auditChain.limitations ?? []).map((item) => (
+                <p className="empty" key={item}>{item}</p>
+              ))}
             </details>
           ) : null}
           <details className="evidence-details">

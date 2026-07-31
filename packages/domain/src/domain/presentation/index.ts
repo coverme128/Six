@@ -3,6 +3,7 @@ import { buildDivinationResultFacts } from "./divinationResultFacts.js";
 import { buildGuidedViewModel } from "./guidedViewModel.js";
 import { buildProfessionalViewModel } from "./professionalViewModel.js";
 import { buildAdminViewModel } from "./adminViewModel.js";
+import { buildLiuyaoProductResultFacts } from "./productResultFacts.js";
 import { REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
 import { duplicatePresentationWarnings } from "./evidenceDeduplicator.js";
 
@@ -10,11 +11,14 @@ export { deduplicateSignals } from "./evidenceDeduplicator.js";
 export { PAGE_EXPERIENCE_CONTRACTS, PAGE_STATE_CONTRACT, REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
 export { TERMINOLOGY_REGISTRY } from "./terminologyRegistry.js";
 export { formatRelationship, formatStatus } from "./terminologyFormatter.js";
+export { LIUYAO_PRODUCT_RESULT_FACTS_VERSION, judgmentFactsSignature } from "./productResultFacts.js";
 
 export function buildExperienceBundle({ result, type, includeAdmin = false }) {
   const facts = buildDivinationResultFacts({ result, type });
-  const guidedViewModel = buildGuidedViewModel(facts);
-  const professionalViewModel = buildProfessionalViewModel(facts);
+  const productResultFacts = type === "liuyao" ? (result.productResultFacts ?? buildLiuyaoProductResultFacts({ result, presentationFacts: facts })) : null;
+  const viewFacts = productResultFacts ?? facts;
+  const guidedViewModel = buildGuidedViewModel(viewFacts);
+  const professionalViewModel = buildProfessionalViewModel(viewFacts);
   const pageExperience = {
     ...REPORT_PAGE_EXPERIENCE,
     visualHierarchy: { ...REPORT_PAGE_EXPERIENCE.visualHierarchy },
@@ -25,6 +29,8 @@ export function buildExperienceBundle({ result, type, includeAdmin = false }) {
     reportId: facts.resultId,
     reportType: facts.resultType,
     state: "COMPLETED",
+    productClosureStatus: productResultFacts ? "LIUYAO_ASSESSMENT_RUNTIME_READY" : null,
+    productResultFacts,
     pageExperience,
     visibility: {
       guided: VISIBILITY_MATRIX.Guided,

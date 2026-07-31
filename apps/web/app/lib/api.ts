@@ -3,6 +3,13 @@ export type DivinationMode = "liuyao" | "meihua";
 export type GuidedViewModel = {
   headline?: string;
   summary?: string;
+  overallAssessment?: {
+    state?: string;
+    label?: string;
+    baseState?: string;
+    dynamicDirection?: string;
+    conflictState?: string;
+  } | null;
   currentSituation?: string;
   coreMatter?: {
     topic?: string;
@@ -17,6 +24,10 @@ export type GuidedViewModel = {
   recommendedActions?: string[];
   mainSupports?: Array<{ title?: string; text?: string }>;
   mainRisks?: Array<{ title?: string; text?: string }>;
+  whyThisAssessment?: {
+    conflictResolution?: string;
+    basis?: string[];
+  } | null;
 };
 
 export type ObservationFocus = {
@@ -58,6 +69,26 @@ export type ProfessionalViewModel = {
   };
   topicRoleContext?: GuidedViewModel["coreMatter"];
   observationFocus?: ObservationFocus | null;
+  auditChain?: {
+    question?: { question?: string; topic?: string; bindingStatus?: string };
+    yongshenSelection?: {
+      explanation?: string;
+      selectedRoles?: Array<{ label?: string; practicalMeaning?: string; importance?: string; linePositions?: number[] }>;
+    };
+    evidenceResolution?: { conflictState?: string; summary?: string };
+    overallAssessment?: {
+      patternName?: string;
+      overallState?: string;
+      baseState?: string;
+      dynamicDirection?: string;
+      conflictState?: string;
+      summary?: string;
+      basis?: string[];
+      boundary?: string;
+    };
+    timing?: Array<{ window?: string; explanation?: string; limitation?: string; precision?: string }>;
+    limitations?: string[];
+  } | null;
   relationships?: Array<{ title?: string; text?: string }>;
   evidenceGroups?: {
     supports?: Array<{ title?: string; text?: string }>;

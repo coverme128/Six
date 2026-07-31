@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 
 import { buildLiuyaoReport, buildMeihuaReport } from "./reportBuilder.js";
 import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContext } from "./presentation/interpretationAssets.js";
+import { buildLiuyaoProductResultFacts, judgmentFactsSignature } from "./presentation/productResultFacts.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
 export const LIUYAO_PROMPT_VERSION = "liuyao-report-v1";
@@ -26,6 +27,13 @@ const FORBIDDEN_OUTPUT_KEYS = new Set([
   "certain_date",
   "medical_diagnosis",
   "legal_conclusion",
+  "selectedYongshen",
+  "overallState",
+  "baseState",
+  "dynamicDirection",
+  "conflictState",
+  "dominantFindingRefs",
+  "timingPrecision",
 ]);
 const FORBIDDEN_TEXT_PATTERNS = [
   /保证成功|保证失败|必然成功|必然失败/u,
@@ -234,6 +242,9 @@ function resolvedSemanticsForAI(result, type) {
 export function buildAIReportInput({ result, type, language = "zh-CN" }) {
   const chart = result.chart;
   const narrativeReport = result.narrativeReport ?? (type === "liuyao" ? buildLiuyaoReport(result) : buildMeihuaReport(result));
+  const productResultFacts = type === "liuyao"
+    ? (result.productResultFacts ?? buildLiuyaoProductResultFacts({ result }))
+    : null;
   const matchedRuleFindings = type === "liuyao"
     ? (result.report?.evidence ?? []).map(findingForAI)
     : (result.report?.evidence ?? []).map(meihuaEvidenceForAI);
@@ -253,6 +264,13 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     calendarFacts: calendarFacts(chart),
     aggregatedEvidence: aggregateEvidence(result, type),
     matchedRuleFindings,
+    productResultFactsVersion: productResultFacts?.productFactsVersion ?? null,
+    overallAssessmentFacts: productResultFacts?.overallAssessmentFacts ?? null,
+    yongshenSelectionFacts: productResultFacts?.yongshenSelectionFacts ?? null,
+    conflictResolutionFacts: productResultFacts?.conflictResolutionFacts ?? null,
+    timingExplanationFacts: productResultFacts?.timingExplanationFacts ?? [],
+    actionGuidanceFacts: productResultFacts?.actionGuidanceFacts ?? null,
+    deterministicJudgmentSignature: productResultFacts ? judgmentFactsSignature(productResultFacts) : null,
     resolvedFindings: resolvedSemantics.resolvedFindings,
     resolvedRelationships: resolvedSemantics.resolvedRelationships,
     resolvedTopicRoles: resolvedSemantics.resolvedTopicRoles,
@@ -275,6 +293,11 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     calendarFacts: input.calendarFacts,
     matchedRuleFindings: input.matchedRuleFindings,
     timingCandidates: input.timingCandidates,
+    overallAssessmentFacts: input.overallAssessmentFacts,
+    conflictResolutionFacts: input.conflictResolutionFacts,
+    timingExplanationFacts: input.timingExplanationFacts,
+    actionGuidanceFacts: input.actionGuidanceFacts,
+    deterministicJudgmentSignature: input.deterministicJudgmentSignature,
     resolvedFindings: input.resolvedFindings,
     resolvedRelationships: input.resolvedRelationships,
     resolvedTopicRoles: input.resolvedTopicRoles,
@@ -330,6 +353,12 @@ function allowedEvidenceRefs(input) {
     ...input.timingCandidates.map((item) => item.id),
     ...input.knowledgeReferences.map((item) => item.id),
   ]);
+}
+
+function aiOutcomeLabel(overallState) {
+  if (overallState === "TRANSITIONAL") return "MIXED";
+  if (OUTCOME_LABELS.has(overallState)) return overallState;
+  return "UNCLEAR";
 }
 
 export function validateAIReportSchema(raw, input) {
@@ -456,17 +485,19 @@ export class DeterministicReportProvider {
         };
     const support = input.aggregatedEvidence.supportingForces[0] ?? input.matchedRuleFindings[0];
     const blocking = input.aggregatedEvidence.blockingForces[0] ?? input.matchedRuleFindings[1] ?? support;
+    const overall = input.overallAssessmentFacts;
+    const actions = input.actionGuidanceFacts?.items ?? ["先处理可验证的阻碍条件。", "把报告作为辅助参考，不替代现实决策。"];
     return {
       schemaVersion: AI_SCHEMA_VERSION,
       factClaims,
-      summary: `${input.chartFacts.originalHexagram}之${input.chartFacts.changedHexagram}，以已命中的证据谨慎判断。`,
-      currentSituation: "当前解读只基于排盘事实、CAL_STD_V1 历法事实和已命中的公开证据。",
+      summary: overall?.summary ?? `${input.chartFacts.originalHexagram}之${input.chartFacts.changedHexagram}，以已命中的证据谨慎判断。`,
+      currentSituation: overall?.baseStateText ?? "当前解读只基于排盘事实、CAL_STD_V1 历法事实和已命中的公开证据。",
       supportingFactors: support ? [{ text: support.summary, evidenceRefs: [support.id] }] : [],
       blockingFactors: blocking ? [{ text: blocking.summary, evidenceRefs: [blocking.id] }] : [],
-      changeDirection: "变化方向以动爻、体用或已列证据为准，不作保证性判断。",
-      outcomeTrend: { label: "MIXED", text: "支持与阻碍需要并看，结果仍取决于现实行动和后续条件。" },
+      changeDirection: overall?.dynamicDirectionText ?? "变化方向以动爻、体用或已列证据为准，不作保证性判断。",
+      outcomeTrend: { label: aiOutcomeLabel(overall?.overallState), text: overall?.headline ?? "支持与阻碍需要并看，结果仍取决于现实行动和后续条件。" },
       timingWindows: timing ? [{ text: `${timing.window} 仅作为候选窗口。`, candidateRef: timing.id }] : [],
-      actionSuggestions: ["先处理可验证的阻碍条件。", "把报告作为辅助参考，不替代现实决策。"],
+      actionSuggestions: actions,
       evidenceSummary: support ? [{ text: "核心证据来自已命中规则。", evidenceRefs: [support.id] }] : [],
       limitations: ["这是传统文化解释，不承诺结果。"],
       disclaimer: "本报告仅供参考，不构成医疗、法律或投资建议。",
@@ -573,9 +604,11 @@ function fallbackBundle({ result, type, input, reason, provider, model }) {
     tokenUsage: { inputTokenEstimate: estimateTokens(input), outputTokens: 0 },
     reportSource: "DETERMINISTIC_FALLBACK",
     validationStatus: "FALLBACK",
+    productStatus: "PARTIAL_AI_UNAVAILABLE",
     fallbackUsed: true,
     failureCode: reason?.code ?? "UNKNOWN_AI_FAILURE",
     deterministicReport: result.narrativeReport ?? (type === "liuyao" ? buildLiuyaoReport(result) : buildMeihuaReport(result)),
+    deterministicJudgmentSignature: input.deterministicJudgmentSignature,
   };
 }
 

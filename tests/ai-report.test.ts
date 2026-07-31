@@ -12,6 +12,7 @@ import {
 } from "@six/domain/ai-report";
 import { createLiuyaoChart } from "@six/domain/liuyao";
 import { createMeihuaChart } from "@six/domain/meihua";
+import { buildExperienceBundle, judgmentFactsSignature } from "@six/domain/presentation";
 import { buildLiuyaoReport, buildMeihuaReport } from "@six/domain/report-builder";
 
 const ROOT = process.cwd();
@@ -49,6 +50,11 @@ test("AIReportInput contains only grounded chart, calendar and matched evidence 
   assert.equal(input.versions.calendarProvider, "lunar-javascript");
   assert.equal(input.versions.aiSchemaVersion, "AI_REPORT_V1");
   assert.ok(input.questionContext.questionDigest.sha256);
+  assert.equal(input.productResultFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V1");
+  assert.ok(input.overallAssessmentFacts.overallState);
+  assert.ok(input.conflictResolutionFacts.conflictState);
+  assert.ok(input.actionGuidanceFacts.items.length > 0);
+  assert.ok(input.deterministicJudgmentSignature.overallState);
   assert.ok(!("candidateRulePool" in input));
   assert.ok(input.matchedRuleFindings.every((finding) => finding.id.startsWith("rule:")));
 });
@@ -124,9 +130,31 @@ test("provider failures and invalid outputs always fall back to deterministic re
     const result = liuyaoResult();
     const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode }) });
     assert.equal(bundle.validationStatus, "FALLBACK", mode);
+    assert.equal(bundle.productStatus, "PARTIAL_AI_UNAVAILABLE", mode);
     assert.equal(bundle.fallbackUsed, true, mode);
     assert.ok(bundle.deterministicReport, mode);
+    assert.ok(bundle.deterministicJudgmentSignature, mode);
   }
+});
+
+test("DETERMINISTIC_ASSESSMENT_FIDELITY keeps AI ON and OFF judgment facts identical", async () => {
+  const result = liuyaoResult();
+  const aiOffExperience = buildExperienceBundle({ result, type: "liuyao" });
+  const aiOffSignature = judgmentFactsSignature(aiOffExperience.productResultFacts);
+
+  const validBundle = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "success" }) });
+  const aiOnExperience = buildExperienceBundle({
+    result: { ...result, aiReportBundle: validBundle, productResultFacts: aiOffExperience.productResultFacts },
+    type: "liuyao",
+  });
+  assert.deepEqual(judgmentFactsSignature(aiOnExperience.productResultFacts), aiOffSignature);
+
+  const fallbackBundle = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "throw" }) });
+  const fallbackExperience = buildExperienceBundle({
+    result: { ...result, aiReportBundle: fallbackBundle, productResultFacts: aiOffExperience.productResultFacts },
+    type: "liuyao",
+  });
+  assert.deepEqual(judgmentFactsSignature(fallbackExperience.productResultFacts), aiOffSignature);
 });
 
 test("valid AI report can be saved and reused for the same report", async () => {
