@@ -1,0 +1,752 @@
+{
+  "registryId": "LIUYAO_FINDING_EXPLANATION_REGISTRY",
+  "version": "1.0.0",
+  "entries": [
+    {
+      "assetId": "LYX_FIND_YONGSHEN_STRONG",
+      "category": "STRENGTH",
+      "displayName": "用神偏强",
+      "shortDescription": "核心事项当前具备较好的承载与发挥条件。",
+      "practicalMeaning": "当前核心事项本身具备一定力量，后续重点应观察支持是否持续、是否受到明显冲克。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_WEAK",
+      "category": "STRENGTH",
+      "displayName": "用神偏弱",
+      "shortDescription": "核心事项当前自身力量有限。",
+      "practicalMeaning": "当前核心事项的基础承载力偏弱，需要继续观察日月、原神或动爻是否提供支持；偏弱不等于最终失败。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_MONTH_GENERATES_YONG",
+      "category": "STRENGTH",
+      "displayName": "月建生用神",
+      "shortDescription": "月令对核心事项形成支持。",
+      "practicalMeaning": "当前外部时令环境对核心事项具有支持作用，是重要正向证据之一。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_MONTH_CONTROLS_YONG",
+      "category": "STRENGTH",
+      "displayName": "月建克用神",
+      "shortDescription": "月令对核心事项形成制约。",
+      "practicalMeaning": "当前外部环境对核心事项存在压力，需要结合用神自身力量及其他支持因素判断影响程度。",
+      "direction": "BLOCK",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_DAY_GENERATES_YONG",
+      "category": "STRENGTH",
+      "displayName": "日辰生用神",
+      "shortDescription": "日辰对核心事项形成支持。",
+      "practicalMeaning": "当前时间条件对核心事项提供直接支持，可增强其当下表现。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_DAY_CONTROLS_YONG",
+      "category": "STRENGTH",
+      "displayName": "日辰克用神",
+      "shortDescription": "日辰对核心事项形成制约。",
+      "practicalMeaning": "当前时间条件对核心事项形成即时压力，需要与月令和动爻共同判断。",
+      "direction": "BLOCK",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_XUNKONG",
+      "category": "STRENGTH",
+      "displayName": "用神旬空",
+      "shortDescription": "核心事项当前存在暂时难以充分发挥的状态。",
+      "practicalMeaning": "旬空通常提示相关因素在当前阶段落实受限或需要等待条件补足；不能脱离旺衰和动静单独作绝对判断。",
+      "direction": "CAUTION",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_MONTH_BREAK",
+      "category": "STRENGTH",
+      "displayName": "用神月破",
+      "shortDescription": "核心事项受到月令层面的明显冲击。",
+      "practicalMeaning": "当前外部环境对核心事项稳定性形成较强制约，应优先核查是否有足够支持因素缓解。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_DAY_CLASH",
+      "category": "STRENGTH",
+      "displayName": "用神逢日冲",
+      "shortDescription": "核心事项受到当日条件的直接扰动。",
+      "practicalMeaning": "日冲可能意味着变化、压力或触发，具体意义需结合动静、旺衰及问题类型判断。",
+      "direction": "CAUTION",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_MOVING_LINE_GENERATES_YONG",
+      "category": "DYNAMIC",
+      "displayName": "动爻生用神",
+      "shortDescription": "变化因素主动支持核心事项。",
+      "practicalMeaning": "当前局面中的动态因素正在向核心事项提供支持，通常比静态背景更值得关注。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_MOVING_LINE_CONTROLS_YONG",
+      "category": "DYNAMIC",
+      "displayName": "动爻克用神",
+      "shortDescription": "变化因素主动制约核心事项。",
+      "practicalMeaning": "当前变化正在对核心事项形成主动压力，是需要优先关注的阻碍信号。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONG_MOVING",
+      "category": "DYNAMIC",
+      "displayName": "用神发动",
+      "shortDescription": "核心事项本身进入明显变化状态。",
+      "practicalMeaning": "核心事项不是静止等待，而是正在发生变化；后续重点应放在变爻方向和化后关系。",
+      "direction": "CHANGE",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_RETURN_GENERATION",
+      "category": "DYNAMIC",
+      "displayName": "回头生",
+      "shortDescription": "变化后的力量反过来支持原有因素。",
+      "practicalMeaning": "该变化具有后续补力或自我增强的含义，但仍需结合原爻旺衰和作用对象判断强度。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_RETURN_CONTROL",
+      "category": "DYNAMIC",
+      "displayName": "回头克",
+      "shortDescription": "变化后的力量反过来制约原有因素。",
+      "practicalMeaning": "该变化提示后续可能出现反向压力或自我削弱，是重要动态风险信号。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_DYNAMIC_SUPPORT_DOMINANT",
+      "category": "DYNAMIC",
+      "displayName": "动态支持占优",
+      "shortDescription": "主要变化信号整体偏向支持。",
+      "practicalMeaning": "当前变化方向总体更有利，但仍应保留对关键阻碍因素的关注。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_DYNAMIC_BLOCK_DOMINANT",
+      "category": "DYNAMIC",
+      "displayName": "动态阻碍占优",
+      "shortDescription": "主要变化信号整体偏向制约。",
+      "practicalMeaning": "当前变化方向更容易增加阻力，适合先处理主要制约再判断是否继续推进。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_AT_SHI",
+      "category": "ROLE",
+      "displayName": "用神临世",
+      "shortDescription": "核心事项与用户自身位置高度重合。",
+      "practicalMeaning": "本次所问事项与用户自身状态、主动性或直接承受程度关系较强。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YONGSHEN_AT_YING",
+      "category": "ROLE",
+      "displayName": "用神临应",
+      "shortDescription": "核心事项更明显落在对方或外部对象一侧。",
+      "practicalMeaning": "本次结果对外部对象、对方反应或外部条件的依赖较高。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_SHI_STRONG",
+      "category": "ROLE",
+      "displayName": "世爻有力",
+      "shortDescription": "用户自身一侧具备较好的承载或行动条件。",
+      "practicalMeaning": "当前自身状态相对有力，更有条件主动处理问题，但不代表目标一定实现。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_SHI_WEAK",
+      "category": "ROLE",
+      "displayName": "世爻偏弱",
+      "shortDescription": "用户自身一侧当前承载力有限。",
+      "practicalMeaning": "当前更需要管理自身资源、节奏或承压能力，再结合事项本身状态决定行动。",
+      "direction": "CAUTION",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YUANSHEN_SUPPORTS_YONG",
+      "category": "RELATIONSHIP",
+      "displayName": "原神生用",
+      "shortDescription": "支持核心事项的来源处于有效作用中。",
+      "practicalMeaning": "核心事项不仅自身存在条件，还获得来自支持源的帮助。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_YUANSHEN_WEAK",
+      "category": "RELATIONSHIP",
+      "displayName": "原神无力",
+      "shortDescription": "支持核心事项的来源当前作用有限。",
+      "practicalMeaning": "现有支持因素不足以单独扭转核心事项，需要继续观察其他助力。",
+      "direction": "CAUTION",
+      "defaultPriority": "P2",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_JISHEN_CONTROLS_YONG",
+      "category": "RELATIONSHIP",
+      "displayName": "忌神克用",
+      "shortDescription": "直接制约核心事项的因素正在发挥作用。",
+      "practicalMeaning": "当前存在针对核心事项的明确阻力，应判断该阻力是否发动、是否有力以及能否被制衡。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_JISHEN_WEAK",
+      "category": "RELATIONSHIP",
+      "displayName": "忌神无力",
+      "shortDescription": "主要阻力当前作用有限。",
+      "practicalMeaning": "存在理论上的阻碍因素，但其当前力量不足，不宜夸大影响。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P2",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_SUPPORTS_OUTWEIGH_BLOCKS",
+      "category": "COMPOSITE",
+      "displayName": "支持因素占优",
+      "shortDescription": "当前关键支持整体强于主要阻碍。",
+      "practicalMeaning": "从核心证据组合看，局面具有推进条件，但仍应处理剩余风险并避免绝对化结论。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_BLOCKS_OUTWEIGH_SUPPORTS",
+      "category": "COMPOSITE",
+      "displayName": "阻碍因素占优",
+      "shortDescription": "当前主要阻碍整体强于支持。",
+      "practicalMeaning": "从核心证据组合看，局面推进阻力更明显，优先处理关键约束比直接强推更重要。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_MIXED_SIGNALS",
+      "category": "COMPOSITE",
+      "displayName": "支持与阻碍并存",
+      "shortDescription": "当前关键信号存在明显分歧。",
+      "practicalMeaning": "局面不是单向发展，适合把支持条件和主要风险分开处理，不应给出过度确定的单一判断。",
+      "direction": "MIXED",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LOW_EVIDENCE",
+      "category": "COMPOSITE",
+      "displayName": "核心证据不足",
+      "shortDescription": "当前可用于形成强结论的核心信号不足。",
+      "practicalMeaning": "系统应保持克制，优先说明已知事实与限制，而不是补写确定性判断。",
+      "direction": "UNCLEAR",
+      "defaultPriority": "P0",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_TIMING_WINDOW_AVAILABLE",
+      "category": "TIMING",
+      "displayName": "存在可解释的时间窗口",
+      "shortDescription": "当前规则可以给出一个相对明确的时间关注窗口。",
+      "practicalMeaning": "可展示候选窗口和依据，但必须说明它是规则性时间提示，不是具体事件日期保证。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_TIMING_BROAD_ONLY",
+      "category": "TIMING",
+      "displayName": "仅适合宽时间窗口",
+      "shortDescription": "当前证据更适合给出宽泛时间范围。",
+      "practicalMeaning": "系统应避免给出具体日期，以降低虚假精确。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_TIMING_INSUFFICIENT",
+      "category": "TIMING",
+      "displayName": "时间依据不足",
+      "shortDescription": "当前没有足够依据形成可靠时间提示。",
+      "practicalMeaning": "不应为了满足用户期待而生成具体日期。",
+      "direction": "UNCLEAR",
+      "defaultPriority": "P1",
+      "limitations": [
+        "不得脱离用神、旺衰、动静、日月及其他核心关系单独下最终结论。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_QINGLONG",
+      "category": "LIUSHEN",
+      "displayName": "青龙",
+      "shortDescription": "提供偏积极、顺遂或辅助性的象意参考。",
+      "practicalMeaning": "六神只作为辅助象意，不应脱离六亲、用神、旺衰和动变独立判断吉凶。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_ZHUQUE",
+      "category": "LIUSHEN",
+      "displayName": "朱雀",
+      "shortDescription": "提供沟通、文书、表达或争执相关的辅助象意。",
+      "practicalMeaning": "在涉及沟通、文本、消息或口舌的场景中可提供辅助解释，但不能单独决定结果。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_GOUCHEN",
+      "category": "LIUSHEN",
+      "displayName": "勾陈",
+      "shortDescription": "提供拖延、牵制、土地或沉重感相关的辅助象意。",
+      "practicalMeaning": "可补充对迟滞、牵连或现实负担的理解，但优先级通常低于用神和动变。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_TENGSHE",
+      "category": "LIUSHEN",
+      "displayName": "腾蛇",
+      "shortDescription": "提供反复、虚惊、疑虑或复杂感相关的辅助象意。",
+      "practicalMeaning": "适合作为认知与情绪层面的辅助提示，不应被直接解释为具体事件必然发生。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_BAIHU",
+      "category": "LIUSHEN",
+      "displayName": "白虎",
+      "shortDescription": "提供压力、冲突、损伤或强烈变化相关的辅助象意。",
+      "practicalMeaning": "属于风险辅助信号，应避免将其简单等同于灾祸。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "assetId": "LYX_FIND_LIUSHEN_XUANWU",
+      "category": "LIUSHEN",
+      "displayName": "玄武",
+      "shortDescription": "提供隐情、延迟、信息不透明或暗中因素相关的辅助象意。",
+      "practicalMeaning": "可提示需要核验信息完整性，但不能据此直接断定欺骗或恶意。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "limitations": [
+        "六神为辅助层，不得单独决定总体判断。",
+        "不得将象意直接转写为具体事实指控。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "coreSemanticCopy": "PUBLICATION_READY_AFTER_BINDING",
+        "topicSpecificCopy": "REVIEW_REQUIRED"
+      }
+    }
+  ]
+}

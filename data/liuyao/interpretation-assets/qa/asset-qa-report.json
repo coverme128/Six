@@ -1,0 +1,14 @@
+{
+  "package": "liuyao-core-interpretation-assets-v1.0",
+  "counts": {
+    "findings": 37,
+    "relationships": 18,
+    "topics": 15
+  },
+  "checks": {
+    "uniqueFindingIds": true,
+    "uniqueRelationIds": true,
+    "uniqueTopicIds": true,
+    "allBindingsExplicit": true
+  }
+}

@@ -75,6 +75,9 @@ test("Liuyao scene selection drives automatic observation focus without user yon
 
   assert.match(bundle.guidedViewModel.observationFocus.summary, /妻财/u);
   assert.match(bundle.guidedViewModel.observationFocus.summary, /世爻/u);
+  assert.match(bundle.guidedViewModel.summary, /第 \d+ 爻/u);
+  assert.ok(!bundle.guidedViewModel.summary.includes("时间环境对事情有一定承托"));
+  assert.ok(!bundle.guidedViewModel.summary.includes("短期节奏里有扰动"));
   assert.ok(!publicText.includes("job_search"));
   assert.ok(!publicText.includes("officer_ghost"));
   assert.ok(!publicText.includes("请确认用神"));

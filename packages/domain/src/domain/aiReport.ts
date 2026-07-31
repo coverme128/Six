@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { buildLiuyaoReport, buildMeihuaReport } from "./reportBuilder.js";
+import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContext } from "./presentation/interpretationAssets.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
 export const LIUYAO_PROMPT_VERSION = "liuyao-report-v1";
@@ -191,12 +192,52 @@ function calendarFacts(chart) {
   };
 }
 
+function resolvedSemanticsForAI(result, type) {
+  if (type !== "liuyao") {
+    return {
+      resolvedFindings: [],
+      resolvedRelationships: [],
+      resolvedTopicRoles: null,
+    };
+  }
+  const chart = result.chart;
+  const findings = result.report?.evidence ?? [];
+  return {
+    resolvedFindings: findings.map((finding) => {
+      const resolved = resolveFindingExplanation(finding, chart);
+      return {
+        evidenceRef: finding.rule_code ? `rule:${finding.rule_code}` : finding.id,
+        bindingStatus: resolved.bindingStatus,
+        assetId: resolved.assetId,
+        displayName: resolved.displayName,
+        practicalMeaning: resolved.practicalMeaning,
+        direction: resolved.direction,
+        priority: resolved.defaultPriority,
+        limitations: resolved.limitations ?? [],
+      };
+    }),
+    resolvedRelationships: resolveRelationships(chart).map((item) => ({
+      relationId: item.relationId,
+      bindingStatus: item.bindingStatus,
+      title: item.title,
+      professionalMeaning: item.professionalMeaning,
+      guidedMeaning: item.guidedMeaning,
+      direction: item.direction,
+      priority: item.defaultPriority,
+      limitation: item.limitation,
+      linePosition: item.linePosition,
+    })),
+    resolvedTopicRoles: resolveTopicRoleContext(chart),
+  };
+}
+
 export function buildAIReportInput({ result, type, language = "zh-CN" }) {
   const chart = result.chart;
   const narrativeReport = result.narrativeReport ?? (type === "liuyao" ? buildLiuyaoReport(result) : buildMeihuaReport(result));
   const matchedRuleFindings = type === "liuyao"
     ? (result.report?.evidence ?? []).map(findingForAI)
     : (result.report?.evidence ?? []).map(meihuaEvidenceForAI);
+  const resolvedSemantics = resolvedSemanticsForAI(result, type);
   const input = {
     reportId: chart.id,
     reportType: type === "liuyao" ? "LIUYAO" : "MEIHUA",
@@ -212,6 +253,9 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     calendarFacts: calendarFacts(chart),
     aggregatedEvidence: aggregateEvidence(result, type),
     matchedRuleFindings,
+    resolvedFindings: resolvedSemantics.resolvedFindings,
+    resolvedRelationships: resolvedSemantics.resolvedRelationships,
+    resolvedTopicRoles: resolvedSemantics.resolvedTopicRoles,
     timingCandidates: timingCandidatesForAI(result),
     knowledgeReferences: knowledgeReferences({ ...result, narrativeReport }),
     versions: {
@@ -231,6 +275,9 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     calendarFacts: input.calendarFacts,
     matchedRuleFindings: input.matchedRuleFindings,
     timingCandidates: input.timingCandidates,
+    resolvedFindings: input.resolvedFindings,
+    resolvedRelationships: input.resolvedRelationships,
+    resolvedTopicRoles: input.resolvedTopicRoles,
     versions: input.versions,
     questionDigest: input.questionContext.questionDigest,
   });

@@ -123,20 +123,53 @@ function relationMeaning(relation, actorLabel, targetLabel) {
   return labels[relation] ?? labels.unknown;
 }
 
+function elementInfluence(actorElement, targetElement, elementByCode) {
+  if (actorElement === targetElement) return "same";
+  const actor = elementByCode.get(actorElement);
+  const target = elementByCode.get(targetElement);
+  if (actor?.generates === targetElement) return "generates";
+  if (target?.generates === actorElement) return "drains";
+  if (actor?.controls === targetElement) return "controls";
+  if (target?.controls === actorElement) return "resists";
+  return "unknown";
+}
+
+function influenceLabel(code) {
+  return {
+    same: "同气",
+    generates: "生扶",
+    drains: "泄气",
+    controls: "克制",
+    resists: "耗力",
+    unknown: "待定",
+  }[code] ?? "待定";
+}
+
+function influenceText(code, actorLabel, targetLabel) {
+  return {
+    same: `${actorLabel}与${targetLabel}同气`,
+    generates: `${actorLabel}生扶${targetLabel}`,
+    drains: `${targetLabel}生${actorLabel}，自身有泄气`,
+    controls: `${actorLabel}克制${targetLabel}`,
+    resists: `${targetLabel}克${actorLabel}，需要主动耗力`,
+    unknown: `${actorLabel}与${targetLabel}关系待定`,
+  }[code] ?? `${actorLabel}与${targetLabel}关系待定`;
+}
+
 function branchInfluence(actorBranchCode, actorBranchName, targetLine, idx) {
   const actorBranch = idx.branchByCode.get(actorBranchCode);
   if (!actorBranch || !targetLine?.element) {
-    return { relation: "unknown", relationName: "待定", isSame: false, isClash: false, text: `${actorBranchName ?? "时间"}作用待定` };
+    return { effect: "unknown", effectName: "待定", isSame: false, isClash: false, text: `${actorBranchName ?? "时间"}作用待定` };
   }
-  const relation = elementRelation(actorBranch.element, targetLine.element, idx.elementByCode);
   const isSame = actorBranchCode === targetLine.branch;
   const isClash = CLASH_PAIRS.get(actorBranchCode) === targetLine.branch;
-  const relationName = isClash ? "冲" : (isSame ? "同支" : (RELATION_ZH[relation] ?? relation));
+  const effect = isSame ? "same" : elementInfluence(actorBranch.element, targetLine.element, idx.elementByCode);
+  const effectName = isClash ? "冲" : (isSame ? "同支" : influenceLabel(effect));
   const prefix = actorBranchName ?? actorBranch.name_zh;
-  const action = isClash ? `${prefix}冲${targetLine.branchName}` : relationMeaning(relation, prefix, targetLine.branchName);
+  const action = isClash ? `${prefix}冲${targetLine.branchName}` : influenceText(effect, prefix, targetLine.branchName);
   return {
-    relation,
-    relationName,
+    effect,
+    effectName,
     isSame,
     isClash,
     text: action,
@@ -258,6 +291,60 @@ function buildObservationFocus({ chart, yongshen }) {
   };
 }
 
+function focusedLines(chart) {
+  const positions = new Set();
+  for (const role of chart.observationFocus?.roles ?? []) {
+    for (const line of role.lines ?? []) positions.add(line.position);
+  }
+  const lines = chart.lines.filter((line) => positions.has(line.position));
+  if (lines.length) return lines;
+  return chart.lines.filter((line) => line.isWorld || line.isResponse || line.moving);
+}
+
+function influenceRuleCode(period, influence) {
+  const prefix = period === "month" ? "MONTH" : "DAY";
+  if (influence.isSame) return `${prefix}_SAME_BRANCH`;
+  if (influence.isClash) return `${prefix}_CLASH`;
+  if (influence.effect === "generates") return `${prefix}_GENERATES_LINE`;
+  if (influence.effect === "controls") return `${prefix}_CONTROLS_LINE`;
+  if (influence.effect === "drains") return period === "month" ? "LINE_GENERATES_MONTH" : "LINE_GENERATES_DAY";
+  if (influence.effect === "resists") return period === "month" ? "LINE_CONTROLS_MONTH" : "LINE_CONTROLS_DAY";
+  return null;
+}
+
+function influencePolarity(influence) {
+  if (influence.isSame || influence.effect === "generates") return "supporting";
+  if (influence.isClash || ["controls", "drains", "resists"].includes(influence.effect)) return "blocking";
+  return null;
+}
+
+function timeFindingSummary(period, line, influence) {
+  const label = period === "month" ? "月建" : "日辰";
+  const role = line.isWorld ? "世爻" : line.isResponse ? "应爻" : line.sixRelationName;
+  const suffix = influencePolarity(influence) === "supporting" ? "，形成可用支持。" : "，需要作为阻力观察。";
+  return `${label}作用到第 ${line.position} 爻（${role} / ${line.branchName}）：${influence.text}${suffix}`;
+}
+
+function strongestTimeInfluences(chart) {
+  const candidates = [];
+  for (const line of focusedLines(chart)) {
+    for (const period of ["month", "day"]) {
+      const influence = period === "month" ? line.monthInfluence : line.dayInfluence;
+      const polarity = influencePolarity(influence);
+      const ruleCode = influenceRuleCode(period, influence);
+      if (!polarity || !ruleCode) continue;
+      const baseRank = line.isWorld ? 40 : line.isResponse ? 36 : line.moving ? 34 : 30;
+      const forceRank = influence.isClash || influence.isSame ? 10 : influence.effect === "generates" || influence.effect === "controls" ? 8 : 5;
+      candidates.push({ period, line, influence, polarity, ruleCode, rank: baseRank + forceRank });
+    }
+  }
+  const bestByPolarity = new Map();
+  for (const item of candidates.sort((a, b) => b.rank - a.rank)) {
+    if (!bestByPolarity.has(item.polarity)) bestByPolarity.set(item.polarity, item);
+  }
+  return [...bestByPolarity.values()];
+}
+
 function hexagramFromBits(bits, idx) {
   const hex = idx.hexagramByBits.get(bits);
   assert(hex, `Cannot find hexagram for bits ${bits}.`);
@@ -324,29 +411,23 @@ function evaluateCoreFindings({ bundle, chart, topic, subtype }) {
       ruleVersion: bundle.profile.version,
     }));
   }
-  if (strengthRules?.has("MONTH_SAME_BRANCH")) {
+  for (const item of strongestTimeInfluences(chart)) {
+    if (!strengthRules?.has(item.ruleCode)) continue;
     findings.push(createFindingFromRule({
       ruleType: "strength",
-      key: "MONTH_SAME_BRANCH",
-      rule: strengthRules.get("MONTH_SAME_BRANCH"),
-      dimension: "supporting_forces",
-      polarity: "supporting",
-      summary: "月建关系作为时间环境证据进入支持/阻碍判断。",
-      inputFacts: { monthBranch: chart.calendar.monthBranch },
-      dedupeGroup: "time-environment",
-      ruleVersion: bundle.profile.version,
-    }));
-  }
-  if (strengthRules?.has("DAY_CLASH")) {
-    findings.push(createFindingFromRule({
-      ruleType: "strength",
-      key: "DAY_CLASH",
-      rule: strengthRules.get("DAY_CLASH"),
-      dimension: "blocking_forces",
-      polarity: "blocking",
-      summary: "日辰关系作为短期压力或扰动证据保留。",
-      inputFacts: { dayBranch: chart.calendar.dayBranch },
-      dedupeGroup: "daily-pressure",
+      key: item.ruleCode,
+      rule: strengthRules.get(item.ruleCode),
+      dimension: item.polarity === "supporting" ? "supporting_forces" : "blocking_forces",
+      polarity: item.polarity,
+      summary: timeFindingSummary(item.period, item.line, item.influence),
+      inputFacts: {
+        period: item.period,
+        linePosition: item.line.position,
+        lineBranch: item.line.branch,
+        lineRole: item.line.sixRelation,
+        influence: item.influence,
+      },
+      dedupeGroup: `${item.period}-${item.polarity}-focus-line`,
       ruleVersion: bundle.profile.version,
     }));
   }

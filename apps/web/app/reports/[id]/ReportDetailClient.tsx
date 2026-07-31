@@ -25,6 +25,9 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     "## 当前局势",
     guided?.currentSituation ?? "",
     "",
+    "## 核心事项",
+    guided?.coreMatter?.summary ?? "",
+    "",
     "## 观察重点",
     guided?.observationFocus?.summary ?? "",
     "",
@@ -278,6 +281,17 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           <h2>结论摘要</h2>
           <p className="section-kicker">先看判断含义和下一步，专业盘面与证据用于复核来源。</p>
           <div className="preview-grid">
+            {guided.coreMatter ? (
+              <div>
+                <h3>核心事项</h3>
+                <p>{guided.coreMatter.summary}</p>
+                {(guided.coreMatter.roles ?? []).slice(0, 3).map((role) => (
+                  <p key={`${role.label}-${role.importance}`}>
+                    {role.label}：{role.practicalMeaning}
+                  </p>
+                ))}
+              </div>
+            ) : null}
             {guided.observationFocus ? (
               <div>
                 <h3>观察重点</h3>

@@ -1,0 +1,63 @@
+{
+  "packageId": "liuyao-core-interpretation-assets",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-31T03:47:53.565452+00:00",
+  "scope": "CORE_V1 interpretation/presentation assets only",
+  "counts": {
+    "findings": 37,
+    "relationships": 18,
+    "topics": 15
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 953,
+      "sha256": "5ca3d7255fdd4a1a2d5021e3bc3611b4d57bc47262fd8551f4fdf701ec21abf1"
+    },
+    {
+      "path": "codex/LIUYAO-CORE-INTERPRETATION-ASSETS-INTEGRATION-PROMPT.md",
+      "bytes": 3249,
+      "sha256": "f977443e94f2451c9b014b579a9af339c20086eab063bd969ef820b0a979ffdd"
+    },
+    {
+      "path": "docs/ASSET-INTEGRATION-CONTRACT.md",
+      "bytes": 876,
+      "sha256": "80594c418df032015fa1eb7df06c5c63e4683489ca92cee61a68c9adcca417f7"
+    },
+    {
+      "path": "qa/asset-qa-report.json",
+      "bytes": 278,
+      "sha256": "3dba6a519195f2a23dc0fae61c676406171b5cba99057473bdb021d199c2c5a8"
+    },
+    {
+      "path": "registries/liuyao-finding-explanation-registry-v1.0.json",
+      "bytes": 29215,
+      "sha256": "cda08db8cdba490e9ea888bfb91f21910e3fa77a7ec8988cf28b83a460104f5b"
+    },
+    {
+      "path": "registries/liuyao-question-topic-role-registry-v1.0.json",
+      "bytes": 17988,
+      "sha256": "caec7c6dce5d778900cecd8a20efb36cc316b6a8e37d0d88cd3395bdc43ac2d3"
+    },
+    {
+      "path": "registries/liuyao-relationship-meaning-registry-v1.0.json",
+      "bytes": 12897,
+      "sha256": "1f81ff83e935207742d45d2d9823f7bf11da7e1b89d4d6b8d0f969aae4c87082"
+    },
+    {
+      "path": "schemas/finding-explanation-registry.schema.json",
+      "bytes": 314,
+      "sha256": "64735fdfb1dd943f1e93d195cbc649cea98ea540ba468b67996ed5473a6b90c5"
+    },
+    {
+      "path": "schemas/question-topic-role-registry.schema.json",
+      "bytes": 285,
+      "sha256": "ec714bdc90966e66b587476a113bd8083b56004fbf994b06f83fada13650c3a1"
+    },
+    {
+      "path": "schemas/relationship-meaning-registry.schema.json",
+      "bytes": 302,
+      "sha256": "ec4ddbb763b35ea43b57b4678e9d9a658185030946e59f3a3e96db331675c6dc"
+    }
+  ]
+}

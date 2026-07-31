@@ -30,6 +30,17 @@ export function buildGuidedViewModel(facts) {
     headline: assembleHeadline(facts),
     summary: buildSummary(facts, supports, risks),
     currentSituation: facts.situation.currentSituation,
+    coreMatter: facts.topicRoleContext ? {
+      topic: facts.topicRoleContext.displayName,
+      summary: facts.topicRoleContext.summary,
+      roles: facts.topicRoleContext.roles.slice(0, 4).map((role) => ({
+        label: role.label,
+        practicalMeaning: role.practicalMeaning,
+        importance: role.importance,
+      })),
+      clarificationTriggers: facts.topicRoleContext.clarificationTriggers,
+      safetyNotes: facts.topicRoleContext.safetyNotes,
+    } : null,
     observationFocus: facts.observationFocus ? {
       summary: facts.observationFocus.summary,
       roles: facts.observationFocus.roles.slice(0, 4).map((role) => ({

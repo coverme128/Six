@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LiuyaoRelationshipMeaningRegistryEntry",
+  "type": "object",
+  "required": [
+    "relationId",
+    "displayName",
+    "professionalMeaning",
+    "guidedMeaning",
+    "direction",
+    "defaultPriority",
+    "engineBinding"
+  ]
+}

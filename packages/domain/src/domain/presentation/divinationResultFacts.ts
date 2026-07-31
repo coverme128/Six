@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { formatFinding, formatMethod, formatRelationship } from "./terminologyFormatter.js";
+import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContext } from "./interpretationAssets.js";
 
 export const RESULT_FACTS_VERSION = "DIVINATION_RESULT_FACTS_V1";
 
@@ -85,19 +86,25 @@ function describeYongshen(finding) {
   return `本次重点看${labels.join("、")}，报告会围绕这些对象组织判断。`;
 }
 
-function publicSignalTitle(finding) {
+function publicSignalTitle(finding, resolved) {
+  if (resolved?.bindingStatus === "BOUND" && resolved.displayName) return resolved.displayName;
   const code = finding.rule_code ?? finding.code ?? finding.rawCode;
   if (finding.rule_type === "yongshen" || code?.includes?.("job_search") || finding.evidenceKind === "direct_target_fact") return "观察重点";
   if (code === "YONGSHEN_HOLDS_WORLD" || finding.evidenceKind === "world_response_fact") return "主体状态";
   if (code === "MOVING_LINE" || finding.evidenceKind === "moving_change_fact") return "变化动力";
-  if (code === "MONTH_SAME_BRANCH" || finding.dedupe_group === "time-environment") return "外部条件";
-  if (code === "DAY_CLASH" || finding.dedupe_group === "daily-pressure") return "短期阻力";
+  if (String(code).startsWith("MONTH_") || String(code).includes("_MONTH") || finding.dedupe_group?.startsWith?.("month-")) return "月建作用";
+  if (String(code).startsWith("DAY_") || String(code).includes("_DAY") || finding.dedupe_group?.startsWith?.("day-")) return "日辰作用";
   if (finding.dimension === "timing_state") return "时间窗口";
   return formatFinding(finding).title;
 }
 
-function publicSignalText(finding, chart) {
+function publicSignalText(finding, chart, resolved) {
   const code = finding.rule_code ?? finding.code ?? finding.rawCode;
+  if (resolved?.practicalMeaning && resolved.source === "QuestionTopicRoleRegistry") return resolved.practicalMeaning;
+  if (resolved?.bindingStatus === "BOUND" && resolved.practicalMeaning) {
+    const base = finding.summary ?? finding.text;
+    return base && !String(base).includes(resolved.practicalMeaning) ? `${base} ${resolved.practicalMeaning}` : resolved.practicalMeaning;
+  }
   if (finding.rule_type === "yongshen" || code?.includes?.("job_search") || finding.evidenceKind === "direct_target_fact") return describeYongshen(finding);
   if (code === "YONGSHEN_HOLDS_WORLD" || finding.evidenceKind === "world_response_fact") {
     return `世爻在第 ${chart.worldResponse?.worldLine ?? "-"} 爻，代表当事人的状态是这次判断的主轴。`;
@@ -107,11 +114,11 @@ function publicSignalText(finding, chart) {
     const text = Array.isArray(lines) && lines.length ? lines.join("、") : "-";
     return `第 ${text} 爻发动，事情会进入变化过程，不宜按静态局面判断。`;
   }
-  if (code === "MONTH_SAME_BRANCH" || finding.dedupe_group === "time-environment") {
-    return "时间环境对事情有一定承托，外部条件不是完全逆风。";
+  if (String(code).startsWith("MONTH_") || String(code).includes("_MONTH") || finding.dedupe_group?.startsWith?.("month-")) {
+    return finding.summary ?? finding.text ?? "月建对重点爻形成作用。";
   }
-  if (code === "DAY_CLASH" || finding.dedupe_group === "daily-pressure") {
-    return "短期节奏里有扰动，需要留意临时变化、沟通冲突或现实阻力。";
+  if (String(code).startsWith("DAY_") || String(code).includes("_DAY") || finding.dedupe_group?.startsWith?.("day-")) {
+    return finding.summary ?? finding.text ?? "日辰对重点爻形成作用。";
   }
   if (finding.dimension === "timing_state") return "时间信号只适合作为观察窗口，不能当作确定日期。";
   return finding.summary ?? finding.text ?? "这是一条用于理解结果的依据。";
@@ -143,10 +150,14 @@ function hexagramKnowledgeRefs(chart) {
 export function buildDivinationResultFacts({ result, type }) {
   const chart = result.chart;
   const signals = type === "meihua" ? meihuaSignals(result) : allFindings(result).map(signalFromFinding);
+  const topicRoleContext = type === "liuyao" ? resolveTopicRoleContext(chart) : null;
   const publicSignals = signals.map((signal) => ({
     ...signal,
-    title: publicSignalTitle(signal),
-    text: publicSignalText(signal, chart),
+    resolvedMeaning: type === "liuyao" ? resolveFindingExplanation(signal, chart) : null,
+  })).map((signal) => ({
+    ...signal,
+    title: publicSignalTitle(signal, signal.resolvedMeaning),
+    text: publicSignalText(signal, chart, signal.resolvedMeaning),
   }));
   const timing = (result.timingCandidates ?? []).slice(0, 5).map((candidate, index) => ({
     id: `timing-${index + 1}`,
@@ -178,6 +189,7 @@ export function buildDivinationResultFacts({ result, type }) {
       useTrigram: chart.useTrigram?.name_zh ?? null,
       relationship: chart.bodyUseRelation ? formatRelationship(chart.bodyUseRelation.code ?? chart.bodyUseRelation.meaning_zh, chart.bodyUseRelation.meaning_zh) : null,
     },
+    topicRoleContext,
     observationFocus: chart.observationFocus ? {
       summary: chart.observationFocus.summary,
       selectionSource: chart.observationFocus.selectionSource,
@@ -211,6 +223,14 @@ export function buildDivinationResultFacts({ result, type }) {
     relationships: [
       chart.worldResponse ? { id: "world-response", title: "世应关系", text: `世爻在第 ${chart.worldResponse.worldLine} 爻，应爻在第 ${chart.worldResponse.responseLine} 爻。` } : null,
       chart.bodyUseRelation ? { id: "body-use", title: "体用关系", text: chart.bodyUseRelation.meaning_zh ?? chart.bodyUseRelation.code } : null,
+      ...(type === "liuyao" ? resolveRelationships(chart).map((item, index) => ({
+        id: `resolved-relationship-${index + 1}`,
+        title: item.title,
+        text: `${item.professionalMeaning} 本次实际意义：${item.guidedMeaning}`,
+        limitation: item.limitation,
+        relationId: item.relationId,
+        bindingStatus: item.bindingStatus,
+      })) : []),
     ].filter(Boolean),
     timingOrPriority: timing,
     importantFindings: publicSignals,

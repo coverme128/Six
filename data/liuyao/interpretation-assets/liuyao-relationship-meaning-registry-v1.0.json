@@ -1,0 +1,366 @@
+{
+  "registryId": "LIUYAO_RELATIONSHIP_MEANING_REGISTRY",
+  "version": "1.0.0",
+  "entries": [
+    {
+      "relationId": "LYX_REL_SHI_GENERATES_YONG",
+      "displayName": "世生用",
+      "professionalMeaning": "世爻生用神。",
+      "guidedMeaning": "你方对核心事项投入或推动较多，主动付出特征更明显。",
+      "direction": "MIXED",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_YONG_GENERATES_SHI",
+      "displayName": "用生世",
+      "professionalMeaning": "用神生世爻。",
+      "guidedMeaning": "核心事项或外部条件对你方形成支持，获得感或承接条件相对更好。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_SHI_CONTROLS_YONG",
+      "displayName": "世克用",
+      "professionalMeaning": "世爻克用神。",
+      "guidedMeaning": "你方对核心事项具有较强控制、要求或推动压力；是否有利取决于事项性质与双方强弱。",
+      "direction": "MIXED",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_YONG_CONTROLS_SHI",
+      "displayName": "用克世",
+      "professionalMeaning": "用神克世爻。",
+      "guidedMeaning": "核心事项对你方形成明显压力或约束，需要关注自身承受能力。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_SHI_YING_GENERATE",
+      "displayName": "世应相生",
+      "professionalMeaning": "世爻与应爻形成相生关系。",
+      "guidedMeaning": "双方或内外两侧存在一定协同条件。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_SHI_YING_CONTROL",
+      "displayName": "世应相克",
+      "professionalMeaning": "世爻与应爻形成相克关系。",
+      "guidedMeaning": "双方或内外两侧存在明显制约或张力。",
+      "direction": "BLOCK",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_SHI_YING_BIHE",
+      "displayName": "世应比和",
+      "professionalMeaning": "世应五行同类或比和。",
+      "guidedMeaning": "双方状态更接近，互动较平衡，但是否推动结果仍要看旺衰与动变。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P2",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_YUAN_GENERATES_YONG",
+      "displayName": "原神生用",
+      "professionalMeaning": "原神生用神。",
+      "guidedMeaning": "支持核心事项的来源正在发挥作用。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_JI_CONTROLS_YONG",
+      "displayName": "忌神克用",
+      "professionalMeaning": "忌神克用神。",
+      "guidedMeaning": "存在直接压制核心事项的阻力。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_MOVING_GENERATES_YONG",
+      "displayName": "动爻生用",
+      "professionalMeaning": "发动之爻生用神。",
+      "guidedMeaning": "变化因素正在主动支持核心事项。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_MOVING_CONTROLS_YONG",
+      "displayName": "动爻克用",
+      "professionalMeaning": "发动之爻克用神。",
+      "guidedMeaning": "变化因素正在主动增加核心事项的压力。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_YONG_AT_SHI",
+      "displayName": "用神临世",
+      "professionalMeaning": "用神与世位重合。",
+      "guidedMeaning": "核心事项与用户自身状态高度相关。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_YONG_AT_YING",
+      "displayName": "用神临应",
+      "professionalMeaning": "用神与应位重合。",
+      "guidedMeaning": "核心事项更多依赖外部对象或对方一侧。",
+      "direction": "NEUTRAL",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_RETURN_GENERATE",
+      "displayName": "回头生",
+      "professionalMeaning": "变爻反生原爻。",
+      "guidedMeaning": "变化后出现反向补力，后续支撑增强。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P1",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_RETURN_CONTROL",
+      "displayName": "回头克",
+      "professionalMeaning": "变爻反克原爻。",
+      "guidedMeaning": "变化后出现反向压力，后续稳定性下降。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_SUPPORT_CHAIN",
+      "displayName": "连续生扶",
+      "professionalMeaning": "存在连续支持链条。",
+      "guidedMeaning": "支持不是单点出现，而是由多个关联因素共同形成。",
+      "direction": "SUPPORT",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_BLOCK_CHAIN",
+      "displayName": "连续制约",
+      "professionalMeaning": "存在连续制约链条。",
+      "guidedMeaning": "阻碍不是单一因素，而是由多个关联因素叠加形成。",
+      "direction": "BLOCK",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "relationId": "LYX_REL_CONFLICTING_CHAIN",
+      "displayName": "关系链冲突",
+      "professionalMeaning": "支持与制约链条同时存在。",
+      "guidedMeaning": "当前关系结构存在明显冲突，需要优先比较关键对象强弱和动态变化。",
+      "direction": "MIXED",
+      "defaultPriority": "P0",
+      "topicOverrides": {},
+      "limitations": [
+        "关系含义必须结合双方旺衰、动静、用神定位和问题主题判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_CORE_V1",
+        "ruleCodes": []
+      },
+      "contentStatus": {
+        "genericMeaning": "PUBLICATION_READY_AFTER_BINDING",
+        "topicOverrides": "REVIEW_REQUIRED"
+      }
+    }
+  ]
+}

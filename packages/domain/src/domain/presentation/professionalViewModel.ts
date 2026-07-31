@@ -19,6 +19,7 @@ export function buildProfessionalViewModel(facts) {
     reportType: facts.resultType === "MEIHUA" ? "梅花" : "六爻",
     method: facts.method.displayName,
     chartSummary: facts.chartSummary,
+    topicRoleContext: facts.topicRoleContext,
     observationFocus: facts.observationFocus,
     relationships: facts.relationships.map((item) => ({ title: item.title, text: item.text })),
     evidenceGroups: {

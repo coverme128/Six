@@ -40,10 +40,36 @@ export function publicObservationFocus(value: unknown) {
   };
 }
 
+function publicImportance(value: unknown) {
+  return text(value) === "primary" ? "主要" : "辅助";
+}
+
+function publicCoreMatter(value: unknown) {
+  const matter = objectValue(value);
+  const roles = Array.isArray(matter.roles) ? matter.roles.map((item) => {
+    const role = objectValue(item);
+    return {
+      label: text(role.label),
+      practicalMeaning: text(role.practicalMeaning),
+      importance: publicImportance(role.importance)
+    };
+  }) : [];
+  if (!text(matter.summary) && !roles.length) return null;
+  return {
+    topic: text(matter.topic) ?? text(matter.displayName),
+    summary: text(matter.summary),
+    roles,
+    clarificationTriggers: Array.isArray(matter.clarificationTriggers) ? matter.clarificationTriggers.filter((item) => typeof item === "string") : [],
+    safetyNotes: Array.isArray(matter.safetyNotes) ? matter.safetyNotes.filter((item) => typeof item === "string") : []
+  };
+}
+
 function publicViewModel(value: unknown) {
   const model = objectValue(value);
   return {
     ...model,
+    coreMatter: publicCoreMatter(model.coreMatter ?? model.topicRoleContext),
+    topicRoleContext: publicCoreMatter(model.topicRoleContext),
     observationFocus: publicObservationFocus(model.observationFocus)
   };
 }

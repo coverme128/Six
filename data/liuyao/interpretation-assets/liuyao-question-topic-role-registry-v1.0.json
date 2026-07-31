@@ -1,0 +1,500 @@
+{
+  "registryId": "LIUYAO_QUESTION_TOPIC_ROLE_REGISTRY",
+  "version": "1.0.0",
+  "entries": [
+    {
+      "topicId": "CAREER_JOB",
+      "displayName": "事业 / 工作",
+      "intentExamples": [
+        "这份工作发展怎么样",
+        "工作上有没有变化"
+      ],
+      "primaryYongshenCandidates": [
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SIBLINGS"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "合同、制度、任命、文件、流程或资质。",
+        "SIBLINGS": "同事、竞争者、资源分配或同级关系。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "工作、职位、职责、组织约束或职业压力。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "JOB_SEARCH",
+      "displayName": "求职 / Offer",
+      "intentExamples": [
+        "这个offer适合我吗",
+        "能不能拿到这份工作"
+      ],
+      "primaryYongshenCandidates": [
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SHI",
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "简历、合同、通知、手续、资格材料。",
+        "SIBLINGS": "竞争候选人或同类竞争。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "目标职位、岗位机会或录用事项。"
+      },
+      "clarificationTriggers": [
+        "区分“能否获得机会”与“获得后是否适合”，两者判断重点不同。"
+      ],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "PROMOTION",
+      "displayName": "晋升 / 任用",
+      "intentExamples": [
+        "能不能升职",
+        "这次晋升有机会吗"
+      ],
+      "primaryYongshenCandidates": [
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SIBLINGS"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "正式文件、考核制度、任命流程。",
+        "SIBLINGS": "竞争者或同级比较对象。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "职位、职级、权责提升。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "INCOME_WEALTH",
+      "displayName": "收入 / 财运",
+      "intentExamples": [
+        "最近收入怎么样",
+        "这笔生意有没有利润"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH"
+      ],
+      "secondaryRoleCandidates": [
+        "OFFSPRING",
+        "SIBLINGS"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "文书、信息、规则、手续、合同、证明等相关角色，具体含义随主题变化。",
+        "SIBLINGS": "竞争、分利、成本或资源消耗。",
+        "OFFSPRING": "生财来源、产出、客户需求或促成收益的因素。",
+        "WEALTH": "目标收益、现金、交易价值或可获得资源。",
+        "OFFICIAL_GHOST": "职位、责任、规则压力、风险、约束或特定对象，具体含义随主题变化。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [
+        "不得将结果表达为投资收益保证。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "PAYMENT_COLLECTION",
+      "displayName": "回款 / 欠款",
+      "intentExamples": [
+        "对方月底前会付款吗",
+        "这笔钱能收回来吗"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH"
+      ],
+      "secondaryRoleCandidates": [
+        "YING",
+        "PARENTS"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "合同、票据、凭证、付款流程。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "待收款项、应收资源。",
+        "OFFICIAL_GHOST": "约束、争议、法律或流程压力。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "RELATIONSHIP",
+      "displayName": "感情关系",
+      "intentExamples": [
+        "这段关系会怎么发展",
+        "对方对这段关系是否认真"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH",
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "SHI",
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "承诺、规则、信息、手续或家庭/制度因素。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "轻松互动、表达、子女或关系中的释放因素。",
+        "WEALTH": "在部分传统取用中可代表特定关系对象或关系需求，必须结合问卦者与具体语境。",
+        "OFFICIAL_GHOST": "在部分传统取用中可代表特定关系对象、承诺压力或关系约束，必须结合语境。"
+      },
+      "clarificationTriggers": [
+        "必须确认问卦对象与问题语义，不能仅依据性别机械选用神。"
+      ],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "MARRIAGE",
+      "displayName": "婚姻 / 婚期",
+      "intentExamples": [
+        "这段关系适合结婚吗",
+        "婚事能不能推进"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH",
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SHI",
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "婚书、手续、双方家庭、制度安排。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "关系对象或现实资源因素，具体取用依语境。",
+        "OFFICIAL_GHOST": "关系对象、责任或婚姻约束，具体取用依语境。"
+      },
+      "clarificationTriggers": [
+        "婚姻问题需区分对象关系、能否成婚、婚期、家庭阻力等不同子任务。"
+      ],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "COOPERATION",
+      "displayName": "合作 / 合同",
+      "intentExamples": [
+        "这个合作能不能谈成",
+        "合作伙伴是否可靠"
+      ],
+      "primaryYongshenCandidates": [
+        "YING",
+        "PARENTS"
+      ],
+      "secondaryRoleCandidates": [
+        "WEALTH",
+        "OFFICIAL_GHOST"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "合同、条款、文件、协议和正式流程。",
+        "SIBLINGS": "合作方中的同级利益、竞争或分配问题。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "合作收益、项目资源、交易价值。",
+        "OFFICIAL_GHOST": "监管、责任、违约风险或执行压力。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "EXAM_STUDY",
+      "displayName": "考试 / 升学",
+      "intentExamples": [
+        "这次考试结果怎么样",
+        "能不能被录取"
+      ],
+      "primaryYongshenCandidates": [
+        "PARENTS"
+      ],
+      "secondaryRoleCandidates": [
+        "OFFICIAL_GHOST",
+        "OFFSPRING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "试卷、成绩、录取材料、学校、证书、学习资料。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "发挥、输出、答题表现或结果释放。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "考试压力、资格门槛、规则约束。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "LEGAL_DISPUTE",
+      "displayName": "诉讼 / 纠纷",
+      "intentExamples": [
+        "这个官司会怎么发展",
+        "纠纷能不能解决"
+      ],
+      "primaryYongshenCandidates": [
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SHI",
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "证据文件、合同、文书、法律材料。",
+        "SIBLINGS": "争议双方中的竞争、分配或利益冲突。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "诉讼、责任、处罚、法律压力或对立约束。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [
+        "仅用于传统文化与自我反思，不替代律师意见或法律判断。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "TRAVEL",
+      "displayName": "出行 / 行程",
+      "intentExamples": [
+        "这次出行顺利吗",
+        "行程会不会有变化"
+      ],
+      "primaryYongshenCandidates": [
+        "SHI"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "OFFICIAL_GHOST"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "交通票据、路线、手续、车辆或信息。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "费用、资源和行程中的实际获得。",
+        "OFFICIAL_GHOST": "延误、规则、风险、约束或压力。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "LOST_ITEM",
+      "displayName": "寻物 / 失物",
+      "intentExamples": [
+        "丢的东西还能找到吗",
+        "东西在哪里"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH",
+        "PARENTS"
+      ],
+      "secondaryRoleCandidates": [
+        "SHI",
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "证件、文件、设备、容器或与信息相关物品。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "财物、物品或价值对象。",
+        "OFFICIAL_GHOST": "遮蔽、阻碍、风险因素。"
+      },
+      "clarificationTriggers": [
+        "需先明确失物类型，以决定具体角色含义。"
+      ],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "HEALTH_REFLECTION",
+      "displayName": "健康相关自我反思",
+      "intentExamples": [
+        "最近身体状态怎么看",
+        "这个健康问题需要注意什么"
+      ],
+      "primaryYongshenCandidates": [
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "OFFSPRING",
+        "PARENTS"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "检查资料、药物信息、医疗文书等象意。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "缓解、恢复、放松或解除压力相关象意。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "传统体系中可用于象征压力、病象或不适因素，但不能视为医学诊断。"
+      },
+      "clarificationTriggers": [],
+      "safetyNotes": [
+        "不得输出医学诊断、治疗方案或替代专业医疗建议。",
+        "出现健康问题应咨询合格医疗专业人员。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "PROJECT_DECISION",
+      "displayName": "项目 / 商业决策",
+      "intentExamples": [
+        "这个项目值得推进吗",
+        "现在适不适合启动"
+      ],
+      "primaryYongshenCandidates": [
+        "WEALTH",
+        "OFFICIAL_GHOST"
+      ],
+      "secondaryRoleCandidates": [
+        "PARENTS",
+        "SIBLINGS",
+        "SHI"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "合同、方案、文档、资质、制度。",
+        "SIBLINGS": "竞争、合作者、资源分配和成本。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "项目收益、资源、商业价值。",
+        "OFFICIAL_GHOST": "执行压力、监管、责任、风险。"
+      },
+      "clarificationTriggers": [
+        "需区分“是否值得做”“能否做成”“何时推进”。"
+      ],
+      "safetyNotes": [
+        "不得表达为投资收益保证或替代专业商业尽调。"
+      ],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    },
+    {
+      "topicId": "GENERAL_DECISION",
+      "displayName": "一般决策",
+      "intentExamples": [
+        "这件事适不适合继续",
+        "A和B怎么选"
+      ],
+      "primaryYongshenCandidates": [
+        "SHI"
+      ],
+      "secondaryRoleCandidates": [
+        "YING"
+      ],
+      "liuqinRoleMap": {
+        "PARENTS": "文书、信息、规则、手续、合同、证明等相关角色，具体含义随主题变化。",
+        "SIBLINGS": "同类竞争者、同辈、分担或消耗资源的一方，具体含义随主题变化。",
+        "OFFSPRING": "产出、表达、结果、下属或解除压力等相关角色，具体含义随主题变化。",
+        "WEALTH": "资源、收益、财物、交易目标或关系中的特定对象，具体含义随主题变化。",
+        "OFFICIAL_GHOST": "职位、责任、规则压力、风险、约束或特定对象，具体含义随主题变化。"
+      },
+      "clarificationTriggers": [
+        "若问题缺少明确事项对象，应先要求用户澄清，而不是自动套用用神。"
+      ],
+      "safetyNotes": [],
+      "engineBinding": {
+        "bindingStatus": "TO_BIND_EXISTING_45_MAPPINGS",
+        "mappingCodes": []
+      },
+      "contentStatus": {
+        "genericRoleMap": "REVIEW_REQUIRED_BEFORE_PUBLICATION"
+      }
+    }
+  ]
+}

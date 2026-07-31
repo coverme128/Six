@@ -1,0 +1,29 @@
+{
+  "bindingId": "LIUYAO_RELATIONSHIP_BINDINGS_V1",
+  "version": "1.0.0",
+  "assetPackage": "liuyao-core-interpretation-assets@1.0.0",
+  "scope": "Existing relationship/fact code to relationship meaning asset binding",
+  "bindings": {
+    "WORLD_GENERATES_RESPONSE": "UNBOUND",
+    "RESPONSE_GENERATES_WORLD": "UNBOUND",
+    "WORLD_CONTROLS_RESPONSE": "UNBOUND",
+    "RESPONSE_CONTROLS_WORLD": "UNBOUND",
+    "WORLD_RESPONSE_SAME_ELEMENT": "LYX_REL_SHI_YING_BIHE",
+    "WORLD_RESPONSE_HARMONY": "LYX_REL_SHI_YING_GENERATE",
+    "WORLD_RESPONSE_CLASH": "LYX_REL_SHI_YING_CONTROL",
+    "YONGSHEN_HOLDS_WORLD": "LYX_REL_YONG_AT_SHI",
+    "YONGSHEN_AT_RESPONSE": "LYX_REL_YONG_AT_YING",
+    "RETURN_GENERATION": "LYX_REL_RETURN_GENERATE",
+    "RETURN_CONTROL": "LYX_REL_RETURN_CONTROL",
+    "CHANGED_GENERATES_ORIGINAL": "LYX_REL_RETURN_GENERATE",
+    "CHANGED_CONTROLS_ORIGINAL": "LYX_REL_RETURN_CONTROL",
+    "ORIGIN_GENERATES_YONGSHEN": "LYX_REL_YUAN_GENERATES_YONG",
+    "TABOO_CONTROLS_YONGSHEN": "LYX_REL_JI_CONTROLS_YONG"
+  },
+  "unbound": {
+    "WORLD_GENERATES_RESPONSE": "Direction does not directly equal shi/yong or shi/ying asset wording without a separate generated relationship fact.",
+    "RESPONSE_GENERATES_WORLD": "Direction does not directly equal shi/yong or shi/ying asset wording without a separate generated relationship fact.",
+    "WORLD_CONTROLS_RESPONSE": "Direction does not directly equal shi/yong or shi/ying asset wording without a separate generated relationship fact.",
+    "RESPONSE_CONTROLS_WORLD": "Direction does not directly equal shi/yong or shi/ying asset wording without a separate generated relationship fact."
+  }
+}

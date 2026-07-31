@@ -4,6 +4,13 @@ export type GuidedViewModel = {
   headline?: string;
   summary?: string;
   currentSituation?: string;
+  coreMatter?: {
+    topic?: string;
+    summary?: string;
+    roles?: Array<{ label?: string; practicalMeaning?: string; importance?: string }>;
+    clarificationTriggers?: string[];
+    safetyNotes?: string[];
+  } | null;
   observationFocus?: ObservationFocus | null;
   changeDirection?: string;
   timingHint?: string;
@@ -49,6 +56,7 @@ export type ProfessionalViewModel = {
     useTrigram?: string | null;
     relationship?: string | null;
   };
+  topicRoleContext?: GuidedViewModel["coreMatter"];
   observationFocus?: ObservationFocus | null;
   relationships?: Array<{ title?: string; text?: string }>;
   evidenceGroups?: {

@@ -561,6 +561,12 @@ export function SixApiDemo() {
             <a className="text-link" href={`/reports/${encodeURIComponent(report.id)}#professional-evidence`}>查看依据</a>
           </div>
           <div className="preview-grid compact">
+            {guided.coreMatter ? (
+              <div>
+                <strong>核心事项</strong>
+                <p>{guided.coreMatter.summary}</p>
+              </div>
+            ) : null}
             {guided.observationFocus ? (
               <div>
                 <strong>观察重点</strong>
