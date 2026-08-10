@@ -78,6 +78,9 @@ export function publicExperience(value: unknown) {
   const experience = objectValue(value);
   return {
     guidedViewModel: publicViewModel(experience.guidedViewModel),
-    professionalViewModel: publicViewModel(experience.professionalViewModel)
+    professionalViewModel: publicViewModel(experience.professionalViewModel),
+    contentExplanationSnippets: Array.isArray(experience.contentExplanationSnippets)
+      ? experience.contentExplanationSnippets
+      : []
   };
 }

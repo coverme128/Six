@@ -1,0 +1,70 @@
+[
+  {
+    "source": "10_QA/article-length-audit.json",
+    "recommendedChineseCharacters": "1800–3000",
+    "measuredApproximateCharacters": {
+      "B01-A01": 2429,
+      "B01-A02": 2245,
+      "B01-A03": 2139,
+      "B01-A04": 2113,
+      "B01-A05": 2058,
+      "B01-A06": 2217,
+      "B01-A07": 2108,
+      "B01-A08": 2019,
+      "B01-A09": 2270,
+      "B01-A10": 2266,
+      "B01-A11": 2107,
+      "B01-A12": 2107,
+      "B01-A13": 2032,
+      "B01-A14": 2141,
+      "B01-A15": 2149,
+      "B01-A16": 2009,
+      "B01-A17": 2149,
+      "B01-A18": 2281
+    },
+    "minimum": 2009,
+    "maximum": 2429,
+    "average": 2158,
+    "pass": true
+  },
+  {
+    "source": "10_QA/count-audit.json",
+    "expected": {
+      "articles": 18,
+      "knowledgeCards": 30,
+      "faqs": 30,
+      "visualAssets": 8,
+      "shortVideos": 6
+    },
+    "actual": {
+      "articles": 18,
+      "knowledgeCards": 30,
+      "faqs": 30,
+      "visualAssets": 8,
+      "shortVideos": 6
+    },
+    "pass": true
+  },
+  {
+    "source": "10_QA/id-audit.json",
+    "total_ids": 92,
+    "unique_ids": 92,
+    "duplicate_ids": [],
+    "slug_count": 18,
+    "unique_slug_count": 18,
+    "pass": true
+  },
+  {
+    "source": "10_QA/reference-integrity-audit.json",
+    "broken_references": [],
+    "orphan_assets": [],
+    "pass": true
+  },
+  {
+    "type": "ROUTE_ADAPTER",
+    "status": "MAP_TO_EXISTING",
+    "packageExpectation": "/app/liuyao or /learn/liuyao",
+    "repositoryReality": "/ and /content/*",
+    "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+  }
+]

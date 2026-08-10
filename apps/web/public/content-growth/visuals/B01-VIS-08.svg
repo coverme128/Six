@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">报告数据与隐私流向</title>
+<desc id="desc">用户输入、排盘与规则、必要上下文用于 AI、报告保存在当前浏览器</desc>
+<rect width="1200" height="675" fill="#F7F3EA"/>
+<text x="72" y="86" font-size="34" font-weight="700" fill="#24312F" font-family="system-ui, sans-serif">报告数据与隐私流向</text>
+<line x1="72" y1="112" x2="1128" y2="112" stroke="#B8B0A2" stroke-width="1"/>
+<rect x="86.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="201.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">用户输入</text>
+<path d="M 316.0 238 H 344.0" stroke="#8C3F35" stroke-width="3"/>
+<path d="M 336.0 231 L 347.0 238 L 336.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="352.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="467.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">排盘与规则</text>
+<path d="M 582.0 238 H 610.0" stroke="#8C3F35" stroke-width="3"/>
+<path d="M 602.0 231 L 613.0 238 L 602.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="618.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="733.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">必要上下文用于 AI</text>
+<path d="M 848.0 238 H 876.0" stroke="#8C3F35" stroke-width="3"/>
+<path d="M 868.0 231 L 879.0 238 L 868.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="884.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="999.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">报告保存在当前浏览器</text>
+<text x="72" y="630" font-size="16" fill="#675F54" font-family="system-ui, sans-serif">Liuyao Content Growth · Batch 01</text>
+</svg>

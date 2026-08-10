@@ -1,0 +1,354 @@
+{
+  "manifest": {
+    "packageName": "liuyao-content-growth-batch-07-launch-closure",
+    "version": "1.0",
+    "domain": "LIUYAO",
+    "batch": "BATCH_07",
+    "scope": "VISUAL_SEO_DISTRIBUTION_LAUNCH_CLOSURE",
+    "newAssets": {
+      "longFormArticles": 0,
+      "knowledgeCards": 0,
+      "faqs": 0,
+      "visualAssets": 16,
+      "shortVideos": 6,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12,
+      "learnHubs": 1
+    },
+    "expectedFinalTotals": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "learnHubs": 1,
+      "visualAssets": 68,
+      "shortVideos": 50,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12
+    },
+    "actualFinalTotals": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "visualAssets": 68,
+      "shortVideos": 50,
+      "learnHubs": 1,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12
+    },
+    "professionalRulesModified": false,
+    "newProfessionalRulesCreated": false,
+    "newTimingRulesCreated": false,
+    "meihuaIncluded": false,
+    "canonicalIdsInvented": false,
+    "status": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+    "overallContentGrowthStatus": "LIUYAO_CONTENT_GROWTH_LAUNCH_BLOCKED"
+  },
+  "masterAudit": {
+    "batches": {
+      "BATCH_01": {
+        "zip": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+        "articles": 18,
+        "knowledgeCards": 30,
+        "faqs": 30,
+        "teachingCases": 0,
+        "visuals": 8,
+        "videos": 6,
+        "snippets": 0,
+        "fixtures": 0,
+        "recommendations": 0,
+        "topicLandings": 0
+      },
+      "BATCH_02": {
+        "zip": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+        "articles": 18,
+        "knowledgeCards": 40,
+        "faqs": 35,
+        "teachingCases": 0,
+        "visuals": 10,
+        "videos": 8,
+        "snippets": 0,
+        "fixtures": 0,
+        "recommendations": 0,
+        "topicLandings": 0
+      },
+      "BATCH_03": {
+        "zip": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+        "articles": 18,
+        "knowledgeCards": 35,
+        "faqs": 35,
+        "teachingCases": 0,
+        "visuals": 10,
+        "videos": 8,
+        "snippets": 0,
+        "fixtures": 0,
+        "recommendations": 0,
+        "topicLandings": 0
+      },
+      "BATCH_04": {
+        "zip": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+        "articles": 20,
+        "knowledgeCards": 35,
+        "faqs": 40,
+        "teachingCases": 0,
+        "visuals": 12,
+        "videos": 10,
+        "snippets": 0,
+        "fixtures": 0,
+        "recommendations": 0,
+        "topicLandings": 0
+      },
+      "BATCH_05": {
+        "zip": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+        "articles": 30,
+        "knowledgeCards": 0,
+        "faqs": 30,
+        "teachingCases": 12,
+        "visuals": 12,
+        "videos": 12,
+        "snippets": 0,
+        "fixtures": 0,
+        "recommendations": 0,
+        "topicLandings": 6
+      },
+      "BATCH_06": {
+        "zip": "liuyao-content-growth-batch-06-report-explanation-product-integration-v1.0.zip",
+        "articles": 0,
+        "knowledgeCards": 0,
+        "faqs": 0,
+        "teachingCases": 12,
+        "visuals": 0,
+        "videos": 0,
+        "snippets": 400,
+        "fixtures": 24,
+        "recommendations": 12,
+        "topicLandings": 0
+      }
+    },
+    "expectedBeforeBatch07": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "visualAssets": 52,
+      "shortVideos": 44
+    },
+    "actualBeforeBatch07": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "visualAssets": 52,
+      "shortVideos": 44
+    },
+    "allCoreCountsMatch": true
+  },
+  "expectedVsActual": {
+    "expectedFinal": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "learnHubs": 1,
+      "visualAssets": 68,
+      "shortVideos": 50,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12
+    },
+    "actualFinal": {
+      "articles": 104,
+      "knowledgeCards": 140,
+      "faqs": 170,
+      "teachingCases": 24,
+      "productExplanationSnippets": 400,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "topicLandings": 6,
+      "visualAssets": 68,
+      "shortVideos": 50,
+      "learnHubs": 1,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12
+    },
+    "countMatch": {
+      "articles": true,
+      "knowledgeCards": true,
+      "faqs": true,
+      "teachingCases": true,
+      "productExplanationSnippets": true,
+      "reportUxFixtures": true,
+      "recommendationScenarios": true,
+      "topicLandings": true,
+      "learnHubs": true,
+      "visualAssets": true,
+      "shortVideos": true,
+      "socialAssets": true,
+      "articleSummaryCards": true,
+      "collectionCopies": true
+    },
+    "status": "COUNT_TARGETS_MET"
+  },
+  "unresolvedCrossBatchIssues": [
+    {
+      "issue_id": "XBAT-001",
+      "severity": "BLOCKING_FOR_FULL_SEO_LAUNCH",
+      "type": "SEMANTIC_DUPLICATION_RISK",
+      "affected_count": 53,
+      "pair_count": 154,
+      "action": "Editorially differentiate/rewrite affected articles; preserve Stable IDs."
+    },
+    {
+      "issue_id": "XBAT-002",
+      "severity": "BLOCKING_FOR_PUBLICATION",
+      "type": "REVIEW_REQUIRED",
+      "explicit_item_flags": 226,
+      "action": "REVIEW_REQUIRED remains NOINDEX / NOT_PUBLIC until approved."
+    },
+    {
+      "issue_id": "XBAT-003",
+      "severity": "ALIGNMENT_PENDING",
+      "type": "VERIFY_IN_REPOSITORY",
+      "unique_core_records": 606,
+      "category_checks": 20,
+      "action": "Resolve professional IDs, routes, ViewModels, SEO/search and report integration in repository."
+    },
+    {
+      "issue_id": "XBAT-004",
+      "severity": "INTEGRATION_PENDING",
+      "type": "B06_B05_DEPENDENCY_REFRESH",
+      "action": "Batch 06 was generated before the final Batch 05 package; rerun B06 repository mapping against the actual B05 Registry during Codex integration."
+    }
+  ],
+  "learnHub": {
+    "hub_id": "LIUYAO_LEARN_HUB",
+    "route": "/learn/liuyao/",
+    "route_status": "VERIFY_IN_REPOSITORY",
+    "hero_title": "用结构化方式学习六爻，并把知识连接到真实报告",
+    "hero_description": "从“六爻是什么”到起卦、报告阅读、专业依据和现实决策，按目标选择最短学习路径。",
+    "start_here": [
+      "B01-A01",
+      "B01-A02",
+      "B02-A02",
+      "B01-A14"
+    ],
+    "learn_by_goal_refs": [
+      "FIRST_TIME",
+      "PREPARE_CASTING",
+      "READ_REPORT",
+      "UNDERSTAND_YONGSHEN",
+      "STRENGTH_DYNAMICS",
+      "REAL_WORLD",
+      "VERIFY"
+    ],
+    "core_concepts": [
+      "B02-A01",
+      "B03-A01",
+      "B04-A01"
+    ],
+    "understand_your_report": [
+      "B01-A14",
+      "B01-A15",
+      "B04-A20"
+    ],
+    "real_world_decisions": [
+      "CAREER_WORK",
+      "BUSINESS_PARTNERSHIP",
+      "FINANCE_PROJECT",
+      "RELATIONSHIP",
+      "EXAM_JOB_SEARCH",
+      "TRAVEL_PLANNING"
+    ],
+    "teaching_cases": [
+      "B05-CASE-01",
+      "B05-CASE-02",
+      "B05-CASE-03",
+      "B05-CASE-04",
+      "B05-CASE-05",
+      "B05-CASE-06"
+    ],
+    "how_system_works": [
+      "B01-A09",
+      "B01-A10",
+      "B01-A11"
+    ],
+    "primary_cta": "开始一次六爻占问",
+    "tool_route": "/app/liuyao",
+    "tool_route_status": "VERIFY_IN_REPOSITORY",
+    "publication_filter": "只展示 PUBLISHED / INDEX 或明确允许公开的内容；REVIEW_REQUIRED 自动隐藏。",
+    "version": "1.0"
+  },
+  "searchConfig": {
+    "search_id": "LIUYAO_CONTENT_SEARCH_V1",
+    "index_types": [
+      "ARTICLE",
+      "KNOWLEDGE_CARD",
+      "FAQ",
+      "TEACHING_CASE"
+    ],
+    "excluded_types": [
+      "SNIPPET",
+      "FIXTURE",
+      "MAPPING",
+      "ADMIN_DATA"
+    ],
+    "implementation": "KEYWORD_TITLE_METADATA_TOPIC",
+    "semantic_search": "DEFERRED_IF_NOT_ALREADY_AVAILABLE",
+    "fields": [
+      "title",
+      "aliases",
+      "short_summary",
+      "topic",
+      "learning_stage",
+      "professional_level"
+    ],
+    "result_labels": {
+      "ARTICLE": "指南",
+      "KNOWLEDGE_CARD": "知识",
+      "FAQ": "问答",
+      "TEACHING_CASE": "案例"
+    },
+    "filters": [
+      "内容类型",
+      "学习阶段",
+      "主题",
+      "专业程度"
+    ],
+    "professional_levels": [
+      "入门",
+      "进阶",
+      "专业"
+    ],
+    "publication_filter": [
+      "PUBLISHED",
+      "INDEXABLE"
+    ],
+    "hide_internal_scores": true,
+    "version": "1.0"
+  }
+}

@@ -205,6 +205,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [report, setReport] = useState<ExperienceResponse | null>(null);
   const guided = report?.experience?.guidedViewModel;
   const professional = report?.experience?.professionalViewModel;
+  const contentSnippets = report?.experience?.contentExplanationSnippets ?? [];
+  const relatedContent = report?.relatedContent ?? [];
   const aiReport = report?.aiReportBundle?.aiReport;
   const supports = useMemo(() => professional?.evidenceGroups?.supports ?? [], [professional]);
   const risks = useMemo(() => professional?.evidenceGroups?.risks ?? [], [professional]);
@@ -257,7 +259,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         persistence: body.persistence,
         chartViewModel: report?.chartViewModel,
         aiReportBundle: body.aiReportBundle,
-        experience: body.experience
+        experience: body.experience,
+        relatedContent: report?.relatedContent
       });
       setAiStatus(body.aiReportBundle?.fallbackUsed ? "已生成基础白话解读。" : "白话解读已生成。");
     } catch (err) {
@@ -414,6 +417,39 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             </div>
           </div>
           {aiReport?.disclaimer ? <p className="empty">{aiReport.disclaimer}</p> : null}
+        </section>
+      ) : null}
+
+      {contentSnippets.length ? (
+        <section className="panel report-section">
+          <h2>报告帮助</h2>
+          <p className="section-kicker">这些说明只解释已生成的报告事实，不参与排盘、取用神或重新判断。</p>
+          <div className="preview-grid">
+            {contentSnippets.slice(0, 6).map((item) => (
+              <div key={item.snippetId}>
+                <h3>{item.guided?.headline ?? item.professional?.label ?? item.category}</h3>
+                <p>{item.guided?.short_text ?? item.professional?.explanation}</p>
+                <p>{item.guided?.practical_meaning}</p>
+                {item.guided?.caution ? <p className="empty">{item.guided.caution}</p> : null}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {relatedContent.length ? (
+        <section className="panel report-section">
+          <h2>相关内容</h2>
+          <p className="section-kicker">根据本次报告引用、主题和证据类型推荐，不使用随机内容。</p>
+          <div className="history-list compact-list">
+            {relatedContent.map((item) => (
+              <a className="history-item" href={item.url ?? "/content"} key={item.contentId ?? item.title}>
+                <span>{item.reasonCode ?? "RELATED"}</span>
+                <strong>{item.title}</strong>
+                <small>{item.sourceRef}</small>
+              </a>
+            ))}
+          </div>
         </section>
       ) : null}
 

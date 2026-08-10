@@ -172,7 +172,33 @@ export type ExperienceResponse = {
   experience?: {
     guidedViewModel?: GuidedViewModel;
     professionalViewModel?: ProfessionalViewModel;
+    contentExplanationSnippets?: Array<{
+      snippetId?: string;
+      category?: string;
+      placement?: string;
+      guided?: {
+        headline?: string;
+        short_text?: string;
+        practical_meaning?: string;
+        caution?: string;
+      };
+      professional?: {
+        label?: string;
+        explanation?: string;
+        verification_hint?: string;
+      };
+      knowledgeRefs?: string[];
+      articleRefs?: string[];
+      status?: string;
+    }>;
   };
+  relatedContent?: Array<{
+    contentId?: string;
+    title?: string;
+    url?: string;
+    reasonCode?: string;
+    sourceRef?: string;
+  }>;
 };
 
 export type ReportSummary = {

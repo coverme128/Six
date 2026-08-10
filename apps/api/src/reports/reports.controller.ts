@@ -1,5 +1,6 @@
 import { Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
 import { buildExperienceBundle } from "@six/domain/presentation";
+import { HybridContentRepository, reportContentRecommendations } from "@six/domain/content-framework";
 
 import { AiReportService } from "../ai/ai-report.service.js";
 import { ReportStoreService } from "./report-store.service.js";
@@ -129,6 +130,13 @@ function assertInternalAccess(token?: string) {
   }
 }
 
+function contentRepository() {
+  return new HybridContentRepository({
+    rootDir: process.env.SIX_ROOT ?? process.cwd(),
+    includePreview: !["beta", "production"].includes(process.env.APP_ENV ?? "development")
+  });
+}
+
 @Controller("reports")
 export class ReportsController {
   constructor(
@@ -198,7 +206,8 @@ export class ReportsController {
       persistence: report.persistence,
       aiReportBundle: report.aiReportBundle,
       chartViewModel: publicChartView(report),
-      experience: publicExperience(report.experience)
+      experience: publicExperience(report.experience),
+      relatedContent: (reportContentRecommendations as any)({ report, repository: contentRepository(), limit: 6 }).items
     };
   }
 

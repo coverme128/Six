@@ -6,6 +6,7 @@ import { buildAdminViewModel } from "./adminViewModel.js";
 import { buildLiuyaoProductResultFacts } from "./productResultFacts.js";
 import { REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
 import { duplicatePresentationWarnings } from "./evidenceDeduplicator.js";
+import { selectContentExplanationSnippets } from "./contentExplanations.js";
 
 export { deduplicateSignals } from "./evidenceDeduplicator.js";
 export { PAGE_EXPERIENCE_CONTRACTS, PAGE_STATE_CONTRACT, REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
@@ -38,6 +39,7 @@ export function buildExperienceBundle({ result, type, includeAdmin = false }) {
     },
     guidedViewModel,
     professionalViewModel,
+    contentExplanationSnippets: selectContentExplanationSnippets({ productResultFacts }),
     qa: {
       duplicatePresentationWarnings: duplicatePresentationWarnings(guidedViewModel),
       hasPrimaryAction: guidedViewModel.nextActions.length > 0,

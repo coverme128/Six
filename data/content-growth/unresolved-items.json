@@ -1,0 +1,4449 @@
+{
+  "00": [
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_01",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_01_DATA_READY",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_02",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_02_DATA_READY",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_03",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_03_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_04",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_04_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_05",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_05_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_06",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_06_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/batch-00-compatibility-audit.json",
+      "batch": "BATCH_07",
+      "packageExists": true,
+      "stableIdPolicy": "PRESERVE",
+      "professionalRuleModificationDetected": false,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+      "batch00Adoption": "ADAPTER_COMPATIBLE",
+      "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_01",
+      "zip": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+      "zipFileCount": 115,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_01_DATA_READY",
+      "scope": "FOUNDATIONS_TRUST_USER_EDUCATION",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 30,
+        "faqs": 30,
+        "visualAssets": 8,
+        "shortVideos": 6
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_02",
+      "zip": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+      "zipFileCount": 134,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_02_DATA_READY",
+      "scope": "FOUNDATIONS_CASTING_HEXAGRAM_STRUCTURE",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 40,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_03",
+      "zip": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+      "zipFileCount": 145,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_03_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "scope": "YONGSHEN_ROLES_RELATIONSHIPS",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 35,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_04",
+      "zip": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+      "zipFileCount": 170,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_04_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "scope": "STRENGTH_DYNAMICS_PATTERNS_TIMING_FOUNDATIONS",
+      "counts": {
+        "articles": 20,
+        "knowledgeCards": 35,
+        "faqs": 40,
+        "visualAssets": 12,
+        "shortVideos": 10
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_05",
+      "zip": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+      "zipFileCount": 224,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_05_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "scope": "REAL_WORLD_DECISION_TOPICS",
+      "counts": {
+        "articles": 30,
+        "faqs": 30,
+        "teachingCases": 12,
+        "visualAssets": 12,
+        "shortVideos": 12,
+        "topicLandings": 6
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_06",
+      "zip": "liuyao-content-growth-batch-06-report-explanation-product-integration-v1.0.zip",
+      "zipFileCount": 124,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_06_DATA_READY_WITH_ALIGNMENT_PENDING",
+      "scope": "REPORT_EXPLANATION_PRODUCT_INTEGRATION",
+      "counts": {
+        "productExplanationSnippets": 400,
+        "teachingCases": 12,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "newLongFormArticles": 0
+      },
+      "overallStatus": null
+    },
+    {
+      "source": "11_AUDIT/existing-batch-inventory.json",
+      "batch": "BATCH_07",
+      "zip": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+      "zipFileCount": 220,
+      "manifestStatus": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+      "scope": "VISUAL_SEO_DISTRIBUTION_LAUNCH_CLOSURE",
+      "counts": {
+        "longFormArticles": 0,
+        "knowledgeCards": 0,
+        "faqs": 0,
+        "visualAssets": 16,
+        "shortVideos": 6,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12,
+        "learnHubs": 1
+      },
+      "overallStatus": "LIUYAO_CONTENT_GROWTH_LAUNCH_BLOCKED"
+    },
+    {
+      "source": "11_AUDIT/package-validation.json",
+      "jsonFileCount": 69,
+      "jsonParseErrors": [],
+      "schemaFileCount": 17,
+      "existingBatchZipCount": 7,
+      "stableIdsModified": false,
+      "professionalRulesModified": false,
+      "canonicalIdsInvented": false,
+      "newContentAssetsCreated": 0,
+      "status": "PASS"
+    },
+    {
+      "source": "11_AUDIT/qa-gates.json",
+      "CONTENT_CONTRACT": [
+        "DOMAIN_LIUYAO",
+        "SCHEMA_VALID",
+        "ID_UNIQUE",
+        "REFERENCE_VALID"
+      ],
+      "PROFESSIONAL_INTEGRITY": [
+        "NO_RULE_INVENTION",
+        "NO_CANONICAL_ID_INVENTION",
+        "NO_REGISTRY_OVERRIDE"
+      ],
+      "PRESENTATION": [
+        "FACT_DIRECTION_CONSISTENT",
+        "GUIDED_PROFESSIONAL_DEPTH_ONLY",
+        "NO_INTERNAL_LEAKAGE"
+      ],
+      "SAFETY": [
+        "NO_RESULT_GUARANTEE",
+        "NO_INVESTMENT_ADVICE",
+        "NO_MEDICAL_DIAGNOSIS",
+        "NO_LEGAL_DETERMINATION",
+        "NO_MIND_READING",
+        "NO_TIMING_GUARANTEE"
+      ],
+      "SEO": [
+        "REVIEW_REQUIRED_NOINDEX",
+        "CANONICAL_VALID",
+        "SITEMAP_ONLY_INDEX_APPROVED",
+        "NO_FAKE_STRUCTURED_DATA"
+      ],
+      "UX": [
+        "MOBILE_PRIORITY",
+        "EMPTY_ERROR_STATES",
+        "ONE_PRIMARY_CTA",
+        "CORE_REPORT_NOT_BLOCKED_BY_KNOWLEDGE"
+      ],
+      "VISUAL": [
+        "EDITABLE_SVG",
+        "ALT_TEXT",
+        "MOBILE_ADAPTATION",
+        "NO_EXTERNAL_FONT_DEPENDENCY"
+      ],
+      "ANALYTICS": [
+        "NO_SENSITIVE_FREE_TEXT",
+        "FUNNEL_DEFINED"
+      ],
+      "RELEASE": [
+        "DATA_READY",
+        "INTEGRATION_READY",
+        "STAGING_READY",
+        "PRODUCTION_READY_SEPARATED"
+      ]
+    },
+    {
+      "source": "11_AUDIT/release-status-model.json",
+      "levels": [
+        {
+          "code": "DATA_READY",
+          "meaning": "package data/contracts complete"
+        },
+        {
+          "code": "EXPERIENCE_READY",
+          "meaning": "UX contracts and assets ready; may still require staging verification"
+        },
+        {
+          "code": "SEO_READY",
+          "meaning": "indexation/canonical/sitemap pass for public pages"
+        },
+        {
+          "code": "VISUAL_READY",
+          "meaning": "visual assets complete and accessible"
+        },
+        {
+          "code": "GROWTH_READY",
+          "meaning": "distribution/analytics/funnel ready"
+        },
+        {
+          "code": "INTEGRATION_READY",
+          "meaning": "repository IDs/routes/mappings resolved"
+        },
+        {
+          "code": "STAGING_READY",
+          "meaning": "real staging E2E passed"
+        },
+        {
+          "code": "PRODUCTION_READY",
+          "meaning": "public routes/SEO/analytics/mobile verified"
+        }
+      ],
+      "rule": "Never collapse all levels into DONE."
+    },
+    {
+      "source": "11_AUDIT/retroactive-gap-register.json",
+      "knownExistingDebt": [
+        {
+          "code": "EDITORIAL_SEMANTIC_SIMILARITY",
+          "source": "BATCH_07_MASTER_AUDIT",
+          "status": "OPEN",
+          "resolution": "Keep stable IDs; differentiate, cross-link or noindex as defined by Batch 07. Do not auto-delete."
+        },
+        {
+          "code": "PROFESSIONAL_ALIGNMENT_PENDING",
+          "source": "BATCH_03_TO_06",
+          "status": "OPEN",
+          "resolution": "Resolve formal registry IDs in repository before treating content mappings as professional rule references."
+        },
+        {
+          "code": "REVIEW_REQUIRED_PUBLICATION",
+          "source": "MULTIPLE_BATCHES",
+          "status": "OPEN",
+          "resolution": "REVIEW_REQUIRED remains NOT_PUBLIC + NOINDEX until explicit human/domain approval."
+        },
+        {
+          "code": "STAGING_VERIFICATION",
+          "source": "BATCH_07",
+          "status": "OPEN",
+          "resolution": "Run real routes, sitemap, mobile E2E, accessibility, analytics and performance checks."
+        }
+      ],
+      "batch00DoesNotCloseTheseAutomatically": true
+    }
+  ],
+  "01": [
+    {
+      "source": "10_QA/article-length-audit.json",
+      "recommendedChineseCharacters": "1800–3000",
+      "measuredApproximateCharacters": {
+        "B01-A01": 2429,
+        "B01-A02": 2245,
+        "B01-A03": 2139,
+        "B01-A04": 2113,
+        "B01-A05": 2058,
+        "B01-A06": 2217,
+        "B01-A07": 2108,
+        "B01-A08": 2019,
+        "B01-A09": 2270,
+        "B01-A10": 2266,
+        "B01-A11": 2107,
+        "B01-A12": 2107,
+        "B01-A13": 2032,
+        "B01-A14": 2141,
+        "B01-A15": 2149,
+        "B01-A16": 2009,
+        "B01-A17": 2149,
+        "B01-A18": 2281
+      },
+      "minimum": 2009,
+      "maximum": 2429,
+      "average": 2158,
+      "pass": true
+    },
+    {
+      "source": "10_QA/count-audit.json",
+      "expected": {
+        "articles": 18,
+        "knowledgeCards": 30,
+        "faqs": 30,
+        "visualAssets": 8,
+        "shortVideos": 6
+      },
+      "actual": {
+        "articles": 18,
+        "knowledgeCards": 30,
+        "faqs": 30,
+        "visualAssets": 8,
+        "shortVideos": 6
+      },
+      "pass": true
+    },
+    {
+      "source": "10_QA/id-audit.json",
+      "total_ids": 92,
+      "unique_ids": 92,
+      "duplicate_ids": [],
+      "slug_count": 18,
+      "unique_slug_count": 18,
+      "pass": true
+    },
+    {
+      "source": "10_QA/reference-integrity-audit.json",
+      "broken_references": [],
+      "orphan_assets": [],
+      "pass": true
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    }
+  ],
+  "02": [
+    {
+      "source": "10_QA/article-length-audit.json",
+      "target": "2000–3200 Chinese characters",
+      "items": [
+        {
+          "content_id": "B02-A01",
+          "chinese_characters": 2111
+        },
+        {
+          "content_id": "B02-A02",
+          "chinese_characters": 2085
+        },
+        {
+          "content_id": "B02-A03",
+          "chinese_characters": 2090
+        },
+        {
+          "content_id": "B02-A04",
+          "chinese_characters": 2005
+        },
+        {
+          "content_id": "B02-A05",
+          "chinese_characters": 2105
+        },
+        {
+          "content_id": "B02-A06",
+          "chinese_characters": 2000
+        },
+        {
+          "content_id": "B02-A07",
+          "chinese_characters": 2083
+        },
+        {
+          "content_id": "B02-A08",
+          "chinese_characters": 2117
+        },
+        {
+          "content_id": "B02-A09",
+          "chinese_characters": 2105
+        },
+        {
+          "content_id": "B02-A10",
+          "chinese_characters": 2111
+        },
+        {
+          "content_id": "B02-A11",
+          "chinese_characters": 2128
+        },
+        {
+          "content_id": "B02-A12",
+          "chinese_characters": 2100
+        },
+        {
+          "content_id": "B02-A13",
+          "chinese_characters": 2130
+        },
+        {
+          "content_id": "B02-A14",
+          "chinese_characters": 2107
+        },
+        {
+          "content_id": "B02-A15",
+          "chinese_characters": 2120
+        },
+        {
+          "content_id": "B02-A16",
+          "chinese_characters": 2016
+        },
+        {
+          "content_id": "B02-A17",
+          "chinese_characters": 2108
+        },
+        {
+          "content_id": "B02-A18",
+          "chinese_characters": 2009
+        }
+      ],
+      "pass": true
+    },
+    {
+      "source": "10_QA/count-audit.json",
+      "expected": {
+        "articles": 18,
+        "knowledgeCards": 40,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "actual": {
+        "articles": 18,
+        "knowledgeCards": 40,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "pass": true
+    },
+    {
+      "source": "10_QA/id-audit.json",
+      "total_ids": 111,
+      "unique_ids": 111,
+      "duplicates": [],
+      "pass": true
+    },
+    {
+      "source": "10_QA/reference-integrity-audit.json",
+      "broken_references": [],
+      "orphans": {
+        "articles": [],
+        "knowledge_cards": [],
+        "faqs": [],
+        "visual_assets": [],
+        "short_videos": []
+      },
+      "pass": true
+    },
+    {
+      "source": "10_QA/registry-length-audit.json",
+      "knowledge_cards": {
+        "short_definition_bad": [],
+        "professional_definition_bad": [],
+        "practical_meaning_bad": []
+      },
+      "faqs": {
+        "short_answer_bad": [],
+        "full_answer_bad": []
+      },
+      "pass": true
+    },
+    {
+      "source": "10_QA/slug-audit.json",
+      "total": 18,
+      "unique": 18,
+      "duplicates": [],
+      "pass": true
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    }
+  ],
+  "03": [
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "REGISTRY",
+      "name": "Question Topic Role Registry",
+      "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "REGISTRY",
+      "name": "Yongshen Selection Facts",
+      "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "REGISTRY",
+      "name": "Relationship Meaning Registry",
+      "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "REGISTRY",
+      "name": "Finding Explanation Registry",
+      "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-001",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-002",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-003",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-004",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-005",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-006",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-007",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "TOPIC_ROLE_MAPPING",
+      "name": "B03-TOPIC-ROLE-008",
+      "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-001",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-002",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-003",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-004",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-005",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "YONGSHEN_EXPLANATION",
+      "name": "B03-YONGSHEN-EXPLAIN-006",
+      "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-001",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-002",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-003",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-004",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-005",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-006",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-007",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+      "type": "RELATIONSHIP_MAPPING",
+      "name": "B03-REL-CONTENT-008",
+      "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+      "status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "11_QA/count-audit.json",
+      "expected": {
+        "articles": 18,
+        "knowledgeCards": 35,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "actual": {
+        "articles": 18,
+        "knowledgeCards": 35,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/id-audit.json",
+      "total_ids": 106,
+      "unique_ids": 106,
+      "duplicates": [],
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/reference-integrity-audit.json",
+      "broken_internal_refs": [],
+      "broken_external_refs": [],
+      "orphan_articles": [],
+      "orphan_knowledge_cards": [],
+      "orphan_faqs": [],
+      "orphan_visuals": [],
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/slug-audit.json",
+      "count": 18,
+      "unique_count": 18,
+      "status": "PASS"
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    },
+    {
+      "type": "PROFESSIONAL_ALIGNMENT",
+      "status": "REVIEW_REQUIRED",
+      "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+    }
+  ],
+  "04": [
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Strength Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Dynamic Rule Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Pattern Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Evidence Conflict Resolution Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Timing Explanation Facts",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "05_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "registry": "Finding Explanation Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "正式 Registry / Rule ID / Fact ID 未随本会话提供，禁止根据通行说法补造。"
+    },
+    {
+      "source": "11_QA/count-audit.json",
+      "ARTICLE_COUNT": 20,
+      "KNOWLEDGE_CARD_COUNT": 35,
+      "FAQ_COUNT": 40,
+      "VISUAL_ASSET_COUNT": 12,
+      "SHORT_VIDEO_COUNT": 10,
+      "expected": {
+        "articles": 20,
+        "knowledgeCards": 35,
+        "faqs": 40,
+        "visualAssets": 12,
+        "shortVideos": 10
+      },
+      "pass": true
+    },
+    {
+      "source": "11_QA/id-audit.json",
+      "all_fixed_ids_unique": true,
+      "article_ids": [
+        "B04-A01",
+        "B04-A02",
+        "B04-A03",
+        "B04-A04",
+        "B04-A05",
+        "B04-A06",
+        "B04-A07",
+        "B04-A08",
+        "B04-A09",
+        "B04-A10",
+        "B04-A11",
+        "B04-A12",
+        "B04-A13",
+        "B04-A14",
+        "B04-A15",
+        "B04-A16",
+        "B04-A17",
+        "B04-A18",
+        "B04-A19",
+        "B04-A20"
+      ],
+      "knowledge_card_ids": [
+        "B04-KC-01",
+        "B04-KC-02",
+        "B04-KC-03",
+        "B04-KC-04",
+        "B04-KC-05",
+        "B04-KC-06",
+        "B04-KC-07",
+        "B04-KC-08",
+        "B04-KC-09",
+        "B04-KC-10",
+        "B04-KC-11",
+        "B04-KC-12",
+        "B04-KC-13",
+        "B04-KC-14",
+        "B04-KC-15",
+        "B04-KC-16",
+        "B04-KC-17",
+        "B04-KC-18",
+        "B04-KC-19",
+        "B04-KC-20",
+        "B04-KC-21",
+        "B04-KC-22",
+        "B04-KC-23",
+        "B04-KC-24",
+        "B04-KC-25",
+        "B04-KC-26",
+        "B04-KC-27",
+        "B04-KC-28",
+        "B04-KC-29",
+        "B04-KC-30",
+        "B04-KC-31",
+        "B04-KC-32",
+        "B04-KC-33",
+        "B04-KC-34",
+        "B04-KC-35"
+      ],
+      "faq_ids": [
+        "B04-FAQ-01",
+        "B04-FAQ-02",
+        "B04-FAQ-03",
+        "B04-FAQ-04",
+        "B04-FAQ-05",
+        "B04-FAQ-06",
+        "B04-FAQ-07",
+        "B04-FAQ-08",
+        "B04-FAQ-09",
+        "B04-FAQ-10",
+        "B04-FAQ-11",
+        "B04-FAQ-12",
+        "B04-FAQ-13",
+        "B04-FAQ-14",
+        "B04-FAQ-15",
+        "B04-FAQ-16",
+        "B04-FAQ-17",
+        "B04-FAQ-18",
+        "B04-FAQ-19",
+        "B04-FAQ-20",
+        "B04-FAQ-21",
+        "B04-FAQ-22",
+        "B04-FAQ-23",
+        "B04-FAQ-24",
+        "B04-FAQ-25",
+        "B04-FAQ-26",
+        "B04-FAQ-27",
+        "B04-FAQ-28",
+        "B04-FAQ-29",
+        "B04-FAQ-30",
+        "B04-FAQ-31",
+        "B04-FAQ-32",
+        "B04-FAQ-33",
+        "B04-FAQ-34",
+        "B04-FAQ-35",
+        "B04-FAQ-36",
+        "B04-FAQ-37",
+        "B04-FAQ-38",
+        "B04-FAQ-39",
+        "B04-FAQ-40"
+      ],
+      "visual_ids": [
+        "B04-VIS-01",
+        "B04-VIS-02",
+        "B04-VIS-03",
+        "B04-VIS-04",
+        "B04-VIS-05",
+        "B04-VIS-06",
+        "B04-VIS-07",
+        "B04-VIS-08",
+        "B04-VIS-09",
+        "B04-VIS-10",
+        "B04-VIS-11",
+        "B04-VIS-12"
+      ],
+      "video_ids": [
+        "B04-VIDEO-01",
+        "B04-VIDEO-02",
+        "B04-VIDEO-03",
+        "B04-VIDEO-04",
+        "B04-VIDEO-05",
+        "B04-VIDEO-06",
+        "B04-VIDEO-07",
+        "B04-VIDEO-08",
+        "B04-VIDEO-09",
+        "B04-VIDEO-10"
+      ]
+    },
+    {
+      "source": "11_QA/reference-integrity-audit.json",
+      "broken_references": [],
+      "broken_reference_count": 0,
+      "orphan_articles": [],
+      "orphan_knowledge_cards": [],
+      "orphan_faqs": [],
+      "orphan_visuals": [],
+      "previous_batch_crosslinks": {
+        "BATCH_01": "RESOLVED",
+        "BATCH_02": "RESOLVED",
+        "BATCH_03": "RESOLVED"
+      }
+    },
+    {
+      "source": "11_QA/slug-audit.json",
+      "unique_slug": true,
+      "unique_seo_title": true,
+      "slugs": [
+        "liuyao-strength-status",
+        "month-branch-role",
+        "day-branch-role",
+        "month-and-day-context",
+        "sources-of-support",
+        "constraint-control-consumption",
+        "xunkong-explained",
+        "yuepo-explained",
+        "richong-vs-yuepo",
+        "moving-line-dynamics",
+        "changed-line-role",
+        "returning-support-and-control",
+        "advancing-and-retreating-spirit",
+        "hidden-and-flying-spirit",
+        "generating-controlling-transforming",
+        "supports-and-obstacles-coexist",
+        "evidence-conflict-in-liuyao",
+        "patterns-and-base-facts",
+        "timing-candidates",
+        "audit-strength-dynamics-timing"
+      ]
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    },
+    {
+      "type": "PROFESSIONAL_ALIGNMENT",
+      "status": "REVIEW_REQUIRED",
+      "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+    }
+  ],
+  "05": [
+    {
+      "source": "06_DECISION-TOPICS/unresolved-professional-alignments.json",
+      "registries": [
+        "Question Topic Role Registry",
+        "Yongshen Selection Facts",
+        "Relationship Meaning Registry",
+        "Strength Registry",
+        "Dynamic Rule Registry",
+        "Pattern Registry",
+        "Evidence Conflict Resolution Registry",
+        "Timing Explanation Facts",
+        "Finding Explanation Registry",
+        "Assessment Pattern Registry",
+        "Action Guidance Registry"
+      ],
+      "status": "VERIFY_IN_REPOSITORY",
+      "rule": "不得根据内容层推断 Engine Code、Role、Yongshen、Timing 或 Action Rule。"
+    },
+    {
+      "source": "13_QA/count-audit.json",
+      "ARTICLE_COUNT": 30,
+      "FAQ_COUNT": 30,
+      "TEACHING_CASE_COUNT": 12,
+      "VISUAL_ASSET_COUNT": 12,
+      "SHORT_VIDEO_COUNT": 12,
+      "TOPIC_LANDING_COUNT": 6,
+      "expected": {
+        "ARTICLE_COUNT": 30,
+        "FAQ_COUNT": 30,
+        "TEACHING_CASE_COUNT": 12,
+        "VISUAL_ASSET_COUNT": 12,
+        "SHORT_VIDEO_COUNT": 12,
+        "TOPIC_LANDING_COUNT": 6
+      },
+      "status": "PASS"
+    },
+    {
+      "source": "13_QA/id-audit.json",
+      "id_count": 102,
+      "unique_count": 102,
+      "duplicates": [],
+      "status": "PASS"
+    },
+    {
+      "source": "13_QA/reference-integrity-audit.json",
+      "broken_references": [],
+      "broken_count": 0,
+      "previous_batch_registries": {
+        "BATCH_01": "RESOLVED",
+        "BATCH_02": "RESOLVED",
+        "BATCH_03": "RESOLVED",
+        "BATCH_04": "RESOLVED"
+      },
+      "status": "PASS"
+    },
+    {
+      "source": "13_QA/slug-audit.json",
+      "article_slug_count": 30,
+      "unique_article_slugs": 30,
+      "seo_title_count": 36,
+      "unique_seo_titles": 36,
+      "status": "PASS"
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    },
+    {
+      "type": "PROFESSIONAL_ALIGNMENT",
+      "status": "REVIEW_REQUIRED",
+      "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+    }
+  ],
+  "06": [
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Finding Explanation Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Relationship Meaning Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Question Topic Role Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Assessment Pattern Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Action Guidance Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Yongshen Selection Facts",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Strength Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Dynamic Rule Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Pattern Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Evidence Conflict Resolution Registry",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Timing Explanation Facts",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "ProductResultFacts / DivinationResultFacts",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Guided ViewModel",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Professional ViewModel",
+      "status": "VERIFY_IN_REPOSITORY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+      "dependency": "Batch 05 Content Registry",
+      "status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+      "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+    },
+    {
+      "source": "11_QA/content-contradiction-audit.json",
+      "checks": {
+        "GUIDED_PROFESSIONAL_FACT_DIRECTION_CONFLICT": 0,
+        "AI_DETERMINISTIC_DIRECTION_CONFLICT": 0,
+        "ACTION_ASSESSMENT_CONFLICT": 0,
+        "TIMING_LIMITATION_CONFLICT": 0,
+        "HEADLINE_SUMMARY_CONFLICT": 0,
+        "SUMMARY_SUPPORT_RISK_CONFLICT_UNRESOLVED": 0
+      },
+      "unresolved_presentation_contradiction": 0,
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/count-audit.json",
+      "expected": {
+        "productExplanationSnippets": 400,
+        "teachingCases": 12,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "newLongFormArticles": 0
+      },
+      "actual": {
+        "productExplanationSnippets": 400,
+        "teachingCases": 12,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "newLongFormArticles": 0
+      },
+      "status": "PASS",
+      "categoryCounts": {
+        "RESULT_OVERVIEW": 30,
+        "YONGSHEN_CORE_FOCUS": 45,
+        "SHI_YING_RELATIONSHIP": 40,
+        "SIX_RELATIONS": 50,
+        "STRENGTH_STATE": 55,
+        "DYNAMICS": 55,
+        "SUPPORT_RISK_CONFLICT": 50,
+        "TIMING": 35,
+        "ACTION_GUIDANCE": 25,
+        "AI_TRUST": 15
+      }
+    },
+    {
+      "source": "11_QA/finding-content-coverage-audit.json",
+      "P0": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+      "P1": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+      "P2": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+      "reason": "完整 Finding Registry 与正式 Priority 未提供，禁止伪造覆盖率。",
+      "coverage_status": "VERIFY_IN_REPOSITORY"
+    },
+    {
+      "source": "11_QA/guided-professional-consistency-audit.json",
+      "fact_direction_consistent_contract": true,
+      "checked_snippets": 400,
+      "known_direction_conflicts": 0,
+      "repository_e2e_status": "VERIFY_IN_REPOSITORY",
+      "status": "PASS_WITH_ALIGNMENT_PENDING"
+    },
+    {
+      "source": "11_QA/id-audit.json",
+      "total_ids": 448,
+      "unique_ids": 448,
+      "duplicate_ids": [],
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/presentation-dedup-audit.json",
+      "strategy": "FACT_DIRECTION_AND_SIGNAL_KEY",
+      "fact_count_may_exceed_presentation_count": true,
+      "duplicate_presentation_paths_detected": 0,
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/recommendation-audit.json",
+      "random_recommendation": 0,
+      "unrelated_content_recommendation": 0,
+      "missing_recommendation_reason": 0,
+      "scenario_count": 12,
+      "batch05_extension_status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/reference-integrity-audit.json",
+      "broken_internal_reference_count": 0,
+      "errors": [],
+      "batch01to04_external_registry_status": "RESOLVED",
+      "batch05_external_registry_status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+      "status": "PASS"
+    },
+    {
+      "source": "11_QA/snippet-dedup-audit.json",
+      "exact_normalized_duplicates": 0,
+      "high_similarity_pairs_threshold_0_985": [],
+      "high_similarity_pair_count": 0,
+      "signal_key_unique": true,
+      "semantic_duplicate_snippet": 0,
+      "status": "PASS",
+      "guided_headline_unique_count": 400,
+      "guided_short_text_unique_count": 400
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    },
+    {
+      "type": "PROFESSIONAL_ALIGNMENT",
+      "status": "REVIEW_REQUIRED",
+      "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+    }
+  ],
+  "07": [
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A03",
+      "related_content_ids": [
+        "B02-A16"
+      ],
+      "relationship": "FOUNDATION_TO_ADVANCED",
+      "dedup_action": "CROSS_LINK"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A13",
+      "related_content_ids": [
+        "B02-A15"
+      ],
+      "relationship": "FOUNDATION_TO_ADVANCED",
+      "dedup_action": "CROSS_LINK"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A10",
+      "related_content_ids": [
+        "B02-A08"
+      ],
+      "relationship": "FOUNDATION_TO_ADVANCED",
+      "dedup_action": "CROSS_LINK"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A19",
+      "related_content_ids": [
+        "B05-A29"
+      ],
+      "relationship": "CONCEPT_TO_REAL_WORLD_APPLICATION",
+      "dedup_action": "CROSS_LINK"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B01-A10",
+      "related_content_ids": [
+        "B01-A11",
+        "B01-A12"
+      ],
+      "relationship": "TRUST_TOPIC_CLUSTER",
+      "dedup_action": "CROSS_LINK"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A01",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A02",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A03",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A04",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A05",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A06",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A07",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A08",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A09",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A10",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A12",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A13",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A14",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A15",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B03-A16",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A02",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A03",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A04",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A10",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A11",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A12",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A13",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B04-A14",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A01",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A02",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A03",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A04",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A05",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A06",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A07",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A08",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A09",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A10",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A11",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A12",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A13",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A14",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A15",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A16",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A17",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A18",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A19",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A20",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A21",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A22",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A23",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A24",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A25",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A26",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A27",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A28",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A29",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/content-canonicalization-map.json",
+      "primary_content_id": "B05-A30",
+      "related_content_ids": [],
+      "relationship": "HIGH_SIMILARITY_CLUSTER_MEMBER",
+      "dedup_action": "NEEDS_EDITORIAL_REVIEW_NO_STABLE_ID_CHANGE"
+    },
+    {
+      "source": "01_MASTER-AUDIT/cross-batch-id-audit.json",
+      "checked_id_count": 976,
+      "duplicate_ids": [],
+      "DUPLICATE_ID": 0,
+      "status": "PASS"
+    },
+    {
+      "source": "01_MASTER-AUDIT/cross-batch-master-audit.json",
+      "batches": {
+        "BATCH_01": {
+          "zip": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+          "articles": 18,
+          "knowledgeCards": 30,
+          "faqs": 30,
+          "teachingCases": 0,
+          "visuals": 8,
+          "videos": 6,
+          "snippets": 0,
+          "fixtures": 0,
+          "recommendations": 0,
+          "topicLandings": 0
+        },
+        "BATCH_02": {
+          "zip": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+          "articles": 18,
+          "knowledgeCards": 40,
+          "faqs": 35,
+          "teachingCases": 0,
+          "visuals": 10,
+          "videos": 8,
+          "snippets": 0,
+          "fixtures": 0,
+          "recommendations": 0,
+          "topicLandings": 0
+        },
+        "BATCH_03": {
+          "zip": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+          "articles": 18,
+          "knowledgeCards": 35,
+          "faqs": 35,
+          "teachingCases": 0,
+          "visuals": 10,
+          "videos": 8,
+          "snippets": 0,
+          "fixtures": 0,
+          "recommendations": 0,
+          "topicLandings": 0
+        },
+        "BATCH_04": {
+          "zip": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+          "articles": 20,
+          "knowledgeCards": 35,
+          "faqs": 40,
+          "teachingCases": 0,
+          "visuals": 12,
+          "videos": 10,
+          "snippets": 0,
+          "fixtures": 0,
+          "recommendations": 0,
+          "topicLandings": 0
+        },
+        "BATCH_05": {
+          "zip": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+          "articles": 30,
+          "knowledgeCards": 0,
+          "faqs": 30,
+          "teachingCases": 12,
+          "visuals": 12,
+          "videos": 12,
+          "snippets": 0,
+          "fixtures": 0,
+          "recommendations": 0,
+          "topicLandings": 6
+        },
+        "BATCH_06": {
+          "zip": "liuyao-content-growth-batch-06-report-explanation-product-integration-v1.0.zip",
+          "articles": 0,
+          "knowledgeCards": 0,
+          "faqs": 0,
+          "teachingCases": 12,
+          "visuals": 0,
+          "videos": 0,
+          "snippets": 400,
+          "fixtures": 24,
+          "recommendations": 12,
+          "topicLandings": 0
+        }
+      },
+      "expectedBeforeBatch07": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "visualAssets": 52,
+        "shortVideos": 44
+      },
+      "actualBeforeBatch07": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "visualAssets": 52,
+        "shortVideos": 44
+      },
+      "allCoreCountsMatch": true
+    },
+    {
+      "source": "01_MASTER-AUDIT/cross-batch-semantic-dedup-audit.json",
+      "method": "character_4gram_cosine on actual article markdown",
+      "threshold": 0.85,
+      "high_similarity_pair_count": 154,
+      "affected_article_count": 53,
+      "affected_by_batch": {
+        "3": 15,
+        "4": 8,
+        "5": 30
+      },
+      "classification": "NEEDS_EDITORIAL_REVIEW for threshold hits; Stable IDs retained",
+      "pairs": [
+        {
+          "a": "B03-A01",
+          "b": "B03-A02",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8573,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A03",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8567,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A04",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8532,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A06",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8592,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8578,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.855,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A14",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8511,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8556,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A01",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8621,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A03",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8521,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A04",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8572,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A06",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8553,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8545,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8504,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8514,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A02",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.858,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A04",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8601,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A06",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8603,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A07",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8506,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A09",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8527,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A10",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.851,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8675,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8635,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8565,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A03",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8656,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A05",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.852,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A06",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8624,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A07",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8527,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8585,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8584,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8502,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A04",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8616,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A05",
+          "b": "B03-A06",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8546,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A05",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8517,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A05",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8508,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A05",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8543,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A07",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8569,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A08",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8535,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8615,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8608,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A14",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8558,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8585,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A06",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8644,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A07",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8523,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A07",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8502,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A07",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.854,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A10",
+          "b": "B03-A12",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8525,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A10",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8505,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A12",
+          "b": "B03-A13",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8639,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A12",
+          "b": "B03-A14",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8524,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A12",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8596,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A12",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8685,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A13",
+          "b": "B03-A14",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8603,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A13",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8587,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A13",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8648,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A14",
+          "b": "B03-A15",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8509,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A14",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8555,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B03-A15",
+          "b": "B03-A16",
+          "batch_a": 3,
+          "batch_b": 3,
+          "similarity": 0.8603,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A03",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8887,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A04",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8635,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A10",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.853,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A11",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8781,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A12",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8544,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A02",
+          "b": "B04-A13",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8515,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A03",
+          "b": "B04-A04",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8567,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A03",
+          "b": "B04-A10",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8518,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A03",
+          "b": "B04-A11",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8804,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A03",
+          "b": "B04-A12",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8507,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A03",
+          "b": "B04-A13",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8502,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A10",
+          "b": "B04-A11",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8503,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A10",
+          "b": "B04-A12",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8563,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A10",
+          "b": "B04-A13",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8552,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A11",
+          "b": "B04-A12",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8562,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A12",
+          "b": "B04-A13",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8543,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B04-A12",
+          "b": "B04-A14",
+          "batch_a": 4,
+          "batch_b": 4,
+          "similarity": 0.8543,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A01",
+          "b": "B05-A02",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8918,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A01",
+          "b": "B05-A03",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8974,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A01",
+          "b": "B05-A04",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8956,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A01",
+          "b": "B05-A05",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8835,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A02",
+          "b": "B05-A03",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8959,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A02",
+          "b": "B05-A04",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8915,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A02",
+          "b": "B05-A05",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8896,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A03",
+          "b": "B05-A04",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8969,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A03",
+          "b": "B05-A05",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8886,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A04",
+          "b": "B05-A05",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8901,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A06",
+          "b": "B05-A07",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8907,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A06",
+          "b": "B05-A08",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8861,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A06",
+          "b": "B05-A09",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9229,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A06",
+          "b": "B05-A10",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.877,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A07",
+          "b": "B05-A08",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.891,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A07",
+          "b": "B05-A09",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9021,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A07",
+          "b": "B05-A10",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.91,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A07",
+          "b": "B05-A17",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8505,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A07",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8502,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A08",
+          "b": "B05-A09",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9002,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A08",
+          "b": "B05-A10",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8803,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A08",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8559,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A10",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8905,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A12",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8501,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A15",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8503,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A17",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8517,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8589,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8535,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A09",
+          "b": "B05-A21",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8534,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A11",
+          "b": "B05-A12",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8911,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A11",
+          "b": "B05-A13",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8946,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A11",
+          "b": "B05-A14",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8978,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A11",
+          "b": "B05-A15",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A11",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8517,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A12",
+          "b": "B05-A13",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8849,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A12",
+          "b": "B05-A14",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.89,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A12",
+          "b": "B05-A15",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8922,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A13",
+          "b": "B05-A14",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8908,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A13",
+          "b": "B05-A15",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9168,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A14",
+          "b": "B05-A15",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8949,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A14",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8539,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A15",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8511,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A15",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8531,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A16",
+          "b": "B05-A17",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9239,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A16",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9229,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A16",
+          "b": "B05-A19",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9047,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A16",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9209,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A17",
+          "b": "B05-A18",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9327,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A17",
+          "b": "B05-A19",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.899,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A17",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9305,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A19",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9002,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9274,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A21",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8524,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A22",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8504,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A27",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8562,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A18",
+          "b": "B05-A30",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8525,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A19",
+          "b": "B05-A20",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9082,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A20",
+          "b": "B05-A22",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8539,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A20",
+          "b": "B05-A25",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8505,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A21",
+          "b": "B05-A22",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9243,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A21",
+          "b": "B05-A23",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9021,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A21",
+          "b": "B05-A24",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9038,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A21",
+          "b": "B05-A25",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.924,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A22",
+          "b": "B05-A23",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8975,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A22",
+          "b": "B05-A24",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8988,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A22",
+          "b": "B05-A25",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9224,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A23",
+          "b": "B05-A24",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.897,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A23",
+          "b": "B05-A25",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8967,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A24",
+          "b": "B05-A25",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A26",
+          "b": "B05-A27",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9258,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A26",
+          "b": "B05-A28",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8911,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A26",
+          "b": "B05-A29",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8986,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A26",
+          "b": "B05-A30",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9014,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A27",
+          "b": "B05-A28",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8928,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A27",
+          "b": "B05-A29",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8993,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A27",
+          "b": "B05-A30",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9047,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A28",
+          "b": "B05-A29",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8866,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A28",
+          "b": "B05-A30",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.9132,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        },
+        {
+          "a": "B05-A29",
+          "b": "B05-A30",
+          "batch_a": 5,
+          "batch_b": 5,
+          "similarity": 0.8962,
+          "action": "NEEDS_EDITORIAL_REVIEW"
+        }
+      ]
+    },
+    {
+      "source": "01_MASTER-AUDIT/cross-batch-slug-audit.json",
+      "article_slug_count": 104,
+      "duplicate_slugs": [],
+      "canonical_count": 104,
+      "duplicate_canonicals": [],
+      "DUPLICATE_SLUG": 0,
+      "DUPLICATE_CANONICAL": 0,
+      "status": "PASS"
+    },
+    {
+      "source": "01_MASTER-AUDIT/expected-vs-actual-audit.json",
+      "expectedFinal": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "learnHubs": 1,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "actualFinal": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "learnHubs": 1,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "countMatch": {
+        "articles": true,
+        "knowledgeCards": true,
+        "faqs": true,
+        "teachingCases": true,
+        "productExplanationSnippets": true,
+        "reportUxFixtures": true,
+        "recommendationScenarios": true,
+        "topicLandings": true,
+        "learnHubs": true,
+        "visualAssets": true,
+        "shortVideos": true,
+        "socialAssets": true,
+        "articleSummaryCards": true,
+        "collectionCopies": true
+      },
+      "status": "COUNT_TARGETS_MET"
+    },
+    {
+      "source": "01_MASTER-AUDIT/unresolved-cross-batch-issues.json",
+      "issue_id": "XBAT-001",
+      "severity": "BLOCKING_FOR_FULL_SEO_LAUNCH",
+      "type": "SEMANTIC_DUPLICATION_RISK",
+      "affected_count": 53,
+      "pair_count": 154,
+      "action": "Editorially differentiate/rewrite affected articles; preserve Stable IDs."
+    },
+    {
+      "source": "01_MASTER-AUDIT/unresolved-cross-batch-issues.json",
+      "issue_id": "XBAT-002",
+      "severity": "BLOCKING_FOR_PUBLICATION",
+      "type": "REVIEW_REQUIRED",
+      "explicit_item_flags": 226,
+      "action": "REVIEW_REQUIRED remains NOINDEX / NOT_PUBLIC until approved."
+    },
+    {
+      "source": "01_MASTER-AUDIT/unresolved-cross-batch-issues.json",
+      "issue_id": "XBAT-003",
+      "severity": "ALIGNMENT_PENDING",
+      "type": "VERIFY_IN_REPOSITORY",
+      "unique_core_records": 606,
+      "category_checks": 20,
+      "action": "Resolve professional IDs, routes, ViewModels, SEO/search and report integration in repository."
+    },
+    {
+      "source": "01_MASTER-AUDIT/unresolved-cross-batch-issues.json",
+      "issue_id": "XBAT-004",
+      "severity": "INTEGRATION_PENDING",
+      "type": "B06_B05_DEPENDENCY_REFRESH",
+      "action": "Batch 06 was generated before the final Batch 05 package; rerun B06 repository mapping against the actual B05 Registry during Codex integration."
+    },
+    {
+      "source": "06_INTERNAL-LINKING/orphan-content-audit.json",
+      "PUBLIC_ORPHAN_ARTICLE": 0,
+      "public_orphan_article_ids": [],
+      "PUBLIC_ORPHAN_KNOWLEDGE_CARD": 0,
+      "PUBLIC_ORPHAN_CASE": 0,
+      "note": "Knowledge Cards and Cases are not public-indexed until review/public route policy is resolved.",
+      "status": "PASS"
+    },
+    {
+      "source": "10_SEO/search-intent-cannibalization-audit.json",
+      "threshold": 0.85,
+      "method": "character_4gram_cosine + locked intent relationship review",
+      "high_similarity_pair_count": 154,
+      "affected_article_count": 53,
+      "items": [
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A02",
+          "similarity": 0.8573,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A03",
+          "similarity": 0.8567,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A04",
+          "similarity": 0.8532,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A06",
+          "similarity": 0.8592,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A12",
+          "similarity": 0.8578,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A13",
+          "similarity": 0.855,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A14",
+          "similarity": 0.8511,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A15",
+          "similarity": 0.8556,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A01",
+          "content_b": "B03-A16",
+          "similarity": 0.8621,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A03",
+          "similarity": 0.8521,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A04",
+          "similarity": 0.8572,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A06",
+          "similarity": 0.8553,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A12",
+          "similarity": 0.8545,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A13",
+          "similarity": 0.8504,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A15",
+          "similarity": 0.8514,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A02",
+          "content_b": "B03-A16",
+          "similarity": 0.858,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A04",
+          "similarity": 0.8601,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A06",
+          "similarity": 0.8603,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A07",
+          "similarity": 0.8506,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A09",
+          "similarity": 0.8527,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A10",
+          "similarity": 0.851,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A12",
+          "similarity": 0.8675,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A13",
+          "similarity": 0.8635,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A15",
+          "similarity": 0.8565,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B03-A16",
+          "similarity": 0.8656,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A05",
+          "similarity": 0.852,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A06",
+          "similarity": 0.8624,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A07",
+          "similarity": 0.8527,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A12",
+          "similarity": 0.8585,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A13",
+          "similarity": 0.8584,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A15",
+          "similarity": 0.8502,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A04",
+          "content_b": "B03-A16",
+          "similarity": 0.8616,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A05",
+          "content_b": "B03-A06",
+          "similarity": 0.8546,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A05",
+          "content_b": "B03-A12",
+          "similarity": 0.8517,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A05",
+          "content_b": "B03-A13",
+          "similarity": 0.8508,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A05",
+          "content_b": "B03-A16",
+          "similarity": 0.8543,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A07",
+          "similarity": 0.8569,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A08",
+          "similarity": 0.8535,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A12",
+          "similarity": 0.8615,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A13",
+          "similarity": 0.8608,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A14",
+          "similarity": 0.8558,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A15",
+          "similarity": 0.8585,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A06",
+          "content_b": "B03-A16",
+          "similarity": 0.8644,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A07",
+          "content_b": "B03-A12",
+          "similarity": 0.8523,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A07",
+          "content_b": "B03-A13",
+          "similarity": 0.8502,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A07",
+          "content_b": "B03-A16",
+          "similarity": 0.854,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A10",
+          "content_b": "B03-A12",
+          "similarity": 0.8525,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A10",
+          "content_b": "B03-A16",
+          "similarity": 0.8505,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A12",
+          "content_b": "B03-A13",
+          "similarity": 0.8639,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A12",
+          "content_b": "B03-A14",
+          "similarity": 0.8524,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A12",
+          "content_b": "B03-A15",
+          "similarity": 0.8596,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A12",
+          "content_b": "B03-A16",
+          "similarity": 0.8685,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A13",
+          "content_b": "B03-A14",
+          "similarity": 0.8603,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A13",
+          "content_b": "B03-A15",
+          "similarity": 0.8587,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A13",
+          "content_b": "B03-A16",
+          "similarity": 0.8648,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A14",
+          "content_b": "B03-A15",
+          "similarity": 0.8509,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A14",
+          "content_b": "B03-A16",
+          "similarity": 0.8555,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A15",
+          "content_b": "B03-A16",
+          "similarity": 0.8603,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A03",
+          "similarity": 0.8887,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A04",
+          "similarity": 0.8635,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A10",
+          "similarity": 0.853,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A11",
+          "similarity": 0.8781,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A12",
+          "similarity": 0.8544,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A02",
+          "content_b": "B04-A13",
+          "similarity": 0.8515,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A03",
+          "content_b": "B04-A04",
+          "similarity": 0.8567,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A03",
+          "content_b": "B04-A10",
+          "similarity": 0.8518,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A03",
+          "content_b": "B04-A11",
+          "similarity": 0.8804,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A03",
+          "content_b": "B04-A12",
+          "similarity": 0.8507,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A03",
+          "content_b": "B04-A13",
+          "similarity": 0.8502,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A10",
+          "content_b": "B04-A11",
+          "similarity": 0.8503,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A10",
+          "content_b": "B04-A12",
+          "similarity": 0.8563,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A10",
+          "content_b": "B04-A13",
+          "similarity": 0.8552,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A11",
+          "content_b": "B04-A12",
+          "similarity": 0.8562,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A12",
+          "content_b": "B04-A13",
+          "similarity": 0.8543,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B04-A12",
+          "content_b": "B04-A14",
+          "similarity": 0.8543,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A01",
+          "content_b": "B05-A02",
+          "similarity": 0.8918,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A01",
+          "content_b": "B05-A03",
+          "similarity": 0.8974,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A01",
+          "content_b": "B05-A04",
+          "similarity": 0.8956,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A01",
+          "content_b": "B05-A05",
+          "similarity": 0.8835,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A02",
+          "content_b": "B05-A03",
+          "similarity": 0.8959,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A02",
+          "content_b": "B05-A04",
+          "similarity": 0.8915,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A02",
+          "content_b": "B05-A05",
+          "similarity": 0.8896,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A03",
+          "content_b": "B05-A04",
+          "similarity": 0.8969,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A03",
+          "content_b": "B05-A05",
+          "similarity": 0.8886,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A04",
+          "content_b": "B05-A05",
+          "similarity": 0.8901,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A06",
+          "content_b": "B05-A07",
+          "similarity": 0.8907,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A06",
+          "content_b": "B05-A08",
+          "similarity": 0.8861,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A06",
+          "content_b": "B05-A09",
+          "similarity": 0.9229,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A06",
+          "content_b": "B05-A10",
+          "similarity": 0.877,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A07",
+          "content_b": "B05-A08",
+          "similarity": 0.891,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A07",
+          "content_b": "B05-A09",
+          "similarity": 0.9021,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A07",
+          "content_b": "B05-A10",
+          "similarity": 0.91,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A07",
+          "content_b": "B05-A17",
+          "similarity": 0.8505,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A07",
+          "content_b": "B05-A20",
+          "similarity": 0.8502,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A08",
+          "content_b": "B05-A09",
+          "similarity": 0.9002,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A08",
+          "content_b": "B05-A10",
+          "similarity": 0.8803,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A08",
+          "content_b": "B05-A18",
+          "similarity": 0.8559,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A10",
+          "similarity": 0.8905,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A12",
+          "similarity": 0.8501,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A15",
+          "similarity": 0.8503,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A17",
+          "similarity": 0.8517,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A18",
+          "similarity": 0.8589,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A20",
+          "similarity": 0.8535,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A09",
+          "content_b": "B05-A21",
+          "similarity": 0.8534,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A11",
+          "content_b": "B05-A12",
+          "similarity": 0.8911,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A11",
+          "content_b": "B05-A13",
+          "similarity": 0.8946,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A11",
+          "content_b": "B05-A14",
+          "similarity": 0.8978,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A11",
+          "content_b": "B05-A15",
+          "similarity": 0.9,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A11",
+          "content_b": "B05-A20",
+          "similarity": 0.8517,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A12",
+          "content_b": "B05-A13",
+          "similarity": 0.8849,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A12",
+          "content_b": "B05-A14",
+          "similarity": 0.89,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A12",
+          "content_b": "B05-A15",
+          "similarity": 0.8922,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A13",
+          "content_b": "B05-A14",
+          "similarity": 0.8908,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A13",
+          "content_b": "B05-A15",
+          "similarity": 0.9168,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A14",
+          "content_b": "B05-A15",
+          "similarity": 0.8949,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A14",
+          "content_b": "B05-A18",
+          "similarity": 0.8539,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A15",
+          "content_b": "B05-A18",
+          "similarity": 0.8511,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A15",
+          "content_b": "B05-A20",
+          "similarity": 0.8531,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A16",
+          "content_b": "B05-A17",
+          "similarity": 0.9239,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A16",
+          "content_b": "B05-A18",
+          "similarity": 0.9229,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A16",
+          "content_b": "B05-A19",
+          "similarity": 0.9047,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A16",
+          "content_b": "B05-A20",
+          "similarity": 0.9209,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A17",
+          "content_b": "B05-A18",
+          "similarity": 0.9327,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A17",
+          "content_b": "B05-A19",
+          "similarity": 0.899,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A17",
+          "content_b": "B05-A20",
+          "similarity": 0.9305,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A19",
+          "similarity": 0.9002,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A20",
+          "similarity": 0.9274,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A21",
+          "similarity": 0.8524,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A22",
+          "similarity": 0.8504,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A27",
+          "similarity": 0.8562,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A18",
+          "content_b": "B05-A30",
+          "similarity": 0.8525,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A19",
+          "content_b": "B05-A20",
+          "similarity": 0.9082,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A20",
+          "content_b": "B05-A22",
+          "similarity": 0.8539,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A20",
+          "content_b": "B05-A25",
+          "similarity": 0.8505,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A21",
+          "content_b": "B05-A22",
+          "similarity": 0.9243,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A21",
+          "content_b": "B05-A23",
+          "similarity": 0.9021,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A21",
+          "content_b": "B05-A24",
+          "similarity": 0.9038,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A21",
+          "content_b": "B05-A25",
+          "similarity": 0.924,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A22",
+          "content_b": "B05-A23",
+          "similarity": 0.8975,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A22",
+          "content_b": "B05-A24",
+          "similarity": 0.8988,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A22",
+          "content_b": "B05-A25",
+          "similarity": 0.9224,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A23",
+          "content_b": "B05-A24",
+          "similarity": 0.897,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A23",
+          "content_b": "B05-A25",
+          "similarity": 0.8967,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A24",
+          "content_b": "B05-A25",
+          "similarity": 0.9,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A26",
+          "content_b": "B05-A27",
+          "similarity": 0.9258,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A26",
+          "content_b": "B05-A28",
+          "similarity": 0.8911,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A26",
+          "content_b": "B05-A29",
+          "similarity": 0.8986,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A26",
+          "content_b": "B05-A30",
+          "similarity": 0.9014,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A27",
+          "content_b": "B05-A28",
+          "similarity": 0.8928,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A27",
+          "content_b": "B05-A29",
+          "similarity": 0.8993,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A27",
+          "content_b": "B05-A30",
+          "similarity": 0.9047,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A28",
+          "content_b": "B05-A29",
+          "similarity": 0.8866,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A28",
+          "content_b": "B05-A30",
+          "similarity": 0.9132,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B05-A29",
+          "content_b": "B05-A30",
+          "similarity": 0.8962,
+          "assessment": "HIGH_CONTENT_SIMILARITY",
+          "action": "EDITORIAL_REWRITE_OR_REPOSITION_BEFORE_INDEX"
+        },
+        {
+          "content_a": "B03-A03",
+          "content_b": "B02-A16",
+          "assessment": "FOUNDATION_TO_ADVANCED",
+          "action": "KEEP_AND_CROSS_LINK"
+        },
+        {
+          "content_a": "B03-A13",
+          "content_b": "B02-A15",
+          "assessment": "FOUNDATION_TO_ADVANCED",
+          "action": "KEEP_AND_CROSS_LINK"
+        },
+        {
+          "content_a": "B04-A10",
+          "content_b": "B02-A08",
+          "assessment": "FOUNDATION_TO_ADVANCED",
+          "action": "KEEP_AND_CROSS_LINK"
+        },
+        {
+          "content_a": "B04-A19",
+          "content_b": "B05-A29",
+          "assessment": "CONCEPT_TO_REAL_WORLD_APPLICATION",
+          "action": "KEEP_AND_CROSS_LINK"
+        },
+        {
+          "content_a": "B01-A10",
+          "content_b": "B01-A11",
+          "assessment": "TRUST_TOPIC_CLUSTER",
+          "action": "KEEP_AND_CROSS_LINK"
+        }
+      ]
+    },
+    {
+      "source": "13_QA/content-completeness-audit.json",
+      "expected": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "learnHubs": 1,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "actual": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "learnHubs": 1,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "all_counts_match": true
+    },
+    {
+      "source": "13_QA/duplicate-content-audit.json",
+      "exact_duplicate_id": 0,
+      "duplicate_slug": 0,
+      "high_similarity_pairs": 154,
+      "affected_articles": [
+        "B03-A01",
+        "B03-A02",
+        "B03-A03",
+        "B03-A04",
+        "B03-A05",
+        "B03-A06",
+        "B03-A07",
+        "B03-A08",
+        "B03-A09",
+        "B03-A10",
+        "B03-A12",
+        "B03-A13",
+        "B03-A14",
+        "B03-A15",
+        "B03-A16",
+        "B04-A02",
+        "B04-A03",
+        "B04-A04",
+        "B04-A10",
+        "B04-A11",
+        "B04-A12",
+        "B04-A13",
+        "B04-A14",
+        "B05-A01",
+        "B05-A02",
+        "B05-A03",
+        "B05-A04",
+        "B05-A05",
+        "B05-A06",
+        "B05-A07",
+        "B05-A08",
+        "B05-A09",
+        "B05-A10",
+        "B05-A11",
+        "B05-A12",
+        "B05-A13",
+        "B05-A14",
+        "B05-A15",
+        "B05-A16",
+        "B05-A17",
+        "B05-A18",
+        "B05-A19",
+        "B05-A20",
+        "B05-A21",
+        "B05-A22",
+        "B05-A23",
+        "B05-A24",
+        "B05-A25",
+        "B05-A26",
+        "B05-A27",
+        "B05-A28",
+        "B05-A29",
+        "B05-A30"
+      ],
+      "blocking_for_full_seo_launch": true
+    },
+    {
+      "source": "13_QA/indexation-audit.json",
+      "expectedPotentialPages": 111,
+      "actualApprovedIndexable": 19,
+      "actualIndexable": 19,
+      "blocked": 92,
+      "indexableBreakdown": {
+        "articles": 18,
+        "topicLandings": 0,
+        "learnHub": 1
+      },
+      "blockedReasons": {
+        "articleSourceReview": 86,
+        "highSemanticSimilarityAffected": 53,
+        "topicLandingDependencyReview": 6
+      }
+    },
+    {
+      "source": "13_QA/internal-link-audit.json",
+      "edge_count": 1310,
+      "broken_links": 0,
+      "public_orphan_article": 0,
+      "contextual_internal_linking": "PASS_DATA"
+    },
+    {
+      "source": "13_QA/reference-integrity-audit.json",
+      "master_graph_edges": 1310,
+      "broken_edge_count": 0,
+      "previous_batches_present": [
+        "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+        "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+        "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+        "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+        "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+        "liuyao-content-growth-batch-06-report-explanation-product-integration-v1.0.zip"
+      ],
+      "status": "PASS_DATA"
+    },
+    {
+      "source": "13_QA/zip-audit.json",
+      "zipFileCountBeforeZipAudit": 164,
+      "crc": "PASS",
+      "note": "Final archive is repacked after this audit; final CRC rechecked by generator."
+    },
+    {
+      "type": "ROUTE_ADAPTER",
+      "status": "MAP_TO_EXISTING",
+      "packageExpectation": "/app/liuyao or /learn/liuyao",
+      "repositoryReality": "/ and /content/*",
+      "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+    }
+  ]
+}

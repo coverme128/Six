@@ -1,29 +1,41 @@
 {
-  "total": 158,
+  "total": 603,
   "byContentType": {
-    "KNOWLEDGE": 56,
+    "TUTORIAL": 128,
+    "KNOWLEDGE": 196,
+    "FAQ": 170,
+    "LANDING_PAGE": 6,
+    "LEARNING_PATH": 1,
     "GLOSSARY": 30,
     "TRIGRAM": 8,
     "HEXAGRAM": 64
   },
   "byDomain": {
+    "liuyao": 476,
     "iching": 116,
-    "liuyao": 31,
     "meihua": 11
   },
   "byFunnelStage": {
-    "EDUCATION": 158
+    "AWARENESS": 22,
+    "EDUCATION": 574,
+    "CONVERSION": 7
   },
   "bySearchIntent": {
-    "INFORMATIONAL": 158
+    "INFORMATIONAL": 602,
+    "NAVIGATIONAL": 1
   },
   "byReviewStatus": {
-    "DEMO_ONLY": 158
+    "PUBLICATION_READY": 206,
+    "REVIEW_REQUIRED": 215,
+    "DEMO_ONLY": 182
   },
   "byPrimaryCTA": {
+    "START_LIUYAO": 111,
+    "VIEW_KNOWLEDGE": 310,
+    "READ_TUTORIAL": 24,
     "unknown": 158
   },
-  "isolatedContentCount": 117,
-  "noIncomingLinksCount": 117,
-  "noOutgoingLinksCount": 103
+  "isolatedContentCount": 129,
+  "noIncomingLinksCount": 140,
+  "noOutgoingLinksCount": 145
 }

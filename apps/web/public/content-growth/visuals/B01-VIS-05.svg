@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">事实、规则与 AI 解释的区别</title>
+<desc id="desc">Deterministic Facts、Rule Judgments、AI Explanation</desc>
+<rect width="1200" height="675" fill="#F7F3EA"/>
+<text x="72" y="86" font-size="34" font-weight="700" fill="#24312F" font-family="system-ui, sans-serif">事实、规则与 AI 解释的区别</text>
+<line x1="72" y1="112" x2="1128" y2="112" stroke="#B8B0A2" stroke-width="1"/>
+<rect x="219.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="334.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">Deterministic Facts</text>
+<path d="M 449.0 238 H 477.0" stroke="#8C3F35" stroke-width="3"/>
+<path d="M 469.0 231 L 480.0 238 L 469.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="485.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="600.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">Rule Judgments</text>
+<path d="M 715.0 238 H 743.0" stroke="#8C3F35" stroke-width="3"/>
+<path d="M 735.0 231 L 746.0 238 L 735.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="751.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="866.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">AI Explanation</text>
+<text x="72" y="630" font-size="16" fill="#675F54" font-family="system-ui, sans-serif">Liuyao Content Growth · Batch 01</text>
+</svg>

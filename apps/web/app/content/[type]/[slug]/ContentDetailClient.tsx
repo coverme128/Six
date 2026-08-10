@@ -12,7 +12,29 @@ function readableValue(value: unknown): string {
 
 function bodyEntries(body: unknown) {
   if (!body || typeof body !== "object" || Array.isArray(body)) return [];
-  return Object.entries(body as Record<string, unknown>).filter(([, value]) => readableValue(value).trim());
+  return Object.entries(body as Record<string, unknown>)
+    .filter(([key]) => !["sections", "keyTakeaways", "productIntegration"].includes(key))
+    .filter(([, value]) => readableValue(value).trim());
+}
+
+function bodyRecord(body: unknown): Record<string, unknown> {
+  return body && typeof body === "object" && !Array.isArray(body) ? body as Record<string, unknown> : {};
+}
+
+function contentSections(body: unknown) {
+  const sections = bodyRecord(body).sections;
+  return Array.isArray(sections) ? sections as Array<{ heading?: string; body?: string }> : [];
+}
+
+function keyTakeaways(body: unknown) {
+  const items = bodyRecord(body).keyTakeaways;
+  return Array.isArray(items) ? items.filter((item): item is string => typeof item === "string") : [];
+}
+
+function visualRefs(body: unknown) {
+  const integration = bodyRecord(bodyRecord(body).productIntegration);
+  const refs = integration.visual_asset_refs;
+  return Array.isArray(refs) ? refs.filter((item): item is string => typeof item === "string") : [];
 }
 
 export function ContentDetailClient({ type, slug }: { type: string; slug: string }) {
@@ -67,7 +89,33 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
           <article className="content-article">
             <h2>{item.title}</h2>
             <p>{item.summary || "该条目正在整理正式正文，当前先保留结构化摘要与边界说明。"}</p>
+            {keyTakeaways(item.body).length ? (
+              <div className="fact-strip">
+                {keyTakeaways(item.body).slice(0, 4).map((text) => (
+                  <span key={text}>{text}</span>
+                ))}
+              </div>
+            ) : null}
+            {visualRefs(item.body).length ? (
+              <div className="content-visuals">
+                {visualRefs(item.body).slice(0, 2).map((ref) => (
+                  <img alt={`${item.title} 图示`} key={ref} src={`/content-growth/visuals/${ref}.svg`} />
+                ))}
+              </div>
+            ) : null}
             {typeof item.body === "string" && item.body.trim() ? <p>{item.body}</p> : null}
+            {contentSections(item.body).length ? (
+              <div className="article-sections">
+                {contentSections(item.body).map((section, index) => (
+                  <section key={`${section.heading}-${index}`}>
+                    {section.heading ? <h3>{section.heading}</h3> : null}
+                    {(section.body ?? "").split("\n\n").filter(Boolean).map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </section>
+                ))}
+              </div>
+            ) : null}
             {bodyEntries(item.body).length ? (
               <dl>
                 {bodyEntries(item.body).map(([key, value]) => (

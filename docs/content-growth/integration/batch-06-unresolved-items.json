@@ -1,0 +1,205 @@
+[
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Finding Explanation Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Relationship Meaning Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Question Topic Role Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Assessment Pattern Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Action Guidance Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Yongshen Selection Facts",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Strength Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Dynamic Rule Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Pattern Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Evidence Conflict Resolution Registry",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Timing Explanation Facts",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "ProductResultFacts / DivinationResultFacts",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Guided ViewModel",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Professional ViewModel",
+    "status": "VERIFY_IN_REPOSITORY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "03_PROFESSIONAL-MAPPINGS/unresolved-registry-refs.json",
+    "dependency": "Batch 05 Content Registry",
+    "status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+    "reason": "当前会话未提供可核验的正式仓库资产或稳定 ID；内容层不得自行补造。"
+  },
+  {
+    "source": "11_QA/content-contradiction-audit.json",
+    "checks": {
+      "GUIDED_PROFESSIONAL_FACT_DIRECTION_CONFLICT": 0,
+      "AI_DETERMINISTIC_DIRECTION_CONFLICT": 0,
+      "ACTION_ASSESSMENT_CONFLICT": 0,
+      "TIMING_LIMITATION_CONFLICT": 0,
+      "HEADLINE_SUMMARY_CONFLICT": 0,
+      "SUMMARY_SUPPORT_RISK_CONFLICT_UNRESOLVED": 0
+    },
+    "unresolved_presentation_contradiction": 0,
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/count-audit.json",
+    "expected": {
+      "productExplanationSnippets": 400,
+      "teachingCases": 12,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "newLongFormArticles": 0
+    },
+    "actual": {
+      "productExplanationSnippets": 400,
+      "teachingCases": 12,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "newLongFormArticles": 0
+    },
+    "status": "PASS",
+    "categoryCounts": {
+      "RESULT_OVERVIEW": 30,
+      "YONGSHEN_CORE_FOCUS": 45,
+      "SHI_YING_RELATIONSHIP": 40,
+      "SIX_RELATIONS": 50,
+      "STRENGTH_STATE": 55,
+      "DYNAMICS": 55,
+      "SUPPORT_RISK_CONFLICT": 50,
+      "TIMING": 35,
+      "ACTION_GUIDANCE": 25,
+      "AI_TRUST": 15
+    }
+  },
+  {
+    "source": "11_QA/finding-content-coverage-audit.json",
+    "P0": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+    "P1": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+    "P2": "NOT_CALCULABLE_VERIFY_IN_REPOSITORY",
+    "reason": "完整 Finding Registry 与正式 Priority 未提供，禁止伪造覆盖率。",
+    "coverage_status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "11_QA/guided-professional-consistency-audit.json",
+    "fact_direction_consistent_contract": true,
+    "checked_snippets": 400,
+    "known_direction_conflicts": 0,
+    "repository_e2e_status": "VERIFY_IN_REPOSITORY",
+    "status": "PASS_WITH_ALIGNMENT_PENDING"
+  },
+  {
+    "source": "11_QA/id-audit.json",
+    "total_ids": 448,
+    "unique_ids": 448,
+    "duplicate_ids": [],
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/presentation-dedup-audit.json",
+    "strategy": "FACT_DIRECTION_AND_SIGNAL_KEY",
+    "fact_count_may_exceed_presentation_count": true,
+    "duplicate_presentation_paths_detected": 0,
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/recommendation-audit.json",
+    "random_recommendation": 0,
+    "unrelated_content_recommendation": 0,
+    "missing_recommendation_reason": 0,
+    "scenario_count": 12,
+    "batch05_extension_status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/reference-integrity-audit.json",
+    "broken_internal_reference_count": 0,
+    "errors": [],
+    "batch01to04_external_registry_status": "RESOLVED",
+    "batch05_external_registry_status": "VERIFY_PREVIOUS_BATCH_REGISTRY",
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/snippet-dedup-audit.json",
+    "exact_normalized_duplicates": 0,
+    "high_similarity_pairs_threshold_0_985": [],
+    "high_similarity_pair_count": 0,
+    "signal_key_unique": true,
+    "semantic_duplicate_snippet": 0,
+    "status": "PASS",
+    "guided_headline_unique_count": 400,
+    "guided_short_text_unique_count": 400
+  },
+  {
+    "type": "ROUTE_ADAPTER",
+    "status": "MAP_TO_EXISTING",
+    "packageExpectation": "/app/liuyao or /learn/liuyao",
+    "repositoryReality": "/ and /content/*",
+    "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+  },
+  {
+    "type": "PROFESSIONAL_ALIGNMENT",
+    "status": "REVIEW_REQUIRED",
+    "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+  }
+]

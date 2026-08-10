@@ -1,0 +1,237 @@
+[
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "REGISTRY",
+    "name": "Question Topic Role Registry",
+    "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "REGISTRY",
+    "name": "Yongshen Selection Facts",
+    "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "REGISTRY",
+    "name": "Relationship Meaning Registry",
+    "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "REGISTRY",
+    "name": "Finding Explanation Registry",
+    "reason": "当前会话未提供项目仓库正式 Registry 文件，禁止根据通用知识补造 Stable ID 或 Rule Code。",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-001",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-002",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-003",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-004",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-005",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-006",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-007",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "TOPIC_ROLE_MAPPING",
+    "name": "B03-TOPIC-ROLE-008",
+    "reason": "six_relation_candidate / registry_ref 待正式 Question Topic Role Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-001",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-002",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-003",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-004",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-005",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "YONGSHEN_EXPLANATION",
+    "name": "B03-YONGSHEN-EXPLAIN-006",
+    "reason": "source_fact_ref 待 Yongshen Selection Facts 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-001",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-002",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-003",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-004",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-005",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-006",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-007",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "05_ROLE-YONGSHEN/unresolved-registry-refs.json",
+    "type": "RELATIONSHIP_MAPPING",
+    "name": "B03-REL-CONTENT-008",
+    "reason": "rule_ref / priority 待 Relationship Meaning Registry 核验",
+    "status": "VERIFY_IN_REPOSITORY"
+  },
+  {
+    "source": "11_QA/count-audit.json",
+    "expected": {
+      "articles": 18,
+      "knowledgeCards": 35,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "actual": {
+      "articles": 18,
+      "knowledgeCards": 35,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/id-audit.json",
+    "total_ids": 106,
+    "unique_ids": 106,
+    "duplicates": [],
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/reference-integrity-audit.json",
+    "broken_internal_refs": [],
+    "broken_external_refs": [],
+    "orphan_articles": [],
+    "orphan_knowledge_cards": [],
+    "orphan_faqs": [],
+    "orphan_visuals": [],
+    "status": "PASS"
+  },
+  {
+    "source": "11_QA/slug-audit.json",
+    "count": 18,
+    "unique_count": 18,
+    "status": "PASS"
+  },
+  {
+    "type": "ROUTE_ADAPTER",
+    "status": "MAP_TO_EXISTING",
+    "packageExpectation": "/app/liuyao or /learn/liuyao",
+    "repositoryReality": "/ and /content/*",
+    "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+  },
+  {
+    "type": "PROFESSIONAL_ALIGNMENT",
+    "status": "REVIEW_REQUIRED",
+    "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "source": "06_DECISION-TOPICS/unresolved-professional-alignments.json",
+    "registries": [
+      "Question Topic Role Registry",
+      "Yongshen Selection Facts",
+      "Relationship Meaning Registry",
+      "Strength Registry",
+      "Dynamic Rule Registry",
+      "Pattern Registry",
+      "Evidence Conflict Resolution Registry",
+      "Timing Explanation Facts",
+      "Finding Explanation Registry",
+      "Assessment Pattern Registry",
+      "Action Guidance Registry"
+    ],
+    "status": "VERIFY_IN_REPOSITORY",
+    "rule": "不得根据内容层推断 Engine Code、Role、Yongshen、Timing 或 Action Rule。"
+  },
+  {
+    "source": "13_QA/count-audit.json",
+    "ARTICLE_COUNT": 30,
+    "FAQ_COUNT": 30,
+    "TEACHING_CASE_COUNT": 12,
+    "VISUAL_ASSET_COUNT": 12,
+    "SHORT_VIDEO_COUNT": 12,
+    "TOPIC_LANDING_COUNT": 6,
+    "expected": {
+      "ARTICLE_COUNT": 30,
+      "FAQ_COUNT": 30,
+      "TEACHING_CASE_COUNT": 12,
+      "VISUAL_ASSET_COUNT": 12,
+      "SHORT_VIDEO_COUNT": 12,
+      "TOPIC_LANDING_COUNT": 6
+    },
+    "status": "PASS"
+  },
+  {
+    "source": "13_QA/id-audit.json",
+    "id_count": 102,
+    "unique_count": 102,
+    "duplicates": [],
+    "status": "PASS"
+  },
+  {
+    "source": "13_QA/reference-integrity-audit.json",
+    "broken_references": [],
+    "broken_count": 0,
+    "previous_batch_registries": {
+      "BATCH_01": "RESOLVED",
+      "BATCH_02": "RESOLVED",
+      "BATCH_03": "RESOLVED",
+      "BATCH_04": "RESOLVED"
+    },
+    "status": "PASS"
+  },
+  {
+    "source": "13_QA/slug-audit.json",
+    "article_slug_count": 30,
+    "unique_article_slugs": 30,
+    "seo_title_count": 36,
+    "unique_seo_titles": 36,
+    "status": "PASS"
+  },
+  {
+    "type": "ROUTE_ADAPTER",
+    "status": "MAP_TO_EXISTING",
+    "packageExpectation": "/app/liuyao or /learn/liuyao",
+    "repositoryReality": "/ and /content/*",
+    "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+  },
+  {
+    "type": "PROFESSIONAL_ALIGNMENT",
+    "status": "REVIEW_REQUIRED",
+    "reason": "Package contains VERIFY_IN_REPOSITORY professional mappings; imported as content/presentation data only."
+  }
+]

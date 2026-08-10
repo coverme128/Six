@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">一个问题与多个问题的区别</title>
+<desc id="desc">单一问题、清晰主线、可核验证据、混合多个问题、角色冲突、结论混乱</desc>
+<rect width="1200" height="675" fill="#F7F3EA"/>
+<text x="72" y="86" font-size="34" font-weight="700" fill="#24312F" font-family="system-ui, sans-serif">一个问题与多个问题的区别</text>
+<line x1="72" y1="112" x2="1128" y2="112" stroke="#B8B0A2" stroke-width="1"/>
+<text x="80" y="175" font-size="20" fill="#6A4B3E" font-family="system-ui, sans-serif">推荐路径</text>
+<rect x="90" y="210" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="215" y="265" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">单一问题</text>
+<path d="M 340 256 H 390" stroke="#8C3F35" stroke-width="3" fill="none"/>
+<path d="M 384 249 L 395 256 L 384 263" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="430" y="210" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="555" y="265" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">清晰主线</text>
+<path d="M 680 256 H 730" stroke="#8C3F35" stroke-width="3" fill="none"/>
+<path d="M 724 249 L 735 256 L 724 263" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="770" y="210" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="895" y="265" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">可核验证据</text>
+<text x="80" y="395" font-size="20" fill="#6A4B3E" font-family="system-ui, sans-serif">混合路径</text>
+<rect x="90" y="430" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="215" y="485" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">混合多个问题</text>
+<path d="M 340 476 H 390" stroke="#8C3F35" stroke-width="3" fill="none"/>
+<path d="M 384 469 L 395 476 L 384 483" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="430" y="430" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="555" y="485" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">角色冲突</text>
+<path d="M 680 476 H 730" stroke="#8C3F35" stroke-width="3" fill="none"/>
+<path d="M 724 469 L 735 476 L 724 483" fill="none" stroke="#8C3F35" stroke-width="3"/>
+<rect x="770" y="430" rx="14" width="250" height="92" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
+<text x="895" y="485" text-anchor="middle" font-size="22" fill="#24312F" font-family="system-ui, sans-serif">结论混乱</text>
+<text x="72" y="630" font-size="16" fill="#675F54" font-family="system-ui, sans-serif">Liuyao Content Growth · Batch 01</text>
+</svg>

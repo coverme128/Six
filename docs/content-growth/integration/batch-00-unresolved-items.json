@@ -1,0 +1,324 @@
+[
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_01",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_01_DATA_READY",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_02",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_02_DATA_READY",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_03",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_03_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_04",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_04_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_05",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_05_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_06",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_06_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/batch-00-compatibility-audit.json",
+    "batch": "BATCH_07",
+    "packageExists": true,
+    "stableIdPolicy": "PRESERVE",
+    "professionalRuleModificationDetected": false,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+    "batch00Adoption": "ADAPTER_COMPATIBLE",
+    "notes": "Full repository alignment remains governed by each batch QA and Batch 07 launch audit."
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_01",
+    "zip": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "zipFileCount": 115,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_01_DATA_READY",
+    "scope": "FOUNDATIONS_TRUST_USER_EDUCATION",
+    "counts": {
+      "articles": 18,
+      "knowledgeCards": 30,
+      "faqs": 30,
+      "visualAssets": 8,
+      "shortVideos": 6
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_02",
+    "zip": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "zipFileCount": 134,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_02_DATA_READY",
+    "scope": "FOUNDATIONS_CASTING_HEXAGRAM_STRUCTURE",
+    "counts": {
+      "articles": 18,
+      "knowledgeCards": 40,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_03",
+    "zip": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "zipFileCount": 145,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_03_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "scope": "YONGSHEN_ROLES_RELATIONSHIPS",
+    "counts": {
+      "articles": 18,
+      "knowledgeCards": 35,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_04",
+    "zip": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "zipFileCount": 170,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_04_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "scope": "STRENGTH_DYNAMICS_PATTERNS_TIMING_FOUNDATIONS",
+    "counts": {
+      "articles": 20,
+      "knowledgeCards": 35,
+      "faqs": 40,
+      "visualAssets": 12,
+      "shortVideos": 10
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_05",
+    "zip": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "zipFileCount": 224,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_05_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "scope": "REAL_WORLD_DECISION_TOPICS",
+    "counts": {
+      "articles": 30,
+      "faqs": 30,
+      "teachingCases": 12,
+      "visualAssets": 12,
+      "shortVideos": 12,
+      "topicLandings": 6
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_06",
+    "zip": "liuyao-content-growth-batch-06-report-explanation-product-integration-v1.0.zip",
+    "zipFileCount": 124,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_06_DATA_READY_WITH_ALIGNMENT_PENDING",
+    "scope": "REPORT_EXPLANATION_PRODUCT_INTEGRATION",
+    "counts": {
+      "productExplanationSnippets": 400,
+      "teachingCases": 12,
+      "reportUxFixtures": 24,
+      "recommendationScenarios": 12,
+      "newLongFormArticles": 0
+    },
+    "overallStatus": null
+  },
+  {
+    "source": "11_AUDIT/existing-batch-inventory.json",
+    "batch": "BATCH_07",
+    "zip": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "zipFileCount": 220,
+    "manifestStatus": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+    "scope": "VISUAL_SEO_DISTRIBUTION_LAUNCH_CLOSURE",
+    "counts": {
+      "longFormArticles": 0,
+      "knowledgeCards": 0,
+      "faqs": 0,
+      "visualAssets": 16,
+      "shortVideos": 6,
+      "socialAssets": 72,
+      "articleSummaryCards": 24,
+      "collectionCopies": 12,
+      "learnHubs": 1
+    },
+    "overallStatus": "LIUYAO_CONTENT_GROWTH_LAUNCH_BLOCKED"
+  },
+  {
+    "source": "11_AUDIT/package-validation.json",
+    "jsonFileCount": 69,
+    "jsonParseErrors": [],
+    "schemaFileCount": 17,
+    "existingBatchZipCount": 7,
+    "stableIdsModified": false,
+    "professionalRulesModified": false,
+    "canonicalIdsInvented": false,
+    "newContentAssetsCreated": 0,
+    "status": "PASS"
+  },
+  {
+    "source": "11_AUDIT/qa-gates.json",
+    "CONTENT_CONTRACT": [
+      "DOMAIN_LIUYAO",
+      "SCHEMA_VALID",
+      "ID_UNIQUE",
+      "REFERENCE_VALID"
+    ],
+    "PROFESSIONAL_INTEGRITY": [
+      "NO_RULE_INVENTION",
+      "NO_CANONICAL_ID_INVENTION",
+      "NO_REGISTRY_OVERRIDE"
+    ],
+    "PRESENTATION": [
+      "FACT_DIRECTION_CONSISTENT",
+      "GUIDED_PROFESSIONAL_DEPTH_ONLY",
+      "NO_INTERNAL_LEAKAGE"
+    ],
+    "SAFETY": [
+      "NO_RESULT_GUARANTEE",
+      "NO_INVESTMENT_ADVICE",
+      "NO_MEDICAL_DIAGNOSIS",
+      "NO_LEGAL_DETERMINATION",
+      "NO_MIND_READING",
+      "NO_TIMING_GUARANTEE"
+    ],
+    "SEO": [
+      "REVIEW_REQUIRED_NOINDEX",
+      "CANONICAL_VALID",
+      "SITEMAP_ONLY_INDEX_APPROVED",
+      "NO_FAKE_STRUCTURED_DATA"
+    ],
+    "UX": [
+      "MOBILE_PRIORITY",
+      "EMPTY_ERROR_STATES",
+      "ONE_PRIMARY_CTA",
+      "CORE_REPORT_NOT_BLOCKED_BY_KNOWLEDGE"
+    ],
+    "VISUAL": [
+      "EDITABLE_SVG",
+      "ALT_TEXT",
+      "MOBILE_ADAPTATION",
+      "NO_EXTERNAL_FONT_DEPENDENCY"
+    ],
+    "ANALYTICS": [
+      "NO_SENSITIVE_FREE_TEXT",
+      "FUNNEL_DEFINED"
+    ],
+    "RELEASE": [
+      "DATA_READY",
+      "INTEGRATION_READY",
+      "STAGING_READY",
+      "PRODUCTION_READY_SEPARATED"
+    ]
+  },
+  {
+    "source": "11_AUDIT/release-status-model.json",
+    "levels": [
+      {
+        "code": "DATA_READY",
+        "meaning": "package data/contracts complete"
+      },
+      {
+        "code": "EXPERIENCE_READY",
+        "meaning": "UX contracts and assets ready; may still require staging verification"
+      },
+      {
+        "code": "SEO_READY",
+        "meaning": "indexation/canonical/sitemap pass for public pages"
+      },
+      {
+        "code": "VISUAL_READY",
+        "meaning": "visual assets complete and accessible"
+      },
+      {
+        "code": "GROWTH_READY",
+        "meaning": "distribution/analytics/funnel ready"
+      },
+      {
+        "code": "INTEGRATION_READY",
+        "meaning": "repository IDs/routes/mappings resolved"
+      },
+      {
+        "code": "STAGING_READY",
+        "meaning": "real staging E2E passed"
+      },
+      {
+        "code": "PRODUCTION_READY",
+        "meaning": "public routes/SEO/analytics/mobile verified"
+      }
+    ],
+    "rule": "Never collapse all levels into DONE."
+  },
+  {
+    "source": "11_AUDIT/retroactive-gap-register.json",
+    "knownExistingDebt": [
+      {
+        "code": "EDITORIAL_SEMANTIC_SIMILARITY",
+        "source": "BATCH_07_MASTER_AUDIT",
+        "status": "OPEN",
+        "resolution": "Keep stable IDs; differentiate, cross-link or noindex as defined by Batch 07. Do not auto-delete."
+      },
+      {
+        "code": "PROFESSIONAL_ALIGNMENT_PENDING",
+        "source": "BATCH_03_TO_06",
+        "status": "OPEN",
+        "resolution": "Resolve formal registry IDs in repository before treating content mappings as professional rule references."
+      },
+      {
+        "code": "REVIEW_REQUIRED_PUBLICATION",
+        "source": "MULTIPLE_BATCHES",
+        "status": "OPEN",
+        "resolution": "REVIEW_REQUIRED remains NOT_PUBLIC + NOINDEX until explicit human/domain approval."
+      },
+      {
+        "code": "STAGING_VERIFICATION",
+        "source": "BATCH_07",
+        "status": "OPEN",
+        "resolution": "Run real routes, sitemap, mobile E2E, accessibility, analytics and performance checks."
+      }
+    ],
+    "batch00DoesNotCloseTheseAutomatically": true
+  }
+]

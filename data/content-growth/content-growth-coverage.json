@@ -1,0 +1,18 @@
+{
+  "contentEntries": 445,
+  "byType": {
+    "TUTORIAL": 128,
+    "KNOWLEDGE": 140,
+    "FAQ": 170,
+    "LANDING_PAGE": 6,
+    "LEARNING_PATH": 1
+  },
+  "byStatus": {
+    "PUBLICATION_READY": 206,
+    "REVIEW_REQUIRED": 215,
+    "DEMO_ONLY": 24
+  },
+  "visuals": 68,
+  "mappings": 79,
+  "snippets": 400
+}

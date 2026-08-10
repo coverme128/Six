@@ -1,0 +1,281 @@
+{
+  "generatedAt": "2026-08-10T00:00:00.000Z",
+  "items": [
+    {
+      "packageName": "liuyao-content-growth-batch-00-foundation-contract",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_00",
+      "scope": "FOUNDATION_CONTRACT_SCHEMA_IA_UX_VISUAL_BASELINE",
+      "role": "RETROACTIVE_SOURCE_OF_TRUTH_FOR_CONTENT_LAYER",
+      "newContentAssets": {
+        "longFormArticles": 0,
+        "knowledgeCards": 0,
+        "faqs": 0,
+        "teachingCases": 0,
+        "visualAssets": 0,
+        "shortVideos": 0,
+        "professionalRules": 0
+      },
+      "contractAreas": [
+        "PRODUCT_POSITIONING",
+        "DOMAIN_BOUNDARY",
+        "TRUTH_HIERARCHY",
+        "SCHEMA",
+        "ID_REFERENCE",
+        "INFORMATION_ARCHITECTURE",
+        "PRESENTATION_UX",
+        "VISUAL_SYSTEM",
+        "SEO_SEARCH",
+        "AI_GROUNDING",
+        "PUBLICATION_GOVERNANCE",
+        "BATCH_ORCHESTRATION",
+        "QA_RELEASE",
+        "CODEX_INTEGRATION"
+      ],
+      "appliesTo": [
+        "BATCH_01",
+        "BATCH_02",
+        "BATCH_03",
+        "BATCH_04",
+        "BATCH_05",
+        "BATCH_06",
+        "BATCH_07"
+      ],
+      "retroactiveAdoption": true,
+      "stableIdsModified": false,
+      "professionalRulesModified": false,
+      "canonicalIdsInvented": false,
+      "meihuaIncluded": false,
+      "status": "LIUYAO_CONTENT_BATCH_00_DATA_READY"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-01-foundations-trust",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_01",
+      "scope": "FOUNDATIONS_TRUST_USER_EDUCATION",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 30,
+        "faqs": 30,
+        "visualAssets": 8,
+        "shortVideos": 6
+      },
+      "meihuaIncluded": false,
+      "professionalRulesModified": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_01_DATA_READY",
+      "generatedAt": "2026-08-06T20:49:00+08:00"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-02-foundations-casting-structure",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_02",
+      "scope": "FOUNDATIONS_CASTING_HEXAGRAM_STRUCTURE",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 40,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "dependsOn": [
+        "LIUYAO_CONTENT_BATCH_01"
+      ],
+      "meihuaIncluded": false,
+      "yongshenDeepRulesIncluded": false,
+      "strengthRulesIncluded": false,
+      "timingRulesIncluded": false,
+      "professionalRulesModified": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_02_DATA_READY"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-03-yongshen-roles-relationships",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_03",
+      "scope": "YONGSHEN_ROLES_RELATIONSHIPS",
+      "counts": {
+        "articles": 18,
+        "knowledgeCards": 35,
+        "faqs": 35,
+        "visualAssets": 10,
+        "shortVideos": 8
+      },
+      "dependsOn": [
+        "LIUYAO_CONTENT_BATCH_01",
+        "LIUYAO_CONTENT_BATCH_02"
+      ],
+      "alignsWith": [
+        "Question Topic Role Registry",
+        "Yongshen Selection Facts",
+        "Relationship Meaning Registry",
+        "Finding Explanation Registry"
+      ],
+      "meihuaIncluded": false,
+      "strengthDeepRulesIncluded": false,
+      "dynamicDeepRulesIncluded": false,
+      "timingRulesIncluded": false,
+      "professionalRulesModified": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_03_DATA_READY_WITH_ALIGNMENT_PENDING"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_04",
+      "scope": "STRENGTH_DYNAMICS_PATTERNS_TIMING_FOUNDATIONS",
+      "counts": {
+        "articles": 20,
+        "knowledgeCards": 35,
+        "faqs": 40,
+        "visualAssets": 12,
+        "shortVideos": 10
+      },
+      "dependsOn": [
+        "LIUYAO_CONTENT_BATCH_01",
+        "LIUYAO_CONTENT_BATCH_02",
+        "LIUYAO_CONTENT_BATCH_03"
+      ],
+      "alignsWith": [
+        "Strength Registry",
+        "Dynamic Rule Registry",
+        "Pattern Registry",
+        "Evidence Conflict Resolution Registry",
+        "Timing Explanation Facts",
+        "Finding Explanation Registry"
+      ],
+      "meihuaIncluded": false,
+      "decisionTopicArticlesIncluded": false,
+      "professionalRulesModified": false,
+      "timingAlgorithmsModified": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_04_DATA_READY_WITH_ALIGNMENT_PENDING"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-05-real-world-decision-topics",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_05",
+      "scope": "REAL_WORLD_DECISION_TOPICS",
+      "counts": {
+        "articles": 30,
+        "faqs": 30,
+        "teachingCases": 12,
+        "visualAssets": 12,
+        "shortVideos": 12,
+        "topicLandings": 6
+      },
+      "dependsOn": [
+        "LIUYAO_CONTENT_BATCH_01",
+        "LIUYAO_CONTENT_BATCH_02",
+        "LIUYAO_CONTENT_BATCH_03",
+        "LIUYAO_CONTENT_BATCH_04"
+      ],
+      "professionalRulesModified": false,
+      "newYongshenRulesCreated": false,
+      "newTimingRulesCreated": false,
+      "meihuaIncluded": false,
+      "realUserCasesIncluded": false,
+      "investmentAdviceIncluded": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_05_DATA_READY_WITH_ALIGNMENT_PENDING"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-06-report-explanation-product-integration",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_06",
+      "scope": "REPORT_EXPLANATION_PRODUCT_INTEGRATION",
+      "counts": {
+        "productExplanationSnippets": 400,
+        "teachingCases": 12,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "newLongFormArticles": 0
+      },
+      "dependsOn": [
+        "LIUYAO_CONTENT_BATCH_01",
+        "LIUYAO_CONTENT_BATCH_02",
+        "LIUYAO_CONTENT_BATCH_03",
+        "LIUYAO_CONTENT_BATCH_04",
+        "LIUYAO_CONTENT_BATCH_05"
+      ],
+      "previousBatchStatus": {
+        "BATCH_01": "RESOLVED",
+        "BATCH_02": "RESOLVED",
+        "BATCH_03": "RESOLVED",
+        "BATCH_04": "RESOLVED",
+        "BATCH_05": "VERIFY_PREVIOUS_BATCH_REGISTRY"
+      },
+      "professionalRulesModified": false,
+      "newRulesCreated": false,
+      "newTimingAlgorithmsCreated": false,
+      "newYongshenRulesCreated": false,
+      "meihuaIncluded": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_06_DATA_READY_WITH_ALIGNMENT_PENDING"
+    },
+    {
+      "packageName": "liuyao-content-growth-batch-07-launch-closure",
+      "version": "1.0",
+      "domain": "LIUYAO",
+      "batch": "BATCH_07",
+      "scope": "VISUAL_SEO_DISTRIBUTION_LAUNCH_CLOSURE",
+      "newAssets": {
+        "longFormArticles": 0,
+        "knowledgeCards": 0,
+        "faqs": 0,
+        "visualAssets": 16,
+        "shortVideos": 6,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12,
+        "learnHubs": 1
+      },
+      "expectedFinalTotals": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "learnHubs": 1,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "actualFinalTotals": {
+        "articles": 104,
+        "knowledgeCards": 140,
+        "faqs": 170,
+        "teachingCases": 24,
+        "productExplanationSnippets": 400,
+        "reportUxFixtures": 24,
+        "recommendationScenarios": 12,
+        "topicLandings": 6,
+        "visualAssets": 68,
+        "shortVideos": 50,
+        "learnHubs": 1,
+        "socialAssets": 72,
+        "articleSummaryCards": 24,
+        "collectionCopies": 12
+      },
+      "professionalRulesModified": false,
+      "newProfessionalRulesCreated": false,
+      "newTimingRulesCreated": false,
+      "meihuaIncluded": false,
+      "canonicalIdsInvented": false,
+      "status": "LIUYAO_CONTENT_BATCH_07_DATA_READY",
+      "overallContentGrowthStatus": "LIUYAO_CONTENT_GROWTH_LAUNCH_BLOCKED"
+    }
+  ]
+}

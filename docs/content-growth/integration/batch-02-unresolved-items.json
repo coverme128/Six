@@ -1,0 +1,145 @@
+[
+  {
+    "source": "10_QA/article-length-audit.json",
+    "target": "2000–3200 Chinese characters",
+    "items": [
+      {
+        "content_id": "B02-A01",
+        "chinese_characters": 2111
+      },
+      {
+        "content_id": "B02-A02",
+        "chinese_characters": 2085
+      },
+      {
+        "content_id": "B02-A03",
+        "chinese_characters": 2090
+      },
+      {
+        "content_id": "B02-A04",
+        "chinese_characters": 2005
+      },
+      {
+        "content_id": "B02-A05",
+        "chinese_characters": 2105
+      },
+      {
+        "content_id": "B02-A06",
+        "chinese_characters": 2000
+      },
+      {
+        "content_id": "B02-A07",
+        "chinese_characters": 2083
+      },
+      {
+        "content_id": "B02-A08",
+        "chinese_characters": 2117
+      },
+      {
+        "content_id": "B02-A09",
+        "chinese_characters": 2105
+      },
+      {
+        "content_id": "B02-A10",
+        "chinese_characters": 2111
+      },
+      {
+        "content_id": "B02-A11",
+        "chinese_characters": 2128
+      },
+      {
+        "content_id": "B02-A12",
+        "chinese_characters": 2100
+      },
+      {
+        "content_id": "B02-A13",
+        "chinese_characters": 2130
+      },
+      {
+        "content_id": "B02-A14",
+        "chinese_characters": 2107
+      },
+      {
+        "content_id": "B02-A15",
+        "chinese_characters": 2120
+      },
+      {
+        "content_id": "B02-A16",
+        "chinese_characters": 2016
+      },
+      {
+        "content_id": "B02-A17",
+        "chinese_characters": 2108
+      },
+      {
+        "content_id": "B02-A18",
+        "chinese_characters": 2009
+      }
+    ],
+    "pass": true
+  },
+  {
+    "source": "10_QA/count-audit.json",
+    "expected": {
+      "articles": 18,
+      "knowledgeCards": 40,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "actual": {
+      "articles": 18,
+      "knowledgeCards": 40,
+      "faqs": 35,
+      "visualAssets": 10,
+      "shortVideos": 8
+    },
+    "pass": true
+  },
+  {
+    "source": "10_QA/id-audit.json",
+    "total_ids": 111,
+    "unique_ids": 111,
+    "duplicates": [],
+    "pass": true
+  },
+  {
+    "source": "10_QA/reference-integrity-audit.json",
+    "broken_references": [],
+    "orphans": {
+      "articles": [],
+      "knowledge_cards": [],
+      "faqs": [],
+      "visual_assets": [],
+      "short_videos": []
+    },
+    "pass": true
+  },
+  {
+    "source": "10_QA/registry-length-audit.json",
+    "knowledge_cards": {
+      "short_definition_bad": [],
+      "professional_definition_bad": [],
+      "practical_meaning_bad": []
+    },
+    "faqs": {
+      "short_answer_bad": [],
+      "full_answer_bad": []
+    },
+    "pass": true
+  },
+  {
+    "source": "10_QA/slug-audit.json",
+    "total": 18,
+    "unique": 18,
+    "duplicates": [],
+    "pass": true
+  },
+  {
+    "type": "ROUTE_ADAPTER",
+    "status": "MAP_TO_EXISTING",
+    "packageExpectation": "/app/liuyao or /learn/liuyao",
+    "repositoryReality": "/ and /content/*",
+    "action": "Mapped content CTAs and canonical paths to existing routes without changing product router."
+  }
+]

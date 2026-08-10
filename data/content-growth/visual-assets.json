@@ -1,0 +1,413 @@
+{
+  "generatedAt": "2026-08-10T00:00:00.000Z",
+  "items": [
+    {
+      "visualAssetId": "B01-VIS-01",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-02",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-03",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-04",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-05",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-06",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-07",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B01-VIS-08",
+      "sourceBatch": "B01",
+      "publicPath": "/content-growth/visuals/B01-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-01-foundations-trust-v1.0/05_VISUAL-ASSETS/svg/B01-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-01",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-02",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-03",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-04",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-05",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-06",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-07",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-08",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-09",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-09.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-09.svg"
+    },
+    {
+      "visualAssetId": "B02-VIS-10",
+      "sourceBatch": "B02",
+      "publicPath": "/content-growth/visuals/B02-VIS-10.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-02-foundations-casting-structure-v1.0/05_VISUAL-ASSETS/svg/B02-VIS-10.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-01",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-02",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-03",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-04",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-05",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-06",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-07",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-08",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-09",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-09.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-09.svg"
+    },
+    {
+      "visualAssetId": "B03-VIS-10",
+      "sourceBatch": "B03",
+      "publicPath": "/content-growth/visuals/B03-VIS-10.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0/06_VISUAL-ASSETS/svg/B03-VIS-10.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-01",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-02",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-03",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-04",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-05",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-06",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-07",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-08",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-09",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-09.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-09.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-10",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-10.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-10.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-11",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-11.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-11.svg"
+    },
+    {
+      "visualAssetId": "B04-VIS-12",
+      "sourceBatch": "B04",
+      "publicPath": "/content-growth/visuals/B04-VIS-12.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0/06_VISUAL-ASSETS/svg/B04-VIS-12.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-01",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-02",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-03",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-04",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-05",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-06",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-07",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-08",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-09",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-09.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-09.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-10",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-10.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-10.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-11",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-11.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-11.svg"
+    },
+    {
+      "visualAssetId": "B05-VIS-12",
+      "sourceBatch": "B05",
+      "publicPath": "/content-growth/visuals/B05-VIS-12.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-05-real-world-decision-topics-v1.0/07_VISUAL-ASSETS/svg/B05-VIS-12.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-01",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-01.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-01.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-02",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-02.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-02.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-03",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-03.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-03.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-04",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-04.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-04.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-05",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-05.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-05.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-06",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-06.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-06.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-07",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-07.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-07.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-08",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-08.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-08.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-09",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-09.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-09.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-10",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-10.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-10.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-11",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-11.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-11.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-12",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-12.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-12.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-13",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-13.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-13.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-14",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-14.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-14.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-15",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-15.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-15.svg"
+    },
+    {
+      "visualAssetId": "B07-VIS-16",
+      "sourceBatch": "B07",
+      "publicPath": "/content-growth/visuals/B07-VIS-16.svg",
+      "sourceFile": "/private/tmp/six-content-batch/liuyao-content-growth-batch-07-launch-closure-v1.0/07_VISUAL-SYSTEM/svg/B07-VIS-16.svg"
+    }
+  ]
+}
