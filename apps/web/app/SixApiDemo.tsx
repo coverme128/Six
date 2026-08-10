@@ -16,16 +16,126 @@ type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
 type MeihuaMethod = "MEIHUA_TWO_NUMBER_V1" | "MEIHUA_THREE_NUMBER_V1" | "MEIHUA_TIME_LUNAR_BRANCH_V1";
 
 const scenarios = [
-  { id: "career:job_search", topic: "career", subtype: "job_search", label: "事业 / 工作", hint: "机会、岗位、面试、升迁" },
-  { id: "wealth:income", topic: "wealth", subtype: "income", label: "求财 / 收入", hint: "收入、回款、现金流" },
-  { id: "business:partnership", topic: "business", subtype: "partnership", label: "合作 / 项目", hint: "合作方、合同、项目推进" },
-  { id: "relationship:relationship_stability", topic: "relationship", subtype: "relationship_stability", label: "感情 / 关系", hint: "关系状态、对方态度" },
-  { id: "study:exam", topic: "study", subtype: "exam", label: "学业 / 考试", hint: "考试、申请、证书" },
-  { id: "property:buy_house", topic: "property", subtype: "buy_house", label: "房产 / 居所", hint: "买卖、租住、搬迁" },
-  { id: "legal:dispute", topic: "legal", subtype: "dispute", label: "纠纷 / 法律", hint: "争议、程序、协商" },
-  { id: "health:self_health", topic: "health", subtype: "self_health", label: "健康 / 恢复", hint: "仅作趋势参考" },
-  { id: "goods:lost_item", topic: "goods", subtype: "lost_item", label: "寻物 / 物品", hint: "遗失、购买、交付" },
-  { id: "travel:trip", topic: "travel", subtype: "trip", label: "出行 / 行程", hint: "旅行、签证、迁移" }
+  {
+    id: "career:job_search",
+    group: "常用",
+    topic: "career",
+    subtype: "job_search",
+    label: "事业 / 工作",
+    hint: "机会、岗位、面试、升迁",
+    placeholder: "例如：这次面试机会接下来最需要注意什么？",
+    focus: ["机会质量", "阻碍来源", "推进节奏"],
+    reportPreview: ["结论方向", "支持与压力", "下一步行动"],
+    boundary: "不替代职业决策，重点帮助你看清当前机会与阻碍。"
+  },
+  {
+    id: "wealth:income",
+    group: "常用",
+    topic: "wealth",
+    subtype: "income",
+    label: "求财 / 收入",
+    hint: "收入、回款、现金流",
+    placeholder: "例如：这笔回款近期推进最需要注意什么？",
+    focus: ["资金流动", "回收阻力", "风险边界"],
+    reportPreview: ["财务支持", "延迟风险", "保守行动"],
+    boundary: "不提供投资承诺或收益判断，只呈现趋势与风险。"
+  },
+  {
+    id: "business:partnership",
+    group: "常用",
+    topic: "business",
+    subtype: "partnership",
+    label: "合作 / 项目",
+    hint: "合作方、合同、项目推进",
+    placeholder: "例如：这个合作方是否值得继续深入推进？",
+    focus: ["对方状态", "合作阻力", "项目稳定性"],
+    reportPreview: ["推进条件", "冲突点", "协作建议"],
+    boundary: "不替代合同审查，重点辅助判断合作节奏和风险。"
+  },
+  {
+    id: "relationship:relationship_stability",
+    group: "常用",
+    topic: "relationship",
+    subtype: "relationship_stability",
+    label: "感情 / 关系",
+    hint: "关系状态、对方态度",
+    placeholder: "例如：这段关系接下来是否适合继续推进？",
+    focus: ["双方状态", "互动阻力", "关系变化"],
+    reportPreview: ["关系方向", "支持与矛盾", "沟通建议"],
+    boundary: "不替你决定关系，只帮助拆解当下互动结构。"
+  },
+  {
+    id: "study:exam",
+    group: "常用",
+    topic: "study",
+    subtype: "exam",
+    label: "学业 / 考试",
+    hint: "考试、申请、证书",
+    placeholder: "例如：这次考试准备接下来最应该补哪里？",
+    focus: ["准备状态", "关键阻碍", "结果不确定性"],
+    reportPreview: ["支持条件", "薄弱环节", "复习重点"],
+    boundary: "不承诺录取或分数，重点帮助你调整准备策略。"
+  },
+  {
+    id: "property:buy_house",
+    group: "生活",
+    topic: "property",
+    subtype: "buy_house",
+    label: "房产 / 居所",
+    hint: "买卖、租住、搬迁",
+    placeholder: "例如：这次搬迁计划是否需要调整？",
+    focus: ["居住稳定", "手续阻碍", "时间安排"],
+    reportPreview: ["推进条件", "风险节点", "调整建议"],
+    boundary: "不替代法律或交易审查，重点看计划推进。"
+  },
+  {
+    id: "legal:dispute",
+    group: "谨慎",
+    topic: "legal",
+    subtype: "dispute",
+    label: "纠纷 / 法律",
+    hint: "争议、程序、协商",
+    placeholder: "例如：这次争议接下来更适合协商还是等待？",
+    focus: ["协商空间", "程序阻力", "对方态度"],
+    reportPreview: ["推进趋势", "冲突风险", "保守边界"],
+    boundary: "不提供法律建议或诉讼判断，必要时应咨询律师。"
+  },
+  {
+    id: "health:self_health",
+    group: "谨慎",
+    topic: "health",
+    subtype: "self_health",
+    label: "健康 / 恢复",
+    hint: "仅作趋势参考",
+    placeholder: "例如：近期恢复状态有哪些需要留意的地方？",
+    focus: ["恢复趋势", "注意事项", "外部支持"],
+    reportPreview: ["状态提示", "风险提醒", "行动边界"],
+    boundary: "不替代医生、诊断或治疗安排；不适请及时就医。"
+  },
+  {
+    id: "goods:lost_item",
+    group: "生活",
+    topic: "goods",
+    subtype: "lost_item",
+    label: "寻物 / 物品",
+    hint: "遗失、购买、交付",
+    placeholder: "例如：这个遗失物品还有哪些寻找方向？",
+    focus: ["寻找方向", "阻碍位置", "时间线索"],
+    reportPreview: ["找回可能", "行动方向", "时间提示"],
+    boundary: "只提供趋势与行动线索，不承诺一定找回。"
+  },
+  {
+    id: "travel:trip",
+    group: "生活",
+    topic: "travel",
+    subtype: "trip",
+    label: "出行 / 行程",
+    hint: "旅行、签证、迁移",
+    placeholder: "例如：这次行程是否需要提前调整计划？",
+    focus: ["行程稳定", "延误阻碍", "安全边界"],
+    reportPreview: ["出行条件", "风险节点", "调整建议"],
+    boundary: "不替代安全、签证或交通规则，重点辅助计划判断。"
+  }
 ];
 
 function scenarioById(id: string) {
@@ -62,7 +172,7 @@ export function SixApiDemo() {
   const [mode, setMode] = useState<DivinationMode>("liuyao");
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState(scenarios[0]!.id);
-  const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("coins");
+  const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
   const [coinLines, setCoinLines] = useState<number[][]>([]);
   const [digitalCoinsStarted, setDigitalCoinsStarted] = useState(false);
   const [digitalCoinLines, setDigitalCoinLines] = useState<string[][]>(
@@ -83,6 +193,10 @@ export function SixApiDemo() {
 
   const guided = report?.experience?.guidedViewModel;
   const scenario = scenarioById(scenarioId);
+  const scenarioGroups = useMemo(
+    () => ["常用", "生活", "谨慎"].map((group) => ({ group, items: scenarios.filter((item) => item.group === group) })),
+    []
+  );
   const supports = useMemo(() => guided?.mainSupports?.slice(0, 3) ?? [], [guided]);
   const risks = useMemo(() => guided?.mainRisks?.slice(0, 3) ?? [], [guided]);
   const castValues = useMemo(
@@ -105,7 +219,7 @@ export function SixApiDemo() {
   const canGenerate = Boolean(question.trim()) && (mode === "liuyao" ? liuyaoReady : meihuaReady);
   const inputReady = mode === "liuyao" ? liuyaoReady : meihuaReady;
   const steps = [
-    { label: "选择术法", done: true },
+    { label: "选择场景", done: true },
     { label: "填写问题", done: Boolean(question.trim()) },
     { label: "完成起卦", done: inputReady },
     { label: "生成报告", done: Boolean(report) }
@@ -221,10 +335,17 @@ export function SixApiDemo() {
       <div className="workbench-header">
         <div>
           <p className="eyebrow">Workbench</p>
-          <h2>开始一次占问</h2>
-          <p>先选择术法，再完成起卦。系统只在你确认输入后生成报告。</p>
+          <h2>把问题转成可复核报告</h2>
+          <p>先选场景和问题，再完成起卦。系统生成报告时会保留盘面事实、证据层级和 AI 解释边界。</p>
         </div>
         <a className="text-link" href="/history">查看报告历史</a>
+      </div>
+
+      <div className="trust-strip" aria-label="报告可信机制">
+        <span>排盘事实先行</span>
+        <span>结论分层呈现</span>
+        <span>AI 只解释正式结果</span>
+        <span>知识卡可继续验证</span>
       </div>
 
       <div className="mode-cards" aria-label="选择术法">
@@ -248,50 +369,72 @@ export function SixApiDemo() {
       </ol>
 
       <form className="workbench-form" onSubmit={createReport}>
+        <fieldset>
+          <legend>问题场景</legend>
+          <div className="scenario-groups" role="radiogroup" aria-label="选择问题场景">
+            {scenarioGroups.map((group) => (
+              <div className="scenario-group" key={group.group}>
+                <span>{group.group}</span>
+                <div className="scenario-grid">
+                  {group.items.map((item) => (
+                    <button
+                      type="button"
+                      className={scenarioId === item.id ? "scenario-option active" : "scenario-option"}
+                      key={item.id}
+                      onClick={() => {
+                        setScenarioId(item.id);
+                        setReport(null);
+                      }}
+                      role="radio"
+                      aria-checked={scenarioId === item.id}
+                    >
+                      <strong>{item.label}</strong>
+                      <span>{item.hint}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="scenario-insight">
+            <div>
+              <strong>{scenario.label}会重点看</strong>
+              <div className="chips">
+                {scenario.focus.map((item) => <span key={item}>{item}</span>)}
+              </div>
+            </div>
+            <div>
+              <strong>报告会先给你</strong>
+              <div className="chips">
+                {scenario.reportPreview.map((item) => <span key={item}>{item}</span>)}
+              </div>
+            </div>
+            <p>{scenario.boundary}</p>
+          </div>
+        </fieldset>
+
         <label className="question-box">
           <span>你要问什么？</span>
           <input
             value={question}
             onChange={(event) => setQuestion(event.target.value)}
             maxLength={500}
-            placeholder="例如：这次合作接下来最需要注意什么？"
+            placeholder={scenario.placeholder}
             required
             aria-describedby="question-help"
           />
           <p id="question-help" className="section-kicker">
-            一个报告只处理一个问题。问题越具体，报告越容易复核。
+            一个报告只处理一个问题。当前场景会优先观察：{scenario.focus.join("、")}。
           </p>
         </label>
-
-        <fieldset>
-          <legend>问题场景</legend>
-          <div className="scenario-grid" role="radiogroup" aria-label="选择问题场景">
-            {scenarios.map((item) => (
-              <button
-                type="button"
-                className={scenarioId === item.id ? "scenario-option active" : "scenario-option"}
-                key={item.id}
-                onClick={() => {
-                  setScenarioId(item.id);
-                  setReport(null);
-                }}
-                role="radio"
-                aria-checked={scenarioId === item.id}
-              >
-                <strong>{item.label}</strong>
-                <span>{item.hint}</span>
-              </button>
-            ))}
-          </div>
-          <p className="section-kicker">
-            系统会按场景自动确定观察重点，普通用户不需要确认或修改专业用神。
-          </p>
-        </fieldset>
 
         {mode === "liuyao" ? (
           <fieldset>
             <legend>六爻生成方式</legend>
             <div className="method-grid">
+              <button type="button" className={liuyaoCastMode === "auto" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("auto")}>
+                推荐：自动代摇
+              </button>
               <button type="button" className={liuyaoCastMode === "coins" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("coins")}>
                 逐爻摇铜钱
               </button>
@@ -301,9 +444,6 @@ export function SixApiDemo() {
                 onClick={() => switchLiuyaoCastMode("digitalCoins")}
               >
                 数字铜钱法
-              </button>
-              <button type="button" className={liuyaoCastMode === "auto" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("auto")}>
-                自动代摇
               </button>
               <button type="button" className={liuyaoCastMode === "manual" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("manual")}>
                 手动高级
@@ -528,8 +668,8 @@ export function SixApiDemo() {
         </div>
 
         <div className="form-actions">
-          <button type="submit" disabled={loading || !inputReady}>
-            {loading ? "正在整理报告" : inputReady ? "生成报告" : "请先完成起卦"}
+          <button type="submit" disabled={loading || !canGenerate}>
+            {loading ? "正在整理报告" : canGenerate ? "生成可复核报告" : "先完成问题和起卦"}
           </button>
           <button type="button" className="secondary" onClick={() => setReport(null)} disabled={loading || !report}>
             清空结果
@@ -608,7 +748,27 @@ export function SixApiDemo() {
           </div>
         </div>
       ) : (
-        <p className="quiet-empty">完成问题和起卦输入后，报告预览会出现在这里。</p>
+        <div className="report-value-preview">
+          <div>
+            <p className="eyebrow">Report Preview</p>
+            <h3>{scenario.label}报告会先回答什么</h3>
+            <p>完成问题和起卦后，系统会先给出可读结论，再展示支持、阻碍、时间提示和可追溯依据。</p>
+          </div>
+          <div className="preview-grid compact">
+            <div>
+              <strong>核心结论</strong>
+              <p>这件事当前更偏向推进、受阻、观望还是需要调整。</p>
+            </div>
+            <div>
+              <strong>场景重点</strong>
+              <p>{scenario.focus.join("、")}。</p>
+            </div>
+            <div>
+              <strong>风险边界</strong>
+              <p>{scenario.boundary}</p>
+            </div>
+          </div>
+        </div>
       )}
     </section>
   );

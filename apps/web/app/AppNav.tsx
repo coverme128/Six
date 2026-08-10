@@ -4,7 +4,7 @@ type AppNavProps = {
 
 const links = [
   { key: "workbench", href: "/", label: "工作台" },
-  { key: "history", href: "/history", label: "报告" },
+  { key: "history", href: "/history", label: "历史报告" },
   { key: "content", href: "/content", label: "知识" }
 ] as const;
 
