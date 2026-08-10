@@ -28,6 +28,8 @@ function contentSummary(entry: any) {
     difficulty: entry.difficulty,
     funnelStage: entry.funnelStage,
     searchIntent: entry.searchIntent,
+    primaryConversion: entry.primaryConversion,
+    secondaryConversion: entry.secondaryConversion,
     reviewStatus: entry.reviewStatus,
     seoMetadata: buildSEOMetadata(entry, { baseUrl: process.env.APP_BASE_URL ?? "" })
   };

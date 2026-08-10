@@ -32,10 +32,10 @@
   "byPrimaryCTA": {
     "START_LIUYAO": 111,
     "VIEW_KNOWLEDGE": 310,
-    "READ_TUTORIAL": 24,
+    "CONTINUE_LEARNING": 24,
     "unknown": 158
   },
-  "isolatedContentCount": 129,
-  "noIncomingLinksCount": 140,
-  "noOutgoingLinksCount": 145
+  "isolatedContentCount": 0,
+  "noIncomingLinksCount": 0,
+  "noOutgoingLinksCount": 0
 }

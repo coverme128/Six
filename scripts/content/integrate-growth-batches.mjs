@@ -103,7 +103,11 @@ function contentEntry(base) {
   const reviewStatus = base.reviewStatus ?? "REVIEW_REQUIRED";
   const index = reviewStatus === "PUBLICATION_READY" && base.index !== false;
   const title = sanitizeContentText(base.title);
+  const slug = sanitizeContentText(base.slug);
+  const canonicalPath = sanitizeContentText(base.canonicalPath);
   const summary = sanitizeContentText(base.summary ?? "");
+  const primaryKeyword = sanitizeContentText(base.primaryKeyword ?? title);
+  const secondaryKeywords = sanitizeContentText(base.secondaryKeywords ?? []);
   const seoTitle = sanitizeContentText(base.seoTitle ?? title);
   const seoDescription = sanitizeContentText(base.seoDescription ?? summary);
   const ogTitle = sanitizeContentText(base.ogTitle ?? seoTitle);
@@ -113,8 +117,8 @@ function contentEntry(base) {
     contentId: base.contentId,
     contentType: base.contentType,
     title,
-    slug: base.slug,
-    canonicalPath: base.canonicalPath,
+    slug,
+    canonicalPath,
     summary,
     body: sanitizeContentText(base.body ?? {}),
     domain: base.domain ?? "liuyao",
@@ -124,8 +128,8 @@ function contentEntry(base) {
     funnelStage: normalizeFunnel(base.funnelStage),
     searchIntent: normalizeSearchIntent(base.searchIntent),
     difficulty: base.difficulty ?? "BEGINNER",
-    primaryKeyword: base.primaryKeyword ?? base.title,
-    secondaryKeywords: base.secondaryKeywords ?? [],
+    primaryKeyword,
+    secondaryKeywords,
     primaryConversion: base.primaryConversion ?? "START_LIUYAO",
     secondaryConversion: base.secondaryConversion ?? "VIEW_KNOWLEDGE",
     trustGoal: base.trustGoal ?? "",
@@ -143,7 +147,7 @@ function contentEntry(base) {
     seoMetadata: {
       title: seoTitle,
       description: seoDescription,
-      canonicalPath: base.canonicalPath,
+      canonicalPath,
       index,
       follow: index,
       ogTitle,
@@ -424,6 +428,157 @@ function learnHubEntry(dir) {
   })];
 }
 
+function entryUrl(entry) {
+  return `/content/${entry.contentType.toLowerCase().replaceAll("_", "-")}/${entry.slug}`;
+}
+
+function batchRank(entry) {
+  const match = String(entry.contentId ?? "").match(/^B(\d{2})-(A|KC|FAQ|CASE)-(\d+)/u);
+  if (!match) return 99999;
+  const typeRank = { A: 0, KC: 1, FAQ: 2, CASE: 3 }[match[2]] ?? 9;
+  return Number(match[1]) * 10000 + typeRank * 1000 + Number(match[3]);
+}
+
+function sourceBatchOf(entry) {
+  const idBatch = String(entry.contentId ?? "").match(/^B(\d{2})-/u)?.[1];
+  return entry.body?.sourceBatch ?? (idBatch ? `B${idBatch}` : "B00");
+}
+
+function validContentRef(id, ids) {
+  return ids.has(id) && !/^B\d{2}-VIS-/u.test(id) && !/^B\d{2}-VID-/u.test(id);
+}
+
+function addLinks(entry, ids) {
+  const links = new Set((entry.relatedContentIds ?? []).filter((id) => validContentRef(id, ids)));
+  return {
+    add(id) {
+      if (id && id !== entry.contentId && validContentRef(id, ids)) links.add(id);
+    },
+    commit(limit = 18) {
+      entry.relatedContentIds = [...links].slice(0, limit);
+    },
+  };
+}
+
+function groupBySourceBatch(entries) {
+  return entries.reduce((acc, entry) => {
+    const key = sourceBatchOf(entry);
+    acc.set(key, [...(acc.get(key) ?? []), entry]);
+    return acc;
+  }, new Map());
+}
+
+function enhanceContentGraph(entries) {
+  const ids = new Set(entries.map((entry) => entry.contentId));
+  const learnHub = entries.find((entry) => entry.contentId === "LIUYAO_LEARN_HUB");
+  const articleEntries = entries.filter((entry) => /^B\d{2}-A\d+/u.test(entry.contentId)).sort((a, b) => batchRank(a) - batchRank(b));
+  const knowledgeEntries = entries.filter((entry) => /^B\d{2}-KC-\d+/u.test(entry.contentId)).sort((a, b) => batchRank(a) - batchRank(b));
+  const faqEntries = entries.filter((entry) => /^B\d{2}-FAQ-\d+/u.test(entry.contentId)).sort((a, b) => batchRank(a) - batchRank(b));
+  const caseEntries = entries.filter((entry) => /^B\d{2}-CASE-\d+/u.test(entry.contentId)).sort((a, b) => batchRank(a) - batchRank(b));
+  const landingEntries = entries.filter((entry) => entry.contentType === "LANDING_PAGE").sort((a, b) => a.title.localeCompare(b.title, "zh-Hans-CN"));
+
+  for (const entry of entries) {
+    entry.relatedContentIds = [...new Set((entry.relatedContentIds ?? []).filter((id) => validContentRef(id, ids)))];
+    entry.prerequisiteContentIds = [...new Set((entry.prerequisiteContentIds ?? []).filter((id) => validContentRef(id, ids)))];
+    if (!validContentRef(entry.nextContentId, ids)) entry.nextContentId = "";
+    if (!validContentRef(entry.previousContentId, ids)) entry.previousContentId = "";
+    if (entry.primaryConversion === "READ_TUTORIAL") entry.primaryConversion = "CONTINUE_LEARNING";
+    if (!entry.primaryConversion) entry.primaryConversion = entry.contentType === "FAQ" || entry.contentType === "KNOWLEDGE" ? "VIEW_KNOWLEDGE" : "CONTINUE_LEARNING";
+    if (!entry.secondaryConversion) entry.secondaryConversion = entry.contentType === "LANDING_PAGE" ? "START_LIUYAO" : "VIEW_RELATED_REPORT_GUIDE";
+    entry.body = { ...(entry.body ?? {}), contentUrl: entryUrl(entry) };
+  }
+
+  const articleByBatch = groupBySourceBatch(articleEntries);
+  const knowledgeByBatch = groupBySourceBatch(knowledgeEntries);
+  const faqByBatch = groupBySourceBatch(faqEntries);
+
+  for (const [index, entry] of articleEntries.entries()) {
+    entry.previousContentId = articleEntries[index - 1]?.contentId ?? "";
+    entry.nextContentId = articleEntries[index + 1]?.contentId ?? "";
+    const links = addLinks(entry, ids);
+    const batch = sourceBatchOf(entry);
+    for (const item of (knowledgeByBatch.get(batch) ?? []).slice(0, 4)) links.add(item.contentId);
+    for (const item of (faqByBatch.get(batch) ?? []).slice(0, 3)) links.add(item.contentId);
+    if (learnHub) links.add(learnHub.contentId);
+    links.commit();
+  }
+
+  for (const [index, entry] of knowledgeEntries.entries()) {
+    const links = addLinks(entry, ids);
+    const batch = sourceBatchOf(entry);
+    for (const item of (articleByBatch.get(batch) ?? []).slice(index % 6, (index % 6) + 3)) links.add(item.contentId);
+    for (const item of (faqByBatch.get(batch) ?? []).slice(index % 8, (index % 8) + 2)) links.add(item.contentId);
+    if (learnHub) links.add(learnHub.contentId);
+    links.commit(10);
+  }
+
+  for (const [index, entry] of faqEntries.entries()) {
+    const links = addLinks(entry, ids);
+    const batch = sourceBatchOf(entry);
+    for (const item of (articleByBatch.get(batch) ?? []).slice(index % 8, (index % 8) + 2)) links.add(item.contentId);
+    for (const item of (knowledgeByBatch.get(batch) ?? []).slice(index % 10, (index % 10) + 2)) links.add(item.contentId);
+    if (learnHub) links.add(learnHub.contentId);
+    links.commit(8);
+  }
+
+  for (const [index, entry] of caseEntries.entries()) {
+    const links = addLinks(entry, ids);
+    for (const item of articleEntries.slice(index % 18, (index % 18) + 2)) links.add(item.contentId);
+    for (const item of knowledgeEntries.slice(index % 24, (index % 24) + 3)) links.add(item.contentId);
+    if (learnHub) links.add(learnHub.contentId);
+    links.commit(10);
+  }
+
+  for (const [index, entry] of landingEntries.entries()) {
+    const links = addLinks(entry, ids);
+    for (const item of articleEntries.filter((article) => article.category === entry.contentId || article.category === "B05_ARTICLE").slice(index * 5, index * 5 + 6)) links.add(item.contentId);
+    for (const item of caseEntries.slice(index * 2, index * 2 + 2)) links.add(item.contentId);
+    if (learnHub) links.add(learnHub.contentId);
+    links.commit(16);
+  }
+
+  if (learnHub) {
+    const links = addLinks(learnHub, ids);
+    for (const item of articleEntries.slice(0, 12)) links.add(item.contentId);
+    for (const item of landingEntries) links.add(item.contentId);
+    links.commit(24);
+  }
+
+  const incoming = new Set(entries.flatMap((entry) => [
+    ...(entry.relatedContentIds ?? []),
+    ...(entry.prerequisiteContentIds ?? []),
+    entry.nextContentId,
+    entry.previousContentId,
+  ].filter(Boolean)));
+  const hubLinks = learnHub ? addLinks(learnHub, ids) : null;
+  for (const entry of entries) {
+    if (!incoming.has(entry.contentId) && learnHub && entry.contentId !== learnHub.contentId) hubLinks?.add(entry.contentId);
+    const links = addLinks(entry, ids);
+    if (!(entry.relatedContentIds ?? []).length && learnHub && entry.contentId !== learnHub.contentId) links.add(learnHub.contentId);
+    links.commit(24);
+  }
+  hubLinks?.commit(120);
+}
+
+function dedupePublicPrimaryKeywords(entries) {
+  const seen = new Map();
+  for (const entry of entries) {
+    if (entry.reviewStatus !== "PUBLICATION_READY") continue;
+    const key = `${entry.domain}:${entry.searchIntent}:${entry.primaryKeyword}`;
+    const previous = seen.get(key);
+    if (!previous) {
+      seen.set(key, entry);
+      continue;
+    }
+    const qualifier = entry.category && entry.category !== previous.category ? entry.category : entry.contentId;
+    entry.primaryKeyword = `${entry.primaryKeyword} ${qualifier}`;
+    entry.seoMetadata = {
+      ...(entry.seoMetadata ?? {}),
+      title: entry.seoMetadata?.title === previous.seoMetadata?.title ? `${entry.title} ${qualifier}` : entry.seoMetadata?.title,
+    };
+  }
+}
+
 function loadSnippetData(dir) {
   const snippetDir = join(dir, "02_EXPLANATION-SNIPPETS");
   const files = walkFiles(snippetDir, (path) => path.endsWith(".json") && !path.endsWith("product-explanation-snippet-registry.json"));
@@ -649,6 +804,8 @@ function main() {
     seenVisuals.add(item.visualAssetId);
     return true;
   });
+  enhanceContentGraph(dedupedEntries);
+  dedupePublicPrimaryKeywords(dedupedEntries);
   writeJson(join(OUT_CONTENT_DIR, "content-entries.json"), {
     schemaVersion: "CONTENT_SCHEMA_V1",
     generatedAt: "2026-08-10T00:00:00.000Z",

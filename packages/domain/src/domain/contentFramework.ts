@@ -330,6 +330,52 @@ export function existingSeedEntries(rootDir = process.cwd()) {
     seoMetadata: { index: false },
     contentVersion: data.hexagrams.version ?? "1.0.0",
   }));
+
+  const linkSequence = (items) => {
+    for (const [index, entry] of items.entries()) {
+      entry.previousContentId = items[index - 1]?.contentId ?? "";
+      entry.nextContentId = items[index + 1]?.contentId ?? "";
+    }
+  };
+  const appendRelated = (entry, ids) => {
+    entry.relatedContentIds = [...new Set([...(entry.relatedContentIds ?? []), ...ids.filter(Boolean)])];
+  };
+
+  linkSequence(knowledge);
+  linkSequence(glossary);
+  linkSequence(trigrams);
+  linkSequence(hexagrams);
+
+  for (const entry of knowledge) {
+    const matches = glossary
+      .filter((term) => `${entry.title} ${entry.summary}`.includes(term.title))
+      .slice(0, 4)
+      .map((term) => term.contentId);
+    appendRelated(entry, matches);
+  }
+
+  for (const [index, term] of glossary.entries()) {
+    const matches = knowledge
+      .filter((entry) => `${entry.title} ${entry.summary}`.includes(term.title))
+      .slice(0, 4)
+      .map((entry) => entry.contentId);
+    appendRelated(term, matches.length ? matches : [knowledge[index % knowledge.length]?.contentId]);
+  }
+
+  for (const trigram of trigrams) {
+    const code = trigram.contentId.replace("trigram:", "");
+    appendRelated(
+      trigram,
+      hexagrams
+        .filter((hexagram) => hexagram.body?.upper_trigram === code || hexagram.body?.lower_trigram === code)
+        .slice(0, 16)
+        .map((hexagram) => hexagram.contentId)
+    );
+  }
+
+  for (const hexagram of hexagrams) {
+    appendRelated(hexagram, [`trigram:${hexagram.body?.upper_trigram}`, `trigram:${hexagram.body?.lower_trigram}`]);
+  }
   return [...knowledge, ...glossary, ...trigrams, ...hexagrams];
 }
 

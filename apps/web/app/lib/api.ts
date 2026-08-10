@@ -220,6 +220,10 @@ export type ContentSummary = {
   domain?: string;
   category?: string;
   difficulty?: string;
+  funnelStage?: string;
+  searchIntent?: string;
+  primaryConversion?: string;
+  secondaryConversion?: string;
   reviewStatus?: string;
 };
 
