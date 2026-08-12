@@ -8,7 +8,7 @@ export default function HomePage() {
 
       <section className="product-hero">
         <div>
-          <p className="eyebrow">Liuyao & Meihua</p>
+          <p className="eyebrow">Liuyao</p>
           <h1>为一个具体问题生成可复核报告</h1>
           <p>确定性排盘先完成事实层，AI 只负责把正式结果解释成可读报告。你可以先看结论，也可以继续追溯盘面、证据和知识说明。</p>
         </div>

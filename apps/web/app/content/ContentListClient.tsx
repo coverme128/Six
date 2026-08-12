@@ -32,6 +32,16 @@ const filters = [
   { key: "LANDING_PAGE", label: "专题" },
 ];
 
+const editorialAssets = {
+  articleHero: "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-thumb-400x225.png",
+  caseCover: "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-thumb-400x300.png",
+  lessonCover: "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-thumb-400x500.png",
+  topicHero: "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-thumb-400x225.png",
+  culturalScene: "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-thumb-400x267.png",
+  conceptExplainer: "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg",
+  trustSystem: "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg",
+};
+
 function contentHref(item: ContentSummary) {
   return `/content/${item.contentType.toLowerCase().replaceAll("_", "-")}/${encodeURIComponent(item.slug)}`;
 }
@@ -46,9 +56,22 @@ function pickItems(items: ContentSummary[], predicate: (item: ContentSummary) =>
   return items.filter(predicate).slice(0, limit);
 }
 
+function editorialVisualFor(item: ContentSummary) {
+  if (item.contentType === "LANDING_PAGE") return editorialAssets.topicHero;
+  if (item.contentType === "LEARNING_PATH") return editorialAssets.lessonCover;
+  if (item.contentType === "TUTORIAL") return item.contentId.startsWith("B05-") ? editorialAssets.caseCover : editorialAssets.articleHero;
+  if (item.contentType === "FAQ") return editorialAssets.trustSystem;
+  if (item.contentType === "GLOSSARY" || item.contentType === "KNOWLEDGE") return editorialAssets.conceptExplainer;
+  if (item.contentType === "HEXAGRAM" || item.contentType === "TRIGRAM") return editorialAssets.culturalScene;
+  return editorialAssets.articleHero;
+}
+
 function ContentCard({ item, compact = false }: { item: ContentSummary; compact?: boolean }) {
   return (
     <a className={compact ? "content-card compact" : "content-card"} href={contentHref(item)}>
+      {!compact ? (
+        <img className="content-card-visual" src={editorialVisualFor(item)} alt="" aria-hidden="true" loading="lazy" />
+      ) : null}
       <span className="content-meta">
         {typeLabels[item.contentType] ?? item.contentType}
         <i>{statusLabel(item)}</i>
@@ -113,11 +136,14 @@ export function ContentListClient() {
           <h1>六爻知识中心</h1>
           <p>从提问、起卦、排盘结构到报告阅读，把术语、案例和现实问题放在同一条学习线上。</p>
         </div>
-        <div className="hub-metrics" aria-label="内容统计">
-          <strong>{items.length || 0}</strong>
-          <span>条内容</span>
-          <strong>{topicLandings.length}</strong>
-          <span>个专题</span>
+        <div className="content-hub-visual" aria-label="内容中心视觉资产">
+          <img src="/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png" alt="" aria-hidden="true" />
+          <div className="hub-metrics" aria-label="内容统计">
+            <strong>{items.length || 0}</strong>
+            <span>条内容</span>
+            <strong>{topicLandings.length}</strong>
+            <span>个专题</span>
+          </div>
         </div>
       </section>
 
@@ -189,6 +215,11 @@ export function ContentListClient() {
                 <p className="eyebrow">Topics</p>
                 <h2>现实问题专题</h2>
               </div>
+            </div>
+            <div className="editorial-asset-strip">
+              <img src="/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-800x450.png" alt="" aria-hidden="true" loading="lazy" />
+              <img src="/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-800x600.png" alt="" aria-hidden="true" loading="lazy" />
+              <img src="/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-600x400.png" alt="" aria-hidden="true" loading="lazy" />
             </div>
             <div className="topic-grid">
               {topicLandings.map((item) => <ContentCard item={item} key={item.contentId} />)}

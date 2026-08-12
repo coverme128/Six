@@ -1162,7 +1162,7 @@ article p:last-child {
   border-bottom: 1px solid var(--line);
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
   margin-bottom: 20px;
   padding: 0 0 28px;
 }
@@ -1172,6 +1172,7 @@ article p:last-child {
 }
 
 .hub-metrics {
+  background: rgba(251, 248, 241, 0.88);
   border: 1px solid var(--line);
   border-radius: 8px;
   display: grid;
@@ -1179,6 +1180,28 @@ article p:last-child {
   grid-template-columns: auto auto;
   min-width: 178px;
   padding: 14px 16px;
+}
+
+.content-hub-visual {
+  display: grid;
+  gap: 10px;
+}
+
+.content-hub-visual img,
+.editorial-asset-strip img,
+.content-card-visual,
+.content-detail-visual img {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.content-hub-visual img {
+  aspect-ratio: 16 / 9;
 }
 
 .hub-metrics strong {
@@ -1326,6 +1349,11 @@ article p:last-child {
   min-height: 86px;
 }
 
+.content-card-visual {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 2px;
+}
+
 .content-card strong {
   line-height: 1.42;
 }
@@ -1360,6 +1388,27 @@ article p:last-child {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.editorial-asset-strip {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  margin: 12px 0 14px;
+}
+
+.editorial-asset-strip img {
+  aspect-ratio: 16 / 9;
+  min-height: 150px;
+}
+
+.content-detail-visual {
+  margin-bottom: 16px;
+}
+
+.content-detail-visual img {
+  aspect-ratio: 16 / 9;
+  max-height: 460px;
 }
 
 .stack-list,
@@ -2225,6 +2274,7 @@ article p:last-child {
   }
 
   .content-hub-hero,
+  .editorial-asset-strip,
   .hub-layout,
   .content-columns,
   .library-list {
@@ -2237,6 +2287,11 @@ article p:last-child {
 
   .hub-metrics {
     width: 100%;
+  }
+
+  .content-detail-visual img,
+  .editorial-asset-strip img {
+    max-height: none;
   }
 
   .learning-rail {

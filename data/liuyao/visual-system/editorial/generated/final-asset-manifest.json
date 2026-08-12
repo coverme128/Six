@@ -1,0 +1,233 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-12",
+  "status": "VISUAL_CONTENT_FINISHED_ASSETS_READY",
+  "style": "Modern Eastern Analytical",
+  "public_root": "/liuyao-visual-system/editorial/final",
+  "policy": {
+    "product_visuals": "deterministic_react_svg_from_viewmodels",
+    "editorial_bitmaps": "atmosphere_only_no_deterministic_liuyao_facts",
+    "text_heavy_outputs": "svg_templates_for_text_accuracy",
+    "social_formats": ["1200x630", "1080x1350", "1080x1920", "1200x1200"]
+  },
+  "assets": [
+    {
+      "id": "ED-LY-001",
+      "name": "Article Hero",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-1600x900.png",
+      "variants": [
+        {
+          "label": "desktop_hero",
+          "path": "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-1600x900.png",
+          "format": "png",
+          "size": "1600x900"
+        },
+        {
+          "label": "standard_hero",
+          "path": "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-1200x675.png",
+          "format": "png",
+          "size": "1200x675"
+        },
+        {
+          "label": "mobile_hero",
+          "path": "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-800x450.png",
+          "format": "png",
+          "size": "800x450"
+        },
+        {
+          "label": "thumbnail",
+          "path": "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-thumb-400x225.png",
+          "format": "png",
+          "size": "400x225"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-002",
+      "name": "Concept Explainer",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg",
+      "variants": [
+        {
+          "label": "inline_explainer",
+          "path": "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg",
+          "format": "svg",
+          "size": "1200x630"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-003",
+      "name": "Teaching Case Cover",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-1200x900.png",
+      "variants": [
+        {
+          "label": "case_cover_large",
+          "path": "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-1200x900.png",
+          "format": "png",
+          "size": "1200x900"
+        },
+        {
+          "label": "case_cover_medium",
+          "path": "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-800x600.png",
+          "format": "png",
+          "size": "800x600"
+        },
+        {
+          "label": "thumbnail",
+          "path": "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-thumb-400x300.png",
+          "format": "png",
+          "size": "400x300"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-004",
+      "name": "Learn Lesson Cover",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png",
+      "variants": [
+        {
+          "label": "lesson_cover_large",
+          "path": "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png",
+          "format": "png",
+          "size": "1080x1350"
+        },
+        {
+          "label": "lesson_cover_medium",
+          "path": "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-800x1000.png",
+          "format": "png",
+          "size": "800x1000"
+        },
+        {
+          "label": "thumbnail",
+          "path": "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-thumb-400x500.png",
+          "format": "png",
+          "size": "400x500"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-005",
+      "name": "Social Share Card",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/social/ED-LY-005-og-1200x630.svg",
+      "variants": [
+        {
+          "label": "og",
+          "path": "/liuyao-visual-system/editorial/final/social/ED-LY-005-og-1200x630.svg",
+          "format": "svg",
+          "size": "1200x630"
+        },
+        {
+          "label": "portrait_social",
+          "path": "/liuyao-visual-system/editorial/final/social/ED-LY-005-social-portrait-1080x1350.svg",
+          "format": "svg",
+          "size": "1080x1350"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-006",
+      "name": "Topic Landing Hero",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1600x900.png",
+      "variants": [
+        {
+          "label": "desktop_hero",
+          "path": "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1600x900.png",
+          "format": "png",
+          "size": "1600x900"
+        },
+        {
+          "label": "standard_hero",
+          "path": "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png",
+          "format": "png",
+          "size": "1200x675"
+        },
+        {
+          "label": "thumbnail",
+          "path": "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-thumb-400x225.png",
+          "format": "png",
+          "size": "400x225"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-007",
+      "name": "Short Video Cover",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/social/ED-LY-007-short-video-cover-1080x1920.svg",
+      "variants": [
+        {
+          "label": "short_video_cover",
+          "path": "/liuyao-visual-system/editorial/final/social/ED-LY-007-short-video-cover-1080x1920.svg",
+          "format": "svg",
+          "size": "1080x1920"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-008",
+      "name": "Historical / Cultural Scene",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-1200x800.png",
+      "variants": [
+        {
+          "label": "article_cultural_large",
+          "path": "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-1200x800.png",
+          "format": "png",
+          "size": "1200x800"
+        },
+        {
+          "label": "article_cultural_medium",
+          "path": "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-900x600.png",
+          "format": "png",
+          "size": "900x600"
+        },
+        {
+          "label": "article_cultural_small",
+          "path": "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-600x400.png",
+          "format": "png",
+          "size": "600x400"
+        },
+        {
+          "label": "thumbnail",
+          "path": "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-thumb-400x267.png",
+          "format": "png",
+          "size": "400x267"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-009",
+      "name": "Report Summary Card",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/social/ED-LY-009-square-1200x1200.svg",
+      "variants": [
+        {
+          "label": "square_social",
+          "path": "/liuyao-visual-system/editorial/final/social/ED-LY-009-square-1200x1200.svg",
+          "format": "svg",
+          "size": "1200x1200"
+        }
+      ]
+    },
+    {
+      "id": "ED-LY-010",
+      "name": "Trust / System Illustration",
+      "status": "READY",
+      "primary": "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg",
+      "variants": [
+        {
+          "label": "trust_system_inline",
+          "path": "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg",
+          "format": "svg",
+          "size": "1200x630"
+        }
+      ]
+    }
+  ]
+}

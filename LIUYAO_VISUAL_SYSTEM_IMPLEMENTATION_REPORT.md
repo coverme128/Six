@@ -30,6 +30,8 @@ This is not `PRODUCTION_READY`. P0 product visuals are integrated into the Liuya
 - Collapsed the home workbench into a Liuyao-only product entry; Meihua is no longer surfaced as a new user choice.
 - Added tests for visual registry completeness, P0 IDs, board reading/casting order, no-recompute policy, and export status truthfulness.
 - Generated and registered all 10 editorial assets `ED-LY-001` through `ED-LY-010`.
+- Finished the editorial visual content package into 23 production-ready variants under `apps/web/public/liuyao-visual-system/editorial/final/`.
+- Connected final editorial visuals to the Learn Hub, content cards, and content detail pages.
 
 ## Guardrails Preserved
 
@@ -63,6 +65,8 @@ The report now leads with a mature Liuyao visual structure:
 - Generated bitmap assets: article hero, teaching case cover, learn lesson cover, topic landing hero, historical/cultural scene.
 - Deterministic SVG templates: concept explainer, social share card, short-video cover, report summary card, trust/system illustration.
 - Output map: `data/liuyao/visual-system/editorial/generated/editorial-asset-output-map.json`.
+- Final asset manifest: `data/liuyao/visual-system/editorial/generated/final-asset-manifest.json`.
+- Final public directory: `apps/web/public/liuyao-visual-system/editorial/final/`.
 
 AI-generated images are editorial-only. They do not encode real hexagram lines, moving lines, Shi/Ying, Yongshen, strength, evidence, pattern, timing, or action facts.
 

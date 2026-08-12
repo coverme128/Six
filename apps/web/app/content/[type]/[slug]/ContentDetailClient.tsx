@@ -37,6 +37,17 @@ function visualRefs(body: unknown) {
   return Array.isArray(refs) ? refs.filter((item): item is string => typeof item === "string") : [];
 }
 
+function editorialVisualFor(item: ContentDetail) {
+  if (item.contentType === "LANDING_PAGE") return "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png";
+  if (item.contentType === "LEARNING_PATH") return "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png";
+  if (item.contentType === "TUTORIAL") return item.contentId.startsWith("B05-")
+    ? "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-1200x900.png"
+    : "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-1200x675.png";
+  if (item.contentType === "FAQ") return "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg";
+  if (item.contentType === "HEXAGRAM" || item.contentType === "TRIGRAM") return "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-1200x800.png";
+  return "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg";
+}
+
 export function ContentDetailClient({ type, slug }: { type: string; slug: string }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -80,6 +91,9 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
 
       {item ? (
         <section className="panel report-section">
+          <div className="content-detail-visual">
+            <img src={editorialVisualFor(item)} alt="" aria-hidden="true" />
+          </div>
           <div className="fact-strip">
             <span>{item.domain}</span>
             <span>{item.category}</span>

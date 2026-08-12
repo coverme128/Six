@@ -5,7 +5,8 @@
   "policy": {
     "ai_images_scope": "editorial_only",
     "deterministic_product_facts": "never_encoded_by_ai_images",
-    "text_heavy_assets": "deterministic_svg_templates"
+    "text_heavy_assets": "deterministic_svg_templates",
+    "final_manifest": "data/liuyao/visual-system/editorial/generated/final-asset-manifest.json"
   },
   "assets": [
     {
