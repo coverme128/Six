@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<svg data-visual-system="LIUYAO_VISUAL_SYSTEM_V1" data-style="modern-eastern-analytical" data-canonicalization="content-growth-visual-style-v1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc"><metadata>{"visualSystem":"LIUYAO_VISUAL_SYSTEM_V1","style":"Modern Eastern Analytical","assetClass":"content_growth_legacy_svg","canonicalization":"content-growth-visual-style-v1"}</metadata>
 <title id="title">如何提出一个清晰的六爻问题</title>
 <desc id="desc">模糊问题、聚焦对象、聚焦事件、聚焦时间、明确问题</desc>
-<rect width="1200" height="675" fill="#F7F3EA"/>
-<text x="72" y="86" font-size="34" font-weight="700" fill="#24312F" font-family="system-ui, sans-serif">如何提出一个清晰的六爻问题</text>
-<line x1="72" y1="112" x2="1128" y2="112" stroke="#B8B0A2" stroke-width="1"/>
-<rect x="86.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
-<text x="201.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">模糊问题</text>
-<path d="M 316.0 238 H 344.0" stroke="#8C3F35" stroke-width="3"/>
-<path d="M 336.0 231 L 347.0 238 L 336.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
-<rect x="352.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
-<text x="467.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">聚焦对象</text>
-<path d="M 582.0 238 H 610.0" stroke="#8C3F35" stroke-width="3"/>
-<path d="M 602.0 231 L 613.0 238 L 602.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
-<rect x="618.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
-<text x="733.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">聚焦事件</text>
-<path d="M 848.0 238 H 876.0" stroke="#8C3F35" stroke-width="3"/>
-<path d="M 868.0 231 L 879.0 238 L 868.0 245" fill="none" stroke="#8C3F35" stroke-width="3"/>
-<rect x="884.0" y="190" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
-<text x="999.0" y="246" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">聚焦时间</text>
-<rect x="86.0" y="360" rx="16" width="230" height="96" fill="#FEFCF7" stroke="#3C665E" stroke-width="2"/>
-<text x="201.0" y="416" text-anchor="middle" font-size="21" fill="#24312F" font-family="system-ui, sans-serif">明确问题</text>
-<text x="72" y="630" font-size="16" fill="#675F54" font-family="system-ui, sans-serif">Liuyao Content Growth · Batch 01</text>
+<rect width="1200" height="675" fill="#F6F1E7"/>
+<text x="72" y="86" font-size="34" font-weight="700" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">如何提出一个清晰的六爻问题</text>
+<line x1="72" y1="112" x2="1128" y2="112" stroke="#CFC5B6" stroke-width="1"/>
+<rect x="86.0" y="190" rx="8" width="230" height="96" fill="#FBF8F1" stroke="#496F63" stroke-width="2"/>
+<text x="201.0" y="246" text-anchor="middle" font-size="21" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">模糊问题</text>
+<path d="M 316.0 238 H 344.0" stroke="#A33A2B" stroke-width="3"/>
+<path d="M 336.0 231 L 347.0 238 L 336.0 245" fill="none" stroke="#A33A2B" stroke-width="3"/>
+<rect x="352.0" y="190" rx="8" width="230" height="96" fill="#FBF8F1" stroke="#496F63" stroke-width="2"/>
+<text x="467.0" y="246" text-anchor="middle" font-size="21" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">聚焦对象</text>
+<path d="M 582.0 238 H 610.0" stroke="#A33A2B" stroke-width="3"/>
+<path d="M 602.0 231 L 613.0 238 L 602.0 245" fill="none" stroke="#A33A2B" stroke-width="3"/>
+<rect x="618.0" y="190" rx="8" width="230" height="96" fill="#FBF8F1" stroke="#496F63" stroke-width="2"/>
+<text x="733.0" y="246" text-anchor="middle" font-size="21" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">聚焦事件</text>
+<path d="M 848.0 238 H 876.0" stroke="#A33A2B" stroke-width="3"/>
+<path d="M 868.0 231 L 879.0 238 L 868.0 245" fill="none" stroke="#A33A2B" stroke-width="3"/>
+<rect x="884.0" y="190" rx="8" width="230" height="96" fill="#FBF8F1" stroke="#496F63" stroke-width="2"/>
+<text x="999.0" y="246" text-anchor="middle" font-size="21" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">聚焦时间</text>
+<rect x="86.0" y="360" rx="8" width="230" height="96" fill="#FBF8F1" stroke="#496F63" stroke-width="2"/>
+<text x="201.0" y="416" text-anchor="middle" font-size="21" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">明确问题</text>
+<text x="72" y="630" font-size="16" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Liuyao Content Growth · Batch 01</text>
 </svg>

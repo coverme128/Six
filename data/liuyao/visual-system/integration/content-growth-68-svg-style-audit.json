@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-12",
+  "status": "COMPLETE",
+  "scope": "apps/web/public/content-growth/visuals/*.svg",
+  "asset_count": 68,
+  "preservation_policy": {
+    "historical_ids": "preserved",
+    "file_paths": "preserved",
+    "titles_and_descriptions": "preserved",
+    "diagram_semantics": "preserved",
+    "deterministic_liuyao_facts": "not_created"
+  },
+  "style_system": {
+    "visual_system": "LIUYAO_VISUAL_SYSTEM_V1",
+    "style": "Modern Eastern Analytical",
+    "canonicalization": "content-growth-visual-style-v1",
+    "color_tokens": [
+      "#F6F1E7",
+      "#FBF8F1",
+      "#EFE8DB",
+      "#171717",
+      "#5D5A54",
+      "#CFC5B6",
+      "#A33A2B",
+      "#496F63",
+      "#384C5F",
+      "#9A6A36"
+    ],
+    "font_family": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    "max_radius": 8
+  },
+  "validation": {
+    "svg_xml_valid": true,
+    "files_with_visual_system_marker": 68,
+    "files_with_metadata": 68,
+    "legacy_color_residue": false,
+    "legacy_font_residue": false,
+    "oversized_radius_residue": false
+  }
+}

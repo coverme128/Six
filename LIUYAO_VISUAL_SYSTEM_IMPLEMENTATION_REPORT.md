@@ -32,6 +32,7 @@ This is not `PRODUCTION_READY`. P0 product visuals are integrated into the Liuya
 - Generated and registered all 10 editorial assets `ED-LY-001` through `ED-LY-010`.
 - Finished the editorial visual content package into 23 production-ready variants under `apps/web/public/liuyao-visual-system/editorial/final/`.
 - Connected final editorial visuals to the Learn Hub, content cards, and content detail pages.
+- Unified all existing 68 content-growth SVG assets under `apps/web/public/content-growth/visuals/` to the Liuyao visual token system while preserving their historical `Bxx-VIS-xx` IDs and paths.
 
 ## Guardrails Preserved
 
@@ -69,6 +70,18 @@ The report now leads with a mature Liuyao visual structure:
 - Final public directory: `apps/web/public/liuyao-visual-system/editorial/final/`.
 
 AI-generated images are editorial-only. They do not encode real hexagram lines, moving lines, Shi/Ying, Yongshen, strength, evidence, pattern, timing, or action facts.
+
+## Existing Content SVGs
+
+The existing 68 `Bxx-VIS-xx` SVG assets are now style-aligned:
+
+- Historical filenames and IDs were preserved.
+- Diagram text, title, description, and content semantics were preserved.
+- Colors were normalized to the Liuyao visual token palette.
+- Font family was normalized to the product system stack.
+- Rounded rectangle radii were capped at 8px.
+- Each SVG now carries `data-visual-system="LIUYAO_VISUAL_SYSTEM_V1"` and canonicalization metadata.
+- Audit file: `data/liuyao/visual-system/integration/content-growth-68-svg-style-audit.json`.
 
 ## Validation
 
