@@ -16,7 +16,7 @@ function bitText(value: unknown): string {
 }
 
 function publicReportExport(report: PublicReportRecord) {
-  const experience = objectValue(report.experience);
+  const experience = objectValue(reportExperience(report));
   const guided = objectValue(experience.guidedViewModel);
   const professional = objectValue(experience.professionalViewModel);
   return {
@@ -49,9 +49,18 @@ function publicReportExport(report: PublicReportRecord) {
       timingCandidates: professional.timingCandidates,
       knowledgeRefs: professional.knowledgeRefs
     },
+    visualization: experience.visualization ?? null,
     aiExpression: report.aiReportBundle ?? null,
     boundary: "本报告仅供传统文化研究与个人参考，不替代医疗、法律、投资等现实专业决策。"
   };
+}
+
+function reportExperience(report: PublicReportRecord) {
+  const experience = objectValue(report.experience);
+  if (report.type === "liuyao" && !experience.visualization) {
+    return buildExperienceBundle({ result: report.result, type: report.type });
+  }
+  return report.experience;
 }
 
 function publicChartView(report: PublicReportRecord) {
@@ -206,7 +215,7 @@ export class ReportsController {
       persistence: report.persistence,
       aiReportBundle: report.aiReportBundle,
       chartViewModel: publicChartView(report),
-      experience: publicExperience(report.experience),
+      experience: publicExperience(reportExperience(report)),
       relatedContent: (reportContentRecommendations as any)({ report, repository: contentRepository(), limit: 6 }).items
     };
   }

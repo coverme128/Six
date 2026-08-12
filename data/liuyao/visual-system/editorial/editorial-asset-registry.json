@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "style": "contemporary_chinese_editorial",
+  "assets": [
+    {
+      "id": "ED-LY-001",
+      "name": "Article Hero",
+      "owner": "template_codex",
+      "media_optional": true,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-002",
+      "name": "Concept Explainer",
+      "owner": "codex_svg",
+      "media_optional": false,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-003",
+      "name": "Teaching Case Cover",
+      "owner": "template_codex",
+      "media_optional": true,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-004",
+      "name": "Learn Lesson Cover",
+      "owner": "template_codex",
+      "media_optional": true,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-005",
+      "name": "Social Share Card",
+      "owner": "template_codex",
+      "media_optional": false,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-006",
+      "name": "Topic Landing Hero",
+      "owner": "template_codex",
+      "media_optional": true,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-007",
+      "name": "Short Video Cover",
+      "owner": "template_codex",
+      "media_optional": true,
+      "priority": "P1"
+    },
+    {
+      "id": "ED-LY-008",
+      "name": "Historical / Cultural Scene",
+      "owner": "generated_or_rights_cleared_media",
+      "media_optional": false,
+      "priority": "P1"
+    },
+    {
+      "id": "ED-LY-009",
+      "name": "Report Summary Card",
+      "owner": "template_codex",
+      "media_optional": false,
+      "priority": "P0"
+    },
+    {
+      "id": "ED-LY-010",
+      "name": "Trust / System Illustration",
+      "owner": "codex_svg",
+      "media_optional": false,
+      "priority": "P0"
+    }
+  ],
+  "shared_dna": [
+    "ink",
+    "warm_ivory",
+    "cinnabar",
+    "muted_jade",
+    "mineral_gold",
+    "fine_geometry",
+    "whitespace"
+  ]
+}

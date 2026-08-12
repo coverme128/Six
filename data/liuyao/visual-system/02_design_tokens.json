@@ -1,0 +1,133 @@
+{
+  "version": "1.0",
+  "system_id": "LIUYAO_VISUAL_SYSTEM_V1",
+  "visual_direction": "modern_eastern_analytical",
+  "principle": "Traditional Chinese divination structure, modern decision interface.",
+  "colors": {
+    "surface": {
+      "canvas": "#F6F1E7",
+      "panel": "#FBF8F1",
+      "panel_alt": "#EFE8DB",
+      "ink": "#171717",
+      "muted_ink": "#5D5A54",
+      "line": "#CFC5B6"
+    },
+    "brand": {
+      "cinnabar": "#A33A2B",
+      "jade": "#496F63",
+      "mineral_gold": "#9A7A43",
+      "ink_blue": "#384C5F",
+      "ochre": "#9A6A36"
+    },
+    "semantic": {
+      "support": "#496F63",
+      "constraint": "#A33A2B",
+      "uncertain": "#9A6A36",
+      "selected": "#9A7A43",
+      "neutral": "#5D5A54",
+      "info": "#384C5F"
+    },
+    "line_semantics": {
+      "yang": "#171717",
+      "yin": "#171717",
+      "moving": "#9A7A43",
+      "static": "#5D5A54",
+      "shi": "#384C5F",
+      "ying": "#496F63",
+      "yongshen": "#9A7A43"
+    },
+    "state": {
+      "support": "#496F63",
+      "caution": "#9A6A36",
+      "risk": "#A33A2B",
+      "neutral": "#5D5A54",
+      "uncertain": "#9A6A36"
+    }
+  },
+  "typography": {
+    "ui_family": "system-ui / Geist / Inter compatible",
+    "editorial_serif": "Noto Serif / Source Han Serif compatible",
+    "chinese_ui": "Noto Sans CJK / Source Han Sans compatible",
+    "chinese_editorial": "Noto Serif CJK / Source Han Serif compatible",
+    "calligraphy_usage": "quotes_or_rare_editorial_only",
+    "body_min_px": 14,
+    "professional_dense_min_px": 12,
+    "heading_scale_px": [
+      32,
+      26,
+      22,
+      18,
+      16
+    ]
+  },
+  "spacing": {
+    "base": 4,
+    "scale": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ]
+  },
+  "radius": {
+    "xs": 2,
+    "sm": 4,
+    "md": 8,
+    "lg": 12,
+    "pill": 999
+  },
+  "border": {
+    "subtle": "1px",
+    "semantic": "1.5px",
+    "emphasis": "2px"
+  },
+  "shadow": {
+    "usage": "minimal",
+    "rule": "Use elevation only for layer or interaction, never luxury effect."
+  },
+  "diagram_line": {
+    "base": 1.5,
+    "focus": 2.5,
+    "dash_uncertain": "5 4",
+    "arrow_size": 6
+  },
+  "diagram_node": {
+    "padding": 12,
+    "min_touch_target": 44,
+    "focus_ring": 2
+  },
+  "motion": {
+    "fast_ms": 160,
+    "normal_ms": 280,
+    "slow_ms": 480,
+    "educational_max_ms": 800
+  },
+  "breakpoints": {
+    "mobile_sm": 360,
+    "mobile": 430,
+    "tablet": 768,
+    "desktop": 1024,
+    "wide": 1440
+  },
+  "texture": {
+    "default": "none_or_subtle",
+    "allowed": [
+      "paper_grain_low_opacity",
+      "ink_noise_low_opacity"
+    ],
+    "forbidden": [
+      "heavy_parchment",
+      "fake_aged_edges",
+      "full_surface_grunge"
+    ]
+  },
+  "ornamentation": {
+    "product_max_percent": 15,
+    "editorial_target_percent": 40,
+    "marketing_max_percent": 60
+  }
+}

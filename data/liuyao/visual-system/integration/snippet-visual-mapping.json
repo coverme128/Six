@@ -1,0 +1,4056 @@
+{
+  "version": "1.0",
+  "actual_snippet_count": 400,
+  "records": [
+    {
+      "snippet_id": "LY-EXP-0001",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0002",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0003",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0004",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0005",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0006",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0007",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0008",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0009",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0010",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0011",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0012",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0013",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0014",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0015",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0016",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0017",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0018",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0019",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0020",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0021",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0022",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0023",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0024",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0025",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0026",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0027",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0028",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0029",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0030",
+      "category": "RESULT_OVERVIEW",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0031",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0032",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0033",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0034",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0035",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0036",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0037",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0038",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0039",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0040",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0041",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0042",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0043",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0044",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0045",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0046",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0047",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0048",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0049",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0050",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0051",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0052",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0053",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0054",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0055",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0056",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0057",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0058",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0059",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0060",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0061",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0062",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0063",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0064",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0065",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0066",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0067",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0068",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0069",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0070",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0071",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0072",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0073",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0074",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0075",
+      "category": "YONGSHEN_CORE_FOCUS",
+      "recommended_visual_ids": [
+        "VIS-LY-004"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0076",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0077",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0078",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0079",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0080",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0081",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0082",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0083",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0084",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0085",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0086",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0087",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0088",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0089",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0090",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0091",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0092",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0093",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0094",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0095",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0096",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0097",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0098",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0099",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0100",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0101",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0102",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0103",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0104",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0105",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0106",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0107",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0108",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0109",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0110",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0111",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0112",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0113",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0114",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0115",
+      "category": "SHI_YING_RELATIONSHIP",
+      "recommended_visual_ids": [
+        "VIS-LY-005"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0116",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0117",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0118",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0119",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0120",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0121",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0122",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0123",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0124",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0125",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0126",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0127",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0128",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0129",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0130",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0131",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0132",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0133",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0134",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0135",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0136",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0137",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0138",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0139",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0140",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0141",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0142",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0143",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0144",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0145",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0146",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0147",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0148",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0149",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0150",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0151",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0152",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0153",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0154",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0155",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0156",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0157",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0158",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0159",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0160",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0161",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0162",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0163",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0164",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0165",
+      "category": "SIX_RELATIONS",
+      "recommended_visual_ids": [
+        "VIS-LY-006"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0166",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0167",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0168",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0169",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0170",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0171",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0172",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0173",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0174",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0175",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0176",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0177",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0178",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0179",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0180",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0181",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0182",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0183",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0184",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0185",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0186",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0187",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0188",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0189",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0190",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0191",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0192",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0193",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0194",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0195",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0196",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0197",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0198",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0199",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0200",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0201",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0202",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0203",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0204",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0205",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0206",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0207",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0208",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0209",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0210",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0211",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0212",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0213",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0214",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0215",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0216",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0217",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0218",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0219",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0220",
+      "category": "STRENGTH_STATE",
+      "recommended_visual_ids": [
+        "VIS-LY-007"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0221",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0222",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0223",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0224",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0225",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0226",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0227",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0228",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0229",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0230",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0231",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0232",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0233",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0234",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0235",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0236",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0237",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0238",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0239",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0240",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0241",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0242",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0243",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0244",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0245",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0246",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0247",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0248",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0249",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0250",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0251",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0252",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0253",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0254",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0255",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0256",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0257",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0258",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0259",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0260",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0261",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0262",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0263",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0264",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0265",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0266",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0267",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0268",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0269",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0270",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0271",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0272",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0273",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0274",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0275",
+      "category": "DYNAMICS",
+      "recommended_visual_ids": [
+        "VIS-LY-008"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0276",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0277",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0278",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0279",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0280",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0281",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0282",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0283",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0284",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0285",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0286",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0287",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0288",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0289",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0290",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0291",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0292",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0293",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0294",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0295",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0296",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0297",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0298",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0299",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0300",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0301",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0302",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0303",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0304",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0305",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0306",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0307",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0308",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0309",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0310",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0311",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0312",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0313",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0314",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0315",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0316",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0317",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0318",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0319",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0320",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0321",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0322",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0323",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0324",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0325",
+      "category": "SUPPORT_RISK_CONFLICT",
+      "recommended_visual_ids": [
+        "VIS-LY-011",
+        "VIS-LY-009"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0326",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0327",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0328",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0329",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0330",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0331",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0332",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0333",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0334",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0335",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0336",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0337",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0338",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0339",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0340",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0341",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0342",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0343",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0344",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0345",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0346",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0347",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0348",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0349",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0350",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0351",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0352",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0353",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "专业依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0354",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0355",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0356",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0357",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0358",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0359",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0360",
+      "category": "TIMING",
+      "recommended_visual_ids": [
+        "VIS-LY-010"
+      ],
+      "placement": "延伸解释区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0361",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0362",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0363",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0364",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0365",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0366",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0367",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0368",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0369",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0370",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0371",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0372",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0373",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0374",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0375",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0376",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0377",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0378",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0379",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0380",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0381",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0382",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0383",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0384",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0385",
+      "category": "ACTION_GUIDANCE",
+      "recommended_visual_ids": [
+        "VIS-LY-011"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0386",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0387",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0388",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0389",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0390",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "主结果区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0391",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0392",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0393",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0394",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0395",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "关键依据区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0396",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0397",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0398",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0399",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    },
+    {
+      "snippet_id": "LY-EXP-0400",
+      "category": "AI_TRUST",
+      "recommended_visual_ids": [
+        "VIS-LY-014"
+      ],
+      "placement": "变化区",
+      "mapping_basis": "snippet_category_and_presentation_role",
+      "fact_source_policy": "visual consumes same ProductResultFacts / Finding / Evidence; snippet does not create facts"
+    }
+  ]
+}

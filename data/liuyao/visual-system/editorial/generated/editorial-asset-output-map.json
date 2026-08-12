@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-12",
+  "style": "Modern Eastern Analytical",
+  "policy": {
+    "ai_images_scope": "editorial_only",
+    "deterministic_product_facts": "never_encoded_by_ai_images",
+    "text_heavy_assets": "deterministic_svg_templates"
+  },
+  "assets": [
+    {
+      "id": "ED-LY-001",
+      "name": "Article Hero",
+      "kind": "generated_bitmap",
+      "path": "/liuyao-visual-system/editorial/images/ED-LY-001-article-hero.png",
+      "use": ["article_hero", "learn_hub_feature"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-002",
+      "name": "Concept Explainer",
+      "kind": "deterministic_svg_template",
+      "path": "/liuyao-visual-system/editorial/templates/ED-LY-002-concept-explainer.svg",
+      "use": ["concept_explainer", "article_inline"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-003",
+      "name": "Teaching Case Cover",
+      "kind": "generated_bitmap",
+      "path": "/liuyao-visual-system/editorial/images/ED-LY-003-teaching-case-cover.png",
+      "use": ["case_cover", "educational_example"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-004",
+      "name": "Learn Lesson Cover",
+      "kind": "generated_bitmap",
+      "path": "/liuyao-visual-system/editorial/images/ED-LY-004-learn-lesson-cover.png",
+      "use": ["lesson_cover", "learn_path"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-005",
+      "name": "Social Share Card",
+      "kind": "deterministic_svg_template",
+      "path": "/liuyao-visual-system/editorial/templates/ED-LY-005-social-share-card.svg",
+      "use": ["og_1200x630", "social_share"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-006",
+      "name": "Topic Landing Hero",
+      "kind": "generated_bitmap",
+      "path": "/liuyao-visual-system/editorial/images/ED-LY-006-topic-landing-hero.png",
+      "use": ["topic_landing_hero", "learn_hub_topic"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-007",
+      "name": "Short Video Cover",
+      "kind": "deterministic_svg_template",
+      "path": "/liuyao-visual-system/editorial/templates/ED-LY-007-short-video-cover.svg",
+      "use": ["short_video_cover_1080x1920"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-008",
+      "name": "Historical / Cultural Scene",
+      "kind": "generated_bitmap",
+      "path": "/liuyao-visual-system/editorial/images/ED-LY-008-historical-cultural-scene.png",
+      "use": ["article_atmosphere", "cultural_context"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-009",
+      "name": "Report Summary Card",
+      "kind": "deterministic_svg_template",
+      "path": "/liuyao-visual-system/editorial/templates/ED-LY-009-report-summary-card.svg",
+      "use": ["report_summary_card", "square_social_fallback"],
+      "status": "READY"
+    },
+    {
+      "id": "ED-LY-010",
+      "name": "Trust / System Illustration",
+      "kind": "deterministic_svg_template",
+      "path": "/liuyao-visual-system/editorial/templates/ED-LY-010-trust-system-illustration.svg",
+      "use": ["trust_section", "system_explainer"],
+      "status": "READY"
+    }
+  ]
+}

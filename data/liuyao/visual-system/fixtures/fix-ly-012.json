@@ -1,0 +1,27 @@
+{
+  "fixture_id": "FIX-LY-012",
+  "fixture_type": "VISUAL_FIXTURE",
+  "name": "AI Fallback Report",
+  "visual_id": "VIS-LY-011",
+  "description": "Deterministic support/risk/action presentation while AI is unavailable.",
+  "domain": "LIUYAO",
+  "golden_status": "NOT_GOLDEN",
+  "facts_are_synthetic_for_visual_testing": true,
+  "input_viewmodel_ref": "SupportRiskDecisionViewModel",
+  "expected_states": [
+    "ready",
+    "partial"
+  ],
+  "forbidden": [
+    "domain recalculation",
+    "invented rule ID",
+    "guaranteed result",
+    "raw JSON leakage"
+  ],
+  "acceptance": [
+    "renders without crash",
+    "non-color semantics",
+    "mobile adaptation available",
+    "static fallback available"
+  ]
+}

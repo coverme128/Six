@@ -4,6 +4,7 @@ import { buildGuidedViewModel } from "./guidedViewModel.js";
 import { buildProfessionalViewModel } from "./professionalViewModel.js";
 import { buildAdminViewModel } from "./adminViewModel.js";
 import { buildLiuyaoProductResultFacts } from "./productResultFacts.js";
+import { buildLiuyaoVisualizationBundle, LIUYAO_VISUAL_REGISTRY, LIUYAO_VISUAL_SYSTEM_VERSION } from "./liuyaoVisualizationViewModels.js";
 import { REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
 import { duplicatePresentationWarnings } from "./evidenceDeduplicator.js";
 import { selectContentExplanationSnippets } from "./contentExplanations.js";
@@ -13,6 +14,7 @@ export { PAGE_EXPERIENCE_CONTRACTS, PAGE_STATE_CONTRACT, REPORT_PAGE_EXPERIENCE,
 export { TERMINOLOGY_REGISTRY } from "./terminologyRegistry.js";
 export { formatRelationship, formatStatus } from "./terminologyFormatter.js";
 export { LIUYAO_PRODUCT_RESULT_FACTS_VERSION, judgmentFactsSignature } from "./productResultFacts.js";
+export { LIUYAO_VISUAL_REGISTRY, LIUYAO_VISUAL_SYSTEM_VERSION, buildLiuyaoVisualizationBundle } from "./liuyaoVisualizationViewModels.js";
 
 export function buildExperienceBundle({ result, type, includeAdmin = false }) {
   const facts = buildDivinationResultFacts({ result, type });
@@ -20,6 +22,9 @@ export function buildExperienceBundle({ result, type, includeAdmin = false }) {
   const viewFacts = productResultFacts ?? facts;
   const guidedViewModel = buildGuidedViewModel(viewFacts);
   const professionalViewModel = buildProfessionalViewModel(viewFacts);
+  const visualization = type === "liuyao"
+    ? buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewModel, professionalViewModel })
+    : null;
   const pageExperience = {
     ...REPORT_PAGE_EXPERIENCE,
     visualHierarchy: { ...REPORT_PAGE_EXPERIENCE.visualHierarchy },
@@ -39,6 +44,7 @@ export function buildExperienceBundle({ result, type, includeAdmin = false }) {
     },
     guidedViewModel,
     professionalViewModel,
+    visualization,
     contentExplanationSnippets: selectContentExplanationSnippets({ productResultFacts }),
     qa: {
       duplicatePresentationWarnings: duplicatePresentationWarnings(guidedViewModel),

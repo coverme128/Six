@@ -99,6 +99,29 @@ export type ProfessionalViewModel = {
   knowledgeRefs?: Array<{ id?: string; title?: string }>;
 };
 
+export type LiuyaoVisualizationBundle = {
+  visualSystemVersion?: string;
+  readiness?: string;
+  packageStatus?: string;
+  registry?: Array<{
+    visualId?: string;
+    viewModel?: string;
+    priority?: string;
+    title?: string;
+    implementation?: string;
+    dataPolicy?: string;
+    contexts?: string[];
+  }>;
+  p0VisualIds?: string[];
+  p1VisualIds?: string[];
+  contextMapping?: Record<string, string[]>;
+  staticExport?: {
+    status?: string;
+    contractPath?: string;
+  };
+  viewModels?: Record<string, Record<string, any>>;
+};
+
 export type LiuyaoChartViewModel = {
   type: "liuyao";
   methodCode?: string;
@@ -172,6 +195,7 @@ export type ExperienceResponse = {
   experience?: {
     guidedViewModel?: GuidedViewModel;
     professionalViewModel?: ProfessionalViewModel;
+    visualization?: LiuyaoVisualizationBundle | null;
     contentExplanationSnippets?: Array<{
       snippetId?: string;
       category?: string;

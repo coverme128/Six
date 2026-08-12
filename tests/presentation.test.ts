@@ -10,6 +10,7 @@ import { PAGE_EXPERIENCE_CONTRACTS, PAGE_STATE_CONTRACT } from "@six/domain/pres
 import { TERMINOLOGY_REGISTRY } from "@six/domain/presentation";
 import { formatRelationship, formatStatus } from "@six/domain/presentation";
 import { judgmentFactsSignature } from "@six/domain/presentation";
+import { LIUYAO_VISUAL_REGISTRY, LIUYAO_VISUAL_SYSTEM_VERSION } from "@six/domain/presentation";
 
 function liuyaoResult() {
   const result = createLiuyaoChart({
@@ -66,6 +67,39 @@ test("Experience bundle builds guided and professional viewmodels without admin 
   }
   assert.match(bundle.guidedViewModel.timingHint, /不是保证日期/u);
   assert.ok(bundle.professionalViewModel.knowledgeRefs.every((item) => /卦$/u.test(item.title)));
+});
+
+test("Liuyao visualization bundle registers P0 visuals from presentation facts without export overclaim", () => {
+  const bundle = buildExperienceBundle({ result: liuyaoResult(), type: "liuyao" });
+  const visualization = bundle.visualization;
+  assert.equal(LIUYAO_VISUAL_SYSTEM_VERSION, "LIUYAO_VISUAL_SYSTEM_V1");
+  assert.equal(LIUYAO_VISUAL_REGISTRY.length, 14);
+  assert.equal(visualization.visualSystemVersion, "LIUYAO_VISUAL_SYSTEM_V1");
+  assert.equal(visualization.packageStatus, "DATA_IMPORTED");
+  assert.equal(visualization.p0VisualIds.length, 10);
+  assert.deepEqual(visualization.p0VisualIds, [
+    "VIS-LY-001",
+    "VIS-LY-002",
+    "VIS-LY-003",
+    "VIS-LY-004",
+    "VIS-LY-005",
+    "VIS-LY-006",
+    "VIS-LY-007",
+    "VIS-LY-008",
+    "VIS-LY-009",
+    "VIS-LY-010",
+  ]);
+  assert.equal(visualization.staticExport.status, "DESIGN_READY_IMPLEMENTATION_PENDING");
+  const board = visualization.viewModels["VIS-LY-001"];
+  assert.equal(board.noRecompute, true);
+  assert.equal(board.readingOrder, "top_to_bottom_display");
+  assert.equal(board.castingOrder, "bottom_to_top_source");
+  assert.equal(board.lines[0].position, 6);
+  assert.equal(board.lines.at(-1).position, 1);
+  assert.ok(board.lines.some((line) => line.isWorld));
+  assert.ok(board.lines.some((line) => line.isResponse));
+  assert.ok(visualization.viewModels["VIS-LY-004"].roles.length >= 1);
+  assert.equal(visualization.viewModels["VIS-LY-007"].mode, "qualitative_no_score");
 });
 
 test("Liuyao scene selection drives automatic observation focus without user yongshen confirmation", () => {

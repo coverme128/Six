@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ED-LY-010 Trust System Illustration</title>
+  <desc id="desc">A deterministic trust-system illustration showing the Liuyao facts-to-experience pipeline.</desc>
+  <rect width="1200" height="630" fill="#F6F1E7"/>
+  <rect x="58" y="58" width="1084" height="514" rx="8" fill="#FBF8F1" stroke="#CFC5B6"/>
+  <text x="96" y="120" fill="#A33A2B" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">TRUST SYSTEM</text>
+  <text x="96" y="172" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="46" font-weight="650">从确定性事实到可读报告</text>
+  <g transform="translate(96 260)">
+    <rect width="176" height="138" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="22" y="52" fill="#384C5F" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">排盘事实</text>
+    <text x="22" y="92" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">历法 / 爻位</text>
+    <rect x="220" width="176" height="138" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="242" y="52" fill="#496F63" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">规则判断</text>
+    <text x="242" y="92" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">用神 / 证据</text>
+    <rect x="440" width="176" height="138" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="462" y="52" fill="#9A7A43" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">冲突整理</text>
+    <text x="462" y="92" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">支持 / 风险</text>
+    <rect x="660" width="176" height="138" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="682" y="52" fill="#384C5F" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">视觉呈现</text>
+    <text x="682" y="92" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">VIS-LY 组件</text>
+    <rect x="880" width="176" height="138" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="902" y="52" fill="#A33A2B" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">AI 表达</text>
+    <text x="902" y="92" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">只解释结果</text>
+    <path d="M184 69 H210 M404 69 H430 M624 69 H650 M844 69 H870" stroke="#9A7A43" stroke-width="4" stroke-dasharray="10 8"/>
+  </g>
+  <text x="96" y="500" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20">视觉层不重新计算事实；AI 不改排盘、不改用神、不制造新结论。</text>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "fixture_id": "FIX-LY-002",
+  "fixture_type": "VISUAL_FIXTURE",
+  "name": "No Moving Line",
+  "visual_id": "VIS-LY-002",
+  "description": "Primary hexagram with no transformations.",
+  "domain": "LIUYAO",
+  "golden_status": "NOT_GOLDEN",
+  "facts_are_synthetic_for_visual_testing": true,
+  "input_viewmodel_ref": "PrimaryChangedHexagramViewModel",
+  "expected_states": [
+    "ready",
+    "partial"
+  ],
+  "forbidden": [
+    "domain recalculation",
+    "invented rule ID",
+    "guaranteed result",
+    "raw JSON leakage"
+  ],
+  "acceptance": [
+    "renders without crash",
+    "non-color semantics",
+    "mobile adaptation available",
+    "static fallback available"
+  ]
+}

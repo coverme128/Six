@@ -1,0 +1,284 @@
+{
+  "version": "1.0",
+  "shared_contract": {
+    "must_not": [
+      "recompute Liuyao facts",
+      "choose Yongshen",
+      "calculate strength",
+      "calculate dynamic rules",
+      "invent Pattern",
+      "invent Timing",
+      "invent rule IDs",
+      "infer canonical IDs from labels",
+      "hardcode fixture interpretation",
+      "encode meaning only by color"
+    ],
+    "required_states": [
+      "loading",
+      "empty",
+      "partial",
+      "ready",
+      "error",
+      "unsupported"
+    ],
+    "accessibility": [
+      "keyboard navigation where interactive",
+      "ARIA labels for interactive nodes",
+      "visible focus",
+      "non-color encoding",
+      "reduced motion",
+      "localized screen-reader labels"
+    ],
+    "consistency_rule": "Guided and Professional must preserve the same fact direction."
+  },
+  "components": {
+    "VIS-LY-001": {
+      "input_viewmodel": "SixLineBoardViewModel",
+      "required_fields": [
+        "primaryHexagram",
+        "changedHexagram?",
+        "lines[]",
+        "movingLineIds[]",
+        "shiLineId?",
+        "yingLineId?",
+        "yongshenLineIds[]",
+        "highlightedLineIds[]",
+        "evidenceRefs[]"
+      ],
+      "interactions": [
+        "select_line",
+        "focus_line",
+        "expand_line_details",
+        "show_evidence",
+        "switch_layer"
+      ],
+      "guided_behavior": "show line, moving/static, Shi/Ying, core focus and only important states",
+      "professional_behavior": "show full line metadata via layers/details",
+      "static_behavior": "deterministic six-line SVG with embedded legend"
+    },
+    "VIS-LY-002": {
+      "input_viewmodel": "PrimaryChangedHexagramViewModel",
+      "required_fields": [
+        "primaryLines[]",
+        "changedLines[]",
+        "transformations[]",
+        "movingLineIds[]",
+        "selectedLineId?",
+        "evidenceRefs[]"
+      ],
+      "interactions": [
+        "select_transformation",
+        "focus_moving_line",
+        "show_evidence"
+      ],
+      "guided_behavior": "emphasize only moving lines and resulting change",
+      "professional_behavior": "show complete primary/changed correspondence and formal relation labels"
+    },
+    "VIS-LY-003": {
+      "input_viewmodel": "CastingSequenceViewModel",
+      "required_fields": [
+        "steps[6]",
+        "currentStep",
+        "lineOrder",
+        "castingMethodLabel",
+        "mappingDisplay",
+        "mappingStatus"
+      ],
+      "interactions": [
+        "advance_step",
+        "edit_before_confirm",
+        "show_method_help"
+      ],
+      "rule": "first casting maps to 初爻 and order is bottom-to-top; numeric mapping must come from repository casting contract"
+    },
+    "VIS-LY-004": {
+      "input_viewmodel": "YongshenEvidenceViewModel",
+      "required_fields": [
+        "questionTopic",
+        "candidateRoles[]",
+        "selectedRole",
+        "yongshenTarget",
+        "supportingEvidence[]",
+        "conflictingEvidence[]",
+        "alignmentStatus"
+      ],
+      "interactions": [
+        "expand_reason",
+        "show_conflict",
+        "show_role_source"
+      ],
+      "rule": "never select Yongshen inside component"
+    },
+    "VIS-LY-005": {
+      "input_viewmodel": "ShiYingRelationshipViewModel",
+      "required_fields": [
+        "shi",
+        "ying",
+        "relationEdges[]",
+        "contextLabels[]",
+        "supportingEvidence[]",
+        "constraints[]"
+      ],
+      "interactions": [
+        "focus_side",
+        "focus_relation",
+        "show_context",
+        "show_evidence"
+      ],
+      "rule": "do not hardcode 世=我 or 应=对方; use supplied context labels"
+    },
+    "VIS-LY-006": {
+      "input_viewmodel": "SixRelationsRoleMapViewModel",
+      "required_fields": [
+        "questionTopic",
+        "roleNodes[]",
+        "relationCategories[]",
+        "contextNotes[]",
+        "selectedRoleId?"
+      ],
+      "interactions": [
+        "focus_role",
+        "show_examples",
+        "show_context"
+      ],
+      "rule": "role examples are presentation aids, not rule-engine mappings"
+    },
+    "VIS-LY-007": {
+      "input_viewmodel": "StrengthStateMatrixViewModel",
+      "required_fields": [
+        "targetEntities[]",
+        "timeEnvironment",
+        "stateFactors[]",
+        "specialStates[]",
+        "conflicts[]",
+        "overallPresentationState",
+        "evidenceRefs[]"
+      ],
+      "interactions": [
+        "focus_factor",
+        "show_conflict",
+        "show_evidence"
+      ],
+      "rule": "never invent numeric score, strength weight or priority"
+    },
+    "VIS-LY-008": {
+      "input_viewmodel": "DynamicTransformationViewModel",
+      "required_fields": [
+        "movingLines[]",
+        "changedLines[]",
+        "dynamicRelations[]",
+        "directionLabels[]",
+        "hiddenVisibleRelations[]",
+        "evidenceRefs[]"
+      ],
+      "interactions": [
+        "focus_moving_line",
+        "trace_change",
+        "show_dynamic_relation",
+        "show_evidence"
+      ],
+      "rule": "animation explains supplied transformation; it never calculates it"
+    },
+    "VIS-LY-009": {
+      "input_viewmodel": "EvidenceConflictViewModel",
+      "required_fields": [
+        "supportEvidence[]",
+        "constraintEvidence[]",
+        "conflictEdges[]",
+        "resolutionStatus",
+        "dominantEvidenceIds[]",
+        "unresolvedEvidenceIds[]"
+      ],
+      "interactions": [
+        "focus_evidence",
+        "show_resolution",
+        "show_rule_help"
+      ],
+      "rule": "AI explanation appears after deterministic conflict state, never as resolver"
+    },
+    "VIS-LY-010": {
+      "input_viewmodel": "TimingTimelineViewModel",
+      "required_fields": [
+        "windows[]",
+        "selectedWindowId?",
+        "uncertainty",
+        "supportingEvidence[]",
+        "constraints[]",
+        "currentTimeMarker?"
+      ],
+      "interactions": [
+        "select_window",
+        "compare_windows",
+        "expand_evidence"
+      ],
+      "rule": "never imply certainty; candidate window ≠ guaranteed date"
+    },
+    "VIS-LY-011": {
+      "input_viewmodel": "SupportRiskDecisionViewModel",
+      "required_fields": [
+        "supports[]",
+        "risks[]",
+        "uncertainties[]",
+        "actions[]",
+        "selectionReason",
+        "evidenceRefs[]"
+      ],
+      "interactions": [
+        "focus_support",
+        "focus_risk",
+        "open_action"
+      ],
+      "rule": "actions must come from Action Guidance facts/registry"
+    },
+    "VIS-LY-012": {
+      "input_viewmodel": "PatternExplanationViewModel",
+      "required_fields": [
+        "patternRef",
+        "displayName",
+        "conditionFacts[]",
+        "relationshipFacts[]",
+        "supportingEvidence[]",
+        "limitations[]",
+        "alignmentStatus"
+      ],
+      "interactions": [
+        "focus_condition",
+        "show_evidence",
+        "show_limitation"
+      ],
+      "rule": "Pattern never visually overrides contradictory base facts"
+    },
+    "VIS-LY-013": {
+      "input_viewmodel": "DecisionComparisonViewModel",
+      "required_fields": [
+        "options[]",
+        "comparisonDimensions[]",
+        "resultRefs[]",
+        "uncertainties[]",
+        "comparisonScope"
+      ],
+      "interactions": [
+        "select_option",
+        "select_dimension",
+        "show_source_result"
+      ],
+      "rule": "comparison consumes already-produced results; never merges separate questions into a new divination"
+    },
+    "VIS-LY-014": {
+      "input_viewmodel": "CalculationReasoningFlowViewModel",
+      "required_fields": [
+        "steps[]",
+        "activeStepId?",
+        "statusByStep",
+        "evidenceRefs[]",
+        "versionLabels[]"
+      ],
+      "interactions": [
+        "focus_step",
+        "show_version",
+        "show_evidence"
+      ],
+      "rule": "educational flow may simplify labels but must preserve actual product ordering"
+    }
+  }
+}

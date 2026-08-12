@@ -1,0 +1,264 @@
+{
+  "version": "1.0",
+  "registry": [
+    {
+      "id": "VIS-LY-001",
+      "name": "Six-Line Hexagram Board",
+      "component_key": "six_line_board",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-002",
+      "name": "Primary → Changed Hexagram",
+      "component_key": "primary_changed_hexagram",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-003",
+      "name": "Casting Sequence",
+      "component_key": "casting_sequence",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "casting",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-004",
+      "name": "Yongshen & Role Evidence Map",
+      "component_key": "yongshen_evidence",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-005",
+      "name": "Shi / Ying Relationship",
+      "component_key": "shi_ying_relationship",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-006",
+      "name": "Six Relations Role Map",
+      "component_key": "six_relations_role_map",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "academy",
+        "blog",
+        "knowledge",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-007",
+      "name": "Strength & State Matrix",
+      "component_key": "strength_state_matrix",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-008",
+      "name": "Dynamic Transformation Graph",
+      "component_key": "dynamic_transformation",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-009",
+      "name": "Evidence Conflict Graph",
+      "component_key": "evidence_conflict",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "academy",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-010",
+      "name": "Timing Timeline",
+      "component_key": "timing_timeline",
+      "priority": "P0",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-011",
+      "name": "Support / Risk Decision Map",
+      "component_key": "support_risk_decision",
+      "priority": "P1",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "topic",
+        "case",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-012",
+      "name": "Pattern Explanation Diagram",
+      "component_key": "pattern_explanation",
+      "priority": "P1",
+      "contexts": [
+        "professional",
+        "report",
+        "academy",
+        "blog",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-013",
+      "name": "Decision Comparison",
+      "component_key": "decision_comparison",
+      "priority": "P1",
+      "contexts": [
+        "guided",
+        "professional",
+        "report",
+        "topic",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    },
+    {
+      "id": "VIS-LY-014",
+      "name": "Calculation / Reasoning Flow",
+      "component_key": "calculation_reasoning_flow",
+      "priority": "P1",
+      "contexts": [
+        "academy",
+        "blog",
+        "professional",
+        "trust",
+        "static_export"
+      ],
+      "implementation": "react_svg",
+      "data_driven": true,
+      "source_of_truth": "ProductResultFacts / Professional Facts -> Presentation Facts -> Visualization ViewModel",
+      "must_support_static_fallback": true,
+      "must_not_recompute_domain_facts": true
+    }
+  ]
+}

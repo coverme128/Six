@@ -1,0 +1,177 @@
+{
+  "version": "1.0",
+  "rule": "ViewModels contain presentation-ready facts only; no domain calculation methods are allowed.",
+  "viewmodels": [
+    {
+      "visual_id": "VIS-LY-001",
+      "viewmodel": "SixLineBoardViewModel",
+      "required_or_supported_fields": [
+        "primaryHexagram",
+        "changedHexagram?",
+        "lines[]",
+        "movingLineIds[]",
+        "shiLineId?",
+        "yingLineId?",
+        "yongshenLineIds[]",
+        "highlightedLineIds[]",
+        "evidenceRefs[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-002",
+      "viewmodel": "PrimaryChangedHexagramViewModel",
+      "required_or_supported_fields": [
+        "primaryLines[]",
+        "changedLines[]",
+        "transformations[]",
+        "movingLineIds[]",
+        "selectedLineId?",
+        "evidenceRefs[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-003",
+      "viewmodel": "CastingSequenceViewModel",
+      "required_or_supported_fields": [
+        "steps[6]",
+        "currentStep",
+        "lineOrder",
+        "castingMethodLabel",
+        "mappingDisplay",
+        "mappingStatus"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-004",
+      "viewmodel": "YongshenEvidenceViewModel",
+      "required_or_supported_fields": [
+        "questionTopic",
+        "candidateRoles[]",
+        "selectedRole",
+        "yongshenTarget",
+        "supportingEvidence[]",
+        "conflictingEvidence[]",
+        "alignmentStatus"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-005",
+      "viewmodel": "ShiYingRelationshipViewModel",
+      "required_or_supported_fields": [
+        "shi",
+        "ying",
+        "relationEdges[]",
+        "contextLabels[]",
+        "supportingEvidence[]",
+        "constraints[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-006",
+      "viewmodel": "SixRelationsRoleMapViewModel",
+      "required_or_supported_fields": [
+        "questionTopic",
+        "roleNodes[]",
+        "relationCategories[]",
+        "contextNotes[]",
+        "selectedRoleId?"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-007",
+      "viewmodel": "StrengthStateMatrixViewModel",
+      "required_or_supported_fields": [
+        "targetEntities[]",
+        "timeEnvironment",
+        "stateFactors[]",
+        "specialStates[]",
+        "conflicts[]",
+        "overallPresentationState",
+        "evidenceRefs[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-008",
+      "viewmodel": "DynamicTransformationViewModel",
+      "required_or_supported_fields": [
+        "movingLines[]",
+        "changedLines[]",
+        "dynamicRelations[]",
+        "directionLabels[]",
+        "hiddenVisibleRelations[]",
+        "evidenceRefs[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-009",
+      "viewmodel": "EvidenceConflictViewModel",
+      "required_or_supported_fields": [
+        "supportEvidence[]",
+        "constraintEvidence[]",
+        "conflictEdges[]",
+        "resolutionStatus",
+        "dominantEvidenceIds[]",
+        "unresolvedEvidenceIds[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-010",
+      "viewmodel": "TimingTimelineViewModel",
+      "required_or_supported_fields": [
+        "windows[]",
+        "selectedWindowId?",
+        "uncertainty",
+        "supportingEvidence[]",
+        "constraints[]",
+        "currentTimeMarker?"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-011",
+      "viewmodel": "SupportRiskDecisionViewModel",
+      "required_or_supported_fields": [
+        "supports[]",
+        "risks[]",
+        "uncertainties[]",
+        "actions[]",
+        "selectionReason",
+        "evidenceRefs[]"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-012",
+      "viewmodel": "PatternExplanationViewModel",
+      "required_or_supported_fields": [
+        "patternRef",
+        "displayName",
+        "conditionFacts[]",
+        "relationshipFacts[]",
+        "supportingEvidence[]",
+        "limitations[]",
+        "alignmentStatus"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-013",
+      "viewmodel": "DecisionComparisonViewModel",
+      "required_or_supported_fields": [
+        "options[]",
+        "comparisonDimensions[]",
+        "resultRefs[]",
+        "uncertainties[]",
+        "comparisonScope"
+      ]
+    },
+    {
+      "visual_id": "VIS-LY-014",
+      "viewmodel": "CalculationReasoningFlowViewModel",
+      "required_or_supported_fields": [
+        "steps[]",
+        "activeStepId?",
+        "statusByStep",
+        "evidenceRefs[]",
+        "versionLabels[]"
+      ]
+    }
+  ]
+}

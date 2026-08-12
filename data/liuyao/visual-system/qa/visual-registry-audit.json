@@ -1,0 +1,20 @@
+{
+  "registered_visual_count": 14,
+  "registered_visual_ids_unique": true,
+  "p0_count": 10,
+  "p1_count": 4,
+  "viewmodel_contract_count": 14,
+  "component_contract_count": 14,
+  "reference_svg_count": 14,
+  "reference_svg_parse_errors": [],
+  "fixture_count": 12,
+  "editorial_template_count": 10,
+  "existing_content_visual_count": 68,
+  "canonicalization_action_counts": {
+    "DERIVE_FROM_REGISTERED_VISUAL": 48,
+    "EDITORIAL_TEMPLATE": 13,
+    "KEEP_STANDALONE_CONTENT_VISUAL": 7
+  },
+  "snippet_visual_mapping_count": 400,
+  "status": "PASS"
+}

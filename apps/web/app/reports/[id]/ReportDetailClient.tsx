@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
+import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
 
 function textList(items: Array<{ title?: string; text?: string }> = []) {
   return items.map((item) => `- ${item.text ?? item.title ?? ""}`).filter((item) => item.trim() !== "-").join("\n");
@@ -205,6 +206,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [report, setReport] = useState<ExperienceResponse | null>(null);
   const guided = report?.experience?.guidedViewModel;
   const professional = report?.experience?.professionalViewModel;
+  const visualization = report?.experience?.visualization;
   const contentSnippets = report?.experience?.contentExplanationSnippets ?? [];
   const relatedContent = report?.relatedContent ?? [];
   const aiReport = report?.aiReportBundle?.aiReport;
@@ -390,7 +392,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         </section>
       ) : null}
 
-      <ChartPanel chart={report?.chartViewModel} />
+      {report?.type === "liuyao" ? <LiuyaoVisualSystemPanel visualization={visualization} /> : null}
+      {report?.type !== "liuyao" || !visualization ? <ChartPanel chart={report?.chartViewModel} /> : null}
 
       {report?.aiReportBundle ? (
         <section className="panel report-section">

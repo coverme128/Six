@@ -169,7 +169,7 @@ function autoDigitalCoinLines() {
 }
 
 export function SixApiDemo() {
-  const [mode, setMode] = useState<DivinationMode>("liuyao");
+  const [mode] = useState<DivinationMode>("liuyao");
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState(scenarios[0]!.id);
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
@@ -224,12 +224,6 @@ export function SixApiDemo() {
     { label: "完成起卦", done: inputReady },
     { label: "生成报告", done: Boolean(report) }
   ];
-
-  function switchMode(nextMode: DivinationMode) {
-    setMode(nextMode);
-    setError("");
-    setReport(null);
-  }
 
   function switchLiuyaoCastMode(nextMode: LiuyaoCastMode) {
     setLiuyaoCastMode(nextMode);
@@ -348,15 +342,11 @@ export function SixApiDemo() {
         <span>知识卡可继续验证</span>
       </div>
 
-      <div className="mode-cards" aria-label="选择术法">
-        <button type="button" className={mode === "liuyao" ? "mode-card active" : "mode-card"} onClick={() => switchMode("liuyao")}>
+      <div className="mode-cards single" aria-label="当前术法">
+        <div className="mode-card active">
           <strong>六爻</strong>
-          <span>适合围绕一个具体问题，逐爻生成本卦、变卦和动爻。</span>
-        </button>
-        <button type="button" className={mode === "meihua" ? "mode-card active" : "mode-card"} onClick={() => switchMode("meihua")}>
-          <strong>梅花</strong>
-          <span>适合通过数字或时间快速生成本互变与体用关系。</span>
-        </button>
+          <span>围绕一个具体问题，逐爻生成本卦、变卦、动爻、世应和可复核证据。</span>
+        </div>
       </div>
 
       <ol className="flow-steps" aria-label="起卦步骤">

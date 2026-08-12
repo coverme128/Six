@@ -1,0 +1,18 @@
+{
+  "file_count_before_final_audit": 70,
+  "json_parse_error_count": 0,
+  "json_parse_errors": [],
+  "registered_visual_count": 14,
+  "reference_svg_count": 14,
+  "fixture_count": 12,
+  "editorial_template_count": 10,
+  "actual_existing_content_visual_count": 68,
+  "actual_snippet_visual_mapping_count": 400,
+  "hard_constraints": {
+    "professionalRulesModified": false,
+    "canonicalIdsInvented": false,
+    "historicalVisualIdsDeleted": 0,
+    "domainRecalculationInVisualLayer": false
+  },
+  "status": "PASS"
+}

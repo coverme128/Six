@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "fixtures": [
+    {
+      "fixture_id": "FIX-LY-001",
+      "name": "Basic Hexagram",
+      "visual_id": "VIS-LY-001"
+    },
+    {
+      "fixture_id": "FIX-LY-002",
+      "name": "No Moving Line",
+      "visual_id": "VIS-LY-002"
+    },
+    {
+      "fixture_id": "FIX-LY-003",
+      "name": "Single Moving Line",
+      "visual_id": "VIS-LY-002"
+    },
+    {
+      "fixture_id": "FIX-LY-004",
+      "name": "Multiple Moving Lines",
+      "visual_id": "VIS-LY-008"
+    },
+    {
+      "fixture_id": "FIX-LY-005",
+      "name": "Shi / Ying",
+      "visual_id": "VIS-LY-005"
+    },
+    {
+      "fixture_id": "FIX-LY-006",
+      "name": "Yongshen Support",
+      "visual_id": "VIS-LY-004"
+    },
+    {
+      "fixture_id": "FIX-LY-007",
+      "name": "Yongshen Constraint",
+      "visual_id": "VIS-LY-004"
+    },
+    {
+      "fixture_id": "FIX-LY-008",
+      "name": "Strength Mixed",
+      "visual_id": "VIS-LY-007"
+    },
+    {
+      "fixture_id": "FIX-LY-009",
+      "name": "Evidence Conflict",
+      "visual_id": "VIS-LY-009"
+    },
+    {
+      "fixture_id": "FIX-LY-010",
+      "name": "Multiple Timing Candidates",
+      "visual_id": "VIS-LY-010"
+    },
+    {
+      "fixture_id": "FIX-LY-011",
+      "name": "Insufficient Evidence",
+      "visual_id": "VIS-LY-009"
+    },
+    {
+      "fixture_id": "FIX-LY-012",
+      "name": "AI Fallback Report",
+      "visual_id": "VIS-LY-011"
+    }
+  ]
+}

@@ -16,6 +16,17 @@
   --accent-2-soft: #f6e9e6;
   --jade: #5c766d;
   --shadow-subtle: 0 12px 28px rgba(46, 54, 47, 0.06);
+  --ly-canvas: #F6F1E7;
+  --ly-panel: #FBF8F1;
+  --ly-panel-alt: #EFE8DB;
+  --ly-ink: #171717;
+  --ly-muted: #5D5A54;
+  --ly-line: #CFC5B6;
+  --ly-cinnabar: #A33A2B;
+  --ly-jade: #496F63;
+  --ly-gold: #9A7A43;
+  --ly-ink-blue: #384C5F;
+  --ly-ochre: #9A6A36;
 }
 
 * {
@@ -392,9 +403,14 @@ article {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-button.mode-card {
+.mode-cards.single {
+  grid-template-columns: 1fr;
+}
+
+.mode-card {
   background: var(--paper-soft);
   border: 1px solid var(--line);
+  border-radius: 8px;
   color: var(--ink);
   display: grid;
   gap: 6px;
@@ -405,17 +421,17 @@ button.mode-card {
 }
 
 button.mode-card:hover,
-button.mode-card.active {
+.mode-card.active {
   background: var(--accent-soft);
   border-color: rgba(36, 93, 82, 0.38);
   color: var(--accent-ink);
 }
 
-button.mode-card strong {
+.mode-card strong {
   font-size: 1.12rem;
 }
 
-button.mode-card span {
+.mode-card span {
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 500;
@@ -1600,6 +1616,406 @@ article p:last-child {
   font-weight: 650;
 }
 
+.ly-visual-system {
+  background: var(--ly-panel);
+  border-color: var(--ly-line);
+}
+
+.ly-section-head {
+  align-items: start;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, auto);
+}
+
+.ly-readiness {
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  padding: 10px 12px;
+}
+
+.ly-readiness span,
+.ly-readiness strong,
+.ly-card-title span,
+.ly-policy {
+  color: var(--ly-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.ly-readiness strong {
+  color: var(--ly-ink-blue);
+}
+
+.ly-primary-layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  margin-top: 16px;
+}
+
+.ly-side-stack,
+.ly-visual-grid,
+.ly-mini-list,
+.ly-board-lines {
+  display: grid;
+  gap: 12px;
+}
+
+.ly-board,
+.ly-card {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.ly-board-head {
+  align-items: center;
+  border-bottom: 1px solid var(--ly-line);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr auto 1fr;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.ly-board-head div {
+  background: var(--ly-panel-alt);
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  min-height: 66px;
+  padding: 10px;
+  text-align: center;
+}
+
+.ly-board-head span,
+.ly-board-line small,
+.ly-card p,
+.ly-role-grid small,
+.ly-shiying small,
+.ly-relation-map small,
+.ly-matrix small,
+.ly-policy {
+  color: var(--ly-muted);
+}
+
+.ly-board-head strong {
+  color: var(--ly-ink);
+  font-size: 1.32rem;
+}
+
+.ly-board-head b {
+  color: var(--ly-gold);
+}
+
+.ly-board-line {
+  align-items: center;
+  background: var(--ly-panel);
+  border: 1px solid var(--ly-line);
+  color: var(--ly-ink);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 58px 126px minmax(96px, 0.72fr) minmax(130px, 0.8fr) minmax(180px, 1fr);
+  min-height: 66px;
+  padding: 10px 12px;
+  text-align: left;
+  white-space: normal;
+}
+
+.ly-board-line:hover,
+.ly-board-line:focus-visible {
+  background: #fffdf7;
+  border-color: var(--ly-gold);
+}
+
+.ly-line-label {
+  color: var(--ly-muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.ly-line-main {
+  display: grid;
+  gap: 3px;
+}
+
+.ly-line-main strong,
+.ly-card-title strong,
+.ly-transition strong,
+.ly-role-grid strong,
+.ly-shiying strong,
+.ly-relation-map strong,
+.ly-matrix strong,
+.ly-timeline strong,
+.ly-evidence-columns strong {
+  color: var(--ly-ink);
+}
+
+.ly-line {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  width: 126px;
+}
+
+.ly-line i {
+  background: var(--ly-ink);
+  border-radius: 2px;
+  display: block;
+  height: 8px;
+}
+
+.ly-line:has(i + i) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ly-line.moving i {
+  background: var(--ly-gold);
+  box-shadow: inset 0 -2px 0 rgba(23, 23, 23, 0.14);
+}
+
+.ly-line-tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ly-marker {
+  align-items: center;
+  background: var(--ly-panel-alt);
+  border: 1px solid var(--ly-line);
+  border-radius: 999px;
+  color: var(--ly-ink);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  min-height: 24px;
+  padding: 2px 8px;
+}
+
+.ly-marker.moving {
+  background: rgba(154, 122, 67, 0.15);
+  border-color: rgba(154, 122, 67, 0.48);
+  color: var(--ly-gold);
+}
+
+.ly-marker.shi {
+  background: rgba(56, 76, 95, 0.12);
+  border-color: rgba(56, 76, 95, 0.42);
+  color: var(--ly-ink-blue);
+}
+
+.ly-marker.ying {
+  background: rgba(73, 111, 99, 0.13);
+  border-color: rgba(73, 111, 99, 0.42);
+  color: var(--ly-jade);
+}
+
+.ly-marker.risk {
+  background: rgba(163, 58, 43, 0.1);
+  border-color: rgba(163, 58, 43, 0.36);
+  color: var(--ly-cinnabar);
+}
+
+.ly-marker.support {
+  background: rgba(154, 122, 67, 0.13);
+  border-color: rgba(154, 122, 67, 0.42);
+  color: var(--ly-gold);
+}
+
+.ly-line-evidence {
+  color: var(--ly-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.ly-card-title {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.ly-card-compact {
+  min-height: 158px;
+}
+
+.ly-wide-card {
+  grid-column: span 2;
+}
+
+.ly-transition {
+  align-items: center;
+  background: var(--ly-panel-alt);
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr auto 1fr;
+  min-height: 58px;
+  padding: 10px;
+  text-align: center;
+}
+
+.ly-transition span {
+  color: var(--ly-muted);
+  font-size: 0.82rem;
+}
+
+.ly-cast-sequence,
+.ly-role-grid,
+.ly-shiying,
+.ly-relation-map,
+.ly-matrix,
+.ly-evidence-columns {
+  display: grid;
+  gap: 10px;
+}
+
+.ly-cast-sequence {
+  grid-template-columns: repeat(6, minmax(84px, 1fr));
+}
+
+.ly-cast-sequence div,
+.ly-role-grid div,
+.ly-shiying div,
+.ly-relation-map div,
+.ly-matrix div,
+.ly-timeline div,
+.ly-evidence-columns div {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+}
+
+.ly-cast-sequence .ly-line {
+  width: 100%;
+}
+
+.ly-role-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 12px 0;
+}
+
+.ly-role-grid span {
+  color: var(--ly-ink-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.ly-shiying {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ly-relation-map {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ly-matrix {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ly-matrix p {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ly-mini-list p {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+}
+
+.ly-conflict-summary {
+  align-items: start;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto minmax(0, 1fr);
+  margin-bottom: 10px;
+}
+
+.ly-evidence-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ly-timeline {
+  border-left: 2px solid var(--ly-line);
+  display: grid;
+  gap: 10px;
+  margin-left: 10px;
+  padding-left: 12px;
+}
+
+.ly-timeline div {
+  position: relative;
+}
+
+.ly-timeline span {
+  align-items: center;
+  background: var(--ly-ink-blue);
+  border-radius: 999px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  height: 22px;
+  justify-content: center;
+  left: -24px;
+  position: absolute;
+  top: 10px;
+  width: 22px;
+}
+
+.ly-empty {
+  background: var(--ly-panel-alt);
+  border: 1px solid var(--ly-line);
+  border-radius: 8px;
+  color: var(--ly-muted);
+  font-size: 0.88rem;
+  margin: 0;
+  padding: 10px;
+}
+
+.ly-layer-tabs {
+  display: none;
+}
+
+.ly-visual-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 14px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ly-line.moving i {
+    animation: ly-moving-pulse 1800ms ease-in-out infinite;
+  }
+}
+
+@keyframes ly-moving-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
 @media (max-width: 640px) {
   .shell {
     width: min(100% - 24px, 1180px);
@@ -1716,6 +2132,77 @@ article p:last-child {
 
   .hex-line {
     width: 100%;
+  }
+
+  .ly-section-head,
+  .ly-primary-layout,
+  .ly-visual-grid,
+  .ly-wide-card,
+  .ly-evidence-columns,
+  .ly-role-grid,
+  .ly-shiying,
+  .ly-relation-map,
+  .ly-matrix {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .ly-readiness {
+    justify-items: start;
+  }
+
+  .ly-board {
+    padding: 12px;
+  }
+
+  .ly-board-head {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .ly-board-line {
+    grid-template-columns: 48px minmax(96px, 1fr) auto;
+    min-height: 84px;
+  }
+
+  .ly-board-line .ly-line-main,
+  .ly-board-line .ly-line-evidence {
+    grid-column: 1 / -1;
+  }
+
+  .ly-line {
+    width: 100%;
+  }
+
+  .ly-line-tags {
+    justify-content: flex-end;
+  }
+
+  .ly-layer-tabs {
+    background: var(--ly-panel-alt);
+    border: 1px solid var(--ly-line);
+    border-radius: 8px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 12px;
+    padding: 4px;
+  }
+
+  .ly-layer-tabs span {
+    color: var(--ly-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    min-height: 34px;
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  .ly-cast-sequence {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ly-transition {
+    grid-template-columns: 1fr;
   }
 
   .form-actions button {

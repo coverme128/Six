@@ -1,0 +1,20 @@
+{
+  "fixture_count": 12,
+  "visual_ids_covered": [
+    "VIS-LY-001",
+    "VIS-LY-002",
+    "VIS-LY-004",
+    "VIS-LY-005",
+    "VIS-LY-007",
+    "VIS-LY-008",
+    "VIS-LY-009",
+    "VIS-LY-010",
+    "VIS-LY-011"
+  ],
+  "missing_p0_visual_fixture_ids": [
+    "VIS-LY-003",
+    "VIS-LY-006"
+  ],
+  "status": "PASS_WITH_TARGETED_FIXTURES",
+  "note": "Fixtures cover critical state classes, not one fixture per component."
+}

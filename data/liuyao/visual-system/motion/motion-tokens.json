@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "durations_ms": {
+    "focus": 180,
+    "layer_reveal": 320,
+    "relation_trace": 480,
+    "educational_sequence": 720
+  },
+  "easing": {
+    "standard": "cubic-bezier(0.2,0,0,1)",
+    "emphasis": "cubic-bezier(0.2,0,0,1)"
+  },
+  "max_parallel_semantic_animations": 2,
+  "decorative_animation": "forbidden_in_product"
+}

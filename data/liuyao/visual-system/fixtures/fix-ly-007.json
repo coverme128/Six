@@ -1,0 +1,27 @@
+{
+  "fixture_id": "FIX-LY-007",
+  "fixture_type": "VISUAL_FIXTURE",
+  "name": "Yongshen Constraint",
+  "visual_id": "VIS-LY-004",
+  "description": "Core focus with constraint evidence.",
+  "domain": "LIUYAO",
+  "golden_status": "NOT_GOLDEN",
+  "facts_are_synthetic_for_visual_testing": true,
+  "input_viewmodel_ref": "YongshenEvidenceViewModel",
+  "expected_states": [
+    "ready",
+    "partial"
+  ],
+  "forbidden": [
+    "domain recalculation",
+    "invented rule ID",
+    "guaranteed result",
+    "raw JSON leakage"
+  ],
+  "acceptance": [
+    "renders without crash",
+    "non-color semantics",
+    "mobile adaptation available",
+    "static fallback available"
+  ]
+}

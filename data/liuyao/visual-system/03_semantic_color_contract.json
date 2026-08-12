@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "rule": "Color may reinforce meaning but must never be the only semantic carrier.",
+  "semantics": [
+    {
+      "token": "state.support",
+      "meaning": "supported / enabling",
+      "required_secondary_encoding": [
+        "label",
+        "edge direction or icon/shape"
+      ]
+    },
+    {
+      "token": "state.risk",
+      "meaning": "constraint / risk",
+      "required_secondary_encoding": [
+        "label",
+        "edge pattern or icon/shape"
+      ]
+    },
+    {
+      "token": "state.uncertain",
+      "meaning": "uncertain / unresolved",
+      "required_secondary_encoding": [
+        "label",
+        "dashed boundary or question marker"
+      ]
+    },
+    {
+      "token": "line.moving",
+      "meaning": "moving line",
+      "required_secondary_encoding": [
+        "movement marker",
+        "text label",
+        "optional motion"
+      ]
+    },
+    {
+      "token": "role.shi",
+      "meaning": "Shi coordinate",
+      "required_secondary_encoding": [
+        "世 label"
+      ]
+    },
+    {
+      "token": "role.ying",
+      "meaning": "Ying coordinate",
+      "required_secondary_encoding": [
+        "应 label"
+      ]
+    }
+  ],
+  "forbidden": [
+    "green=good / red=bad without text",
+    "yang=good / yin=bad",
+    "moving=bad / static=good",
+    "confidence implied only by saturation"
+  ]
+}

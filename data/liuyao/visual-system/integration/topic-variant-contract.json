@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "topics": [
+    "CAREER_WORK",
+    "BUSINESS_PARTNERSHIP",
+    "FINANCE_PROJECT",
+    "RELATIONSHIP",
+    "EXAM_JOB_SEARCH",
+    "TRAVEL_PLANNING"
+  ],
+  "rule": "Topic variant may change labels, selected fields, examples and editorial framing; it may not change the underlying visual fact semantics or domain rules.",
+  "allowed": [
+    "context labels",
+    "priority of already-resolved presentation items",
+    "editorial title/caption",
+    "related knowledge links"
+  ],
+  "forbidden": [
+    "new Yongshen selection",
+    "new role mapping",
+    "new strength weighting",
+    "new timing rule",
+    "result-direction override"
+  ]
+}

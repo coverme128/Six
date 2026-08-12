@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "states": [
+    {
+      "state": "loading",
+      "behavior": "skeleton preserves final geometry; no fake facts"
+    },
+    {
+      "state": "empty",
+      "behavior": "explain why visual is unavailable and what user can do"
+    },
+    {
+      "state": "partial",
+      "behavior": "show known facts and mark missing layers explicitly"
+    },
+    {
+      "state": "ready",
+      "behavior": "normal interactive/render state"
+    },
+    {
+      "state": "error",
+      "behavior": "core report remains usable; visualization failure is auxiliary"
+    },
+    {
+      "state": "unsupported",
+      "behavior": "fallback to text explanation or static supported subset"
+    }
+  ]
+}

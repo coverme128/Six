@@ -79,6 +79,7 @@ export function publicExperience(value: unknown) {
   return {
     guidedViewModel: publicViewModel(experience.guidedViewModel),
     professionalViewModel: publicViewModel(experience.professionalViewModel),
+    visualization: experience.visualization ?? null,
     contentExplanationSnippets: Array.isArray(experience.contentExplanationSnippets)
       ? experience.contentExplanationSnippets
       : []

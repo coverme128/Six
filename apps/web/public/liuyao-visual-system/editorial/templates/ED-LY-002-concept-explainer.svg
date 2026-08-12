@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ED-LY-002 Concept Explainer</title>
+  <desc id="desc">A deterministic editorial SVG template for explaining Liuyao concepts without encoding report facts.</desc>
+  <rect width="1200" height="630" fill="#F6F1E7"/>
+  <rect x="60" y="56" width="1080" height="518" rx="8" fill="#FBF8F1" stroke="#CFC5B6"/>
+  <text x="96" y="118" fill="#A33A2B" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700">CONCEPT EXPLAINER</text>
+  <text x="96" y="170" fill="#171717" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="48" font-weight="650">六爻概念解释</text>
+  <text x="96" y="214" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24">从事实来源、角色关系和证据边界理解报告</text>
+  <g transform="translate(100 276)">
+    <rect width="250" height="170" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="24" y="48" fill="#384C5F" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">事实</text>
+    <text x="24" y="90" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">排盘 / 历法 / 爻位</text>
+    <line x1="24" y1="122" x2="210" y2="122" stroke="#171717" stroke-width="8" stroke-linecap="round"/>
+    <line x1="24" y1="146" x2="210" y2="146" stroke="#171717" stroke-width="8" stroke-linecap="round" stroke-dasharray="78 30 78"/>
+  </g>
+  <g transform="translate(475 276)">
+    <rect width="250" height="170" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="24" y="48" fill="#496F63" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">关系</text>
+    <text x="24" y="90" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">世应 / 六亲 / 焦点</text>
+    <circle cx="72" cy="132" r="16" fill="#384C5F"/>
+    <circle cx="178" cy="132" r="16" fill="#496F63"/>
+    <path d="M88 132 C118 106 136 106 162 132" fill="none" stroke="#9A7A43" stroke-width="4"/>
+  </g>
+  <g transform="translate(850 276)">
+    <rect width="250" height="170" rx="8" fill="#EFE8DB" stroke="#CFC5B6"/>
+    <text x="24" y="48" fill="#9A7A43" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">证据</text>
+    <text x="24" y="90" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">支持 / 风险 / 时间</text>
+    <path d="M42 140 L96 112 L148 132 L210 98" fill="none" stroke="#496F63" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="96" cy="112" r="8" fill="#9A7A43"/>
+    <circle cx="148" cy="132" r="8" fill="#A33A2B"/>
+  </g>
+  <path d="M360 360 H454" stroke="#9A7A43" stroke-width="3" stroke-dasharray="8 10"/>
+  <path d="M735 360 H828" stroke="#9A7A43" stroke-width="3" stroke-dasharray="8 10"/>
+  <text x="96" y="528" fill="#5D5A54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">视觉只解释已存在事实，不重新排盘、不改用神、不创造判断。</text>
+</svg>
