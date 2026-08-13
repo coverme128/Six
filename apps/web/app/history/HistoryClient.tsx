@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AppNav } from "../AppNav";
-import { apiBase, readError, type DivinationMode, type ReportSummary } from "../lib/api";
+import { apiBase, readError, type ReportSummary } from "../lib/api";
 
 export function HistoryClient() {
   const [loading, setLoading] = useState(true);
@@ -10,7 +10,6 @@ export function HistoryClient() {
   const [error, setError] = useState("");
   const [reports, setReports] = useState<ReportSummary[]>([]);
   const [query, setQuery] = useState("");
-  const [typeFilter, setTypeFilter] = useState<"all" | DivinationMode>("all");
 
   async function loadReports() {
     setLoading(true);
@@ -33,12 +32,10 @@ export function HistoryClient() {
 
   const filteredReports = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    return reports.filter((report) => {
-      const typeMatched = typeFilter === "all" || report.type === typeFilter;
-      const queryMatched = !normalized || report.question.toLowerCase().includes(normalized) || report.id.toLowerCase().includes(normalized);
-      return typeMatched && queryMatched;
-    });
-  }, [query, reports, typeFilter]);
+    return reports.filter((report) => report.type === "liuyao" && (
+      !normalized || report.question.toLowerCase().includes(normalized) || report.id.toLowerCase().includes(normalized)
+    ));
+  }, [query, reports]);
 
   async function deleteReport(id: string) {
     setMutating(true);
@@ -81,11 +78,6 @@ export function HistoryClient() {
       <section className="panel">
         <div className="history-toolbar">
           <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索问题或报告编号" />
-          <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value as "all" | DivinationMode)}>
-            <option value="all">全部类型</option>
-            <option value="liuyao">六爻</option>
-            <option value="meihua">梅花</option>
-          </select>
           <button type="button" className="secondary" onClick={loadReports} disabled={loading || mutating}>
             刷新
           </button>
@@ -103,7 +95,7 @@ export function HistoryClient() {
         {filteredReports.map((report) => (
           <article className="history-card" key={report.id}>
             <a className="history-item" href={`/reports/${encodeURIComponent(report.id)}`}>
-              <span>{report.type === "meihua" ? "梅花" : "六爻"}</span>
+              <span>六爻</span>
               <strong>{report.question || "未命名问题"}</strong>
               <small>
                 {new Date(report.createdAt).toLocaleString("zh-CN")} / {report.persistence ?? "memory"}
@@ -120,7 +112,7 @@ export function HistoryClient() {
         <p className="empty">当前还没有报告。返回首页完成一次起卦后，这里会显示可继续阅读的记录。</p>
       ) : null}
       {!loading && !error && reports.length > 0 && filteredReports.length === 0 ? (
-        <p className="empty">没有匹配的报告。可以调整搜索词或类型筛选。</p>
+        <p className="empty">没有匹配的六爻报告。可以调整搜索词。</p>
       ) : null}
     </main>
   );

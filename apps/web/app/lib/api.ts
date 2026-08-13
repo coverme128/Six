@@ -22,6 +22,18 @@ export type GuidedViewModel = {
   changeDirection?: string;
   timingHint?: string;
   recommendedActions?: string[];
+  scenarioGuidance?: {
+    scenario?: string;
+    label?: string;
+    headline?: string;
+    direction?: string;
+    interactionTrend?: string;
+    decisionFocus?: string;
+    selfSignal?: { state?: string; summary?: string; evidence?: string };
+    otherSignal?: { state?: string; summary?: string; evidence?: string };
+    nextSteps?: string[];
+    boundary?: string;
+  } | null;
   mainSupports?: Array<{ title?: string; text?: string }>;
   mainRisks?: Array<{ title?: string; text?: string }>;
   whyThisAssessment?: {
@@ -262,7 +274,7 @@ export type ContentDetail = ContentSummary & {
 
 export type PublicSettings = {
   timezone: string;
-  defaultCastMethod: "liuyao_manual" | "meihua_two_number";
+  defaultCastMethod: "liuyao_manual";
   terminology: "beginner" | "professional";
   reportLanguage: "zh-CN" | "en-US";
 };

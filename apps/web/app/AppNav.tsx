@@ -14,8 +14,8 @@ export function AppNav({ current = "workbench" }: AppNavProps) {
       <a className="brand" href="/">
         <span className="brand-mark">六</span>
         <span>
-          <strong>六爻与梅花</strong>
-          <small>专业排盘与报告</small>
+          <strong>六爻</strong>
+          <small>专业分析与可复核报告</small>
         </span>
       </a>
       <div className="nav-links">

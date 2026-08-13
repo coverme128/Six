@@ -1,7 +1,7 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
-import { apiBase, readError, type DivinationMode, type ExperienceResponse } from "./lib/api";
+import { FormEvent, useEffect, useMemo, useState } from "react";
+import { apiBase, readError, type ExperienceResponse } from "./lib/api";
 
 const lineOptions = [
   { value: "6", label: "老阴 6", short: "老阴", moving: true },
@@ -10,10 +10,7 @@ const lineOptions = [
   { value: "9", label: "老阳 9", short: "老阳", moving: true }
 ];
 
-const branchOrdinals = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
-
 type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
-type MeihuaMethod = "MEIHUA_TWO_NUMBER_V1" | "MEIHUA_THREE_NUMBER_V1" | "MEIHUA_TIME_LUNAR_BRANCH_V1";
 
 const scenarios = [
   {
@@ -169,7 +166,6 @@ function autoDigitalCoinLines() {
 }
 
 export function SixApiDemo() {
-  const [mode] = useState<DivinationMode>("liuyao");
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState(scenarios[0]!.id);
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
@@ -179,14 +175,6 @@ export function SixApiDemo() {
     Array.from({ length: 6 }, () => ["", "", ""])
   );
   const [liuyaoValues, setLiuyaoValues] = useState(["", "", "", "", "", ""]);
-  const [meihuaMethod, setMeihuaMethod] = useState<MeihuaMethod>("MEIHUA_TWO_NUMBER_V1");
-  const [meihuaA, setMeihuaA] = useState("");
-  const [meihuaB, setMeihuaB] = useState("");
-  const [meihuaC, setMeihuaC] = useState("");
-  const [lunarMonth, setLunarMonth] = useState("");
-  const [lunarDay, setLunarDay] = useState("");
-  const [yearBranchOrdinal, setYearBranchOrdinal] = useState("");
-  const [hourBranchOrdinal, setHourBranchOrdinal] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
@@ -199,6 +187,12 @@ export function SixApiDemo() {
   );
   const supports = useMemo(() => guided?.mainSupports?.slice(0, 3) ?? [], [guided]);
   const risks = useMemo(() => guided?.mainRisks?.slice(0, 3) ?? [], [guided]);
+
+  useEffect(() => {
+    const requestedScenario = new URLSearchParams(window.location.search).get("scenario");
+    const matched = scenarios.find((item) => item.topic === requestedScenario || item.id === requestedScenario);
+    if (matched) setScenarioId(matched.id);
+  }, []);
   const castValues = useMemo(
     () => {
       if (liuyaoCastMode === "manual") return liuyaoValues.map((item) => Number(item));
@@ -210,14 +204,8 @@ export function SixApiDemo() {
   const digitalCoinsReady = digitalCoinsStarted && digitalCoinLines.every((coins) => coins.length === 3 && coins.every((coin) => coin === "2" || coin === "3"));
   const manualReady = liuyaoValues.every((item) => ["6", "7", "8", "9"].includes(item));
   const liuyaoReady = liuyaoCastMode === "manual" ? manualReady : (liuyaoCastMode === "digitalCoins" ? digitalCoinsReady : coinLines.length === 6);
-  const meihuaReady =
-    meihuaMethod === "MEIHUA_TWO_NUMBER_V1"
-      ? Boolean(meihuaA && meihuaB)
-      : meihuaMethod === "MEIHUA_THREE_NUMBER_V1"
-        ? Boolean(meihuaA && meihuaB && meihuaC)
-        : Boolean(lunarMonth && lunarDay && yearBranchOrdinal && hourBranchOrdinal);
-  const canGenerate = Boolean(question.trim()) && (mode === "liuyao" ? liuyaoReady : meihuaReady);
-  const inputReady = mode === "liuyao" ? liuyaoReady : meihuaReady;
+  const canGenerate = Boolean(question.trim()) && liuyaoReady;
+  const inputReady = liuyaoReady;
   const steps = [
     { label: "选择场景", done: true },
     { label: "填写问题", done: Boolean(question.trim()) },
@@ -231,12 +219,6 @@ export function SixApiDemo() {
     setDigitalCoinsStarted(false);
     setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
     setLiuyaoValues(["", "", "", "", "", ""]);
-    setError("");
-    setReport(null);
-  }
-
-  function switchMeihuaMethod(nextMethod: MeihuaMethod) {
-    setMeihuaMethod(nextMethod);
     setError("");
     setReport(null);
   }
@@ -273,41 +255,22 @@ export function SixApiDemo() {
 
     if (!canGenerate) {
       setLoading(false);
-      setError(mode === "liuyao" ? "请先填写问题并完成六爻生成。" : "请先填写问题并完成梅花起卦输入。");
+      setError("请先填写问题并完成六爻生成。");
       return;
     }
 
-    const endpoint = mode === "liuyao" ? "liuyao/charts" : "meihua/charts";
-    const payload =
-      mode === "liuyao"
-        ? {
-            question,
-            topic: scenario.topic,
-            subtype: scenario.subtype,
-            ...(liuyaoCastMode === "manual" ? { values: castValues } : {}),
-            ...(liuyaoCastMode === "digitalCoins" ? { coins: digitalCoinLines.map((line) => line.map(Number)) } : {}),
-            ...(liuyaoCastMode === "coins" || liuyaoCastMode === "auto" ? { coins: coinLines } : {}),
-            calendar: { timezone: "Asia/Shanghai" }
-          }
-        : {
-            question,
-            methodCode: meihuaMethod,
-            ...(meihuaMethod === "MEIHUA_TWO_NUMBER_V1" ? { number_a: Number(meihuaA), number_b: Number(meihuaB) } : {}),
-            ...(meihuaMethod === "MEIHUA_THREE_NUMBER_V1"
-              ? { number_a: Number(meihuaA), number_b: Number(meihuaB), number_c: Number(meihuaC) }
-              : {}),
-            ...(meihuaMethod === "MEIHUA_TIME_LUNAR_BRANCH_V1"
-              ? {
-                  lunar_month: Number(lunarMonth),
-                  lunar_day: Number(lunarDay),
-                  year_branch_ordinal: Number(yearBranchOrdinal),
-                  hour_branch_ordinal: Number(hourBranchOrdinal)
-                }
-              : {})
-          };
+    const payload = {
+      question,
+      topic: scenario.topic,
+      subtype: scenario.subtype,
+      ...(liuyaoCastMode === "manual" ? { values: castValues } : {}),
+      ...(liuyaoCastMode === "digitalCoins" ? { coins: digitalCoinLines.map((line) => line.map(Number)) } : {}),
+      ...(liuyaoCastMode === "coins" || liuyaoCastMode === "auto" ? { coins: coinLines } : {}),
+      calendar: { timezone: "Asia/Shanghai" }
+    };
 
     try {
-      const created = await fetch(`${apiBase()}/${endpoint}`, {
+      const created = await fetch(`${apiBase()}/liuyao/charts`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(payload)
@@ -325,7 +288,7 @@ export function SixApiDemo() {
   }
 
   return (
-    <section className="workbench">
+    <section className="workbench" id="liuyao-workbench">
       <div className="workbench-header">
         <div>
           <p className="eyebrow">Workbench</p>
@@ -418,8 +381,7 @@ export function SixApiDemo() {
           </p>
         </label>
 
-        {mode === "liuyao" ? (
-          <fieldset>
+        <fieldset>
             <legend>六爻生成方式</legend>
             <div className="method-grid">
               <button type="button" className={liuyaoCastMode === "auto" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("auto")}>
@@ -568,93 +530,11 @@ export function SixApiDemo() {
                 </div>
               </div>
             )}
-          </fieldset>
-        ) : (
-          <fieldset>
-            <legend>梅花起卦方式</legend>
-            <div className="method-grid">
-              <button
-                type="button"
-                className={meihuaMethod === "MEIHUA_TWO_NUMBER_V1" ? "" : "secondary"}
-                onClick={() => switchMeihuaMethod("MEIHUA_TWO_NUMBER_V1")}
-              >
-                两数起卦
-              </button>
-              <button
-                type="button"
-                className={meihuaMethod === "MEIHUA_THREE_NUMBER_V1" ? "" : "secondary"}
-                onClick={() => switchMeihuaMethod("MEIHUA_THREE_NUMBER_V1")}
-              >
-                三数起卦
-              </button>
-              <button
-                type="button"
-                className={meihuaMethod === "MEIHUA_TIME_LUNAR_BRANCH_V1" ? "" : "secondary"}
-                onClick={() => switchMeihuaMethod("MEIHUA_TIME_LUNAR_BRANCH_V1")}
-              >
-                时间起卦
-              </button>
-            </div>
-            {meihuaMethod === "MEIHUA_TIME_LUNAR_BRANCH_V1" ? (
-              <div className="number-grid wide">
-                <label>
-                  <span>年支</span>
-                  <select value={yearBranchOrdinal} onChange={(event) => setYearBranchOrdinal(event.target.value)}>
-                    <option value="">选择年支</option>
-                    {branchOrdinals.map((name, index) => (
-                      <option key={name} value={index + 1}>
-                        {name}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  <span>农历月</span>
-                  <input type="number" min="1" max="12" value={lunarMonth} onChange={(event) => setLunarMonth(event.target.value)} />
-                </label>
-                <label>
-                  <span>农历日</span>
-                  <input type="number" min="1" max="30" value={lunarDay} onChange={(event) => setLunarDay(event.target.value)} />
-                </label>
-                <label>
-                  <span>时支</span>
-                  <select value={hourBranchOrdinal} onChange={(event) => setHourBranchOrdinal(event.target.value)}>
-                    <option value="">选择时支</option>
-                    {branchOrdinals.map((name, index) => (
-                      <option key={name} value={index + 1}>
-                        {name}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
-            ) : (
-              <div className={meihuaMethod === "MEIHUA_THREE_NUMBER_V1" ? "number-grid wide" : "number-grid"}>
-                <label>
-                  <span>上数</span>
-                  <input type="number" min="1" value={meihuaA} onChange={(event) => setMeihuaA(event.target.value)} />
-                </label>
-                <label>
-                  <span>下数</span>
-                  <input type="number" min="1" value={meihuaB} onChange={(event) => setMeihuaB(event.target.value)} />
-                </label>
-                {meihuaMethod === "MEIHUA_THREE_NUMBER_V1" ? (
-                  <label>
-                    <span>动爻数</span>
-                    <input type="number" min="1" value={meihuaC} onChange={(event) => setMeihuaC(event.target.value)} />
-                  </label>
-                ) : null}
-              </div>
-            )}
-            <p className="empty">
-              当前方式会生成本卦、互卦、变卦和体用关系。提交前请确认数字来源与你的问题对应。
-            </p>
-          </fieldset>
-        )}
+        </fieldset>
 
         <div className="confirmation-strip">
           <strong>起卦确认</strong>
-          <span>{mode === "liuyao" ? `六爻 / ${scenario.label} / ${liuyaoReady ? castValues.map((item) => lineInfo(item).short).join("、") : "尚未完成六爻"}` : `梅花 / ${scenario.label} / ${meihuaReady ? "输入已完成" : "尚未完成输入"}`}</span>
+          <span>{`六爻 / ${scenario.label} / ${liuyaoReady ? castValues.map((item) => lineInfo(item).short).join("、") : "尚未完成六爻"}`}</span>
         </div>
 
         <div className="form-actions">
@@ -682,10 +562,16 @@ export function SixApiDemo() {
       {guided ? (
         <div className="result-card">
           <div>
-            <p className="eyebrow">{report?.type === "meihua" ? "梅花报告" : "六爻报告"}</p>
-            <h3>{guided.headline}</h3>
-            <p>{guided.summary}</p>
+            <p className="eyebrow">六爻报告</p>
+            <h3>{guided.scenarioGuidance?.headline ?? guided.headline}</h3>
+            <p>{guided.scenarioGuidance?.decisionFocus ?? guided.summary}</p>
           </div>
+          {guided.scenarioGuidance?.scenario === "RELATIONSHIP" ? (
+            <div className="relationship-preview">
+              <div><span>你这边</span><strong>{guided.scenarioGuidance.selfSignal?.summary}</strong></div>
+              <div><span>对方与互动</span><strong>{guided.scenarioGuidance.otherSignal?.summary}</strong></div>
+            </div>
+          ) : null}
           <div className="result-actions">
             <a className="primary-link" href={`/reports/${encodeURIComponent(report.id)}`}>打开报告</a>
             <a className="text-link" href={`/reports/${encodeURIComponent(report.id)}#professional-evidence`}>查看依据</a>

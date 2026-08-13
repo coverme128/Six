@@ -25,8 +25,8 @@
     "NAVIGATIONAL": 1
   },
   "byReviewStatus": {
-    "PUBLICATION_READY": 206,
-    "REVIEW_REQUIRED": 215,
+    "PUBLICATION_READY": 213,
+    "REVIEW_REQUIRED": 208,
     "DEMO_ONLY": 182
   },
   "byPrimaryCTA": {

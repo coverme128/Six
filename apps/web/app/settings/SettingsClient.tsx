@@ -21,7 +21,8 @@ export function SettingsClient() {
       try {
         const response = await fetch(`${apiBase()}/settings`);
         if (!response.ok) throw new Error(await readError(response));
-        setSettings((await response.json()) as PublicSettings);
+        const loaded = (await response.json()) as PublicSettings;
+        setSettings({ ...loaded, defaultCastMethod: "liuyao_manual" });
       } catch (err) {
         setError(err instanceof Error ? err.message : "暂时无法读取设置");
       }
@@ -73,7 +74,6 @@ export function SettingsClient() {
               }
             >
               <option value="liuyao_manual">六爻手工</option>
-              <option value="meihua_two_number">梅花两数</option>
             </select>
           </label>
           <label>

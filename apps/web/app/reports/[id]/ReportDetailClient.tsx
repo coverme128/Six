@@ -14,10 +14,10 @@ function buildReadableMarkdown(report: ExperienceResponse) {
   const professional = report.experience?.professionalViewModel;
   const chart = report.chartViewModel;
   const lines = [
-    `# ${guided?.headline ?? "六爻与梅花报告"}`,
+    `# ${guided?.scenarioGuidance?.headline ?? guided?.headline ?? "六爻报告"}`,
     "",
     `报告编号：${report.id}`,
-    `类型：${report.type === "meihua" ? "梅花" : "六爻"}`,
+    "类型：六爻",
     report.createdAt ? `生成时间：${new Date(report.createdAt).toLocaleString("zh-CN")}` : "",
     "",
     "## 总体判断",
@@ -59,7 +59,7 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     "## 专业盘面",
     chart?.type === "liuyao"
       ? `本卦：${chart.originalHexagram ?? ""}\n变卦：${chart.changedHexagram ?? ""}\n动爻：${chart.movingLines?.join("、") || "无"}\n世爻：${chart.worldLine ?? ""}\n应爻：${chart.responseLine ?? ""}`
-      : `本卦：${chart?.originalHexagram ?? ""}\n互卦：${chart?.type === "meihua" ? chart.mutualHexagram ?? "" : ""}\n变卦：${chart?.changedHexagram ?? ""}\n体卦：${chart?.type === "meihua" ? chart.bodyTrigram ?? "" : ""}\n用卦：${chart?.type === "meihua" ? chart.useTrigram ?? "" : ""}\n体用关系：${chart?.type === "meihua" ? chart.relationship ?? "" : ""}`,
+      : "当前页面仅支持六爻报告。",
     "",
     "## 专业依据",
     "### 支持证据",
@@ -115,45 +115,7 @@ function LineTags({ line }: { line: NonNullable<Extract<ChartViewModel, { type: 
 }
 
 function ChartPanel({ chart }: { chart?: ChartViewModel }) {
-  if (!chart) return null;
-  if (chart.type === "meihua") {
-    return (
-      <section className="panel report-section">
-        <h2>专业盘面</h2>
-        <p className="section-kicker">梅花盘面以本卦、互卦、变卦和体用关系为核心。</p>
-        <div className="hexagram-summary">
-          <div>
-            <span>本卦</span>
-            <strong>{chart.originalHexagram}</strong>
-          </div>
-          <div>
-            <span>互卦</span>
-            <strong>{chart.mutualHexagram}</strong>
-          </div>
-          <div>
-            <span>变卦</span>
-            <strong>{chart.changedHexagram}</strong>
-          </div>
-        </div>
-        <div className="preview-grid">
-          <div>
-            <h3>动爻</h3>
-            <p>第 {chart.movingLine ?? "-"} 爻</p>
-          </div>
-          <div>
-            <h3>体用</h3>
-            <p>
-              体卦 {chart.bodyTrigram ?? "-"}，用卦 {chart.useTrigram ?? "-"}。
-            </p>
-          </div>
-          <div>
-            <h3>关系</h3>
-            <p>{chart.relationship ?? "暂无关系说明。"}</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  if (!chart || chart.type !== "liuyao") return null;
 
   const lines = [...(chart.lines ?? [])].sort((a, b) => Number(b.position ?? 0) - Number(a.position ?? 0));
   return (
@@ -282,9 +244,9 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       <AppNav current="report" />
 
       <section className="hero compact">
-        <p className="eyebrow">{report?.type === "meihua" ? "梅花" : "六爻"}报告</p>
-        <h1>{guided?.headline ?? "报告详情"}</h1>
-        <p>{guided?.summary ?? "正在整理本次报告的结论、依据和后续行动。"}</p>
+        <p className="eyebrow">六爻报告</p>
+        <h1>{guided?.scenarioGuidance?.headline ?? guided?.headline ?? "报告详情"}</h1>
+        <p>{guided?.scenarioGuidance?.decisionFocus ?? guided?.summary ?? "正在整理本次报告的结论、依据和后续行动。"}</p>
       </section>
 
       {loading ? <p className="empty">正在读取报告。</p> : null}
@@ -294,6 +256,28 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         <section className="panel report-section">
           <h2>结论摘要</h2>
           <p className="section-kicker">先看判断含义和下一步，专业盘面与证据用于复核来源。</p>
+          {guided.scenarioGuidance?.scenario === "RELATIONSHIP" ? (
+            <div className="relationship-summary" aria-label="感情关系结论">
+              <div className="relationship-direction">
+                <span>当前关系方向</span>
+                <strong>{guided.scenarioGuidance.direction}</strong>
+                <p>{guided.scenarioGuidance.interactionTrend}</p>
+              </div>
+              <div>
+                <span>你这边</span>
+                <strong>{guided.scenarioGuidance.selfSignal?.summary}</strong>
+              </div>
+              <div>
+                <span>对方与互动</span>
+                <strong>{guided.scenarioGuidance.otherSignal?.summary}</strong>
+              </div>
+              <div className="relationship-decision">
+                <span>现在更适合</span>
+                <strong>{guided.scenarioGuidance.decisionFocus}</strong>
+              </div>
+              <small>{guided.scenarioGuidance.boundary}</small>
+            </div>
+          ) : null}
           <div className="preview-grid">
             {guided.overallAssessment ? (
               <div>
@@ -393,7 +377,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       ) : null}
 
       {report?.type === "liuyao" ? <LiuyaoVisualSystemPanel visualization={visualization} /> : null}
-      {report?.type !== "liuyao" || !visualization ? <ChartPanel chart={report?.chartViewModel} /> : null}
+      {report?.type === "liuyao" && !visualization ? <ChartPanel chart={report?.chartViewModel} /> : null}
 
       {report?.aiReportBundle ? (
         <section className="panel report-section">

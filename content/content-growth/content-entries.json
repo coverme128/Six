@@ -38600,16 +38600,16 @@
         "title": "六爻商业、项目与合作专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕商业、项目与合作中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/business-partnership",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻商业、项目与合作专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕商业、项目与合作中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -38712,16 +38712,16 @@
         "title": "六爻事业与工作专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕事业与工作中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/career-work",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻事业与工作专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕事业与工作中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -38824,16 +38824,16 @@
         "title": "六爻考试、升学与求职准备专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕考试、升学与求职准备中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/exam-job-search",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻考试、升学与求职准备专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕考试、升学与求职准备中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -38936,16 +38936,16 @@
         "title": "六爻资金与财务专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕资金与财务中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/finance-project",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻资金与财务专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕资金与财务中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -39048,16 +39048,16 @@
         "title": "六爻感情与关系专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕感情与关系中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/relationship",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻感情与关系专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕感情与关系中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -39160,16 +39160,16 @@
         "title": "六爻出行、计划与安排专题｜现实问题提问、报告阅读与行动框架",
         "description": "围绕出行、计划与安排中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "canonicalPath": "/content/landing-page/travel-planning",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "六爻出行、计划与安排专题｜现实问题提问、报告阅读与行动框架",
         "ogDescription": "围绕出行、计划与安排中的真实用户任务，学习怎样提问、理解支持与风险、核实现实信息并进入六爻工具。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     },
     {
@@ -41304,16 +41304,16 @@
         "title": "用结构化方式学习六爻，并把知识连接到真实报告",
         "description": "从“六爻是什么”到起卦、报告阅读、专业依据和现实决策，按目标选择最短学习路径。",
         "canonicalPath": "/content/learning-path/liuyao-learn-hub",
-        "index": false,
-        "follow": false,
+        "index": true,
+        "follow": true,
         "ogTitle": "用结构化方式学习六爻，并把知识连接到真实报告",
         "ogDescription": "从“六爻是什么”到起卦、报告阅读、专业依据和现实决策，按目标选择最短学习路径。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "REVIEW_REQUIRED",
+      "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0.0",
-      "publishedAt": null,
+      "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     }
   ]

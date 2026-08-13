@@ -124,6 +124,33 @@ test("Liuyao scene selection drives automatic observation focus without user yon
   assert.ok(!publicText.includes("请确认用神"));
 });
 
+test("Relationship scene adds user-facing guidance without changing formal assessment facts", () => {
+  const result = createLiuyaoChart({
+    question: "未来三个月，这段关系是否适合继续推进？",
+    topic: "relationship",
+    subtype: "relationship_stability",
+    values: [8, 6, 8, 6, 9, 8],
+    calendar: { timezone: "Asia/Shanghai" },
+  });
+  result.narrativeReport = buildLiuyaoReport(result);
+  const bundle = buildExperienceBundle({ result, type: "liuyao" });
+  const guidance = bundle.guidedViewModel.scenarioGuidance;
+
+  assert.equal(guidance.scenario, "RELATIONSHIP");
+  assert.match(guidance.headline, /这段关系/u);
+  assert.ok(guidance.decisionFocus);
+  assert.ok(guidance.selfSignal.summary);
+  assert.ok(guidance.otherSignal.summary);
+  assert.deepEqual(
+    guidance.nextSteps,
+    bundle.productResultFacts.actionGuidanceFacts.items.slice(0, 3),
+  );
+  assert.equal(
+    bundle.guidedViewModel.overallAssessment.state,
+    bundle.productResultFacts.overallAssessmentFacts.overallState,
+  );
+});
+
 test("Admin viewmodel is only present when explicitly requested", () => {
   const bundle = buildExperienceBundle({ result: liuyaoResult(), type: "liuyao", includeAdmin: true });
   assert.ok(bundle.adminViewModel.rawFacts.chart);

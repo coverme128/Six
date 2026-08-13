@@ -19,6 +19,53 @@ function buildSummary(facts, supports, risks) {
   return `${supportText} ${riskText} 建议先看结论与下一步，再按需展开专业依据。`;
 }
 
+function relationshipDecisionFocus(state) {
+  if (state === "FAVORABLE") return "当前具备继续小步推进的条件，但仍要用对方的现实回应验证。";
+  if (state === "CAUTIOUS") return "先放慢推进，处理边界、压力或沟通问题，再决定下一步。";
+  if (state === "MIXED") return "先核对双方投入与核心矛盾，再决定是否加深承诺。";
+  if (state === "TRANSITIONAL") return "适合边沟通边观察变化，不宜在信号尚未稳定时仓促定性。";
+  return "当前信息还不足，先澄清关系目标与现实回应，不宜急着作最终判断。";
+}
+
+function relationshipPartySignal(signals, keyword, supportedText, pressuredText) {
+  const support = signals.supports.find((item) => item.text?.includes(keyword));
+  if (support) return { state: "SUPPORT", summary: supportedText, evidence: support.text };
+  const risk = signals.risks.find((item) => item.text?.includes(keyword));
+  if (risk) return { state: "PRESSURE", summary: pressuredText, evidence: risk.text };
+  return {
+    state: "OBSERVE",
+    summary: "当前没有足够直接的单一信号，需要结合双方现实互动继续观察。",
+    evidence: "报告保留不确定性，不用单项事实替代完整关系判断。",
+  };
+}
+
+function scenarioGuidance(presentationFacts, overall, supports, risks, actions) {
+  const topic = presentationFacts.topicRoleContext?.displayName ?? "";
+  if (!topic.includes("感情")) return null;
+  return {
+    scenario: "RELATIONSHIP",
+    label: "感情关系",
+    headline: `这段关系：${overall?.patternName ?? "仍需继续观察"}`,
+    direction: overall?.baseStateText ?? presentationFacts.situation.currentSituation,
+    interactionTrend: overall?.dynamicDirectionText ?? presentationFacts.situation.changeDirection,
+    decisionFocus: relationshipDecisionFocus(overall?.overallState),
+    selfSignal: relationshipPartySignal(
+      { supports, risks },
+      "世爻",
+      "你这边存在可以利用的主动条件，适合用清晰表达和稳定行动推进。",
+      "你这边当前承受一定压力，先照顾边界和节奏，再判断投入程度。",
+    ),
+    otherSignal: relationshipPartySignal(
+      { supports, risks },
+      "应爻",
+      "对方或外部回应存在支持信号，但仍要以持续、具体的现实行动验证。",
+      "对方或外部回应仍有压力，不宜只凭一次表态判断关系走向。",
+    ),
+    nextSteps: actions.slice(0, 3),
+    boundary: "报告帮助你整理互动结构，不替你判断爱意，也不替你决定是否继续关系。",
+  };
+}
+
 export function buildGuidedViewModel(facts) {
   const productFacts = isLiuyaoProductResultFacts(facts) ? facts : null;
   const presentationFacts = productPresentationFacts(facts);
@@ -68,6 +115,7 @@ export function buildGuidedViewModel(facts) {
     changeDirection: overall?.dynamicDirectionText ?? presentationFacts.situation.changeDirection,
     timingHint: timing ? `${timing.explanation} ${timing.limitation}` : timingHint(presentationFacts),
     recommendedActions: actions,
+    scenarioGuidance: scenarioGuidance(presentationFacts, overall, supports, risks, actions),
     whyThisAssessment: productFacts ? {
       conflictResolution: productFacts.conflictResolutionFacts.resolutionSummary,
       basis: productFacts.overallAssessmentFacts.basis,

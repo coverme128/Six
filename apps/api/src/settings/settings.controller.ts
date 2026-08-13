@@ -3,7 +3,7 @@ import { getPrismaClient } from "@six/database";
 
 type PublicSettings = {
   timezone: string;
-  defaultCastMethod: "liuyao_manual" | "meihua_two_number";
+  defaultCastMethod: "liuyao_manual";
   terminology: "beginner" | "professional";
   reportLanguage: "zh-CN" | "en-US";
 };
@@ -28,7 +28,7 @@ function validateTimezone(timezone: string) {
 function normalizeSettings(value: unknown): PublicSettings {
   const next = { ...defaultSettings, ...(value && typeof value === "object" ? value : {}) } as PublicSettings;
   validateTimezone(next.timezone);
-  if (!["liuyao_manual", "meihua_two_number"].includes(next.defaultCastMethod)) next.defaultCastMethod = defaultSettings.defaultCastMethod;
+  if (next.defaultCastMethod !== "liuyao_manual") next.defaultCastMethod = defaultSettings.defaultCastMethod;
   if (!["beginner", "professional"].includes(next.terminology)) next.terminology = defaultSettings.terminology;
   if (!["zh-CN", "en-US"].includes(next.reportLanguage)) next.reportLanguage = defaultSettings.reportLanguage;
   return next;
@@ -75,7 +75,7 @@ export class SettingsController {
     const current = await readStoredSettings();
     const next = { ...current, ...body };
     validateTimezone(next.timezone);
-    if (!["liuyao_manual", "meihua_two_number"].includes(next.defaultCastMethod)) {
+    if (next.defaultCastMethod !== "liuyao_manual") {
       throw new BadRequestException({ code: "VALIDATION_ERROR", message: "Unsupported default cast method." });
     }
     if (!["beginner", "professional"].includes(next.terminology)) {

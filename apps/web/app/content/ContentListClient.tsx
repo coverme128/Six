@@ -88,10 +88,12 @@ export function ContentListClient() {
   const [items, setItems] = useState<ContentSummary[]>([]);
   const [query, setQuery] = useState("");
   const [activeType, setActiveType] = useState("all");
+  const [libraryLimit, setLibraryLimit] = useState(24);
 
   async function loadContent(search = "") {
     setLoading(true);
     setError("");
+    setLibraryLimit(24);
     try {
       const endpoint = search.trim()
         ? `${apiBase()}/content/search?q=${encodeURIComponent(search.trim())}`
@@ -273,7 +275,10 @@ export function ContentListClient() {
                   <button
                     className={activeType === filter.key ? "active" : ""}
                     key={filter.key}
-                    onClick={() => setActiveType(filter.key)}
+                    onClick={() => {
+                      setActiveType(filter.key);
+                      setLibraryLimit(24);
+                    }}
                     type="button"
                   >
                     {filter.label}
@@ -282,9 +287,13 @@ export function ContentListClient() {
               </div>
             </div>
             <div className="library-list">
-              {visibleItems.slice(0, 120).map((item) => <ContentCard compact item={item} key={item.contentId} />)}
+              {visibleItems.slice(0, libraryLimit).map((item) => <ContentCard compact item={item} key={item.contentId} />)}
             </div>
-            {visibleItems.length > 120 ? <p className="quiet-empty">已显示前 120 条，可用搜索精确定位。</p> : null}
+            {visibleItems.length > libraryLimit ? (
+              <button className="secondary library-more" type="button" onClick={() => setLibraryLimit((value) => value + 24)}>
+                查看更多内容
+              </button>
+            ) : null}
           </section>
         </>
       ) : null}

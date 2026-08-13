@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "六爻与梅花专业排盘",
-  description: "确定性排盘、规则依据与 AI 白话解释分层呈现的六爻与梅花 Web 工具"
+  title: "六爻专业分析与可复核报告",
+  description: "围绕具体问题生成确定性六爻排盘、场景化结论、现实行动建议与可追溯专业依据。"
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

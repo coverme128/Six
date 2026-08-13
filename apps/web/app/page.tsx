@@ -7,10 +7,20 @@ export default function HomePage() {
       <AppNav current="workbench" />
 
       <section className="product-hero">
-        <div>
+        <div className="product-hero-copy">
           <p className="eyebrow">Liuyao</p>
-          <h1>为一个具体问题生成可复核报告</h1>
-          <p>确定性排盘先完成事实层，AI 只负责把正式结果解释成可读报告。你可以先看结论，也可以继续追溯盘面、证据和知识说明。</p>
+          <h1>把关系、事业与现实难题，看得更清楚</h1>
+          <p>围绕一个具体问题完成六爻分析。先看方向、支持、阻碍和下一步，再按需核对盘面与专业依据。</p>
+          <div className="hero-actions">
+            <a className="primary-link" href="#liuyao-workbench">开始六爻分析</a>
+            <a className="secondary-link" href="/content">进入学习中心</a>
+          </div>
+          <div className="hero-scenarios" aria-label="常用问题场景">
+            <a href="/?scenario=relationship#liuyao-workbench">感情关系</a>
+            <a href="/?scenario=career#liuyao-workbench">事业工作</a>
+            <a href="/?scenario=wealth#liuyao-workbench">收入财务</a>
+            <a href="/?scenario=business#liuyao-workbench">合作项目</a>
+          </div>
         </div>
         <div className="hero-report-preview" aria-label="报告结构预览">
           <span>结论</span>

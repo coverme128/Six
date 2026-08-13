@@ -86,7 +86,7 @@ function PrimaryChanged({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card ly-card-compact">
       <div className="ly-card-title">
-        <span>VIS-LY-002</span>
+        <span>卦象变化</span>
         <strong>本卦 / 变卦</strong>
       </div>
       <div className="ly-transition">
@@ -113,7 +113,7 @@ function CastingSequence({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card">
       <div className="ly-card-title">
-        <span>VIS-LY-003</span>
+        <span>生成记录</span>
         <strong>起卦序列</strong>
       </div>
       <div className="ly-cast-sequence" aria-label="从初爻到上爻的起卦序列">
@@ -133,7 +133,7 @@ function FocusPanel({ yongshen, shiYing }: { yongshen: VisualModel | null; shiYi
   return (
     <div className="ly-card ly-focus-card">
       <div className="ly-card-title">
-        <span>VIS-LY-004 / 005</span>
+        <span>关系坐标</span>
         <strong>核心焦点与世应</strong>
       </div>
       <p>{yongshen?.explanation ?? yongshen?.observationSummary ?? "本次报告未返回核心焦点说明。"}</p>
@@ -166,7 +166,7 @@ function SixRelations({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card">
       <div className="ly-card-title">
-        <span>VIS-LY-006</span>
+        <span>角色分布</span>
         <strong>六亲角色</strong>
       </div>
       <div className="ly-relation-map">
@@ -187,7 +187,7 @@ function StrengthMatrix({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card ly-wide-card">
       <div className="ly-card-title">
-        <span>VIS-LY-007</span>
+        <span>力量状态</span>
         <strong>状态矩阵</strong>
       </div>
       <div className="ly-matrix">
@@ -207,7 +207,7 @@ function Dynamics({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card">
       <div className="ly-card-title">
-        <span>VIS-LY-008</span>
+        <span>动态信号</span>
         <strong>动爻变化</strong>
       </div>
       <p>{model?.summary ?? "本报告没有额外变化方向说明。"}</p>
@@ -229,11 +229,11 @@ function EvidenceConflict({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card ly-wide-card">
       <div className="ly-card-title">
-        <span>VIS-LY-009</span>
+        <span>综合依据</span>
         <strong>证据冲突</strong>
       </div>
       <div className="ly-conflict-summary">
-        <Marker tone="neutral">{model?.conflictState ?? "MIXED"}</Marker>
+        <Marker tone="neutral">{model?.conflictState === "NONE" ? "方向较一致" : "支持与阻碍并存"}</Marker>
         <p>{model?.summary ?? "支持与风险按事实并列展示。"}</p>
       </div>
       <div className="ly-evidence-columns">
@@ -254,7 +254,7 @@ function Timing({ model }: { model: VisualModel | null }) {
   return (
     <div className="ly-card">
       <div className="ly-card-title">
-        <span>VIS-LY-010</span>
+        <span>观察窗口</span>
         <strong>时间线索</strong>
       </div>
       <div className="ly-timeline">
@@ -279,13 +279,9 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
     <section className="panel report-section ly-visual-system" aria-labelledby="liuyao-visual-system-title">
       <div className="ly-section-head">
         <div>
-          <p className="eyebrow">Liuyao Visual System</p>
+          <p className="eyebrow">专业盘面</p>
           <h2 id="liuyao-visual-system-title">六爻视觉解读</h2>
-          <p className="section-kicker">同一份事实驱动盘面、焦点、世应、动变、证据和时间线索；视觉层只展示，不重新判断。</p>
-        </div>
-        <div className="ly-readiness">
-          <span>{visualization.packageStatus ?? "DATA_IMPORTED"}</span>
-          <strong>{visualization.readiness ?? "P0_READY_WITH_EXPORT_ALIGNMENT_PENDING"}</strong>
+          <p className="section-kicker">从盘面、世应、动变、力量与时间线索理解结论，需要时再深入查看完整依据。</p>
         </div>
       </div>
 

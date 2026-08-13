@@ -28,6 +28,14 @@ This is not `PRODUCTION_READY`. P0 product visuals are integrated into the Liuya
 - Kept the old chart panel as fallback only when a report has no visualization bundle.
 - Added package-aligned design tokens, semantic line encodings, responsive layouts, and reduced-motion support.
 - Collapsed the home workbench into a Liuyao-only product entry; Meihua is no longer surfaced as a new user choice.
+- Removed remaining Meihua branding and controls from public navigation, metadata, workbench, history, settings, and report presentation.
+- Added homepage primary actions and direct scenario entry for relationship, career, wealth, and business questions.
+- Added relationship-specific Guided presentation for direction, self state, other-party interaction, and immediate decision focus without changing formal assessment facts.
+- Removed visual implementation IDs and package/readiness states from the public report UI.
+- Replaced generic object dumping on content detail pages with explicit article, topic, and learning-path renderers.
+- Published six reality-topic landing pages and the Liuyao Learn Hub path after completing their public presentation layer.
+- Reduced mobile Learn Hub density with progressive library disclosure and shorter featured sections.
+- Changed production readiness behavior so missing database or Redis configuration returns HTTP 503.
 - Added tests for visual registry completeness, P0 IDs, board reading/casting order, no-recompute policy, and export status truthfulness.
 - Generated and registered all 10 editorial assets `ED-LY-001` through `ED-LY-010`.
 - Finished the editorial visual content package into 23 production-ready variants under `apps/web/public/liuyao-visual-system/editorial/final/`.
@@ -59,6 +67,15 @@ The report now leads with a mature Liuyao visual structure:
 - Evidence conflict summary after deterministic resolution.
 - Timing candidate timeline with uncertainty language.
 
+Commercial experience P0 now also includes:
+
+- A homepage choice between starting a Liuyao analysis and entering the Learn Hub.
+- Direct relationship, career, wealth, and business scenario shortcuts.
+- Relationship reports led by user-facing relationship direction and interaction guidance before professional terms.
+- Dedicated topic landing pages with user questions, method explanation, examples, CTA, and related learning.
+- A dedicated five-stage Learn Hub path rather than exposing structured package metadata.
+- Production-only content filtering with 213 public entries, including six topic pages and one learning path.
+
 ## Editorial Assets
 
 `ED-LY-001` through `ED-LY-010` are now available in the project:
@@ -88,6 +105,9 @@ The existing 68 `Bxx-VIS-xx` SVG assets are now style-aligned:
 - `pnpm run test:experience` passed.
 - `pnpm run typecheck` passed.
 - `npm run build` passed.
+- `pnpm run content:qa` passed with 0 errors, 0 warnings, and no isolated content.
+- Browser checks passed on 1440px desktop and 390px mobile without horizontal overflow or public implementation-state leakage.
+- Production content filtering returned only `PUBLICATION_READY` entries; dependency readiness returned HTTP 503 when infrastructure was unavailable.
 
 Known build notices are pre-existing project configuration warnings:
 
