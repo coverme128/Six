@@ -1,14 +1,14 @@
 # Liuyao Visual System Implementation Report
 
-Date: 2026-08-12
+Date: 2026-08-16
 
 Package: `liuyao-visual-system-and-asset-orchestration-v1.0`
 
 ## Status
 
-`P0_READY_WITH_EXPORT_ALIGNMENT_PENDING`
+`LOCAL_PUBLIC_BETA_P0_READY_WITH_RELEASE_GATES_PENDING`
 
-This is not `PRODUCTION_READY`. P0 product visuals are integrated into the Liuyao report experience, but static SVG/PDF export is still marked `DESIGN_READY_IMPLEMENTATION_PENDING`.
+This is not `PRODUCTION_READY`. P0 product visuals, editorial assets, content visuals, and core user journeys are integrated and locally browser-checked. Static SVG/PDF export is still marked `DESIGN_READY_IMPLEMENTATION_PENDING`, and automated visual/accessibility gates remain open.
 
 ## Completed
 
@@ -121,3 +121,5 @@ Known build notices are pre-existing project configuration warnings:
 - Add visual regression snapshots for the P0 components.
 - Add screen reader narration tests for board and timeline summaries.
 - Decide whether to remove Meihua from backend/contracts completely, or keep it as legacy internal compatibility.
+
+The consolidated ownership, evidence, and release decision are recorded in `docs/production/96-liuyao-public-beta-commercial-readiness.md`.

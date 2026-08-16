@@ -1,6 +1,6 @@
-# Liuyao & Meihua UX Interaction Design Spec
+# Liuyao UX Interaction Design Spec
 
-Status: `PUBLIC_WEB_UX_INTERACTION_READY`
+Status: `LIUYAO_PUBLIC_WEB_UX_READY_LOCAL`
 
 This spec defines the public Web interaction behavior aligned with the Oriental Professional experience standard.
 
@@ -24,9 +24,9 @@ Next action
 
 ## First Entry
 
-User expectation: understand whether to use Liuyao or Meihua and how to start.
+User expectation: quickly choose between solving a current question and learning how Liuyao works.
 
-System response: show the casting workbench immediately, with calm explanation and a clear primary action.
+System response: state the core value in user language, show `开始六爻分析` and `进入学习中心`, provide direct scenario shortcuts, and keep the casting workbench in the first task flow.
 
 Failure behavior: if downstream API is unavailable, keep the entered question and show a restrained retryable error.
 
@@ -49,6 +49,22 @@ System response: the primary button changes to "正在整理报告" and remains 
 User expectation: understand the report in under 10 seconds.
 
 System response: show headline, current situation, change direction, timing hint, main support, main obstacle, and next actions before professional evidence.
+
+For a relationship question, show relationship direction, the user's side, the other side or interaction signal, and the immediate decision focus before general evidence.
+
+## Learn Hub Entry
+
+User expectation: find a useful starting point without scanning the entire content inventory.
+
+System response: present beginner entry, real-world topics, structured learning columns, filters, and an initially bounded library. Additional items appear only after `查看更多内容`.
+
+Next action: open a topic page, continue the five-stage path, read an article, or return to the Liuyao workbench.
+
+## Topic Landing
+
+User expectation: understand whether Liuyao can help with a specific life situation.
+
+System response: show common user questions, what Liuyao can clarify, example question formulations, method boundaries, a scenario-linked primary CTA, and related learning.
 
 ## Expand Evidence
 
@@ -75,3 +91,13 @@ Buttons and links support default, hover, focus, loading, disabled, and mobile s
 ## Mobile Contract
 
 Mobile uses a single-column reading flow. Navigation remains horizontally usable, action groups wrap, form controls fill available width, and evidence/trust sections collapse into one column.
+
+Repeated content sections are intentionally shortened on mobile and the general library starts with 24 items. Fixed-format boards, controls, and timelines must not create horizontal overflow at 360, 390, or 430 CSS pixels.
+
+## Public Disclosure Boundary
+
+Public pages must not render content review status codes, source batch fields, presentation configuration, provider/debug metadata, visual implementation IDs, or readiness labels. User-facing publication labels may be rendered only as plain language such as `已发布`.
+
+## Release Acceptance
+
+Local P0 acceptance requires homepage, scenario preselection, report, relationship result, Learn Hub, topic landing, and learning path checks on desktop and mobile with no horizontal overflow or internal metadata leakage. Commercial production acceptance additionally requires the gates defined in `docs/production/96-liuyao-public-beta-commercial-readiness.md`.

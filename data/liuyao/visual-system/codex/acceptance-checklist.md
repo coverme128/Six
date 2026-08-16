@@ -1,43 +1,46 @@
 # Acceptance Checklist
 
 ## Visual system
-- [ ] canonical tokens loaded
-- [ ] no independent style fork
-- [ ] Modern Eastern Analytical maintained
+- [x] canonical tokens loaded
+- [x] no independent style fork
+- [x] Modern Eastern Analytical maintained
 
 ## Visualization
-- [ ] stable VIS-LY ID
-- [ ] typed ViewModel
-- [ ] no domain recalculation
-- [ ] Guided mode where required
-- [ ] Professional mode where required
-- [ ] static/report mode
-- [ ] loading/partial/error/unsupported states
+- [x] stable VIS-LY ID
+- [x] typed ViewModel
+- [x] no domain recalculation
+- [x] Guided mode where required
+- [x] Professional mode where required
+- [ ] static/report mode: on-screen complete; same-ViewModel SVG/PDF pending
+- [x] loading/partial/error/unsupported states
 
 ## Hexagram-specific
-- [ ] 初爻 bottom / 上爻 top
-- [ ] casting builds bottom-to-top
-- [ ] Yin/Yang not treated as good/bad
-- [ ] moving/static not treated as good/bad
-- [ ] Shi/Ying context not hardcoded
-- [ ] Yongshen selection not computed in visual layer
-- [ ] no invented strength score
-- [ ] Timing candidate never rendered as guaranteed date
+- [x] 初爻 bottom / 上爻 top
+- [x] casting builds bottom-to-top
+- [x] Yin/Yang not treated as good/bad
+- [x] moving/static not treated as good/bad
+- [x] Shi/Ying context not hardcoded
+- [x] Yongshen selection not computed in visual layer
+- [x] no invented strength score
+- [x] Timing candidate never rendered as guaranteed date
 
 ## Accessibility / Responsive
-- [ ] keyboard/focus
-- [ ] non-color semantics
-- [ ] ARIA / localized labels
-- [ ] reduced motion
-- [ ] 360 / 390 / 430 mobile layouts
-- [ ] no mechanically shrunken desktop board
+- [x] keyboard/focus styles
+- [x] non-color semantics
+- [x] localized labels and baseline ARIA
+- [x] reduced motion
+- [~] 360 / 390 / 430 mobile layouts: responsive contract implemented; automated visual snapshots pending
+- [x] no mechanically shrunken desktop board
+- [ ] screen-reader narration automation
 
 ## Export
 - [ ] SVG/print/PDF checked
-- [ ] embedded legends
-- [ ] privacy-safe social export
+- [ ] embedded legends in static exports
+- [~] privacy-safe social export: contract and assets ready; end-to-end export pending
 
 ## Existing assets
-- [ ] historical Bxx-VIS stable IDs preserved
-- [ ] mapped visuals derive from canonical component where practical
-- [ ] no mass rewrite of existing content pages solely for visual refactor
+- [x] historical Bxx-VIS stable IDs preserved
+- [x] mapped visuals derive from canonical tokens and component language where practical
+- [x] no mass rewrite of existing content pages solely for visual refactor
+
+Legend: `[x]` complete, `[~]` partially verified, `[ ]` open release gate.

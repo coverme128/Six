@@ -1,7 +1,7 @@
 # Final Visual Readiness Report
 
 ## Executive status
-**LIUYAO_VISUAL_SYSTEM_DATA_READY_WITH_REPOSITORY_ALIGNMENT_PENDING**
+**LIUYAO_VISUAL_SYSTEM_LOCAL_PUBLIC_BETA_READY_WITH_RELEASE_GATES_PENDING**
 
 ## Completed
 - Visual North Star
@@ -18,6 +18,13 @@
 - 68 existing Content Visual canonicalization records
 - 400 Batch 06 Snippet -> Visual mappings
 - Codex implementation/acceptance/migration contracts
+- typed repository adapters wired to ProductResultFacts and the Guided / Professional experience bundle
+- all 14 visual IDs registered in the domain presentation layer
+- all 10 P0 report visuals integrated into the public Liuyao report
+- 10 editorial asset families delivered as 23 final variants
+- 68 historical Content Visual SVGs canonicalized without changing their stable IDs
+- desktop 1440px and mobile 390px local browser checks without horizontal overflow
+- reduced-motion styling and non-color line semantics
 
 ## Professional integrity
 - professional rule modifications: 0
@@ -26,11 +33,17 @@
 - numeric strength score inventions: 0
 - timing guarantee: 0
 
-## Repository verification required
-Typed adapters must be wired to actual repository ProductResultFacts / Guided / Professional ViewModels and current Registry IDs before production rendering.
+## Repository verification result
 
-## Not claimed
-- staging visual regression pass
-- production performance pass
-- production PDF renderer pass
-- real mobile E2E pass
+Typed adapters are wired to the repository ProductResultFacts and Guided / Professional ViewModels. Public components consume supplied visualization ViewModels and do not select Yongshen, recompute strength, resolve evidence conflicts, or infer timing.
+
+The current result is suitable for local Public Beta validation. It is not a production release approval.
+
+## Open release gates
+
+- same-ViewModel SVG/print/PDF renderer pass
+- Playwright visual regression at desktop and 360/390/430 mobile widths
+- screen-reader narration and keyboard-flow automation
+- HTTPS staging visual regression pass
+- production asset performance and caching pass
+- real-device mobile review

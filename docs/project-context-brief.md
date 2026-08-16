@@ -1,10 +1,10 @@
 # Six Project Context Brief
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-16
 
 ## One-Line Summary
 
-Six is a TypeScript monorepo for Liuyao and Meihua divination products. Its first production-facing scope is a deterministic, auditable CORE_V1 rule system, with a public web workbench, report history/detail, grounded AI expression, content framework, Prisma persistence, and worker-backed AI jobs.
+Six is a TypeScript monorepo whose active public product is a deterministic, auditable Liuyao analysis and learning experience. It combines a Liuyao workbench, report history/detail, scenario-oriented Guided presentation, grounded AI expression, a designed Learn Hub, Prisma persistence, and worker-backed AI jobs. Meihua remains only as legacy backend/domain compatibility and is not part of the public product scope.
 
 ## Current Status
 
@@ -13,7 +13,9 @@ Six is a TypeScript monorepo for Liuyao and Meihua divination products. Its firs
 - Local product status: W1 local-only product scope is complete.
 - Calendar status: `CAL_STD_V1` is accepted for Public Beta P1 and used by new Liuyao reports.
 - AI status: grounded AI report code is implemented locally, but real OpenAI live smoke is still pending.
-- Content status: content/SEO/growth framework is ready locally, but no real `PUBLICATION_READY` public content package has been imported.
+- Content status: all eight content batches are integrated. The repository contains 603 entries; 213 are `PUBLICATION_READY`, including six topic landing pages and one five-stage learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
+- Experience status: homepage, scenario entry, Liuyao workbench, report, relationship guidance, Learn Hub, topic pages, and learning path meet the current local Public Beta P0 contract.
+- Visual status: 14 report visual contracts, 10 editorial asset families with 23 final variants, and 68 canonicalized content SVGs are integrated.
 - Staging status: local staging foundation exists, but HTTPS staging deployment evidence and live AI smoke remain pending.
 
 ## Product Boundary
@@ -69,7 +71,7 @@ apps/worker
   BullMQ worker for generate-ai-report jobs
 
 packages/domain
-  Deterministic Liuyao/Meihua engines, calendar, CORE_V1 loader, report aggregation,
+  Deterministic Liuyao engine, legacy Meihua compatibility, calendar, CORE_V1 loader, report aggregation,
   AI input/fidelity/safety pipeline, and P4-X presentation contracts
 
 packages/database
@@ -118,7 +120,7 @@ Key routes:
 - `GET /api/v1/ready`
 - `GET /api/v1/metadata`
 - `POST /api/v1/liuyao/charts`
-- `POST /api/v1/meihua/charts`
+- `POST /api/v1/meihua/charts` (legacy compatibility; not linked from public Web)
 - `GET /api/v1/reports`
 - `GET /api/v1/reports/:id`
 - `GET /api/v1/reports/:id/experience`
@@ -149,12 +151,14 @@ Core principles:
 
 Current public pages:
 
-- `/` casting workbench.
+- `/` value-led Liuyao entry, scenario shortcuts, and casting workbench.
 - `/history` report history.
-- `/reports/[id]` Guided and Professional report detail.
-- `/content` content and knowledge browsing.
-- `/content/[type]/[slug]` content detail.
+- `/reports/[id]` Guided, scenario-aware, visual, and Professional report detail.
+- `/content` designed Learn Hub with starter content, topic entries, learning columns, filters, and progressive disclosure.
+- `/content/[type]/[slug]` explicit article, topic landing, or five-stage learning-path presentation.
 - `/settings` public runtime settings.
+
+Public UI must expose only Liuyao. Internal package states, visual IDs, review fields, source-batch metadata, provider details, raw RuleCode, and Meihua choices are not public presentation content.
 
 ## Data And Persistence
 
@@ -206,7 +210,10 @@ Playwright default ports differ from `.env.example`:
 
 - Run real OpenAI live smoke with secure `OPENAI_API_KEY` and confirm `reportSource = OPENAI_LIVE` for successful outputs.
 - Deploy HTTPS staging and verify `/health`, `/ready`, protected internal status, E2E, and live AI checks.
-- Import a real `PUBLICATION_READY` content package for public indexed content.
+- Implement same-ViewModel static SVG/PDF export so downloaded reports match the on-screen report semantics.
+- Add visual regression at desktop and 360/390/430 mobile widths.
+- Add screen-reader narration and keyboard-flow automation for the board, timeline, content paths, and report controls.
+- Decide whether to delete legacy Meihua backend/contracts or retain them behind an explicit internal compatibility boundary.
 - Build protected Admin governance workflows.
 - Add auth, RBAC, payment, subscription, or CMS only when a later phase explicitly authorizes it.
 - Move fuller historical report visual coverage into `apps/web`.
@@ -237,5 +244,6 @@ Playwright default ports differ from `.env.example`:
 - `docs/production/93-p4x-upgrade-architecture-realignment.md`
 - `docs/production/94-product-experience-brief.md`
 - `docs/production/95-ux-interaction-design-spec.md`
+- `docs/production/96-liuyao-public-beta-commercial-readiness.md`
 - `docs/audit/liuyao-core-product-closure-report.md`
 - `docs/data/liuyao-core-interpretation-binding-audit.md`

@@ -1,7 +1,7 @@
 # Liuyao Visual System & Asset Orchestration Package v1.0
 
 ## Package role
-This package is the canonical **visual implementation and asset orchestration contract** for the LIUYAO domain of the Liuyao & Meihua Web Application.
+This package is the canonical **visual implementation and asset orchestration contract** for the active public Liuyao product. Any remaining Meihua code is legacy compatibility and is outside this visual system's public scope.
 
 It governs:
 - product visual language,
