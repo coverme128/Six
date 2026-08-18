@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AppNav } from "../../../AppNav";
 import { apiBase, readError, type ContentDetail, type ContentSummary } from "../../../lib/api";
+import { topicProfileFor } from "../../topicProfiles";
 
 const typeLabels: Record<string, string> = {
   TUTORIAL: "六爻教程",
@@ -67,7 +68,7 @@ function visualRefs(body: unknown) {
 }
 
 function editorialVisualFor(item: ContentDetail) {
-  if (item.contentType === "LANDING_PAGE") return "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png";
+  if (item.contentType === "LANDING_PAGE") return topicProfileFor(item.contentId)?.visual ?? "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png";
   if (item.contentType === "LEARNING_PATH") return "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png";
   if (item.contentType === "TUTORIAL") return item.contentId.startsWith("B05-")
     ? "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-1200x900.png"
@@ -82,12 +83,14 @@ function contentHref(item: ContentSummary) {
 }
 
 function scenarioHref(item: ContentDetail) {
+  const profile = topicProfileFor(item.contentId);
+  if (profile) return `/?scenario=${profile.scenario}#liuyao-workbench`;
   const scenarioBySlug: Record<string, string> = {
     relationship: "relationship",
     "career-work": "career",
     "finance-project": "wealth",
     "business-partnership": "business",
-    "exam-study-job": "study",
+    "exam-job-search": "study",
     "travel-planning": "travel",
   };
   return `/?scenario=${scenarioBySlug[item.slug] ?? "relationship"}#liuyao-workbench`;
@@ -118,40 +121,40 @@ function RelatedContent({ items }: { items: ContentSummary[] }) {
 
 function TopicContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
   const questions = stringList(item.body, "primaryUserQuestions");
-  const displayName = stringValue(item.body, "displayName") || item.title;
-  const isRelationship = item.slug === "relationship";
-  const examples = isRelationship
-    ? [
-        "未来三个月，这段关系适合继续推进还是先观察？",
-        "双方当前投入是否平衡，主要互动阻力在哪里？",
-        "经过最近的矛盾后，这段关系还有哪些修复条件？",
-      ]
-    : [
-        `未来三个月，${displayName}最需要优先观察什么？`,
-        `当前推进${displayName}的主要支持与阻碍分别是什么？`,
-        `下一步应该先验证什么，再决定是否继续投入？`,
-      ];
+  const profile = topicProfileFor(item.contentId);
+  const displayName = (profile?.name ?? stringValue(item.body, "displayName")) || item.title;
+  const examples = profile?.examples ?? [
+    `未来三个月，${displayName}最需要优先观察什么？`,
+    `当前推进${displayName}的主要支持与阻碍分别是什么？`,
+    "下一步应该先验证什么，再决定是否继续投入？",
+  ];
+  const lenses = profile?.lenses ?? [
+    { title: "当前状态", detail: "先看与问题直接相关的人和条件。" },
+    { title: "支持与阻碍", detail: "区分可以利用和需要处理的因素。" },
+    { title: "变化信号", detail: "观察局面正在推进、停滞还是转向。" },
+    { title: "下一步", detail: "把判断转成可以验证和复盘的行动。" },
+  ];
 
   return (
     <>
       <section className="topic-detail-hero">
         <div>
           <p className="eyebrow">现实问题专题</p>
-          <h1>{item.title}</h1>
-          <p>{item.summary}</p>
+          <h1>{displayName}</h1>
+          <p>{profile?.intro ?? item.summary}</p>
           <span className="content-publication-note">{publicationLabel(item.reviewStatus)}</span>
           <div className="hero-actions">
             <a className="primary-link" href={scenarioHref(item)}>带着问题开始分析</a>
             <a className="secondary-link" href="#topic-guides">先看看怎么问</a>
           </div>
         </div>
-        <img src={editorialVisualFor(item)} alt="" aria-hidden="true" />
+        <img src={editorialVisualFor(item)} alt={profile?.visualAlt ?? ""} />
       </section>
 
       <section className="topic-needs" id="topic-guides">
         <div>
           <p className="eyebrow">你可能正在想</p>
-          <h2>先把模糊担忧变成可分析的问题</h2>
+          <h2>这个专题从这些现实问题开始</h2>
         </div>
         <div className="topic-question-grid">
           {(questions.length ? questions : examples).map((question) => <p key={question}>{question}</p>)}
@@ -160,21 +163,20 @@ function TopicContent({ item, related }: { item: ContentDetail; related: Content
 
       <section className="topic-method">
         <div>
-          <p className="eyebrow">六爻怎样帮助你</p>
-          <h2>不是替你做决定，而是整理当前结构</h2>
+          <p className="eyebrow">问题怎样被梳理</p>
+          <h2>先看什么，再怎样落到下一步</h2>
         </div>
         <div className="topic-method-grid">
-          <div><strong>看双方状态</strong><span>区分自己的承受力、主动性与对方回应。</span></div>
-          <div><strong>看支持与阻碍</strong><span>找到当前互动中可以利用和需要处理的条件。</span></div>
-          <div><strong>看变化信号</strong><span>判断局面是在推进、拉扯、停滞还是等待转折。</span></div>
-          <div><strong>形成下一步</strong><span>把结论变成可以沟通、验证和复盘的现实动作。</span></div>
+          {lenses.map((lens, index) => (
+            <div key={lens.title}><em>{String(index + 1).padStart(2, "0")}</em><strong>{lens.title}</strong><span>{lens.detail}</span></div>
+          ))}
         </div>
       </section>
 
       <section className="topic-examples">
         <div>
           <p className="eyebrow">提问示例</p>
-          <h2>一个报告只处理一个具体问题</h2>
+          <h2>先聚焦此刻最想确认的一件事</h2>
         </div>
         <div className="topic-example-list">
           {examples.map((example) => <p key={example}>{example}</p>)}
@@ -189,11 +191,12 @@ function TopicContent({ item, related }: { item: ContentDetail; related: Content
 
 function LearningPathContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
   const groups = [
-    { key: "startHere", step: "01", title: "第一次接触六爻", detail: "先建立适用边界，再学会提出一个清楚的问题。" },
-    { key: "coreConcepts", step: "02", title: "理解盘面核心结构", detail: "认识起卦、用神、力量与动变分别回答什么。" },
-    { key: "understandYourReport", step: "03", title: "读懂自己的报告", detail: "从总体方向进入支持、阻碍、时间和专业依据。" },
-    { key: "realWorldDecisions", step: "04", title: "进入现实问题专题", detail: "按感情、事业、合作、财务等任务选择最短路径。" },
-    { key: "howSystemWorks", step: "05", title: "核验系统如何工作", detail: "理解确定性排盘、规则事实和 AI 解释之间的边界。" },
+    { key: "use", step: "01", title: "先知道怎么使用", detail: "适用问题、提问方法与可信边界。", ids: ["B01-A01", "B01-A02", "B01-A10"] },
+    { key: "chart", step: "02", title: "理解起卦与盘面", detail: "阴阳动静、本卦变卦与排盘结构。", ids: ["B02-A01", "B02-A02"] },
+    { key: "roles", step: "03", title: "看懂角色与关系", detail: "用神、六亲、世应与关系结构。", ids: ["B03-A01"] },
+    { key: "timing", step: "04", title: "判断力量与时间", detail: "旺衰、动变、冲突与时间提示。", ids: ["B04-A01", "B04-A20"] },
+    { key: "real", step: "05", title: "进入现实问题", detail: "按感情、事业、合作、财务等任务进入专题。", ids: ["RELATIONSHIP", "CAREER_WORK", "BUSINESS_PARTNERSHIP", "FINANCE_PROJECT", "EXAM_JOB_SEARCH", "TRAVEL_PLANNING"] },
+    { key: "report", step: "06", title: "练习阅读报告", detail: "从总体判断进入支持、阻碍、时间和专业依据。", ids: ["B01-A14", "B01-A06", "B04-A20", "B01-A13"] },
   ];
   const byId = new Map(related.map((entry) => [entry.contentId, entry]));
 
@@ -202,8 +205,8 @@ function LearningPathContent({ item, related }: { item: ContentDetail; related: 
       <section className="learning-path-hero">
         <div>
           <p className="eyebrow">六爻学习路径</p>
-          <h1>{item.title}</h1>
-          <p>{item.summary}</p>
+          <h1>从第一次提问，到读懂自己的报告</h1>
+          <p>按六个阶段逐步建立理解；不需要先学完所有术语，也不用在完整内容库里挑选。</p>
           <div className="hero-actions">
             <a className="primary-link" href="#learning-path-steps">从第一步开始</a>
             <a className="secondary-link" href="/#liuyao-workbench">先完成一次起卦</a>
@@ -213,7 +216,7 @@ function LearningPathContent({ item, related }: { item: ContentDetail; related: 
       </section>
       <section className="learning-path-steps" id="learning-path-steps">
         {groups.map((group) => {
-          const entries = stringList(item.body, group.key).map((id) => byId.get(id)).filter((entry): entry is ContentSummary => Boolean(entry));
+          const entries = group.ids.map((id) => byId.get(id)).filter((entry): entry is ContentSummary => Boolean(entry));
           return (
             <section key={group.key}>
               <header>

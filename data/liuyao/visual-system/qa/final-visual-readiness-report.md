@@ -23,6 +23,7 @@
 - all 10 P0 report visuals integrated into the public Liuyao report
 - 10 editorial asset families delivered as 23 final variants
 - 68 historical Content Visual SVGs canonicalized without changing their stable IDs
+- 6 high-priority topic diagrams redesigned as distinct task structures for the Learn Hub
 - desktop 1440px and mobile 390px local browser checks without horizontal overflow
 - reduced-motion styling and non-color line semantics
 
@@ -38,6 +39,8 @@
 Typed adapters are wired to the repository ProductResultFacts and Guided / Professional ViewModels. Public components consume supplied visualization ViewModels and do not select Yongshen, recompute strength, resolve evidence conflicts, or infer timing.
 
 The current result is suitable for local Public Beta validation. It is not a production release approval.
+
+The 68 historical Content Visual SVGs are integration-complete and style-canonicalized, not individually art-directed commercial assets. Their original diagram semantics and compositions were intentionally preserved during canonicalization. Six high-priority topic diagrams have now received product-level redesign; the remaining 62 require exposure-prioritized visual deepening. See `docs/design/content-visual-production-audit-v2.md`.
 
 ## Open release gates
 

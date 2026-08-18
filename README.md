@@ -68,14 +68,16 @@ packages/ui     Shared React UI package
 packages/testing Shared test helpers
 ```
 
-Local infrastructure:
+Local infrastructure (full mode):
 
 ```bash
-docker compose up -d
-pnpm db:generate
-pnpm db:migrate
-pnpm db:seed
+docker compose -p six up -d
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:generate
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:migrate
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:seed
 ```
+
+For the complete first-run, daily-start, port-isolation, health-check, and shutdown procedure, see [docs/development/local-startup.md](docs/development/local-startup.md).
 
 ## Commands
 

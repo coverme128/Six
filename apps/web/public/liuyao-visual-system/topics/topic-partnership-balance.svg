@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">合作与项目的双方投入平衡图</title>
+  <desc id="desc">比较双方目标、资源与行动是否匹配，并在共同目标和现实风险之间找到验证动作。</desc>
+  <rect width="1200" height="600" fill="#FBF8F1"/>
+  <rect x="90" y="90" width="420" height="330" rx="8" fill="#EFE8DB" stroke="#9A6A36" stroke-width="4"/>
+  <rect x="690" y="90" width="420" height="330" rx="8" fill="#E8EFEB" stroke="#496F63" stroke-width="4"/>
+  <text x="140" y="150" font-family="system-ui, sans-serif" font-size="34" font-weight="750" fill="#171717">我方投入</text>
+  <text x="1060" y="150" text-anchor="end" font-family="system-ui, sans-serif" font-size="34" font-weight="750" fill="#171717">对方投入</text>
+  <rect x="140" y="198" width="250" height="58" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="2"/>
+  <rect x="140" y="280" width="316" height="58" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="2"/>
+  <rect x="810" y="198" width="250" height="58" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="2"/>
+  <rect x="744" y="280" width="316" height="58" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="2"/>
+  <text x="168" y="236" font-family="system-ui, sans-serif" font-size="28" fill="#5D5A54">资源是否到位</text>
+  <text x="168" y="318" font-family="system-ui, sans-serif" font-size="28" fill="#5D5A54">行动是否兑现</text>
+  <text x="1032" y="236" text-anchor="end" font-family="system-ui, sans-serif" font-size="28" fill="#5D5A54">目标是否一致</text>
+  <text x="1032" y="318" text-anchor="end" font-family="system-ui, sans-serif" font-size="28" fill="#5D5A54">责任是否清楚</text>
+  <path d="M510 214 H690 M510 306 H690" stroke="#CFC5B6" stroke-width="5"/>
+  <path d="M600 134 L680 255 L600 376 L520 255 Z" fill="#171717"/>
+  <text x="600" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#FBF8F1">共同</text>
+  <text x="600" y="281" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#FBF8F1">目标</text>
+  <rect x="90" y="474" width="1020" height="76" rx="8" fill="#FFFFFF" stroke="#A33A2B" stroke-width="3"/>
+  <text x="140" y="522" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#A33A2B">先验证</text>
+  <text x="300" y="522" font-family="system-ui, sans-serif" font-size="29" fill="#171717">小范围承诺</text>
+  <line x1="540" y1="491" x2="540" y2="533" stroke="#CFC5B6" stroke-width="2"/>
+  <text x="592" y="522" font-family="system-ui, sans-serif" font-size="29" fill="#171717">真实投入</text>
+  <line x1="810" y1="491" x2="810" y2="533" stroke="#CFC5B6" stroke-width="2"/>
+  <text x="860" y="522" font-family="system-ui, sans-serif" font-size="29" fill="#171717">退出边界</text>
+</svg>

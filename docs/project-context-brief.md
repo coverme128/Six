@@ -13,7 +13,7 @@ Six is a TypeScript monorepo whose active public product is a deterministic, aud
 - Local product status: W1 local-only product scope is complete.
 - Calendar status: `CAL_STD_V1` is accepted for Public Beta P1 and used by new Liuyao reports.
 - AI status: grounded AI report code is implemented locally, but real OpenAI live smoke is still pending.
-- Content status: all eight content batches are integrated. The repository contains 603 entries; 213 are `PUBLICATION_READY`, including six topic landing pages and one five-stage learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
+- Content status: all eight content batches are integrated. The repository contains 603 entries; 213 are `PUBLICATION_READY`, including six topic landing pages and one six-stage guided learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
 - Experience status: homepage, scenario entry, Liuyao workbench, report, relationship guidance, Learn Hub, topic pages, and learning path meet the current local Public Beta P0 contract.
 - Visual status: 14 report visual contracts, 10 editorial asset families with 23 final variants, and 68 canonicalized content SVGs are integrated.
 - Staging status: local staging foundation exists, but HTTPS staging deployment evidence and live AI smoke remain pending.
@@ -155,7 +155,7 @@ Current public pages:
 - `/history` report history.
 - `/reports/[id]` Guided, scenario-aware, visual, and Professional report detail.
 - `/content` designed Learn Hub with starter content, topic entries, learning columns, filters, and progressive disclosure.
-- `/content/[type]/[slug]` explicit article, topic landing, or five-stage learning-path presentation.
+- `/content/[type]/[slug]` explicit article, topic landing, or six-stage guided learning-path presentation.
 - `/settings` public runtime settings.
 
 Public UI must expose only Liuyao. Internal package states, visual IDs, review fields, source-batch metadata, provider details, raw RuleCode, and Meihua choices are not public presentation content.
@@ -176,6 +176,8 @@ Local infrastructure:
 
 - PostgreSQL 16 on `localhost:5434`
 - Redis 7 on `localhost:6381`
+
+Canonical local startup and Docker isolation instructions: `docs/development/local-startup.md`.
 
 ## Validation And Test Commands
 
@@ -232,6 +234,9 @@ Playwright default ports differ from `.env.example`:
 ## Primary Source Documents
 
 - `README.md`
+- `docs/development/local-startup.md`
+- `docs/design/homepage-core-journey-v2.md`
+- `docs/design/knowledge-hub-information-architecture-v2.md`
 - `docs/production/61-core-value-scope-and-stop-line.md`
 - `docs/production/62-core-v1-rule-whitelist-contract.md`
 - `docs/production/63-report-aggregation-and-evidence-budget.md`

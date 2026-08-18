@@ -33,6 +33,8 @@
 }
 ```
 
+这里的 `visuals: 68` 表示八个原始数据包中已去重并接入运行时的 SVG 数量，不代表 68 张图都已完成逐张商业艺术指导。原包只有 SVG；现有 68 张已完成技术与统一风格规范化，其中六个首页核心专题已在产品层换为六种场景化信息结构。完整口径见 `docs/design/content-visual-production-audit-v2.md`。
+
 The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime catalog also includes 158 system seed entries, for 603 total entries:
 
 ```json

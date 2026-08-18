@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">出行与计划的节点路线图</title>
+  <desc id="desc">沿计划路线检查手续、时间和资源节点，并为容易延误的位置准备替代路线。</desc>
+  <defs>
+    <marker id="routeArrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0 0 L0 8 L10 4 Z" fill="#384C5F"/></marker>
+    <marker id="backupArrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0 0 L0 8 L10 4 Z" fill="#A33A2B"/></marker>
+  </defs>
+  <rect width="1200" height="600" fill="#FBF8F1"/>
+  <path d="M120 165 C260 70 400 80 470 205 S680 380 795 270 S970 120 1090 195" fill="none" stroke="#384C5F" stroke-width="8" stroke-linecap="round" marker-end="url(#routeArrow)"/>
+  <path d="M470 205 C520 410 700 500 915 445" fill="none" stroke="#A33A2B" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#backupArrow)"/>
+  <circle cx="120" cy="165" r="31" fill="#171717"/>
+  <circle cx="470" cy="205" r="43" fill="#EFE8DB" stroke="#9A6A36" stroke-width="6"/>
+  <circle cx="795" cy="270" r="43" fill="#E8EFEB" stroke="#496F63" stroke-width="6"/>
+  <circle cx="1090" cy="195" r="31" fill="#171717"/>
+  <circle cx="915" cy="445" r="31" fill="#A33A2B"/>
+  <rect x="56" y="222" width="210" height="70" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="3"/>
+  <text x="161" y="266" text-anchor="middle" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#171717">当前计划</text>
+  <rect x="340" y="62" width="260" height="76" rx="8" fill="#FFFFFF" stroke="#9A6A36" stroke-width="3"/>
+  <text x="470" y="109" text-anchor="middle" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#171717">手续与确认</text>
+  <rect x="665" y="325" width="260" height="76" rx="8" fill="#FFFFFF" stroke="#496F63" stroke-width="3"/>
+  <text x="795" y="372" text-anchor="middle" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#171717">时间与资源</text>
+  <rect x="954" y="250" width="190" height="70" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="3"/>
+  <text x="1049" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#171717">按期到达</text>
+  <rect x="735" y="480" width="360" height="72" rx="8" fill="#F3E4E0" stroke="#A33A2B" stroke-width="3"/>
+  <text x="915" y="526" text-anchor="middle" font-family="system-ui, sans-serif" font-size="29" font-weight="700" fill="#A33A2B">延误时启用替代方案</text>
+</svg>

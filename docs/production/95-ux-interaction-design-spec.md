@@ -28,6 +28,19 @@ User expectation: quickly choose between solving a current question and learning
 
 System response: state the core value in user language, show `开始六爻分析` and `进入学习中心`, provide direct scenario shortcuts, and keep the casting workbench in the first task flow.
 
+Current homepage screen model:
+
+```text
+Core value and expected outcomes
+-> one scenario category and its visual options
+-> one focused question with examples
+-> casting method and report generation
+```
+
+Technical trust explanation is progressively disclosed at the casting stage. It must not compete with the first scenario or question decision.
+
+Scenario categories use the user-facing domains `感情与合作 / 工作与钱 / 生活事务 / 健康与纠纷` and show only one category at a time. Category labels must all use the same organizing principle; frequency labels such as `常用` and ambiguous risk labels such as `谨慎` are not allowed. A category must not duplicate a single child option. Selection must be indicated by icon/color treatment, border state, and a check mark rather than color alone.
+
 Failure behavior: if downstream API is unavailable, keep the entered question and show a restrained retryable error.
 
 ## Submit Question
@@ -35,6 +48,12 @@ Failure behavior: if downstream API is unavailable, keep the entered question an
 User expectation: know what input is required.
 
 System response: keep the question field prominent, expose only necessary casting inputs, and avoid advanced settings by default.
+
+Question guidance starts from the user's intent rather than a system constraint: ask for the one matter they most want to confirm, then prompt for the people involved, current situation, and decision under consideration.
+
+The default casting surface exposes one primary action, `开始起卦`. Empty six-line result placeholders and a disabled report-generation action are not shown before casting begins. Alternative casting methods are available behind an explicit disclosure. Reset or recast is a tertiary recovery action and must not compete visually with the current primary action.
+
+Before casting, the interface directly states that AI does not rewrite the chart or rule judgment. Detailed generation and traceability information remains progressively disclosed at the same decision point.
 
 Next action: generate report, clear result, or open history.
 
@@ -54,11 +73,17 @@ For a relationship question, show relationship direction, the user's side, the o
 
 ## Learn Hub Entry
 
-User expectation: find a useful starting point without scanning the entire content inventory.
+User expectation: find a useful starting point without scanning the entire content inventory or understanding backend content types.
 
-System response: present beginner entry, real-world topics, structured learning columns, filters, and an initially bounded library. Additional items appear only after `查看更多内容`.
+System response: first distinguish three user intents: first-time learning, reading an existing report, and learning through a real-world problem. The six-stage learning rail controls the three selected articles shown beside it; there is no independent `从这里开始` list.
 
-Next action: open a topic page, continue the five-stage path, read an article, or return to the Liuyao workbench.
+Real-world topics use scenario-specific names, descriptions, questions, analytical lenses, visuals, and workbench links. Topic list and detail pages consume the same profile contract.
+
+Report reading always follows four explicit steps: confirm the question, separate support and obstruction, read change and timing, then inspect professional evidence. It must not be assembled through keyword matching.
+
+The full library defaults to the first learning module, exposes module selection and search, and initially shows 12 entries. Content growth must not increase the initial choice count.
+
+Next action: begin the first article in the selected stage, open a topic, follow the four-step report course, search the library, or return to the Liuyao workbench.
 
 ## Topic Landing
 

@@ -1,5 +1,6 @@
 import { AppNav } from "./AppNav";
 import { SixApiDemo } from "./SixApiDemo";
+import { ArrowDown, BookOpen, FileCheck2, Route, ShieldCheck } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -8,45 +9,34 @@ export default function HomePage() {
 
       <section className="product-hero">
         <div className="product-hero-copy">
-          <p className="eyebrow">Liuyao</p>
-          <h1>把关系、事业与现实难题，看得更清楚</h1>
-          <p>围绕一个具体问题完成六爻分析。先看方向、支持、阻碍和下一步，再按需核对盘面与专业依据。</p>
+          <p className="eyebrow">六爻问题分析</p>
+          <h1>把一件难事，看清方向与下一步</h1>
+          <p className="hero-lead">从你真正关心的问题出发，先得到容易理解的判断，再按需查看盘面与依据。</p>
           <div className="hero-actions">
-            <a className="primary-link" href="#liuyao-workbench">开始六爻分析</a>
-            <a className="secondary-link" href="/content">进入学习中心</a>
+            <a className="primary-link" href="#scenario-step">
+              从我的问题开始
+              <ArrowDown aria-hidden="true" size={17} />
+            </a>
+            <a className="secondary-link" href="/content">
+              <BookOpen aria-hidden="true" size={17} />
+              我想先学习
+            </a>
           </div>
-          <div className="hero-scenarios" aria-label="常用问题场景">
-            <a href="/?scenario=relationship#liuyao-workbench">感情关系</a>
-            <a href="/?scenario=career#liuyao-workbench">事业工作</a>
-            <a href="/?scenario=wealth#liuyao-workbench">收入财务</a>
-            <a href="/?scenario=business#liuyao-workbench">合作项目</a>
+          <div className="hero-outcomes" aria-label="你会先得到什么">
+            <div>
+              <Route aria-hidden="true" size={20} />
+              <span><strong>方向</strong>继续、调整，还是先观察</span>
+            </div>
+            <div>
+              <ShieldCheck aria-hidden="true" size={20} />
+              <span><strong>关键点</strong>哪里在支持，哪里最容易卡住</span>
+            </div>
+            <div>
+              <FileCheck2 aria-hidden="true" size={20} />
+              <span><strong>下一步</strong>现在最值得验证和行动的事</span>
+            </div>
           </div>
-        </div>
-        <div className="hero-report-preview" aria-label="报告结构预览">
-          <span>结论</span>
-          <span>支持</span>
-          <span>风险</span>
-          <span>时间</span>
-          <strong>依据可追溯</strong>
-        </div>
-      </section>
-
-      <section className="value-proof-strip" aria-label="核心价值">
-        <div>
-          <strong>确定性排盘</strong>
-          <span>先生成本卦、变卦、动爻与结构事实。</span>
-        </div>
-        <div>
-          <strong>证据链报告</strong>
-          <span>结论、支持、阻碍、时间提示分层呈现。</span>
-        </div>
-        <div>
-          <strong>AI 不改事实</strong>
-          <span>不重排盘、不造用神、不反转正式依据。</span>
-        </div>
-        <div>
-          <strong>知识库联动</strong>
-          <span>报告术语可继续进入 Learn Hub 验证。</span>
+          <p className="hero-assurance">确定性排盘 · 判断有依据 · AI 只负责解释</p>
         </div>
       </section>
 

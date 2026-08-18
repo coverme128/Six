@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">考试与求职的准备聚焦图</title>
+  <desc id="desc">用目标中心和四个准备维度找到最影响结果的薄弱环节，并优先补强。</desc>
+  <rect width="1200" height="600" fill="#FBF8F1"/>
+  <circle cx="520" cy="300" r="210" fill="none" stroke="#CFC5B6" stroke-width="3"/>
+  <circle cx="520" cy="300" r="146" fill="#FFFFFF" stroke="#384C5F" stroke-width="4"/>
+  <circle cx="520" cy="300" r="72" fill="#171717"/>
+  <line x1="520" y1="90" x2="520" y2="510" stroke="#CFC5B6" stroke-width="3"/>
+  <line x1="310" y1="300" x2="730" y2="300" stroke="#CFC5B6" stroke-width="3"/>
+  <text x="520" y="291" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#FBF8F1">这次</text>
+  <text x="520" y="327" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#FBF8F1">目标</text>
+  <rect x="410" y="52" width="220" height="74" rx="8" fill="#E8EFEB" stroke="#496F63" stroke-width="3"/>
+  <rect x="660" y="263" width="220" height="74" rx="8" fill="#FFFFFF" stroke="#384C5F" stroke-width="3"/>
+  <rect x="410" y="474" width="220" height="74" rx="8" fill="#F3E4E0" stroke="#A33A2B" stroke-width="4"/>
+  <rect x="160" y="263" width="220" height="74" rx="8" fill="#EFE8DB" stroke="#9A6A36" stroke-width="3"/>
+  <text x="520" y="99" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#171717">知识准备</text>
+  <text x="770" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#171717">临场表达</text>
+  <text x="520" y="521" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#A33A2B">关键短板</text>
+  <text x="270" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#171717">外部竞争</text>
+  <path d="M805 166 H1090 V278" fill="none" stroke="#A33A2B" stroke-width="4"/>
+  <rect x="820" y="278" width="300" height="150" rx="8" fill="#171717"/>
+  <text x="970" y="333" text-anchor="middle" font-family="system-ui, sans-serif" font-size="25" fill="#EFE8DB">有限时间先投向</text>
+  <text x="970" y="382" text-anchor="middle" font-family="system-ui, sans-serif" font-size="34" font-weight="750" fill="#FBF8F1">最影响结果的一项</text>
+</svg>

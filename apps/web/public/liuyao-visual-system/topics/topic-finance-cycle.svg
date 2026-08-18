@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">资金与财务的现金流循环</title>
+  <desc id="desc">围绕现金余量查看收入、回款、支出和预留之间的循环，并识别阻塞位置。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L0 6 L8 3 Z" fill="#9A6A36"/></marker>
+  </defs>
+  <rect width="1200" height="600" fill="#FBF8F1"/>
+  <circle cx="600" cy="300" r="108" fill="#171717"/>
+  <text x="600" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#FBF8F1">可用现金</text>
+  <text x="600" y="334" text-anchor="middle" font-family="system-ui, sans-serif" font-size="25" fill="#EFE8DB">还能承受多久</text>
+  <path d="M600 118 C815 118 950 210 950 300" fill="none" stroke="#9A6A36" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M950 300 C950 445 760 492 600 492" fill="none" stroke="#9A6A36" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M600 492 C385 492 250 410 250 300" fill="none" stroke="#9A6A36" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M250 300 C250 155 440 118 600 118" fill="none" stroke="#9A6A36" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="470" y="58" width="260" height="90" rx="8" fill="#E8EFEB" stroke="#496F63" stroke-width="4"/>
+  <rect x="865" y="255" width="260" height="90" rx="8" fill="#EFE8DB" stroke="#9A6A36" stroke-width="4"/>
+  <rect x="470" y="452" width="260" height="90" rx="8" fill="#F3E4E0" stroke="#A33A2B" stroke-width="4"/>
+  <rect x="75" y="255" width="260" height="90" rx="8" fill="#FFFFFF" stroke="#384C5F" stroke-width="4"/>
+  <text x="600" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="31" font-weight="700" fill="#171717">收入是否落地</text>
+  <text x="995" y="311" text-anchor="middle" font-family="system-ui, sans-serif" font-size="31" font-weight="700" fill="#171717">回款是否延迟</text>
+  <text x="600" y="508" text-anchor="middle" font-family="system-ui, sans-serif" font-size="31" font-weight="700" fill="#A33A2B">支出是否失控</text>
+  <text x="205" y="311" text-anchor="middle" font-family="system-ui, sans-serif" font-size="31" font-weight="700" fill="#171717">预留是否足够</text>
+  <rect x="832" y="455" width="293" height="78" rx="8" fill="#FFFFFF" stroke="#CFC5B6" stroke-width="3"/>
+  <text x="978" y="505" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#384C5F">先处理阻塞的一环</text>
+</svg>

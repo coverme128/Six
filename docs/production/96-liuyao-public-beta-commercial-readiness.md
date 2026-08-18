@@ -65,7 +65,7 @@ The scenario presentation must be a translation of supplied ProductResultFacts a
 Learn Hub
 -> beginner entry or real-world topic
 -> article/topic explanation
--> five-stage learning path
+-> six-stage guided learning path
 -> related content
 -> Liuyao workbench
 ```
@@ -80,7 +80,7 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 - Direct shortcuts: relationship, career, wealth, and business.
 - Relationship-specific Guided presentation implemented without modifying formal assessment facts.
 - Dedicated Learn Hub implemented with starter content, six topic entries, learning columns, filters, and progressive disclosure.
-- Six topic landing pages and one five-stage learning path are `PUBLICATION_READY`.
+- Six topic landing pages and one six-stage guided learning path are `PUBLICATION_READY`.
 - Batch content: 445 Liuyao entries.
 - Runtime catalog: 603 entries including 158 system seed entries.
 - Public entries: 213.

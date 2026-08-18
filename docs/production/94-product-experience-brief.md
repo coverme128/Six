@@ -101,12 +101,15 @@ Eastern quality comes from order, spacing, rhythm, weak borders, calm contrast, 
 
 `apps/web/app` now implements this brief through:
 
-- a first-screen casting workbench rather than a marketing page;
+- a value-led first screen that states the user outcome before exposing method detail;
 - primary entry actions for Liuyao analysis and the Learn Hub;
-- direct relationship, career, wealth, and business scenario shortcuts;
+- a three-screen question journey: choose a scenario, write one focused question, then complete casting;
+- visually differentiated scenario cards organized by the user-facing domains `感情与合作 / 工作与钱 / 生活事务 / 健康与纠纷`, with immediate selection feedback;
+- user-language outcome previews for direction, blockage, and next action instead of internal report labels;
+- a visible AI boundary before casting, with detailed report traceability progressively disclosed at the same decision point;
 - guided report preview and report detail sections;
 - relationship-specific Guided presentation derived from the shared experience bundle;
-- a designed Learn Hub, six topic landing pages, and one five-stage learning path;
+- a goal-led Learn Hub with three user-intent entries, one interactive six-stage learning path, a fixed four-step report-reading course, six scenario-specific topic pages, and a module-filtered library;
 - a visible trust chain for deterministic charting, calendar, CORE_V1, evidence aggregation, and AI expression;
 - collapsible professional evidence and content limitations;
 - user-facing history, content, and settings language;
