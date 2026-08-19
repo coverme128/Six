@@ -34,7 +34,7 @@ type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
 const scenarios = [
   {
     id: "career:job_search",
-    group: "感情与合作",
+    group: "工作与钱",
     topic: "career",
     subtype: "job_search",
     label: "事业 / 工作",
@@ -62,7 +62,7 @@ const scenarios = [
   },
   {
     id: "business:partnership",
-    group: "工作与钱",
+    group: "感情与合作",
     topic: "business",
     subtype: "partnership",
     label: "合作 / 项目",

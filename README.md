@@ -16,7 +16,7 @@ Current Public Beta P2.1/P3-A status: `LIVE_PROVIDER_SMOKE_PENDING`. The local s
 
 Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
 
-Current commercial experience status: `LIUYAO_PUBLIC_BETA_EXPERIENCE_READY_LOCAL`. The P0 homepage-to-report and Learn Hub journeys are implemented and browser-checked locally. This is not `PRODUCTION_READY`; same-ViewModel SVG/PDF export, visual regression, accessibility automation, HTTPS staging, live provider smoke, and configured PostgreSQL/Redis readiness remain release gates.
+Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report and Learn Hub journeys, P0/P1 visual system, all 68 content visuals, distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
 
 Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
 
@@ -106,6 +106,7 @@ pnpm run content:import
 pnpm run content:qa
 pnpm run content:seo
 pnpm run content:rehearsal
+pnpm run content:finalize-local
 pnpm run validate
 pnpm run validate:p1
 pnpm run validate:p2
@@ -152,4 +153,4 @@ New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CA
 
 ## Migration Boundary
 
-The professional TypeScript stack is the active architecture. `apps/web` creates Liuyao reports through `apps/api`, lists Liuyao history, opens Guided/Professional report details, generates grounded AI report bundles, browses 213 `PUBLICATION_READY` entries through a designed Learn Hub, edits persisted runtime settings, and exports report JSON. P4-X has been rechecked against the monorepo/Prisma/Worker architecture. Admin governance, HTTPS staging, live OpenAI smoke, static visual/PDF export parity, visual regression, and accessibility automation remain later release steps. See [docs/production/96-liuyao-public-beta-commercial-readiness.md](docs/production/96-liuyao-public-beta-commercial-readiness.md) for the current consolidated status.
+The professional TypeScript stack is the active architecture. `apps/web` creates Liuyao reports through `apps/api`, lists Liuyao history, opens Guided/Professional report details, generates grounded AI report bundles, browses 421 `PUBLICATION_READY` entries through a designed Learn Hub, edits persisted runtime settings, and exports report JSON plus same-ViewModel report SVG/print/PDF. P4-X has been rechecked against the monorepo/Prisma/Worker architecture. Admin governance, HTTPS staging, live OpenAI smoke, production performance, caching, observability, and real-device review remain release steps. See [docs/production/96-liuyao-public-beta-commercial-readiness.md](docs/production/96-liuyao-public-beta-commercial-readiness.md) for the current consolidated status.

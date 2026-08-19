@@ -69,7 +69,7 @@ test("Experience bundle builds guided and professional viewmodels without admin 
   assert.ok(bundle.professionalViewModel.knowledgeRefs.every((item) => /卦$/u.test(item.title)));
 });
 
-test("Liuyao visualization bundle registers P0 visuals from presentation facts without export overclaim", () => {
+test("Liuyao visualization bundle registers P0 and P1 visuals with same-ViewModel static export", () => {
   const bundle = buildExperienceBundle({ result: liuyaoResult(), type: "liuyao" });
   const visualization = bundle.visualization;
   assert.equal(LIUYAO_VISUAL_SYSTEM_VERSION, "LIUYAO_VISUAL_SYSTEM_V1");
@@ -89,7 +89,11 @@ test("Liuyao visualization bundle registers P0 visuals from presentation facts w
     "VIS-LY-009",
     "VIS-LY-010",
   ]);
-  assert.equal(visualization.staticExport.status, "DESIGN_READY_IMPLEMENTATION_PENDING");
+  assert.deepEqual(visualization.p1VisualIds, ["VIS-LY-011", "VIS-LY-012", "VIS-LY-013", "VIS-LY-014"]);
+  assert.equal(visualization.readiness, "P0_P1_READY_WITH_STATIC_EXPORT");
+  assert.equal(visualization.staticExport.status, "IMPLEMENTED_SAME_VIEWMODEL_SVG_PRINT_PDF");
+  assert.ok(visualization.contextMapping.staticExport.includes("VIS-LY-011"));
+  assert.ok(visualization.contextMapping.staticExport.includes("VIS-LY-014"));
   const board = visualization.viewModels["VIS-LY-001"];
   assert.equal(board.noRecompute, true);
   assert.equal(board.readingOrder, "top_to_bottom_display");
@@ -100,6 +104,8 @@ test("Liuyao visualization bundle registers P0 visuals from presentation facts w
   assert.ok(board.lines.some((line) => line.isResponse));
   assert.ok(visualization.viewModels["VIS-LY-004"].roles.length >= 1);
   assert.equal(visualization.viewModels["VIS-LY-007"].mode, "qualitative_no_score");
+  assert.ok(Array.isArray(visualization.viewModels["VIS-LY-011"].actions));
+  assert.ok(Array.isArray(visualization.viewModels["VIS-LY-014"].steps));
 });
 
 test("Liuyao scene selection drives automatic observation focus without user yongshen confirmation", () => {

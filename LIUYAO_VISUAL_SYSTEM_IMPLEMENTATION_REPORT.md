@@ -1,14 +1,14 @@
 # Liuyao Visual System Implementation Report
 
-Date: 2026-08-16
+Date: 2026-08-19
 
 Package: `liuyao-visual-system-and-asset-orchestration-v1.0`
 
 ## Status
 
-`LOCAL_PUBLIC_BETA_P0_READY_WITH_RELEASE_GATES_PENDING`
+`LOCAL_PRODUCT_AND_ASSET_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`
 
-This is not `PRODUCTION_READY`. P0 product visuals, editorial assets, content visuals, and core user journeys are integrated and locally browser-checked. Static SVG/PDF export is still marked `DESIGN_READY_IMPLEMENTATION_PENDING`, and automated visual/accessibility gates remain open.
+This is not `PRODUCTION_READY`. P0 and P1 product visuals, editorial assets, all content visuals, distribution assets, static SVG/print/PDF export, and core user journeys are integrated and locally verified. Only environment-dependent production release gates remain open.
 
 ## Completed
 
@@ -40,7 +40,11 @@ This is not `PRODUCTION_READY`. P0 product visuals, editorial assets, content vi
 - Generated and registered all 10 editorial assets `ED-LY-001` through `ED-LY-010`.
 - Finished the editorial visual content package into 23 production-ready variants under `apps/web/public/liuyao-visual-system/editorial/final/`.
 - Connected final editorial visuals to the Learn Hub, content cards, and content detail pages.
-- Unified all existing 68 content-growth SVG assets under `apps/web/public/content-growth/visuals/` to the Liuyao visual token system while preserving their historical `Bxx-VIS-xx` IDs and paths.
+- Art-directed all existing 68 content-growth SVG assets under `apps/web/public/content-growth/visuals/` into seven semantic layout families while preserving their historical `Bxx-VIS-xx` IDs and paths.
+- Integrated VIS-LY-011 through VIS-LY-014 as progressively disclosed P1 report evidence.
+- Added same-ViewModel static SVG download and browser print/PDF output.
+- Generated 72 social cards, 24 summary cards, 50 video covers and shootable storyboards, and 12 collection documents from the source registries.
+- Added responsive visual regression at desktop and 360/390/430 widths plus semantic, keyboard, screen-reader-summary, asset-integrity, and PDF checks.
 
 ## Guardrails Preserved
 
@@ -73,8 +77,8 @@ Commercial experience P0 now also includes:
 - Direct relationship, career, wealth, and business scenario shortcuts.
 - Relationship reports led by user-facing relationship direction and interaction guidance before professional terms.
 - Dedicated topic landing pages with user questions, method explanation, examples, CTA, and related learning.
-- A dedicated five-stage Learn Hub path rather than exposing structured package metadata.
-- Production-only content filtering with 213 public entries, including six topic pages and one learning path.
+- A dedicated six-stage Learn Hub path rather than exposing structured package metadata.
+- Production-only content filtering with 421 reviewed public package entries, including six topic pages and one learning path.
 
 ## Editorial Assets
 
@@ -90,15 +94,16 @@ AI-generated images are editorial-only. They do not encode real hexagram lines, 
 
 ## Existing Content SVGs
 
-The existing 68 `Bxx-VIS-xx` SVG assets are now style-aligned:
+The existing 68 `Bxx-VIS-xx` SVG assets are now individually art-directed and style-aligned:
 
 - Historical filenames and IDs were preserved.
-- Diagram text, title, description, and content semantics were preserved.
+- Diagram text, title, description, and content semantics were reviewed and preserved.
+- Each visual now uses the most suitable timeline, comparison, cycle, stack, relationship, flow, or matrix composition.
 - Colors were normalized to the Liuyao visual token palette.
 - Font family was normalized to the product system stack.
 - Rounded rectangle radii were capped at 8px.
 - Each SVG now carries `data-visual-system="LIUYAO_VISUAL_SYSTEM_V1"` and canonicalization metadata.
-- Audit file: `data/liuyao/visual-system/integration/content-growth-68-svg-style-audit.json`.
+- Production audit: `data/liuyao/visual-system/integration/content-growth-68-svg-production-audit.json`.
 
 ## Validation
 
@@ -106,7 +111,8 @@ The existing 68 `Bxx-VIS-xx` SVG assets are now style-aligned:
 - `pnpm run typecheck` passed.
 - `npm run build` passed.
 - `pnpm run content:qa` passed with 0 errors, 0 warnings, and no isolated content.
-- Browser checks passed on 1440px desktop and 390px mobile without horizontal overflow or public implementation-state leakage.
+- Browser and snapshot checks passed on desktop and 360/390/430 mobile without horizontal overflow or public implementation-state leakage.
+- Static SVG download and print/PDF output passed same-ViewModel export checks.
 - Production content filtering returned only `PUBLICATION_READY` entries; dependency readiness returned HTTP 503 when infrastructure was unavailable.
 
 Known build notices are pre-existing project configuration warnings:
@@ -114,12 +120,11 @@ Known build notices are pre-existing project configuration warnings:
 - Tailwind `content` option warning in admin build.
 - Next.js ESLint plugin not detected warning.
 
-## Remaining Work Before Production Ready
+## Remaining Production-Only Gates
 
-- Implement same-ViewModel static SVG/PDF export provider.
-- Add Playwright responsive visual checks for 360/390/430 mobile and desktop.
-- Add visual regression snapshots for the P0 components.
-- Add screen reader narration tests for board and timeline summaries.
-- Decide whether to remove Meihua from backend/contracts completely, or keep it as legacy internal compatibility.
+- Deploy and verify HTTPS staging with production-like PostgreSQL and Redis.
+- Run the live AI provider smoke suite with securely configured credentials.
+- Capture staging performance, caching, observability, and real-device evidence.
+- Keep legacy Meihua contracts isolated as internal compatibility or remove them in a separately approved backend migration; they are absent from the public product.
 
 The consolidated ownership, evidence, and release decision are recorded in `docs/production/96-liuyao-public-beta-commercial-readiness.md`.

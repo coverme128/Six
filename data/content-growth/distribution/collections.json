@@ -1,0 +1,290 @@
+[
+  {
+    "collection_id": "COL-01",
+    "title": "六爻入门",
+    "description": "围绕“六爻入门”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B01-A01",
+      "B02-A01",
+      "B01-A14"
+    ],
+    "recommended_order": [
+      "B01-A01",
+      "B02-A01",
+      "B01-A14"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-02",
+    "title": "如何正确提问",
+    "description": "围绕“如何正确提问”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B01-A02",
+      "B01-A03",
+      "B01-A04"
+    ],
+    "recommended_order": [
+      "B01-A02",
+      "B01-A03",
+      "B01-A04"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "PUBLIC_PAGE",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-03",
+    "title": "起卦与排盘",
+    "description": "围绕“起卦与排盘”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B02-A02",
+      "B02-A05",
+      "B02-A11"
+    ],
+    "recommended_order": [
+      "B02-A02",
+      "B02-A05",
+      "B02-A11"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-04",
+    "title": "六亲与用神",
+    "description": "围绕“六亲与用神”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B02-A16",
+      "B03-A01",
+      "B03-A03"
+    ],
+    "recommended_order": [
+      "B02-A16",
+      "B03-A01",
+      "B03-A03"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-05",
+    "title": "世应与关系",
+    "description": "围绕“世应与关系”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B02-A15",
+      "B03-A13",
+      "B03-A15"
+    ],
+    "recommended_order": [
+      "B02-A15",
+      "B03-A13",
+      "B03-A15"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-06",
+    "title": "旺衰与月日",
+    "description": "围绕“旺衰与月日”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B04-A01",
+      "B04-A02",
+      "B04-A04"
+    ],
+    "recommended_order": [
+      "B04-A01",
+      "B04-A02",
+      "B04-A04"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-07",
+    "title": "动爻与变化",
+    "description": "围绕“动爻与变化”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B02-A08",
+      "B04-A10",
+      "B04-A12"
+    ],
+    "recommended_order": [
+      "B02-A08",
+      "B04-A10",
+      "B04-A12"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-08",
+    "title": "应期与不确定性",
+    "description": "围绕“应期与不确定性”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B04-A19",
+      "B04-A17",
+      "B05-A29"
+    ],
+    "recommended_order": [
+      "B04-A19",
+      "B04-A17",
+      "B05-A29"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-09",
+    "title": "如何看六爻报告",
+    "description": "围绕“如何看六爻报告”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B01-A14",
+      "B01-A15",
+      "B04-A20"
+    ],
+    "recommended_order": [
+      "B01-A14",
+      "B01-A15",
+      "B04-A20"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-10",
+    "title": "事业与商业",
+    "description": "围绕“事业与商业”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B05-A01",
+      "B05-A06",
+      "B05-A10"
+    ],
+    "recommended_order": [
+      "B05-A01",
+      "B05-A06",
+      "B05-A10"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-11",
+    "title": "感情与人生安排",
+    "description": "围绕“感情与人生安排”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B05-A16",
+      "B05-A19",
+      "B05-A26"
+    ],
+    "recommended_order": [
+      "B05-A16",
+      "B05-A19",
+      "B05-A26"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "INTERNAL_COLLECTION",
+    "version": "1.0"
+  },
+  {
+    "collection_id": "COL-12",
+    "title": "系统可信性与 AI",
+    "description": "围绕“系统可信性与 AI”组织一条有顺序的学习路径，不按数据库 ID 平铺内容。",
+    "who_is_it_for": "希望围绕一个目标连续学习，而不是浏览完整文章目录的用户。",
+    "what_you_will_learn": [
+      "核心概念",
+      "如何在报告中识别",
+      "常见误区与下一步"
+    ],
+    "featured_content_refs": [
+      "B01-A09",
+      "B01-A10",
+      "B01-A18"
+    ],
+    "recommended_order": [
+      "B01-A09",
+      "B01-A10",
+      "B01-A18"
+    ],
+    "tool_cta": "开始一次六爻占问",
+    "seo_status": "PUBLIC_PAGE",
+    "version": "1.0"
+  }
+]

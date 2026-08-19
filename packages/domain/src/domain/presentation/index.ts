@@ -4,7 +4,7 @@ import { buildGuidedViewModel } from "./guidedViewModel.js";
 import { buildProfessionalViewModel } from "./professionalViewModel.js";
 import { buildAdminViewModel } from "./adminViewModel.js";
 import { buildLiuyaoProductResultFacts } from "./productResultFacts.js";
-import { buildLiuyaoVisualizationBundle, LIUYAO_VISUAL_REGISTRY, LIUYAO_VISUAL_SYSTEM_VERSION } from "./liuyaoVisualizationViewModels.js";
+import { buildLiuyaoVisualizationBundle } from "./liuyaoVisualizationViewModels.js";
 import { REPORT_PAGE_EXPERIENCE, VISIBILITY_MATRIX } from "./experienceContracts.js";
 import { duplicatePresentationWarnings } from "./evidenceDeduplicator.js";
 import { selectContentExplanationSnippets } from "./contentExplanations.js";

@@ -1,0 +1,3162 @@
+[
+  {
+    "video_id": "B01-VIDEO-01",
+    "title": "六爻适合问什么问题",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "六爻不是所有问题都适合问，先看这四个条件。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "六爻不是所有问题都适合问，先看这四个条件。",
+        "on_screen_text": "六爻不是所有问题都适合问，先看这四个条件。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "开始一次六爻占问，查看完整依据与使用边界。",
+        "on_screen_text": "开始一次六爻占问"
+      }
+    ],
+    "voiceover": "六爻不是所有问题都适合问，先看这四个条件。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n开始一次六爻占问，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "六爻不是所有问题都适合问，先看这四个条件。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "开始一次六爻占问"
+    ],
+    "visual_refs": [
+      "B01-VIS-07"
+    ],
+    "product_cta": {
+      "label": "开始一次六爻占问",
+      "route": "/app/liuyao"
+    },
+    "caption": "六爻适合问什么问题：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A01"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B01-VIDEO-02",
+    "title": "怎样提出一个清晰问题",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "一个问题写清四件事，报告会更容易理解。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "一个问题写清四件事，报告会更容易理解。",
+        "on_screen_text": "一个问题写清四件事，报告会更容易理解。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "开始一次六爻占问，查看完整依据与使用边界。",
+        "on_screen_text": "开始一次六爻占问"
+      }
+    ],
+    "voiceover": "一个问题写清四件事，报告会更容易理解。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n开始一次六爻占问，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "一个问题写清四件事，报告会更容易理解。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "开始一次六爻占问"
+    ],
+    "visual_refs": [
+      "B01-VIS-02"
+    ],
+    "product_cta": {
+      "label": "开始一次六爻占问",
+      "route": "/app/liuyao"
+    },
+    "caption": "怎样提出一个清晰问题：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A02"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B01-VIDEO-03",
+    "title": "为什么不建议反复起卦",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "结果不满意就再起一卦，往往只会让你更难决定。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "结果不满意就再起一卦，往往只会让你更难决定。",
+        "on_screen_text": "结果不满意就再起一卦，往往只会让你更难决定。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "查看相关知识，查看完整依据与使用边界。",
+        "on_screen_text": "查看相关知识"
+      }
+    ],
+    "voiceover": "结果不满意就再起一卦，往往只会让你更难决定。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n查看相关知识，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "结果不满意就再起一卦，往往只会让你更难决定。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "查看相关知识"
+    ],
+    "visual_refs": [
+      "B01-VIS-04"
+    ],
+    "product_cta": {
+      "label": "查看相关知识",
+      "route": "/knowledge/liuyao"
+    },
+    "caption": "为什么不建议反复起卦：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A04"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B01-VIDEO-04",
+    "title": "AI 在六爻报告中负责什么",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "AI 在六爻报告里最重要的能力，其实是“不越权”。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "AI 在六爻报告里最重要的能力，其实是“不越权”。",
+        "on_screen_text": "AI 在六爻报告里最重要的能力，其实是“不越权”。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "了解系统如何生成报告，查看完整依据与使用边界。",
+        "on_screen_text": "了解系统如何生成报告"
+      }
+    ],
+    "voiceover": "AI 在六爻报告里最重要的能力，其实是“不越权”。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n了解系统如何生成报告，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "AI 在六爻报告里最重要的能力，其实是“不越权”。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "了解系统如何生成报告"
+    ],
+    "visual_refs": [
+      "B01-VIS-05"
+    ],
+    "product_cta": {
+      "label": "了解系统如何生成报告",
+      "route": "/knowledge/liuyao/how-report-works"
+    },
+    "caption": "AI 在六爻报告中负责什么：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A11"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B01-VIDEO-05",
+    "title": "如何阅读支持、阻碍与不确定性",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "一份报告同时有支持和阻碍，并不矛盾。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "一份报告同时有支持和阻碍，并不矛盾。",
+        "on_screen_text": "一份报告同时有支持和阻碍，并不矛盾。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "学习如何阅读六爻报告，查看完整依据与使用边界。",
+        "on_screen_text": "学习如何阅读六爻报告"
+      }
+    ],
+    "voiceover": "一份报告同时有支持和阻碍，并不矛盾。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n学习如何阅读六爻报告，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "一份报告同时有支持和阻碍，并不矛盾。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "学习如何阅读六爻报告"
+    ],
+    "visual_refs": [
+      "B01-VIS-06"
+    ],
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/knowledge/liuyao/read-report"
+    },
+    "caption": "如何阅读支持、阻碍与不确定性：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A06"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B01-VIDEO-06",
+    "title": "如何判断六爻 AI 报告是否可信",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "判断一份六爻 AI 报告是否可信，不要看它说得多肯定。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与核心问题",
+        "voiceover": "判断一份六爻 AI 报告是否可信，不要看它说得多肯定。",
+        "on_screen_text": "判断一份六爻 AI 报告是否可信，不要看它说得多肯定。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "对应结构图的前半部分",
+        "voiceover": "先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。",
+        "on_screen_text": "问题清楚 · 事实稳定 · 依据可查"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "对应结构图的核心节点",
+        "voiceover": "可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。",
+        "on_screen_text": "支持 ≠ 保证；阻碍 ≠ 注定失败"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "行动与复盘卡片",
+        "voiceover": "把结论转成现实检查项，采取小步行动，并在约定时间复盘。",
+        "on_screen_text": "理解 → 验证 → 行动 → 复盘"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "了解系统如何生成报告，查看完整依据与使用边界。",
+        "on_screen_text": "了解系统如何生成报告"
+      }
+    ],
+    "voiceover": "判断一份六爻 AI 报告是否可信，不要看它说得多肯定。\n先确认报告回答的是一个明确现实任务，再区分事实、规则与解释。\n可信的做法会保留支持、阻碍与不确定性，不用绝对语言替用户作决定。\n把结论转成现实检查项，采取小步行动，并在约定时间复盘。\n了解系统如何生成报告，查看完整依据与使用边界。",
+    "on_screen_text": [
+      "判断一份六爻 AI 报告是否可信，不要看它说得多肯定。",
+      "问题清楚 · 事实稳定 · 依据可查",
+      "支持 ≠ 保证；阻碍 ≠ 注定失败",
+      "理解 → 验证 → 行动 → 复盘",
+      "了解系统如何生成报告"
+    ],
+    "visual_refs": [
+      "B01-VIS-07"
+    ],
+    "product_cta": {
+      "label": "了解系统如何生成报告",
+      "route": "/knowledge/liuyao/how-report-works"
+    },
+    "caption": "如何判断六爻 AI 报告是否可信：用结构化、克制的方式理解六爻报告，不做神准承诺。",
+    "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
+    "article_refs": [
+      "B01-A18"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_01",
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-01",
+    "title": "六爻为什么要连续起六次",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "一次只形成一个爻，为什么不能少一次？",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "一次只形成一个爻，为什么不能少一次？",
+        "on_screen_text": "一次只形成一个爻，为什么不能少一次？"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "一次只形成一个爻，为什么不能少一次？\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "一次只形成一个爻，为什么不能少一次？",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-02"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "六爻为什么要连续起六次：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A04"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-02",
+    "title": "六个爻为什么要自下而上记录",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "第一次不是最上面，而是最下方的初爻。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "第一次不是最上面，而是最下方的初爻。",
+        "on_screen_text": "第一次不是最上面，而是最下方的初爻。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "第一次不是最上面，而是最下方的初爻。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "第一次不是最上面，而是最下方的初爻。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-02"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "六个爻为什么要自下而上记录：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A05"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-03",
+    "title": "少阴少阳老阴老阳怎么区分",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "先别背数字，用阴阳和动静两个维度就能分清。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "先别背数字，用阴阳和动静两个维度就能分清。",
+        "on_screen_text": "先别背数字，用阴阳和动静两个维度就能分清。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "先别背数字，用阴阳和动静两个维度就能分清。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "先别背数字，用阴阳和动静两个维度就能分清。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-04"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "少阴少阳老阴老阳怎么区分：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A06"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-04",
+    "title": "动爻如何形成变卦",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "变卦不是重新起卦，只有动爻会转换。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "变卦不是重新起卦，只有动爻会转换。",
+        "on_screen_text": "变卦不是重新起卦，只有动爻会转换。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "变卦不是重新起卦，只有动爻会转换。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "变卦不是重新起卦，只有动爻会转换。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-05"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "动爻如何形成变卦：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A08",
+      "B02-A10"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-05",
+    "title": "本卦和变卦有什么区别",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "本卦保存原始结构，变卦展示动爻转换后的结构。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "本卦保存原始结构，变卦展示动爻转换后的结构。",
+        "on_screen_text": "本卦保存原始结构，变卦展示动爻转换后的结构。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "本卦保存原始结构，变卦展示动爻转换后的结构。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "本卦保存原始结构，变卦展示动爻转换后的结构。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-05"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "本卦和变卦有什么区别：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A09",
+      "B02-A10"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-06",
+    "title": "八宫与纳甲分别是什么",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "八宫负责组织坐标，纳甲负责把专业字段配置到爻位。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "八宫负责组织坐标，纳甲负责把专业字段配置到爻位。",
+        "on_screen_text": "八宫负责组织坐标，纳甲负责把专业字段配置到爻位。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "八宫负责组织坐标，纳甲负责把专业字段配置到爻位。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "八宫负责组织坐标，纳甲负责把专业字段配置到爻位。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-08"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "八宫与纳甲分别是什么：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A13",
+      "B02-A14"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-07",
+    "title": "六亲和六神是不是直接决定吉凶",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "它们是角色与辅助信息，不是两张吉凶标签表。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "它们是角色与辅助信息，不是两张吉凶标签表。",
+        "on_screen_text": "它们是角色与辅助信息，不是两张吉凶标签表。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "它们是角色与辅助信息，不是两张吉凶标签表。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "它们是角色与辅助信息，不是两张吉凶标签表。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-07"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "六亲和六神是不是直接决定吉凶：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A16",
+      "B02-A17"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B02-VIDEO-08",
+    "title": "第一次怎样看懂六爻排盘",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "Bilibili Shorts"
+    ],
+    "duration": "56 秒",
+    "hook": "先看问题和变化，再逐层展开专业盘面。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration_sec": 8,
+        "visual": "标题与问题",
+        "voiceover": "先看问题和变化，再逐层展开专业盘面。",
+        "on_screen_text": "先看问题和变化，再逐层展开专业盘面。"
+      },
+      {
+        "scene": 2,
+        "duration_sec": 12,
+        "visual": "基础结构图",
+        "voiceover": "先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。",
+        "on_screen_text": "输入准确 → 结构可核验"
+      },
+      {
+        "scene": 3,
+        "duration_sec": 16,
+        "visual": "核心节点逐步高亮",
+        "voiceover": "确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。",
+        "on_screen_text": "排盘负责计算 · AI 负责解释"
+      },
+      {
+        "scene": 4,
+        "duration_sec": 12,
+        "visual": "常见错误卡",
+        "voiceover": "不要把阴阳、动静、六亲或六神单独做成吉凶结论。",
+        "on_screen_text": "结构属性 ≠ 绝对吉凶"
+      },
+      {
+        "scene": 5,
+        "duration_sec": 8,
+        "visual": "产品 CTA",
+        "voiceover": "打开六爻起卦工具，按步骤完成并查看依据。",
+        "on_screen_text": "查看六爻起卦工具"
+      }
+    ],
+    "voiceover": "先看问题和变化，再逐层展开专业盘面。\n先确认起卦输入与六个爻位的对应关系，再识别阴阳和动静。\n确定性排盘负责生成本卦、变卦和专业字段，AI 只能解释已有事实。\n不要把阴阳、动静、六亲或六神单独做成吉凶结论。\n打开六爻起卦工具，按步骤完成并查看依据。",
+    "on_screen_text": [
+      "先看问题和变化，再逐层展开专业盘面。",
+      "输入准确 → 结构可核验",
+      "排盘负责计算 · AI 负责解释",
+      "结构属性 ≠ 绝对吉凶",
+      "查看六爻起卦工具"
+    ],
+    "visual_refs": [
+      "B02-VIS-09"
+    ],
+    "product_cta": {
+      "label": "查看六爻起卦工具",
+      "route": "/app/liuyao",
+      "route_status": "VERIFY_IN_REPOSITORY"
+    },
+    "caption": "第一次怎样看懂六爻排盘：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
+    "safety_note": "基础知识教育；不承诺现实结果。",
+    "article_refs": [
+      "B02-A18"
+    ],
+    "status": "APPROVED_FOR_IMPORT",
+    "version": "1.0",
+    "source_batch": "BATCH_02",
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-01",
+    "title": "六爻中的用神到底是什么",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "六爻中的用神到底是什么"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "六爻中的用神到底是什么，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "六爻中的用神到底是什么",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-01"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "六爻中的用神到底是什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A01"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-02",
+    "title": "为什么同一个卦不同问题用神不同",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "为什么同一个卦不同问题用神不同"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "为什么同一个卦不同问题用神不同，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "为什么同一个卦不同问题用神不同",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-02"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "为什么同一个卦不同问题用神不同｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A03"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-03",
+    "title": "六亲为什么不能按字面理解",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "六亲为什么不能按字面理解"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "六亲为什么不能按字面理解，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "六亲为什么不能按字面理解",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-03"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "六亲为什么不能按字面理解｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A05"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-04",
+    "title": "父母兄弟子孙妻财官鬼分别代表什么",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "父母兄弟子孙妻财官鬼分别代表什么"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "父母兄弟子孙妻财官鬼分别代表什么，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "父母兄弟子孙妻财官鬼分别代表什么",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-04"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "父母兄弟子孙妻财官鬼分别代表什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A07"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-05",
+    "title": "世爻和应爻是什么",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "世爻和应爻是什么"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "世爻和应爻是什么，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "世爻和应爻是什么",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-05"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "世爻和应爻是什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A09"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-06",
+    "title": "原神忌神仇神怎么理解",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "原神忌神仇神怎么理解"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "原神忌神仇神怎么理解，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "原神忌神仇神怎么理解",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-06"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "原神忌神仇神怎么理解｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A11"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-07",
+    "title": "专业关系如何变成报告里的支持和阻碍",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "专业关系如何变成报告里的支持和阻碍"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "专业关系如何变成报告里的支持和阻碍，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "专业关系如何变成报告里的支持和阻碍",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-07"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "专业关系如何变成报告里的支持和阻碍｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A13"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B03-VIDEO-08",
+    "title": "怎样核验一份报告的用神选择是否合理",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书",
+      "YouTube Shorts"
+    ],
+    "duration": "60–70 秒",
+    "hook": "别先背术语：先看这个词在本次问题里承担什么角色。",
+    "scene_list": [
+      {
+        "time": "0-6s",
+        "visual": "标题 + 一个常见误区",
+        "on_screen_text": "怎样核验一份报告的用神选择是否合理"
+      },
+      {
+        "time": "6-20s",
+        "visual": "结构图",
+        "on_screen_text": "问题 → 角色 → 用神 / 关系"
+      },
+      {
+        "time": "20-42s",
+        "visual": "正确与错误对照",
+        "on_screen_text": "角色 ≠ 字面人物；标签 ≠ 最终吉凶"
+      },
+      {
+        "time": "42-60s",
+        "visual": "Guided / Professional 两层",
+        "on_screen_text": "先看核心解释，再按需查看依据"
+      },
+      {
+        "time": "60-70s",
+        "visual": "产品 CTA",
+        "on_screen_text": "查看六爻报告中的角色依据"
+      }
+    ],
+    "voiceover": "怎样核验一份报告的用神选择是否合理，最重要的不是背一个口诀，而是把它放回“问题—角色—关系—证据”这条链。六爻里的角色名称承担结构功能，不是固定人物，也不是吉凶标签。项目中，角色与用神应先由正式 Registry 和确定性规则形成事实，AI 只负责把这些事实解释成用户能理解的语言。普通用户看核心观察对象、主要支持和主要阻碍就够了；Professional 用户可以继续核对问题主题、角色来源、用神、世应和 Evidence。角色确定以后仍不能直接等于最终结果，后续还要结合旺衰、动变、格局和时间。",
+    "on_screen_text": [
+      "怎样核验一份报告的用神选择是否合理",
+      "问题 → 角色 → 用神 / 关系",
+      "角色 ≠ 字面人物；标签 ≠ 最终吉凶",
+      "先看核心解释，再按需查看依据",
+      "查看六爻报告中的角色依据"
+    ],
+    "visual_refs": [
+      "B03-VIS-08"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "怎样核验一份报告的用神选择是否合理｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
+    "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
+    "article_refs": [
+      "B03-A15"
+    ],
+    "source_batch": "BATCH_03",
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-01",
+    "title": "六爻中的旺衰到底是什么",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "六爻中的旺衰到底是什么？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-01",
+        "on_screen_text": "六爻中的旺衰到底是什么",
+        "voiceover": "六爻中的旺衰到底是什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-02",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-03",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-04",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "六爻中的旺衰到底是什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "六爻中的旺衰到底是什么",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-01",
+      "B04-VIS-02",
+      "B04-VIS-03",
+      "B04-VIS-04"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "六爻中的旺衰到底是什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A01"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-02",
+    "title": "月建和日辰分别负责什么",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "月建和日辰分别负责什么？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-02",
+        "on_screen_text": "月建和日辰分别负责什么",
+        "voiceover": "月建和日辰分别负责什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-03",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-04",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-05",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "月建和日辰分别负责什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "月建和日辰分别负责什么",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-02",
+      "B04-VIS-03",
+      "B04-VIS-04",
+      "B04-VIS-05"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "月建和日辰分别负责什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A03"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-03",
+    "title": "旬空是不是“什么都没有”",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "旬空是不是“什么都没有”？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-03",
+        "on_screen_text": "旬空是不是“什么都没有”",
+        "voiceover": "旬空是不是“什么都没有”，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-04",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-05",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-06",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "旬空是不是“什么都没有”，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "旬空是不是“什么都没有”",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-03",
+      "B04-VIS-04",
+      "B04-VIS-05",
+      "B04-VIS-06"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "旬空是不是“什么都没有”：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A05"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-04",
+    "title": "月破和日冲有什么区别",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "月破和日冲有什么区别？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-04",
+        "on_screen_text": "月破和日冲有什么区别",
+        "voiceover": "月破和日冲有什么区别，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-05",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-06",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-07",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "月破和日冲有什么区别，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "月破和日冲有什么区别",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-04",
+      "B04-VIS-05",
+      "B04-VIS-06",
+      "B04-VIS-07"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "月破和日冲有什么区别：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A07"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-05",
+    "title": "动爻为什么重要",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "动爻为什么重要？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-05",
+        "on_screen_text": "动爻为什么重要",
+        "voiceover": "动爻为什么重要，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-06",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-07",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-08",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "动爻为什么重要，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "动爻为什么重要",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-05",
+      "B04-VIS-06",
+      "B04-VIS-07",
+      "B04-VIS-08"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "动爻为什么重要：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A09"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-06",
+    "title": "回头生和回头克怎么理解",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "回头生和回头克怎么理解？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-06",
+        "on_screen_text": "回头生和回头克怎么理解",
+        "voiceover": "回头生和回头克怎么理解，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-07",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-08",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-09",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "回头生和回头克怎么理解，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "回头生和回头克怎么理解",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-06",
+      "B04-VIS-07",
+      "B04-VIS-08",
+      "B04-VIS-09"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "回头生和回头克怎么理解：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A11"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-07",
+    "title": "进神退神伏神飞神分别是什么",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "进神退神伏神飞神分别是什么？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-07",
+        "on_screen_text": "进神退神伏神飞神分别是什么",
+        "voiceover": "进神退神伏神飞神分别是什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-08",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-09",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-10",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "进神退神伏神飞神分别是什么，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "进神退神伏神飞神分别是什么",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-07",
+      "B04-VIS-08",
+      "B04-VIS-09",
+      "B04-VIS-10"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "进神退神伏神飞神分别是什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A13"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-08",
+    "title": "为什么报告会同时出现支持和阻碍",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "为什么报告会同时出现支持和阻碍？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-08",
+        "on_screen_text": "为什么报告会同时出现支持和阻碍",
+        "voiceover": "为什么报告会同时出现支持和阻碍，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-09",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-10",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-11",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "为什么报告会同时出现支持和阻碍，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "为什么报告会同时出现支持和阻碍",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-08",
+      "B04-VIS-09",
+      "B04-VIS-10",
+      "B04-VIS-11"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "为什么报告会同时出现支持和阻碍：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A15"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-09",
+    "title": "六爻中的应期是不是确定日期",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "六爻中的应期是不是确定日期？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-09",
+        "on_screen_text": "六爻中的应期是不是确定日期",
+        "voiceover": "六爻中的应期是不是确定日期，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-10",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-11",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-12",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "六爻中的应期是不是确定日期，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "六爻中的应期是不是确定日期",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-09",
+      "B04-VIS-10",
+      "B04-VIS-11",
+      "B04-VIS-12"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "六爻中的应期是不是确定日期：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A17"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B04-VIDEO-10",
+    "title": "怎样核验一份报告的旺衰与应期",
+    "target_platform": [
+      "Douyin",
+      "Xiaohongshu",
+      "Bilibili Shorts",
+      "YouTube Shorts"
+    ],
+    "duration": "60–75 秒",
+    "hook": "怎样核验一份报告的旺衰与应期？先不要把一个专业词直接翻译成吉凶。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "seconds": "0-8",
+        "visual": "B04-VIS-10",
+        "on_screen_text": "怎样核验一份报告的旺衰与应期",
+        "voiceover": "怎样核验一份报告的旺衰与应期，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。"
+      },
+      {
+        "scene": 2,
+        "seconds": "8-28",
+        "visual": "B04-VIS-11",
+        "on_screen_text": "先看对象，再看状态与关系",
+        "voiceover": "六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。"
+      },
+      {
+        "scene": 3,
+        "seconds": "28-52",
+        "visual": "B04-VIS-12",
+        "on_screen_text": "Registry → Evidence → Presenter",
+        "voiceover": "正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。"
+      },
+      {
+        "scene": 4,
+        "seconds": "52-70",
+        "visual": "B04-VIS-01",
+        "on_screen_text": "时间候选 ≠ 保证日期",
+        "voiceover": "如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。"
+      }
+    ],
+    "voiceover": "怎样核验一份报告的旺衰与应期，关键不是背一个口诀，而是知道这条专业信息作用于谁、来自哪里。 六爻的专业判断会把核心对象、月日环境、特殊状态、动变和关系组织成 Evidence。单一标签不能直接代表最终结果。 正式规则由项目 Registry 决定，内容层只负责解释。Guided 展示用户可读的支持、阻碍、变化与时间提示，Professional 再展开专业依据。 如果证据冲突，报告应保留冲突；如果是应期，只能展示规则产生的候选时间，而不是保证某天一定发生。",
+    "on_screen_text": [
+      "怎样核验一份报告的旺衰与应期",
+      "先看对象，再看状态与关系",
+      "Registry → Evidence → Presenter",
+      "时间候选 ≠ 保证日期"
+    ],
+    "visual_refs": [
+      "B04-VIS-10",
+      "B04-VIS-11",
+      "B04-VIS-12",
+      "B04-VIS-01"
+    ],
+    "product_cta": "学习如何阅读六爻报告",
+    "caption": "怎样核验一份报告的旺衰与应期：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
+    "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
+    "article_refs": [
+      "B04-A19"
+    ],
+    "source_batch": "BATCH_04",
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-01",
+    "title": "想换工作，六爻问题应该怎么问",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“想换工作，六爻问题应该怎么问”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "想换工作，六爻问题应该怎么问，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：Offer、劳动合同、薪酬福利、岗位职责、公司信息和个人职业规划。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-02"
+    ],
+    "article_refs": [
+      "B05-A01"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-02",
+    "title": "一个新工作机会应该怎么看",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“一个新工作机会应该怎么看”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "一个新工作机会应该怎么看，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：Offer、劳动合同、薪酬福利、岗位职责、公司信息和个人职业规划。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-02"
+    ],
+    "article_refs": [
+      "B05-A02"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-03",
+    "title": "合作项目应该怎样用六爻分析",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“合作项目应该怎样用六爻分析”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "合作项目应该怎样用六爻分析，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：合同、预算、交付计划、尽调、交易条款、法务和财务资料。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-03"
+    ],
+    "article_refs": [
+      "B05-A07"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "内容仅用于决策框架与风险整理，不代替商业尽调、合同审查、法务、财务或专业谈判建议。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-04",
+    "title": "回款问题应该怎样问",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“回款问题应该怎样问”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "回款问题应该怎样问，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：银行流水、合同、账期、现金流预测、财务报表、投资研究与持牌专业意见。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-05"
+    ],
+    "article_refs": [
+      "B05-A11"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-05",
+    "title": "为什么妻财不等于投资一定赚钱",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“为什么妻财不等于投资一定赚钱”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "为什么妻财不等于投资一定赚钱，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：银行流水、合同、账期、现金流预测、财务报表、投资研究与持牌专业意见。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-06"
+    ],
+    "article_refs": [
+      "B05-A15"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-06",
+    "title": "感情问题为什么不能只问“爱不爱”",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“感情问题为什么不能只问“爱不爱””，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "感情问题为什么不能只问“爱不爱”，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：双方真实沟通、明确表达、行为记录、个人边界和现实关系状态。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-07"
+    ],
+    "article_refs": [
+      "B05-A16"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-07",
+    "title": "复合问题应该怎样拆解",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“复合问题应该怎样拆解”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "复合问题应该怎样拆解，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：双方真实沟通、明确表达、行为记录、个人边界和现实关系状态。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-08"
+    ],
+    "article_refs": [
+      "B05-A19"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-08",
+    "title": "考试问题怎么问更有价值",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“考试问题怎么问更有价值”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "考试问题怎么问更有价值，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：考试大纲、报名规则、学校或机构通知、成绩、申请材料、招聘公告和正式邮件。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-09"
+    ],
+    "article_refs": [
+      "B05-A21"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-09",
+    "title": "求职问题怎样区分机会和准备",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“求职问题怎样区分机会和准备”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "求职问题怎样区分机会和准备，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：考试大纲、报名规则、学校或机构通知、成绩、申请材料、招聘公告和正式邮件。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-09"
+    ],
+    "article_refs": [
+      "B05-A24"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-10",
+    "title": "出行问题不能替代天气和官方信息",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“出行问题不能替代天气和官方信息”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "出行问题不能替代天气和官方信息，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：天气预警、航班铁路信息、政府旅行建议、交通官方通知、会议通知和现场信息。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-10"
+    ],
+    "article_refs": [
+      "B05-A26"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-11",
+    "title": "为什么六爻结果里会同时有支持和风险",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“为什么六爻结果里会同时有支持和风险”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "为什么六爻结果里会同时有支持和风险，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：天气预警、航班铁路信息、政府旅行建议、交通官方通知、会议通知和现场信息。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-11"
+    ],
+    "article_refs": [
+      "B05-A30"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B05-VIDEO-12",
+    "title": "如何把六爻报告变成现实行动计划",
+    "target_platform": [
+      "抖音",
+      "视频号",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "60–80 秒",
+    "hook": "如果你正在搜索“如何把六爻报告变成现实行动计划”，先别急着问一个成或不成。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题与常见错误问法"
+      },
+      {
+        "scene": 2,
+        "duration": "8–25s",
+        "content": "拆成对象、支持、阻碍与时间"
+      },
+      {
+        "scene": 3,
+        "duration": "25–50s",
+        "content": "结构图解释报告"
+      },
+      {
+        "scene": 4,
+        "duration": "50–70s",
+        "content": "Reality Check 与下一步"
+      }
+    ],
+    "voiceover": "如何把六爻报告变成现实行动计划，关键不是从六爻拿到一个替你决定的答案。先把问题缩小到一个具体任务，再看核心对象、支持、阻碍、变化和时间。报告里的角色、用神和专业状态必须来自确定性规则，AI 只能解释。现实信息仍要核实：天气预警、航班铁路信息、政府旅行建议、交通官方通知、会议通知和现场信息。最后把结果转成核实、准备、行动、观察和重新评估。",
+    "on_screen_text": [
+      "一个核心问题",
+      "支持 / 阻碍",
+      "时间 ≠ 保证",
+      "现实信息优先",
+      "把报告转成行动"
+    ],
+    "visual_refs": [
+      "B05-VIS-12"
+    ],
+    "article_refs": [
+      "B05-A30"
+    ],
+    "product_cta": "整理你的六爻问题",
+    "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
+    "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "source_batch": "BATCH_05",
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-01",
+    "title": "第一次学六爻应该从哪里开始",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "第一次学六爻应该从哪里开始，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "第一次学六爻应该从哪里开始。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-02"
+    ],
+    "article_refs": [
+      "B01-A01",
+      "B02-A01"
+    ],
+    "knowledge_refs": [
+      "B01-KC-01",
+      "B01-KC-02",
+      "B01-KC-03"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-02",
+    "title": "一份六爻报告到底是怎样生成的",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "一份六爻报告到底是怎样生成的，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "一份六爻报告到底是怎样生成的。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-07"
+    ],
+    "article_refs": [
+      "B01-A09",
+      "B01-A10"
+    ],
+    "knowledge_refs": [
+      "B01-KC-08",
+      "B01-KC-09",
+      "B01-KC-10"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-03",
+    "title": "Guided 和 Professional 模式有什么区别",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "Guided 和 Professional 模式有什么区别，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "Guided 和 Professional 模式有什么区别。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-06"
+    ],
+    "article_refs": [
+      "B01-A14",
+      "B01-A15"
+    ],
+    "knowledge_refs": [
+      "B01-KC-15",
+      "B01-KC-16",
+      "B01-KC-17"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-04",
+    "title": "为什么六爻不是只看一个“吉凶”",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "为什么六爻不是只看一个“吉凶”，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "为什么六爻不是只看一个“吉凶”。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-05"
+    ],
+    "article_refs": [
+      "B04-A16",
+      "B04-A17"
+    ],
+    "knowledge_refs": [
+      "B01-KC-22",
+      "B01-KC-23",
+      "B01-KC-24"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-05",
+    "title": "AI 为什么不能自己重新解卦",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "AI 为什么不能自己重新解卦，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "AI 为什么不能自己重新解卦。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-08"
+    ],
+    "article_refs": [
+      "B01-A11",
+      "B01-A12"
+    ],
+    "knowledge_refs": [
+      "B01-KC-29",
+      "B01-KC-30",
+      "B02-KC-01"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  },
+  {
+    "video_id": "B07-VIDEO-06",
+    "title": "如何用六爻结果形成现实行动，而不是依赖预测",
+    "target_platform": [
+      "视频号",
+      "抖音",
+      "小红书视频",
+      "YouTube Shorts"
+    ],
+    "duration": "55–80 秒",
+    "hook": "如何用六爻结果形成现实行动，而不是依赖预测，关键不是多记几个术语，而是先知道知识、工具和报告之间是什么关系。",
+    "scene_list": [
+      {
+        "scene": 1,
+        "duration": "0–8s",
+        "content": "现实问题 / 常见误区"
+      },
+      {
+        "scene": 2,
+        "duration": "8–28s",
+        "content": "核心结构图"
+      },
+      {
+        "scene": 3,
+        "duration": "28–55s",
+        "content": "产品中的正确使用方式"
+      },
+      {
+        "scene": 4,
+        "duration": "55–75s",
+        "content": "边界与下一步"
+      }
+    ],
+    "voiceover": "如何用六爻结果形成现实行动，而不是依赖预测。六爻产品先由确定性起卦、历法和规则形成事实，再由报告 Presenter 组织用户可读内容。专业知识帮助你理解依据，但不会替代现实信息，也不会让 AI 重新排盘。需要更深入时再进入 Professional；需要行动时，回到支持、风险、不确定性和现实核验。",
+    "on_screen_text": [
+      "确定性事实优先",
+      "Guided 先理解",
+      "Professional 用于核验",
+      "AI 只解释",
+      "现实行动仍由用户决定"
+    ],
+    "visual_refs": [
+      "B07-VIS-14"
+    ],
+    "article_refs": [
+      "B05-A30",
+      "B01-A05"
+    ],
+    "knowledge_refs": [
+      "B02-KC-06",
+      "B02-KC-07",
+      "B02-KC-08"
+    ],
+    "product_cta": "进入六爻学习中心",
+    "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
+    "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "distribution_tags": [
+      "六爻",
+      "知识教育",
+      "决策框架",
+      "报告阅读"
+    ],
+    "version": "1.0",
+    "source_batch": "BATCH_07",
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+  }
+]

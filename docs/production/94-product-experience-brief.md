@@ -117,4 +117,4 @@ Eastern quality comes from order, spacing, rhythm, weak borders, calm contrast, 
 
 ## Commercial Maturity Boundary
 
-The current implementation is suitable for local Public Beta product validation. It is not yet a full commercial production release. Release still requires static export parity, automated visual regression, screen-reader verification, HTTPS staging evidence, live provider smoke, and configured dependency readiness. The authoritative gate is `docs/production/96-liuyao-public-beta-commercial-readiness.md`.
+The current implementation is complete for local product validation, including static export parity, responsive visual regression, and screen-reader-summary/keyboard automation. It is not yet a commercial production release; HTTPS staging evidence, live provider smoke, configured dependency readiness, production performance, caching, observability, and real-device evidence remain open. The authoritative gate is `docs/production/96-liuyao-public-beta-commercial-readiness.md`.

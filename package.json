@@ -30,6 +30,7 @@
     "content:seo": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts seo",
     "content:qa": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts qa",
     "content:rehearsal": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts rehearsal",
+    "content:finalize-local": "node scripts/content/finalize-local-release.mjs",
     "smoke:ai:live": "pnpm --filter @six/domain build && tsx scripts/ai/live-smoke.ts",
     "validate:p1": "pnpm run fixtures:calendar && pnpm run validate",
     "validate:p2": "pnpm run validate:p1 && pnpm run test:e2e",

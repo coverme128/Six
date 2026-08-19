@@ -361,7 +361,7 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
 
   return {
     visualSystemVersion: LIUYAO_VISUAL_SYSTEM_VERSION,
-    readiness: "P0_READY_WITH_EXPORT_ALIGNMENT_PENDING",
+    readiness: "P0_P1_READY_WITH_STATIC_EXPORT",
     packageStatus: "DATA_IMPORTED",
     registry: LIUYAO_VISUAL_REGISTRY,
     p0VisualIds: LIUYAO_VISUAL_REGISTRY.filter((item) => item.priority === "P0").map((item) => item.visualId),
@@ -370,13 +370,12 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
       guided: ["VIS-LY-001", "VIS-LY-002", "VIS-LY-004", "VIS-LY-005", "VIS-LY-008", "VIS-LY-009", "VIS-LY-010", "VIS-LY-011"],
       professional: ["VIS-LY-001", "VIS-LY-004", "VIS-LY-005", "VIS-LY-006", "VIS-LY-007", "VIS-LY-008", "VIS-LY-009", "VIS-LY-010", "VIS-LY-012", "VIS-LY-014"],
       report: ["VIS-LY-001", "VIS-LY-002", "VIS-LY-004", "VIS-LY-005", "VIS-LY-008", "VIS-LY-009", "VIS-LY-010"],
-      staticExport: ["VIS-LY-001", "VIS-LY-002", "VIS-LY-004", "VIS-LY-005", "VIS-LY-009", "VIS-LY-010"],
+      staticExport: ["VIS-LY-001", "VIS-LY-002", "VIS-LY-004", "VIS-LY-005", "VIS-LY-009", "VIS-LY-010", "VIS-LY-011", "VIS-LY-012", "VIS-LY-014"],
     },
     staticExport: {
-      status: "DESIGN_READY_IMPLEMENTATION_PENDING",
+      status: "IMPLEMENTED_SAME_VIEWMODEL_SVG_PRINT_PDF",
       contractPath: "data/liuyao/visual-system/export/static-export-contract.md",
     },
     viewModels,
   };
 }
-

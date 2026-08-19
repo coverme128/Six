@@ -1,0 +1,3343 @@
+{
+  "generatedAt": "2026-08-19T00:00:00.000Z",
+  "scope": "B03_B04_B05_REPOSITORY_ALIGNMENT_AND_EDITORIAL_REVIEW",
+  "reviewed": 208,
+  "approved": 208,
+  "blocked": 0,
+  "statusCounts": {
+    "PUBLICATION_READY": 421,
+    "DEMO_ONLY": 24
+  },
+  "professionalRulesModified": false,
+  "status": "COMPLETE",
+  "reviews": [
+    {
+      "contentId": "B03-A01",
+      "title": "六爻中的“用神”到底是什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A02",
+      "title": "为什么同一个卦，不同问题可能选择不同用神",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A03",
+      "title": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A04",
+      "title": "父母爻通常代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A05",
+      "title": "兄弟爻通常代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A06",
+      "title": "子孙爻通常代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A07",
+      "title": "妻财爻通常代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A08",
+      "title": "官鬼爻通常代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A09",
+      "title": "六亲角色如何与现实问题建立映射",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A10",
+      "title": "事业和工作问题中，应该怎样理解不同六亲角色",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A11",
+      "title": "财务与商业问题中，六亲角色如何变化",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A12",
+      "title": "感情与关系问题中，为什么不能只看一个六亲",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A13",
+      "title": "世爻在六爻判断中代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A14",
+      "title": "应爻在六爻判断中代表什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A15",
+      "title": "世应关系为什么是六爻关系分析的重要基础",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A16",
+      "title": "原神、忌神和仇神分别是什么",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A17",
+      "title": "支持因素与阻碍因素应该如何从专业关系中理解",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-A18",
+      "title": "怎样核验一份六爻报告中的用神与角色判断",
+      "batch": "B03",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-01",
+      "title": "用神",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-02",
+      "title": "用神候选",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-03",
+      "title": "角色映射",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-04",
+      "title": "问题主题",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-05",
+      "title": "求测主体",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-06",
+      "title": "目标对象",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-07",
+      "title": "关系对象",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-08",
+      "title": "支持角色",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-09",
+      "title": "阻碍角色",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-10",
+      "title": "中性角色",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-11",
+      "title": "六亲在现实问题中的角色",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-12",
+      "title": "父母爻",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-13",
+      "title": "兄弟爻",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-14",
+      "title": "子孙爻",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-15",
+      "title": "妻财爻",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-16",
+      "title": "官鬼爻",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-17",
+      "title": "六亲现实映射",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-18",
+      "title": "六亲多义性",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-19",
+      "title": "六亲上下文",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-20",
+      "title": "六亲角色冲突",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-21",
+      "title": "世爻在问题中的主体位置",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-22",
+      "title": "应爻在问题中的对应位置",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-23",
+      "title": "世应关系",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-24",
+      "title": "生",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-25",
+      "title": "克",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-26",
+      "title": "比和",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-27",
+      "title": "关系方向",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-28",
+      "title": "原神",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-29",
+      "title": "忌神",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-30",
+      "title": "仇神",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-31",
+      "title": "用神支持链",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-32",
+      "title": "用神阻碍链",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-33",
+      "title": "主要支持",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-34",
+      "title": "主要阻碍",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B03-KC-35",
+      "title": "角色判断依据",
+      "batch": "B03",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A01",
+      "title": "六爻中的旺衰到底是什么意思",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A02",
+      "title": "月建在六爻判断中负责什么",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A03",
+      "title": "日辰在六爻判断中负责什么",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A04",
+      "title": "月建与日辰应该怎样一起理解",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A05",
+      "title": "什么是得令、得地与得助",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A06",
+      "title": "什么是受制、受克与消耗",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A07",
+      "title": "旬空是什么意思，为什么不能简单理解成“没有”",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A08",
+      "title": "月破是什么意思，它在报告中应怎样理解",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A09",
+      "title": "日冲是什么意思，它与月破有什么不同",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A10",
+      "title": "动爻为什么是六爻变化判断的重要信息",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A11",
+      "title": "变爻在六爻判断中负责什么",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A12",
+      "title": "回头生与回头克应该怎样理解",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A13",
+      "title": "进神与退神是什么意思",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A14",
+      "title": "伏神与飞神应该怎样理解",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A15",
+      "title": "生、克、制、化如何共同构成关系判断",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A16",
+      "title": "为什么六爻报告中可能同时出现支持和阻碍",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A17",
+      "title": "当多条六爻证据互相冲突时，应该怎样理解",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A18",
+      "title": "六爻中的“格局”为什么不能脱离基础事实单独判断",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A19",
+      "title": "六爻中的应期是什么",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-A20",
+      "title": "怎样核验一份六爻报告中的旺衰、动变与应期判断",
+      "batch": "B04",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-01",
+      "title": "月建",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-02",
+      "title": "日辰",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-03",
+      "title": "月日环境",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-04",
+      "title": "得令",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-05",
+      "title": "得助",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-06",
+      "title": "受制",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-07",
+      "title": "受克",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-08",
+      "title": "消耗",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-09",
+      "title": "旬空",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-10",
+      "title": "月破",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-11",
+      "title": "日冲",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-12",
+      "title": "状态恢复",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-13",
+      "title": "状态冲突",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-14",
+      "title": "证据一致",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-15",
+      "title": "专业判断中的依据不足",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-16",
+      "title": "动爻作用",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-17",
+      "title": "变爻作用",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-18",
+      "title": "回头生",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-19",
+      "title": "回头克",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-20",
+      "title": "进神",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-21",
+      "title": "退神",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-22",
+      "title": "伏神",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-23",
+      "title": "飞神",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-24",
+      "title": "动变链",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-25",
+      "title": "生扶",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-26",
+      "title": "克制",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-27",
+      "title": "制化",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-28",
+      "title": "旺衰动变中的证据冲突",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-29",
+      "title": "格局",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-30",
+      "title": "综合判断",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-31",
+      "title": "应期",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-32",
+      "title": "时间候选",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-33",
+      "title": "时间窗口",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-34",
+      "title": "时间不确定性",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-KC-35",
+      "title": "应期依据",
+      "batch": "B04",
+      "contentType": "KNOWLEDGE",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-01",
+      "title": "旺衰是不是吉凶",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-02",
+      "title": "月建和日辰哪个更重要",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-03",
+      "title": "什么叫得令",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-04",
+      "title": "什么叫得助",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-05",
+      "title": "被克是不是一定不好",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-06",
+      "title": "月日意见不一致怎么办",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-07",
+      "title": "旺是不是一定成功",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-08",
+      "title": "衰是不是一定失败",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-09",
+      "title": "为什么同一个爻在不同时间状态不同",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-10",
+      "title": "普通用户是否需要自己计算旺衰",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-11",
+      "title": "旬空是不是没有",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-12",
+      "title": "旬空是不是一定无效",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-13",
+      "title": "月破是不是一定坏",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-14",
+      "title": "日冲是不是一定凶",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-15",
+      "title": "旬空和月破有什么区别",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-16",
+      "title": "月破和日冲有什么区别",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-17",
+      "title": "状态会不会随时间改变",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-18",
+      "title": "引导阅读 报告为什么不展示全部状态",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-19",
+      "title": "动爻为什么重要",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-20",
+      "title": "动爻是不是一定代表变化",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-21",
+      "title": "变爻是不是结果",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-22",
+      "title": "回头生是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-23",
+      "title": "回头克是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-24",
+      "title": "进神是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-25",
+      "title": "退神是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-26",
+      "title": "伏神是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-27",
+      "title": "飞神是什么",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-28",
+      "title": "多个动爻应该怎样理解",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-29",
+      "title": "为什么同时有支持和阻碍",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-30",
+      "title": "规则冲突怎么办",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-31",
+      "title": "AI 如何处理冲突",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-32",
+      "title": "什么是证据一致",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-33",
+      "title": "什么是依据不足",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-34",
+      "title": "格局能不能覆盖其它规则",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-35",
+      "title": "为什么不能只看一个吉凶标签",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-36",
+      "title": "应期是不是确定日期",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-37",
+      "title": "为什么会有多个时间候选",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-38",
+      "title": "应期依据从哪里来",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-39",
+      "title": "AI 能不能自己预测时间",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B04-FAQ-40",
+      "title": "时间候选没有实现怎么办",
+      "batch": "B04",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A01",
+      "title": "想换工作时，六爻应该怎样问才有决策价值",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A02",
+      "title": "如何用六爻分析一个新的工作机会",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A03",
+      "title": "求职和面试问题，六爻应该重点看什么",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A04",
+      "title": "六爻怎么看工作中的阻碍与压力来源",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A05",
+      "title": "升职与职业发展问题，怎样用六爻建立判断框架",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A06",
+      "title": "开始一项商业合作前，六爻可以帮助看什么",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A07",
+      "title": "如何用六爻分析一个项目能不能顺利推进",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A08",
+      "title": "合作谈判进入僵局时，六爻报告应该怎样理解",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A09",
+      "title": "选择合作伙伴时，六爻应该怎样使用",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A10",
+      "title": "商业项目什么时候值得继续，什么时候应该重新评估",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A11",
+      "title": "六爻如何看一笔款项能否顺利回收",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A12",
+      "title": "项目资金出现压力时，六爻应该怎样分析",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A13",
+      "title": "面对一项投资机会，六爻可以做什么、不能做什么",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A14",
+      "title": "收入变化问题，六爻报告应该怎样阅读",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A15",
+      "title": "为什么六爻中的“财”不等于投资一定赚钱",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A16",
+      "title": "感情问题怎样提问，六爻结果才更容易理解",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A17",
+      "title": "如何用六爻理解一段关系中的双方状态",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A18",
+      "title": "关系出现冲突时，六爻报告应该怎么看",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A19",
+      "title": "复合问题为什么不能只看“能不能复合”",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A20",
+      "title": "六爻中的感情判断为什么不能只看妻财或官鬼",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A21",
+      "title": "考试之前，六爻问题应该怎样问",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A22",
+      "title": "怎么看六爻报告里的考试支持与阻碍",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A23",
+      "title": "录取、入学和资格审核问题应该怎样分析",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A24",
+      "title": "求职准备中，六爻能帮助发现哪些问题",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A25",
+      "title": "考试或求职结果不确定时，如何避免反复起卦",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A26",
+      "title": "出行前，六爻可以帮助确认哪些问题",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A27",
+      "title": "行程是否需要调整，六爻报告应该怎样看",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A28",
+      "title": "项目、会议或重要安排的时间问题应该怎样问",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A29",
+      "title": "计划出现延误时，六爻中的时间提示应该怎样理解",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-A30",
+      "title": "如何把六爻结果转成一份现实行动计划",
+      "batch": "B05",
+      "contentType": "TUTORIAL",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-01",
+      "title": "六爻能不能告诉我该不该辞职",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-02",
+      "title": "可以比较两个工作机会吗",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-03",
+      "title": "升职问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-04",
+      "title": "面试问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-05",
+      "title": "工作阻碍怎么看",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-06",
+      "title": "同一个工作问题多久可以再问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-07",
+      "title": "可以用六爻判断合作方可靠吗",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-08",
+      "title": "项目能不能做怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-09",
+      "title": "谈判问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-10",
+      "title": "合同是否能签怎么理解",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-11",
+      "title": "合作问题是否只看应爻",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-12",
+      "title": "可以用六爻预测股票吗",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-13",
+      "title": "回款问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-14",
+      "title": "投资问题应该怎么限定",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-15",
+      "title": "妻财旺是不是一定赚钱",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-16",
+      "title": "六爻能不能代替财务分析",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-17",
+      "title": "六爻能不能知道对方心里想什么",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-18",
+      "title": "复合问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-19",
+      "title": "感情是否只看妻财官鬼",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-20",
+      "title": "世应相克是不是一定分手",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-21",
+      "title": "多久可以重新问一次关系问题",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-22",
+      "title": "六爻能不能预测具体分数",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-23",
+      "title": "考试问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-24",
+      "title": "录取问题重点看什么",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-25",
+      "title": "求职和面试应该分开问吗",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-26",
+      "title": "考试前反复起卦有帮助吗",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-27",
+      "title": "六爻能不能代替天气预报",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-28",
+      "title": "行程问题怎么问",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-29",
+      "title": "时间提示是不是确定时间",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    },
+    {
+      "contentId": "B05-FAQ-30",
+      "title": "官方安全信息和六爻结果冲突怎么办",
+      "batch": "B05",
+      "contentType": "FAQ",
+      "checks": {
+        "repositoryDependenciesPresent": true,
+        "titleAndSummaryPresent": true,
+        "canonicalRoutePresent": true,
+        "relatedLearningPresent": true,
+        "userBoundaryPresent": true,
+        "noAbsolutePromise": true,
+        "noInternalReviewToken": true
+      },
+      "status": "APPROVED"
+    }
+  ]
+}

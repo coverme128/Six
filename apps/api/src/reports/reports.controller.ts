@@ -15,6 +15,14 @@ function bitText(value: unknown): string {
   return String(value ?? "");
 }
 
+function reportExperience(report: PublicReportRecord) {
+  const experience = objectValue(report.experience);
+  if (report.type === "liuyao" && !experience.visualization) {
+    return buildExperienceBundle({ result: report.result, type: report.type });
+  }
+  return report.experience;
+}
+
 function publicReportExport(report: PublicReportRecord) {
   const experience = objectValue(reportExperience(report));
   const guided = objectValue(experience.guidedViewModel);
@@ -53,14 +61,6 @@ function publicReportExport(report: PublicReportRecord) {
     aiExpression: report.aiReportBundle ?? null,
     boundary: "本报告仅供传统文化研究与个人参考，不替代医疗、法律、投资等现实专业决策。"
   };
-}
-
-function reportExperience(report: PublicReportRecord) {
-  const experience = objectValue(report.experience);
-  if (report.type === "liuyao" && !experience.visualization) {
-    return buildExperienceBundle({ result: report.result, type: report.type });
-  }
-  return report.experience;
 }
 
 function publicChartView(report: PublicReportRecord) {

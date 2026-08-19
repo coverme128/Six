@@ -1,6 +1,6 @@
 # Six Project Context Brief
 
-Last reviewed: 2026-08-16
+Last reviewed: 2026-08-19
 
 ## One-Line Summary
 
@@ -13,9 +13,9 @@ Six is a TypeScript monorepo whose active public product is a deterministic, aud
 - Local product status: W1 local-only product scope is complete.
 - Calendar status: `CAL_STD_V1` is accepted for Public Beta P1 and used by new Liuyao reports.
 - AI status: grounded AI report code is implemented locally, but real OpenAI live smoke is still pending.
-- Content status: all eight content batches are integrated. The repository contains 603 entries; 213 are `PUBLICATION_READY`, including six topic landing pages and one six-stage guided learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
-- Experience status: homepage, scenario entry, Liuyao workbench, report, relationship guidance, Learn Hub, topic pages, and learning path meet the current local Public Beta P0 contract.
-- Visual status: 14 report visual contracts, 10 editorial asset families with 23 final variants, and 68 canonicalized content SVGs are integrated.
+- Content status: all eight content batches are integrated. The repository contains 603 entries; 421 are `PUBLICATION_READY`, including six topic landing pages and one six-stage guided learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
+- Experience status: homepage, scenario entry, Liuyao workbench, report, relationship guidance, Learn Hub, topic pages, and learning path meet the complete local product contract.
+- Visual status: 14 report visuals, 10 editorial asset families with 23 final variants, and 68 individually art-directed content SVGs are integrated; same-ViewModel SVG/print/PDF export and responsive visual/accessibility automation pass locally.
 - Staging status: local staging foundation exists, but HTTPS staging deployment evidence and live AI smoke remain pending.
 
 ## Product Boundary
@@ -155,7 +155,7 @@ Current public pages:
 - `/history` report history.
 - `/reports/[id]` Guided, scenario-aware, visual, and Professional report detail.
 - `/content` designed Learn Hub with starter content, topic entries, learning columns, filters, and progressive disclosure.
-- `/content/[type]/[slug]` explicit article, topic landing, or six-stage guided learning-path presentation.
+- `/content/[type]/[slug]` explicit article, topic landing, or guided learning-path presentation.
 - `/settings` public runtime settings.
 
 Public UI must expose only Liuyao. Internal package states, visual IDs, review fields, source-batch metadata, provider details, raw RuleCode, and Meihua choices are not public presentation content.
@@ -212,7 +212,7 @@ Playwright default ports differ from `.env.example`:
 
 - Run real OpenAI live smoke with secure `OPENAI_API_KEY` and confirm `reportSource = OPENAI_LIVE` for successful outputs.
 - Deploy HTTPS staging and verify `/health`, `/ready`, protected internal status, E2E, and live AI checks.
-- Implement same-ViewModel static SVG/PDF export so downloaded reports match the on-screen report semantics.
+- Capture production performance, caching, observability, and real-device evidence after staging exists.
 - Add visual regression at desktop and 360/390/430 mobile widths.
 - Add screen-reader narration and keyboard-flow automation for the board, timeline, content paths, and report controls.
 - Decide whether to delete legacy Meihua backend/contracts or retain them behind an explicit internal compatibility boundary.

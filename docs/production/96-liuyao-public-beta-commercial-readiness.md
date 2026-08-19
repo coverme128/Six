@@ -1,8 +1,8 @@
 # Liuyao Public Beta Commercial Readiness
 
-Last reviewed: 2026-08-16
+Last reviewed: 2026-08-19
 
-Status: `LOCAL_PUBLIC_BETA_P0_READY_PRODUCTION_GATES_OPEN`
+Status: `LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_GATES_OPEN`
 
 ## Decision
 
@@ -83,15 +83,18 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 - Six topic landing pages and one six-stage guided learning path are `PUBLICATION_READY`.
 - Batch content: 445 Liuyao entries.
 - Runtime catalog: 603 entries including 158 system seed entries.
-- Public entries: 213.
-- Historical Meihua seed records: 11, all non-public and outside the 213 public entries.
+- Public entries: 421.
+- Historical Meihua seed records: 11, all non-public and outside the 421 public entries.
 - Content QA: 0 errors, 0 warnings, 0 isolated, 0 missing incoming links, 0 missing outgoing links.
 
 ### Visual system
 
 - 14 registered Liuyao report visualization contracts; all 10 P0 visuals integrated.
 - 10 editorial asset families delivered as 23 final variants.
-- 68 historical content SVGs aligned to the canonical visual tokens with stable IDs preserved.
+- 68 historical content SVGs individually art-directed across seven semantic layouts with stable IDs preserved.
+- P0 and P1 report visuals integrated with progressive disclosure.
+- Same-ViewModel SVG download and print/PDF output implemented.
+- 72 social cards, 24 summary cards, 50 video covers/storyboards, and 12 collection documents generated.
 - Public report removes visual implementation IDs and readiness-state leakage.
 - Local browser checks completed at 1440px desktop and 390px mobile without horizontal overflow.
 
@@ -107,6 +110,8 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 - `pnpm run typecheck`: passed.
 - `pnpm run content:qa`: passed with 0 errors and 0 warnings.
 - `npm run build`: passed.
+- Playwright visual regression: passed on desktop and 360/390/430 mobile.
+- Accessibility/export automation: screen-reader summary, keyboard flow, semantics, SVG download, and PDF generation passed.
 - `git diff --check`: passed at implementation completion.
 
 ## Production Release Gates
@@ -118,9 +123,9 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 | HTTPS staging | Open | Deployed Web/API/Worker with stable URLs and secrets outside Git |
 | Dependency readiness | Open | PostgreSQL and Redis configured; `/ready` returns 200 only when both are usable |
 | Live AI provider | Open | Eight-case smoke with successful outputs reporting `OPENAI_LIVE`; fallback remains valid |
-| Static report export | Open | SVG/print/PDF generated from the same visualization ViewModels as the Web report |
-| Visual regression | Open | Approved snapshots for homepage, workbench, report, Learn Hub, topic, and path at desktop and 360/390/430 mobile |
-| Accessibility | Open | Keyboard flow, screen-reader narration, focus order, contrast, reduced-motion, and non-color semantics verified |
+| Static report export | Complete locally | SVG/print/PDF generated from the same visualization ViewModels as the Web report |
+| Visual regression | Complete locally | Approved snapshots for homepage, report, Learn Hub, article, glossary, and P1 visuals at desktop and 360/390/430 mobile |
+| Accessibility | Complete locally | Keyboard flow, screen-reader summary, semantic roles, focus controls, reduced-motion, and non-color semantics verified |
 | Performance | Open | Staging Web Vitals, image caching, route payload, and long-content performance evidence |
 | Observability | Open | Error, readiness, AI fallback, content CTA, and report-creation monitoring with no sensitive payload leakage |
 | Legacy boundary | Open | Meihua endpoints removed or explicitly isolated and covered as internal compatibility |
@@ -137,11 +142,9 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 
 ## Next Execution Order
 
-1. Implement same-ViewModel static SVG/print/PDF export.
-2. Add Playwright visual regression and accessibility coverage.
-3. Complete HTTPS staging with PostgreSQL, Redis, and live provider smoke.
-4. Add production performance and observability evidence.
-5. Resolve the backend Meihua compatibility boundary.
+1. Complete HTTPS staging with PostgreSQL, Redis, and live provider smoke.
+2. Add production performance, caching, observability, and real-device evidence.
+3. Resolve the backend Meihua compatibility boundary in a separately approved migration.
 
 ## Source Documents
 

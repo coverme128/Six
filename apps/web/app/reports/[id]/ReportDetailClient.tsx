@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { Download, FileText, Printer } from "lucide-react";
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
+import { renderLiuyaoVisualizationSvg } from "../../liuyao-visuals/export";
 
 function textList(items: Array<{ title?: string; text?: string }> = []) {
   return items.map((item) => `- ${item.text ?? item.title ?? ""}`).filter((item) => item.trim() !== "-").join("\n");
@@ -79,6 +81,16 @@ function buildReadableMarkdown(report: ExperienceResponse) {
 
 function downloadText(filename: string, text: string) {
   const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  URL.revokeObjectURL(url);
+}
+
+function downloadSvg(filename: string, source: string) {
+  const blob = new Blob([source], { type: "image/svg+xml;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
@@ -239,6 +251,11 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
     downloadText(`${report.id}-report.md`, buildReadableMarkdown(report));
   }
 
+  function exportVisualReport() {
+    if (!visualization) return;
+    downloadSvg(`${reportId}-visual-report.svg`, renderLiuyaoVisualizationSvg(visualization, guided?.headline ?? "六爻报告"));
+  }
+
   return (
     <main className="shell" data-testid="report-page">
       <AppNav current="report" />
@@ -359,7 +376,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               {aiLoading ? "生成中" : report?.aiReportBundle ? "重新生成白话解读" : "生成白话解读"}
             </button>
             <button type="button" onClick={exportReadableReport}>
-              导出报告
+              <FileText aria-hidden="true" size={17} />下载文本
+            </button>
+            <button data-testid="export-visual-svg" type="button" onClick={exportVisualReport} disabled={!visualization}>
+              <Download aria-hidden="true" size={17} />下载 SVG
+            </button>
+            <button data-testid="print-report" type="button" onClick={() => window.print()}>
+              <Printer aria-hidden="true" size={17} />打印 / PDF
             </button>
             <a className="text-link" href="/">
               再次起卦

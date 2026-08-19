@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 type VisualModel = Record<string, any>;
 
 function itemText(item: any) {
+  if (typeof item === "string") return item;
   return item?.text ?? item?.title ?? item?.label ?? "";
 }
 
@@ -52,9 +53,9 @@ function SixLineBoard({ model }: { model: VisualModel | null }) {
           <strong>{model.changedHexagram ?? "-"}</strong>
         </div>
       </div>
-      <div className="ly-board-lines">
+      <div className="ly-board-lines" role="list">
         {model.lines.map((line: VisualModel) => (
-          <button className="ly-board-line" type="button" key={`ly-line-${line.position}`}>
+          <div className="ly-board-line" role="listitem" key={`ly-line-${line.position}`}>
             <span className="ly-line-label">{line.label}</span>
             <LineGlyph line={line} />
             <span className="ly-line-main">
@@ -75,7 +76,7 @@ function SixLineBoard({ model }: { model: VisualModel | null }) {
             <span className="ly-line-evidence">
               {[line.monthText, line.dayText, line.changedText].filter(Boolean).join("；") || "暂无补充状态"}
             </span>
-          </button>
+          </div>
         ))}
       </div>
     </div>
@@ -271,12 +272,86 @@ function Timing({ model }: { model: VisualModel | null }) {
   );
 }
 
+function SupportRiskAction({ model }: { model: VisualModel | null }) {
+  const groups = [
+    { label: "可以借力", tone: "support" as const, items: model?.supports ?? [] },
+    { label: "需要处理", tone: "risk" as const, items: model?.risks ?? [] },
+    { label: "现在行动", tone: "neutral" as const, items: (model?.actions ?? []).map((text: string) => ({ text })) },
+  ];
+  return (
+    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-011">
+      <div className="ly-card-title"><span>决策整理</span><strong>支持、风险与行动</strong></div>
+      <div className="ly-decision-columns">
+        {groups.map((group) => (
+          <div key={group.label}>
+            <Marker tone={group.tone}>{group.label}</Marker>
+            {group.items.length ? group.items.slice(0, 4).map((item: VisualModel, index: number) => <p key={`${group.label}-${index}`}>{itemText(item)}</p>) : <EmptyState />}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PatternExplanation({ model }: { model: VisualModel | null }) {
+  return (
+    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-012">
+      <div className="ly-card-title"><span>判断结构</span><strong>{model?.patternName ?? "综合判断模式"}</strong></div>
+      <p>{model?.summary ?? "当前没有额外的模式说明。"}</p>
+      <div className="ly-mini-list">
+        {(model?.basis ?? []).slice(0, 4).map((item: VisualModel, index: number) => <p key={`pattern-${index}`}><Marker>{index + 1}</Marker>{itemText(item)}</p>)}
+      </div>
+      <small className="ly-policy">综合判断按证据类别、直接性与变化状态整理，不采用简单加减分。</small>
+    </div>
+  );
+}
+
+function DecisionComparison({ model }: { model: VisualModel | null }) {
+  return (
+    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-013">
+      <div className="ly-card-title"><span>条件比较</span><strong>推进前先对照三件事</strong></div>
+      <div className="ly-comparison-columns">
+        {(model?.columns ?? []).map((column: VisualModel, index: number) => (
+          <div key={column.label}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <strong>{column.label}</strong>
+            {(column.items ?? []).slice(0, 3).map((item: VisualModel, itemIndex: number) => <p key={`${column.label}-${itemIndex}`}>{itemText(item)}</p>)}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ReasoningFlow({ model }: { model: VisualModel | null }) {
+  return (
+    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-014">
+      <div className="ly-card-title"><span>复核顺序</span><strong>判断依据怎样连起来</strong></div>
+      <ol className="ly-reasoning-flow">
+        {(model?.steps ?? []).map((step: VisualModel, index: number) => (
+          <li key={`${step.label ?? step.title}-${index}`}>
+            <span>{index + 1}</span>
+            <div><strong>{step.label ?? step.title ?? `步骤 ${index + 1}`}</strong><p>{step.text ?? step.summary ?? step.description}</p></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: LiuyaoVisualizationBundle | null }) {
   if (!visualization?.viewModels) return null;
 
   const board = visual(visualization, "VIS-LY-001");
+  const staticSummary = [
+    `本卦${board?.originalHexagram ?? "未提供"}，变卦${board?.changedHexagram ?? "未提供"}。`,
+    `盘面按上爻到初爻阅读，共${board?.lines?.length ?? 0}爻。`,
+    `动爻为${(board?.lines ?? []).filter((line: VisualModel) => line.moving).map((line: VisualModel) => line.label).join("、") || "无"}。`,
+    "以下依次展示核心焦点、世应、状态、证据、时间、支持风险和推理顺序。",
+  ].join("");
   return (
-    <section className="panel report-section ly-visual-system" aria-labelledby="liuyao-visual-system-title">
+    <section className="panel report-section ly-visual-system" aria-describedby="liuyao-visual-system-summary" aria-labelledby="liuyao-visual-system-title">
+      <p className="sr-only" id="liuyao-visual-system-summary">{staticSummary}</p>
       <div className="ly-section-head">
         <div>
           <p className="eyebrow">专业盘面</p>
@@ -308,6 +383,19 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
         <EvidenceConflict model={visual(visualization, "VIS-LY-009")} />
         <Timing model={visual(visualization, "VIS-LY-010")} />
       </div>
+
+      <details className="ly-advanced-disclosure">
+        <summary>
+          <span>进一步核验</span>
+          <p>查看支持、风险、判断模式和推理顺序</p>
+        </summary>
+        <div className="ly-visual-grid ly-advanced-grid">
+          <SupportRiskAction model={visual(visualization, "VIS-LY-011")} />
+          <PatternExplanation model={visual(visualization, "VIS-LY-012")} />
+          <DecisionComparison model={visual(visualization, "VIS-LY-013")} />
+          <ReasoningFlow model={visual(visualization, "VIS-LY-014")} />
+        </div>
+      </details>
     </section>
   );
 }

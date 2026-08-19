@@ -4,9 +4,9 @@
 
 - DATA_READY: yes
 - CONTENT_INTEGRATED: yes
-- EXPERIENCE_READY: local Public Beta P0 ready; staging not verified
-- SEO_READY: 213 `PUBLICATION_READY` batch entries are indexable; `REVIEW_REQUIRED` and `DEMO_ONLY` remain noindex/not-public
-- LEARN_HUB_READY: yes; designed hub, six topic landings, and one five-stage learning path
+- EXPERIENCE_READY: local product and asset scope complete; staging not verified
+- SEO_READY: 421 `PUBLICATION_READY` batch entries are indexable; `DEMO_ONLY` remains noindex/not-public
+- LEARN_HUB_READY: yes; designed hub, six topic landings, and one six-stage learning path
 - STAGING_READY: no
 - PRODUCTION_READY: no
 
@@ -23,8 +23,8 @@
     "LEARNING_PATH": 1
   },
   "byStatus": {
-    "PUBLICATION_READY": 213,
-    "REVIEW_REQUIRED": 208,
+    "PUBLICATION_READY": 421,
+    "REVIEW_REQUIRED": 0,
     "DEMO_ONLY": 24
   },
   "visuals": 68,
@@ -33,7 +33,7 @@
 }
 ```
 
-这里的 `visuals: 68` 表示八个原始数据包中已去重并接入运行时的 SVG 数量，不代表 68 张图都已完成逐张商业艺术指导。原包只有 SVG；现有 68 张已完成技术与统一风格规范化，其中六个首页核心专题已在产品层换为六种场景化信息结构。完整口径见 `docs/design/content-visual-production-audit-v2.md`。
+这里的 `visuals: 68` 表示八个原始数据包中已去重并接入运行时的 SVG 数量。原包只有 SVG；现有 68 张已完成逐张语义复核、七类差异化构图、统一视觉系统接入与浏览器资产验收。完整口径见 `docs/design/content-visual-production-audit-v2.md`。
 
 The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime catalog also includes 158 system seed entries, for 603 total entries:
 
@@ -41,8 +41,8 @@ The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime c
 {
   "runtimeContentEntries": 603,
   "byReviewStatus": {
-    "PUBLICATION_READY": 213,
-    "REVIEW_REQUIRED": 208,
+    "PUBLICATION_READY": 421,
+    "REVIEW_REQUIRED": 0,
     "DEMO_ONLY": 182
   },
   "isolatedContentCount": 0,
@@ -51,7 +51,7 @@ The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime c
 }
 ```
 
-The system seed layer contains historical I Ching and Meihua records for compatibility. None of the 11 Meihua seed records belongs to the 213 `PUBLICATION_READY` entries, so the production public content surface remains Liuyao-only.
+The system seed layer contains historical I Ching and Meihua records for compatibility. None of the 11 Meihua seed records belongs to the 421 `PUBLICATION_READY` entries, so the production public content surface remains Liuyao-only.
 
 ## Public Information Architecture
 
@@ -62,7 +62,7 @@ The system seed layer contains historical I Ching and Meihua records for compati
 - structured learning columns;
 - search and content-type filters;
 - an initial 24-item general library with progressive disclosure;
-- a five-stage learning path from first use through systematic verification.
+- a six-stage learning path from first use through systematic verification.
 
 Topic pages explicitly render user questions, how Liuyao helps, example formulations, boundaries, a scenario-linked CTA, and related learning. Article pages render only approved editorial fields. Internal fields such as `sourceBatch`, `reviewStatus`, `presentation`, and asset implementation IDs are not exposed to users.
 
@@ -93,3 +93,7 @@ The unresolved counts above are retained from the original batch intake reports 
 `FULL_LIUYAO_CONTENT_GROWTH_REGRESSION` has local data, linking, presentation, and contract coverage. `pnpm run content:qa` passes with 0 errors and 0 warnings. Production filtering exposes only `PUBLICATION_READY` entries.
 
 HTTPS staging, live AI smoke, search analytics, editorial outcome review, and production performance evidence remain outside this local integration. See `docs/production/96-liuyao-public-beta-commercial-readiness.md` for the consolidated release gate.
+
+## Distribution Deliverables
+
+Batch 07 registries are materialized into 72 social cards, 24 article-summary cards, 12 collection documents, and 50 short-video script packages with vertical covers and complete shootable storyboards. The source package does not contain encoded video files, so the manifest deliberately reports scripts, covers, and storyboards rather than claiming MP4 delivery. See `data/content-growth/distribution/manifest.json`.

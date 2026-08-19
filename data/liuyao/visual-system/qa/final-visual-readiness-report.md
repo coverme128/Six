@@ -1,7 +1,7 @@
 # Final Visual Readiness Report
 
 ## Executive status
-**LIUYAO_VISUAL_SYSTEM_LOCAL_PUBLIC_BETA_READY_WITH_RELEASE_GATES_PENDING**
+**LIUYAO_VISUAL_SYSTEM_LOCAL_COMPLETE_PRODUCTION_RELEASE_EXCLUDED**
 
 ## Completed
 - Visual North Star
@@ -22,10 +22,12 @@
 - all 14 visual IDs registered in the domain presentation layer
 - all 10 P0 report visuals integrated into the public Liuyao report
 - 10 editorial asset families delivered as 23 final variants
-- 68 historical Content Visual SVGs canonicalized without changing their stable IDs
-- 6 high-priority topic diagrams redesigned as distinct task structures for the Learn Hub
-- desktop 1440px and mobile 390px local browser checks without horizontal overflow
+- 68 historical Content Visual SVGs individually art-directed without changing their stable IDs
+- 68 content diagrams redesigned across 7 semantic layout families
+- desktop and 360/390/430 mobile visual regression without horizontal overflow
 - reduced-motion styling and non-color line semantics
+- same-ViewModel SVG download and print/PDF output
+- screen-reader summary, keyboard flow, semantic-role, duplicate-ID, and unnamed-control automation
 
 ## Professional integrity
 - professional rule modifications: 0
@@ -38,15 +40,13 @@
 
 Typed adapters are wired to the repository ProductResultFacts and Guided / Professional ViewModels. Public components consume supplied visualization ViewModels and do not select Yongshen, recompute strength, resolve evidence conflicts, or infer timing.
 
-The current result is suitable for local Public Beta validation. It is not a production release approval.
+The current result is locally complete for the product and asset scope. It is not a production release approval.
 
-The 68 historical Content Visual SVGs are integration-complete and style-canonicalized, not individually art-directed commercial assets. Their original diagram semantics and compositions were intentionally preserved during canonicalization. Six high-priority topic diagrams have now received product-level redesign; the remaining 62 require exposure-prioritized visual deepening. See `docs/design/content-visual-production-audit-v2.md`.
+The 68 historical Content Visual SVGs are integration-complete and individually art-directed commercial assets. Their stable IDs and semantic intent are preserved while their compositions now use seven differentiated information structures. See `docs/design/content-visual-production-audit-v2.md`.
 
 ## Open release gates
 
-- same-ViewModel SVG/print/PDF renderer pass
-- Playwright visual regression at desktop and 360/390/430 mobile widths
-- screen-reader narration and keyboard-flow automation
 - HTTPS staging visual regression pass
 - production asset performance and caching pass
 - real-device mobile review
+- production observability and live-provider smoke

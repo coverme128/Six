@@ -11,7 +11,7 @@
 - [x] no domain recalculation
 - [x] Guided mode where required
 - [x] Professional mode where required
-- [ ] static/report mode: on-screen complete; same-ViewModel SVG/PDF pending
+- [x] static/report mode: on-screen, same-ViewModel SVG, print/PDF complete
 - [x] loading/partial/error/unsupported states
 
 ## Hexagram-specific
@@ -29,14 +29,14 @@
 - [x] non-color semantics
 - [x] localized labels and baseline ARIA
 - [x] reduced motion
-- [~] 360 / 390 / 430 mobile layouts: responsive contract implemented; automated visual snapshots pending
+- [x] 360 / 390 / 430 mobile layouts and automated visual snapshots
 - [x] no mechanically shrunken desktop board
-- [ ] screen-reader narration automation
+- [x] screen-reader summary and keyboard-flow automation
 
 ## Export
-- [ ] SVG/print/PDF checked
-- [ ] embedded legends in static exports
-- [~] privacy-safe social export: contract and assets ready; end-to-end export pending
+- [x] SVG/print/PDF checked
+- [x] embedded legends in static exports
+- [x] privacy-safe social assets generated from approved content registries
 
 ## Existing assets
 - [x] historical Bxx-VIS stable IDs preserved

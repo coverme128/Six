@@ -1,0 +1,1586 @@
+[
+  {
+    "social_id": "B07-SOC-001",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-01"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "占问：先把这个概念放回完整上下文。",
+    "body": "围绕一个现实事件提出可分析问题，并在特定时点完成起卦。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-01",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-002",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-02"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "核心问题：先把这个概念放回完整上下文。",
+    "body": "本次报告唯一需要回答的主要决策任务。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-02",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-003",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-03"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "单一问题原则：先把这个概念放回完整上下文。",
+    "body": "一次占问只围绕一个主要事件或决策。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-03",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-004",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-04"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "起卦时点：先把这个概念放回完整上下文。",
+    "body": "用户为当前问题完成起卦时对应的时间节点。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-04",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-005",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-05"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "重复起卦：先把这个概念放回完整上下文。",
+    "body": "在关键条件未变化时，对同一问题短期内多次起卦。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-05",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-006",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-06"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "问题拆分：先把这个概念放回完整上下文。",
+    "body": "把一个包含多个独立目标的问题分成有顺序的单一任务。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-06",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-007",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-07"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "现实决策：先把这个概念放回完整上下文。",
+    "body": "需要用户结合事实、资源、风险和价值取向作出的行动选择。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-07",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-008",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-08"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "行动复盘：先把这个概念放回完整上下文。",
+    "body": "在约定时间回看判断、行动与实际变化。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-08",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-009",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-09"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "总体判断：先把这个概念放回完整上下文。",
+    "body": "对当前问题方向、条件与主要限制的首层摘要。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-09",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-010",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-10"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "支持因素：先把这个概念放回完整上下文。",
+    "body": "当前结构中有利于事情推进的条件。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-10",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-011",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-11"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "阻碍因素：先把这个概念放回完整上下文。",
+    "body": "限制推进、增加成本或要求调整的条件。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-11",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-012",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-12"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "变化趋势：先把这个概念放回完整上下文。",
+    "body": "报告对条件可能如何演变的结构化提示。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-12",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-013",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-13"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "时间提示：先把这个概念放回完整上下文。",
+    "body": "对观察窗口、节奏或可能节点的辅助说明。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-13",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-014",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-14"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "行动建议：先把这个概念放回完整上下文。",
+    "body": "基于当前判断提出的可验证下一步。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-14",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-015",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-15"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "不确定性：先把这个概念放回完整上下文。",
+    "body": "当前证据无法支持单一确定结论的部分。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-15",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-016",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-16"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "证据冲突：先把这个概念放回完整上下文。",
+    "body": "支持与阻碍证据同时存在或方向不一致。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-16",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-017",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-17"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "依据不足：先把这个概念放回完整上下文。",
+    "body": "现有事实或规则不足以支撑进一步判断。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-01",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-018",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-18"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "确定性排盘：先把这个概念放回完整上下文。",
+    "body": "由固定输入和版本化逻辑生成稳定卦象事实。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-02",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-019",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-19"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "历法标准化：先把这个概念放回完整上下文。",
+    "body": "把时间、时区与历法信息转成系统统一输入。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-03",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-020",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-20"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "规则判断：先把这个概念放回完整上下文。",
+    "body": "CORE_V1 根据排盘事实生成的专业分析结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-04",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-021",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-21"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "结果事实：先把这个概念放回完整上下文。",
+    "body": "报告可以直接引用的结构化 ProductResultFacts。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-05",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-022",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-22"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "专业依据：先把这个概念放回完整上下文。",
+    "body": "支撑结论的盘面事实、规则和证据引用。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-06",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-023",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-23"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "AI 辅助解释：先把这个概念放回完整上下文。",
+    "body": "AI 将已有事实与规则转成可读语言。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-07",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-024",
+    "content_type": "KNOWLEDGE_EXPLANATION",
+    "source_refs": [
+      "B01-KC-24"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "Grounded AI：先把这个概念放回完整上下文。",
+    "body": "受 ProductResultFacts 与 Evidence 约束的 AI 解释方式。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-08",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-025",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A01"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "想换工作时，六爻应该怎样问才有决策价值：先把这个概念放回完整上下文。",
+    "body": "继续留下还是考虑新机会时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-09",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-026",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A02"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何用六爻分析一个新的工作机会：先把这个概念放回完整上下文。",
+    "body": "比较一份具体 Offer 是否值得继续推进时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-10",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-027",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A03"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "求职和面试问题，六爻应该重点看什么：先把这个概念放回完整上下文。",
+    "body": "理解一次招聘或面试流程中的关键条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-11",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-028",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A04"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻怎么看工作中的阻碍与压力来源：先把这个概念放回完整上下文。",
+    "body": "识别工作阻力主要来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-12",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-029",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A05"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "升职与职业发展问题，怎样用六爻建立判断框架：先把这个概念放回完整上下文。",
+    "body": "评估升职与职业发展的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-13",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-030",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A06"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "开始一项商业合作前，六爻可以帮助看什么：先把这个概念放回完整上下文。",
+    "body": "在合作启动前梳理关键风险和条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-14",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-031",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A07"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何用六爻分析一个项目能不能顺利推进：先把这个概念放回完整上下文。",
+    "body": "判断项目推进的结构性条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-15",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-032",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A08"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "合作谈判进入僵局时，六爻报告应该怎样理解：先把这个概念放回完整上下文。",
+    "body": "在谈判僵局中识别下一步时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-16",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-033",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A09"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "选择合作伙伴时，六爻应该怎样使用：先把这个概念放回完整上下文。",
+    "body": "评估合作关系是否值得继续了解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-01",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-034",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A10"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "商业项目什么时候值得继续，什么时候应该重新评估：先把这个概念放回完整上下文。",
+    "body": "决定继续、观察、调整还是重新评估时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-02",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-035",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A11"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻如何看一笔款项能否顺利回收：先把这个概念放回完整上下文。",
+    "body": "分析回款、应收或借款归还的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-03",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-036",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A12"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "项目资金出现压力时，六爻应该怎样分析：先把这个概念放回完整上下文。",
+    "body": "理解项目资金压力的来源与应对优先级时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-04",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-037",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A13"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "面对一项投资机会，六爻可以做什么、不能做什么：先把这个概念放回完整上下文。",
+    "body": "给投资问题建立严格风险边界时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-05",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-038",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A14"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "收入变化问题，六爻报告应该怎样阅读：先把这个概念放回完整上下文。",
+    "body": "理解收入变化可能受哪些条件影响时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-06",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-039",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A15"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "为什么六爻中的“财”不等于投资一定赚钱：先把这个概念放回完整上下文。",
+    "body": "纠正“妻财=赚钱”的机械理解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-07",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-040",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A16"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "感情问题怎样提问，六爻结果才更容易理解：先把这个概念放回完整上下文。",
+    "body": "把“爱不爱”改写成可分析的关系问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-08",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-041",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A17"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何用六爻理解一段关系中的双方状态：先把这个概念放回完整上下文。",
+    "body": "理解关系双方与互动结构时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-09",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-042",
+    "content_type": "REAL_WORLD_DECISION",
+    "source_refs": [
+      "B05-A18"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "关系出现冲突时，六爻报告应该怎么看：先把这个概念放回完整上下文。",
+    "body": "识别关系冲突来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-10",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-043",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A09"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "系统如何完成一次六爻排盘：先把这个概念放回完整上下文。",
+    "body": "系统如何完成一次六爻排盘 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-11",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-044",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A10"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "确定性排盘与 AI 解释有什么区别：先把这个概念放回完整上下文。",
+    "body": "确定性排盘与 AI 解释有什么区别 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-12",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-045",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A11"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "AI 在六爻报告中负责什么：先把这个概念放回完整上下文。",
+    "body": "AI 在六爻报告中负责什么 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-13",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-046",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A12"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "为什么 AI 不能重新排盘或修改结果：先把这个概念放回完整上下文。",
+    "body": "为什么 AI 不能重新排盘或修改结果 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-14",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-047",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A13"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "一份六爻结论应该怎样对应专业依据：先把这个概念放回完整上下文。",
+    "body": "一份六爻结论应该怎样对应专业依据 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-15",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-048",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A14"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "普通用户应该怎样阅读一份六爻报告：先把这个概念放回完整上下文。",
+    "body": "普通用户应该怎样阅读一份六爻报告 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-16",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-049",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A15"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "专业用户应该怎样核验六爻报告：先把这个概念放回完整上下文。",
+    "body": "专业用户应该怎样核验六爻报告 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-01",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-050",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A16"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻报告保存在哪里，用户应注意什么：先把这个概念放回完整上下文。",
+    "body": "六爻报告保存在哪里，用户应注意什么 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-02",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-051",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A17"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "哪些数据会用于生成 AI 解释：先把这个概念放回完整上下文。",
+    "body": "哪些数据会用于生成 AI 解释 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-03",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-052",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A18"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何判断一份六爻 AI 报告是否可信：先把这个概念放回完整上下文。",
+    "body": "如何判断一份六爻 AI 报告是否可信 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-04",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-053",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A05"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻结果应该如何用于现实决策：先把这个概念放回完整上下文。",
+    "body": "六爻结果应该如何用于现实决策 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-05",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-054",
+    "content_type": "TRUST_AI",
+    "source_refs": [
+      "B01-A08"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻报告为什么不能代替用户做决定：先把这个概念放回完整上下文。",
+    "body": "六爻报告为什么不能代替用户做决定 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-06",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-055",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B01-A06"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何理解六爻报告中的支持、阻碍与不确定性：先把这个概念放回完整上下文。",
+    "body": "如何理解六爻报告中的支持、阻碍与不确定性 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-07",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-056",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B01-A14"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "普通用户应该怎样阅读一份六爻报告：先把这个概念放回完整上下文。",
+    "body": "普通用户应该怎样阅读一份六爻报告 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-08",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-057",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B01-A15"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "专业用户应该怎样核验六爻报告：先把这个概念放回完整上下文。",
+    "body": "专业用户应该怎样核验六爻报告 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-09",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-058",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B04-A16"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "为什么六爻报告中可能同时出现支持和阻碍：先把这个概念放回完整上下文。",
+    "body": "同一盘面可能同时存在多个对象、多个关系、多个时间因素和多条规则，因此报告出现支持与阻碍并存并不矛盾。 产品需要保留这些证据的来源与方向，再由 Evidence Conflict Resolution Registry 组织综合表达，而不是强行压成单一吉凶。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-10",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-059",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B04-A17"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "当多条六爻证据互相冲突时，应该怎样理解：先把这个概念放回完整上下文。",
+    "body": "Evidence Conflict 描述的是多个专业事实或规则在当前问题上给出不同方向的信息，需要经过正式冲突解决逻辑后再进入用户结论。 AI 只能解释 Conflict Resolver 已输出的状态，不能挑选自己喜欢的证据，也不能为了流畅把冲突隐藏掉。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-11",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-060",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B04-A19"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "六爻中的应期是什么：先把这个概念放回完整上下文。",
+    "body": "应期是围绕已识别专业事实形成的时间候选或时间窗口，用来提示值得关注的时间节点，而不是保证某件事一定在某日发生。 候选如何形成、排序与展示必须来自 Timing Explanation Facts 与正式 Timing Rules；未经校准不得显示人为置信百分比。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-12",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-061",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B04-A20"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "怎样核验一份六爻报告中的旺衰、动变与应期判断：先把这个概念放回完整上下文。",
+    "body": "Professional 核验应沿核心对象、月日环境、状态、动变、关系、Pattern、Evidence Conflict 与 Timing Candidates 逐层回溯。 重点检查 AI 是否超出 ProductResultFacts、时间是否被写成保证、支持与阻碍是否都有证据，以及未核验规则是否被错误包装为 VERIFIED。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-13",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-062",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B03-A18"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "怎样核验一份六爻报告中的用神与角色判断：先把这个概念放回完整上下文。",
+    "body": "核验用神与角色判断的重点不是重新解一遍卦，而是确认“问题是否被正确理解、角色是否匹配、用神是否来自正式规则、AI 是否只解释已有事实”。本文重点说明提供从原问题、主题、角色、六亲、用神、世应、关系到证据的 Professional 核验路径。同时区分内容解释、项目正式规则与后续判断边界， 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-14",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-063",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B05-A29"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "计划出现延误时，六爻中的时间提示应该怎样理解：先把这个概念放回完整上下文。",
+    "body": "理解延误中的时间候选与条件变化时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-15",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-064",
+    "content_type": "REPORT_READING",
+    "source_refs": [
+      "B05-A30"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "如何把六爻结果转成一份现实行动计划：先把这个概念放回完整上下文。",
+    "body": "把报告转成下一步可执行动作时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-16",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-065",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-01"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "是否考虑更换当前工作：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-01",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-066",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-02"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "一个新的 Offer 是否值得进一步推进：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-02",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-067",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-03"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "两家公司是否适合继续合作：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-03",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-068",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-04"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "项目谈判迟迟没有推进：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-04",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-069",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-05"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "一笔项目回款出现延迟：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-05",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-070",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-06"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "项目资金压力增加：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-06",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-071",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-07"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "一段关系近期沟通持续恶化：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-07",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  },
+  {
+    "social_id": "B07-SOC-072",
+    "content_type": "TEACHING_CASE",
+    "source_refs": [
+      "B05-CASE-08"
+    ],
+    "platform_adaptation": {
+      "master_copy": "适合图文或短文主文案",
+      "xiaohongshu": "拆成 3–5 张知识卡，不用夸张预测标题",
+      "wechat": "可扩展为长图摘要",
+      "short_video_caption": "保留边界与完整内容入口",
+      "x_threads": "压缩为 2–4 段短文",
+      "instagram_facebook": "适合 Carousel Copy，最后一页给 Learn / Tool CTA"
+    },
+    "hook": "是否适合重新尝试恢复一段关系：先把这个概念放回完整上下文。",
+    "body": "在已有确定性 Facts 支持的范围内，把报告转成核实、准备、沟通、观察或重新评估，而不是要求确定结果。 这条内容只提炼原始内容的用户可读重点，不新增专业规则；需要判断具体问题时，应回到完整报告、Evidence 与现实信息。",
+    "cta": "查看完整解释",
+    "visual_ref": "B07-VIS-08",
+    "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
+    "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
+    "version": "1.0"
+  }
+]

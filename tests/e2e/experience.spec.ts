@@ -32,6 +32,13 @@ test("Homepage guides users from value to scenario and one focused question", as
   await expect(page.getByRole("tab", { name: "感情与合作" })).toHaveAttribute("aria-selected", "true");
   await expect(page.getByRole("tab")).toHaveCount(4);
   await expect(page.getByRole("radio")).toHaveCount(2);
+  await expect(page.getByRole("radio", { name: /感情 \/ 关系/ })).toBeVisible();
+  await expect(page.getByRole("radio", { name: /合作 \/ 项目/ })).toBeVisible();
+  await expect(page.getByRole("radio", { name: /事业 \/ 工作/ })).toBeHidden();
+
+  await page.getByRole("tab", { name: "工作与钱" }).click();
+  await expect(page.getByRole("radio", { name: /事业 \/ 工作/ })).toBeVisible();
+  await expect(page.getByRole("radio", { name: /求财 \/ 收入/ })).toBeVisible();
 
   await page.getByRole("tab", { name: "生活事务" }).click();
   await expect(page.getByRole("radio")).toHaveCount(3);
@@ -168,6 +175,18 @@ test("Guided and Professional report DOM does not leak internal implementation f
   await expect(page.getByRole("heading", { name: "为什么这样判断" })).toBeVisible();
   await expect(page.getByRole("link", { name: "查看依据" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "专业依据" })).toBeVisible();
+  await page.locator(".ly-advanced-disclosure > summary").click();
+  await expect(page.locator('[data-visual-id="VIS-LY-011"]')).toBeVisible();
+  await expect(page.locator('[data-visual-id="VIS-LY-012"]')).toBeVisible();
+  await expect(page.locator('[data-visual-id="VIS-LY-013"]')).toBeVisible();
+  await expect(page.locator('[data-visual-id="VIS-LY-014"]')).toBeVisible();
+  await expect(page.locator(".ly-visual-system")).not.toContainText("Pattern and conflict policy");
+  await expect(page.getByTestId("export-visual-svg")).toBeVisible();
+  await expect(page.getByTestId("print-report")).toBeVisible();
+  const downloadPromise = page.waitForEvent("download");
+  await page.getByTestId("export-visual-svg").click();
+  const download = await downloadPromise;
+  expect(download.suggestedFilename()).toMatch(/-visual-report\.svg$/u);
   const text = await reportText(page);
   for (const forbidden of ["LIUYAO_RULE_", "ruleFindingId", "subject_state", "AI_REPORT_V1", "OPENAI_LIVE", "promptVersion", "undefined", "null", "requestId"]) {
     expect(text).not.toContain(forbidden);
