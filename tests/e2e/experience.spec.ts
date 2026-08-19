@@ -102,6 +102,62 @@ test("Topic detail uses scenario-specific copy, visual, and reading lenses", asy
   await expect(page.locator("body")).not.toContainText("用六爻整理感情与关系中的现实决策问题");
 });
 
+test("Tutorial article separates guidance from internal notes and exposes related formats", async ({ page }) => {
+  await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
+
+  await expect(page.getByRole("heading", { name: "为什么不建议对同一个问题反复起卦", level: 1 })).toBeVisible();
+  await expect(page.locator(".article-deck")).toContainText("保存第一次报告，观察现实");
+  await expect(page.locator(".article-takeaway-grid > div")).toHaveCount(4);
+  await expect(page.locator(".article-resource-nav [role=tab]")).toHaveCount(3);
+  await expect(page.locator(".knowledge-card-list a")).toHaveCount(3);
+
+  await page.locator(".article-resource-nav").getByRole("tab", { name: /常见问答/ }).click();
+  await expect(page.locator(".faq-link-list a")).toHaveCount(4);
+  await page.locator(".article-resource-nav").getByRole("tab", { name: /延伸教程/ }).click();
+  await expect(page.locator(".tutorial-link-list a")).toHaveCount(3);
+  await expect(page.locator("body")).not.toContainText("从寻找确定感，转向记录、验证与条件变化");
+  await expect(page.locator("body")).not.toContainText("在产品中的阅读、展开与复盘位置");
+  await expect(page.locator("body")).not.toContainText("CORE_V1");
+
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(2);
+});
+
+test("Article image zoom and Chinese related routes work", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop interaction coverage");
+  await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
+
+  await page.getByRole("button", { name: /放大查看：为什么不建议/ }).first().click();
+  await expect(page.getByRole("dialog", { name: /为什么不建议/ })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog", { name: /为什么不建议/ })).toBeHidden();
+
+  await page.locator(".knowledge-card-list a").first().click();
+  await expect(page.getByRole("heading", { name: "起卦时点", level: 1 })).toBeVisible();
+  await expect(page.locator("body")).not.toContainText("未找到内容");
+
+  await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
+  await page.locator(".article-resource-nav").getByRole("tab", { name: /常见问答/ }).click();
+  await page.locator(".faq-link-list a").first().click();
+  await expect(page.getByRole("heading", { name: "什么时候适合起卦？", level: 1 })).toBeVisible();
+  await expect(page.locator("body")).not.toContainText("未找到内容");
+});
+
+test("Glossary entry uses a compact term layout", async ({ page }) => {
+  await page.goto("/content/glossary/useful_god");
+
+  await expect(page.getByRole("heading", { name: "用神", level: 1 })).toBeVisible();
+  await expect(page.locator(".reference-definition")).toHaveText("针对具体问题选定的主要观察角色或爻。");
+  await expect(page.getByRole("heading", { name: "和“用神”一起理解的概念" })).toBeVisible();
+  await expect(page.locator(".knowledge-card-list a")).toHaveCount(3);
+  await expect(page.locator("body")).not.toContainText("示例内容");
+  await expect(page.locator("body")).not.toContainText("本文还配有");
+  await expect(page.locator("body")).not.toContainText("按需要选择，不必再翻一组长列表");
+
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(2);
+});
+
 test("Guided and Professional report DOM does not leak internal implementation fields", async ({ page, request }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop", "desktop experience leakage coverage");
   const id = await createReport(request);

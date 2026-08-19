@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { ArrowRight, BookOpen, CheckCircle2, CircleHelp, Layers3, Maximize2, X } from "lucide-react";
 import { AppNav } from "../../../AppNav";
 import { apiBase, readError, type ContentDetail, type ContentSummary } from "../../../lib/api";
 import { topicProfileFor } from "../../topicProfiles";
@@ -67,6 +68,42 @@ function visualRefs(body: unknown) {
   return Array.isArray(refs) ? refs.filter((item): item is string => typeof item === "string") : [];
 }
 
+function articleSectionGroups(body: unknown) {
+  const frameworkHeading = practicalFramework(body)?.name;
+  const primary: Array<{ heading?: string; body?: string }> = [];
+  const supporting: Array<{ heading?: string; body?: string }> = [];
+
+  for (const section of contentSections(body)) {
+    const heading = section.heading?.trim() ?? "";
+    if (!heading || heading === frameworkHeading || heading === "常见误区" || heading === "使用边界") continue;
+    if (heading.startsWith("在产品中的")) continue;
+    if (heading.includes("适用场景、停止条件与现实验证")) {
+      supporting.push(section);
+      continue;
+    }
+    primary.push(section);
+  }
+
+  return { primary, supporting };
+}
+
+function sectionLabel(heading: string, index: number) {
+  if (heading.startsWith("为什么")) return "先理解原因";
+  if (heading.includes("第一次报告")) return "保留判断基准";
+  if (heading.includes("什么情况下")) return "确认是否有新条件";
+  if (heading.includes("教学示例")) return "看一个具体例子";
+  if (heading.includes("记录卡")) return "照着记录与复盘";
+  return `第 ${String(index + 1).padStart(2, "0")} 部分`;
+}
+
+function paragraphs(text?: string) {
+  return (text ?? "").split("\n\n").map((paragraph) => paragraph.trim()).filter(Boolean);
+}
+
+function publicLimitations(items?: string[]) {
+  return (items ?? []).filter((text) => !/(CORE_V1|内容增长|写入专业规则|写回排盘)/u.test(text));
+}
+
 function editorialVisualFor(item: ContentDetail) {
   if (item.contentType === "LANDING_PAGE") return topicProfileFor(item.contentId)?.visual ?? "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png";
   if (item.contentType === "LEARNING_PATH") return "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png";
@@ -80,6 +117,80 @@ function editorialVisualFor(item: ContentDetail) {
 
 function contentHref(item: ContentSummary) {
   return `/content/${item.contentType.toLowerCase().replaceAll("_", "-")}/${encodeURIComponent(item.slug)}`;
+}
+
+type RelatedKind = "KNOWLEDGE" | "FAQ" | "TUTORIAL";
+
+const relatedKindConfig: Record<RelatedKind, { label: string; title: string }> = {
+  KNOWLEDGE: { label: "知识卡", title: "先把关键概念弄清楚" },
+  FAQ: { label: "常见问答", title: "你可能还会问这些" },
+  TUTORIAL: { label: "延伸教程", title: "沿着这个主题继续学习" },
+};
+
+function relatedItems(items: ContentSummary[], kind: RelatedKind) {
+  const limit = kind === "FAQ" ? 4 : 3;
+  return items.filter((item) => item.contentType === kind).slice(0, limit);
+}
+
+function RelatedKindIcon({ kind }: { kind: RelatedKind }) {
+  if (kind === "KNOWLEDGE") return <Layers3 aria-hidden="true" size={20} />;
+  if (kind === "FAQ") return <CircleHelp aria-hidden="true" size={20} />;
+  return <BookOpen aria-hidden="true" size={20} />;
+}
+
+function RelatedTypeTabs({ items, active, onSelect, label }: { items: ContentSummary[]; active: RelatedKind; onSelect: (kind: RelatedKind) => void; label: string }) {
+  const kinds = (Object.keys(relatedKindConfig) as RelatedKind[]).filter((kind) => relatedItems(items, kind).length);
+  if (kinds.length <= 1) return null;
+
+  return (
+    <div className="related-type-tabs" role="tablist" aria-label={label}>
+      {kinds.map((kind) => {
+        const selected = active === kind;
+        return (
+          <button aria-controls="related-content-panel" aria-selected={selected} className={selected ? "active" : ""} key={kind} onClick={() => onSelect(kind)} role="tab" type="button">
+            <RelatedKindIcon kind={kind} />
+            <strong>{relatedItems(items, kind).length}</strong>
+            <span>{relatedKindConfig[kind].label}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function ZoomableImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [open]);
+
+  return (
+    <>
+      <button aria-label={`放大查看：${alt}`} className={`zoomable-image ${className}`.trim()} onClick={() => setOpen(true)} type="button">
+        <img alt={alt} src={src} />
+        <span><Maximize2 aria-hidden="true" size={17} />放大查看</span>
+      </button>
+      {open ? (
+        <div aria-label={alt} aria-modal="true" className="image-lightbox" onClick={() => setOpen(false)} role="dialog">
+          <div onClick={(event) => event.stopPropagation()}>
+            <button aria-label="关闭图片" autoFocus onClick={() => setOpen(false)} type="button"><X aria-hidden="true" size={22} /></button>
+            <img alt={alt} src={src} />
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
 }
 
 function scenarioHref(item: ContentDetail) {
@@ -116,6 +227,220 @@ function RelatedContent({ items }: { items: ContentSummary[] }) {
         ))}
       </div>
     </section>
+  );
+}
+
+function ArticleRelatedContent({ items, active, onSelect, title }: { items: ContentSummary[]; active: RelatedKind; onSelect: (kind: RelatedKind) => void; title?: string }) {
+  const selectedItems = relatedItems(items, active);
+  if (!selectedItems.length) return null;
+
+  return (
+    <section className="article-discovery" id="related-learning">
+      <div className="section-heading article-discovery-heading">
+        <div><p className="eyebrow">相关内容</p><h2>{title ?? relatedKindConfig[active].title}</h2></div>
+        <RelatedTypeTabs active={active} items={items} label="切换相关内容类型" onSelect={onSelect} />
+      </div>
+
+      <div aria-live="polite" id="related-content-panel" role="tabpanel">
+        {active === "KNOWLEDGE" ? (
+          <div className="knowledge-card-list">
+            {selectedItems.map((item) => (
+              <a href={contentHref(item)} key={item.contentId}>
+                <span>概念</span><strong>{item.title}</strong><small>{item.summary}</small><ArrowRight aria-hidden="true" size={17} />
+              </a>
+            ))}
+          </div>
+        ) : null}
+
+        {active === "FAQ" ? (
+          <div className="faq-link-list">
+            {selectedItems.map((item) => <a href={contentHref(item)} key={item.contentId}><strong>{item.title}</strong><ArrowRight aria-hidden="true" size={17} /></a>)}
+          </div>
+        ) : null}
+
+        {active === "TUTORIAL" ? (
+          <div className="tutorial-link-list">
+            {selectedItems.map((item, index) => (
+              <a href={contentHref(item)} key={item.contentId}>
+                <em>{String(index + 1).padStart(2, "0")}</em><span><strong>{item.title}</strong><small>{item.summary}</small></span><ArrowRight aria-hidden="true" size={17} />
+              </a>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function ArticleContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
+  const takeaways = keyTakeaways(item.body).slice(0, 4);
+  const { primary: sections, supporting } = articleSectionGroups(item.body);
+  const framework = practicalFramework(item.body);
+  const misunderstandings = stringList(item.body, "commonMisunderstandings");
+  const limitations = publicLimitations(item.knownLimitations);
+  const firstRelatedKind = (Object.keys(relatedKindConfig) as RelatedKind[]).find((kind) => relatedItems(related, kind).length) ?? "KNOWLEDGE";
+  const hasRelated = (Object.keys(relatedKindConfig) as RelatedKind[]).some((kind) => relatedItems(related, kind).length);
+  const [activeRelated, setActiveRelated] = useState<RelatedKind>(firstRelatedKind);
+
+  function selectRelated(kind: RelatedKind, scroll = false) {
+    setActiveRelated(kind);
+    if (scroll) window.requestAnimationFrame(() => document.getElementById("related-learning")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
+
+  return (
+    <>
+      <section className="article-hero">
+        <div>
+          <p className="eyebrow">{typeLabels[item.contentType] ?? "六爻知识"}</p>
+          <h1>{item.title}</h1>
+          <p className="article-deck">{item.summary || "用清晰的结构理解这个六爻问题，并把结论放回现实验证。"}</p>
+          <div className="article-meta" aria-label="内容信息">
+            <span>{difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span>
+            <span>{publicationLabel(item.reviewStatus)}</span>
+          </div>
+        </div>
+        <ZoomableImage alt={`${item.title}配图`} className="article-hero-visual" src={editorialVisualFor(item)} />
+      </section>
+
+      {takeaways.length ? (
+        <section className="article-overview" id="article-key-points">
+          <div><p className="eyebrow">先看结论</p><h2>读完后，你只需要记住这四点</h2></div>
+          <div className="article-takeaway-grid">
+            {takeaways.map((text, index) => (
+              <div key={text}><CheckCircle2 aria-hidden="true" size={20} /><em>{String(index + 1).padStart(2, "0")}</em><strong>{text}</strong></div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {hasRelated ? (
+        <section className="article-resource-nav" aria-label="本文相关内容">
+          <div><p className="eyebrow">相关内容</p><strong>选择你现在需要的帮助</strong></div>
+          <RelatedTypeTabs active={activeRelated} items={related} label="选择相关内容类型" onSelect={(kind) => selectRelated(kind, true)} />
+        </section>
+      ) : null}
+
+      {visualRefs(item.body).length ? (
+        <figure className="article-concept-visual">
+          <ZoomableImage alt={`${item.title}的判断流程图`} className="article-concept-image" src={`/content-growth/visuals/${visualRefs(item.body)[0]}.svg`} />
+          <figcaption>先保留一个判断基准，再用现实变化决定是否需要重新评估。</figcaption>
+        </figure>
+      ) : null}
+
+      <div className="article-reading-layout">
+        {sections.length ? (
+          <aside className="article-toc">
+            <strong>本文会讲清</strong>
+            <nav aria-label="文章目录">
+              {sections.map((section, index) => <a href={`#article-section-${index + 1}`} key={`${section.heading}-${index}`}>{section.heading}</a>)}
+            </nav>
+            <a className="article-toc-related" href="#related-learning">查看知识卡与问答 <ArrowRight aria-hidden="true" size={15} /></a>
+          </aside>
+        ) : null}
+
+        <article className="article-flow">
+          {typeof item.body === "string" && item.body.trim() ? <p>{item.body}</p> : null}
+          {sections.map((section, index) => (
+            <section id={`article-section-${index + 1}`} key={`${section.heading}-${index}`}>
+              <p className="article-section-label">{sectionLabel(section.heading ?? "", index)}</p>
+              {section.heading ? <h2>{section.heading}</h2> : null}
+              {paragraphs(section.body).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            </section>
+          ))}
+
+          {framework ? (
+            <aside className="article-framework" id="article-framework">
+              <span>重新评估前先核对</span>
+              <strong>{framework.name}</strong>
+              <p>{framework.content}</p>
+            </aside>
+          ) : null}
+
+          {misunderstandings.length ? (
+            <section className="article-misunderstandings">
+              <p className="article-section-label">避免判断被情绪带走</p>
+              <h2>常见误区</h2>
+              <ul>{misunderstandings.map((text) => <li key={text}>{text}</li>)}</ul>
+            </section>
+          ) : null}
+
+          {supporting.map((section, index) => (
+            <details className="article-supporting-details" key={`${section.heading}-${index}`}>
+              <summary>适用范围、停止条件与现实验证</summary>
+              <div>{paragraphs(section.body).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            </details>
+          ))}
+
+          {limitations.length ? (
+            <details className="article-supporting-details boundary">
+              <summary>使用边界</summary>
+              <div>{limitations.map((text) => <p key={text}>{text}</p>)}</div>
+            </details>
+          ) : null}
+        </article>
+      </div>
+
+      <section className="article-actions">
+        <div><p className="eyebrow">下一步</p><h2>需要概念解释或具体回答，再进入相关内容</h2></div>
+        <div><a className="primary-link" href="#related-learning">查看相关知识</a><a className="secondary-link" href="/content">返回知识中心</a></div>
+      </section>
+
+      <ArticleRelatedContent active={activeRelated} items={related} onSelect={(kind) => selectRelated(kind)} />
+    </>
+  );
+}
+
+function ReferenceContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
+  const practicalMeaning = stringValue(item.body, "practicalMeaning");
+  const professionalDefinition = stringValue(item.body, "professionalDefinition").split(/系统需|CAL_[A-Z0-9_]+/u)[0]?.trim();
+  const misunderstandings = stringList(item.body, "commonMisunderstanding");
+  const relevantItems = related.filter((entry) => entry.contentId !== item.contentId && entry.title !== item.title);
+  const firstRelatedKind = (Object.keys(relatedKindConfig) as RelatedKind[]).find((kind) => relatedItems(relevantItems, kind).length) ?? "KNOWLEDGE";
+  const [activeRelated, setActiveRelated] = useState<RelatedKind>(firstRelatedKind);
+
+  return (
+    <>
+      <section className="reference-hero">
+        <p className="eyebrow">{typeLabels[item.contentType] ?? "六爻知识"}</p>
+        <h1>{item.title}</h1>
+        <p className="reference-definition">{item.summary}</p>
+        <div className="reference-meta"><span>{difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span><span>六爻基础</span></div>
+      </section>
+
+      {professionalDefinition || practicalMeaning || misunderstandings.length ? (
+        <section className="reference-usage">
+          {professionalDefinition ? <div><p className="eyebrow">准确理解</p><h2>{professionalDefinition}</h2></div> : null}
+          {practicalMeaning ? <div><p className="eyebrow">实际怎么用</p><p>{practicalMeaning}</p></div> : null}
+          {misunderstandings.length ? <div><p className="eyebrow">容易混淆</p><ul>{misunderstandings.map((text) => <li key={text}>{text}</li>)}</ul></div> : null}
+        </section>
+      ) : null}
+
+      <ArticleRelatedContent active={activeRelated} items={relevantItems} onSelect={setActiveRelated} title={item.contentType === "GLOSSARY" && activeRelated === "KNOWLEDGE" ? `和“${item.title}”一起理解的概念` : undefined} />
+      <a className="reference-back-link" href="/content">返回知识中心 <ArrowRight aria-hidden="true" size={16} /></a>
+    </>
+  );
+}
+
+function FaqContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
+  const question = stringValue(item.body, "question") || item.title;
+  const shortAnswer = stringValue(item.body, "shortAnswer") || item.summary;
+  const fullAnswer = stringValue(item.body, "fullAnswer");
+  const limitations = publicLimitations(item.knownLimitations);
+  const firstRelatedKind = (Object.keys(relatedKindConfig) as RelatedKind[]).find((kind) => relatedItems(related, kind).length) ?? "KNOWLEDGE";
+  const [activeRelated, setActiveRelated] = useState<RelatedKind>(firstRelatedKind);
+
+  return (
+    <>
+      <section className="faq-detail-hero">
+        <p className="eyebrow">常见问答</p>
+        <h1>{question}</h1>
+        <div className="faq-short-answer"><span>简短回答</span><p>{shortAnswer}</p></div>
+      </section>
+      {fullAnswer ? <section className="faq-full-answer"><p className="eyebrow">具体怎么理解</p><h2>{fullAnswer}</h2></section> : null}
+      {limitations.length ? <aside className="faq-boundary"><strong>使用提醒</strong>{limitations.map((text) => <p key={text}>{text}</p>)}</aside> : null}
+      <ArticleRelatedContent active={activeRelated} items={related} onSelect={setActiveRelated} />
+      <a className="reference-back-link" href="/content">返回知识中心 <ArrowRight aria-hidden="true" size={16} /></a>
+    </>
   );
 }
 
@@ -251,6 +576,13 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
   const [item, setItem] = useState<ContentDetail | null>(null);
   const [related, setRelated] = useState<ContentSummary[]>([]);
   const apiType = useMemo(() => type.toUpperCase().replaceAll("-", "_"), [type]);
+  const decodedSlug = useMemo(() => {
+    try {
+      return decodeURIComponent(slug);
+    } catch {
+      return slug;
+    }
+  }, [slug]);
 
   useEffect(() => {
     let cancelled = false;
@@ -258,7 +590,7 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
       setLoading(true);
       setError("");
       try {
-        const response = await fetch(`${apiBase()}/content/${encodeURIComponent(apiType)}/${encodeURIComponent(slug)}`);
+        const response = await fetch(`${apiBase()}/content/${encodeURIComponent(apiType)}/${encodeURIComponent(decodedSlug)}`);
         if (!response.ok) throw new Error(await readError(response));
         const body = (await response.json()) as ContentDetail;
         const relatedResponse = await fetch(`${apiBase()}/content/${encodeURIComponent(body.contentId)}/related`);
@@ -277,7 +609,7 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
     return () => {
       cancelled = true;
     };
-  }, [apiType, slug]);
+  }, [apiType, decodedSlug]);
 
   return (
     <main className="shell">
@@ -288,87 +620,11 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
 
       {item?.contentType === "LANDING_PAGE" ? <TopicContent item={item} related={related} /> : item?.contentType === "LEARNING_PATH" ? (
         <LearningPathContent item={item} related={related} />
-      ) : item ? (
-        <>
-        <section className="hero compact">
-          <p className="eyebrow">{typeLabels[item.contentType] ?? "六爻知识"}</p>
-          <h1>{item.title}</h1>
-          <p>{stringValue(item.body, "subtitle") || item.summary}</p>
-        </section>
-        <section className="panel report-section">
-          <div className="content-detail-visual">
-            <img src={editorialVisualFor(item)} alt="" aria-hidden="true" />
-          </div>
-          <div className="fact-strip">
-            <span>{typeLabels[item.contentType] ?? "六爻知识"}</span>
-            <span>{difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span>
-            <span>{publicationLabel(item.reviewStatus)}</span>
-          </div>
-          <article className="content-article">
-            <h2>{item.title}</h2>
-            <p>{item.summary || "该条目正在整理正式正文，当前先保留结构化摘要与边界说明。"}</p>
-            {keyTakeaways(item.body).length ? (
-              <div className="fact-strip">
-                {keyTakeaways(item.body).slice(0, 4).map((text) => (
-                  <span key={text}>{text}</span>
-                ))}
-              </div>
-            ) : null}
-            {visualRefs(item.body).length ? (
-              <div className="content-visuals">
-                {visualRefs(item.body).slice(0, 2).map((ref) => (
-                  <img alt={`${item.title} 图示`} key={ref} src={`/content-growth/visuals/${ref}.svg`} />
-                ))}
-              </div>
-            ) : null}
-            {typeof item.body === "string" && item.body.trim() ? <p>{item.body}</p> : null}
-            {contentSections(item.body).length ? (
-              <div className="article-sections">
-                {contentSections(item.body).map((section, index) => (
-                  <section key={`${section.heading}-${index}`}>
-                    {section.heading ? <h3>{section.heading}</h3> : null}
-                    {(section.body ?? "").split("\n\n").filter(Boolean).map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </section>
-                ))}
-              </div>
-            ) : null}
-            {practicalFramework(item.body) ? (
-              <aside className="article-framework">
-                <strong>{practicalFramework(item.body)?.name}</strong>
-                <p>{practicalFramework(item.body)?.content}</p>
-              </aside>
-            ) : null}
-            {stringList(item.body, "commonMisunderstandings").length ? (
-              <section className="article-misunderstandings">
-                <h3>常见误区</h3>
-                <ul>{stringList(item.body, "commonMisunderstandings").map((text) => <li key={text}>{text}</li>)}</ul>
-              </section>
-            ) : null}
-          </article>
-          {item.knownLimitations?.length ? (
-            <details className="evidence-details">
-              <summary>边界说明</summary>
-              <div>
-                {item.knownLimitations.map((text) => (
-                  <p key={text}>{text}</p>
-                ))}
-              </div>
-            </details>
-          ) : null}
-          <div className="inline-actions">
-            <a className="primary-link" href="/">
-              开始起卦
-            </a>
-            <a className="text-link" href="/content">
-              返回内容
-            </a>
-          </div>
-        </section>
-        <RelatedContent items={related} />
-        </>
-      ) : null}
+      ) : item?.contentType === "GLOSSARY" || item?.contentType === "KNOWLEDGE" ? (
+        <ReferenceContent item={item} related={related} />
+      ) : item?.contentType === "FAQ" ? (
+        <FaqContent item={item} related={related} />
+      ) : item ? <ArticleContent item={item} related={related} /> : null}
     </main>
   );
 }
