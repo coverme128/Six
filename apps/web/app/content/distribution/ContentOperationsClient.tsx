@@ -9,7 +9,7 @@ type ContentLink = { contentId: string; title: string; route: string; reviewStat
 type SocialAsset = { social_id: string; content_type: string; hook: string; body: string; cta: string; source_content?: ContentLink[] };
 type SummaryAsset = { summary_card_id: string; headline: string; one_line_summary: string; learning_stage: string; route: string; source_article_id: string };
 type VideoAsset = { video_id: string; title: string; hook: string; duration: string; source_batch: string; article_content?: ContentLink[]; product_cta?: { label: string; route: string } };
-type CollectionAsset = { collection_id: string; title: string; description: string; seo_status: string; recommended_content?: ContentLink[] };
+type CollectionAsset = { collection_id: string; title: string; description: string; seo_status: string; cover_path: string; recommended_content?: ContentLink[] };
 
 const assetTabs = [
   { key: "social", label: "社交素材", count: 72, icon: Share2 },
@@ -113,9 +113,12 @@ export function ContentOperationsClient({ social, summaries, videos, collections
         <div className="collection-assets">
           {filteredCollections.slice(0, limit).map((item) => (
             <article className="collection-asset" key={item.collection_id}>
-              <header><span>{item.collection_id}</span><em>{item.seo_status === "PUBLIC_PAGE" ? "公开合集" : "内部学习路径"}</em></header>
-              <h2>{item.title}</h2><p>{item.description}</p>
-              <ol>{item.recommended_content?.map((content) => <li key={content.contentId}><a href={content.route}>{content.title}<ArrowRight aria-hidden="true" size={14} /></a></li>)}</ol>
+              <img alt={`${item.title}学习合集封面`} loading="lazy" src={item.cover_path} />
+              <div className="collection-copy">
+                <header><span>{item.collection_id}</span><em>{item.seo_status === "PUBLIC_PAGE" ? "公开合集" : "内部学习路径"}</em></header>
+                <h2>{item.title}</h2><p>{item.description}</p>
+                <ol>{item.recommended_content?.map((content) => <li key={content.contentId}><a href={content.route}>{content.title}<ArrowRight aria-hidden="true" size={14} /></a></li>)}</ol>
+              </div>
             </article>
           ))}
         </div>

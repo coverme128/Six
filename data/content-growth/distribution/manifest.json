@@ -6,6 +6,7 @@
     "socialCards": 72,
     "articleSummaryCards": 24,
     "collections": 12,
+    "collectionCovers": 12,
     "shortVideoScripts": 50,
     "shortVideoCovers": 50,
     "shortVideoStoryboards": 50,
@@ -16,6 +17,7 @@
     "summaryRoutesResolved": true,
     "socialSourcesResolved": true,
     "collectionSourcesResolved": true,
+    "collectionCoverFilesPresent": true,
     "videoSourcesResolved": true,
     "batch07StoryboardFieldsPresent": true
   },

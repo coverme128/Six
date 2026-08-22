@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import test from "node:test";
 
@@ -22,6 +22,7 @@ test("Batch 07 distribution assets retain exact counts and resolved routes", () 
     socialCards: 72,
     articleSummaryCards: 24,
     collections: 12,
+    collectionCovers: 12,
     shortVideoScripts: 50,
     shortVideoCovers: 50,
     shortVideoStoryboards: 50,
@@ -42,6 +43,13 @@ test("Batch 07 distribution assets retain exact counts and resolved routes", () 
   assert.ok(summaries.every((item) => item.route.startsWith("/content/") && item.reuse_status === "PUBLIC"));
   assert.equal(collections.reduce((count, item) => count + item.recommended_content.length, 0), 36);
   assert.ok(collections.every((item) => item.recommended_content.every((source: any) => source.route.startsWith("/content/"))));
+  assert.ok(collections.every((item) => item.cover_path === `/content-growth/distribution/collection-cover/${item.collection_id}.svg`));
+  for (const collection of collections) {
+    const cover = readFileSync(resolve(root, `apps/web/public${collection.cover_path}`), "utf8");
+    assert.match(cover, /data-asset-class="learning-collection-cover"/u);
+    assert.match(cover, new RegExp(collection.title, "u"));
+    assert.match(cover, /推荐学习顺序/u);
+  }
 
   const batch07Videos = videos.filter((item) => item.source_batch === "BATCH_07");
   assert.equal(batch07Videos.length, 6);
@@ -110,4 +118,22 @@ test("all 68 visuals remain semantic and Batch 07 contributes 16 product assets"
   const productRefs = new Set(catalog.items.flatMap((item) => item.body?.productIntegration?.visual_asset_refs ?? []));
   assert.equal(productRefs.size, 68);
   assert.ok(audit.assets.every((item: any) => productRefs.has(item.visualAssetId)));
+});
+
+test("every declared non-video visual layer has final local files", () => {
+  const editorial = readJson<any>("data/liuyao/visual-system/editorial/generated/final-asset-manifest.json");
+  const nonVideoEditorial = editorial.assets.filter((item: any) => item.id !== "ED-LY-007");
+  const editorialVariants = nonVideoEditorial.flatMap((item: any) => item.variants);
+
+  assert.equal(nonVideoEditorial.length, 9);
+  assert.equal(editorialVariants.length, 22);
+  assert.ok(editorialVariants.every((variant: any) => existsSync(resolve(root, `apps/web/public${variant.path}`))));
+
+  const countSvg = (path: string) => readdirSync(resolve(root, path)).filter((file) => file.endsWith(".svg")).length;
+  assert.equal(countSvg("apps/web/public/content-growth/visuals"), 68);
+  assert.equal(countSvg("apps/web/public/content-growth/distribution/social"), 72);
+  assert.equal(countSvg("apps/web/public/content-growth/distribution/summary"), 24);
+  assert.equal(countSvg("apps/web/public/content-growth/distribution/collection-cover"), 12);
+  assert.equal(countSvg("apps/web/public/liuyao-visual-system/reference-svg"), 14);
+  assert.equal(countSvg("apps/web/public/liuyao-visual-system/topics"), 6);
 });

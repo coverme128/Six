@@ -170,6 +170,7 @@ test("Batch 07 operations preview exposes complete, linked asset groups", async 
 
   await page.getByRole("tab", { name: /学习合集/ }).click();
   await expect(page.locator(".collection-assets .collection-asset")).toHaveCount(12);
+  await expect(page.locator(".collection-assets .collection-asset > img")).toHaveCount(12);
   await expect(page.locator(".collection-assets a")).toHaveCount(36);
 });
 

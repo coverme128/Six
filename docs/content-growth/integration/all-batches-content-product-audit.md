@@ -21,7 +21,7 @@ The repository contains 603 runtime content records. The public content API excl
 | 04 | strength, change and timing | advanced learning stage, filtered library and 12 visual explainers | 95 records covered |
 | 05 | real-world decisions | six topic landings, 12 reality cases, tutorials/FAQs and 12 visual explainers | 72 imported records plus 6 topic landings covered |
 | 06 | report explanation cases | dedicated case lab and 12 searchable cases; snippet/fixture layers stay operational | 12 cases covered |
-| 07 | launch closure and distribution | Learn Hub, 16 visual atlas assets, 72 social cards, 24 summaries, 12 collections and 6 new video packages | declared counts locked |
+| 07 | launch closure and distribution | Learn Hub, 16 visual atlas assets, 72 social cards, 24 summaries, 12 collections with 12 covers, and 6 new video packages | declared counts locked |
 
 ## Information architecture for all users
 
@@ -38,7 +38,7 @@ Users can then move through the six-stage curriculum, six reality topics, four r
 
 ## Visual and asset coverage
 
-All 68 content SVGs are generated, registered, shown by six user-facing themes, and linked from at least one relevant article. The previously orphaned `B05-VIS-01` is explicitly connected to its reality-question article. Batch 07 distribution assets remain in the noindex operations preview because they are channel-production deliverables, not primary public navigation.
+All 68 content SVGs are generated, registered, shown by six user-facing themes, and linked from at least one relevant article. The previously orphaned `B05-VIS-01` is explicitly connected to its reality-question article. The non-video visual audit now covers 218 final files, including 12 newly completed learning-collection covers. Batch 07 distribution assets remain in the noindex operations preview because they are channel-production deliverables, not primary public navigation.
 
 ## Acceptance
 

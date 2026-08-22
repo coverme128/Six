@@ -2720,7 +2720,7 @@ article p:last-child {
 .collection-asset {
   border-bottom: 1px solid var(--line);
   min-width: 0;
-  padding: 24px;
+  overflow: hidden;
 }
 
 .collection-asset:nth-child(odd) {
@@ -2730,6 +2730,19 @@ article p:last-child {
 .collection-asset header {
   display: flex;
   justify-content: space-between;
+}
+
+.collection-asset > img {
+  aspect-ratio: 16 / 9;
+  background: var(--paper-soft);
+  border-bottom: 1px solid var(--line);
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.collection-copy {
+  padding: 22px 24px 24px;
 }
 
 .collection-asset header em {
@@ -5229,7 +5242,10 @@ article p:last-child {
   .collection-asset,
   .collection-asset:nth-child(odd) {
     border-right: 0;
-    padding: 20px 0;
+  }
+
+  .collection-copy {
+    padding: 20px 4px 24px;
   }
 
   .article-hero {

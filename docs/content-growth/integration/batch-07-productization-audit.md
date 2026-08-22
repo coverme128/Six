@@ -17,7 +17,7 @@ Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 | Report reading | 10 | 10 | Social asset filter | Complete |
 | Teaching cases | 8 | 8 | Social asset filter | Complete |
 | Article summary cards | 24 | 24 JSON records and 24 SVG cards | Current `/content/*` routes, 24 reusable | Complete |
-| Collection copy | 12 | 12 JSON records and 12 linked Markdown documents | 2 public-page definitions, 10 internal learning paths | Complete |
+| Collection copy | 12 | 12 JSON records, 12 linked Markdown documents and 12 semantic SVG covers | 2 public-page definitions, 10 internal learning paths, visual operations preview | Complete |
 | Liuyao Learn Hub | 1 | 1 designed hub | `/content` | Complete |
 | New long articles / knowledge cards / FAQs / professional rules | 0 | 0 | No scope added | As declared |
 
@@ -35,7 +35,7 @@ The video package is complete relative to the source contract: the original ZIP 
 - Visual generation reads immutable Batch 07 registry data and cannot recursively scrape previously generated SVG text.
 - All 24 summary routes, 72 social source references, 36 collection links, and 50 video source references resolve to current content entries.
 - Content QA reports 0 errors, 0 warnings, and no missing incoming or outgoing links.
-- `pnpm run content:test-assets` locks exact counts, category splits, visual semantics, storyboards, and routes.
+- `pnpm run content:test-assets` locks exact counts, category splits, visual semantics, collection covers, final editorial variants, and routes.
 
 ## Release boundary
 

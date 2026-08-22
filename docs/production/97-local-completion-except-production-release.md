@@ -15,7 +15,7 @@ Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 - A 24-case lab covering real decisions and report explanation.
 - 68/68 semantic content SVGs across seven layout families, organized into six user-facing visual themes and linked from relevant articles.
 - 23 final editorial visual variants.
-- 72 social cards, 24 route-resolved summary cards, 12 linked collection documents, and 50 video script packages with covers and complete storyboards; all are available in a noindex operations preview.
+- 72 social cards, 24 route-resolved summary cards, 12 linked collection documents with 12 semantic covers, and 50 video script packages with covers and complete storyboards; all are available in a noindex operations preview.
 - Automated responsive visual regression at desktop and 360/390/430 mobile.
 - Automated screen-reader summary, keyboard flow, semantic-role, asset-integrity, SVG export, and PDF generation checks.
 
@@ -50,5 +50,6 @@ Primary evidence:
 - `data/liuyao/visual-system/integration/content-growth-68-svg-production-audit.json`
 - `docs/content-growth/integration/batch-07-productization-audit.md`
 - `docs/content-growth/integration/all-batches-content-product-audit.md`
+- `docs/content-growth/integration/non-video-visual-asset-audit.md`
 - `tests/e2e/visual-regression.spec.ts`
 - `tests/e2e/visual-regression.spec.ts-snapshots/`

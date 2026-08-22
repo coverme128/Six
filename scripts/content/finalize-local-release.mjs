@@ -471,6 +471,40 @@ function summaryCard(item, index) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc"><title id="title">${escapeXml(item.headline)}</title><desc id="desc">${escapeXml(item.one_line_summary)}</desc><rect width="1200" height="675" fill="${palette.paper}"/><rect x="0" y="0" width="20" height="675" fill="${accent}"/><text x="72" y="72" fill="${accent}" font-size="18" font-weight="700" font-family="system-ui, sans-serif">${escapeXml(item.learning_stage)} · ${escapeXml(item.summary_card_id)}</text>${textBlock(item.headline, 72, 142, { fontSize: 40, fontWeight: 760, max: 24, lines: 2, lineHeight: 54 })}<rect x="72" y="260" width="1056" height="260" rx="8" fill="${palette.surface}" stroke="${palette.line}"/>${(item.key_points ?? []).slice(0, 3).map((point, pointIndex) => `<circle cx="118" cy="${326 + pointIndex * 70}" r="16" fill="${accent}"/><text x="118" y="332" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="system-ui, sans-serif">${pointIndex + 1}</text>${textBlock(point, 156, 334 + pointIndex * 70, { fontSize: 22, max: 36, lines: 1 })}`).join("")}<text x="72" y="600" fill="${palette.muted}" font-size="18" font-family="system-ui, sans-serif">${escapeXml(item.cta)} · ${escapeXml(item.route)}</text></svg>`;
 }
 
+function collectionCover(item, index) {
+  const accents = [palette.jade, palette.blue, palette.gold, palette.plum, palette.cinnabar];
+  const accent = accents[index % accents.length];
+  const secondary = accents[(index + 2) % accents.length];
+  const steps = (item.recommended_content ?? []).slice(0, 3);
+  const description = String(item.description ?? "").replace(/[。！？]+$/u, "");
+  const variants = [
+    [[710, 230], [905, 337], [710, 482]],
+    [[690, 235], [910, 235], [800, 455]],
+    [[700, 210], [800, 350], [930, 490]],
+  ];
+  const positions = variants[index % variants.length];
+  const connectors = positions.slice(0, -1).map(([x, y], stepIndex) => {
+    const [nextX, nextY] = positions[stepIndex + 1];
+    return `<path d="M ${x + 64} ${y + 44} C ${(x + nextX) / 2} ${y + 44}, ${(x + nextX) / 2} ${nextY + 44}, ${nextX - 64} ${nextY + 44}" fill="none" stroke="${palette.line}" stroke-width="5" stroke-linecap="round"/>`;
+  }).join("");
+  const nodes = steps.map((step, stepIndex) => {
+    const [x, y] = positions[stepIndex];
+    const nodeColor = stepIndex === 1 ? secondary : accent;
+    return `<circle cx="${x}" cy="${y + 44}" r="44" fill="${palette.surface}" stroke="${nodeColor}" stroke-width="4"/><circle cx="${x}" cy="${y + 44}" r="27" fill="${nodeColor}"/><text x="${x}" y="${y + 51}" text-anchor="middle" fill="#fff" font-size="20" font-weight="750" font-family="system-ui, sans-serif">${stepIndex + 1}</text>${textBlock(step.title, x, y + 112, { anchor: "middle", fontSize: 18, fontWeight: 650, max: 11, lines: 2, lineHeight: 25 })}`;
+  }).join("");
+  return `<svg data-visual-system="LIUYAO_VISUAL_SYSTEM_V1" data-asset-class="learning-collection-cover" data-layout="guided-path" xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<metadata>${escapeXml(JSON.stringify({ visualSystem: "LIUYAO_VISUAL_SYSTEM_V1", assetClass: "learning_collection_cover", collectionId: item.collection_id, source: "Batch 07 collection-copy-registry.json" }))}</metadata>
+<title id="title">${escapeXml(item.title)}学习合集</title><desc id="desc">${escapeXml(description)}，按照三步推荐顺序继续学习。</desc>
+<rect width="1200" height="675" fill="${palette.paper}"/><rect x="0" y="0" width="18" height="675" fill="${accent}"/>
+<path d="M 570 0 V 675" stroke="${palette.line}" stroke-width="1"/><circle cx="1100" cy="86" r="110" fill="none" stroke="${accent}" stroke-opacity=".18" stroke-width="22"/>
+<text x="72" y="76" fill="${accent}" font-size="17" font-weight="750" font-family="system-ui, sans-serif">六爻学习合集 · ${escapeXml(item.collection_id)}</text>
+${textBlock(item.title, 72, 158, { fontSize: 48, fontWeight: 780, max: 12, lines: 3, lineHeight: 62 })}
+${textBlock(item.who_is_it_for, 72, 380, { fill: palette.muted, fontSize: 22, fontWeight: 500, max: 21, lines: 4, lineHeight: 34 })}
+<rect x="72" y="548" width="390" height="62" rx="8" fill="${accent}"/>${textBlock(item.tool_cta, 267, 587, { anchor: "middle", fill: "#fff", fontSize: 21, fontWeight: 700, max: 16, lines: 1 })}
+<text x="650" y="124" fill="${palette.muted}" font-size="16" font-weight="700" font-family="system-ui, sans-serif">推荐学习顺序</text>${connectors}${nodes}
+</svg>`;
+}
+
 function videoCover(item, index) {
   const accent = [palette.cinnabar, palette.jade, palette.blue, palette.gold, palette.plum][index % 5];
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc"><title id="title">${escapeXml(item.title)}</title><desc id="desc">${escapeXml(item.hook)}</desc><rect width="1080" height="1920" fill="${palette.paper}"/><rect x="0" y="0" width="1080" height="28" fill="${accent}"/><text x="82" y="130" fill="${accent}" font-size="30" font-weight="700" font-family="system-ui, sans-serif">六爻短视频 · ${escapeXml(item.duration)}</text>${textBlock(item.title, 82, 292, { fontSize: 72, fontWeight: 780, max: 12, lines: 4, lineHeight: 92 })}<circle cx="540" cy="1040" r="270" fill="${palette.surface}" stroke="${accent}" stroke-width="10"/><circle cx="540" cy="1040" r="210" fill="none" stroke="${palette.line}" stroke-width="2"/><path d="M 500 920 L 500 1160 L 680 1040 Z" fill="${accent}"/>${textBlock(item.hook, 82, 1490, { fontSize: 42, fontWeight: 600, max: 18, lines: 4, lineHeight: 62 })}<rect x="82" y="1740" width="916" height="92" rx="8" fill="${accent}"/>${textBlock(item.product_cta?.label ?? "查看完整内容", 540, 1798, { anchor: "middle", fill: "#fff", fontSize: 34, max: 20, lines: 1 })}</svg>`;
@@ -521,6 +555,7 @@ function generateDistributionAssets() {
       ...item,
       featured_content: (item.featured_content_refs ?? []).map(contentLink),
       recommended_content: (item.recommended_order ?? []).map(contentLink),
+      cover_path: `/content-growth/distribution/collection-cover/${item.collection_id}.svg`,
       asset_status: "ASSET_READY_LOCAL",
     })),
     videos: readZipJson(zipPath, "/short-video-registry.json").map((item) => ({
@@ -535,12 +570,14 @@ function generateDistributionAssets() {
 
   const socialDir = join(distributionPublicDir, "social");
   const summaryDir = join(distributionPublicDir, "summary");
+  const collectionCoverDir = join(distributionPublicDir, "collection-cover");
   const videoCoverDir = join(distributionPublicDir, "video-cover");
   const storyboardDir = join(distributionPublicDir, "video-storyboard");
   const collectionDir = join(distributionDataDir, "collections");
-  [socialDir, summaryDir, videoCoverDir, storyboardDir, collectionDir].forEach(ensureDir);
+  [socialDir, summaryDir, collectionCoverDir, videoCoverDir, storyboardDir, collectionDir].forEach(ensureDir);
   registries.social.forEach((item, index) => writeFileSync(join(socialDir, `${item.social_id}.svg`), `${socialCard(item, index)}\n`));
   registries.summaries.forEach((item, index) => writeFileSync(join(summaryDir, `${item.summary_card_id}.svg`), `${summaryCard(item, index)}\n`));
+  registries.collections.forEach((item, index) => writeFileSync(join(collectionCoverDir, `${item.collection_id}.svg`), `${collectionCover(item, index)}\n`));
   registries.videos.forEach((item, index) => {
     writeFileSync(join(videoCoverDir, `${item.video_id}.svg`), `${videoCover(item, index)}\n`);
     writeFileSync(join(storyboardDir, `${item.video_id}.html`), `${storyboardHtml(item)}\n`);
@@ -551,6 +588,7 @@ function generateDistributionAssets() {
     summaryRoutesResolved: registries.summaries.every((item) => item.route.startsWith("/content/")),
     socialSourcesResolved: registries.social.every((item) => item.source_content.every((source) => source.route.startsWith("/content/"))),
     collectionSourcesResolved: registries.collections.every((item) => item.recommended_content.every((source) => source.route.startsWith("/content/"))),
+    collectionCoverFilesPresent: registries.collections.every((item) => existsSync(join(rootDir, "apps/web/public", item.cover_path))),
     videoSourcesResolved: registries.videos.every((item) => item.article_content.every((source) => source.route.startsWith("/content/"))),
     batch07StoryboardFieldsPresent: registries.videos.filter((item) => item.source_batch === "BATCH_07").every((item) => item.scene_list.every((scene) => scene.duration && scene.content)),
   };
@@ -563,6 +601,7 @@ function generateDistributionAssets() {
       socialCards: registries.social.length,
       articleSummaryCards: registries.summaries.length,
       collections: registries.collections.length,
+      collectionCovers: registries.collections.length,
       shortVideoScripts: registries.videos.length,
       shortVideoCovers: registries.videos.length,
       shortVideoStoryboards: registries.videos.length,

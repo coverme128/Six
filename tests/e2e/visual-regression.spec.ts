@@ -50,6 +50,12 @@ test("core public surfaces keep approved visual structure", async ({ page, reque
   await stablePage(page);
   await expect(page.locator(".reference-hero")).toHaveScreenshot("glossary-core.png", { animations: "disabled" });
 
+  await page.goto("/content/distribution");
+  await page.getByRole("tab", { name: /学习合集/ }).click();
+  await expect(page.locator(".collection-asset > img")).toHaveCount(12);
+  await stablePage(page);
+  await expect(page.locator(".collection-asset").first()).toHaveScreenshot("learning-collection-visual.png", { animations: "disabled" });
+
   const reportId = await createReport(request);
   await page.goto(`/reports/${reportId}`);
   await expect(page.locator(".ly-advanced-disclosure")).toBeVisible();
