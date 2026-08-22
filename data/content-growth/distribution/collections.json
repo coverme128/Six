@@ -21,7 +21,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B01-A01",
+        "title": "六爻占问适合解决什么问题",
+        "route": "/content/tutorial/liuyao-suitable-questions",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A01",
+        "title": "六爻是什么：从六次起卦到结构化判断",
+        "route": "/content/tutorial/what-is-liuyao-structured-analysis",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B01-A01",
+        "title": "六爻占问适合解决什么问题",
+        "route": "/content/tutorial/liuyao-suitable-questions",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A01",
+        "title": "六爻是什么：从六次起卦到结构化判断",
+        "route": "/content/tutorial/what-is-liuyao-structured-analysis",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-02",
@@ -45,7 +86,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "PUBLIC_PAGE",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B01-A02",
+        "title": "怎样提出一个清晰有效的六爻问题",
+        "route": "/content/tutorial/how-to-ask-liuyao-question",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A03",
+        "title": "为什么一次占问建议只聚焦一个核心问题",
+        "route": "/content/tutorial/one-core-question-per-reading",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A04",
+        "title": "为什么不建议对同一个问题反复起卦",
+        "route": "/content/tutorial/why-not-repeat-liuyao-readings",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B01-A02",
+        "title": "怎样提出一个清晰有效的六爻问题",
+        "route": "/content/tutorial/how-to-ask-liuyao-question",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A03",
+        "title": "为什么一次占问建议只聚焦一个核心问题",
+        "route": "/content/tutorial/one-core-question-per-reading",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A04",
+        "title": "为什么不建议对同一个问题反复起卦",
+        "route": "/content/tutorial/why-not-repeat-liuyao-readings",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-03",
@@ -69,7 +151,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B02-A02",
+        "title": "一次完整的六爻起卦流程是怎样的",
+        "route": "/content/tutorial/complete-liuyao-casting-process",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A05",
+        "title": "六爻为什么要自下而上记录",
+        "route": "/content/tutorial/why-liuyao-record-bottom-up",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A11",
+        "title": "一个六爻卦由哪些基本部分组成",
+        "route": "/content/tutorial/parts-of-liuyao-hexagram",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B02-A02",
+        "title": "一次完整的六爻起卦流程是怎样的",
+        "route": "/content/tutorial/complete-liuyao-casting-process",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A05",
+        "title": "六爻为什么要自下而上记录",
+        "route": "/content/tutorial/why-liuyao-record-bottom-up",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A11",
+        "title": "一个六爻卦由哪些基本部分组成",
+        "route": "/content/tutorial/parts-of-liuyao-hexagram",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-04",
@@ -93,7 +216,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B02-A16",
+        "title": "六亲是什么：父母、兄弟、子孙、妻财、官鬼的基础含义",
+        "route": "/content/tutorial/six-relations-liuyao-basics",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A01",
+        "title": "六爻中的“用神”到底是什么",
+        "route": "/content/tutorial/what-is-yongshen-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A03",
+        "title": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼",
+        "route": "/content/tutorial/six-relations-are-role-categories",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B02-A16",
+        "title": "六亲是什么：父母、兄弟、子孙、妻财、官鬼的基础含义",
+        "route": "/content/tutorial/six-relations-liuyao-basics",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A01",
+        "title": "六爻中的“用神”到底是什么",
+        "route": "/content/tutorial/what-is-yongshen-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A03",
+        "title": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼",
+        "route": "/content/tutorial/six-relations-are-role-categories",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-05",
@@ -117,7 +281,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B02-A15",
+        "title": "世爻和应爻是什么：六爻关系判断的基本坐标",
+        "route": "/content/tutorial/shi-ying-lines-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A13",
+        "title": "世爻在六爻判断中代表什么",
+        "route": "/content/tutorial/what-shi-line-represents",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A15",
+        "title": "世应关系为什么是六爻关系分析的重要基础",
+        "route": "/content/tutorial/why-shi-ying-relationship-matters",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B02-A15",
+        "title": "世爻和应爻是什么：六爻关系判断的基本坐标",
+        "route": "/content/tutorial/shi-ying-lines-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A13",
+        "title": "世爻在六爻判断中代表什么",
+        "route": "/content/tutorial/what-shi-line-represents",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B03-A15",
+        "title": "世应关系为什么是六爻关系分析的重要基础",
+        "route": "/content/tutorial/why-shi-ying-relationship-matters",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-06",
@@ -141,7 +346,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B04-A01",
+        "title": "六爻中的旺衰到底是什么意思",
+        "route": "/content/tutorial/liuyao-strength-status",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A02",
+        "title": "月建在六爻判断中负责什么",
+        "route": "/content/tutorial/month-branch-role",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A04",
+        "title": "月建与日辰应该怎样一起理解",
+        "route": "/content/tutorial/month-and-day-context",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B04-A01",
+        "title": "六爻中的旺衰到底是什么意思",
+        "route": "/content/tutorial/liuyao-strength-status",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A02",
+        "title": "月建在六爻判断中负责什么",
+        "route": "/content/tutorial/month-branch-role",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A04",
+        "title": "月建与日辰应该怎样一起理解",
+        "route": "/content/tutorial/month-and-day-context",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-07",
@@ -165,7 +411,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B02-A08",
+        "title": "动爻和静爻有什么区别",
+        "route": "/content/tutorial/moving-vs-static-lines",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A10",
+        "title": "动爻为什么是六爻变化判断的重要信息",
+        "route": "/content/tutorial/moving-line-dynamics",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A12",
+        "title": "回头生与回头克应该怎样理解",
+        "route": "/content/tutorial/returning-support-and-control",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B02-A08",
+        "title": "动爻和静爻有什么区别",
+        "route": "/content/tutorial/moving-vs-static-lines",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A10",
+        "title": "动爻为什么是六爻变化判断的重要信息",
+        "route": "/content/tutorial/moving-line-dynamics",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A12",
+        "title": "回头生与回头克应该怎样理解",
+        "route": "/content/tutorial/returning-support-and-control",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-08",
@@ -189,7 +476,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B04-A19",
+        "title": "六爻中的应期是什么",
+        "route": "/content/tutorial/timing-candidates",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A17",
+        "title": "当多条六爻证据互相冲突时，应该怎样理解",
+        "route": "/content/tutorial/evidence-conflict-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A29",
+        "title": "计划出现延误时，六爻中的时间提示应该怎样理解",
+        "route": "/content/tutorial/delay-29",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B04-A19",
+        "title": "六爻中的应期是什么",
+        "route": "/content/tutorial/timing-candidates",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A17",
+        "title": "当多条六爻证据互相冲突时，应该怎样理解",
+        "route": "/content/tutorial/evidence-conflict-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A29",
+        "title": "计划出现延误时，六爻中的时间提示应该怎样理解",
+        "route": "/content/tutorial/delay-29",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-09",
@@ -213,7 +541,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A15",
+        "title": "专业用户应该怎样核验六爻报告",
+        "route": "/content/tutorial/professional-verification-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A20",
+        "title": "怎样核验一份六爻报告中的旺衰、动变与应期判断",
+        "route": "/content/tutorial/audit-strength-dynamics-timing",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A15",
+        "title": "专业用户应该怎样核验六爻报告",
+        "route": "/content/tutorial/professional-verification-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A20",
+        "title": "怎样核验一份六爻报告中的旺衰、动变与应期判断",
+        "route": "/content/tutorial/audit-strength-dynamics-timing",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-10",
@@ -237,7 +606,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B05-A01",
+        "title": "想换工作时，六爻应该怎样问才有决策价值",
+        "route": "/content/tutorial/job-change-01",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A06",
+        "title": "开始一项商业合作前，六爻可以帮助看什么",
+        "route": "/content/tutorial/business-partnership-06",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A10",
+        "title": "商业项目什么时候值得继续，什么时候应该重新评估",
+        "route": "/content/tutorial/project-10",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B05-A01",
+        "title": "想换工作时，六爻应该怎样问才有决策价值",
+        "route": "/content/tutorial/job-change-01",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A06",
+        "title": "开始一项商业合作前，六爻可以帮助看什么",
+        "route": "/content/tutorial/business-partnership-06",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A10",
+        "title": "商业项目什么时候值得继续，什么时候应该重新评估",
+        "route": "/content/tutorial/project-10",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-11",
@@ -261,7 +671,48 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "INTERNAL_COLLECTION",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B05-A16",
+        "title": "感情问题怎样提问，六爻结果才更容易理解",
+        "route": "/content/tutorial/relationship-16",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A19",
+        "title": "复合问题为什么不能只看“能不能复合”",
+        "route": "/content/tutorial/reconciliation-19",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A26",
+        "title": "出行前，六爻可以帮助确认哪些问题",
+        "route": "/content/tutorial/travel-26",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B05-A16",
+        "title": "感情问题怎样提问，六爻结果才更容易理解",
+        "route": "/content/tutorial/relationship-16",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A19",
+        "title": "复合问题为什么不能只看“能不能复合”",
+        "route": "/content/tutorial/reconciliation-19",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B05-A26",
+        "title": "出行前，六爻可以帮助确认哪些问题",
+        "route": "/content/tutorial/travel-26",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "collection_id": "COL-12",
@@ -285,6 +736,47 @@
     ],
     "tool_cta": "开始一次六爻占问",
     "seo_status": "PUBLIC_PAGE",
-    "version": "1.0"
+    "version": "1.0",
+    "featured_content": [
+      {
+        "contentId": "B01-A09",
+        "title": "系统如何完成一次六爻排盘",
+        "route": "/content/tutorial/how-liuyao-system-generates-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A10",
+        "title": "确定性排盘与 AI 解释有什么区别",
+        "route": "/content/tutorial/deterministic-chart-vs-ai-explanation",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A18",
+        "title": "如何判断一份六爻 AI 报告是否可信",
+        "route": "/content/tutorial/how-to-evaluate-liuyao-ai-report-trust",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "recommended_content": [
+      {
+        "contentId": "B01-A09",
+        "title": "系统如何完成一次六爻排盘",
+        "route": "/content/tutorial/how-liuyao-system-generates-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A10",
+        "title": "确定性排盘与 AI 解释有什么区别",
+        "route": "/content/tutorial/deterministic-chart-vs-ai-explanation",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A18",
+        "title": "如何判断一份六爻 AI 报告是否可信",
+        "route": "/content/tutorial/how-to-evaluate-liuyao-ai-report-trust",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   }
 ]

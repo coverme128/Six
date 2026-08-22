@@ -10,10 +10,12 @@ Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 - P0 and P1 report visual system with progressive professional detail.
 - Same-ViewModel report SVG download and print/PDF output.
 - 445 imported package entries: 421 `PUBLICATION_READY`, 24 `DEMO_ONLY`, 0 `REVIEW_REQUIRED`.
-- 603 runtime entries: 421 public and 182 demo/compatibility entries, with 0 QA errors, 0 warnings, and no isolated content.
-- 68/68 individually art-directed content SVGs across seven semantic layout families.
+- 603 repository runtime entries and a 592-record Liuyao-only public API surface after filtering all 11 legacy Meihua records, with 0 QA errors, 0 warnings, and no isolated content.
+- A shared seven-destination content navigation, four intent-led starting states, six-stage curriculum, six reality topics, four-step report guide, and a dedicated combined-filter library.
+- A 24-case lab covering real decisions and report explanation.
+- 68/68 semantic content SVGs across seven layout families, organized into six user-facing visual themes and linked from relevant articles.
 - 23 final editorial visual variants.
-- 72 social cards, 24 summary cards, 12 collection documents, and 50 video script packages with covers and complete storyboards.
+- 72 social cards, 24 route-resolved summary cards, 12 linked collection documents, and 50 video script packages with covers and complete storyboards; all are available in a noindex operations preview.
 - Automated responsive visual regression at desktop and 360/390/430 mobile.
 - Automated screen-reader summary, keyboard flow, semantic-role, asset-integrity, SVG export, and PDF generation checks.
 
@@ -33,6 +35,7 @@ No document or endpoint should call the project `PRODUCTION_READY` until those e
 ```bash
 pnpm run content:finalize-local
 pnpm run content:qa
+pnpm run content:test-assets
 pnpm run test:experience
 pnpm run test:e2e
 pnpm run typecheck
@@ -45,5 +48,7 @@ Primary evidence:
 - `data/content-growth/editorial-review-audit.json`
 - `data/content-growth/distribution/manifest.json`
 - `data/liuyao/visual-system/integration/content-growth-68-svg-production-audit.json`
+- `docs/content-growth/integration/batch-07-productization-audit.md`
+- `docs/content-growth/integration/all-batches-content-product-audit.md`
 - `tests/e2e/visual-regression.spec.ts`
 - `tests/e2e/visual-regression.spec.ts-snapshots/`

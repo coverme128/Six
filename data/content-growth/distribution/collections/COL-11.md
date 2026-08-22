@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B05-A16
-2. B05-A19
-3. B05-A26
+1. [感情问题怎样提问，六爻结果才更容易理解](/content/tutorial/relationship-16)
+2. [复合问题为什么不能只看“能不能复合”](/content/tutorial/reconciliation-19)
+3. [出行前，六爻可以帮助确认哪些问题](/content/tutorial/travel-26)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

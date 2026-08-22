@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B01-A01
-2. B02-A01
-3. B01-A14
+1. [六爻占问适合解决什么问题](/content/tutorial/liuyao-suitable-questions)
+2. [六爻是什么：从六次起卦到结构化判断](/content/tutorial/what-is-liuyao-structured-analysis)
+3. [普通用户应该怎样阅读一份六爻报告](/content/tutorial/guided-reading-liuyao-report)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

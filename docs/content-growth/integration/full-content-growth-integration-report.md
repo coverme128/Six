@@ -51,18 +51,21 @@ The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime c
 }
 ```
 
-The system seed layer contains historical I Ching and Meihua records for compatibility. None of the 11 Meihua seed records belongs to the 421 `PUBLICATION_READY` entries, so the production public content surface remains Liuyao-only.
+The system seed layer retains historical compatibility records. The public content API now excludes all 11 Meihua seed records in local, staging, and production modes; the visible Liuyao catalog is therefore 592 records locally. The remaining I Ching reference entries support terminology, trigram, and hexagram lookup inside the Liuyao learning experience.
 
 ## Public Information Architecture
 
-`/content` is a designed Liuyao Learn Hub rather than a generic content inventory. It contains:
+`/content` is a designed Liuyao Learn Hub rather than a generic content inventory. It begins with four user states: first-time understanding, bringing a real question, reading an existing report, and systematic or advanced study. A shared seven-destination content navigation then connects:
 
-- beginner starting points;
+- the six-stage learning path;
 - six real-world topic entries;
-- structured learning columns;
-- search and content-type filters;
-- an initial 24-item general library with progressive disclosure;
-- a six-stage learning path from first use through systematic verification.
+- a four-step report-reading route;
+- a 24-case lab covering real questions and report explanation;
+- the complete 68-asset visual knowledge atlas;
+- concept, FAQ, terminology, trigram, and hexagram reference gateways;
+- a dedicated `/content/library` with combined topic, format, difficulty, and keyword filters.
+
+Detail pages add user-readable breadcrumbs, previous/next sequencing, typed related-learning tabs, and enlarged visual inspection. Batch identifiers and implementation metadata remain internal.
 
 Topic pages explicitly render user questions, how Liuyao helps, example formulations, boundaries, a scenario-linked CTA, and related learning. Article pages render only approved editorial fields. Internal fields such as `sourceBatch`, `reviewStatus`, `presentation`, and asset implementation IDs are not exposed to users.
 
@@ -96,4 +99,4 @@ HTTPS staging, live AI smoke, search analytics, editorial outcome review, and pr
 
 ## Distribution Deliverables
 
-Batch 07 registries are materialized into 72 social cards, 24 article-summary cards, 12 collection documents, and 50 short-video script packages with vertical covers and complete shootable storyboards. The source package does not contain encoded video files, so the manifest deliberately reports scripts, covers, and storyboards rather than claiming MP4 delivery. See `data/content-growth/distribution/manifest.json`.
+Batch 07 registries are materialized into 72 social cards, 24 article-summary cards, 12 collection documents, and 50 short-video script packages with vertical covers and complete shootable storyboards. The 16 new Batch 07 visuals are exposed with the other 52 visuals through the six-theme, 68-asset visual atlas in `/content`; every visual is also linked to at least one relevant content record. All distribution derivatives are reviewable through the noindex `/content/distribution` operations page. The source package does not contain encoded video files, so the manifest deliberately reports scripts, covers, and storyboards rather than claiming MP4 delivery. See `data/content-growth/distribution/manifest.json`, `docs/content-growth/integration/batch-07-productization-audit.md`, and `docs/content-growth/integration/all-batches-content-product-audit.md`.

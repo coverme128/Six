@@ -270,6 +270,9 @@ export type ContentDetail = ContentSummary & {
   knownLimitations?: string[];
   relatedContentIds?: string[];
   relatedKnowledgeIds?: string[];
+  prerequisiteContentIds?: string[];
+  nextContentId?: string;
+  previousContentId?: string;
 };
 
 export type PublicSettings = {

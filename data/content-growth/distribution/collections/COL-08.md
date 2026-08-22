@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B04-A19
-2. B04-A17
-3. B05-A29
+1. [六爻中的应期是什么](/content/tutorial/timing-candidates)
+2. [当多条六爻证据互相冲突时，应该怎样理解](/content/tutorial/evidence-conflict-in-liuyao)
+3. [计划出现延误时，六爻中的时间提示应该怎样理解](/content/tutorial/delay-29)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

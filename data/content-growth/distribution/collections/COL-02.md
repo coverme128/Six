@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B01-A02
-2. B01-A03
-3. B01-A04
+1. [怎样提出一个清晰有效的六爻问题](/content/tutorial/how-to-ask-liuyao-question)
+2. [为什么一次占问建议只聚焦一个核心问题](/content/tutorial/one-core-question-per-reading)
+3. [为什么不建议对同一个问题反复起卦](/content/tutorial/why-not-repeat-liuyao-readings)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

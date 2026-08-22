@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B02-A16
-2. B03-A01
-3. B03-A03
+1. [六亲是什么：父母、兄弟、子孙、妻财、官鬼的基础含义](/content/tutorial/six-relations-liuyao-basics)
+2. [六爻中的“用神”到底是什么](/content/tutorial/what-is-yongshen-in-liuyao)
+3. [六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼](/content/tutorial/six-relations-are-role-categories)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

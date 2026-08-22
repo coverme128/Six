@@ -60,17 +60,25 @@
     ],
     "product_cta": {
       "label": "开始一次六爻占问",
-      "route": "/app/liuyao"
+      "route": "/#scenario-step"
     },
     "caption": "六爻适合问什么问题：用结构化、克制的方式理解六爻报告，不做神准承诺。",
     "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
     "article_refs": [
       "B01-A01"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A01",
+        "title": "六爻占问适合解决什么问题",
+        "route": "/content/tutorial/liuyao-suitable-questions",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B01-VIDEO-02",
@@ -133,17 +141,25 @@
     ],
     "product_cta": {
       "label": "开始一次六爻占问",
-      "route": "/app/liuyao"
+      "route": "/#scenario-step"
     },
     "caption": "怎样提出一个清晰问题：用结构化、克制的方式理解六爻报告，不做神准承诺。",
     "safety_note": "不承诺结果，不替代医疗、法律、财务等专业意见。",
     "article_refs": [
       "B01-A02"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A02",
+        "title": "怎样提出一个清晰有效的六爻问题",
+        "route": "/content/tutorial/how-to-ask-liuyao-question",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B01-VIDEO-03",
@@ -213,10 +229,18 @@
     "article_refs": [
       "B01-A04"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A04",
+        "title": "为什么不建议对同一个问题反复起卦",
+        "route": "/content/tutorial/why-not-repeat-liuyao-readings",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B01-VIDEO-04",
@@ -286,10 +310,18 @@
     "article_refs": [
       "B01-A11"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A11",
+        "title": "AI 在六爻报告中负责什么",
+        "route": "/content/tutorial/ai-role-in-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B01-VIDEO-05",
@@ -359,10 +391,18 @@
     "article_refs": [
       "B01-A06"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A06",
+        "title": "如何理解六爻报告中的支持、阻碍与不确定性",
+        "route": "/content/tutorial/support-risk-uncertainty-in-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B01-VIDEO-06",
@@ -432,10 +472,18 @@
     "article_refs": [
       "B01-A18"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_01",
-    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-01-foundations-trust-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A18",
+        "title": "如何判断一份六爻 AI 报告是否可信",
+        "route": "/content/tutorial/how-to-evaluate-liuyao-ai-report-trust",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-01",
@@ -498,18 +546,25 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "六爻为什么要连续起六次：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
     "article_refs": [
       "B02-A04"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A04",
+        "title": "为什么六爻要连续起六次",
+        "route": "/content/tutorial/why-liuyao-casting-six-times",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-02",
@@ -572,18 +627,25 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "六个爻为什么要自下而上记录：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
     "article_refs": [
       "B02-A05"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A05",
+        "title": "六爻为什么要自下而上记录",
+        "route": "/content/tutorial/why-liuyao-record-bottom-up",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-03",
@@ -646,18 +708,25 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "少阴少阳老阴老阳怎么区分：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
     "article_refs": [
       "B02-A06"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A06",
+        "title": "少阴、少阳、老阴、老阳分别是什么",
+        "route": "/content/tutorial/four-line-types-young-old-yin-yang",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-04",
@@ -720,8 +789,7 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "动爻如何形成变卦：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
@@ -729,10 +797,24 @@
       "B02-A08",
       "B02-A10"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A08",
+        "title": "动爻和静爻有什么区别",
+        "route": "/content/tutorial/moving-vs-static-lines",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A10",
+        "title": "变卦是如何形成的",
+        "route": "/content/tutorial/how-changed-hexagram-forms",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-05",
@@ -795,8 +877,7 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "本卦和变卦有什么区别：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
@@ -804,10 +885,24 @@
       "B02-A09",
       "B02-A10"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A09",
+        "title": "本卦是什么，它代表什么层面的信息",
+        "route": "/content/tutorial/what-is-primary-hexagram",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A10",
+        "title": "变卦是如何形成的",
+        "route": "/content/tutorial/how-changed-hexagram-forms",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-06",
@@ -870,8 +965,7 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "八宫与纳甲分别是什么：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
@@ -879,10 +973,24 @@
       "B02-A13",
       "B02-A14"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A13",
+        "title": "八宫是什么，为什么六十四卦要归入八宫",
+        "route": "/content/tutorial/eight-palaces-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A14",
+        "title": "纳甲是什么，它在六爻排盘中负责什么",
+        "route": "/content/tutorial/what-is-najia-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-07",
@@ -945,8 +1053,7 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "六亲和六神是不是直接决定吉凶：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
@@ -954,10 +1061,24 @@
       "B02-A16",
       "B02-A17"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A16",
+        "title": "六亲是什么：父母、兄弟、子孙、妻财、官鬼的基础含义",
+        "route": "/content/tutorial/six-relations-liuyao-basics",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A17",
+        "title": "六神是什么，它在报告中应该怎样理解",
+        "route": "/content/tutorial/six-spirits-liuyao-basics",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B02-VIDEO-08",
@@ -1020,18 +1141,25 @@
     ],
     "product_cta": {
       "label": "查看六爻起卦工具",
-      "route": "/app/liuyao",
-      "route_status": "VERIFY_IN_REPOSITORY"
+      "route": "/#scenario-step"
     },
     "caption": "第一次怎样看懂六爻排盘：用可核验的基础结构理解六爻，不做神秘化或结果保证。",
     "safety_note": "基础知识教育；不承诺现实结果。",
     "article_refs": [
       "B02-A18"
     ],
-    "status": "APPROVED_FOR_IMPORT",
+    "status": "ASSET_READY_LOCAL",
     "version": "1.0",
     "source_batch": "BATCH_02",
-    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-02-foundations-casting-structure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B02-A18",
+        "title": "第一次看六爻排盘，应该按照什么顺序阅读",
+        "route": "/content/tutorial/first-time-read-liuyao-chart",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ]
   },
   {
     "video_id": "B03-VIDEO-01",
@@ -1082,14 +1210,27 @@
     "visual_refs": [
       "B03-VIS-01"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "六爻中的用神到底是什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A01"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A01",
+        "title": "六爻中的“用神”到底是什么",
+        "route": "/content/tutorial/what-is-yongshen-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-02",
@@ -1140,14 +1281,27 @@
     "visual_refs": [
       "B03-VIS-02"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "为什么同一个卦不同问题用神不同｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A03"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A03",
+        "title": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼",
+        "route": "/content/tutorial/six-relations-are-role-categories",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-03",
@@ -1198,14 +1352,27 @@
     "visual_refs": [
       "B03-VIS-03"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "六亲为什么不能按字面理解｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A05"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A05",
+        "title": "兄弟爻通常代表什么",
+        "route": "/content/tutorial/sibling-line-role-meaning",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-04",
@@ -1256,14 +1423,27 @@
     "visual_refs": [
       "B03-VIS-04"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "父母兄弟子孙妻财官鬼分别代表什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A07"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A07",
+        "title": "妻财爻通常代表什么",
+        "route": "/content/tutorial/wealth-line-role-meaning",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-05",
@@ -1314,14 +1494,27 @@
     "visual_refs": [
       "B03-VIS-05"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "世爻和应爻是什么｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A09"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A09",
+        "title": "六亲角色如何与现实问题建立映射",
+        "route": "/content/tutorial/map-real-world-roles-to-six-relations",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-06",
@@ -1372,14 +1565,27 @@
     "visual_refs": [
       "B03-VIS-06"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "原神忌神仇神怎么理解｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A11"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A11",
+        "title": "财务与商业问题中，六亲角色如何变化",
+        "route": "/content/tutorial/six-relations-in-business-finance",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-07",
@@ -1430,14 +1636,27 @@
     "visual_refs": [
       "B03-VIS-07"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "专业关系如何变成报告里的支持和阻碍｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A13"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A13",
+        "title": "世爻在六爻判断中代表什么",
+        "route": "/content/tutorial/what-shi-line-represents",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B03-VIDEO-08",
@@ -1488,14 +1707,27 @@
     "visual_refs": [
       "B03-VIS-08"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "怎样核验一份报告的用神选择是否合理｜用结构化方式理解六爻角色，不把术语当吉凶标签。",
     "professional_boundary": "不展开旺衰、动变、格局和应期算法；项目正式角色与用神映射以 Registry 为准。",
     "article_refs": [
       "B03-A15"
     ],
     "source_batch": "BATCH_03",
-    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-03-yongshen-roles-relationships-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B03-A15",
+        "title": "世应关系为什么是六爻关系分析的重要基础",
+        "route": "/content/tutorial/why-shi-ying-relationship-matters",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-01",
@@ -1551,14 +1783,27 @@
       "B04-VIS-03",
       "B04-VIS-04"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "六爻中的旺衰到底是什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A01"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A01",
+        "title": "六爻中的旺衰到底是什么意思",
+        "route": "/content/tutorial/liuyao-strength-status",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-02",
@@ -1614,14 +1859,27 @@
       "B04-VIS-04",
       "B04-VIS-05"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "月建和日辰分别负责什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A03"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A03",
+        "title": "日辰在六爻判断中负责什么",
+        "route": "/content/tutorial/day-branch-role",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-03",
@@ -1677,14 +1935,27 @@
       "B04-VIS-05",
       "B04-VIS-06"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "旬空是不是“什么都没有”：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A05"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A05",
+        "title": "什么是得令、得地与得助",
+        "route": "/content/tutorial/sources-of-support",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-04",
@@ -1740,14 +2011,27 @@
       "B04-VIS-06",
       "B04-VIS-07"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "月破和日冲有什么区别：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A07"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A07",
+        "title": "旬空是什么意思，为什么不能简单理解成“没有”",
+        "route": "/content/tutorial/xunkong-explained",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-05",
@@ -1803,14 +2087,27 @@
       "B04-VIS-07",
       "B04-VIS-08"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "动爻为什么重要：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A09"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A09",
+        "title": "日冲是什么意思，它与月破有什么不同",
+        "route": "/content/tutorial/richong-vs-yuepo",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-06",
@@ -1866,14 +2163,27 @@
       "B04-VIS-08",
       "B04-VIS-09"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "回头生和回头克怎么理解：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A11"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A11",
+        "title": "变爻在六爻判断中负责什么",
+        "route": "/content/tutorial/changed-line-role",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-07",
@@ -1929,14 +2239,27 @@
       "B04-VIS-09",
       "B04-VIS-10"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "进神退神伏神飞神分别是什么：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A13"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A13",
+        "title": "进神与退神是什么意思",
+        "route": "/content/tutorial/advancing-and-retreating-spirit",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-08",
@@ -1992,14 +2315,27 @@
       "B04-VIS-10",
       "B04-VIS-11"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "为什么报告会同时出现支持和阻碍：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A15"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A15",
+        "title": "生、克、制、化如何共同构成关系判断",
+        "route": "/content/tutorial/generating-controlling-transforming",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-09",
@@ -2055,14 +2391,27 @@
       "B04-VIS-11",
       "B04-VIS-12"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "六爻中的应期是不是确定日期：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A17"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A17",
+        "title": "当多条六爻证据互相冲突时，应该怎样理解",
+        "route": "/content/tutorial/evidence-conflict-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B04-VIDEO-10",
@@ -2118,14 +2467,27 @@
       "B04-VIS-12",
       "B04-VIS-01"
     ],
-    "product_cta": "学习如何阅读六爻报告",
+    "product_cta": {
+      "label": "学习如何阅读六爻报告",
+      "route": "/content"
+    },
     "caption": "怎样核验一份报告的旺衰与应期：用“对象—状态—关系—Evidence”的方式理解，比背单一吉凶标签更可靠。",
     "professional_boundary": "具体规则条件、优先级和 Timing 算法以项目正式 Registry 为准；视频不定义 Rule Engine。",
     "article_refs": [
       "B04-A19"
     ],
     "source_batch": "BATCH_04",
-    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-04-strength-dynamics-patterns-timing-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A19",
+        "title": "六爻中的应期是什么",
+        "route": "/content/tutorial/timing-candidates",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不承诺结果，不替代现实专业判断。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-01",
@@ -2174,11 +2536,24 @@
     "article_refs": [
       "B05-A01"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A01",
+        "title": "想换工作时，六爻应该怎样问才有决策价值",
+        "route": "/content/tutorial/job-change-01",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-02",
@@ -2227,11 +2602,24 @@
     "article_refs": [
       "B05-A02"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A02",
+        "title": "如何用六爻分析一个新的工作机会",
+        "route": "/content/tutorial/job-offer-02",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "六爻不能替代正式 Offer、劳动合同、职业咨询或个人职业规划，也不应直接替用户做辞职、入职等重大决定。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-03",
@@ -2280,11 +2668,24 @@
     "article_refs": [
       "B05-A07"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "内容仅用于决策框架与风险整理，不代替商业尽调、合同审查、法务、财务或专业谈判建议。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A07",
+        "title": "如何用六爻分析一个项目能不能顺利推进",
+        "route": "/content/tutorial/project-07",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "内容仅用于决策框架与风险整理，不代替商业尽调、合同审查、法务、财务或专业谈判建议。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-04",
@@ -2333,11 +2734,24 @@
     "article_refs": [
       "B05-A11"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A11",
+        "title": "六爻如何看一笔款项能否顺利回收",
+        "route": "/content/tutorial/payment-collection-11",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-05",
@@ -2386,11 +2800,24 @@
     "article_refs": [
       "B05-A15"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A15",
+        "title": "为什么六爻中的“财”不等于投资一定赚钱",
+        "route": "/content/tutorial/investment-context-15",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不提供证券买卖建议、价格预测、收益保证或法律追偿结论，也不把任何六爻符号当作投资回报证明。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-06",
@@ -2439,11 +2866,24 @@
     "article_refs": [
       "B05-A16"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A16",
+        "title": "感情问题怎样提问，六爻结果才更容易理解",
+        "route": "/content/tutorial/relationship-16",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-07",
@@ -2492,11 +2932,24 @@
     "article_refs": [
       "B05-A19"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A19",
+        "title": "复合问题为什么不能只看“能不能复合”",
+        "route": "/content/tutorial/reconciliation-19",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不声称读取对方内心，不鼓励跟踪、操控、胁迫或侵犯隐私。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-08",
@@ -2545,11 +2998,24 @@
     "article_refs": [
       "B05-A21"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A21",
+        "title": "考试之前，六爻问题应该怎样问",
+        "route": "/content/tutorial/exam-21",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-09",
@@ -2598,11 +3064,24 @@
     "article_refs": [
       "B05-A24"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A24",
+        "title": "求职准备中，六爻能帮助发现哪些问题",
+        "route": "/content/tutorial/job-search-24",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证分数、录取或招聘结果，不鼓励用起卦替代学习、准备、申请核验或正式通知。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-10",
@@ -2651,11 +3130,24 @@
     "article_refs": [
       "B05-A26"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A26",
+        "title": "出行前，六爻可以帮助确认哪些问题",
+        "route": "/content/tutorial/travel-26",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-11",
@@ -2704,11 +3196,24 @@
     "article_refs": [
       "B05-A30"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A30",
+        "title": "如何把六爻结果转成一份现实行动计划",
+        "route": "/content/tutorial/schedule-30",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B05-VIDEO-12",
@@ -2757,11 +3262,24 @@
     "article_refs": [
       "B05-A30"
     ],
-    "product_cta": "整理你的六爻问题",
+    "product_cta": {
+      "label": "整理你的六爻问题",
+      "route": "/content"
+    },
     "caption": "六爻作为结构化决策辅助，重点是把现实问题问清楚、把报告依据看明白，再回到现实行动。",
     "safety_boundary": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
     "source_batch": "BATCH_05",
-    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-05-real-world-decision-topics-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A30",
+        "title": "如何把六爻结果转成一份现实行动计划",
+        "route": "/content/tutorial/schedule-30",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "六爻不能替代天气预警、政府旅行警告、交通官方信息或现场安全指引；冲突时必须以官方实时信息为准。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-01",
@@ -2816,7 +3334,10 @@
       "B01-KC-02",
       "B01-KC-03"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -2827,7 +3348,23 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A01",
+        "title": "六爻占问适合解决什么问题",
+        "route": "/content/tutorial/liuyao-suitable-questions",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B02-A01",
+        "title": "六爻是什么：从六次起卦到结构化判断",
+        "route": "/content/tutorial/what-is-liuyao-structured-analysis",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-02",
@@ -2882,7 +3419,10 @@
       "B01-KC-09",
       "B01-KC-10"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -2893,7 +3433,23 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A09",
+        "title": "系统如何完成一次六爻排盘",
+        "route": "/content/tutorial/how-liuyao-system-generates-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A10",
+        "title": "确定性排盘与 AI 解释有什么区别",
+        "route": "/content/tutorial/deterministic-chart-vs-ai-explanation",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-03",
@@ -2948,7 +3504,10 @@
       "B01-KC-16",
       "B01-KC-17"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -2959,7 +3518,23 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A15",
+        "title": "专业用户应该怎样核验六爻报告",
+        "route": "/content/tutorial/professional-verification-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-04",
@@ -3014,7 +3589,10 @@
       "B01-KC-23",
       "B01-KC-24"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -3025,7 +3603,23 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B04-A16",
+        "title": "为什么六爻报告中可能同时出现支持和阻碍",
+        "route": "/content/tutorial/supports-and-obstacles-coexist",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B04-A17",
+        "title": "当多条六爻证据互相冲突时，应该怎样理解",
+        "route": "/content/tutorial/evidence-conflict-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-05",
@@ -3080,7 +3674,10 @@
       "B01-KC-30",
       "B02-KC-01"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -3091,7 +3688,23 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B01-A11",
+        "title": "AI 在六爻报告中负责什么",
+        "route": "/content/tutorial/ai-role-in-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A12",
+        "title": "为什么 AI 不能重新排盘或修改结果",
+        "route": "/content/tutorial/why-ai-cannot-recast-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   },
   {
     "video_id": "B07-VIDEO-06",
@@ -3146,7 +3759,10 @@
       "B02-KC-07",
       "B02-KC-08"
     ],
-    "product_cta": "进入六爻学习中心",
+    "product_cta": {
+      "label": "进入六爻学习中心",
+      "route": "/content"
+    },
     "caption": "用结构化方式理解六爻内容、报告与现实行动，不把传统术数包装成结果保证。",
     "safety_boundary": "不保证结果、不重新排盘、不替代现实专业信息。",
     "distribution_tags": [
@@ -3157,6 +3773,22 @@
     ],
     "version": "1.0",
     "source_batch": "BATCH_07",
-    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip"
+    "source_package": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
+    "article_content": [
+      {
+        "contentId": "B05-A30",
+        "title": "如何把六爻结果转成一份现实行动计划",
+        "route": "/content/tutorial/schedule-30",
+        "reviewStatus": "PUBLICATION_READY"
+      },
+      {
+        "contentId": "B01-A05",
+        "title": "六爻结果应该如何用于现实决策",
+        "route": "/content/tutorial/use-liuyao-for-real-decisions",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "safety_note": "不保证结果、不重新排盘、不替代现实专业信息。",
+    "status": "ASSET_READY_LOCAL"
   }
 ]

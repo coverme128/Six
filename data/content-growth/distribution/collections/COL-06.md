@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B04-A01
-2. B04-A02
-3. B04-A04
+1. [六爻中的旺衰到底是什么意思](/content/tutorial/liuyao-strength-status)
+2. [月建在六爻判断中负责什么](/content/tutorial/month-branch-role)
+3. [月建与日辰应该怎样一起理解](/content/tutorial/month-and-day-context)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

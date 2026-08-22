@@ -6,7 +6,7 @@ import { basename, dirname, join, resolve } from "node:path";
 
 const rootDir = process.cwd();
 const batchDir = process.env.SIX_CONTENT_BATCH_DIR ?? "/Users/goterra/Downloads/batch";
-const generatedAt = "2026-08-19T00:00:00.000Z";
+const generatedAt = "2026-08-22T00:00:00.000Z";
 const visualDir = resolve(rootDir, "apps/web/public/content-growth/visuals");
 const distributionPublicDir = resolve(rootDir, "apps/web/public/content-growth/distribution");
 const distributionDataDir = resolve(rootDir, "data/content-growth/distribution");
@@ -229,24 +229,19 @@ function chooseLayout(title) {
   return "flow";
 }
 
-function usefulLabels(svg, title, description) {
-  const raw = [...svg.matchAll(/<text[^>]*>([^<]+)<\/text>/gu)].map((match) => match[1].trim());
-  const boilerplate = /(Liuyao Content Growth|东方专业|图示用于|内容解释层|不使用红绿|现实任务 →|不是用户凭关键词|典型角色，不是|具体解释取决于|角色语义随|谁代表谁|标签不是最终|AI 解释事实|相同术语不能|同一事实，不同|检查角色不匹配)/u;
-  const labels = raw.filter((value) => value && value !== title && !boilerplate.test(value));
-  const descLabels = String(description ?? "").split(/\s*[、；;｜|]\s*|\s+→\s+/u).map((value) => value.trim()).filter((value) => value.length > 1 && value.length < 34 && !boilerplate.test(value));
-  const merged = [...labels, ...descLabels].filter((value, index, all) => all.indexOf(value) === index);
-  return merged.length >= 2 ? merged : [description || title, "现实核对", "行动复盘"];
-}
-
 function generateContentVisuals() {
+  const zipPath = batch07Zip();
+  const sourceRegistry = readZipJson(zipPath, "/visual-asset-registry.json");
   const assets = [];
-  for (const file of readdirSync(visualDir).filter((name) => name.endsWith(".svg")).sort()) {
+  for (const source of [...sourceRegistry].sort((left, right) => left.visual_asset_id.localeCompare(right.visual_asset_id))) {
+    const id = source.visual_asset_id;
+    const file = `${id}.svg`;
     const path = join(visualDir, file);
-    const current = readFileSync(path, "utf8");
-    const id = basename(file, ".svg");
-    const title = current.match(/<title[^>]*>([^<]+)/u)?.[1]?.trim() ?? id;
-    const description = current.match(/<desc[^>]*>([^<]+)/u)?.[1]?.trim() ?? `${title}的结构化图示`;
-    const labels = usefulLabels(current, title, description);
+    const title = source.name ?? id;
+    const description = source.alt_text ?? source.caption ?? `${title}的结构化图示`;
+    const labels = (source.information_hierarchy ?? source.diagram_spec?.nodes ?? source.all_visible_text ?? [])
+      .map((value) => String(value).trim())
+      .filter((value) => value && value !== title && !/Liuyao Content Growth/iu.test(value));
     const layout = chooseLayout(title);
     const seed = hash(id) % 5;
     const renderer = {
@@ -259,7 +254,18 @@ function generateContentVisuals() {
       stack: layoutStack,
     }[layout];
     writeFileSync(path, `${svgFrame({ id, title, description, layout, body: renderer(labels, seed) })}\n`);
-    assets.push({ visualAssetId: id, title, description, layout, labelCount: labels.length, publicPath: `/content-growth/visuals/${file}`, status: "ART_DIRECTED_READY" });
+    assets.push({
+      visualAssetId: id,
+      title,
+      description,
+      layout,
+      labelCount: labels.length,
+      articleRefs: source.article_refs ?? [],
+      knowledgeRefs: source.knowledge_refs ?? [],
+      publicPath: `/content-growth/visuals/${file}`,
+      sourceRegistry: "Batch 07 visual-asset-registry.json",
+      status: "ART_DIRECTED_READY",
+    });
   }
   const layoutCounts = countBy(assets, (item) => item.layout);
   writeJson(resolve(rootDir, "data/liuyao/visual-system/integration/content-growth-68-svg-production-audit.json"), {
@@ -287,8 +293,38 @@ function batch07Zip() {
   return join(batchDir, file);
 }
 
+function attachContentVisualRefs(assets) {
+  const catalogPath = resolve(rootDir, "content/content-growth/content-entries.json");
+  const catalog = readJson(catalogPath);
+  const byId = new Map(catalog.items.map((item) => [item.contentId, item]));
+  const refsByAsset = new Map(assets.map((asset) => [asset.visualAssetId, asset.articleRefs.length ? asset.articleRefs : asset.visualAssetId === "B05-VIS-01" ? ["B05-A30"] : []]));
+  let attached = 0;
+
+  for (const [visualAssetId, articleRefs] of refsByAsset) {
+    for (const articleRef of articleRefs) {
+      const item = byId.get(articleRef);
+      if (!item || !item.body || typeof item.body !== "object" || Array.isArray(item.body)) continue;
+      const productIntegration = item.body.productIntegration && typeof item.body.productIntegration === "object" && !Array.isArray(item.body.productIntegration)
+        ? item.body.productIntegration
+        : {};
+      const current = Array.isArray(productIntegration.visual_asset_refs) ? productIntegration.visual_asset_refs : [];
+      if (!current.includes(visualAssetId)) attached += 1;
+      item.body.productIntegration = { ...productIntegration, visual_asset_refs: [...new Set([...current, visualAssetId])].sort() };
+    }
+  }
+
+  writeJson(catalogPath, catalog);
+  return { attached, referencedAssets: [...refsByAsset.values()].filter((refs) => refs.length).length };
+}
+
+const zipEntryCache = new Map();
+
 function zipEntries(zipPath) {
-  return execFileSync("unzip", ["-Z1", zipPath], { encoding: "utf8" }).trim().split(/\n/u).filter(Boolean);
+  if (!zipEntryCache.has(zipPath)) {
+    const entries = execFileSync("unzip", ["-Z1", zipPath], { encoding: "utf8" }).trim().split(/\n/u).filter(Boolean);
+    zipEntryCache.set(zipPath, entries);
+  }
+  return zipEntryCache.get(zipPath);
 }
 
 function readZipJson(zipPath, suffix) {
@@ -441,21 +477,59 @@ function videoCover(item, index) {
 }
 
 function storyboardHtml(item) {
-  const scenes = (item.scene_list ?? []).map((scene) => `<section><header><span>${escapeXml(scene.scene)}</span><strong>${escapeXml(scene.duration_sec)} 秒</strong></header><h2>${escapeXml(scene.on_screen_text)}</h2><p>${escapeXml(scene.voiceover)}</p><small>${escapeXml(scene.visual)}</small></section>`).join("");
-  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(item.title)}</title><style>body{margin:0;background:${palette.paper};color:${palette.ink};font-family:system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:48px}h1{font-size:52px}section{min-height:420px;padding:42px;margin:24px 0;background:${palette.surface};border:1px solid ${palette.line};border-left:10px solid ${palette.jade};border-radius:8px}header{display:flex;justify-content:space-between;color:${palette.jade}}header span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:${palette.jade};color:white;font-weight:700}h2{font-size:36px;margin-top:80px}p{font-size:24px;line-height:1.7;color:${palette.muted}}small{font-size:18px;color:${palette.gold}}footer{padding:30px;border-top:1px solid ${palette.line};line-height:1.7}</style></head><body><main><p>${escapeXml(item.video_id)} · ${escapeXml(item.duration)}</p><h1>${escapeXml(item.title)}</h1>${scenes}<footer><strong>发布文案</strong><p>${escapeXml(item.caption)}</p><strong>安全边界</strong><p>${escapeXml(item.safety_note)}</p></footer></main></body></html>`;
+  const voiceoverParts = String(item.voiceover ?? "").split(/(?<=[。！？])/u).map((value) => value.trim()).filter(Boolean);
+  const scenes = (item.scene_list ?? []).map((scene, index) => {
+    const duration = scene.duration ?? (scene.duration_sec ? `${scene.duration_sec} 秒` : "按成片节奏");
+    const screenText = scene.on_screen_text ?? item.on_screen_text?.[index] ?? scene.content ?? `场景 ${index + 1}`;
+    const voiceover = scene.voiceover ?? voiceoverParts[index] ?? item.voiceover ?? "";
+    const visual = scene.visual ?? [scene.content, ...(item.visual_refs ?? [])].filter(Boolean).join(" · ");
+    return `<section><header><span>${escapeXml(scene.scene ?? index + 1)}</span><strong>${escapeXml(duration)}</strong></header><h2>${escapeXml(screenText)}</h2><p>${escapeXml(voiceover)}</p><small>${escapeXml(visual)}</small></section>`;
+  }).join("");
+  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(item.title)}</title><style>body{margin:0;background:${palette.paper};color:${palette.ink};font-family:system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:48px}h1{font-size:52px}section{min-height:420px;padding:42px;margin:24px 0;background:${palette.surface};border:1px solid ${palette.line};border-left:10px solid ${palette.jade};border-radius:8px}header{display:flex;justify-content:space-between;color:${palette.jade}}header span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:${palette.jade};color:white;font-weight:700}h2{font-size:36px;margin-top:80px}p{font-size:24px;line-height:1.7;color:${palette.muted}}small{font-size:18px;color:${palette.gold}}footer{padding:30px;border-top:1px solid ${palette.line};line-height:1.7}@media(max-width:720px){main{padding:20px}h1{font-size:34px}section{min-height:0;padding:24px}h2{font-size:26px;margin-top:48px}p{font-size:18px}}</style></head><body><main><p>${escapeXml(item.video_id)} · ${escapeXml(item.duration)}</p><h1>${escapeXml(item.title)}</h1>${scenes}<footer><strong>发布文案</strong><p>${escapeXml(item.caption)}</p><strong>安全边界</strong><p>${escapeXml(item.safety_note ?? item.safety_boundary)}</p></footer></main></body></html>`;
 }
 
 function collectionMarkdown(item) {
-  return `# ${item.title}\n\n${item.description}\n\n## 适合谁\n\n${item.who_is_it_for}\n\n## 你会学到\n\n${(item.what_you_will_learn ?? []).map((value) => `- ${value}`).join("\n")}\n\n## 推荐顺序\n\n${(item.recommended_order ?? []).map((value, index) => `${index + 1}. ${value}`).join("\n")}\n\n## 下一步\n\n${item.tool_cta}\n`;
+  const recommended = item.recommended_content ?? item.recommended_order?.map((contentId) => ({ contentId, title: contentId, route: "" })) ?? [];
+  return `# ${item.title}\n\n${item.description}\n\n## 适合谁\n\n${item.who_is_it_for}\n\n## 你会学到\n\n${(item.what_you_will_learn ?? []).map((value) => `- ${value}`).join("\n")}\n\n## 推荐顺序\n\n${recommended.map((value, index) => `${index + 1}. ${value.route ? `[${value.title}](${value.route})` : value.title}`).join("\n")}\n\n## 下一步\n\n[${item.tool_cta}](/#scenario-step)\n`;
 }
 
 function generateDistributionAssets() {
   const zipPath = batch07Zip();
+  const contentDocument = readJson(resolve(rootDir, "content/content-growth/content-entries.json"));
+  const contentById = new Map(contentDocument.items.map((item) => [item.contentId, item]));
+  const contentLink = (contentId) => {
+    const item = contentById.get(contentId);
+    return item ? { contentId, title: item.title, route: item.canonicalPath, reviewStatus: item.reviewStatus } : { contentId, title: contentId, route: "", reviewStatus: "MISSING" };
+  };
+  const normalizeCta = (value) => typeof value === "string"
+    ? { label: value, route: "/content" }
+    : { label: value?.label ?? "查看完整内容", route: value?.route === "/app/liuyao" ? "/#scenario-step" : (value?.route ?? "/content") };
   const registries = {
-    social: readZipJson(zipPath, "/social-content-registry.json"),
-    summaries: readZipJson(zipPath, "/article-summary-card-registry.json"),
-    collections: readZipJson(zipPath, "/collection-copy-registry.json"),
-    videos: readZipJson(zipPath, "/short-video-registry.json"),
+    social: readZipJson(zipPath, "/social-content-registry.json").map((item) => ({
+      ...item,
+      source_content: (item.source_refs ?? []).map(contentLink),
+      asset_status: "ASSET_READY_LOCAL",
+    })),
+    summaries: readZipJson(zipPath, "/article-summary-card-registry.json").map((item) => ({
+      ...item,
+      source_route: item.route,
+      route: contentLink(item.source_article_id).route,
+      reuse_status: contentLink(item.source_article_id).reviewStatus === "PUBLICATION_READY" ? "PUBLIC" : item.reuse_status,
+      asset_status: "ASSET_READY_LOCAL",
+    })),
+    collections: readZipJson(zipPath, "/collection-copy-registry.json").map((item) => ({
+      ...item,
+      featured_content: (item.featured_content_refs ?? []).map(contentLink),
+      recommended_content: (item.recommended_order ?? []).map(contentLink),
+      asset_status: "ASSET_READY_LOCAL",
+    })),
+    videos: readZipJson(zipPath, "/short-video-registry.json").map((item) => ({
+      ...item,
+      product_cta: normalizeCta(item.product_cta),
+      article_content: (item.article_refs ?? []).map(contentLink),
+      safety_note: item.safety_note ?? item.safety_boundary ?? "不承诺结果，不替代现实专业判断。",
+      status: "ASSET_READY_LOCAL",
+    })),
   };
   for (const [name, data] of Object.entries(registries)) writeJson(join(distributionDataDir, `${name}.json`), data);
 
@@ -473,6 +547,14 @@ function generateDistributionAssets() {
   });
   registries.collections.forEach((item) => writeFileSync(join(collectionDir, `${item.collection_id}.md`), collectionMarkdown(item)));
 
+  const integrity = {
+    summaryRoutesResolved: registries.summaries.every((item) => item.route.startsWith("/content/")),
+    socialSourcesResolved: registries.social.every((item) => item.source_content.every((source) => source.route.startsWith("/content/"))),
+    collectionSourcesResolved: registries.collections.every((item) => item.recommended_content.every((source) => source.route.startsWith("/content/"))),
+    videoSourcesResolved: registries.videos.every((item) => item.article_content.every((source) => source.route.startsWith("/content/"))),
+    batch07StoryboardFieldsPresent: registries.videos.filter((item) => item.source_batch === "BATCH_07").every((item) => item.scene_list.every((scene) => scene.duration && scene.content)),
+  };
+  const countsComplete = registries.social.length === 72 && registries.summaries.length === 24 && registries.collections.length === 12 && registries.videos.length === 50;
   const manifest = {
     generatedAt,
     sourcePackage: basename(zipPath),
@@ -484,8 +566,11 @@ function generateDistributionAssets() {
       shortVideoScripts: registries.videos.length,
       shortVideoCovers: registries.videos.length,
       shortVideoStoryboards: registries.videos.length,
+      batch07NewVisuals: 16,
+      batch07NewVideos: registries.videos.filter((item) => item.source_batch === "BATCH_07").length,
     },
-    status: registries.social.length === 72 && registries.summaries.length === 24 && registries.collections.length === 12 && registries.videos.length === 50 ? "COMPLETE" : "INCOMPLETE",
+    integrity,
+    status: countsComplete && Object.values(integrity).every(Boolean) ? "COMPLETE" : "INCOMPLETE",
     note: "短视频源包交付物为脚本；本地成品包补充了逐条封面和可拍摄分镜，不虚构已编码的视频文件。",
   };
   writeJson(join(distributionDataDir, "manifest.json"), manifest);
@@ -494,11 +579,13 @@ function generateDistributionAssets() {
 
 const contentReview = finalizeContentReview();
 const contentVisuals = generateContentVisuals();
+const contentVisualLinks = attachContentVisualRefs(contentVisuals);
 const distribution = generateDistributionAssets();
 
 console.log(JSON.stringify({
   ok: contentReview.status === "COMPLETE" && contentVisuals.length === 68 && distribution.status === "COMPLETE",
   contentReview: { reviewed: contentReview.reviewed, approved: contentReview.approved, blocked: contentReview.blocked },
   contentVisuals: contentVisuals.length,
+  contentVisualLinks,
   distribution: distribution.counts,
 }, null, 2));

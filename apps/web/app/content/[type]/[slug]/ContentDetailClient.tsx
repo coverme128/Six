@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, BookOpen, CheckCircle2, CircleHelp, Layers3, Maximize2, X } from "lucide-react";
 import { AppNav } from "../../../AppNav";
 import { apiBase, readError, type ContentDetail, type ContentSummary } from "../../../lib/api";
+import { ContentSectionNav } from "../../ContentSectionNav";
 import { topicProfileFor } from "../../topicProfiles";
 
 const typeLabels: Record<string, string> = {
@@ -117,6 +118,14 @@ function editorialVisualFor(item: ContentDetail) {
 
 function contentHref(item: ContentSummary) {
   return `/content/${item.contentType.toLowerCase().replaceAll("_", "-")}/${encodeURIComponent(item.slug)}`;
+}
+
+function breadcrumbTypeHref(item: ContentDetail) {
+  if (item.contentType === "LANDING_PAGE") return "/content#topics";
+  if (item.contentType === "LEARNING_PATH") return "/content#learning-path";
+  if (item.contentId.includes("-CASE-")) return "/content/library?module=cases";
+  if (["GLOSSARY", "TRIGRAM", "HEXAGRAM"].includes(item.contentType)) return "/content/library?module=reference";
+  return `/content/library?format=${encodeURIComponent(item.contentType)}`;
 }
 
 type RelatedKind = "KNOWLEDGE" | "FAQ" | "TUTORIAL";
@@ -570,6 +579,27 @@ function LearningPathContent({ item, related }: { item: ContentDetail; related: 
   );
 }
 
+function ContentBreadcrumb({ item }: { item: ContentDetail }) {
+  const displayTitle = item.contentType === "LANDING_PAGE" ? topicProfileFor(item.contentId)?.name ?? item.title : item.title;
+  return (
+    <nav aria-label="当前位置" className="content-breadcrumb">
+      <a href="/content">知识中心</a><span aria-hidden="true">/</span><a href={breadcrumbTypeHref(item)}>{typeLabels[item.contentType] ?? "内容"}</a><span aria-hidden="true">/</span><strong>{displayTitle}</strong>
+    </nav>
+  );
+}
+
+function ContentSequence({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
+  const previous = related.find((entry) => entry.contentId === item.previousContentId);
+  const next = related.find((entry) => entry.contentId === item.nextContentId);
+  if (!previous && !next) return null;
+  return (
+    <nav aria-label="继续学习" className="content-sequence-nav">
+      {previous ? <a href={contentHref(previous)}><span>上一篇</span><strong>{previous.title}</strong></a> : <span />}
+      {next ? <a href={contentHref(next)}><span>下一篇</span><strong>{next.title}</strong><ArrowRight aria-hidden="true" size={16} /></a> : <span />}
+    </nav>
+  );
+}
+
 export function ContentDetailClient({ type, slug }: { type: string; slug: string }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -614,9 +644,11 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
   return (
     <main className="shell">
       <AppNav current="content" />
+      <ContentSectionNav current="detail" />
 
       {loading ? <p className="empty">正在读取内容。</p> : null}
       {error ? <p className="error">{error}</p> : null}
+      {item ? <ContentBreadcrumb item={item} /> : null}
 
       {item?.contentType === "LANDING_PAGE" ? <TopicContent item={item} related={related} /> : item?.contentType === "LEARNING_PATH" ? (
         <LearningPathContent item={item} related={related} />
@@ -625,6 +657,7 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
       ) : item?.contentType === "FAQ" ? (
         <FaqContent item={item} related={related} />
       ) : item ? <ArticleContent item={item} related={related} /> : null}
+      {item ? <ContentSequence item={item} related={related} /> : null}
     </main>
   );
 }

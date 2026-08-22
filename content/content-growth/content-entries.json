@@ -1,6 +1,6 @@
 {
   "schemaVersion": "CONTENT_SCHEMA_V1",
-  "generatedAt": "2026-08-19T00:00:00.000Z",
+  "generatedAt": "2026-08-22T00:00:00.000Z",
   "source": "Liuyao Content Growth Batch 01-07",
   "items": [
     {
@@ -267,7 +267,8 @@
             "B01-FAQ-04"
           ],
           "visual_asset_refs": [
-            "B01-VIS-02"
+            "B01-VIS-02",
+            "B07-VIS-04"
           ],
           "related_article_refs": [
             "B01-A01",
@@ -1521,7 +1522,8 @@
             "B01-FAQ-15"
           ],
           "visual_asset_refs": [
-            "B01-VIS-01"
+            "B01-VIS-01",
+            "B07-VIS-16"
           ],
           "related_article_refs": [
             "B01-A10",
@@ -1707,7 +1709,9 @@
           ],
           "visual_asset_refs": [
             "B01-VIS-01",
-            "B01-VIS-05"
+            "B01-VIS-05",
+            "B07-VIS-07",
+            "B07-VIS-08"
           ],
           "related_article_refs": [
             "B01-A09",
@@ -1892,7 +1896,8 @@
             "B01-FAQ-24"
           ],
           "visual_asset_refs": [
-            "B01-VIS-05"
+            "B01-VIS-05",
+            "B07-VIS-08"
           ],
           "related_article_refs": [
             "B01-A10",
@@ -2076,7 +2081,8 @@
             "B01-FAQ-24"
           ],
           "visual_asset_refs": [
-            "B01-VIS-05"
+            "B01-VIS-05",
+            "B07-VIS-08"
           ],
           "related_article_refs": [
             "B01-A09",
@@ -2450,7 +2456,13 @@
             "B01-FAQ-18"
           ],
           "visual_asset_refs": [
-            "B01-VIS-06"
+            "B01-VIS-06",
+            "B07-VIS-02",
+            "B07-VIS-05",
+            "B07-VIS-06",
+            "B07-VIS-09",
+            "B07-VIS-10",
+            "B07-VIS-15"
           ],
           "related_article_refs": [
             "B01-A06",
@@ -2637,7 +2649,8 @@
             "B01-FAQ-15"
           ],
           "visual_asset_refs": [
-            "B01-VIS-05"
+            "B01-VIS-05",
+            "B07-VIS-06"
           ],
           "related_article_refs": [
             "B01-A13",
@@ -3193,7 +3206,10 @@
             "B01-FAQ-24"
           ],
           "visual_asset_refs": [
-            "B01-VIS-07"
+            "B01-VIS-07",
+            "B07-VIS-12",
+            "B07-VIS-13",
+            "B07-VIS-16"
           ],
           "related_article_refs": [
             "B01-A10",
@@ -8111,7 +8127,10 @@
             "B02-FAQ-35"
           ],
           "visual_asset_refs": [
-            "B02-VIS-07"
+            "B02-VIS-07",
+            "B07-VIS-01",
+            "B07-VIS-02",
+            "B07-VIS-10"
           ],
           "related_article_refs": [
             "B02-A02"
@@ -8299,7 +8318,9 @@
             "B02-FAQ-30"
           ],
           "visual_asset_refs": [
-            "B02-VIS-01"
+            "B02-VIS-01",
+            "B02-VIS-10",
+            "B07-VIS-02"
           ],
           "related_article_refs": [
             "B02-A01",
@@ -10032,6 +10053,7 @@
             "B02-FAQ-35"
           ],
           "visual_asset_refs": [
+            "B02-VIS-06",
             "B02-VIS-07"
           ],
           "related_article_refs": [
@@ -17134,7 +17156,9 @@
           ],
           "visual_asset_refs": [
             "B03-VIS-01",
-            "B03-VIS-09"
+            "B03-VIS-09",
+            "B07-VIS-01",
+            "B07-VIS-03"
           ],
           "related_article_refs": [
             "B03-A02",
@@ -17145,7 +17169,7 @@
         "contentUrl": "/content/tutorial/what-is-yongshen-in-liuyao",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -17220,7 +17244,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -17310,7 +17334,7 @@
         "contentUrl": "/content/tutorial/why-yongshen-changes-by-question",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -17385,7 +17409,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -17464,8 +17488,8 @@
             "B03-FAQ-21"
           ],
           "visual_asset_refs": [
-            "B03-VIS-03",
-            "B03-VIS-02"
+            "B03-VIS-02",
+            "B03-VIS-03"
           ],
           "related_article_refs": [
             "B03-A04",
@@ -17476,7 +17500,7 @@
         "contentUrl": "/content/tutorial/six-relations-are-role-categories",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -17554,7 +17578,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -17632,8 +17656,8 @@
             "B03-FAQ-22"
           ],
           "visual_asset_refs": [
-            "B03-VIS-04",
-            "B03-VIS-03"
+            "B03-VIS-03",
+            "B03-VIS-04"
           ],
           "related_article_refs": [
             "B03-A05",
@@ -17644,7 +17668,7 @@
         "contentUrl": "/content/tutorial/parent-line-role-meaning",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -17722,7 +17746,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -17800,8 +17824,8 @@
             "B03-FAQ-23"
           ],
           "visual_asset_refs": [
-            "B03-VIS-05",
-            "B03-VIS-04"
+            "B03-VIS-04",
+            "B03-VIS-05"
           ],
           "related_article_refs": [
             "B03-A06",
@@ -17812,7 +17836,7 @@
         "contentUrl": "/content/tutorial/sibling-line-role-meaning",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -17891,7 +17915,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -17980,7 +18004,7 @@
         "contentUrl": "/content/tutorial/child-line-role-meaning",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18059,7 +18083,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18148,7 +18172,7 @@
         "contentUrl": "/content/tutorial/wealth-line-role-meaning",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18227,7 +18251,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18316,7 +18340,7 @@
         "contentUrl": "/content/tutorial/official-ghost-line-role-meaning",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18395,7 +18419,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18474,8 +18498,8 @@
             "B03-FAQ-27"
           ],
           "visual_asset_refs": [
-            "B03-VIS-09",
-            "B03-VIS-01"
+            "B03-VIS-01",
+            "B03-VIS-09"
           ],
           "related_article_refs": [
             "B03-A10",
@@ -18486,7 +18510,7 @@
         "contentUrl": "/content/tutorial/map-real-world-roles-to-six-relations",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18565,7 +18589,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18643,8 +18667,9 @@
             "B03-FAQ-28"
           ],
           "visual_asset_refs": [
-            "B03-VIS-10",
-            "B03-VIS-08"
+            "B03-VIS-02",
+            "B03-VIS-08",
+            "B03-VIS-10"
           ],
           "related_article_refs": [
             "B03-A11",
@@ -18655,7 +18680,7 @@
         "contentUrl": "/content/tutorial/six-relations-in-career-questions",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18733,7 +18758,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18810,7 +18835,9 @@
             "B03-FAQ-11",
             "B03-FAQ-29"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B03-VIS-03"
+          ],
           "related_article_refs": [
             "B03-A12",
             "B03-A16"
@@ -18820,7 +18847,7 @@
         "contentUrl": "/content/tutorial/six-relations-in-business-finance",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -18898,7 +18925,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -18977,6 +19004,7 @@
             "B03-FAQ-30"
           ],
           "visual_asset_refs": [
+            "B03-VIS-04",
             "B03-VIS-05"
           ],
           "related_article_refs": [
@@ -18988,7 +19016,7 @@
         "contentUrl": "/content/tutorial/relationship-questions-need-multiple-roles",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19068,7 +19096,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19145,7 +19173,9 @@
             "B03-FAQ-13",
             "B03-FAQ-31"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B03-VIS-05"
+          ],
           "related_article_refs": [
             "B03-A14",
             "B03-A18"
@@ -19155,7 +19185,7 @@
         "contentUrl": "/content/tutorial/what-shi-line-represents",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19234,7 +19264,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19311,7 +19341,9 @@
             "B03-FAQ-14",
             "B03-FAQ-32"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B03-VIS-06"
+          ],
           "related_article_refs": [
             "B03-A15",
             "B03-A01"
@@ -19321,7 +19353,7 @@
         "contentUrl": "/content/tutorial/what-ying-line-represents",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19400,7 +19432,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19479,7 +19511,10 @@
             "B03-FAQ-15",
             "B03-FAQ-33"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B03-VIS-07",
+            "B07-VIS-03"
+          ],
           "related_article_refs": [
             "B03-A16",
             "B03-A02"
@@ -19489,7 +19524,7 @@
         "contentUrl": "/content/tutorial/why-shi-ying-relationship-matters",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19570,7 +19605,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19651,7 +19686,8 @@
             "B03-FAQ-34"
           ],
           "visual_asset_refs": [
-            "B03-VIS-06"
+            "B03-VIS-06",
+            "B03-VIS-08"
           ],
           "related_article_refs": [
             "B03-A17",
@@ -19662,7 +19698,7 @@
         "contentUrl": "/content/tutorial/yuan-shen-ji-shen-chou-shen",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19743,7 +19779,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19821,7 +19857,8 @@
             "B03-FAQ-35"
           ],
           "visual_asset_refs": [
-            "B03-VIS-07"
+            "B03-VIS-07",
+            "B03-VIS-09"
           ],
           "related_article_refs": [
             "B03-A18",
@@ -19832,7 +19869,7 @@
         "contentUrl": "/content/tutorial/professional-relations-to-supports-risks",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -19911,7 +19948,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -19999,7 +20036,7 @@
         "contentUrl": "/content/tutorial/audit-yongshen-and-role-selection",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20075,7 +20112,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20102,7 +20139,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20159,7 +20196,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20186,7 +20223,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20243,7 +20280,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20270,7 +20307,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20327,7 +20364,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20354,7 +20391,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20411,7 +20448,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20438,7 +20475,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20495,7 +20532,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20522,7 +20559,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20579,7 +20616,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20606,7 +20643,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20663,7 +20700,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20690,7 +20727,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20747,7 +20784,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20774,7 +20811,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20831,7 +20868,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20858,7 +20895,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20915,7 +20952,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -20942,7 +20979,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -20999,7 +21036,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21026,7 +21063,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21083,7 +21120,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21110,7 +21147,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21167,7 +21204,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21194,7 +21231,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21251,7 +21288,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21278,7 +21315,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21335,7 +21372,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21362,7 +21399,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21419,7 +21456,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21446,7 +21483,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21503,7 +21540,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21530,7 +21567,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21587,7 +21624,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21614,7 +21651,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21671,7 +21708,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21698,7 +21735,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21755,7 +21792,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21782,7 +21819,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21839,7 +21876,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21866,7 +21903,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -21923,7 +21960,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -21950,7 +21987,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22007,7 +22044,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22034,7 +22071,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22091,7 +22128,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22118,7 +22155,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22175,7 +22212,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22202,7 +22239,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22259,7 +22296,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22286,7 +22323,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22343,7 +22380,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22370,7 +22407,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22427,7 +22464,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22454,7 +22491,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22511,7 +22548,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22538,7 +22575,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22595,7 +22632,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22622,7 +22659,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22679,7 +22716,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22706,7 +22743,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22763,7 +22800,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22790,7 +22827,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22847,7 +22884,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22874,7 +22911,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -22931,7 +22968,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -22958,7 +22995,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -23015,7 +23052,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -25644,7 +25681,8 @@
             "B04-FAQ-21"
           ],
           "visual_asset_refs": [
-            "B04-VIS-01"
+            "B04-VIS-01",
+            "B07-VIS-01"
           ],
           "related_article_refs": [
             "B04-A02",
@@ -25655,7 +25693,7 @@
         "contentUrl": "/content/tutorial/liuyao-strength-status",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -25731,7 +25769,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -25805,8 +25843,8 @@
             "B04-FAQ-22"
           ],
           "visual_asset_refs": [
-            "B04-VIS-02",
-            "B04-VIS-01"
+            "B04-VIS-01",
+            "B04-VIS-02"
           ],
           "related_article_refs": [
             "B04-A03",
@@ -25817,7 +25855,7 @@
         "contentUrl": "/content/tutorial/month-branch-role",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -25892,7 +25930,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -25965,8 +26003,8 @@
             "B04-FAQ-23"
           ],
           "visual_asset_refs": [
-            "B04-VIS-03",
-            "B04-VIS-02"
+            "B04-VIS-02",
+            "B04-VIS-03"
           ],
           "related_article_refs": [
             "B04-A04",
@@ -25977,7 +26015,7 @@
         "contentUrl": "/content/tutorial/day-branch-role",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26052,7 +26090,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26128,8 +26166,8 @@
             "B04-FAQ-24"
           ],
           "visual_asset_refs": [
-            "B04-VIS-04",
-            "B04-VIS-03"
+            "B04-VIS-03",
+            "B04-VIS-04"
           ],
           "related_article_refs": [
             "B04-A05",
@@ -26140,7 +26178,7 @@
         "contentUrl": "/content/tutorial/month-and-day-context",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26217,7 +26255,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26290,8 +26328,8 @@
             "B04-FAQ-25"
           ],
           "visual_asset_refs": [
-            "B04-VIS-05",
-            "B04-VIS-04"
+            "B04-VIS-04",
+            "B04-VIS-05"
           ],
           "related_article_refs": [
             "B04-A06",
@@ -26302,7 +26340,7 @@
         "contentUrl": "/content/tutorial/sources-of-support",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26379,7 +26417,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26453,8 +26491,8 @@
             "B04-FAQ-26"
           ],
           "visual_asset_refs": [
-            "B04-VIS-06",
-            "B04-VIS-05"
+            "B04-VIS-05",
+            "B04-VIS-06"
           ],
           "related_article_refs": [
             "B04-A07",
@@ -26465,7 +26503,7 @@
         "contentUrl": "/content/tutorial/constraint-control-consumption",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26544,7 +26582,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26618,8 +26656,8 @@
             "B04-FAQ-27"
           ],
           "visual_asset_refs": [
-            "B04-VIS-07",
-            "B04-VIS-06"
+            "B04-VIS-06",
+            "B04-VIS-07"
           ],
           "related_article_refs": [
             "B04-A08",
@@ -26630,7 +26668,7 @@
         "contentUrl": "/content/tutorial/xunkong-explained",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26709,7 +26747,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26782,8 +26820,8 @@
             "B04-FAQ-28"
           ],
           "visual_asset_refs": [
-            "B04-VIS-08",
-            "B04-VIS-07"
+            "B04-VIS-07",
+            "B04-VIS-08"
           ],
           "related_article_refs": [
             "B04-A09",
@@ -26794,7 +26832,7 @@
         "contentUrl": "/content/tutorial/yuepo-explained",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -26872,7 +26910,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -26946,8 +26984,9 @@
             "B04-FAQ-29"
           ],
           "visual_asset_refs": [
-            "B04-VIS-09",
-            "B04-VIS-08"
+            "B04-VIS-01",
+            "B04-VIS-08",
+            "B04-VIS-09"
           ],
           "related_article_refs": [
             "B04-A10",
@@ -26958,7 +26997,7 @@
         "contentUrl": "/content/tutorial/richong-vs-yuepo",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27037,7 +27076,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27111,8 +27150,9 @@
             "B04-FAQ-30"
           ],
           "visual_asset_refs": [
-            "B04-VIS-10",
-            "B04-VIS-09"
+            "B04-VIS-02",
+            "B04-VIS-09",
+            "B04-VIS-10"
           ],
           "related_article_refs": [
             "B04-A11",
@@ -27123,7 +27163,7 @@
         "contentUrl": "/content/tutorial/moving-line-dynamics",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27202,7 +27242,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27276,8 +27316,9 @@
             "B04-FAQ-31"
           ],
           "visual_asset_refs": [
-            "B04-VIS-11",
-            "B04-VIS-10"
+            "B04-VIS-03",
+            "B04-VIS-10",
+            "B04-VIS-11"
           ],
           "related_article_refs": [
             "B04-A12",
@@ -27288,7 +27329,7 @@
         "contentUrl": "/content/tutorial/changed-line-role",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27367,7 +27408,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27441,8 +27482,9 @@
             "B04-FAQ-32"
           ],
           "visual_asset_refs": [
-            "B04-VIS-12",
-            "B04-VIS-11"
+            "B04-VIS-04",
+            "B04-VIS-11",
+            "B04-VIS-12"
           ],
           "related_article_refs": [
             "B04-A13",
@@ -27453,7 +27495,7 @@
         "contentUrl": "/content/tutorial/returning-support-and-control",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27532,7 +27574,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27605,7 +27647,9 @@
             "B04-FAQ-13",
             "B04-FAQ-33"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-05"
+          ],
           "related_article_refs": [
             "B04-A14",
             "B04-A19"
@@ -27615,7 +27659,7 @@
         "contentUrl": "/content/tutorial/advancing-and-retreating-spirit",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27694,7 +27738,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27767,7 +27811,9 @@
             "B04-FAQ-14",
             "B04-FAQ-34"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-06"
+          ],
           "related_article_refs": [
             "B04-A15",
             "B04-A20"
@@ -27777,7 +27823,7 @@
         "contentUrl": "/content/tutorial/hidden-and-flying-spirit",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -27856,7 +27902,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -27930,7 +27976,9 @@
             "B04-FAQ-15",
             "B04-FAQ-35"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-07"
+          ],
           "related_article_refs": [
             "B04-A16",
             "B04-A01"
@@ -27940,7 +27988,7 @@
         "contentUrl": "/content/tutorial/generating-controlling-transforming",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28020,7 +28068,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28093,7 +28141,9 @@
             "B04-FAQ-16",
             "B04-FAQ-36"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-08"
+          ],
           "related_article_refs": [
             "B04-A17",
             "B04-A02"
@@ -28103,7 +28153,7 @@
         "contentUrl": "/content/tutorial/supports-and-obstacles-coexist",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28182,7 +28232,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28256,7 +28306,11 @@
             "B04-FAQ-17",
             "B04-FAQ-37"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-09",
+            "B07-VIS-07",
+            "B07-VIS-12"
+          ],
           "related_article_refs": [
             "B04-A18",
             "B04-A03"
@@ -28266,7 +28320,7 @@
         "contentUrl": "/content/tutorial/evidence-conflict-in-liuyao",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28346,7 +28400,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28418,7 +28472,9 @@
             "B04-FAQ-18",
             "B04-FAQ-38"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-10"
+          ],
           "related_article_refs": [
             "B04-A19",
             "B04-A04"
@@ -28428,7 +28484,7 @@
         "contentUrl": "/content/tutorial/patterns-and-base-facts",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28506,7 +28562,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28581,7 +28637,9 @@
             "B04-FAQ-19",
             "B04-FAQ-39"
           ],
-          "visual_asset_refs": [],
+          "visual_asset_refs": [
+            "B04-VIS-11"
+          ],
           "related_article_refs": [
             "B04-A20",
             "B04-A05"
@@ -28591,7 +28649,7 @@
         "contentUrl": "/content/tutorial/timing-candidates",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28672,7 +28730,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28745,7 +28803,9 @@
             "B04-FAQ-40"
           ],
           "visual_asset_refs": [
-            "B04-VIS-12"
+            "B04-VIS-12",
+            "B07-VIS-03",
+            "B07-VIS-05"
           ],
           "related_article_refs": [
             "B04-A01",
@@ -28756,7 +28816,7 @@
         "contentUrl": "/content/tutorial/audit-strength-dynamics-timing",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28834,7 +28894,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28861,7 +28921,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -28918,7 +28978,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -28945,7 +29005,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29002,7 +29062,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29029,7 +29089,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29086,7 +29146,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29113,7 +29173,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29170,7 +29230,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29197,7 +29257,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29254,7 +29314,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29281,7 +29341,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29338,7 +29398,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29365,7 +29425,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29422,7 +29482,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29449,7 +29509,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29506,7 +29566,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29533,7 +29593,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29590,7 +29650,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29617,7 +29677,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29674,7 +29734,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29701,7 +29761,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29758,7 +29818,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29785,7 +29845,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29842,7 +29902,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29869,7 +29929,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -29926,7 +29986,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -29953,7 +30013,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30010,7 +30070,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30037,7 +30097,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30094,7 +30154,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30121,7 +30181,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30178,7 +30238,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30205,7 +30265,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30262,7 +30322,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30289,7 +30349,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30346,7 +30406,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30373,7 +30433,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30430,7 +30490,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30457,7 +30517,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30514,7 +30574,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30541,7 +30601,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30598,7 +30658,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30625,7 +30685,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30682,7 +30742,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30709,7 +30769,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30766,7 +30826,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30793,7 +30853,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30850,7 +30910,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30877,7 +30937,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -30934,7 +30994,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -30961,7 +31021,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31018,7 +31078,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31045,7 +31105,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31102,7 +31162,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31129,7 +31189,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31186,7 +31246,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31213,7 +31273,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31270,7 +31330,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31297,7 +31357,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31354,7 +31414,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31381,7 +31441,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31438,7 +31498,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31465,7 +31525,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31522,7 +31582,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31549,7 +31609,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31606,7 +31666,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31633,7 +31693,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31690,7 +31750,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31717,7 +31777,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31774,7 +31834,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31794,7 +31854,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31851,7 +31911,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31871,7 +31931,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -31928,7 +31988,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -31948,7 +32008,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32005,7 +32065,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32025,7 +32085,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32082,7 +32142,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32102,7 +32162,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32160,7 +32220,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32180,7 +32240,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32238,7 +32298,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32258,7 +32318,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32316,7 +32376,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32336,7 +32396,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32394,7 +32454,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32414,7 +32474,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32472,7 +32532,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32492,7 +32552,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32550,7 +32610,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32570,7 +32630,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32629,7 +32689,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32649,7 +32709,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32708,7 +32768,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32728,7 +32788,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32787,7 +32847,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32807,7 +32867,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32866,7 +32926,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32886,7 +32946,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -32945,7 +33005,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -32965,7 +33025,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33024,7 +33084,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33044,7 +33104,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33103,7 +33163,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33123,7 +33183,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33182,7 +33242,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33202,7 +33262,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33261,7 +33321,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33281,7 +33341,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33340,7 +33400,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33360,7 +33420,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33418,7 +33478,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33438,7 +33498,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33496,7 +33556,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33516,7 +33576,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33574,7 +33634,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33594,7 +33654,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33652,7 +33712,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33672,7 +33732,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33730,7 +33790,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33750,7 +33810,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33808,7 +33868,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33828,7 +33888,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33886,7 +33946,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33906,7 +33966,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -33964,7 +34024,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -33984,7 +34044,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34043,7 +34103,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34063,7 +34123,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34122,7 +34182,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34142,7 +34202,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34201,7 +34261,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34221,7 +34281,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34280,7 +34340,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34300,7 +34360,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34359,7 +34419,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34379,7 +34439,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34438,7 +34498,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34458,7 +34518,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34517,7 +34577,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34537,7 +34597,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34596,7 +34656,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34616,7 +34676,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34674,7 +34734,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34694,7 +34754,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34752,7 +34812,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34772,7 +34832,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34830,7 +34890,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34850,7 +34910,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -34908,7 +34968,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -34937,13 +34997,19 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-02",
+            "B05-VIS-11",
+            "B07-VIS-04",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/job-change-01",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35001,7 +35067,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35030,13 +35096,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-02",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/job-offer-02",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35094,7 +35164,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35123,13 +35193,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-02",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/job-interview-03",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35187,7 +35261,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35216,13 +35290,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-02",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/career-04",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35280,7 +35358,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35309,13 +35387,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-02",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/promotion-05",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35373,7 +35455,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35402,13 +35484,18 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-03",
+            "B05-VIS-04",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/business-partnership-06",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35466,7 +35553,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35495,13 +35582,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-03",
+            "B05-VIS-04"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/project-07",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35559,7 +35650,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35588,13 +35679,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-03",
+            "B05-VIS-04"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/negotiation-08",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35652,7 +35747,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35681,13 +35776,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-03",
+            "B05-VIS-04"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/business-partnership-09",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35745,7 +35844,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35774,13 +35873,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-03",
+            "B05-VIS-04"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/project-10",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35838,7 +35941,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35867,13 +35970,18 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-05",
+            "B05-VIS-06",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/payment-collection-11",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -35931,7 +36039,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -35960,13 +36068,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-05",
+            "B05-VIS-06"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/cashflow-12",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36024,7 +36136,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36053,13 +36165,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-05",
+            "B05-VIS-06"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/investment-context-13",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36117,7 +36233,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36146,13 +36262,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-05",
+            "B05-VIS-06"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/income-14",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36210,7 +36330,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36239,13 +36359,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-05",
+            "B05-VIS-06"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/investment-context-15",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36303,7 +36427,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36332,13 +36456,18 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-07",
+            "B05-VIS-08",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/relationship-16",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36396,7 +36525,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36425,13 +36554,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-07",
+            "B05-VIS-08"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/relationship-17",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36489,7 +36622,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36518,13 +36651,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-07",
+            "B05-VIS-08"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/relationship-18",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36582,7 +36719,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36611,13 +36748,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-07",
+            "B05-VIS-08"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/reconciliation-19",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36675,7 +36816,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36704,13 +36845,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-07",
+            "B05-VIS-08"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/relationship-20",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36768,7 +36913,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36797,13 +36942,18 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-09",
+            "B05-VIS-11",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/exam-21",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36861,7 +37011,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36890,13 +37040,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-09",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/exam-22",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -36954,7 +37108,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -36983,13 +37137,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-09",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/admission-23",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37047,7 +37205,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37076,13 +37234,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-09",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/job-search-24",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37140,7 +37302,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37169,13 +37331,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-09",
+            "B05-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/exam-25",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37233,7 +37399,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37262,13 +37428,18 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-10",
+            "B05-VIS-12",
+            "B07-VIS-11"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/travel-26",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37326,7 +37497,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37355,13 +37526,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-10",
+            "B05-VIS-12"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/travel-27",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37419,7 +37594,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37448,13 +37623,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-10",
+            "B05-VIS-12"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/schedule-28",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37512,7 +37691,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37541,13 +37720,17 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-10",
+            "B05-VIS-12"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/delay-29",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37605,7 +37788,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37634,13 +37817,21 @@
         ],
         "practicalFramework": null,
         "productIntegration": {
-          "route_status": "MAP_TO_EXISTING"
+          "route_status": "MAP_TO_EXISTING",
+          "visual_asset_refs": [
+            "B05-VIS-01",
+            "B05-VIS-10",
+            "B05-VIS-12",
+            "B07-VIS-04",
+            "B07-VIS-09",
+            "B07-VIS-14"
+          ]
         },
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "contentUrl": "/content/tutorial/schedule-30",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37698,7 +37889,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37718,7 +37909,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37776,7 +37967,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37796,7 +37987,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37854,7 +38045,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37874,7 +38065,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -37932,7 +38123,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -37952,7 +38143,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38010,7 +38201,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38030,7 +38221,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38088,7 +38279,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38108,7 +38299,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38166,7 +38357,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38186,7 +38377,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38244,7 +38435,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38264,7 +38455,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38322,7 +38513,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38342,7 +38533,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38400,7 +38591,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38420,7 +38611,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38478,7 +38669,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38498,7 +38689,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38556,7 +38747,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38576,7 +38767,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38634,7 +38825,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38654,7 +38845,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38712,7 +38903,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38732,7 +38923,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38790,7 +38981,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38810,7 +39001,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38868,7 +39059,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38888,7 +39079,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -38946,7 +39137,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -38966,7 +39157,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39024,7 +39215,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39044,7 +39235,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39102,7 +39293,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39122,7 +39313,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39180,7 +39371,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39200,7 +39391,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39258,7 +39449,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39278,7 +39469,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39336,7 +39527,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39356,7 +39547,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39414,7 +39605,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39434,7 +39625,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39492,7 +39683,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39512,7 +39703,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39570,7 +39761,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39590,7 +39781,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39648,7 +39839,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39668,7 +39859,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39726,7 +39917,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39746,7 +39937,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39804,7 +39995,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39824,7 +40015,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39882,7 +40073,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39902,7 +40093,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -39960,7 +40151,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",
@@ -39980,7 +40171,7 @@
         "evidenceStatus": "REPOSITORY_ALIGNED",
         "repositoryReview": {
           "status": "APPROVED",
-          "reviewedAt": "2026-08-19T00:00:00.000Z",
+          "reviewedAt": "2026-08-22T00:00:00.000Z",
           "method": "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
         }
       },
@@ -40038,7 +40229,7 @@
       "reviewStatus": "PUBLICATION_READY",
       "contentVersion": "1.0",
       "publishedAt": "2026-08-19T00:00:00.000Z",
-      "updatedAt": "2026-08-19T00:00:00.000Z"
+      "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
       "schemaVersion": "CONTENT_SCHEMA_V1",

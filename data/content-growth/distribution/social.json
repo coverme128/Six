@@ -19,7 +19,16 @@
     "visual_ref": "B07-VIS-01",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-01",
+        "title": "占问",
+        "route": "/content/knowledge/b01-kc-01-占问",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-002",
@@ -41,7 +50,16 @@
     "visual_ref": "B07-VIS-02",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-02",
+        "title": "核心问题",
+        "route": "/content/knowledge/b01-kc-02-核心问题",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-003",
@@ -63,7 +81,16 @@
     "visual_ref": "B07-VIS-03",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-03",
+        "title": "单一问题原则",
+        "route": "/content/knowledge/b01-kc-03-单一问题原则",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-004",
@@ -85,7 +112,16 @@
     "visual_ref": "B07-VIS-04",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-04",
+        "title": "起卦时点",
+        "route": "/content/knowledge/b01-kc-04-起卦时点",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-005",
@@ -107,7 +143,16 @@
     "visual_ref": "B07-VIS-05",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-05",
+        "title": "重复起卦",
+        "route": "/content/knowledge/b01-kc-05-重复起卦",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-006",
@@ -129,7 +174,16 @@
     "visual_ref": "B07-VIS-06",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-06",
+        "title": "问题拆分",
+        "route": "/content/knowledge/b01-kc-06-问题拆分",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-007",
@@ -151,7 +205,16 @@
     "visual_ref": "B07-VIS-07",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-07",
+        "title": "现实决策",
+        "route": "/content/knowledge/b01-kc-07-现实决策",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-008",
@@ -173,7 +236,16 @@
     "visual_ref": "B07-VIS-08",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-08",
+        "title": "行动复盘",
+        "route": "/content/knowledge/b01-kc-08-行动复盘",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-009",
@@ -195,7 +267,16 @@
     "visual_ref": "B07-VIS-09",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-09",
+        "title": "总体判断",
+        "route": "/content/knowledge/b01-kc-09-总体判断",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-010",
@@ -217,7 +298,16 @@
     "visual_ref": "B07-VIS-10",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-10",
+        "title": "支持因素",
+        "route": "/content/knowledge/b01-kc-10-支持因素",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-011",
@@ -239,7 +329,16 @@
     "visual_ref": "B07-VIS-11",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-11",
+        "title": "阻碍因素",
+        "route": "/content/knowledge/b01-kc-11-阻碍因素",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-012",
@@ -261,7 +360,16 @@
     "visual_ref": "B07-VIS-12",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-12",
+        "title": "变化趋势",
+        "route": "/content/knowledge/b01-kc-12-变化趋势",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-013",
@@ -283,7 +391,16 @@
     "visual_ref": "B07-VIS-13",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-13",
+        "title": "时间提示",
+        "route": "/content/knowledge/b01-kc-13-时间提示",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-014",
@@ -305,7 +422,16 @@
     "visual_ref": "B07-VIS-14",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-14",
+        "title": "行动建议",
+        "route": "/content/knowledge/b01-kc-14-行动建议",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-015",
@@ -327,7 +453,16 @@
     "visual_ref": "B07-VIS-15",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-15",
+        "title": "不确定性",
+        "route": "/content/knowledge/b01-kc-15-不确定性",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-016",
@@ -349,7 +484,16 @@
     "visual_ref": "B07-VIS-16",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-16",
+        "title": "证据冲突",
+        "route": "/content/knowledge/b01-kc-16-证据冲突",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-017",
@@ -371,7 +515,16 @@
     "visual_ref": "B07-VIS-01",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-17",
+        "title": "依据不足",
+        "route": "/content/knowledge/b01-kc-17-依据不足",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-018",
@@ -393,7 +546,16 @@
     "visual_ref": "B07-VIS-02",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-18",
+        "title": "确定性排盘",
+        "route": "/content/knowledge/b01-kc-18-确定性排盘",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-019",
@@ -415,7 +577,16 @@
     "visual_ref": "B07-VIS-03",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-19",
+        "title": "历法标准化",
+        "route": "/content/knowledge/b01-kc-19-历法标准化",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-020",
@@ -437,7 +608,16 @@
     "visual_ref": "B07-VIS-04",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-20",
+        "title": "规则判断",
+        "route": "/content/knowledge/b01-kc-20-规则判断",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-021",
@@ -459,7 +639,16 @@
     "visual_ref": "B07-VIS-05",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-21",
+        "title": "结果事实",
+        "route": "/content/knowledge/b01-kc-21-结果事实",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-022",
@@ -481,7 +670,16 @@
     "visual_ref": "B07-VIS-06",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-22",
+        "title": "专业依据",
+        "route": "/content/knowledge/b01-kc-22-专业依据",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-023",
@@ -503,7 +701,16 @@
     "visual_ref": "B07-VIS-07",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-23",
+        "title": "AI 辅助解释",
+        "route": "/content/knowledge/b01-kc-23-ai-辅助解释",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-024",
@@ -525,7 +732,16 @@
     "visual_ref": "B07-VIS-08",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-KC-24",
+        "title": "Grounded AI",
+        "route": "/content/knowledge/b01-kc-24-grounded-ai",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-025",
@@ -547,7 +763,16 @@
     "visual_ref": "B07-VIS-09",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A01",
+        "title": "想换工作时，六爻应该怎样问才有决策价值",
+        "route": "/content/tutorial/job-change-01",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-026",
@@ -569,7 +794,16 @@
     "visual_ref": "B07-VIS-10",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A02",
+        "title": "如何用六爻分析一个新的工作机会",
+        "route": "/content/tutorial/job-offer-02",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-027",
@@ -591,7 +825,16 @@
     "visual_ref": "B07-VIS-11",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A03",
+        "title": "求职和面试问题，六爻应该重点看什么",
+        "route": "/content/tutorial/job-interview-03",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-028",
@@ -613,7 +856,16 @@
     "visual_ref": "B07-VIS-12",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A04",
+        "title": "六爻怎么看工作中的阻碍与压力来源",
+        "route": "/content/tutorial/career-04",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-029",
@@ -635,7 +887,16 @@
     "visual_ref": "B07-VIS-13",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A05",
+        "title": "升职与职业发展问题，怎样用六爻建立判断框架",
+        "route": "/content/tutorial/promotion-05",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-030",
@@ -657,7 +918,16 @@
     "visual_ref": "B07-VIS-14",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A06",
+        "title": "开始一项商业合作前，六爻可以帮助看什么",
+        "route": "/content/tutorial/business-partnership-06",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-031",
@@ -679,7 +949,16 @@
     "visual_ref": "B07-VIS-15",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A07",
+        "title": "如何用六爻分析一个项目能不能顺利推进",
+        "route": "/content/tutorial/project-07",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-032",
@@ -701,7 +980,16 @@
     "visual_ref": "B07-VIS-16",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A08",
+        "title": "合作谈判进入僵局时，六爻报告应该怎样理解",
+        "route": "/content/tutorial/negotiation-08",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-033",
@@ -723,7 +1011,16 @@
     "visual_ref": "B07-VIS-01",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A09",
+        "title": "选择合作伙伴时，六爻应该怎样使用",
+        "route": "/content/tutorial/business-partnership-09",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-034",
@@ -745,7 +1042,16 @@
     "visual_ref": "B07-VIS-02",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A10",
+        "title": "商业项目什么时候值得继续，什么时候应该重新评估",
+        "route": "/content/tutorial/project-10",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-035",
@@ -767,7 +1073,16 @@
     "visual_ref": "B07-VIS-03",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A11",
+        "title": "六爻如何看一笔款项能否顺利回收",
+        "route": "/content/tutorial/payment-collection-11",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-036",
@@ -789,7 +1104,16 @@
     "visual_ref": "B07-VIS-04",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A12",
+        "title": "项目资金出现压力时，六爻应该怎样分析",
+        "route": "/content/tutorial/cashflow-12",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-037",
@@ -811,7 +1135,16 @@
     "visual_ref": "B07-VIS-05",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A13",
+        "title": "面对一项投资机会，六爻可以做什么、不能做什么",
+        "route": "/content/tutorial/investment-context-13",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-038",
@@ -833,7 +1166,16 @@
     "visual_ref": "B07-VIS-06",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A14",
+        "title": "收入变化问题，六爻报告应该怎样阅读",
+        "route": "/content/tutorial/income-14",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-039",
@@ -855,7 +1197,16 @@
     "visual_ref": "B07-VIS-07",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A15",
+        "title": "为什么六爻中的“财”不等于投资一定赚钱",
+        "route": "/content/tutorial/investment-context-15",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-040",
@@ -877,7 +1228,16 @@
     "visual_ref": "B07-VIS-08",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A16",
+        "title": "感情问题怎样提问，六爻结果才更容易理解",
+        "route": "/content/tutorial/relationship-16",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-041",
@@ -899,7 +1259,16 @@
     "visual_ref": "B07-VIS-09",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A17",
+        "title": "如何用六爻理解一段关系中的双方状态",
+        "route": "/content/tutorial/relationship-17",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-042",
@@ -921,7 +1290,16 @@
     "visual_ref": "B07-VIS-10",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A18",
+        "title": "关系出现冲突时，六爻报告应该怎么看",
+        "route": "/content/tutorial/relationship-18",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-043",
@@ -943,7 +1321,16 @@
     "visual_ref": "B07-VIS-11",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A09",
+        "title": "系统如何完成一次六爻排盘",
+        "route": "/content/tutorial/how-liuyao-system-generates-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-044",
@@ -965,7 +1352,16 @@
     "visual_ref": "B07-VIS-12",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A10",
+        "title": "确定性排盘与 AI 解释有什么区别",
+        "route": "/content/tutorial/deterministic-chart-vs-ai-explanation",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-045",
@@ -987,7 +1383,16 @@
     "visual_ref": "B07-VIS-13",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A11",
+        "title": "AI 在六爻报告中负责什么",
+        "route": "/content/tutorial/ai-role-in-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-046",
@@ -1009,7 +1414,16 @@
     "visual_ref": "B07-VIS-14",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A12",
+        "title": "为什么 AI 不能重新排盘或修改结果",
+        "route": "/content/tutorial/why-ai-cannot-recast-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-047",
@@ -1031,7 +1445,16 @@
     "visual_ref": "B07-VIS-15",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A13",
+        "title": "一份六爻结论应该怎样对应专业依据",
+        "route": "/content/tutorial/how-liuyao-conclusions-map-to-evidence",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-048",
@@ -1053,7 +1476,16 @@
     "visual_ref": "B07-VIS-16",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-049",
@@ -1075,7 +1507,16 @@
     "visual_ref": "B07-VIS-01",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A15",
+        "title": "专业用户应该怎样核验六爻报告",
+        "route": "/content/tutorial/professional-verification-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-050",
@@ -1097,7 +1538,16 @@
     "visual_ref": "B07-VIS-02",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A16",
+        "title": "六爻报告保存在哪里，用户应注意什么",
+        "route": "/content/tutorial/where-liuyao-reports-are-saved",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-051",
@@ -1119,7 +1569,16 @@
     "visual_ref": "B07-VIS-03",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A17",
+        "title": "哪些数据会用于生成 AI 解释",
+        "route": "/content/tutorial/what-data-ai-uses-for-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-052",
@@ -1141,7 +1600,16 @@
     "visual_ref": "B07-VIS-04",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A18",
+        "title": "如何判断一份六爻 AI 报告是否可信",
+        "route": "/content/tutorial/how-to-evaluate-liuyao-ai-report-trust",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-053",
@@ -1163,7 +1631,16 @@
     "visual_ref": "B07-VIS-05",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A05",
+        "title": "六爻结果应该如何用于现实决策",
+        "route": "/content/tutorial/use-liuyao-for-real-decisions",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-054",
@@ -1185,7 +1662,16 @@
     "visual_ref": "B07-VIS-06",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A08",
+        "title": "六爻报告为什么不能代替用户做决定",
+        "route": "/content/tutorial/why-liuyao-report-cannot-decide-for-you",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-055",
@@ -1207,7 +1693,16 @@
     "visual_ref": "B07-VIS-07",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A06",
+        "title": "如何理解六爻报告中的支持、阻碍与不确定性",
+        "route": "/content/tutorial/support-risk-uncertainty-in-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-056",
@@ -1229,7 +1724,16 @@
     "visual_ref": "B07-VIS-08",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A14",
+        "title": "普通用户应该怎样阅读一份六爻报告",
+        "route": "/content/tutorial/guided-reading-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-057",
@@ -1251,7 +1755,16 @@
     "visual_ref": "B07-VIS-09",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B01-A15",
+        "title": "专业用户应该怎样核验六爻报告",
+        "route": "/content/tutorial/professional-verification-liuyao-report",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-058",
@@ -1273,7 +1786,16 @@
     "visual_ref": "B07-VIS-10",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B04-A16",
+        "title": "为什么六爻报告中可能同时出现支持和阻碍",
+        "route": "/content/tutorial/supports-and-obstacles-coexist",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-059",
@@ -1295,7 +1817,16 @@
     "visual_ref": "B07-VIS-11",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B04-A17",
+        "title": "当多条六爻证据互相冲突时，应该怎样理解",
+        "route": "/content/tutorial/evidence-conflict-in-liuyao",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-060",
@@ -1317,7 +1848,16 @@
     "visual_ref": "B07-VIS-12",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B04-A19",
+        "title": "六爻中的应期是什么",
+        "route": "/content/tutorial/timing-candidates",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-061",
@@ -1339,7 +1879,16 @@
     "visual_ref": "B07-VIS-13",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B04-A20",
+        "title": "怎样核验一份六爻报告中的旺衰、动变与应期判断",
+        "route": "/content/tutorial/audit-strength-dynamics-timing",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-062",
@@ -1361,7 +1910,16 @@
     "visual_ref": "B07-VIS-14",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B03-A18",
+        "title": "怎样核验一份六爻报告中的用神与角色判断",
+        "route": "/content/tutorial/audit-yongshen-and-role-selection",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-063",
@@ -1383,7 +1941,16 @@
     "visual_ref": "B07-VIS-15",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A29",
+        "title": "计划出现延误时，六爻中的时间提示应该怎样理解",
+        "route": "/content/tutorial/delay-29",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-064",
@@ -1405,7 +1972,16 @@
     "visual_ref": "B07-VIS-16",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-A30",
+        "title": "如何把六爻结果转成一份现实行动计划",
+        "route": "/content/tutorial/schedule-30",
+        "reviewStatus": "PUBLICATION_READY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-065",
@@ -1427,7 +2003,16 @@
     "visual_ref": "B07-VIS-01",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-01",
+        "title": "是否考虑更换当前工作",
+        "route": "/content/tutorial/b05-case-01-是否考虑更换当前工作",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-066",
@@ -1449,7 +2034,16 @@
     "visual_ref": "B07-VIS-02",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-02",
+        "title": "一个新的 Offer 是否值得进一步推进",
+        "route": "/content/tutorial/b05-case-02-一个新的-offer-是否值得进一步推进",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-067",
@@ -1471,7 +2065,16 @@
     "visual_ref": "B07-VIS-03",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-03",
+        "title": "两家公司是否适合继续合作",
+        "route": "/content/tutorial/b05-case-03-两家公司是否适合继续合作",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-068",
@@ -1493,7 +2096,16 @@
     "visual_ref": "B07-VIS-04",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-04",
+        "title": "项目谈判迟迟没有推进",
+        "route": "/content/tutorial/b05-case-04-项目谈判迟迟没有推进",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-069",
@@ -1515,7 +2127,16 @@
     "visual_ref": "B07-VIS-05",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-05",
+        "title": "一笔项目回款出现延迟",
+        "route": "/content/tutorial/b05-case-05-一笔项目回款出现延迟",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-070",
@@ -1537,7 +2158,16 @@
     "visual_ref": "B07-VIS-06",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-06",
+        "title": "项目资金压力增加",
+        "route": "/content/tutorial/b05-case-06-项目资金压力增加",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-071",
@@ -1559,7 +2189,16 @@
     "visual_ref": "B07-VIS-07",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-07",
+        "title": "一段关系近期沟通持续恶化",
+        "route": "/content/tutorial/b05-case-07-一段关系近期沟通持续恶化",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "social_id": "B07-SOC-072",
@@ -1581,6 +2220,15 @@
     "visual_ref": "B07-VIS-08",
     "safety_boundary": "不使用神准、100%准确、命中注定、结果保证、关系心理读取或投资预测语言。",
     "reuse_status": "DERIVED_FROM_EXISTING_SOURCE",
-    "version": "1.0"
+    "version": "1.0",
+    "source_content": [
+      {
+        "contentId": "B05-CASE-08",
+        "title": "是否适合重新尝试恢复一段关系",
+        "route": "/content/tutorial/b05-case-08-是否适合重新尝试恢复一段关系",
+        "reviewStatus": "DEMO_ONLY"
+      }
+    ],
+    "asset_status": "ASSET_READY_LOCAL"
   }
 ]

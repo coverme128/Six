@@ -262,7 +262,7 @@ export class FileBasedContentRepository {
   getRelated(contentId) {
     const entry = this.getById(contentId);
     if (!entry) return [];
-    const ids = [...entry.relatedContentIds, ...entry.relatedKnowledgeIds, entry.nextContentId, entry.previousContentId].filter(Boolean);
+    const ids = [...entry.relatedContentIds, ...entry.relatedKnowledgeIds, ...entry.prerequisiteContentIds, entry.nextContentId, entry.previousContentId].filter(Boolean);
     return ids.map((id) => this.getById(id)).filter(Boolean);
   }
 

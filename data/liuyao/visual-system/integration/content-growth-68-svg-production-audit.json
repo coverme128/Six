@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T00:00:00.000Z",
+  "generatedAt": "2026-08-22T00:00:00.000Z",
   "visualSystem": "LIUYAO_VISUAL_SYSTEM_V1",
   "artDirectionVersion": "content-growth-visual-v2",
   "total": 68,
@@ -22,613 +22,1320 @@
     {
       "visualAssetId": "B01-VIS-01",
       "title": "一次六爻报告如何形成",
-      "description": "用户问题、起卦、历法、排盘、规则、AI 解释、报告",
+      "description": "一次六爻报告如何形成：用户问题，起卦，历法，排盘，规则，AI 解释，报告",
       "layout": "timeline",
-      "labelCount": 17,
+      "labelCount": 7,
+      "articleRefs": [
+        "B01-A09",
+        "B01-A10"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-18",
+        "B01-KC-19",
+        "B01-KC-20",
+        "B01-KC-23"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-02",
       "title": "如何提出一个清晰的六爻问题",
-      "description": "模糊问题、聚焦对象、聚焦事件、聚焦时间、明确问题",
+      "description": "如何提出一个清晰的六爻问题：模糊问题，聚焦对象，聚焦事件，聚焦时间，明确问题",
       "layout": "timeline",
-      "labelCount": 15,
+      "labelCount": 5,
+      "articleRefs": [
+        "B01-A02"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-01",
+        "B01-KC-02",
+        "B01-KC-06"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-03",
       "title": "一个问题与多个问题的区别",
-      "description": "单一问题、清晰主线、可核验证据、混合多个问题、角色冲突、结论混乱",
+      "description": "一个问题与多个问题的区别：单一问题，清晰主线，可核验证据，混合多个问题，角色冲突，结论混乱",
       "layout": "comparison",
-      "labelCount": 11,
+      "labelCount": 6,
+      "articleRefs": [
+        "B01-A03"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-02",
+        "B01-KC-03"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-04",
       "title": "为什么不建议反复起卦",
-      "description": "不安、重复起卦、结果增加、解释冲突、更难决策、记录结果、观察现实、条件变化后再评估",
+      "description": "为什么不建议反复起卦：不安，重复起卦，结果增加，解释冲突，更难决策，记录结果，观察现实，条件变化后再评估",
       "layout": "cycle",
-      "labelCount": 16,
+      "labelCount": 8,
+      "articleRefs": [
+        "B01-A04"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-05",
+        "B01-KC-08"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-05",
       "title": "事实、规则与 AI 解释的区别",
-      "description": "Deterministic Facts、Rule Judgments、AI Explanation",
+      "description": "事实、规则与 AI 解释的区别：Deterministic Facts，Rule Judgments，AI Explanation",
       "layout": "comparison",
-      "labelCount": 8,
+      "labelCount": 3,
+      "articleRefs": [
+        "B01-A10",
+        "B01-A11",
+        "B01-A12"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-21",
+        "B01-KC-20",
+        "B01-KC-23",
+        "B01-KC-24"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-06",
       "title": "普通用户如何阅读六爻报告",
-      "description": "总体判断、支持、阻碍、变化、时间、行动、查看依据",
+      "description": "普通用户如何阅读六爻报告：总体判断，支持，阻碍，变化，时间，行动，查看依据",
       "layout": "timeline",
-      "labelCount": 17,
+      "labelCount": 7,
+      "articleRefs": [
+        "B01-A14"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-09",
+        "B01-KC-10",
+        "B01-KC-11",
+        "B01-KC-12",
+        "B01-KC-13",
+        "B01-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-07",
       "title": "六爻报告可信性结构",
-      "description": "确定性排盘、规则依据、证据可查看、AI 边界、失败可回退",
+      "description": "六爻报告可信性结构：确定性排盘，规则依据，证据可查看，AI 边界，失败可回退",
       "layout": "stack",
-      "labelCount": 14,
+      "labelCount": 5,
+      "articleRefs": [
+        "B01-A13",
+        "B01-A18"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-18",
+        "B01-KC-22",
+        "B01-KC-24",
+        "B01-KC-25",
+        "B01-KC-26"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B01-VIS-08",
       "title": "报告数据与隐私流向",
-      "description": "用户输入、排盘与规则、必要上下文用于 AI、报告保存在当前浏览器",
+      "description": "报告数据与隐私流向：用户输入，排盘与规则，必要上下文用于 AI，报告保存在当前浏览器",
       "layout": "cycle",
-      "labelCount": 12,
+      "labelCount": 4,
+      "articleRefs": [
+        "B01-A16",
+        "B01-A17"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-29",
+        "B01-KC-30"
+      ],
       "publicPath": "/content-growth/visuals/B01-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-01",
       "title": "一次完整六爻起卦流程",
-      "description": "明确问题；准备起卦；连续六次；自下而上记录；确认时间；生成排盘；查看报告",
+      "description": "一次完整六爻起卦流程：明确问题；准备起卦；连续六次；自下而上记录；确认时间；生成排盘；查看报告",
       "layout": "timeline",
-      "labelCount": 17,
+      "labelCount": 7,
+      "articleRefs": [
+        "B02-A02",
+        "B02-A03"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-02",
+        "B02-KC-03",
+        "B02-KC-11"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-02",
       "title": "六次起卦与六个爻的位置关系",
-      "description": "第 6 次 → 上爻；第 5 次 → 五爻；第 4 次 → 四爻；第 3 次 → 三爻；第 2 次 → 二爻；第 1 次 → 初爻；输入方向：自下而上",
+      "description": "六次起卦与六个爻的位置关系：第 6 次 → 上爻；第 5 次 → 五爻；第 4 次 → 四爻；第 3 次 → 三爻；第 2 次 → 二爻；第 1 次 → 初爻；输入方向：自下而上",
       "layout": "relationship",
-      "labelCount": 21,
+      "labelCount": 7,
+      "articleRefs": [
+        "B02-A04",
+        "B02-A05"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-03",
+        "B02-KC-04",
+        "B02-KC-09",
+        "B02-KC-10"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-03",
       "title": "阴爻与阳爻对照图",
-      "description": "阳爻：实线；阴爻：中断线；阴阳不是简单好坏标签",
+      "description": "阴爻与阳爻对照图：阳爻：实线；阴爻：中断线；阴阳不是简单好坏标签",
       "layout": "comparison",
-      "labelCount": 8,
+      "labelCount": 3,
+      "articleRefs": [
+        "B02-A07"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-13",
+        "B02-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-04",
       "title": "少阴、少阳、老阴、老阳四象对照",
-      "description": "少阴｜阴｜静｜不变；少阳｜阳｜静｜不变；老阴｜阴｜动｜变为阳；老阳｜阳｜动｜变为阴；数字与正反面映射：VERIFY_IN_REPOSITORY",
+      "description": "少阴、少阳、老阴、老阳四象对照：少阴｜阴｜静｜不变；少阳｜阳｜静｜不变；老阴｜阴｜动｜变为阳；老阳｜阳｜动｜变为阴；数字与正反面映射：VERIFY_IN_REPOSITORY",
       "layout": "comparison",
-      "labelCount": 13,
+      "labelCount": 5,
+      "articleRefs": [
+        "B02-A03",
+        "B02-A06"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-15",
+        "B02-KC-16",
+        "B02-KC-17",
+        "B02-KC-18"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-05",
       "title": "动爻如何形成变卦",
-      "description": "原始六爻；标记动爻；同位阴阳转换；形成变卦；静爻保持不变",
+      "description": "动爻如何形成变卦：原始六爻；标记动爻；同位阴阳转换；形成变卦；静爻保持不变",
       "layout": "timeline",
-      "labelCount": 15,
+      "labelCount": 5,
+      "articleRefs": [
+        "B02-A08",
+        "B02-A10"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-20",
+        "B02-KC-22",
+        "B02-KC-30"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-06",
       "title": "本卦、上卦、下卦与六个爻",
-      "description": "上三爻 → 上卦；下三爻 → 下卦；六爻整体 → 本卦",
+      "description": "本卦、上卦、下卦与六个爻：上三爻 → 上卦；下三爻 → 下卦；六爻整体 → 本卦",
       "layout": "flow",
-      "labelCount": 16,
+      "labelCount": 3,
+      "articleRefs": [
+        "B02-A09",
+        "B02-A11",
+        "B02-A12"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-21",
+        "B02-KC-23",
+        "B02-KC-24"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-07",
       "title": "六爻专业盘面结构总览",
-      "description": "爻位；阴阳；动静；地支；六亲；六神；世应；本卦；变卦",
+      "description": "六爻专业盘面结构总览：爻位；阴阳；动静；地支；六亲；六神；世应；本卦；变卦",
       "layout": "matrix",
-      "labelCount": 11,
+      "labelCount": 9,
+      "articleRefs": [
+        "B02-A01",
+        "B02-A11",
+        "B02-A14",
+        "B02-A15",
+        "B02-A16",
+        "B02-A17"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-27",
+        "B02-KC-34",
+        "B02-KC-35",
+        "B02-KC-37",
+        "B02-KC-38",
+        "B02-KC-40"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-08",
       "title": "八宫在六爻结构中的位置",
-      "description": "六十四卦；归入八宫；确定卦宫坐标；辅助生成世应与六亲等结构",
+      "description": "八宫在六爻结构中的位置：六十四卦；归入八宫；确定卦宫坐标；辅助生成世应与六亲等结构",
       "layout": "flow",
-      "labelCount": 14,
+      "labelCount": 4,
+      "articleRefs": [
+        "B02-A13",
+        "B02-A14"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-28",
+        "B02-KC-31",
+        "B02-KC-32",
+        "B02-KC-33"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-09",
       "title": "普通用户与专业用户的盘面阅读路径",
-      "description": "Guided：结论 → 支持与阻碍 → 变化 → 行动；Professional：盘面 → 世应 → 六亲 → 动变 → 专业依据；切换视图不重新排盘",
+      "description": "普通用户与专业用户的盘面阅读路径：Guided：结论 → 支持与阻碍 → 变化 → 行动；Professional：盘面 → 世应 → 六亲 → 动变 → 专业依据；切换视图不重新排盘",
       "layout": "comparison",
-      "labelCount": 15,
+      "labelCount": 3,
+      "articleRefs": [
+        "B02-A15",
+        "B02-A17",
+        "B02-A18"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-35",
+        "B02-KC-37",
+        "B02-KC-38",
+        "B02-KC-40"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-09.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B02-VIS-10",
       "title": "常见起卦错误检查图",
-      "description": "只记录五次；从上向下记录；未确认结果；中途随意修改；把重新解释当成重新起卦",
+      "description": "常见起卦错误检查图：只记录五次；从上向下记录；未确认结果；中途随意修改；把重新解释当成重新起卦",
       "layout": "timeline",
-      "labelCount": 15,
+      "labelCount": 5,
+      "articleRefs": [
+        "B02-A02",
+        "B02-A05"
+      ],
+      "knowledgeRefs": [
+        "B02-KC-10",
+        "B02-KC-11",
+        "B02-KC-12"
+      ],
       "publicPath": "/content-growth/visuals/B02-VIS-10.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-01",
       "title": "问题如何映射到用神",
-      "description": "不是用户凭关键词随意选择",
+      "description": "问题如何映射到用神：现实问题，问题主题，角色，六亲，用神候选，规则确定。不是用户凭关键词随意选择",
       "layout": "relationship",
-      "labelCount": 8,
+      "labelCount": 6,
+      "articleRefs": [
+        "B03-A01",
+        "B03-A09"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-01",
+        "B03-KC-11"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-02",
       "title": "六亲角色系统总览",
-      "description": "典型角色，不是固定词典",
+      "description": "六亲角色系统总览：现实任务，父母：文书 / 制度，兄弟：同类 / 分担，子孙：产出 / 缓解，妻财：收益 / 资源，官鬼：职责 / 约束。典型角色，不是固定词典",
       "layout": "relationship",
-      "labelCount": 8,
+      "labelCount": 6,
+      "articleRefs": [
+        "B03-A02",
+        "B03-A10"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-02",
+        "B03-KC-12"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-03",
       "title": "父母爻现实角色图",
-      "description": "具体解释取决于问题主题",
+      "description": "父母爻现实角色图：父母类角色，文书，合同，制度，资料，房屋，保护 / 支撑。具体解释取决于问题主题",
       "layout": "relationship",
-      "labelCount": 8,
+      "labelCount": 7,
+      "articleRefs": [
+        "B03-A03",
+        "B03-A11"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-03",
+        "B03-KC-13"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-04",
       "title": "兄弟、子孙、妻财、官鬼现实角色对照",
-      "description": "角色语义随上下文变化",
+      "description": "兄弟、子孙、妻财、官鬼现实角色对照：兄弟：同辈 / 伙伴 / 竞争，子孙：成果 / 解决 / 缓解，妻财：收益 / 资源 / 交易，官鬼：职位 / 责任 / 约束。角色语义随上下文变化",
       "layout": "comparison",
-      "labelCount": 5,
+      "labelCount": 4,
+      "articleRefs": [
+        "B03-A04",
+        "B03-A12"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-04",
+        "B03-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-05",
       "title": "世爻与应爻关系结构",
-      "description": "谁代表谁由问题上下文决定",
+      "description": "世爻与应爻关系结构：世，生 / 克 / 比和，应。谁代表谁由问题上下文决定",
       "layout": "relationship",
-      "labelCount": 7,
+      "labelCount": 3,
+      "articleRefs": [
+        "B03-A05",
+        "B03-A13"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-05",
+        "B03-KC-15"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-06",
       "title": "用神、原神、忌神、仇神关系图",
-      "description": "标签不是最终吉凶",
+      "description": "用神、原神、忌神、仇神关系图：原神：支持链，用神：核心观察对象，忌神：阻碍链，仇神：制约支持链。标签不是最终吉凶",
       "layout": "relationship",
-      "labelCount": 8,
+      "labelCount": 4,
+      "articleRefs": [
+        "B03-A06",
+        "B03-A14"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-06",
+        "B03-KC-16"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-07",
       "title": "专业关系如何变成 Guided 支持与阻碍",
-      "description": "AI 解释事实，不重新定义关系",
+      "description": "专业关系如何变成 Guided 支持与阻碍：专业关系，Relationship Meaning，Priority，Presenter，主要支持 / 主要阻碍。AI 解释事实，不重新定义关系",
       "layout": "comparison",
       "labelCount": 5,
+      "articleRefs": [
+        "B03-A07",
+        "B03-A15"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-07",
+        "B03-KC-17"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-08",
       "title": "角色映射为什么依赖问题主题",
-      "description": "相同术语不能机械套用",
+      "description": "角色映射为什么依赖问题主题：求职：职位 / 组织 / 收入，合作：对方 / 合同 / 分工，财务：资金 / 交易 / 风险。相同术语不能机械套用",
       "layout": "relationship",
-      "labelCount": 7,
+      "labelCount": 3,
+      "articleRefs": [
+        "B03-A08",
+        "B03-A16"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-08",
+        "B03-KC-18"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-09",
       "title": "Guided 与 Professional 如何呈现用神",
-      "description": "同一事实，不同信息密度",
+      "description": "Guided 与 Professional 如何呈现用神：Guided：核心观察对象 → 为什么重要 → 支持 / 阻碍，Professional：用神 → 角色来源 → 六亲 → 世应 → 依据。同一事实，不同信息密度",
       "layout": "comparison",
-      "labelCount": 5,
+      "labelCount": 2,
+      "articleRefs": [
+        "B03-A09",
+        "B03-A17"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-09",
+        "B03-KC-19"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-09.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B03-VIS-10",
       "title": "如何核验用神与角色判断",
-      "description": "检查角色不匹配与无依据 AI 表述",
+      "description": "如何核验用神与角色判断：问题，主题，角色，六亲，用神，关系，证据。检查角色不匹配与无依据 AI 表述",
       "layout": "relationship",
-      "labelCount": 8,
+      "labelCount": 7,
+      "articleRefs": [
+        "B03-A10",
+        "B03-A18"
+      ],
+      "knowledgeRefs": [
+        "B03-KC-10",
+        "B03-KC-20"
+      ],
       "publicPath": "/content-growth/visuals/B03-VIS-10.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-01",
       "title": "六爻旺衰判断的信息来源",
-      "description": "核心对象 → 月建 / 日辰 / 支持 / 制约 / 其它状态 → 综合状态",
+      "description": "六爻旺衰判断的信息来源：核心对象 → 月建 / 日辰 / 支持 / 制约 / 其它状态 → 综合状态。图示不包含未经核验的评分或规则优先级。",
       "layout": "stack",
-      "labelCount": 12,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A01",
+        "B04-A09"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-01",
+        "B04-KC-11"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-02",
       "title": "月建与日辰关系图",
-      "description": "月建 + 日辰 → 时间环境；不是二选一",
+      "description": "月建与日辰关系图：月建 + 日辰 → 时间环境；不是二选一。图示不包含未经核验的评分或规则优先级。",
       "layout": "relationship",
-      "labelCount": 11,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A02",
+        "B04-A10"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-02",
+        "B04-KC-12"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-03",
       "title": "支持、制约与消耗关系图",
-      "description": "生扶 / 克制 / 消耗 → 现代关系语义",
+      "description": "支持、制约与消耗关系图：生扶 / 克制 / 消耗 → 现代关系语义。图示不包含未经核验的评分或规则优先级。",
       "layout": "relationship",
-      "labelCount": 10,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A03",
+        "B04-A11"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-03",
+        "B04-KC-13"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-04",
       "title": "旬空、月破、日冲基础对照",
-      "description": "来源 / 基本含义 / 不能机械理解的方式",
+      "description": "旬空、月破、日冲基础对照：来源 / 基本含义 / 不能机械理解的方式。图示不包含未经核验的评分或规则优先级。",
       "layout": "comparison",
-      "labelCount": 6,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A04",
+        "B04-A12"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-04",
+        "B04-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-05",
       "title": "动爻到变爻的作用链",
-      "description": "原始状态 → 动 → 变化 → 变爻 → 新的关系信息",
+      "description": "动爻到变爻的作用链：原始状态 → 动 → 变化 → 变爻 → 新的关系信息。图示不包含未经核验的评分或规则优先级。",
       "layout": "flow",
-      "labelCount": 14,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A05",
+        "B04-A13"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-05",
+        "B04-KC-15"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-06",
       "title": "回头生与回头克对照",
-      "description": "动爻 ↔ 变爻；支持方向 / 制约方向",
+      "description": "回头生与回头克对照：动爻 ↔ 变爻；支持方向 / 制约方向。图示不包含未经核验的评分或规则优先级。",
       "layout": "comparison",
-      "labelCount": 7,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A06",
+        "B04-A14"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-06",
+        "B04-KC-16"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-07",
       "title": "进神、退神与变化方向",
-      "description": "增强趋势 / 保持 / 减弱趋势；趋势 ≠ 最终结果",
+      "description": "进神、退神与变化方向：增强趋势 / 保持 / 减弱趋势；趋势 ≠ 最终结果。图示不包含未经核验的评分或规则优先级。",
       "layout": "flow",
-      "labelCount": 12,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A07",
+        "B04-A15"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-07",
+        "B04-KC-17"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-08",
       "title": "伏神与飞神结构示意",
-      "description": "显性结构 ↔ 隐藏 / 伏藏结构",
+      "description": "伏神与飞神结构示意：显性结构 ↔ 隐藏 / 伏藏结构。图示不包含未经核验的评分或规则优先级。",
       "layout": "flow",
-      "labelCount": 11,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A08",
+        "B04-A16"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-08",
+        "B04-KC-18"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-09",
       "title": "为什么支持和阻碍可以同时存在",
-      "description": "Support A / Support B / Obstacle A / Constraint B → 综合判断",
+      "description": "为什么支持和阻碍可以同时存在：Support A / Support B / Obstacle A / Constraint B → 综合判断。图示不包含未经核验的评分或规则优先级。",
       "layout": "relationship",
-      "labelCount": 9,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A09",
+        "B04-A17"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-09",
+        "B04-KC-19"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-09.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-10",
       "title": "Evidence Conflict Resolution 产品流程",
-      "description": "Facts → Rules → Evidence → Conflict Resolution → ProductResultFacts → Guided Presentation → AI Explanation",
+      "description": "Evidence Conflict Resolution 产品流程：Facts → Rules → Evidence → Conflict Resolution → ProductResultFacts → Guided Presentation → AI Explanation。图示不包含未经核验的评分或规则优先级。",
       "layout": "timeline",
-      "labelCount": 17,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A10",
+        "B04-A18"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-10",
+        "B04-KC-20"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-10.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-11",
       "title": "应期候选是怎样形成的",
-      "description": "专业事实 + 时间规则 + 状态条件 → Timing Candidates → 用户可读时间提示；不是保证日期",
+      "description": "应期候选是怎样形成的：专业事实 + 时间规则 + 状态条件 → Timing Candidates → 用户可读时间提示；不是保证日期。图示不包含未经核验的评分或规则优先级。",
       "layout": "timeline",
-      "labelCount": 14,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A11",
+        "B04-A19"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-11",
+        "B04-KC-21"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-11.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B04-VIS-12",
       "title": "Professional 用户核验旺衰、动变与应期的路径",
-      "description": "核心对象 → 月日 → 旺衰 → 特殊状态 → 动变 → 关系 → Pattern → Evidence → Timing",
+      "description": "Professional 用户核验旺衰、动变与应期的路径：核心对象 → 月日 → 旺衰 → 特殊状态 → 动变 → 关系 → Pattern → Evidence → Timing。图示不包含未经核验的评分或规则优先级。",
       "layout": "timeline",
-      "labelCount": 19,
+      "labelCount": 3,
+      "articleRefs": [
+        "B04-A12",
+        "B04-A20"
+      ],
+      "knowledgeRefs": [
+        "B04-KC-12",
+        "B04-KC-22"
+      ],
       "publicPath": "/content-growth/visuals/B04-VIS-12.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-01",
       "title": "从现实问题到六爻决策报告",
-      "description": "从现实问题到六爻决策报告的结构化图示",
+      "description": "从现实问题到六爻决策报告：现实问题 → 明确问题 → 角色 → 起卦 → 专业判断 → 支持 / 阻碍 → 时间 → 行动",
       "layout": "timeline",
-      "labelCount": 11,
+      "labelCount": 8,
+      "articleRefs": [],
+      "knowledgeRefs": [
+        "B01-KC-01",
+        "B02-KC-01",
+        "B03-KC-01",
+        "B03-KC-02"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-02",
       "title": "换工作问题的决策结构",
-      "description": "换工作问题的决策结构的结构化图示",
+      "description": "换工作问题的决策结构：当前工作 → 新机会 → 收入 → 发展 → 压力 → 竞争 → 时间",
       "layout": "flow",
-      "labelCount": 11,
+      "labelCount": 7,
+      "articleRefs": [
+        "B05-A01",
+        "B05-A02",
+        "B05-A03",
+        "B05-A04",
+        "B05-A05"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-02",
+        "B02-KC-03",
+        "B03-KC-04",
+        "B03-KC-05"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-03",
       "title": "商业合作问题关系地图",
-      "description": "商业合作问题关系地图的结构化图示",
+      "description": "商业合作问题关系地图：自己 → 合作方 → 项目 → 合同 → 资源 → 收益 → 风险",
       "layout": "relationship",
-      "labelCount": 9,
+      "labelCount": 7,
+      "articleRefs": [
+        "B05-A06",
+        "B05-A07",
+        "B05-A08",
+        "B05-A09",
+        "B05-A10"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-03",
+        "B02-KC-05",
+        "B03-KC-07",
+        "B03-KC-08"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-04",
       "title": "项目推进的支持与阻碍模型",
-      "description": "项目推进的支持与阻碍模型的结构化图示",
+      "description": "项目推进的支持与阻碍模型：推动力 → 阻碍力 → 变化 → 行动",
       "layout": "flow",
-      "labelCount": 11,
+      "labelCount": 4,
+      "articleRefs": [
+        "B05-A06",
+        "B05-A07",
+        "B05-A08",
+        "B05-A09",
+        "B05-A10"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-04",
+        "B02-KC-07",
+        "B03-KC-10",
+        "B03-KC-11"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-05",
       "title": "资金与回款问题结构",
-      "description": "资金与回款问题结构的结构化图示",
+      "description": "资金与回款问题结构：款项 → 对方 → 合同 → 项目 → 障碍 → 时间",
       "layout": "relationship",
-      "labelCount": 9,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A11",
+        "B05-A12",
+        "B05-A13",
+        "B05-A14",
+        "B05-A15"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-05",
+        "B02-KC-09",
+        "B03-KC-13",
+        "B03-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-06",
       "title": "投资问题：六爻可以做什么 / 不能做什么",
-      "description": "投资问题：六爻可以做什么 / 不能做什么的结构化图示",
+      "description": "投资问题：六爻可以做什么 / 不能做什么：整理问题 → 识别风险 → 理解条件 → 不能替代投资研究 → 不能预测价格 → 不能保证收益",
       "layout": "comparison",
       "labelCount": 6,
+      "articleRefs": [
+        "B05-A11",
+        "B05-A12",
+        "B05-A13",
+        "B05-A14",
+        "B05-A15"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-06",
+        "B02-KC-11",
+        "B03-KC-16",
+        "B03-KC-17"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-07",
       "title": "关系问题分析结构",
-      "description": "关系问题分析结构的结构化图示",
+      "description": "关系问题分析结构：自己 → 对方 → 关系 → 阻碍 → 支持 → 变化",
       "layout": "relationship",
-      "labelCount": 9,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A16",
+        "B05-A17",
+        "B05-A18",
+        "B05-A19",
+        "B05-A20"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-07",
+        "B02-KC-13",
+        "B03-KC-19",
+        "B03-KC-20"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-08",
       "title": "复合问题如何从“能不能”变成可分析问题",
-      "description": "复合问题如何从“能不能”变成可分析问题的结构化图示",
+      "description": "复合问题如何从“能不能”变成可分析问题：能不能复合？ → 当前关系 → 阻碍 → 条件 → 变化 → 行动",
       "layout": "timeline",
-      "labelCount": 11,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A16",
+        "B05-A17",
+        "B05-A18",
+        "B05-A19",
+        "B05-A20"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-08",
+        "B02-KC-15",
+        "B03-KC-22",
+        "B03-KC-23"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-09",
       "title": "考试 / 求职问题结构",
-      "description": "考试 / 求职问题结构的结构化图示",
+      "description": "考试 / 求职问题结构：个人准备 → 目标 → 材料 / 流程 → 竞争 → 结果条件 → 时间",
       "layout": "flow",
-      "labelCount": 11,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A21",
+        "B05-A22",
+        "B05-A23",
+        "B05-A24",
+        "B05-A25"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-09",
+        "B02-KC-17",
+        "B03-KC-25",
+        "B03-KC-26"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-09.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-10",
       "title": "出行与计划问题结构",
-      "description": "出行与计划问题结构的结构化图示",
+      "description": "出行与计划问题结构：计划 → 交通 → 人员 → 外部条件 → 风险 → 时间 → 替代方案",
       "layout": "flow",
-      "labelCount": 11,
+      "labelCount": 7,
+      "articleRefs": [
+        "B05-A26",
+        "B05-A27",
+        "B05-A28",
+        "B05-A29",
+        "B05-A30"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-10",
+        "B02-KC-19",
+        "B03-KC-28",
+        "B03-KC-29"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-10.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-11",
       "title": "支持、风险、不确定性到行动",
-      "description": "支持、风险、不确定性到行动的结构化图示",
+      "description": "支持、风险、不确定性到行动：支持 → 风险 → 不确定性 → 行动",
       "layout": "flow",
-      "labelCount": 13,
+      "labelCount": 4,
+      "articleRefs": [
+        "B05-A01",
+        "B05-A02",
+        "B05-A03",
+        "B05-A04",
+        "B05-A05",
+        "B05-A21",
+        "B05-A22",
+        "B05-A23",
+        "B05-A24",
+        "B05-A25"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-11",
+        "B02-KC-21",
+        "B03-KC-31",
+        "B03-KC-32"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-11.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B05-VIS-12",
       "title": "如何把六爻报告转成现实行动计划",
-      "description": "如何把六爻报告转成现实行动计划的结构化图示",
+      "description": "如何把六爻报告转成现实行动计划：结果 → 重要事项 → 需要核实 → 现在行动 → 重新评估",
       "layout": "timeline",
-      "labelCount": 11,
+      "labelCount": 5,
+      "articleRefs": [
+        "B05-A26",
+        "B05-A27",
+        "B05-A28",
+        "B05-A29",
+        "B05-A30"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-12",
+        "B02-KC-23",
+        "B03-KC-34",
+        "B03-KC-35"
+      ],
       "publicPath": "/content-growth/visuals/B05-VIS-12.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-01",
       "title": "六爻知识体系总地图",
-      "description": "六爻知识体系总地图，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻知识体系总地图：起卦 → 排盘 → 角色 → 状态 → 变化 → 证据 → 时间 → 行动",
       "layout": "matrix",
-      "labelCount": 4,
+      "labelCount": 8,
+      "articleRefs": [
+        "B02-A01",
+        "B03-A01",
+        "B04-A01"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-01",
+        "B01-KC-02"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-01.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-02",
       "title": "六爻新手学习路径",
-      "description": "六爻新手学习路径，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻新手学习路径：认识六爻 → 学会起卦 → 看懂基础盘面 → 看报告 → 理解专业依据",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 5,
+      "articleRefs": [
+        "B01-A14",
+        "B02-A01",
+        "B02-A02"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-02",
+        "B01-KC-03"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-02.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-03",
       "title": "六爻专业学习路径",
-      "description": "六爻专业学习路径，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻专业学习路径：六亲 → 用神 → 世应 → 旺衰 → 动变 → 格局 → 应期",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 7,
+      "articleRefs": [
+        "B03-A01",
+        "B03-A15",
+        "B04-A20"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-03",
+        "B01-KC-04"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-03.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-04",
       "title": "从搜索问题到一次完整产品任务",
-      "description": "从搜索问题到一次完整产品任务，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "从搜索问题到一次完整产品任务：Search → Article → Question → Casting → Report → Knowledge → Action",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 7,
+      "articleRefs": [
+        "B01-A02",
+        "B05-A01",
+        "B05-A30"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-04",
+        "B01-KC-05"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-04.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-05",
       "title": "六爻报告信息层级",
-      "description": "六爻报告信息层级，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻报告信息层级：结论 → 关键支持 / 风险 → 变化 → 时间 → 行动 → 依据",
       "layout": "matrix",
-      "labelCount": 4,
+      "labelCount": 6,
+      "articleRefs": [
+        "B01-A14",
+        "B04-A20"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-05",
+        "B01-KC-06"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-05.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-06",
       "title": "Guided vs Professional 总对照",
-      "description": "Guided vs Professional 总对照，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "Guided vs Professional 总对照：Guided：理解 → Guided：行动 → Professional：核验 → Professional：深入",
       "layout": "comparison",
-      "labelCount": 7,
+      "labelCount": 4,
+      "articleRefs": [
+        "B01-A14",
+        "B01-A15"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-06",
+        "B01-KC-07"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-06.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-07",
       "title": "六爻专业事实如何成为用户解释",
-      "description": "六爻专业事实如何成为用户解释，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻专业事实如何成为用户解释：Facts → Rules → Evidence → ProductResultFacts → Presenter → User",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 6,
+      "articleRefs": [
+        "B01-A10",
+        "B04-A17"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-07",
+        "B01-KC-08"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-07.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-08",
       "title": "AI 在整个系统中的准确位置",
-      "description": "AI 在整个系统中的准确位置，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "AI 在整个系统中的准确位置：确定性系统 → 专业事实 → AI 解释 → AI 不重新排盘",
       "layout": "stack",
-      "labelCount": 11,
+      "labelCount": 4,
+      "articleRefs": [
+        "B01-A10",
+        "B01-A11",
+        "B01-A12"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-08",
+        "B01-KC-09"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-08.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-09",
       "title": "内容与报告如何双向连接",
-      "description": "内容与报告如何双向连接，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "内容与报告如何双向连接：Article → Tool → Report → Knowledge → Article",
       "layout": "cycle",
-      "labelCount": 10,
+      "labelCount": 5,
+      "articleRefs": [
+        "B05-A30",
+        "B01-A14"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-09",
+        "B01-KC-10"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-09.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-10",
       "title": "内容搜索与学习路径",
-      "description": "内容搜索与学习路径，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "内容搜索与学习路径：Search → Concept / Guide / FAQ / Case → Learn → Tool",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 4,
+      "articleRefs": [
+        "B02-A01",
+        "B01-A14"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-10",
+        "B01-KC-11"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-10.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-11",
       "title": "现实问题 Topic Map",
-      "description": "现实问题 Topic Map，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "现实问题 Topic Map：事业 → 商业 → 资金 → 关系 → 考试 → 出行",
       "layout": "matrix",
-      "labelCount": 4,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A01",
+        "B05-A06",
+        "B05-A11",
+        "B05-A16",
+        "B05-A21",
+        "B05-A26"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-11",
+        "B01-KC-12"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-11.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-12",
       "title": "内容可信性结构",
-      "description": "内容可信性结构，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "内容可信性结构：专业 Registry → Evidence → 明确边界 → Review → 可核验",
       "layout": "stack",
-      "labelCount": 11,
+      "labelCount": 5,
+      "articleRefs": [
+        "B01-A18",
+        "B04-A17"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-12",
+        "B01-KC-13"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-12.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-13",
       "title": "内容发布生命周期",
-      "description": "内容发布生命周期，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "内容发布生命周期：Draft → Domain Review → Editorial → SEO → Visual → Approved → Published → Refresh",
       "layout": "timeline",
-      "labelCount": 12,
+      "labelCount": 8,
+      "articleRefs": [
+        "B01-A18"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-13",
+        "B01-KC-14"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-13.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-14",
       "title": "六爻内容增长闭环",
-      "description": "六爻内容增长闭环，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻内容增长闭环：Search → Learn → Tool → Result → Knowledge → Return",
       "layout": "cycle",
-      "labelCount": 10,
+      "labelCount": 6,
+      "articleRefs": [
+        "B05-A30"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-14",
+        "B01-KC-15"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-14.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-15",
       "title": "移动端报告与知识阅读层级",
-      "description": "移动端报告与知识阅读层级，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "移动端报告与知识阅读层级：Result First → 支持 / 风险 → 行动 → 解释 → Knowledge Second",
       "layout": "matrix",
-      "labelCount": 4,
+      "labelCount": 5,
+      "articleRefs": [
+        "B01-A14"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-15",
+        "B01-KC-16"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-15.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     },
     {
       "visualAssetId": "B07-VIS-16",
       "title": "六爻产品可信性总览",
-      "description": "六爻产品可信性总览，展示六爻知识、报告或产品流程的结构关系。",
+      "description": "六爻产品可信性总览：确定性起卦 → 正式历法 → 规则化判断 → Evidence → AI 辅助解释 → Fallback",
       "layout": "stack",
-      "labelCount": 11,
+      "labelCount": 6,
+      "articleRefs": [
+        "B01-A09",
+        "B01-A18"
+      ],
+      "knowledgeRefs": [
+        "B01-KC-16",
+        "B01-KC-17"
+      ],
       "publicPath": "/content-growth/visuals/B07-VIS-16.svg",
+      "sourceRegistry": "Batch 07 visual-asset-registry.json",
       "status": "ART_DIRECTED_READY"
     }
   ]

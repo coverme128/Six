@@ -60,8 +60,9 @@ function includePreviewContent() {
 }
 
 function publicContentEntries(entries: any[]) {
-  if (includePreviewContent()) return entries;
-  return entries.filter((entry) => entry.reviewStatus === "PUBLICATION_READY");
+  const liuyaoProductEntries = entries.filter((entry) => String(entry.domain).toLowerCase() !== "meihua");
+  if (includePreviewContent()) return liuyaoProductEntries;
+  return liuyaoProductEntries.filter((entry) => entry.reviewStatus === "PUBLICATION_READY");
 }
 
 function matchesQuery(entry: any, query: Record<string, string>) {
@@ -107,7 +108,7 @@ async function databaseContentEntries() {
 async function contentEntries() {
   const databaseEntries = await databaseContentEntries();
   if (databaseEntries) return publicContentEntries(databaseEntries);
-  return contentRepository().list();
+  return publicContentEntries(contentRepository().list());
 }
 
 function hexagramDetail(slug: string) {
@@ -179,7 +180,13 @@ export class ContentController {
     if (!databaseEntries) return { items: contentRepository().getRelated(contentId).map(contentSummary) };
     const visibleEntries = publicContentEntries(databaseEntries);
     const source = visibleEntries.find((entry) => entry.contentId === contentId);
-    const relatedIds = new Set([...(source?.relatedContentIds ?? []), ...(source?.relatedKnowledgeIds ?? [])]);
+    const relatedIds = new Set([
+      ...(source?.relatedContentIds ?? []),
+      ...(source?.relatedKnowledgeIds ?? []),
+      ...(source?.prerequisiteContentIds ?? []),
+      source?.previousContentId,
+      source?.nextContentId,
+    ].filter(Boolean));
     return { items: visibleEntries.filter((entry) => relatedIds.has(entry.contentId)).map(contentSummary) };
   }
 

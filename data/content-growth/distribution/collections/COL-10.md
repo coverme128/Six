@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B05-A01
-2. B05-A06
-3. B05-A10
+1. [想换工作时，六爻应该怎样问才有决策价值](/content/tutorial/job-change-01)
+2. [开始一项商业合作前，六爻可以帮助看什么](/content/tutorial/business-partnership-06)
+3. [商业项目什么时候值得继续，什么时候应该重新评估](/content/tutorial/project-10)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

@@ -9,7 +9,7 @@ async function createReport(request) {
       topic: "career",
       subtype: "job_search",
       values: [7, 8, 9, 7, 8, 6],
-      calendar: { timezone: "Asia/Shanghai" },
+      calendar: { instantUtc: "2026-07-21T01:00:00Z", timezone: "Asia/Shanghai" },
     },
   });
   expect(response.ok()).toBeTruthy();
@@ -30,9 +30,15 @@ test("core public surfaces keep approved visual structure", async ({ page, reque
   await expect(page.locator(".product-hero")).toHaveScreenshot("homepage-core.png", { animations: "disabled" });
 
   await page.goto("/content");
-  await expect(page.getByRole("heading", { name: "按你的目标，找到下一步" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "先找到你要解决的事，再进入对应知识" })).toBeVisible();
   await stablePage(page);
   await expect(page.locator(".content-hub-hero")).toHaveScreenshot("learn-hub-core.png", { animations: "disabled" });
+  await expect(page.locator(".visual-atlas")).toHaveScreenshot("learn-hub-visual-atlas.png", { animations: "disabled" });
+
+  await page.goto("/content/library?module=B03&format=KNOWLEDGE");
+  await expect(page.getByRole("heading", { name: "从一个问题，找到刚好需要的内容" })).toBeVisible();
+  await stablePage(page);
+  await expect(page.locator(".library-hero")).toHaveScreenshot("content-library-core.png", { animations: "disabled" });
 
   await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
   await expect(page.getByRole("heading", { name: "为什么不建议对同一个问题反复起卦" })).toBeVisible();

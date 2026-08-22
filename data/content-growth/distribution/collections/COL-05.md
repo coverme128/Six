@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B02-A15
-2. B03-A13
-3. B03-A15
+1. [世爻和应爻是什么：六爻关系判断的基本坐标](/content/tutorial/shi-ying-lines-liuyao)
+2. [世爻在六爻判断中代表什么](/content/tutorial/what-shi-line-represents)
+3. [世应关系为什么是六爻关系分析的重要基础](/content/tutorial/why-shi-ying-relationship-matters)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B02-A08
-2. B04-A10
-3. B04-A12
+1. [动爻和静爻有什么区别](/content/tutorial/moving-vs-static-lines)
+2. [动爻为什么是六爻变化判断的重要信息](/content/tutorial/moving-line-dynamics)
+3. [回头生与回头克应该怎样理解](/content/tutorial/returning-support-and-control)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

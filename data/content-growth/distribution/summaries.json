@@ -15,10 +15,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/liuyao-suitable-questions",
+    "route": "/content/tutorial/liuyao-suitable-questions",
     "visual_ref": "B07-VIS-01",
     "reuse_status": "PUBLIC",
-    "version": "1.0"
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/liuyao-suitable-questions",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-02",
@@ -36,10 +38,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/how-to-ask-liuyao-question",
+    "route": "/content/tutorial/how-to-ask-liuyao-question",
     "visual_ref": "B07-VIS-02",
     "reuse_status": "PUBLIC",
-    "version": "1.0"
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/how-to-ask-liuyao-question",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-03",
@@ -57,10 +61,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/deterministic-chart-vs-ai-explanation",
+    "route": "/content/tutorial/deterministic-chart-vs-ai-explanation",
     "visual_ref": "B07-VIS-03",
     "reuse_status": "PUBLIC",
-    "version": "1.0"
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/deterministic-chart-vs-ai-explanation",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-04",
@@ -78,10 +84,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/how-to-evaluate-liuyao-ai-report-trust",
+    "route": "/content/tutorial/how-to-evaluate-liuyao-ai-report-trust",
     "visual_ref": "B07-VIS-04",
     "reuse_status": "PUBLIC",
-    "version": "1.0"
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/how-to-evaluate-liuyao-ai-report-trust",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-05",
@@ -99,10 +107,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/what-is-liuyao-structured-analysis",
+    "route": "/content/tutorial/what-is-liuyao-structured-analysis",
     "visual_ref": "B07-VIS-05",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/what-is-liuyao-structured-analysis",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-06",
@@ -120,10 +130,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/complete-liuyao-casting-process",
+    "route": "/content/tutorial/complete-liuyao-casting-process",
     "visual_ref": "B07-VIS-06",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/complete-liuyao-casting-process",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-07",
@@ -141,10 +153,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/four-line-types-young-old-yin-yang",
+    "route": "/content/tutorial/four-line-types-young-old-yin-yang",
     "visual_ref": "B07-VIS-07",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/four-line-types-young-old-yin-yang",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-08",
@@ -162,10 +176,12 @@
     ],
     "learning_stage": "入门",
     "cta": "阅读完整指南",
-    "route": "/knowledge/liuyao/first-time-read-liuyao-chart",
+    "route": "/content/tutorial/first-time-read-liuyao-chart",
     "visual_ref": "B07-VIS-08",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/knowledge/liuyao/first-time-read-liuyao-chart",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-09",
@@ -183,10 +199,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/what-is-yongshen-in-liuyao",
+    "route": "/content/tutorial/what-is-yongshen-in-liuyao",
     "visual_ref": "B07-VIS-09",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/what-is-yongshen-in-liuyao",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-10",
@@ -204,10 +222,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/six-relations-are-role-categories",
+    "route": "/content/tutorial/six-relations-are-role-categories",
     "visual_ref": "B07-VIS-10",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/six-relations-are-role-categories",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-11",
@@ -225,10 +245,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/why-shi-ying-relationship-matters",
+    "route": "/content/tutorial/why-shi-ying-relationship-matters",
     "visual_ref": "B07-VIS-11",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/why-shi-ying-relationship-matters",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-12",
@@ -246,10 +268,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/audit-yongshen-and-role-selection",
+    "route": "/content/tutorial/audit-yongshen-and-role-selection",
     "visual_ref": "B07-VIS-12",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/audit-yongshen-and-role-selection",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-13",
@@ -267,10 +291,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/liuyao-strength-status",
+    "route": "/content/tutorial/liuyao-strength-status",
     "visual_ref": "B07-VIS-13",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/liuyao-strength-status",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-14",
@@ -288,10 +314,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/moving-line-dynamics",
+    "route": "/content/tutorial/moving-line-dynamics",
     "visual_ref": "B07-VIS-14",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/moving-line-dynamics",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-15",
@@ -309,10 +337,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/evidence-conflict-in-liuyao",
+    "route": "/content/tutorial/evidence-conflict-in-liuyao",
     "visual_ref": "B07-VIS-15",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/evidence-conflict-in-liuyao",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-16",
@@ -330,10 +360,12 @@
     ],
     "learning_stage": "专业",
     "cta": "阅读完整指南",
-    "route": "/liuyao/learn/audit-strength-dynamics-timing",
+    "route": "/content/tutorial/audit-strength-dynamics-timing",
     "visual_ref": "B07-VIS-16",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/learn/audit-strength-dynamics-timing",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-17",
@@ -351,10 +383,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/job-change-01",
+    "route": "/content/tutorial/job-change-01",
     "visual_ref": "B07-VIS-01",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/job-change-01",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-18",
@@ -372,10 +406,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/business-partnership-06",
+    "route": "/content/tutorial/business-partnership-06",
     "visual_ref": "B07-VIS-02",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/business-partnership-06",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-19",
@@ -393,10 +429,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/payment-collection-11",
+    "route": "/content/tutorial/payment-collection-11",
     "visual_ref": "B07-VIS-03",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/payment-collection-11",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-20",
@@ -414,10 +452,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/investment-context-13",
+    "route": "/content/tutorial/investment-context-13",
     "visual_ref": "B07-VIS-04",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/investment-context-13",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-21",
@@ -435,10 +475,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/relationship-16",
+    "route": "/content/tutorial/relationship-16",
     "visual_ref": "B07-VIS-05",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/relationship-16",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-22",
@@ -456,10 +498,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/exam-21",
+    "route": "/content/tutorial/exam-21",
     "visual_ref": "B07-VIS-06",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/exam-21",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-23",
@@ -477,10 +521,12 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/travel-26",
+    "route": "/content/tutorial/travel-26",
     "visual_ref": "B07-VIS-07",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/travel-26",
+    "asset_status": "ASSET_READY_LOCAL"
   },
   {
     "summary_card_id": "B07-SUM-24",
@@ -498,9 +544,11 @@
     ],
     "learning_stage": "现实决策",
     "cta": "阅读完整指南",
-    "route": "/liuyao/topics/schedule-30",
+    "route": "/content/tutorial/schedule-30",
     "visual_ref": "B07-VIS-08",
-    "reuse_status": "PENDING_SOURCE_OR_EDITORIAL_REVIEW",
-    "version": "1.0"
+    "reuse_status": "PUBLIC",
+    "version": "1.0",
+    "source_route": "/liuyao/topics/schedule-30",
+    "asset_status": "ASSET_READY_LOCAL"
   }
 ]

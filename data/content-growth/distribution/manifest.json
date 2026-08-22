@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T00:00:00.000Z",
+  "generatedAt": "2026-08-22T00:00:00.000Z",
   "sourcePackage": "liuyao-content-growth-batch-07-launch-closure-v1.0.zip",
   "counts": {
     "socialContent": 72,
@@ -8,7 +8,16 @@
     "collections": 12,
     "shortVideoScripts": 50,
     "shortVideoCovers": 50,
-    "shortVideoStoryboards": 50
+    "shortVideoStoryboards": 50,
+    "batch07NewVisuals": 16,
+    "batch07NewVideos": 6
+  },
+  "integrity": {
+    "summaryRoutesResolved": true,
+    "socialSourcesResolved": true,
+    "collectionSourcesResolved": true,
+    "videoSourcesResolved": true,
+    "batch07StoryboardFieldsPresent": true
   },
   "status": "COMPLETE",
   "note": "短视频源包交付物为脚本；本地成品包补充了逐条封面和可拍摄分镜，不虚构已编码的视频文件。"

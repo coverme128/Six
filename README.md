@@ -16,7 +16,7 @@ Current Public Beta P2.1/P3-A status: `LIVE_PROVIDER_SMOKE_PENDING`. The local s
 
 Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
 
-Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report and Learn Hub journeys, P0/P1 visual system, all 68 content visuals, distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
+Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report journey and all-user Learn Hub now include task-led entry, shared content navigation, a six-stage curriculum, six reality topics, report guidance, a 24-case lab, a combined-filter library, all 68 linked content visuals, and Liuyao-only public API filtering. Distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
 
 Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
 
@@ -107,6 +107,7 @@ pnpm run content:qa
 pnpm run content:seo
 pnpm run content:rehearsal
 pnpm run content:finalize-local
+pnpm run content:test-assets
 pnpm run validate
 pnpm run validate:p1
 pnpm run validate:p2

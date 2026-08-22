@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B02-A02
-2. B02-A05
-3. B02-A11
+1. [一次完整的六爻起卦流程是怎样的](/content/tutorial/complete-liuyao-casting-process)
+2. [六爻为什么要自下而上记录](/content/tutorial/why-liuyao-record-bottom-up)
+3. [一个六爻卦由哪些基本部分组成](/content/tutorial/parts-of-liuyao-hexagram)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B01-A14
-2. B01-A15
-3. B04-A20
+1. [普通用户应该怎样阅读一份六爻报告](/content/tutorial/guided-reading-liuyao-report)
+2. [专业用户应该怎样核验六爻报告](/content/tutorial/professional-verification-liuyao-report)
+3. [怎样核验一份六爻报告中的旺衰、动变与应期判断](/content/tutorial/audit-strength-dynamics-timing)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

@@ -14,10 +14,10 @@
 
 ## 推荐顺序
 
-1. B01-A09
-2. B01-A10
-3. B01-A18
+1. [系统如何完成一次六爻排盘](/content/tutorial/how-liuyao-system-generates-report)
+2. [确定性排盘与 AI 解释有什么区别](/content/tutorial/deterministic-chart-vs-ai-explanation)
+3. [如何判断一份六爻 AI 报告是否可信](/content/tutorial/how-to-evaluate-liuyao-ai-report-trust)
 
 ## 下一步
 
-开始一次六爻占问
+[开始一次六爻占问](/#scenario-step)

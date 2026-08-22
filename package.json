@@ -29,6 +29,7 @@
     "content:links": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts links",
     "content:seo": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts seo",
     "content:qa": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts qa",
+    "content:test-assets": "node --import tsx --test tests/content-batch07-assets.test.ts",
     "content:rehearsal": "pnpm --filter @six/domain build && tsx scripts/content/manage.ts rehearsal",
     "content:finalize-local": "node scripts/content/finalize-local-release.mjs",
     "smoke:ai:live": "pnpm --filter @six/domain build && tsx scripts/ai/live-smoke.ts",

@@ -69,10 +69,18 @@ test("Homepage guides users from value to scenario and one focused question", as
 test("Knowledge center guides users by goal, stage, topic, and report order", async ({ page }) => {
   await page.goto("/content");
 
-  await expect(page.getByRole("heading", { name: "按你的目标，找到下一步" })).toBeVisible();
-  await expect(page.locator(".hub-metrics")).toContainText("603");
-  await expect(page.locator(".hub-metrics")).toContainText("6个现实问题专题");
-  await expect(page.locator(".learning-intent")).toHaveCount(3);
+  await expect(page.getByRole("heading", { name: "先找到你要解决的事，再进入对应知识" })).toBeVisible();
+  await expect(page.locator(".content-section-nav a")).toHaveCount(7);
+  await expect(page.locator(".hub-metrics")).toContainText("128");
+  await expect(page.locator(".hub-metrics")).toContainText("215");
+  await expect(page.locator(".hub-metrics")).toContainText("170");
+  await expect(page.locator(".journey-tabs [role=tab]")).toHaveCount(4);
+  await expect(page.locator(".journey-panel li")).toHaveCount(3);
+  await page.locator(".journey-tabs [role=tab]").first().focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator(".journey-tabs").getByRole("tab", { name: "带着问题来" })).toHaveAttribute("aria-selected", "true");
+  await page.locator(".journey-tabs").getByRole("tab", { name: "系统与进阶" }).click();
+  await expect(page.locator(".journey-panel h3")).toContainText("角色、力量、动变和时间");
   await expect(page.locator(".learning-rail .path-step")).toHaveCount(6);
   await expect(page.locator(".path-step.active")).toContainText("先知道怎么使用");
   await expect(page.locator(".stage-reading-list a")).toHaveCount(3);
@@ -86,14 +94,83 @@ test("Knowledge center guides users by goal, stage, topic, and report order", as
   const topicImageAlts = await page.locator(".topic-card img").evaluateAll((images) => images.map((image) => image.getAttribute("alt")));
   expect(topicImageAlts.every((alt) => Boolean(alt))).toBe(true);
 
+  await expect(page.locator(".visual-atlas-tabs [role=tab]")).toHaveCount(6);
+  const visualGroups = [["全局导览", 16], ["使用与可信", 8], ["起卦与盘面", 10], ["角色与关系", 10], ["力量与时间", 12], ["现实问题", 12]] as const;
+  for (const [tab, count] of visualGroups) {
+    await page.locator(".visual-atlas-tabs").getByRole("tab", { name: new RegExp(tab) }).click();
+    await expect(page.locator(".visual-atlas-thumbnails button")).toHaveCount(count);
+  }
+  await page.locator(".visual-atlas-tabs").getByRole("tab", { name: /全局导览/ }).click();
+  await page.locator(".visual-atlas-thumbnails").getByRole("button", { name: /AI 在整个系统中的准确位置/ }).click();
+  await expect(page.locator(".visual-atlas-preview h3")).toHaveText("AI 在整个系统中的准确位置");
+  await page.getByRole("button", { name: "放大查看：AI 在整个系统中的准确位置" }).click();
+  await expect(page.getByRole("dialog", { name: "AI 在整个系统中的准确位置" })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog", { name: "AI 在整个系统中的准确位置" })).toBeHidden();
+
   await expect(page.locator(".report-step-card")).toHaveCount(4);
   await expect(page.locator(".report-step-card").first()).toContainText("先确认报告在回答什么");
   await expect(page.locator(".report-step-card").last()).toContainText("最后核对专业依据");
-  await expect(page.locator(".library-module-select select")).toHaveValue("B01");
-  await expect(page.locator(".library-list .content-card")).toHaveCount(12);
+  await expect(page.locator(".case-lab-columns > section")).toHaveCount(2);
+  await expect(page.locator(".case-lab-columns li")).toHaveCount(8);
+  await expect(page.locator(".reference-gateway-grid > section")).toHaveCount(3);
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);
+});
+
+test("Complete library supports combined topic, format, depth, and search filters", async ({ page, request }) => {
+  const contentResponse = await request.get(`${apiBaseURL}/content`);
+  expect(contentResponse.ok()).toBeTruthy();
+  const contentBody = await contentResponse.json();
+  expect(contentBody.items.some((item) => item.domain === "meihua")).toBe(false);
+
+  await page.goto("/content/library?module=B03&format=KNOWLEDGE");
+
+  await expect(page.getByRole("heading", { name: "从一个问题，找到刚好需要的内容" })).toBeVisible();
+  await expect(page.locator(".content-section-nav a")).toHaveCount(7);
+  await expect(page.locator(".library-filter-panel button[aria-pressed=true]")).toContainText("角色与关系");
+  await expect(page.locator(".library-format-tabs button[aria-pressed=true]")).toHaveText("知识卡");
+  await expect(page.locator(".library-results-heading h2")).toHaveText("找到 35 条内容");
+  await expect(page.locator(".library-result-list > a")).toHaveCount(18);
+
+  await page.getByRole("button", { name: "清除筛选" }).click();
+  await page.locator(".library-filter-panel").getByRole("button", { name: /教学案例/ }).click();
+  await expect(page.locator(".library-results-heading h2")).toHaveText("找到 24 条内容");
+  await page.locator(".library-format-tabs").getByRole("button", { name: "案例", exact: true }).click();
+  await expect(page.locator(".library-results-heading h2")).toHaveText("找到 24 条内容");
+
+  await page.locator(".library-query-controls input").fill("月破");
+  await expect(page.locator(".library-results-heading h2")).not.toHaveText("找到 24 条内容");
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(2);
+});
+
+test("Batch 07 operations preview exposes complete, linked asset groups", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "one desktop audit covers the internal operations page");
+  await page.goto("/content/distribution");
+
+  await expect(page.getByRole("heading", { name: "Batch 07 分发资产" })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  await expect(page.locator(".operations-hero")).toContainText("新增视觉16");
+  await expect(page.locator(".operations-hero")).toContainText("新增视频6");
+  await expect(page.locator(".operations-tabs [role=tab]")).toHaveCount(4);
+  await expect(page.locator(".social-assets .operations-asset")).toHaveCount(12);
+
+  await page.getByRole("tab", { name: /视频资产/ }).click();
+  await expect(page.locator(".operations-toolbar select")).toHaveValue("BATCH_07");
+  await expect(page.locator(".video-assets .operations-asset")).toHaveCount(6);
+  await expect(page.locator(".video-assets a", { hasText: "查看分镜" }).first()).toHaveAttribute("href", /B07-VIDEO-01\.html$/);
+  await expect(page.locator(".video-assets a", { hasText: "源内容" })).toHaveCount(6);
+
+  await page.getByRole("tab", { name: /摘要卡/ }).click();
+  await expect(page.locator(".summary-assets .operations-asset")).toHaveCount(12);
+  const summaryRoutes = await page.locator(".summary-assets a").evaluateAll((links: HTMLAnchorElement[]) => links.map((link) => link.getAttribute("href")));
+  expect(summaryRoutes.every((route) => route?.startsWith("/content/"))).toBe(true);
+
+  await page.getByRole("tab", { name: /学习合集/ }).click();
+  await expect(page.locator(".collection-assets .collection-asset")).toHaveCount(12);
+  await expect(page.locator(".collection-assets a")).toHaveCount(36);
 });
 
 test("Topic detail uses scenario-specific copy, visual, and reading lenses", async ({ page }, testInfo) => {
@@ -113,6 +190,8 @@ test("Tutorial article separates guidance from internal notes and exposes relate
   await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
 
   await expect(page.getByRole("heading", { name: "为什么不建议对同一个问题反复起卦", level: 1 })).toBeVisible();
+  await expect(page.locator(".content-breadcrumb")).toContainText("知识中心");
+  await expect(page.locator(".content-sequence-nav a")).toHaveCount(2);
   await expect(page.locator(".article-deck")).toContainText("保存第一次报告，观察现实");
   await expect(page.locator(".article-takeaway-grid > div")).toHaveCount(4);
   await expect(page.locator(".article-resource-nav [role=tab]")).toHaveCount(3);
