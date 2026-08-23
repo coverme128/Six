@@ -54,7 +54,8 @@ Reused existing `CONTENT_SCHEMA_V1`, `HybridContentRepository`, SEO helpers, key
 Content was mapped into existing content routes. Package references to `/app/liuyao` were adapted to the current workbench route `/`.
 
 - `/content` exposes the 16 new visual assets as a four-theme, selectable, zoomable visual atlas with links to real tutorials.
-- `/content/distribution` is a noindex operations preview for all 72 social cards, 24 summary cards, 50 video packages, and 12 collections.
+- `/content/distribution` is a noindex operations preview for 72 social cards, 24 summary cards and 50 video packages.
+- `/content/collections` and `/content/collection/[slug]` expose all 12 collections as public guided-learning journeys using their completed covers and 36 resolved content links.
 - All 24 summary cards resolve to current `/content/*` routes and are marked reusable.
 - All 12 collection documents contain clickable current routes rather than package IDs.
 - The six Batch 07 videos have complete local covers and shootable storyboards. The source package contains scripts, not encoded MP4 files.

@@ -79,7 +79,7 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 - Homepage primary actions: `开始六爻分析` and `进入学习中心`.
 - Direct shortcuts: relationship, career, wealth, and business.
 - Relationship-specific Guided presentation implemented without modifying formal assessment facts.
-- Dedicated Learn Hub implemented with starter content, six topic entries, learning columns, filters, and progressive disclosure.
+- Dedicated Learn Hub implemented with four intent-led entries, 12 public learning collections, 10 scenario-matched topic entries, six learning stages, combined filters, and progressive disclosure.
 - Six topic landing pages and one six-stage guided learning path are `PUBLICATION_READY`.
 - Batch content: 445 Liuyao entries.
 - Runtime catalog: 603 entries including 158 system seed entries.

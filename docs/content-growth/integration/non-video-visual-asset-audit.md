@@ -1,12 +1,12 @@
 # Non-Video Visual Asset Completion Audit
 
-Last verified: 2026-08-22
+Last verified: 2026-08-23
 
 Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 
 ## Conclusion
 
-Every declared and product-required non-video visual layer now has a final local file. The final audit found one real gap: all 12 Batch 07 learning collections had complete JSON and Markdown copy but no cover artwork, despite being marked `ASSET_READY_LOCAL`. Twelve deterministic SVG collection covers have now been generated, registered, rendered in the operations preview, and protected by file-level tests.
+Every declared and product-required non-video visual layer now has a final local file and a user-facing product route. The 12 Batch 07 learning collections have deterministic covers and public guided-learning pages. Reality-topic coverage now matches all 10 homepage scenarios, and the homepage has dedicated desktop and mobile report-result visuals.
 
 Video files, video covers, and storyboards are excluded from this audit by request.
 
@@ -20,8 +20,9 @@ Video files, video covers, and storyboards are excluded from this audit by reque
 | Batch 07 learning collection covers | 12 SVG | collection ID, audience, 3-step learning order, source titles |
 | Liuyao editorial system, excluding video | 22 PNG/SVG variants across 9 asset families | final manifest path verification |
 | Report visualization reference set | 14 SVG | registered product visualization set |
-| Reality-topic illustrations | 6 SVG | one distinct illustration per topic |
-| Total | 218 final files | automated local verification |
+| Reality-topic illustrations | 10 SVG | one distinct illustration per homepage scenario |
+| Homepage product proof | 2 SVG | desktop report composition and mobile report summary strip |
+| Total | 224 final files | automated local verification |
 
 ## Collection cover implementation
 
@@ -39,8 +40,10 @@ Each file is 1200x675, uses the `LIUYAO_VISUAL_SYSTEM_V1` marker, has an accessi
 
 - `data/content-growth/distribution/collections.json` now includes a real `cover_path` for every collection.
 - `data/content-growth/distribution/manifest.json` reports `collectionCovers: 12` and verifies that every cover file exists.
-- `/content/distribution` renders the cover with the collection copy and all 36 source-content links.
-- `tests/content-batch07-assets.test.ts` verifies all 218 non-video files at their declared layers.
+- `/content/collections` exposes all 12 collections by learning stage; `/content/collection/[slug]` provides audience, outcome, ordered reading and previous/next navigation.
+- `/content/distribution` remains the noindex operations preview for channel-production derivatives.
+- `/content` exposes 10 reality topics matching all homepage scenarios, while `/content/topic/[slug]` provides a task-specific visual, question examples, four reading lenses and a safety boundary.
+- `tests/content-batch07-assets.test.ts` verifies all 224 non-video files at their declared layers.
 
 ## Release boundary
 

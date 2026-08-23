@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">六爻可复核报告结果预览</title><desc id="desc">报告先给出总体方向，再展示支持因素、主要阻碍和可以执行的下一步。</desc>
+  <rect width="1600" height="900" fill="#F7F4EC"/>
+  <g transform="translate(810 70)">
+    <rect x="22" y="28" width="670" height="744" rx="12" fill="#DAD4C8" opacity=".55"/>
+    <rect width="670" height="744" rx="10" fill="#FFFCF6" stroke="#CFC5B6" stroke-width="2"/>
+    <rect width="670" height="72" rx="10" fill="#171717"/><rect y="62" width="670" height="10" fill="#171717"/>
+    <text x="34" y="44" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FBF8F1">六爻问题分析报告</text><text x="635" y="44" text-anchor="end" font-family="system-ui,sans-serif" font-size="14" fill="#CFC5B6">事实已核对</text>
+    <text x="34" y="116" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#496F63">总体判断</text>
+    <text x="34" y="158" font-family="system-ui,sans-serif" font-size="30" font-weight="760" fill="#171717">可以继续，但先验证关键条件</text>
+    <text x="34" y="194" font-family="system-ui,sans-serif" font-size="17" fill="#5D5A54">当前有推进基础，节奏不宜过快。</text>
+    <rect x="34" y="226" width="286" height="156" rx="8" fill="#E8EFEB" stroke="#AFC5BD"/>
+    <circle cx="64" cy="257" r="12" fill="#496F63"/><text x="88" y="264" font-family="system-ui,sans-serif" font-size="18" font-weight="720" fill="#171717">支持因素</text>
+    <text x="58" y="307" font-family="system-ui,sans-serif" font-size="16" fill="#384C5F">现实条件正在逐步落实</text><text x="58" y="340" font-family="system-ui,sans-serif" font-size="16" fill="#384C5F">双方仍有继续沟通空间</text>
+    <rect x="350" y="226" width="286" height="156" rx="8" fill="#F4E5E1" stroke="#D7B3AA"/>
+    <circle cx="380" cy="257" r="12" fill="#A33A2B"/><text x="404" y="264" font-family="system-ui,sans-serif" font-size="18" font-weight="720" fill="#171717">主要阻碍</text>
+    <text x="374" y="307" font-family="system-ui,sans-serif" font-size="16" fill="#653B35">承诺还没有转成明确行动</text><text x="374" y="340" font-family="system-ui,sans-serif" font-size="16" fill="#653B35">时间安排仍存在不确定性</text>
+    <rect x="34" y="414" width="602" height="154" rx="8" fill="#F6F1E7" stroke="#D6C7AA"/>
+    <text x="58" y="449" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#9A6A36">现在最值得做</text>
+    <circle cx="72" cy="494" r="19" fill="#171717"/><text x="72" y="501" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#fff">1</text><text x="108" y="501" font-family="system-ui,sans-serif" font-size="17" font-weight="650" fill="#171717">确认对方下一次实际行动的时间</text>
+    <circle cx="72" cy="540" r="19" fill="#496F63"/><text x="72" y="547" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#fff">2</text><text x="108" y="547" font-family="system-ui,sans-serif" font-size="17" font-weight="650" fill="#171717">为延期准备一个可接受的边界</text>
+    <path d="M34 608h602" stroke="#CFC5B6"/>
+    <text x="34" y="646" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#5D5A54">判断依据</text><text x="34" y="680" font-family="system-ui,sans-serif" font-size="16" fill="#171717">问题原文 · 起卦时间 · 盘面事实 · 证据链</text>
+    <rect x="508" y="626" width="128" height="54" rx="7" fill="#fff" stroke="#496F63" stroke-width="2"/><text x="572" y="660" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#496F63">展开复核</text>
+  </g>
+  <path d="M760 170C635 228 615 380 704 480" fill="none" stroke="#496F63" stroke-opacity=".12" stroke-width="54" stroke-linecap="round"/>
+</svg>

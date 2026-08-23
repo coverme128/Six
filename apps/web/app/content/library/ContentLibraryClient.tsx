@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, CircleHelp, FileText, Layers3, Search } from "luc
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ContentSummary } from "../../lib/api";
 import { ContentSectionNav } from "../ContentSectionNav";
+import { contentVisualFor } from "../contentVisuals";
 
 const moduleFilters = [
   { key: "all", label: "全部主题", detail: "浏览完整内容库", match: () => true },
@@ -126,11 +127,12 @@ export function ContentLibraryClient() {
             <div className="library-result-list">
               {filtered.slice(0, limit).map((item) => {
                 const Icon = resultIcon(item);
+                const visual = contentVisualFor(item);
                 return (
                   <a href={contentHref(item)} key={item.contentId}>
-                    <Icon aria-hidden="true" size={20} />
+                    <img src={visual.src} alt="" aria-hidden="true" loading="lazy" />
                     <div><span>{item.contentId.includes("-CASE-") ? "教学案例" : typeLabels[item.contentType] ?? item.contentType} · {difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span><strong>{item.title}</strong><small>{item.summary}</small></div>
-                    <ArrowRight aria-hidden="true" size={17} />
+                    <span className="library-result-action"><Icon aria-hidden="true" size={17} /><ArrowRight aria-hidden="true" size={17} /></span>
                   </a>
                 );
               })}

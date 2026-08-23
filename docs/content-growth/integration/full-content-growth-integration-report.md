@@ -6,7 +6,7 @@
 - CONTENT_INTEGRATED: yes
 - EXPERIENCE_READY: local product and asset scope complete; staging not verified
 - SEO_READY: 421 `PUBLICATION_READY` batch entries are indexable; `DEMO_ONLY` remains noindex/not-public
-- LEARN_HUB_READY: yes; designed hub, six topic landings, and one six-stage learning path
+- LEARN_HUB_READY: yes; designed hub, 10 scenario-matched public topics, 12 public learning collections, and one six-stage learning path
 - STAGING_READY: no
 - PRODUCTION_READY: no
 

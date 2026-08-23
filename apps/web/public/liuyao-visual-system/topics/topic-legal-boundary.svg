@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">纠纷与协商处理边界图</title><desc id="desc">从事实证据出发，比较协商、等待和专业介入三种处理路径。</desc>
+  <rect width="1200" height="600" fill="#FBF8F1"/><rect x="420" y="48" width="360" height="92" rx="8" fill="#171717"/><text x="600" y="105" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="750" fill="#FBF8F1">先固定事实与证据</text>
+  <path d="M600 140v86M600 226H240v65M600 226v65M600 226h360v65" fill="none" stroke="#384C5F" stroke-width="6"/>
+  <circle cx="600" cy="226" r="12" fill="#A33A2B"/>
+  <rect x="80" y="291" width="320" height="170" rx="8" fill="#E8EFEB" stroke="#496F63" stroke-width="4"/><text x="240" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="34" font-weight="750" fill="#171717">可以协商</text><text x="240" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" fill="#5D5A54">目标明确 · 留痕确认</text>
+  <rect x="440" y="291" width="320" height="170" rx="8" fill="#EFE8DB" stroke="#9A6A36" stroke-width="4"/><text x="600" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="34" font-weight="750" fill="#171717">暂时观察</text><text x="600" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" fill="#5D5A54">确认时限 · 防止拖延</text>
+  <rect x="800" y="291" width="320" height="170" rx="8" fill="#F4E5E1" stroke="#A33A2B" stroke-width="4"/><text x="960" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="34" font-weight="750" fill="#171717">专业介入</text><text x="960" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" fill="#5D5A54">程序时限 · 权益风险</text>
+  <text x="600" y="535" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#A33A2B">六爻不代替律师与法律程序</text>
+</svg>

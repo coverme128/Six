@@ -240,6 +240,8 @@ export function SixApiDemo() {
       setScenarioId(matched.id);
       setScenarioGroup(matched.group);
     }
+    const requestedQuestion = new URLSearchParams(window.location.search).get("question");
+    if (requestedQuestion?.trim()) setQuestion(requestedQuestion.trim().slice(0, 240));
   }, []);
   const castValues = useMemo(
     () => {

@@ -1,22 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, CircleHelp, Compass, GraduationCap, Layers3, Maximize2, Search, ShieldCheck, X } from "lucide-react";
+import { ArrowRight, CircleHelp, Clock3, Compass, GraduationCap, Layers3, Maximize2, Search, ShieldCheck, X } from "lucide-react";
 import { AppNav } from "../AppNav";
 import { apiBase, readError, type ContentSummary } from "../lib/api";
 import { ContentSectionNav } from "./ContentSectionNav";
-import { topicProfileFor } from "./topicProfiles";
-
-const typeLabels: Record<string, string> = {
-  TUTORIAL: "教程",
-  KNOWLEDGE: "知识卡",
-  FAQ: "问答",
-  LANDING_PAGE: "专题",
-  LEARNING_PATH: "路径",
-  GLOSSARY: "术语",
-  TRIGRAM: "八卦",
-  HEXAGRAM: "六十四卦",
-};
+import { learningCollections } from "./collectionProfiles";
+import { topicProfileList, type TopicProfile } from "./topicProfiles";
 
 const pathStages = [
   { key: "B01", title: "先知道怎么使用", detail: "适用问题、提问方法与可信边界", match: (item: ContentSummary) => item.contentId.startsWith("B01-") },
@@ -27,13 +17,18 @@ const pathStages = [
   { key: "B06", title: "练习阅读报告", detail: "从结论、依据到保守表达", match: (item: ContentSummary) => item.contentId.startsWith("B06-") },
 ];
 
-const topicOrder = ["RELATIONSHIP", "BUSINESS_PARTNERSHIP", "CAREER_WORK", "FINANCE_PROJECT", "EXAM_JOB_SEARCH", "TRAVEL_PLANNING"];
-
 const reportSteps = [
   { contentId: "B01-A14", title: "先确认报告在回答什么", detail: "先看原问题和总体判断，不急着进入术语。" },
   { contentId: "B01-A06", title: "分开看支持与阻碍", detail: "理解两种方向为什么可以同时存在。" },
   { contentId: "B04-A19", title: "再看变化与时间", detail: "把时间提示当作观察窗口，而不是承诺。" },
   { contentId: "B01-A13", title: "最后核对专业依据", detail: "需要深入时，再回到盘面、角色和证据。" },
+];
+
+const topicCategories = [
+  { name: "感情与合作", detail: "看双方状态、互动和共同推进条件" },
+  { name: "工作与钱", detail: "看机会、准备、资金和现实阻力" },
+  { name: "生活事务", detail: "看居所、物品、出行与计划节点" },
+  { name: "健康与纠纷", detail: "先守专业边界，再整理观察和行动" },
 ];
 
 export type HubVisualAsset = {
@@ -60,53 +55,13 @@ const userJourneys = [
   { key: "advanced", label: "系统与进阶", eyebrow: "建立完整知识结构", title: "沿着角色、力量、动变和时间逐层核验", detail: "适合已经有基础，希望系统理解专业依据的用户。", href: "#visual-atlas", cta: "进入图解知识", ids: ["B03-A01", "B04-A01", "B04-A20"] },
 ] as const;
 
-const editorialAssets = {
-  articleHero: "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-thumb-400x225.png",
-  caseCover: "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-thumb-400x300.png",
-  lessonCover: "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-thumb-400x500.png",
-  culturalScene: "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-thumb-400x267.png",
-  conceptExplainer: "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg",
-  trustSystem: "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg",
-};
-
 function contentHref(item: ContentSummary) {
   return `/content/${item.contentType.toLowerCase().replaceAll("_", "-")}/${encodeURIComponent(item.slug)}`;
 }
 
-function statusLabel(item: ContentSummary) {
-  if (item.reviewStatus === "PUBLICATION_READY") return "已发布";
-  if (item.reviewStatus === "REVIEW_REQUIRED") return "内测";
-  return "示例";
-}
-
-function editorialVisualFor(item: ContentSummary) {
-  if (item.contentType === "LEARNING_PATH") return editorialAssets.lessonCover;
-  if (item.contentType === "TUTORIAL") return item.contentId.startsWith("B05-") ? editorialAssets.caseCover : editorialAssets.articleHero;
-  if (item.contentType === "FAQ") return editorialAssets.trustSystem;
-  if (item.contentType === "GLOSSARY" || item.contentType === "KNOWLEDGE") return editorialAssets.conceptExplainer;
-  if (item.contentType === "HEXAGRAM" || item.contentType === "TRIGRAM") return editorialAssets.culturalScene;
-  return editorialAssets.articleHero;
-}
-
-function ContentCard({ item, compact = false, showSummary = false }: { item: ContentSummary; compact?: boolean; showSummary?: boolean }) {
+function TopicCard({ profile }: { profile: TopicProfile }) {
   return (
-    <a className={compact ? "content-card compact" : "content-card"} href={contentHref(item)}>
-      {!compact ? <img className="content-card-visual" src={editorialVisualFor(item)} alt="" aria-hidden="true" loading="lazy" /> : null}
-      <span className="content-meta">
-        {typeLabels[item.contentType] ?? item.contentType}
-        <i>{statusLabel(item)}</i>
-      </span>
-      <strong>{item.title}</strong>
-      {!compact || showSummary ? <small>{item.summary}</small> : null}
-    </a>
-  );
-}
-
-function TopicCard({ item }: { item: ContentSummary }) {
-  const profile = topicProfileFor(item.contentId);
-  if (!profile) return <ContentCard item={item} />;
-  return (
-    <a className="topic-card" href={contentHref(item)}>
+    <a className="topic-card" href={`/content/topic/${profile.slug}`}>
       <img src={profile.visual} alt={profile.visualAlt} loading="lazy" />
       <span>{profile.category}</span>
       <strong>{profile.name}</strong>
@@ -139,6 +94,26 @@ function JourneyNavigator({ items }: { items: ContentSummary[] }) {
         <ol>
           {recommendations.map((item, index) => <li key={item.contentId}><a href={contentHref(item)}><em>{String(index + 1).padStart(2, "0")}</em><span><strong>{item.title}</strong><small>{item.summary}</small></span><ArrowRight aria-hidden="true" size={16} /></a></li>)}
         </ol>
+      </div>
+    </section>
+  );
+}
+
+function CollectionGateway() {
+  const featuredIds = new Set(["COL-02", "COL-03", "COL-09", "COL-10"]);
+  const featured = learningCollections.filter((collection) => featuredIds.has(collection.collection_id));
+  return (
+    <section className="hub-collection-gateway" id="collections">
+      <div className="section-heading">
+        <div><p className="eyebrow">按目标连续学习</p><h2>一次只学一组，不在资料库里反复挑选</h2><p>每套合集只有三篇核心内容，顺序、适用人群和学习结果都已经整理好。</p></div>
+        <a className="text-link" href="/content/collections">查看全部 12 套合集 <ArrowRight aria-hidden="true" size={15} /></a>
+      </div>
+      <div className="hub-collection-grid">
+        {featured.map((collection) => <a href={`/content/collection/${collection.slug}`} key={collection.collection_id}>
+          <img src={collection.cover_path} alt={`${collection.title}学习合集封面`} />
+          <span>{collection.group}</span><strong>{collection.title}</strong><p>{collection.outcome}</p>
+          <em><Clock3 aria-hidden="true" size={15} />{collection.duration}<i>进入合集 <ArrowRight aria-hidden="true" size={15} /></i></em>
+        </a>)}
       </div>
     </section>
   );
@@ -321,7 +296,6 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
   }, []);
 
   const learnHub = items.find((item) => item.contentType === "LEARNING_PATH") ?? items[0];
-  const topicLandings = topicOrder.map((id) => items.find((item) => item.contentId === id)).filter((item): item is ContentSummary => Boolean(item));
   const activeStageDefinition = pathStages.find((stage) => stage.key === activeStage) ?? pathStages[0]!;
   const stageItems = items.filter(activeStageDefinition.match).filter((item) => item.contentType === "TUTORIAL").slice(0, 3);
   const tutorialCount = items.filter((item) => item.contentType === "TUTORIAL").length;
@@ -344,7 +318,7 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
           </form>
         </div>
         <div className="content-hub-visual" aria-label="知识中心内容概览">
-          <img src="/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png" alt="" aria-hidden="true" />
+          <img src="/content-growth/visuals/B07-VIS-01.svg" alt="六爻知识体系与学习入口总地图" />
           <div className="hub-metrics" aria-label="内容统计">
             <div><strong>{tutorialCount}</strong><span>篇教程与案例</span></div>
             <div><strong>{knowledgeCount}</strong><span>条概念资料</span></div>
@@ -359,6 +333,7 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
       {!loading && !error ? (
         <>
           <JourneyNavigator items={items} />
+          <CollectionGateway />
 
           <section className="learning-program" id="learning-path">
             <div className="section-heading">
@@ -414,8 +389,11 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
                 <p>每个专题都从常见问题、观察重点和提问示例开始，而不是先讲术语。</p>
               </div>
             </div>
-            <div className="topic-grid">
-              {topicLandings.map((item) => <TopicCard item={item} key={item.contentId} />)}
+            <div className="topic-category-list">
+              {topicCategories.map((category) => <section className="topic-category-group" key={category.name}>
+                <header><div><strong>{category.name}</strong><p>{category.detail}</p></div><span>{topicProfileList.filter((profile) => profile.category === category.name).length} 个专题</span></header>
+                <div className="topic-grid">{topicProfileList.filter((profile) => profile.category === category.name).map((profile) => <TopicCard profile={profile} key={profile.id} />)}</div>
+              </section>)}
             </div>
           </section>
 

@@ -35,6 +35,16 @@ test("core public surfaces keep approved visual structure", async ({ page, reque
   await expect(page.locator(".content-hub-hero")).toHaveScreenshot("learn-hub-core.png", { animations: "disabled" });
   await expect(page.locator(".visual-atlas")).toHaveScreenshot("learn-hub-visual-atlas.png", { animations: "disabled" });
 
+  await page.goto("/content/topic/property-home");
+  await expect(page.getByRole("heading", { name: "房产与居所" })).toBeVisible();
+  await stablePage(page);
+  await expect(page.locator(".topic-detail-hero")).toHaveScreenshot("topic-property-core.png", { animations: "disabled" });
+
+  await page.goto("/content/collection/read-a-liuyao-report");
+  await expect(page.getByRole("heading", { name: "如何看六爻报告" })).toBeVisible();
+  await stablePage(page);
+  await expect(page.locator(".collection-detail-hero")).toHaveScreenshot("collection-report-core.png", { animations: "disabled" });
+
   await page.goto("/content/library?module=B03&format=KNOWLEDGE");
   await expect(page.getByRole("heading", { name: "从一个问题，找到刚好需要的内容" })).toBeVisible();
   await stablePage(page);
@@ -103,4 +113,25 @@ test("all 68 art-directed content visuals render with semantic alternatives", as
   expect(renderFailures).toEqual([]);
   const layouts = await figures.evaluateAll((items) => [...new Set(items.map((item) => item.getAttribute("data-layout")))].sort());
   expect(layouts).toEqual(["comparison", "cycle", "flow", "matrix", "relationship", "stack", "timeline"]);
+});
+
+test("public topics, collections and article metadata stay productized", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "one product architecture audit covers shared routes");
+
+  await page.goto("/content");
+  await expect(page.locator(".topic-card")).toHaveCount(10);
+  await page.locator(".topic-card").first().scrollIntoViewIfNeeded();
+  await page.locator(".topic-card").last().scrollIntoViewIfNeeded();
+  await expect.poll(() => page.locator(".topic-card img").evaluateAll((images: HTMLImageElement[]) => images.filter((image) => !image.complete || image.naturalWidth === 0 || !image.alt.trim()).map((image) => image.src))).toEqual([]);
+
+  await page.goto("/content/collections");
+  await expect(page.locator('.collection-index-grid a[href^="/content/collection/"]')).toHaveCount(12);
+  await page.locator(".collection-index-grid").first().scrollIntoViewIfNeeded();
+  await page.locator(".collection-index-grid").last().scrollIntoViewIfNeeded();
+  await expect.poll(() => page.locator(".collection-index-grid img").evaluateAll((images: HTMLImageElement[]) => images.filter((image) => !image.complete || image.naturalWidth === 0 || !image.alt.trim()).map((image) => image.src))).toEqual([]);
+
+  await page.goto("/content/tutorial/why-not-repeat-liuyao-readings");
+  await expect(page).toHaveTitle("为什么不建议对同一个问题反复起卦｜六爻知识中心");
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /B01-VIS-04\.svg$/);
+  await expect(page.locator(".article-hero img")).toHaveAttribute("src", "/content-growth/visuals/B01-VIS-04.svg");
 });

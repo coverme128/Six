@@ -135,5 +135,9 @@ test("every declared non-video visual layer has final local files", () => {
   assert.equal(countSvg("apps/web/public/content-growth/distribution/summary"), 24);
   assert.equal(countSvg("apps/web/public/content-growth/distribution/collection-cover"), 12);
   assert.equal(countSvg("apps/web/public/liuyao-visual-system/reference-svg"), 14);
-  assert.equal(countSvg("apps/web/public/liuyao-visual-system/topics"), 6);
+  assert.equal(countSvg("apps/web/public/liuyao-visual-system/topics"), 10);
+  assert.equal(countSvg("apps/web/public/liuyao-visual-system/product"), 2);
+  for (const file of ["topic-property-checkpoints.svg", "topic-legal-boundary.svg", "topic-health-observation.svg", "topic-goods-search.svg"]) {
+    assert.ok(existsSync(resolve(root, `apps/web/public/liuyao-visual-system/topics/${file}`)));
+  }
 });

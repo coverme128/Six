@@ -1,6 +1,6 @@
 # Local Completion Except Production Release
 
-Last reviewed: 2026-08-19
+Last reviewed: 2026-08-23
 
 Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 
@@ -11,11 +11,11 @@ Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 - Same-ViewModel report SVG download and print/PDF output.
 - 445 imported package entries: 421 `PUBLICATION_READY`, 24 `DEMO_ONLY`, 0 `REVIEW_REQUIRED`.
 - 603 repository runtime entries and a 592-record Liuyao-only public API surface after filtering all 11 legacy Meihua records, with 0 QA errors, 0 warnings, and no isolated content.
-- A shared seven-destination content navigation, four intent-led starting states, six-stage curriculum, six reality topics, four-step report guide, and a dedicated combined-filter library.
+- A shared eight-destination content navigation, four intent-led starting states, six-stage curriculum, 12 public learning collections, 10 reality topics, four-step report guide, and a dedicated combined-filter library.
 - A 24-case lab covering real decisions and report explanation.
 - 68/68 semantic content SVGs across seven layout families, organized into six user-facing visual themes and linked from relevant articles.
-- 23 final editorial visual variants.
-- 72 social cards, 24 route-resolved summary cards, 12 linked collection documents with 12 semantic covers, and 50 video script packages with covers and complete storyboards; all are available in a noindex operations preview.
+- 22 final non-video editorial variants, 10 scenario-topic SVGs, and two homepage report-product SVGs.
+- 12 linked collection documents with semantic covers are public learning journeys; 72 social cards, 24 route-resolved summary cards, and 50 video script packages with covers and complete storyboards remain available in the noindex operations preview.
 - Automated responsive visual regression at desktop and 360/390/430 mobile.
 - Automated screen-reader summary, keyboard flow, semantic-role, asset-integrity, SVG export, and PDF generation checks.
 

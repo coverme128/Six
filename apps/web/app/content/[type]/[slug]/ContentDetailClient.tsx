@@ -5,6 +5,7 @@ import { ArrowRight, BookOpen, CheckCircle2, CircleHelp, Layers3, Maximize2, X }
 import { AppNav } from "../../../AppNav";
 import { apiBase, readError, type ContentDetail, type ContentSummary } from "../../../lib/api";
 import { ContentSectionNav } from "../../ContentSectionNav";
+import { contentVisualFor } from "../../contentVisuals";
 import { topicProfileFor } from "../../topicProfiles";
 
 const typeLabels: Record<string, string> = {
@@ -106,14 +107,7 @@ function publicLimitations(items?: string[]) {
 }
 
 function editorialVisualFor(item: ContentDetail) {
-  if (item.contentType === "LANDING_PAGE") return topicProfileFor(item.contentId)?.visual ?? "/liuyao-visual-system/editorial/final/topic-hero/ED-LY-006-topic-landing-hero-1200x675.png";
-  if (item.contentType === "LEARNING_PATH") return "/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-1080x1350.png";
-  if (item.contentType === "TUTORIAL") return item.contentId.startsWith("B05-")
-    ? "/liuyao-visual-system/editorial/final/case-cover/ED-LY-003-teaching-case-cover-1200x900.png"
-    : "/liuyao-visual-system/editorial/final/article-hero/ED-LY-001-article-hero-1200x675.png";
-  if (item.contentType === "FAQ") return "/liuyao-visual-system/editorial/final/inline/ED-LY-010-trust-system-illustration-1200x630.svg";
-  if (item.contentType === "HEXAGRAM" || item.contentType === "TRIGRAM") return "/liuyao-visual-system/editorial/final/cultural-scene/ED-LY-008-historical-cultural-scene-1200x800.png";
-  return "/liuyao-visual-system/editorial/final/inline/ED-LY-002-concept-explainer-1200x630.svg";
+  return contentVisualFor(item).src;
 }
 
 function contentHref(item: ContentSummary) {
@@ -308,7 +302,7 @@ function ArticleContent({ item, related }: { item: ContentDetail; related: Conte
             <span>{publicationLabel(item.reviewStatus)}</span>
           </div>
         </div>
-        <ZoomableImage alt={`${item.title}配图`} className="article-hero-visual" src={editorialVisualFor(item)} />
+        <ZoomableImage alt={contentVisualFor(item).alt} className="article-hero-visual" src={editorialVisualFor(item)} />
       </section>
 
       {takeaways.length ? (

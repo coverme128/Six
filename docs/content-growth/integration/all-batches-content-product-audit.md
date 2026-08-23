@@ -1,6 +1,6 @@
 # Batch 00-07 Content Productization Audit
 
-Last verified: 2026-08-22
+Last verified: 2026-08-23
 
 Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
 
@@ -25,7 +25,7 @@ The repository contains 603 runtime content records. The public content API excl
 
 ## Information architecture for all users
 
-The shared content navigation exposes seven stable destinations: Knowledge Home, Learning Path, Reality Topics, Report Reading, Case Lab, Visual Knowledge, and Complete Library.
+The shared content navigation exposes eight stable destinations: Knowledge Home, Learning Path, Learning Collections, Reality Topics, Report Reading, Case Lab, Visual Knowledge, and Complete Library.
 
 The home page first asks what the user is trying to do, then offers four user states:
 
@@ -34,11 +34,11 @@ The home page first asks what the user is trying to do, then offers four user st
 3. Reading an existing report.
 4. Systematic and advanced study.
 
-Users can then move through the six-stage curriculum, six reality topics, four report-reading steps, 24 case studies, the complete 68-asset visual atlas, and the searchable library. The library supports combined topic, format, difficulty, and keyword filters with URL-persisted state. Detail pages include meaningful breadcrumbs, previous/next learning links, typed related content, and image enlargement.
+Users can then move through the six-stage curriculum, 12 ordered learning collections, 10 reality topics, four report-reading steps, 24 case studies, the complete 68-asset visual atlas, and the searchable library. The library supports combined topic, format, difficulty, and keyword filters with URL-persisted state. Detail pages include meaningful breadcrumbs, previous/next learning links, typed related content, semantic visuals and image enlargement.
 
 ## Visual and asset coverage
 
-All 68 content SVGs are generated, registered, shown by six user-facing themes, and linked from at least one relevant article. The previously orphaned `B05-VIS-01` is explicitly connected to its reality-question article. The non-video visual audit now covers 218 final files, including 12 newly completed learning-collection covers. Batch 07 distribution assets remain in the noindex operations preview because they are channel-production deliverables, not primary public navigation.
+All 68 content SVGs are generated, registered, shown by six user-facing visual-atlas themes, and linked from at least one relevant article. Article heroes and library thumbnails now prefer the exact linked SVG before falling back to a semantic module or reality-topic visual. The non-video visual audit covers 224 final files: 10 topic visuals, 12 collection covers and two homepage report-product visuals are user-facing; social, summary and video derivatives remain in the noindex operations preview.
 
 ## Acceptance
 

@@ -70,7 +70,7 @@ test("Knowledge center guides users by goal, stage, topic, and report order", as
   await page.goto("/content");
 
   await expect(page.getByRole("heading", { name: "先找到你要解决的事，再进入对应知识" })).toBeVisible();
-  await expect(page.locator(".content-section-nav a")).toHaveCount(7);
+  await expect(page.locator(".content-section-nav a")).toHaveCount(8);
   await expect(page.locator(".hub-metrics")).toContainText("128");
   await expect(page.locator(".hub-metrics")).toContainText("215");
   await expect(page.locator(".hub-metrics")).toContainText("170");
@@ -88,9 +88,10 @@ test("Knowledge center guides users by goal, stage, topic, and report order", as
   await page.getByRole("button", { name: /理解起卦与盘面/ }).click();
   await expect(page.locator(".stage-panel h3")).toHaveText("理解起卦与盘面");
 
-  await expect(page.locator(".topic-card")).toHaveCount(6);
+  await expect(page.locator(".hub-collection-grid > a")).toHaveCount(4);
+  await expect(page.locator(".topic-card")).toHaveCount(10);
   const topicImages = await page.locator(".topic-card img").evaluateAll((images) => images.map((image) => image.getAttribute("src")));
-  expect(new Set(topicImages).size).toBe(6);
+  expect(new Set(topicImages).size).toBe(10);
   const topicImageAlts = await page.locator(".topic-card img").evaluateAll((images) => images.map((image) => image.getAttribute("alt")));
   expect(topicImageAlts.every((alt) => Boolean(alt))).toBe(true);
 
@@ -128,7 +129,7 @@ test("Complete library supports combined topic, format, depth, and search filter
   await page.goto("/content/library?module=B03&format=KNOWLEDGE");
 
   await expect(page.getByRole("heading", { name: "从一个问题，找到刚好需要的内容" })).toBeVisible();
-  await expect(page.locator(".content-section-nav a")).toHaveCount(7);
+  await expect(page.locator(".content-section-nav a")).toHaveCount(8);
   await expect(page.locator(".library-filter-panel button[aria-pressed=true]")).toContainText("角色与关系");
   await expect(page.locator(".library-format-tabs button[aria-pressed=true]")).toHaveText("知识卡");
   await expect(page.locator(".library-results-heading h2")).toHaveText("找到 35 条内容");

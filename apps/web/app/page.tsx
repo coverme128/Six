@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import { AppNav } from "./AppNav";
 import { SixApiDemo } from "./SixApiDemo";
 import { ArrowDown, BookOpen, FileCheck2, Route, ShieldCheck } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "六爻问题分析｜看清方向、阻碍与下一步",
+  description: "从一个具体问题出发，得到确定性排盘、场景化判断、现实行动建议与可复核依据。",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "六爻问题分析｜把一件难事看清方向与下一步",
+    description: "先得到容易理解的判断，再按需查看盘面与依据。",
+    images: [{ url: "/liuyao-visual-system/product/home-report-proof.svg", alt: "六爻可复核报告结果预览" }],
+  },
+};
 
 export default function HomePage() {
   return (
@@ -38,6 +50,7 @@ export default function HomePage() {
           </div>
           <p className="hero-assurance">确定性排盘 · 判断有依据 · AI 只负责解释</p>
         </div>
+        <img className="product-hero-mobile-proof" src="/liuyao-visual-system/product/home-report-proof-strip.svg" alt="报告先展示总体判断，再区分支持、阻碍和下一步" />
       </section>
 
       <SixApiDemo />
