@@ -160,7 +160,7 @@ pnpm run validate
 pnpm run test:e2e
 ```
 
-`pnpm run smoke:ai:live` remains dependent on `OPENAI_API_KEY`; without the key it should skip rather than block local P4-X validation.
+`pnpm run smoke:ai:live` remains dependent on the selected provider key; the current DeepSeek path uses `DEEPSEEK_API_KEY` and skips rather than blocking local P4-X validation when absent.
 
 ## Deferred Scope
 

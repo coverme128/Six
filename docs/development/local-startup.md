@@ -1,6 +1,6 @@
 # Liuyao Local Startup Guide
 
-Last reviewed: 2026-08-18
+Last reviewed: 2026-08-25
 
 ## Runtime Shape
 
@@ -57,6 +57,30 @@ PORT=3200 NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:4100/api/v1 pnpm run dev:web
 ```
 
 Open `http://localhost:3200`.
+
+### Real DeepSeek Mode
+
+Use a shell-only secret for local live-output testing. Do not place the key in source files, `.env.example`, screenshots, or logs.
+
+```bash
+cd /Users/goterra/Documents/Six
+read -s "DEEPSEEK_API_KEY?DeepSeek API key: "
+export DEEPSEEK_API_KEY
+API_PORT=4100 \
+AI_PROVIDER=deepseek \
+AI_MODEL=deepseek-v4-flash \
+AI_TIMEOUT_MS=45000 \
+AI_MAX_OUTPUT_TOKENS=2200 \
+pnpm run dev:api
+```
+
+Start the Web app in a second terminal with the Quick UI command above. Run the five-scenario live check with:
+
+```bash
+AI_PROVIDER=deepseek AI_MODEL=deepseek-v4-flash pnpm run smoke:ai:live
+```
+
+The report remains readable through deterministic fallback when the provider is unavailable or its output fails validation.
 
 ## Full Local Mode
 

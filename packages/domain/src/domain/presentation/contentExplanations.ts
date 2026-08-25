@@ -12,13 +12,18 @@ function readSnippets(rootDir = process.cwd()) {
 }
 
 function publicSnippet(snippet) {
+  const shortText = String(snippet.guided?.short_text ?? "").split("本条用于")[0].trim();
+  const practicalMeaning = String(snippet.guided?.practical_meaning ?? "").split("；同时保留")[0].trim();
   return {
     snippetId: snippet.snippet_id,
     category: snippet.category,
     placement: snippet.recommended_report_placement,
     priority: snippet.priority_default,
-    guided: snippet.guided,
-    professional: snippet.professional,
+    guided: {
+      headline: snippet.professional?.label ?? String(snippet.guided?.headline ?? "").split("｜")[1],
+      short_text: shortText,
+      practical_meaning: practicalMeaning,
+    },
     knowledgeRefs: snippet.knowledge_refs ?? [],
     articleRefs: snippet.article_refs ?? [],
     status: snippet.professional_alignment_status,

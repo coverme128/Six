@@ -122,7 +122,7 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 | --- | --- | --- |
 | HTTPS staging | Open | Deployed Web/API/Worker with stable URLs and secrets outside Git |
 | Dependency readiness | Open | PostgreSQL and Redis configured; `/ready` returns 200 only when both are usable |
-| Live AI provider | Open | Eight-case smoke with successful outputs reporting `OPENAI_LIVE`; fallback remains valid |
+| Live AI provider | Complete locally | Five Liuyao scenarios validated with DeepSeek structured output, fact/evidence/safety/plain-language gates, automatic retry, and deterministic fallback; staging evidence remains open |
 | Static report export | Complete locally | SVG/print/PDF generated from the same visualization ViewModels as the Web report |
 | Visual regression | Complete locally | Approved snapshots for homepage, report, Learn Hub, article, glossary, and P1 visuals at desktop and 360/390/430 mobile |
 | Accessibility | Complete locally | Keyboard flow, screen-reader summary, semantic roles, focus controls, reduced-motion, and non-color semantics verified |

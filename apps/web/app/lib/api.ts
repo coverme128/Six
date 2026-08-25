@@ -199,8 +199,14 @@ export type ExperienceResponse = {
     aiReport?: {
       summary?: string;
       currentSituation?: string;
+      supportingFactors?: Array<{ text?: string; evidenceRefs?: string[] }>;
+      blockingFactors?: Array<{ text?: string; evidenceRefs?: string[] }>;
       changeDirection?: string;
+      outcomeTrend?: { label?: string; text?: string };
+      timingWindows?: Array<{ text?: string; candidateRef?: string }>;
       actionSuggestions?: string[];
+      evidenceSummary?: Array<{ text?: string; evidenceRefs?: string[] }>;
+      limitations?: string[];
       disclaimer?: string;
     } | null;
   } | null;

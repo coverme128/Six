@@ -455,7 +455,7 @@ export function SixApiDemo() {
               required
               aria-describedby="question-help"
             />
-            <p id="question-help">一次聚焦一件事，例如“这段关系现在适合继续推进吗？”</p>
+            <p id="question-help">一次聚焦一件事，例如“这段关系现在适合继续推进吗？” 不用填写姓名、电话、证件号等个人信息。</p>
           </label>
 
           <div className="question-examples" aria-label="问题示例">

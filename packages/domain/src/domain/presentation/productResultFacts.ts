@@ -175,7 +175,7 @@ function buildOverallAssessment({ chart, runtime, resolvedFindingFacts, conflict
       block[0]?.resolvedMeaning?.practicalMeaning ?? block[0]?.summary,
       moving[0]?.summary,
     ].filter(Boolean),
-    algorithmBoundary: "Pattern and conflict policy based assessment; not a pure support +1 / block -1 score.",
+    algorithmBoundary: "综合判断采用判断模式与冲突裁决，不使用简单的支持减阻碍计分。",
   };
 }
 

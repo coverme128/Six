@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { Download, FileText, Printer } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Download, FileText, Printer, ShieldCheck, Sparkles } from "lucide-react";
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
@@ -178,6 +178,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [error, setError] = useState("");
   const [aiStatus, setAiStatus] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
+  const aiSectionRef = useRef<HTMLElement | null>(null);
   const guided = report?.experience?.guidedViewModel;
   const professional = report?.experience?.professionalViewModel;
   const visualization = report?.experience?.visualization;
@@ -238,7 +239,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         experience: body.experience,
         relatedContent: report?.relatedContent
       });
-      setAiStatus(body.aiReportBundle?.fallbackUsed ? "已生成基础白话解读。" : "白话解读已生成。");
+      setAiStatus(body.aiReportBundle?.fallbackUsed ? "AI 暂时不可用，已保留基础解读。" : "白话解读已生成。");
+      window.setTimeout(() => aiSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法生成 AI 解读");
     } finally {
@@ -368,12 +370,21 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               </div>
             ) : null}
           </div>
+          <aside className="ai-generation-notice" aria-label="AI 白话解读说明">
+            <Sparkles aria-hidden="true" size={20} />
+            <div>
+              <strong>需要更容易读懂的说明？</strong>
+              <p>AI 会读取本次问题和必要的排盘事实，只负责整理表达，不会改变卦盘、判断或依据。</p>
+              <small><ShieldCheck aria-hidden="true" size={15} />手机号、邮箱和证件号会在发送前自动隐藏，通常约 10 秒完成。</small>
+            </div>
+          </aside>
           <div className="inline-actions">
             <a className="primary-link" href="#professional-evidence">
               查看依据
             </a>
             <button type="button" onClick={generateAIReport} disabled={aiLoading}>
-              {aiLoading ? "生成中" : report?.aiReportBundle ? "重新生成白话解读" : "生成白话解读"}
+              <Sparkles aria-hidden="true" size={17} />
+              {aiLoading ? "正在整理" : report?.aiReportBundle ? "重新生成白话解读" : "用 AI 生成白话解读"}
             </button>
             <button type="button" onClick={exportReadableReport}>
               <FileText aria-hidden="true" size={17} />下载文本
@@ -399,48 +410,97 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         </section>
       ) : null}
 
-      {report?.type === "liuyao" ? <LiuyaoVisualSystemPanel visualization={visualization} /> : null}
-      {report?.type === "liuyao" && !visualization ? <ChartPanel chart={report?.chartViewModel} /> : null}
-
       {report?.aiReportBundle ? (
-        <section className="panel report-section">
-          <h2>白话解读</h2>
-          <p className="section-kicker">这一层只整理表达，不改变排盘与依据。</p>
-          <div className="fact-strip">
-            <span>{report.aiReportBundle.fallbackUsed ? "基础解读" : "已生成"}</span>
-            <span>{report.aiReportBundle.validationStatus === "VALID" ? "一致性已校验" : "基础报告可读"}</span>
-          </div>
-          <div className="preview-grid">
+        <section className="panel report-section ai-report-section" id="ai-plain-language" ref={aiSectionRef}>
+          <div className="ai-report-heading">
             <div>
-              <h3>摘要</h3>
-              <p>{aiReport?.summary ?? "已使用确定性报告作为兜底。"}</p>
+              <p className="eyebrow">AI 表达层</p>
+              <h2>{report.aiReportBundle.fallbackUsed ? "基础解读" : "白话解读"}</h2>
+              <p className="section-kicker">从现实处境、关键因素到下一步，快速读懂这份报告。</p>
             </div>
-            <div>
-              <h3>变化方向</h3>
-              <p>{aiReport?.changeDirection ?? guided?.changeDirection}</p>
-            </div>
-            <div>
-              <h3>行动建议</h3>
-              {(aiReport?.actionSuggestions ?? guided?.recommendedActions ?? []).map((item) => (
-                <p key={item}>{item}</p>
-              ))}
+            <div className="fact-strip" aria-label="解读状态">
+              <span>{report.aiReportBundle.validationStatus === "VALID" ? "事实一致性已校验" : "确定性报告已保留"}</span>
+              <span>不改变排盘与判断</span>
             </div>
           </div>
-          {aiReport?.disclaimer ? <p className="empty">{aiReport.disclaimer}</p> : null}
+
+          <div className="ai-report-lead">
+            <span>先看结论</span>
+            <strong>{aiReport?.summary ?? guided?.summary ?? "当前已保留基础报告，可继续查看结论和依据。"}</strong>
+            <p>{aiReport?.currentSituation ?? guided?.currentSituation}</p>
+          </div>
+
+          {aiReport ? (
+            <>
+              <div className="ai-factor-grid">
+                <section>
+                  <h3>推动这件事的因素</h3>
+                  {(aiReport.supportingFactors ?? []).length ? (
+                    <ul>{aiReport.supportingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
+                  ) : <p>当前没有足够明确的支持因素。</p>}
+                </section>
+                <section>
+                  <h3>需要先处理的阻碍</h3>
+                  {(aiReport.blockingFactors ?? []).length ? (
+                    <ul>{aiReport.blockingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
+                  ) : <p>当前没有足够明确的阻碍因素。</p>}
+                </section>
+              </div>
+
+              <div className="ai-report-grid">
+                <section>
+                  <span>接下来可能怎么变化</span>
+                  <h3>{aiReport.outcomeTrend?.text ?? aiReport.changeDirection}</h3>
+                  <p>{aiReport.changeDirection}</p>
+                </section>
+                <section>
+                  <span>什么时候再观察</span>
+                  {(aiReport.timingWindows ?? []).length ? (
+                    <ul>{aiReport.timingWindows?.map((item, index) => <li key={`${item.candidateRef}-${index}`}>{item.text}</li>)}</ul>
+                  ) : <p>当前没有足够明确的时间窗口，先观察现实条件是否变化。</p>}
+                </section>
+              </div>
+
+              <section className="ai-next-actions">
+                <span>现在可以做什么</span>
+                <ol>{(aiReport.actionSuggestions ?? []).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
+              </section>
+
+              <details className="ai-evidence-details" open>
+                <summary>为什么得出这个结论</summary>
+                <div>
+                  {(aiReport.evidenceSummary ?? []).map((item, index) => <p key={`${item.text}-${index}`}>{item.text}</p>)}
+                  <a href="#professional-evidence">查看完整专业依据</a>
+                </div>
+              </details>
+
+              {(aiReport.limitations ?? []).length || aiReport.disclaimer ? (
+                <aside className="ai-limitations">
+                  <strong>这份解读的边界</strong>
+                  {(aiReport.limitations ?? []).map((item, index) => <p key={`${item}-${index}`}>{item}</p>)}
+                  {aiReport.disclaimer ? <p>{aiReport.disclaimer}</p> : null}
+                </aside>
+              ) : null}
+            </>
+          ) : (
+            <p className="empty">AI 服务暂时不可用，本次排盘、正式判断和基础报告不受影响。</p>
+          )}
         </section>
       ) : null}
+
+      {report?.type === "liuyao" ? <LiuyaoVisualSystemPanel visualization={visualization} /> : null}
+      {report?.type === "liuyao" && !visualization ? <ChartPanel chart={report?.chartViewModel} /> : null}
 
       {contentSnippets.length ? (
         <section className="panel report-section">
           <h2>报告帮助</h2>
-          <p className="section-kicker">这些说明只解释已生成的报告事实，不参与排盘、取用神或重新判断。</p>
+          <p className="section-kicker">只看当前报告里最需要理解的概念和阅读重点。</p>
           <div className="preview-grid">
             {contentSnippets.slice(0, 6).map((item) => (
               <div key={item.snippetId}>
                 <h3>{item.guided?.headline ?? item.professional?.label ?? item.category}</h3>
-                <p>{item.guided?.short_text ?? item.professional?.explanation}</p>
+                <p>{item.guided?.short_text}</p>
                 <p>{item.guided?.practical_meaning}</p>
-                {item.guided?.caution ? <p className="empty">{item.guided.caution}</p> : null}
               </div>
             ))}
           </div>
@@ -450,13 +510,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       {relatedContent.length ? (
         <section className="panel report-section">
           <h2>相关内容</h2>
-          <p className="section-kicker">根据本次报告引用、主题和证据类型推荐，不使用随机内容。</p>
+          <p className="section-kicker">继续理解本次报告中出现的关键概念。</p>
           <div className="history-list compact-list">
             {relatedContent.map((item) => (
               <a className="history-item" href={item.url ?? "/content"} key={item.contentId ?? item.title}>
-                <span>{item.reasonCode ?? "RELATED"}</span>
+                <span>概念解释</span>
                 <strong>{item.title}</strong>
-                <small>{item.sourceRef}</small>
+                <small>结合本次报告继续阅读</small>
               </a>
             ))}
           </div>
@@ -499,7 +559,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                   </div>
                 ))}
               </div>
-              <p className="empty">观察重点由系统按场景自动确定；专业模式后续可开放自定义，不作为普通用户必经步骤。</p>
+              <p className="empty">观察重点由问题场景自动确定，用于保持本次报告前后一致。</p>
             </details>
           ) : null}
           {professional.auditChain ? (
@@ -516,12 +576,12 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                   <p>{professional.auditChain.evidenceResolution?.summary}</p>
                 </div>
                 <div>
-                  <h3>Assessment Pattern</h3>
+                  <h3>综合判断</h3>
                   <p>{professional.auditChain.overallAssessment?.patternName}</p>
                   <p>{professional.auditChain.overallAssessment?.summary}</p>
                 </div>
                 <div>
-                  <h3>Timing Basis</h3>
+                  <h3>时间依据</h3>
                   {(professional.auditChain.timing ?? []).slice(0, 3).map((item) => (
                     <p key={`${item.window}-${item.precision}`}>{item.explanation}</p>
                   ))}

@@ -12,13 +12,13 @@ Current Public Beta P1 status: `PRODUCTION_CALENDAR_READY`.
 
 Current Public Beta P2 implementation status: `GROUNDED_AI_REPORT_CODE_READY`.
 
-Current Public Beta P2.1/P3-A status: `LIVE_PROVIDER_SMOKE_PENDING`. The local staging foundation is implemented, but a real OpenAI smoke run and a HTTPS staging deployment still require secure environment configuration outside Git.
+Current Public Beta P2.1/P3-A status: `DEEPSEEK_LOCAL_LIVE_SMOKE_VERIFIED_STAGING_PENDING`. The five-scenario Liuyao live smoke is verified locally; HTTPS staging and deployment secrets remain outside Git and are still required.
 
 Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
 
 Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report journey and all-user Learn Hub now include task-led entry, shared content navigation, a six-stage curriculum, six reality topics, report guidance, a 24-case lab, a combined-filter library, all 68 linked content visuals, and Liuyao-only public API filtering. Distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
 
-Live OpenAI smoke requires `OPENAI_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
+Live DeepSeek smoke requires `DEEPSEEK_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
 
 ## Scope
 
@@ -116,7 +116,7 @@ pnpm run validate:experience
 pnpm run validate:w1
 ```
 
-`pnpm run smoke:ai:live` exits as skipped when `OPENAI_API_KEY` is absent. A passing P2.1 run must execute all 8 live smoke cases and confirm `reportSource = OPENAI_LIVE` for successful outputs.
+`pnpm run smoke:ai:live` exits as skipped when the selected provider key is absent. A passing P2.1 run executes five Liuyao live cases and confirms `reportSource = DEEPSEEK_LIVE` when `AI_PROVIDER=deepseek`.
 
 P4-A demo content under `fixtures/content/p4-demo-package/` is `DEMO_ONLY`, validates checksums, and is used for isolated import rehearsal. It is not indexed and is not published by default.
 
@@ -128,14 +128,15 @@ P4-A demo content under `fixtures/content/p4-demo-package/` is `DEMO_ONLY`, vali
 
 ## Staging Environment
 
-`.env.example` intentionally contains only the OpenAI provider placeholders required for local setup and must not contain real secrets. Staging should configure secrets and controls in the deployment platform:
+`.env.example` intentionally contains placeholders only and must not contain real secrets. Staging should configure secrets and controls in the deployment platform:
 
 ```text
 NODE_ENV=production
 APP_ENV=staging
-OPENAI_API_KEY
-AI_PROVIDER=openai
-AI_MODEL
+DEEPSEEK_API_KEY
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+AI_PROVIDER=deepseek
+AI_MODEL=deepseek-v4-flash
 AI_TIMEOUT_MS
 AI_MAX_OUTPUT_TOKENS
 AI_RATE_LIMIT_WINDOW_MS

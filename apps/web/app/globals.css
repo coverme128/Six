@@ -4392,6 +4392,217 @@ article p:last-child {
   margin-bottom: 14px;
 }
 
+.ai-generation-notice {
+  align-items: flex-start;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto minmax(0, 1fr);
+  margin-top: 18px;
+  padding: 14px 16px;
+}
+
+.ai-generation-notice > svg {
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.ai-generation-notice strong,
+.ai-generation-notice p,
+.ai-generation-notice small {
+  display: block;
+}
+
+.ai-generation-notice p {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 4px 0 8px;
+}
+
+.ai-generation-notice small {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  gap: 6px;
+}
+
+.ai-report-section {
+  scroll-margin-top: 24px;
+}
+
+.ai-report-heading {
+  align-items: start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.ai-report-heading h2,
+.ai-report-heading .section-kicker,
+.ai-report-heading .fact-strip {
+  margin-top: 0;
+}
+
+.ai-report-lead {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 22px 0;
+}
+
+.ai-report-lead span,
+.ai-report-grid span,
+.ai-next-actions > span {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.ai-report-lead strong {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.45;
+  max-width: 880px;
+}
+
+.ai-report-lead p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 920px;
+}
+
+.ai-factor-grid,
+.ai-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-factor-grid {
+  border-bottom: 1px solid var(--line);
+}
+
+.ai-factor-grid section,
+.ai-report-grid section {
+  min-width: 0;
+  padding: 22px 24px 22px 0;
+}
+
+.ai-factor-grid section + section,
+.ai-report-grid section + section {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+
+.ai-factor-grid h3,
+.ai-report-grid h3 {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.ai-factor-grid ul,
+.ai-report-grid ul,
+.ai-next-actions ol {
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.ai-factor-grid li + li,
+.ai-report-grid li + li,
+.ai-next-actions li + li {
+  margin-top: 8px;
+}
+
+.ai-report-grid {
+  border-bottom: 1px solid var(--line);
+}
+
+.ai-report-grid p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.ai-next-actions {
+  padding: 22px 0;
+}
+
+.ai-next-actions ol {
+  counter-reset: ai-actions;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.ai-next-actions li {
+  align-items: start;
+  counter-increment: ai-actions;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 28px minmax(0, 1fr);
+}
+
+.ai-next-actions li::before {
+  align-items: center;
+  background: var(--accent);
+  border-radius: 50%;
+  color: white;
+  content: counter(ai-actions);
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  height: 24px;
+  justify-content: center;
+  margin-top: 1px;
+  width: 24px;
+}
+
+.ai-evidence-details {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.ai-evidence-details summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.ai-evidence-details div {
+  color: var(--ink-soft);
+  line-height: 1.65;
+  padding: 10px 0 2px;
+}
+
+.ai-evidence-details a {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.ai-limitations {
+  background: var(--paper-soft);
+  border-left: 3px solid var(--line-strong);
+  color: var(--muted);
+  margin-top: 18px;
+  padding: 14px 16px;
+}
+
+.ai-limitations strong {
+  color: var(--ink-soft);
+}
+
+.ai-limitations p {
+  line-height: 1.6;
+  margin: 6px 0 0;
+}
+
 .evidence-details {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -5179,6 +5390,32 @@ article p:last-child {
   .shell {
     width: min(100% - 24px, 1180px);
     padding: 20px 0 48px;
+  }
+
+  .ai-report-heading {
+    display: grid;
+    gap: 4px;
+  }
+
+  .ai-factor-grid,
+  .ai-report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-factor-grid section,
+  .ai-report-grid section {
+    padding: 18px 0;
+  }
+
+  .ai-factor-grid section + section,
+  .ai-report-grid section + section {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+
+  .ai-report-lead strong {
+    font-size: 1.22rem;
   }
 
   .app-nav {

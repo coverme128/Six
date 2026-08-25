@@ -3,11 +3,15 @@ import test from "node:test";
 
 import {
   AIReportValidationError,
+  DeepSeekReportProvider,
   MockAIReportProvider,
+  buildAIProviderPayload,
   buildAIReportInput,
   createAnonymousAILimiter,
   generateGroundedAIReport,
+  redactQuestionForAI,
   validateAIReport,
+  validateAIPlainLanguage,
   validateAIReportSchema,
 } from "@six/domain/ai-report";
 import { createLiuyaoChart } from "@six/domain/liuyao";
@@ -57,6 +61,26 @@ test("AIReportInput contains only grounded chart, calendar and matched evidence 
   assert.ok(input.deterministicJudgmentSignature.overallState);
   assert.ok(!("candidateRulePool" in input));
   assert.ok(input.matchedRuleFindings.every((finding) => finding.id.startsWith("rule:")));
+});
+
+test("DeepSeek provider uses the official Responses endpoint and minimizes provider payload", () => {
+  const provider = new DeepSeekReportProvider({ apiKey: "test-key", rootDir: ROOT });
+  assert.equal(provider.provider, "deepseek");
+  assert.equal(provider.model, "deepseek-v4-flash");
+  assert.equal(provider.endpoint, "https://api.deepseek.com/responses");
+
+  const input = buildAIReportInput({ result: liuyaoResult(), type: "liuyao" });
+  const payload = buildAIProviderPayload(input);
+  assert.equal(payload.reportId, undefined);
+  assert.equal(payload.inputHash, undefined);
+  assert.equal(payload.questionContext.questionDigest, undefined);
+  assert.equal(payload.versions.promptVersion, "liuyao-report-v2");
+  assert.doesNotMatch(JSON.stringify(payload), /空亡|回头生|月建|日辰|同支日/u);
+});
+
+test("AI question redaction removes common direct identifiers before provider use", () => {
+  const redacted = redactQuestionForAI("联系 13800138000，邮箱 user@example.com，证件 11010519491231002X");
+  assert.equal(redacted, "联系 [已隐藏手机号]，邮箱 [已隐藏邮箱]，证件 [已隐藏证件号]");
 });
 
 test("valid AI output passes schema, fidelity and safety validation", async () => {
@@ -111,6 +135,21 @@ test("timing validator rejects created exact dates and guaranteed timing languag
   const guaranteed = structuredClone(output);
   guaranteed.timingWindows[0].text = "该候选窗口必定兑现。";
   assert.throws(() => validateAIReport(guaranteed, input), /guaranteed language/u);
+
+  const cautious = structuredClone(output);
+  cautious.timingWindows[0].text = "该窗口不一定出现明显变化，需要继续观察。";
+  assert.doesNotThrow(() => validateAIReport(cautious, input));
+});
+
+test("plain-language validator rejects unexplained jargon and invented review intervals", async () => {
+  const input = buildAIReportInput({ result: liuyaoResult(), type: "liuyao" });
+  const jargon = await validOutput(input);
+  jargon.currentSituation = "对方目前处于空亡状态。";
+  assert.throws(() => validateAIPlainLanguage(jargon), /professional terminology/u);
+
+  const inventedTiming = await validOutput(input);
+  inventedTiming.actionSuggestions = ["一周后重新评估。", "观察现实变化。"];
+  assert.throws(() => validateAIPlainLanguage(inventedTiming), /unsupported time interval/u);
 });
 
 test("type isolation rejects Liuyao reports with Meihua-only fields and Meihua reports with Liuyao-only fields", async () => {
@@ -135,6 +174,40 @@ test("provider failures and invalid outputs always fall back to deterministic re
     assert.ok(bundle.deterministicReport, mode);
     assert.ok(bundle.deterministicJudgmentSignature, mode);
   }
+});
+
+test("live providers retry one validation failure before deterministic fallback", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  let calls = 0;
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    calls += 1;
+    const output = await generateValid(input);
+    if (calls === 1) output.factClaims.originalHexagram = "乾";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 2);
+  assert.equal(calls, 2);
+});
+
+test("live provider output translates known technical terms before public display", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    const output = await generateValid(input);
+    output.currentSituation = "对方目前处于空亡状态，后续可看同支日/月。";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 1);
+  assert.doesNotMatch(bundle.aiReport.currentSituation, /空亡|同支日/u);
 });
 
 test("DETERMINISTIC_ASSESSMENT_FIDELITY keeps AI ON and OFF judgment facts identical", async () => {

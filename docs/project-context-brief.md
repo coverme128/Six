@@ -12,7 +12,7 @@ Six is a TypeScript monorepo whose active public product is a deterministic, aud
 - CORE_V1 status: production whitelist implemented and locally validated.
 - Local product status: W1 local-only product scope is complete.
 - Calendar status: `CAL_STD_V1` is accepted for Public Beta P1 and used by new Liuyao reports.
-- AI status: grounded AI report code is implemented locally, but real OpenAI live smoke is still pending.
+- AI status: grounded DeepSeek report flow and five-scenario Liuyao live smoke are verified locally; HTTPS staging verification remains pending.
 - Content status: all eight content batches are integrated. The repository contains 603 entries; 421 are `PUBLICATION_READY`, including six topic landing pages and one six-stage guided learning path. Content QA reports 0 errors, 0 warnings, and no isolated entries.
 - Experience status: homepage, scenario entry, Liuyao workbench, report, relationship guidance, Learn Hub, topic pages, and learning path meet the complete local product contract.
 - Visual status: 14 report visuals, 10 editorial asset families with 23 final variants, and 68 individually art-directed content SVGs are integrated; same-ViewModel SVG/print/PDF export and responsive visual/accessibility automation pass locally.
@@ -189,7 +189,7 @@ Common commands:
 - `pnpm run validate:p2` adds Playwright E2E.
 - `pnpm run validate:p4-framework` adds content rehearsal, QA, SEO, and E2E.
 - `pnpm run validate:experience` checks presentation contracts and E2E experience coverage.
-- `pnpm run smoke:ai:live` requires `OPENAI_API_KEY`; without it, it should skip.
+- `pnpm run smoke:ai:live` uses the selected provider key; the current local live path uses `DEEPSEEK_API_KEY` and skips safely when absent.
 
 Current local check performed during this review:
 
@@ -210,7 +210,7 @@ Playwright default ports differ from `.env.example`:
 
 ## Known Pending Work
 
-- Run real OpenAI live smoke with secure `OPENAI_API_KEY` and confirm `reportSource = OPENAI_LIVE` for successful outputs.
+- Repeat the locally verified five-scenario DeepSeek smoke in HTTPS staging and confirm `reportSource = DEEPSEEK_LIVE` for successful outputs.
 - Deploy HTTPS staging and verify `/health`, `/ready`, protected internal status, E2E, and live AI checks.
 - Capture production performance, caching, observability, and real-device evidence after staging exists.
 - Add visual regression at desktop and 360/390/430 mobile widths.

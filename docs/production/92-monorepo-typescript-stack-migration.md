@@ -248,7 +248,7 @@ The stack is in place, but these are intentionally deferred to keep deterministi
 Move full historical report visual coverage into apps/web
 Move AdminViewModel and content governance into apps/admin
 Import a real `PUBLICATION_READY` content package for public indexed content
-Run real OpenAI live smoke with production secrets and HTTPS staging
+Repeat the verified five-scenario DeepSeek live smoke with deployment secrets in HTTPS staging
 Add production auth/RBAC/payment only when a later phase explicitly allows it
 ```
 

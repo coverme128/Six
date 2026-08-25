@@ -2,7 +2,7 @@
 
 Status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY`
 
-This status covers the local framework only. It does not mark `PUBLIC_BETA_READY`, `PRODUCTION_READY`, or resolve the earlier `LIVE_PROVIDER_SMOKE_PENDING` and staging deployment gates.
+This status covers the local framework only. It does not mark `PUBLIC_BETA_READY` or `PRODUCTION_READY`. The live provider is verified locally, while HTTPS staging and production deployment gates remain open.
 
 ## Architecture
 

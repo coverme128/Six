@@ -8,10 +8,11 @@ import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContex
 import { buildLiuyaoProductResultFacts, judgmentFactsSignature } from "./presentation/productResultFacts.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
-export const LIUYAO_PROMPT_VERSION = "liuyao-report-v1";
+export const LIUYAO_PROMPT_VERSION = "liuyao-report-v2";
 export const MEIHUA_PROMPT_VERSION = "meihua-report-v1";
 
 const OUTCOME_LABELS = new Set(["FAVORABLE", "MIXED", "CAUTIOUS", "UNCLEAR"]);
+const PUBLIC_AI_DISCLAIMER = "本报告用于传统文化研究与个人决策复盘，不承诺现实结果，也不替代医疗、法律、财务或其他专业意见。";
 const DIMENSION_MAP = Object.freeze({
   subject_state: "subjectState",
   target_state: "targetState",
@@ -72,6 +73,32 @@ export function questionDigest(question = "") {
     length: String(question).length,
     sha256: createHash("sha256").update(String(question)).digest("hex").slice(0, 16),
   };
+}
+
+export function redactQuestionForAI(question = "") {
+  return String(question)
+    .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/giu, "[已隐藏邮箱]")
+    .replace(/(?<!\d)(?:\+?86[- ]?)?1[3-9]\d{9}(?!\d)/gu, "[已隐藏手机号]")
+    .replace(/(?<!\d)\d{17}[\dX](?!\d)/giu, "[已隐藏证件号]")
+    .trim();
+}
+
+function plainGroundingValue(value) {
+  if (typeof value === "string") {
+    return value
+      .replace(/同支日\s*\/\s*月|同支日或月份|同支日月/gu, "后续条件更匹配的观察时段")
+      .replace(/回头生/gu, "变化后得到支持")
+      .replace(/处于空亡(?:状态|阶段|时段)?/gu, "呈现出回应信号尚未稳定的状态")
+      .replace(/空亡状态/gu, "回应信号尚未稳定")
+      .replace(/空亡/gu, "信号尚未稳定")
+      .replace(/月建/gu, "当前阶段的外部环境")
+      .replace(/日辰/gu, "近期条件");
+  }
+  if (Array.isArray(value)) return value.map(plainGroundingValue);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([key, nested]) => [key, plainGroundingValue(nested)]));
+  }
+  return value;
 }
 
 function evidenceRefForFinding(finding) {
@@ -253,12 +280,16 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     reportId: chart.id,
     reportType: type === "liuyao" ? "LIUYAO" : "MEIHUA",
     questionContext: {
-      question: chart.question,
+      question: redactQuestionForAI(chart.question),
       questionDigest: questionDigest(chart.question),
       topicCode: chart.topic ?? null,
       subtypeCode: chart.subtype ?? null,
       language,
-      privacy: "question used only for current report generation; do not retain or reuse for training/content",
+      privacy: {
+        purpose: "generate the current report explanation",
+        directIdentifiersRedacted: true,
+        instruction: "do not infer, reproduce, or request personal identifiers",
+      },
     },
     chartFacts: type === "liuyao" ? liuyaoChartFacts(chart) : meihuaChartFacts(chart),
     calendarFacts: calendarFacts(chart),
@@ -307,6 +338,90 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
   return input;
 }
 
+export function buildAIProviderPayload(input) {
+  const { reportId: _reportId, inputHash: _inputHash, ...payload } = input;
+  return plainGroundingValue({
+    ...payload,
+    questionContext: {
+      question: input.questionContext.question,
+      topicCode: input.questionContext.topicCode,
+      subtypeCode: input.questionContext.subtypeCode,
+      language: input.questionContext.language,
+      privacy: input.questionContext.privacy,
+    },
+    allowedEvidenceRefs: [...allowedEvidenceRefs(input)],
+  });
+}
+
+function liuyaoResponseFormat(input) {
+  const evidenceRef = { type: "string", enum: [...allowedEvidenceRefs(input)] };
+  const timingRef = { type: "string", enum: input.timingCandidates.map((item) => item.id) };
+  const factor = {
+    type: "object",
+    additionalProperties: false,
+    required: ["text", "evidenceRefs"],
+    properties: {
+      text: { type: "string" },
+      evidenceRefs: { type: "array", minItems: 1, items: evidenceRef },
+    },
+  };
+  return {
+    type: "json_schema",
+    name: "liuyao_report",
+    schema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["schemaVersion", "factClaims", "summary", "currentSituation", "supportingFactors", "blockingFactors", "changeDirection", "outcomeTrend", "timingWindows", "actionSuggestions", "evidenceSummary", "limitations", "disclaimer"],
+      properties: {
+        schemaVersion: { type: "string", enum: [AI_SCHEMA_VERSION] },
+        factClaims: {
+          type: "object",
+          additionalProperties: false,
+          required: ["originalHexagram", "changedHexagram", "movingLines", "worldLine", "responseLine", "monthBuild", "dayChen", "xunKong"],
+          properties: {
+            originalHexagram: { type: "string", const: input.chartFacts.originalHexagram },
+            changedHexagram: { type: "string", const: input.chartFacts.changedHexagram },
+            movingLines: { type: "array", const: input.chartFacts.movingLines, items: { type: "number" } },
+            worldLine: { type: "number", const: input.chartFacts.worldLine },
+            responseLine: { type: "number", const: input.chartFacts.responseLine },
+            monthBuild: { type: "string", const: input.calendarFacts?.monthBuild },
+            dayChen: { type: "string", const: input.calendarFacts?.dayChen },
+            xunKong: { type: "array", const: input.calendarFacts?.xunKong ?? [], items: { type: "string" } },
+          },
+        },
+        summary: { type: "string" },
+        currentSituation: { type: "string" },
+        supportingFactors: { type: "array", maxItems: 3, items: factor },
+        blockingFactors: { type: "array", maxItems: 3, items: factor },
+        changeDirection: { type: "string" },
+        outcomeTrend: {
+          type: "object",
+          additionalProperties: false,
+          required: ["label", "text"],
+          properties: {
+            label: { type: "string", const: aiOutcomeLabel(input.overallAssessmentFacts?.overallState) },
+            text: { type: "string" },
+          },
+        },
+        timingWindows: {
+          type: "array",
+          maxItems: 2,
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: ["text", "candidateRef"],
+            properties: { text: { type: "string" }, candidateRef: timingRef },
+          },
+        },
+        actionSuggestions: { type: "array", minItems: 2, maxItems: 4, items: { type: "string" } },
+        evidenceSummary: { type: "array", minItems: 1, maxItems: 3, items: factor },
+        limitations: { type: "array", items: { type: "string" } },
+        disclaimer: { type: "string" },
+      },
+    },
+  };
+}
+
 function parseModelOutput(raw) {
   if (!raw) throw new AIReportValidationError("EMPTY_RESPONSE", "AI provider returned an empty response.");
   if (typeof raw === "object" && !Array.isArray(raw)) return raw;
@@ -338,6 +453,10 @@ function evidenceRefsFromOutput(output) {
   const refs = [];
   for (const item of [...output.supportingFactors, ...output.blockingFactors]) {
     refs.push(...item.evidenceRefs);
+  }
+  for (const item of output.evidenceSummary) {
+    assertValid(item && typeof item.text === "string" && item.text.trim().length > 0, "SCHEMA_FIELD_MISSING", "evidence summary text is required.");
+    assertValid(Array.isArray(item.evidenceRefs), "SCHEMA_FIELD_MISSING", "evidence summary refs must be an array.");
   }
   for (const item of output.evidenceSummary) {
     if (typeof item === "object" && Array.isArray(item.evidenceRefs)) refs.push(...item.evidenceRefs);
@@ -378,6 +497,7 @@ export function validateAIReportSchema(raw, input) {
   assertValid(Array.isArray(output.timingWindows), "SCHEMA_FIELD_MISSING", "timingWindows must be an array.");
   assertValid(Array.isArray(output.actionSuggestions), "SCHEMA_FIELD_MISSING", "actionSuggestions must be an array.");
   assertValid(Array.isArray(output.evidenceSummary), "SCHEMA_FIELD_MISSING", "evidenceSummary must be an array.");
+  assertValid(output.evidenceSummary.length > 0, "EVIDENCE_REF_MISSING", "evidenceSummary must include at least one reason.");
   assertValid(Array.isArray(output.limitations), "SCHEMA_FIELD_MISSING", "limitations must be an array.");
 
   for (const item of [...output.supportingFactors, ...output.blockingFactors]) {
@@ -435,7 +555,7 @@ export function validateAIReportFidelity(output, input) {
   const candidateTexts = new Map(input.timingCandidates.map((candidate) => [candidate.id, candidate.window]));
   for (const item of output.timingWindows) {
     assertValid(candidateTexts.has(item.candidateRef), "TIMING_REF_INVALID", "AI timing candidate is not from input.", item);
-    assertValid(!/保证|必定|一定|兑现/u.test(item.text), "TIMING_CERTAINTY_INVALID", "AI timing text uses guaranteed language.");
+    assertValid(!/(?<!不)保证|(?<!不)必定|(?<!不)一定/u.test(item.text), "TIMING_CERTAINTY_INVALID", "AI timing text uses guaranteed language.");
   }
   return true;
 }
@@ -445,6 +565,24 @@ export function validateAIReportSafety(output) {
   for (const pattern of FORBIDDEN_TEXT_PATTERNS) {
     assertValid(!pattern.test(text), "SAFETY_INVALID", "AI output contains unsafe or over-certain language.", { pattern: String(pattern) });
   }
+  return true;
+}
+
+export function validateAIPlainLanguage(output) {
+  const userFacingText = textBlob({
+    summary: output.summary,
+    currentSituation: output.currentSituation,
+    supportingFactors: output.supportingFactors,
+    blockingFactors: output.blockingFactors,
+    changeDirection: output.changeDirection,
+    outcomeTrend: output.outcomeTrend,
+    timingWindows: output.timingWindows,
+    actionSuggestions: output.actionSuggestions,
+    evidenceSummary: output.evidenceSummary,
+    limitations: output.limitations,
+  });
+  assertValid(!/空亡|回头生|月建|日辰|同支日|同支月/u.test(userFacingText), "PLAIN_LANGUAGE_INVALID", "AI explanation contains unexplained professional terminology.");
+  assertValid(!/[一二三四五六七八九十两\d]+\s*(?:天|周|个月|月)\s*后/u.test(textBlob(output.actionSuggestions)), "ACTION_TIMING_INVENTED", "AI action suggestions contain an unsupported time interval.");
   return true;
 }
 
@@ -492,11 +630,11 @@ export class DeterministicReportProvider {
       factClaims,
       summary: overall?.summary ?? `${input.chartFacts.originalHexagram}之${input.chartFacts.changedHexagram}，以已命中的证据谨慎判断。`,
       currentSituation: overall?.baseStateText ?? "当前解读只基于排盘事实、CAL_STD_V1 历法事实和已命中的公开证据。",
-      supportingFactors: support ? [{ text: support.summary, evidenceRefs: [support.id] }] : [],
-      blockingFactors: blocking ? [{ text: blocking.summary, evidenceRefs: [blocking.id] }] : [],
+      supportingFactors: support ? [{ text: "现有依据中存在可利用的支持条件，可结合现实行动继续验证。", evidenceRefs: [support.id] }] : [],
+      blockingFactors: blocking ? [{ text: "现有依据中也有需要先处理的制约条件，不宜忽略。", evidenceRefs: [blocking.id] }] : [],
       changeDirection: overall?.dynamicDirectionText ?? "变化方向以动爻、体用或已列证据为准，不作保证性判断。",
       outcomeTrend: { label: aiOutcomeLabel(overall?.overallState), text: overall?.headline ?? "支持与阻碍需要并看，结果仍取决于现实行动和后续条件。" },
-      timingWindows: timing ? [{ text: `${timing.window} 仅作为候选窗口。`, candidateRef: timing.id }] : [],
+      timingWindows: timing ? [{ text: "当前只提供候选观察窗口，仍需结合现实变化复核。", candidateRef: timing.id }] : [],
       actionSuggestions: actions,
       evidenceSummary: support ? [{ text: "核心证据来自已命中规则。", evidenceRefs: [support.id] }] : [],
       limitations: ["这是传统文化解释，不承诺结果。"],
@@ -506,26 +644,27 @@ export class DeterministicReportProvider {
 }
 
 export class OpenAIReportProvider {
-  constructor({ apiKey = process.env.OPENAI_API_KEY, model = process.env.AI_MODEL ?? "gpt-4.1-mini", timeoutMs = Number(process.env.AI_TIMEOUT_MS ?? 15000), maxOutputTokens = Number(process.env.AI_MAX_OUTPUT_TOKENS ?? 1400), rootDir = process.cwd() } = {}) {
-    this.provider = "openai";
+  constructor({ apiKey = process.env.OPENAI_API_KEY, model = process.env.AI_MODEL ?? "gpt-4.1-mini", timeoutMs = Number(process.env.AI_TIMEOUT_MS ?? 15000), maxOutputTokens = Number(process.env.AI_MAX_OUTPUT_TOKENS ?? 1400), rootDir = process.cwd(), endpoint = "https://api.openai.com/v1/responses", provider = "openai" } = {}) {
+    this.provider = provider;
     this.model = model;
     this.apiKey = apiKey;
     this.timeoutMs = timeoutMs;
     this.maxOutputTokens = maxOutputTokens;
     this.rootDir = rootDir;
+    this.endpoint = endpoint;
   }
 
   promptFor(input) {
-    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v1.md" : "prompts/meihua-report-v1.md";
+    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v2.md" : "prompts/meihua-report-v1.md";
     return readFileSync(resolve(this.rootDir, file), "utf8");
   }
 
   async generateReport(input) {
-    if (!this.apiKey) throw new AIReportValidationError("PROVIDER_UNAVAILABLE", "OPENAI_API_KEY is not configured.");
+    if (!this.apiKey) throw new AIReportValidationError("PROVIDER_UNAVAILABLE", "AI provider API key is not configured.");
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), this.timeoutMs);
     try {
-      const response = await fetch("https://api.openai.com/v1/responses", {
+      const response = await fetch(this.endpoint, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -535,16 +674,28 @@ export class OpenAIReportProvider {
         body: JSON.stringify({
           model: this.model,
           instructions: this.promptFor(input),
-          input: JSON.stringify(input),
+          input: JSON.stringify(buildAIProviderPayload(input)),
           max_output_tokens: this.maxOutputTokens,
           temperature: 0.2,
+          ...(this.provider === "deepseek" ? {
+            reasoning: { effort: "none" },
+            text: { format: input.reportType === "LIUYAO" ? liuyaoResponseFormat(input) : { type: "json_object" } },
+          } : {}),
         }),
       });
       const body = await response.json();
-      if (!response.ok) throw new AIReportValidationError("PROVIDER_FAILED", "OpenAI provider failed.", { status: response.status, code: body?.error?.code });
+      if (!response.ok) throw new AIReportValidationError("PROVIDER_FAILED", "AI provider failed.", { status: response.status, code: body?.error?.code });
+      if (body.status === "incomplete") throw new AIReportValidationError("PROVIDER_INCOMPLETE", "AI provider response was incomplete.", { reason: body.incomplete_details?.reason });
+      const messageText = body.output
+        ?.filter((item) => item.type === "message")
+        .flatMap((item) => item.content ?? [])
+        .filter((part) => part.type === "output_text")
+        .map((part) => part.text)
+        .filter(Boolean)
+        .join("\n");
       return {
         __providerPayload: true,
-        content: body.output_text ?? body.output?.flatMap((item) => item.content ?? []).map((part) => part.text).filter(Boolean).join("\n"),
+        content: messageText || body.output_text,
         tokenUsage: body.usage ? {
           inputTokens: body.usage.input_tokens,
           outputTokens: body.usage.output_tokens,
@@ -558,6 +709,20 @@ export class OpenAIReportProvider {
     } finally {
       clearTimeout(timer);
     }
+  }
+}
+
+export class DeepSeekReportProvider extends OpenAIReportProvider {
+  constructor({ apiKey = process.env.DEEPSEEK_API_KEY, model = process.env.AI_MODEL ?? "deepseek-v4-flash", timeoutMs = Number(process.env.AI_TIMEOUT_MS ?? 30000), maxOutputTokens = Number(process.env.AI_MAX_OUTPUT_TOKENS ?? 1800), rootDir = process.cwd(), baseUrl = process.env.DEEPSEEK_BASE_URL ?? "https://api.deepseek.com" } = {}) {
+    super({
+      apiKey,
+      model,
+      timeoutMs,
+      maxOutputTokens,
+      rootDir,
+      endpoint: `${String(baseUrl).replace(/\/$/u, "")}/responses`,
+      provider: "deepseek",
+    });
   }
 }
 
@@ -585,8 +750,9 @@ export class MockAIReportProvider extends DeterministicReportProvider {
 
 export function providerFromEnv({ rootDir = process.cwd(), mockMode }: { rootDir?: string; mockMode?: string } = {}): any {
   if (mockMode) return new MockAIReportProvider({ mode: mockMode, delayMs: mockMode === "slow_success" ? 500 : 0 });
-  const provider = process.env.AI_PROVIDER ?? (process.env.OPENAI_API_KEY ? "openai" : "deterministic");
+  const provider = process.env.AI_PROVIDER ?? (process.env.DEEPSEEK_API_KEY ? "deepseek" : process.env.OPENAI_API_KEY ? "openai" : "deterministic");
   if (provider === "openai") return new OpenAIReportProvider({ rootDir });
+  if (provider === "deepseek") return new DeepSeekReportProvider({ rootDir });
   if (provider === "mock_success") return new MockAIReportProvider({ mode: "success" });
   if (provider === "mock_failure") return new MockAIReportProvider({ mode: "throw" });
   return new DeterministicReportProvider();
@@ -621,32 +787,55 @@ export async function generateGroundedAIReport({ result, type, provider = provid
   if (inFlight.has(cacheKey)) return inFlight.get(cacheKey);
   const run = (async () => {
     const startedAt = Date.now();
+    const maxAttempts = provider.provider === "deepseek" || provider.provider === "openai" ? 2 : 1;
+    const retryableValidationCodes = new Set(["EMPTY_RESPONSE", "INVALID_RESPONSE", "JSON_PARSE_FAILED", "SCHEMA_VERSION_INVALID", "SCHEMA_FIELD_MISSING", "SCHEMA_ENUM_INVALID", "EVIDENCE_REF_MISSING", "EVIDENCE_REF_INVALID", "FACT_MISMATCH", "RULE_NOT_MATCHED", "RULE_NOT_ALLOWED", "TIMING_REF_INVALID", "TIMING_LIMIT_EXCEEDED", "TIMING_CERTAINTY_INVALID", "SAFETY_INVALID", "TYPE_CONTAMINATION", "PLAIN_LANGUAGE_INVALID", "ACTION_TIMING_INVENTED"]);
+    const accumulatedUsage = { inputTokens: 0, outputTokens: 0, totalTokens: 0 };
+    let attemptCount = 0;
     try {
-      const raw = await provider.generateReport(input);
-      const providerPayload = raw?.__providerPayload ? raw : null;
-      const output = validateAIReport(providerPayload ? providerPayload.content : raw, input);
-      const latencyMs = Date.now() - startedAt;
-      return {
-        aiReport: output,
-        aiSchemaVersion: AI_SCHEMA_VERSION,
-        aiProvider: provider.provider,
-        aiModel: provider.model,
-        promptVersion: input.versions.promptVersion,
-        generatedAt: new Date().toISOString(),
-        latencyMs,
-        tokenUsage: providerPayload?.tokenUsage ?? {
-          inputTokenEstimate: estimateTokens(input),
-          outputTokenEstimate: estimateTokens(output),
-        },
-        reportSource: provider.provider === "openai" ? "OPENAI_LIVE" : "OPENAI_LIVE",
-        validationStatus: "VALID",
-        fallbackUsed: false,
-        inputHash: input.inputHash,
-        requestId: randomUUID(),
-      };
+      for (attemptCount = 1; attemptCount <= maxAttempts; attemptCount += 1) {
+        try {
+          const raw = await provider.generateReport(input);
+          const providerPayload = raw?.__providerPayload ? raw : null;
+          if (providerPayload?.tokenUsage) {
+            accumulatedUsage.inputTokens += Number(providerPayload.tokenUsage.inputTokens ?? 0);
+            accumulatedUsage.outputTokens += Number(providerPayload.tokenUsage.outputTokens ?? 0);
+            accumulatedUsage.totalTokens += Number(providerPayload.tokenUsage.totalTokens ?? 0);
+          }
+          const validatedOutput = validateAIReport(providerPayload ? providerPayload.content : raw, input);
+          const output = provider.provider === "deepseek" || provider.provider === "openai"
+            ? plainGroundingValue(validatedOutput)
+            : validatedOutput;
+          if (provider.provider === "deepseek" || provider.provider === "openai") validateAIPlainLanguage(output);
+          output.disclaimer = PUBLIC_AI_DISCLAIMER;
+          return {
+            aiReport: output,
+            aiSchemaVersion: AI_SCHEMA_VERSION,
+            aiProvider: provider.provider,
+            aiModel: provider.model,
+            promptVersion: input.versions.promptVersion,
+            generatedAt: new Date().toISOString(),
+            latencyMs: Date.now() - startedAt,
+            tokenUsage: accumulatedUsage.totalTokens > 0 ? accumulatedUsage : {
+              inputTokenEstimate: estimateTokens(input),
+              outputTokenEstimate: estimateTokens(output),
+            },
+            reportSource: provider.provider === "deepseek" ? "DEEPSEEK_LIVE" : "OPENAI_LIVE",
+            validationStatus: "VALID",
+            fallbackUsed: false,
+            attemptCount,
+            inputHash: input.inputHash,
+            requestId: randomUUID(),
+          };
+        } catch (err) {
+          if (attemptCount < maxAttempts && err instanceof AIReportValidationError && retryableValidationCodes.has(err.code)) continue;
+          throw err;
+        }
+      }
     } catch (err) {
       const bundle = fallbackBundle({ result, type, input, reason: err, provider: provider.provider, model: provider.model });
       bundle.latencyMs = Date.now() - startedAt;
+      bundle.attemptCount = attemptCount;
+      if (accumulatedUsage.totalTokens > 0) bundle.tokenUsage = accumulatedUsage;
       return bundle;
     } finally {
       inFlight.delete(cacheKey);
