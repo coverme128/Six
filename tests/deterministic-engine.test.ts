@@ -116,6 +116,43 @@ test("v1.2 six relation matrix remains derivable from five-element relations", (
   }
 });
 
+test("moving-line return influence preserves the changed-to-original direction", () => {
+  const result = createLiuyaoChart({
+    values: [7, 7, 8, 9, 8, 6],
+    topic: "career",
+    subtype: "job_search",
+    calendar: { instantUtc: "2026-08-27T03:00:00Z", timezone: "Asia/Shanghai" },
+  }, ROOT);
+
+  assert.equal(result.chart.originalHexagram.code, "guimei");
+  assert.equal(result.chart.changedHexagram.code, "sun");
+  const fourth = result.chart.lines[3];
+  assert.equal(fourth.branchName, "午");
+  assert.equal(fourth.changed.branchName, "戌");
+  assert.equal(fourth.changed.returnInfluence.code, "outward_drain");
+  assert.equal(fourth.changed.returnInfluence.name, "化泄");
+  assert.match(fourth.changed.returnInfluence.text, /原爻午生变爻戌/u);
+  assert.doesNotMatch(fourth.changed.returnInfluence.text, /变爻戌生扶原爻午/u);
+  assert.ok(result.findings.some((finding) => finding.rule_code === "ORIGINAL_GENERATES_CHANGED" && finding.input_facts?.linePosition === 4));
+  assert.ok(!result.findings.some((finding) => finding.rule_code === "RETURN_GENERATION" && finding.input_facts?.linePosition === 4));
+  assert.ok(result.timingCandidates.every((candidate) => candidate.evidence.every((code) => ["TARGET_BRANCH_VALUE", "VOID_FILL"].includes(code))));
+  assert.ok(result.timingCandidates.every((candidate) => !candidate.evidence.includes("MOVING_LINE_VALUE")));
+});
+
+test("CORE_V1 pattern evaluator executes source, blocker and six-clash rules from chart facts", () => {
+  const result = createLiuyaoChart({
+    values: [7, 7, 7, 7, 7, 7],
+    question: "是否适合推进这份工作？",
+    topic: "career",
+    subtype: "job_search",
+    calendar: { instantUtc: "2026-08-27T03:00:00Z", timezone: "Asia/Shanghai" },
+  }, ROOT);
+  const codes = new Set(result.findings.map((finding) => finding.rule_code));
+  assert.ok(codes.has("ORIGINAL_SIX_CLASH"));
+  assert.ok(codes.has("ORIGIN_GENERATES_YONGSHEN"));
+  assert.ok(codes.has("TABOO_CONTROLS_YONGSHEN"));
+});
+
 test("v1.2 six spirits fixture matches configured day-stem starts", () => {
   const spirits = readJson("data/liuyao/six-spirits.json");
   const fixture = readJson("fixtures/liuyao/six-spirit-fixtures.json");

@@ -73,8 +73,10 @@ export function buildGuidedViewModel(facts) {
   const risks = guidedSignals(deduplicateSignals(presentationFacts.negativeSignals)).slice(0, 4).map(publicSignal);
   const simplifiedEvidence = guidedSignals(deduplicateSignals([...presentationFacts.positiveSignals, ...presentationFacts.negativeSignals, ...presentationFacts.neutralSignals])).slice(0, 12).map(publicSignal);
   const overall = productFacts?.overallAssessmentFacts;
+  const decisionSupport = productFacts?.decisionSupportFacts ?? null;
   const timing = productFacts?.timingExplanationFacts?.[0];
-  const actions = productFacts?.actionGuidanceFacts?.items ?? recommendedActions(presentationFacts);
+  const fallbackActions = productFacts?.actionGuidanceFacts?.items ?? recommendedActions(presentationFacts);
+  const actions = decisionSupport?.actionTimeline?.map((item) => item.action) ?? fallbackActions;
   return {
     viewModelVersion: "GUIDED_VIEWMODEL_V1",
     reportId: presentationFacts.resultId,
@@ -88,6 +90,20 @@ export function buildGuidedViewModel(facts) {
       baseState: overall.baseStateText,
       dynamicDirection: overall.dynamicDirectionText,
       conflictState: overall.conflictState,
+    } : null,
+    directAnswer: decisionSupport?.directAnswer ?? null,
+    decisionSupport: decisionSupport ? {
+      scenario: decisionSupport.scenarioCode,
+      label: decisionSupport.scenarioLabel,
+      mode: decisionSupport.decisionMode,
+      directAnswer: decisionSupport.directAnswer,
+      dimensions: decisionSupport.dimensions,
+      proceedConditions: decisionSupport.proceedConditions,
+      holdConditions: decisionSupport.holdConditions,
+      actionTimeline: decisionSupport.actionTimeline,
+      scopeNote: decisionSupport.scopeNote,
+      hexagramChain: decisionSupport.hexagramChain,
+      boundary: decisionSupport.boundary,
     } : null,
     currentSituation: overall?.baseStateText ?? presentationFacts.situation.currentSituation,
     coreMatter: presentationFacts.topicRoleContext ? {
@@ -115,7 +131,7 @@ export function buildGuidedViewModel(facts) {
     changeDirection: overall?.dynamicDirectionText ?? presentationFacts.situation.changeDirection,
     timingHint: timing ? `${timing.explanation} ${timing.limitation}` : timingHint(presentationFacts),
     recommendedActions: actions,
-    scenarioGuidance: scenarioGuidance(presentationFacts, overall, supports, risks, actions),
+    scenarioGuidance: scenarioGuidance(presentationFacts, overall, supports, risks, fallbackActions),
     whyThisAssessment: productFacts ? {
       conflictResolution: productFacts.conflictResolutionFacts.resolutionSummary,
       basis: productFacts.overallAssessmentFacts.basis,

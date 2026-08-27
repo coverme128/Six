@@ -8,7 +8,7 @@ import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContex
 import { buildLiuyaoProductResultFacts, judgmentFactsSignature } from "./presentation/productResultFacts.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
-export const LIUYAO_PROMPT_VERSION = "liuyao-report-v3";
+export const LIUYAO_PROMPT_VERSION = "liuyao-report-v4";
 export const MEIHUA_PROMPT_VERSION = "meihua-report-v1";
 
 const OUTCOME_LABELS = new Set(["FAVORABLE", "MIXED", "CAUTIOUS", "UNCLEAR"]);
@@ -323,6 +323,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     overallAssessmentFacts: productResultFacts?.overallAssessmentFacts ?? null,
     yongshenSelectionFacts: productResultFacts?.yongshenSelectionFacts ?? null,
     conflictResolutionFacts: productResultFacts?.conflictResolutionFacts ?? null,
+    decisionSupportFacts: productResultFacts?.decisionSupportFacts ?? null,
     timingExplanationFacts: productResultFacts?.timingExplanationFacts ?? [],
     actionGuidanceFacts: productResultFacts?.actionGuidanceFacts ?? null,
     deterministicJudgmentSignature: productResultFacts ? judgmentFactsSignature(productResultFacts) : null,
@@ -350,6 +351,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     timingCandidates: input.timingCandidates,
     overallAssessmentFacts: input.overallAssessmentFacts,
     conflictResolutionFacts: input.conflictResolutionFacts,
+    decisionSupportFacts: input.decisionSupportFacts,
     timingExplanationFacts: input.timingExplanationFacts,
     actionGuidanceFacts: input.actionGuidanceFacts,
     deterministicJudgmentSignature: input.deterministicJudgmentSignature,
@@ -511,11 +513,16 @@ function canonicalizeLiveControlledFields(raw, input) {
   const output = parseModelOutput(raw);
   if (output.questionResponse) {
     output.questionResponse.directAnswer = deterministicDecisionAnswer(input, input.overallAssessmentFacts);
+    if (input.decisionSupportFacts?.scopeNote) output.questionResponse.scopeNote = input.decisionSupportFacts.scopeNote;
+  }
+  if (input.decisionSupportFacts?.hexagramChain) output.hexagramReading = { ...input.decisionSupportFacts.hexagramChain };
+  if (input.decisionSupportFacts?.actionTimeline?.length) {
+    output.actionSuggestions = input.decisionSupportFacts.actionTimeline.map((item) => `${item.phase}：${item.action}`);
   }
   output.timingWindows = input.timingCandidates.slice(0, 2).map((candidate) => ({
-    text: `${candidate.window}仅作为候选观察窗口，仍需结合现实变化复核，不代表结果已经确定。`,
+    text: "后续阶段仅作为候选观察窗口，仍需结合现实变化复核，不代表结果已经确定。",
     candidateRef: candidate.id,
-  }));
+  })).slice(0, 1);
   return output;
 }
 
@@ -709,6 +716,7 @@ export function validateAIReport(raw, input) {
 }
 
 function deterministicDecisionAnswer(input, overall) {
+  if (input.decisionSupportFacts?.directAnswer) return input.decisionSupportFacts.directAnswer;
   const state = overall?.overallState;
   if (state === "FAVORABLE") return "当前可以继续推进，但仍要先核对关键条件，不把有利信号当成结果承诺。";
   if (state === "CAUTIOUS") return "当前更适合先补条件和降低投入，等主要阻碍出现实质变化后再决定是否推进。";
@@ -839,7 +847,9 @@ export class DeterministicReportProvider {
     const support = input.aggregatedEvidence.supportingForces[0] ?? input.matchedRuleFindings[0];
     const blocking = input.aggregatedEvidence.blockingForces[0] ?? input.matchedRuleFindings[1] ?? support;
     const overall = input.overallAssessmentFacts;
-    const actions = input.actionGuidanceFacts?.items ?? ["先处理可验证的阻碍条件。", "把报告作为辅助参考，不替代现实决策。"];
+    const actions = input.decisionSupportFacts?.actionTimeline?.map((item) => item.action)
+      ?? input.actionGuidanceFacts?.items
+      ?? ["先处理可验证的阻碍条件。", "把报告作为辅助参考，不替代现实决策。"];
     const topic = input.resolvedTopicRoles?.displayName ?? input.questionContext?.topicCode ?? "当前问题";
     const moving = (input.chartFacts?.lineFacts ?? []).filter((line) => line.moving);
     const movingText = moving.length
@@ -859,9 +869,9 @@ export class DeterministicReportProvider {
       questionResponse: {
         focus: input.questionContext?.question || "本次具体问题",
         directAnswer: deterministicDecisionAnswer(input, overall),
-        scopeNote: `本次系统按“${topic}”口径组织盘面。${input.resolvedTopicRoles?.clarificationTriggers?.[0] ?? "如果实际决定与该口径不同，应先重新确认问题重点。"}`,
+        scopeNote: input.decisionSupportFacts?.scopeNote ?? `本次按“${topic}”理解。${input.resolvedTopicRoles?.clarificationTriggers?.[0] ?? "如果实际决定与该口径不同，应先重新确认问题重点。"}`,
       },
-      hexagramReading: {
+      hexagramReading: input.decisionSupportFacts?.hexagramChain ? { ...input.decisionSupportFacts.hexagramChain } : {
         original: `本卦“${input.chartFacts.originalHexagram}”是这次判断的当前起点。它不单独代表适合或不适合，需要结合本次问题中的关键角色一起看。`,
         moving: `${movingText}。这说明变化来自具体环节，不应只把卦名变化理解成简单的好坏转换。`,
         changed: `变卦“${input.chartFacts.changedHexagram}”表示上述变化发生后需要继续观察的结构，不代表结果已经发生。`,
@@ -901,7 +911,7 @@ export class OpenAIReportProvider {
   }
 
   promptFor(input) {
-    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v3.md" : "prompts/meihua-report-v1.md";
+    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v4.md" : "prompts/meihua-report-v1.md";
     return readFileSync(resolve(this.rootDir, file), "utf8");
   }
 

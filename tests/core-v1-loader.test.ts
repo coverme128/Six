@@ -10,6 +10,7 @@ import {
   loadRuleProfile,
   resolveFeatureFlags,
 } from "@six/domain/production";
+import { CORE_V1_RULE_EXECUTION_COVERAGE } from "@six/domain/liuyao";
 
 const ROOT = process.cwd();
 
@@ -47,6 +48,19 @@ test("loads exactly the LIUYAO_CORE_V1 production whitelist", () => {
       assert.notEqual(item.status, "REVIEW_REQUIRED");
     }
   }
+});
+
+test("every loaded CORE_V1 rule has an explicit runtime execution or policy path", () => {
+  const coverage = CORE_V1_RULE_EXECUTION_COVERAGE;
+  assert.equal(coverage.strength.executable, 24);
+  assert.deepEqual(coverage.strength.expertBlocked, []);
+  assert.equal(coverage.dynamic.executable, 14);
+  assert.deepEqual(coverage.dynamic.expertBlocked, []);
+  assert.equal(coverage.pattern.executable, 47);
+  assert.deepEqual(coverage.pattern.expertBlocked, []);
+  assert.equal(coverage.timing.executable, 18);
+  assert.equal(coverage.timing.policyOnly.length, 16);
+  assert.equal(45 + coverage.strength.executable + coverage.dynamic.executable + coverage.pattern.executable + coverage.timing.executable, 148);
 });
 
 test("every CORE_V1 whitelist key is traceable to the candidate rule pools", () => {

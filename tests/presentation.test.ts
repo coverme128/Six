@@ -41,6 +41,12 @@ test("Experience bundle builds guided and professional viewmodels without admin 
   assert.equal(bundle.productResultFacts.productFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V1");
   assert.ok(judgmentFactsSignature(bundle.productResultFacts)?.overallState);
   assert.ok(bundle.guidedViewModel.overallAssessment?.label);
+  assert.ok(bundle.guidedViewModel.directAnswer);
+  assert.equal(bundle.guidedViewModel.decisionSupport?.scenario, "JOB_SEARCH");
+  assert.ok(bundle.guidedViewModel.decisionSupport?.dimensions.length >= 4);
+  assert.ok(bundle.guidedViewModel.decisionSupport?.proceedConditions.length >= 2);
+  assert.ok(bundle.guidedViewModel.decisionSupport?.holdConditions.length >= 2);
+  assert.equal(bundle.guidedViewModel.decisionSupport?.actionTimeline.length, 3);
   assert.ok(bundle.guidedViewModel.headline);
   assert.ok(bundle.guidedViewModel.nextActions.length >= 3);
   assert.ok(bundle.professionalViewModel.chartSummary.title);

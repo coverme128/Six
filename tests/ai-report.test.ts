@@ -58,6 +58,8 @@ test("AIReportInput contains only grounded chart, calendar and matched evidence 
   assert.ok(input.overallAssessmentFacts.overallState);
   assert.ok(input.conflictResolutionFacts.conflictState);
   assert.ok(input.actionGuidanceFacts.items.length > 0);
+  assert.ok(input.decisionSupportFacts.directAnswer);
+  assert.equal(input.decisionSupportFacts.scenarioCode, "JOB_SEARCH");
   assert.equal(input.chartFacts.lineFacts.length, 6);
   assert.ok(input.chartFacts.lineFacts.some((line) => line.moving));
   assert.ok(input.deterministicJudgmentSignature.overallState);
@@ -76,7 +78,7 @@ test("DeepSeek provider uses the official Responses endpoint and minimizes provi
   assert.equal(payload.reportId, undefined);
   assert.equal(payload.inputHash, undefined);
   assert.equal(payload.questionContext.questionDigest, undefined);
-  assert.equal(payload.versions.promptVersion, "liuyao-report-v3");
+  assert.equal(payload.versions.promptVersion, "liuyao-report-v4");
   assert.doesNotMatch(JSON.stringify(payload), /空亡|回头生|月建|日辰|同支日/u);
 });
 
@@ -208,6 +210,9 @@ test("live provider decision and timing are replaced with deterministic controll
   provider.generateReport = async (input) => {
     const output = await generateValid(input);
     output.questionResponse.directAnswer = "适合立刻投入全部资源。";
+    output.questionResponse.scopeNote = "模型自行改变问题口径。";
+    output.hexagramReading.original = "模型自行补充卦名吉凶。";
+    output.actionSuggestions = ["模型自行发明行动。", "继续等待。"];
     output.timingWindows[0].text = "这个时间必定兑现。";
     return output;
   };
@@ -216,6 +221,9 @@ test("live provider decision and timing are replaced with deterministic controll
   assert.equal(bundle.attemptCount, 1);
   assert.match(bundle.aiReport.questionResponse.directAnswer, /小步验证/u);
   assert.doesNotMatch(bundle.aiReport.questionResponse.directAnswer, /立刻投入全部资源/u);
+  assert.equal(bundle.aiReport.questionResponse.scopeNote, "本次按求职与工作机会理解，重点判断是否值得开始找，以及满足什么条件后再切换。");
+  assert.doesNotMatch(bundle.aiReport.hexagramReading.original, /自行补充|吉凶/u);
+  assert.doesNotMatch(JSON.stringify(bundle.aiReport.actionSuggestions), /自行发明/u);
   assert.match(bundle.aiReport.timingWindows[0].text, /候选观察窗口/u);
   assert.doesNotMatch(bundle.aiReport.timingWindows[0].text, /一定|必定|保证/u);
 });

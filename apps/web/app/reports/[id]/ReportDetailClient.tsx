@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Download, FileText, Printer, ShieldCheck, Sparkles } from "lucide-react";
+import { Download, FileText, MoreHorizontal, Printer, ShieldCheck, Sparkles } from "lucide-react";
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
@@ -9,6 +9,14 @@ import { renderLiuyaoVisualizationSvg } from "../../liuyao-visuals/export";
 
 function textList(items: Array<{ title?: string; text?: string }> = []) {
   return items.map((item) => `- ${item.text ?? item.title ?? ""}`).filter((item) => item.trim() !== "-").join("\n");
+}
+
+function decisionStateLabel(state?: string) {
+  if (state === "SUPPORT") return "具备支持";
+  if (state === "RISK") return "需要先处理";
+  if (state === "MIXED") return "有利有阻";
+  if (state === "OBSERVE") return "继续核对";
+  return "信息不足";
 }
 
 function buildReadableMarkdown(report: ExperienceResponse) {
@@ -23,6 +31,7 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     report.createdAt ? `生成时间：${new Date(report.createdAt).toLocaleString("zh-CN")}` : "",
     "",
     "## 总体判断",
+    guided?.directAnswer ?? "",
     guided?.overallAssessment?.label ?? "",
     guided?.overallAssessment?.baseState ?? "",
     guided?.overallAssessment?.dynamicDirection ?? "",
@@ -289,7 +298,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       <section className="hero compact">
         <p className="eyebrow">你的问题</p>
         <h1>{guided?.question ?? "报告详情"}</h1>
-        <p>{aiReport?.questionResponse?.directAnswer ?? guided?.scenarioGuidance?.decisionFocus ?? guided?.overallAssessment?.label ?? "正在整理本次报告的回答。"}</p>
+        <p>{guided?.directAnswer ?? aiReport?.questionResponse?.directAnswer ?? guided?.scenarioGuidance?.decisionFocus ?? guided?.overallAssessment?.label ?? "正在整理本次报告的回答。"}</p>
       </section>
 
       {loading ? <p className="empty">正在读取报告。</p> : null}
@@ -300,8 +309,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           <div className="report-answer-heading">
             <div>
               <p className="eyebrow">当前回答</p>
-              <h2>{guided.overallAssessment?.label ?? "仍需继续观察"}</h2>
-              <p className="section-kicker">先判断现在更适合怎么做；卦盘和专业依据放在后面按需复核。</p>
+              <h2>{guided.directAnswer ?? guided.overallAssessment?.label ?? "仍需继续观察"}</h2>
+              <p className="section-kicker">先看能不能推进、要满足什么条件，再按需查看卦象解释和专业依据。</p>
             </div>
             <div className="fact-strip" aria-label="报告核心事实">
               <span>{report?.chartViewModel?.type === "liuyao" ? `${report.chartViewModel.originalHexagram} → ${report.chartViewModel.changedHexagram}` : "六爻报告"}</span>
@@ -330,18 +339,38 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               <small>{guided.scenarioGuidance.boundary}</small>
             </div>
           ) : null}
-          <div className="report-answer-summary">
-            <div>
-              <span>现在怎么看</span>
-              <strong>{guided.overallAssessment?.baseState ?? guided.currentSituation}</strong>
-              <p>{guided.overallAssessment?.dynamicDirection ?? guided.changeDirection}</p>
+          {guided.decisionSupport ? (
+            <div className="decision-brief" aria-label="条件化决策建议">
+              <div className="decision-dimensions">
+                {guided.decisionSupport.dimensions?.map((item) => (
+                  <article key={item.code} data-state={item.state}>
+                    <div><span>{item.label}</span><strong>{decisionStateLabel(item.state)}</strong></div>
+                    <p>{item.summary}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="decision-condition-grid">
+                <section>
+                  <span>满足这些条件，再加大投入</span>
+                  <ul>{guided.decisionSupport.proceedConditions?.map((item) => <li key={item}>{item}</li>)}</ul>
+                </section>
+                <section>
+                  <span>出现这些情况，先不要决定</span>
+                  <ul>{guided.decisionSupport.holdConditions?.map((item) => <li key={item}>{item}</li>)}</ul>
+                </section>
+              </div>
+              <section className="decision-timeline">
+                <span>接下来怎么做</span>
+                <ol>{guided.decisionSupport.actionTimeline?.map((item) => <li key={`${item.phase}-${item.action}`}><strong>{item.phase}</strong><p>{item.action}</p></li>)}</ol>
+              </section>
+              <small className="decision-boundary">{guided.decisionSupport.boundary}</small>
             </div>
-            <div>
-              <span>现在怎么做</span>
-              <strong>{guided.recommendedActions?.[0] ?? "先核对能改变决定的关键条件。"}</strong>
-              <p>生成针对本问题的解读后，会进一步说明本卦、变卦和关键元素怎样影响判断。</p>
+          ) : (
+            <div className="report-answer-summary">
+              <div><span>现在怎么看</span><strong>{guided.overallAssessment?.baseState ?? guided.currentSituation}</strong><p>{guided.overallAssessment?.dynamicDirection ?? guided.changeDirection}</p></div>
+              <div><span>现在怎么做</span><strong>{guided.recommendedActions?.[0] ?? "先核对能改变决定的关键条件。"}</strong></div>
             </div>
-          </div>
+          )}
           <aside className="ai-generation-notice" aria-label="AI 白话解读说明">
             <Sparkles aria-hidden="true" size={20} />
             <div>
@@ -356,18 +385,15 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               {aiLoading ? "正在结合问题解读" : aiProviderUnconfigured ? "真实模型未配置" : report?.aiReportBundle?.fallbackUsed ? "重试真实模型解读" : report?.aiReportBundle ? "重新生成针对问题的解读" : "生成针对问题的解读"}
             </button>
             <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
-            <button type="button" onClick={exportReadableReport}>
-              <FileText aria-hidden="true" size={17} />下载文本
-            </button>
-            <button data-testid="export-visual-svg" type="button" onClick={exportVisualReport} disabled={!visualization}>
-              <Download aria-hidden="true" size={17} />下载 SVG
-            </button>
-            <button data-testid="print-report" type="button" onClick={() => window.print()}>
-              <Printer aria-hidden="true" size={17} />打印 / PDF
-            </button>
-            <a className="text-link" href="/">
-              再次起卦
-            </a>
+            <details className="report-more-actions">
+              <summary><MoreHorizontal aria-hidden="true" size={18} />更多操作</summary>
+              <div>
+                <button type="button" onClick={exportReadableReport}><FileText aria-hidden="true" size={17} />下载文本</button>
+                <button data-testid="export-visual-svg" type="button" onClick={exportVisualReport} disabled={!visualization}><Download aria-hidden="true" size={17} />下载 SVG</button>
+                <button data-testid="print-report" type="button" onClick={() => window.print()}><Printer aria-hidden="true" size={17} />打印 / PDF</button>
+                <a className="text-link" href="/">再次起卦</a>
+              </div>
+            </details>
           </div>
           {aiStatus ? <p className="empty">{aiStatus}</p> : aiProviderUnconfigured ? <p className="empty">真实模型尚未配置，当前仅显示正式排盘与规则结论。</p> : report?.aiReportBundle?.fallbackUsed ? <p className="empty">真实模型暂时未能完成解读，正式排盘和规则结论不受影响。</p> : null}
           <div className="report-trust-note" aria-label="解读边界">
@@ -392,9 +418,10 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           </div>
 
           <div className="ai-report-lead">
-            <span>{aiReport?.questionResponse?.scopeNote ? "本次解读口径" : "对这个问题的直接回答"}</span>
-            <strong>{aiReport?.questionResponse?.scopeNote ?? aiReport?.questionResponse?.directAnswer ?? aiReport?.summary ?? guided?.summary ?? "当前已保留基础报告，可继续查看结论和依据。"}</strong>
+            <span>对这个问题的直接回答</span>
+            <strong>{guided?.directAnswer ?? aiReport?.questionResponse?.directAnswer ?? aiReport?.summary ?? guided?.summary ?? "当前已保留基础报告，可继续查看结论和依据。"}</strong>
             <p>{aiReport?.currentSituation ?? guided?.currentSituation}</p>
+            {aiReport?.questionResponse?.scopeNote ? <small>本次理解范围：{aiReport.questionResponse.scopeNote}</small> : null}
           </div>
 
           {aiReport ? (
@@ -425,41 +452,43 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                 </section>
               ) : null}
 
-              {(aiReport.keyElements ?? []).length ? (
-                <section className="ai-key-elements">
-                  <div className="report-section-heading">
-                    <span>真正影响决定的因素</span>
-                    <h3>把专业角色翻成现实条件</h3>
-                  </div>
-                  <div className="ai-key-element-grid">
-                    {aiReport.keyElements?.map((item, index) => (
-                      <article key={`${item.title}-${index}`}>
-                        <small>盘面角色：{item.professionalRole}</small>
-                        <strong>{item.title}</strong>
-                        <p>{item.impact}</p>
-                        <div><span>现实中看什么</span>{item.observe}</div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              ) : null}
+              <details className="ai-supporting-details">
+                <summary>查看盘面角色与支持、阻碍</summary>
+                {(aiReport.keyElements ?? []).length ? (
+                  <section className="ai-key-elements">
+                    <div className="report-section-heading">
+                      <span>决策依据</span>
+                      <h3>专业角色对应哪些现实条件</h3>
+                    </div>
+                    <div className="ai-key-element-grid">
+                      {aiReport.keyElements?.map((item, index) => (
+                        <article key={`${item.title}-${index}`}>
+                          <small>盘面角色：{item.professionalRole}</small>
+                          <strong>{item.title}</strong>
+                          <p>{item.impact}</p>
+                          <div><span>现实中看什么</span>{item.observe}</div>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
+                <div className="ai-factor-grid">
+                  <section>
+                    <h3>支持推进的事实</h3>
+                    {(aiReport.supportingFactors ?? []).length ? (
+                      <ul>{aiReport.supportingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
+                    ) : <p>当前没有足够明确的支持因素。</p>}
+                  </section>
+                  <section>
+                    <h3>需要先处理的事实</h3>
+                    {(aiReport.blockingFactors ?? []).length ? (
+                      <ul>{aiReport.blockingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
+                    ) : <p>当前没有足够明确的阻碍因素。</p>}
+                  </section>
+                </div>
+              </details>
 
-              <div className="ai-factor-grid">
-                <section>
-                  <h3>推动这件事的因素</h3>
-                  {(aiReport.supportingFactors ?? []).length ? (
-                    <ul>{aiReport.supportingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
-                  ) : <p>当前没有足够明确的支持因素。</p>}
-                </section>
-                <section>
-                  <h3>需要先处理的阻碍</h3>
-                  {(aiReport.blockingFactors ?? []).length ? (
-                    <ul>{aiReport.blockingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
-                  ) : <p>当前没有足够明确的阻碍因素。</p>}
-                </section>
-              </div>
-
-              {(aiReport.realityChecks ?? []).length ? (
+              {!guided?.decisionSupport && (aiReport.realityChecks ?? []).length ? (
                 <section className="ai-reality-checks">
                   <div className="report-section-heading">
                     <span>先核对，再决定</span>
@@ -476,10 +505,12 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                 </section>
               ) : null}
 
-              <section className="ai-next-actions">
-                <span>现在可以做什么</span>
-                <ol>{(aiReport.actionSuggestions ?? []).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
-              </section>
+              {!guided?.decisionSupport ? (
+                <section className="ai-next-actions">
+                  <span>现在可以做什么</span>
+                  <ol>{(aiReport.actionSuggestions ?? []).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
+                </section>
+              ) : null}
 
               <section className="ai-timing-note">
                 <span>什么时候再观察</span>

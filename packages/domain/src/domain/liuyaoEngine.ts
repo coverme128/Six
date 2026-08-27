@@ -3,6 +3,14 @@ import { createHash, randomInt } from "node:crypto";
 import { buildCalendarContext } from "./calendar.js";
 import { indexes, loadDomainData } from "./dataStore.js";
 import { aggregateCoreV1Report, createFindingFromRule, loadRuleProfile } from "../production/index.js";
+import {
+  buildCoreV1TimingCandidates,
+  evaluateCoreV1DynamicFindings,
+  evaluateCoreV1PatternFindings,
+  evaluateCoreV1StrengthFindings,
+} from "./liuyaoCoreV1Evaluator.js";
+
+export { CORE_V1_RULE_EXECUTION_COVERAGE } from "./liuyaoCoreV1Evaluator.js";
 
 const LINE_MAP = {
   6: { name: "老阴", originalBit: "0", changedBit: "1", moving: true },
@@ -180,11 +188,13 @@ function returnInfluence(originalLine, changedLine, idx) {
   if (!originalLine?.element || !changedLine?.element || originalLine.branch === changedLine.branch) {
     return { code: "unchanged", name: "不变", text: "本爻纳支未变。" };
   }
-  const changedToOriginal = elementRelation(changedLine.element, originalLine.element, idx.elementByCode);
-  if (changedToOriginal === "parent") return { code: "return_generate", name: "回头生", text: `变爻${changedLine.branchName}生扶原爻${originalLine.branchName}。` };
-  if (changedToOriginal === "officer_ghost") return { code: "return_control", name: "回头克", text: `变爻${changedLine.branchName}克制原爻${originalLine.branchName}。` };
-  if (changedToOriginal === "sibling") return { code: "return_same", name: "回头同气", text: `变爻${changedLine.branchName}与原爻${originalLine.branchName}同气。` };
-  return { code: changedToOriginal, name: RELATION_ZH[changedToOriginal] ?? "回头关系", text: relationMeaning(changedToOriginal, changedLine.branchName, originalLine.branchName) };
+  const influence = elementInfluence(changedLine.element, originalLine.element, idx.elementByCode);
+  if (influence === "generates") return { code: "return_generate", name: "回头生", text: `变爻${changedLine.branchName}生扶原爻${originalLine.branchName}。` };
+  if (influence === "controls") return { code: "return_control", name: "回头克", text: `变爻${changedLine.branchName}克制原爻${originalLine.branchName}。` };
+  if (influence === "drains") return { code: "outward_drain", name: "化泄", text: `原爻${originalLine.branchName}生变爻${changedLine.branchName}，原爻向变化方向泄力。` };
+  if (influence === "resists") return { code: "outward_control", name: "化克", text: `原爻${originalLine.branchName}克制变爻${changedLine.branchName}，变化需要原爻持续耗力。` };
+  if (influence === "same") return { code: "return_same", name: "回头同气", text: `变爻${changedLine.branchName}与原爻${originalLine.branchName}同气。` };
+  return { code: "unknown", name: "动变关系待定", text: `原爻${originalLine.branchName}与变爻${changedLine.branchName}的关系待定。` };
 }
 
 function rotateSpirit(start, position, spirits) {
@@ -355,7 +365,7 @@ function chartHash(value) {
   return createHash("sha256").update(JSON.stringify(value)).digest("hex");
 }
 
-function evaluateCoreFindings({ bundle, chart, topic, subtype }) {
+function evaluateCoreFindings({ bundle, chart, topic, subtype, idx }) {
   const findings = [];
   const yongshen = bundle.rulesByType.get("yongshen")?.get(`${topic}:${subtype}`);
   if (yongshen) {
@@ -383,69 +393,9 @@ function evaluateCoreFindings({ bundle, chart, topic, subtype }) {
     });
   }
 
-  const patternRules = bundle.rulesByType.get("pattern");
-  if (patternRules?.has("YONGSHEN_HOLDS_WORLD")) {
-    findings.push(createFindingFromRule({
-      ruleType: "pattern",
-      key: "YONGSHEN_HOLDS_WORLD",
-      rule: patternRules.get("YONGSHEN_HOLDS_WORLD"),
-      dimension: "subject_state",
-      summary: "世爻为主体位置，报告优先观察主体承受力与主动性。",
-      inputFacts: { worldLine: chart.worldResponse.worldLine },
-      evidenceKind: "world_response_fact",
-      ruleVersion: bundle.profile.version,
-    }));
-  }
-
-  const strengthRules = bundle.rulesByType.get("strength");
-  const firstMoving = chart.lines.find((line) => line.moving);
-  if (firstMoving && strengthRules?.has("MOVING_LINE")) {
-    findings.push(createFindingFromRule({
-      ruleType: "strength",
-      key: "MOVING_LINE",
-      rule: strengthRules.get("MOVING_LINE"),
-      dimension: "change_direction",
-      summary: `第 ${firstMoving.position} 爻发动，事情存在变化动力。`,
-      inputFacts: { movingLines: chart.movingLines },
-      evidenceKind: "moving_change_fact",
-      ruleVersion: bundle.profile.version,
-    }));
-  }
-  for (const item of strongestTimeInfluences(chart)) {
-    if (!strengthRules?.has(item.ruleCode)) continue;
-    findings.push(createFindingFromRule({
-      ruleType: "strength",
-      key: item.ruleCode,
-      rule: strengthRules.get(item.ruleCode),
-      dimension: item.polarity === "supporting" ? "supporting_forces" : "blocking_forces",
-      polarity: item.polarity,
-      summary: timeFindingSummary(item.period, item.line, item.influence),
-      inputFacts: {
-        period: item.period,
-        linePosition: item.line.position,
-        lineBranch: item.line.branch,
-        lineRole: item.line.sixRelation,
-        influence: item.influence,
-      },
-      dedupeGroup: `${item.period}-${item.polarity}-focus-line`,
-      ruleVersion: bundle.profile.version,
-    }));
-  }
-
-  const timingRules = bundle.rulesByType.get("timing");
-  for (const code of ["TARGET_BRANCH_VALUE", "MOVING_LINE_VALUE", "VOID_FILLED"]) {
-    if (timingRules?.has(code)) {
-      findings.push(createFindingFromRule({
-        ruleType: "timing",
-        key: code,
-        rule: timingRules.get(code),
-        dimension: "timing_state",
-        summary: `${code} 作为候选时间窗口依据。`,
-        evidenceKind: "support_block_signal",
-        ruleVersion: bundle.profile.version,
-      }));
-    }
-  }
+  findings.push(...evaluateCoreV1StrengthFindings({ chart, bundle, idx }));
+  findings.push(...evaluateCoreV1DynamicFindings({ chart, bundle }));
+  findings.push(...evaluateCoreV1PatternFindings({ chart, bundle, idx }));
   return findings;
 }
 
@@ -532,16 +482,8 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
   chart.observationFocus = buildObservationFocus({ chart, yongshen });
   chart.chartHash = chartHash(chart);
 
-  const findings = evaluateCoreFindings({ bundle, chart, topic: chart.topic, subtype: chart.subtype });
-  const timingCandidates = findings
-    .filter((finding) => finding.output_role === "CANDIDATE_OR_GUARDRAIL")
-    .map((finding, index) => ({
-      window: index === 0 ? "近期同支日/月" : `候选窗口 ${index + 1}`,
-      granularity: index === 0 ? ["day", "month"] : ["day"],
-      rank: 90 - index * 5,
-      rule_code: finding.rule_code,
-      evidence: [finding.rule_code],
-    }));
+  const findings = evaluateCoreFindings({ bundle, chart, topic: chart.topic, subtype: chart.subtype, idx });
+  const timingCandidates = buildCoreV1TimingCandidates({ chart, bundle });
   const report = aggregateCoreV1Report({
     findings,
     timingCandidates,

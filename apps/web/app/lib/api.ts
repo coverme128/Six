@@ -4,6 +4,27 @@ export type GuidedViewModel = {
   question?: string;
   headline?: string;
   summary?: string;
+  directAnswer?: string | null;
+  decisionSupport?: {
+    scenario?: string;
+    label?: string;
+    mode?: string;
+    directAnswer?: string;
+    dimensions?: Array<{
+      code?: string;
+      label?: string;
+      state?: string;
+      summary?: string;
+      linePositions?: number[];
+      evidenceRefs?: string[];
+    }>;
+    proceedConditions?: string[];
+    holdConditions?: string[];
+    actionTimeline?: Array<{ phase?: string; action?: string }>;
+    scopeNote?: string;
+    hexagramChain?: { original?: string; moving?: string; changed?: string; synthesis?: string };
+    boundary?: string;
+  } | null;
   overallAssessment?: {
     state?: string;
     label?: string;
