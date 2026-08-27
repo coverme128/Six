@@ -175,6 +175,7 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
 export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [loading, setLoading] = useState(true);
   const [aiLoading, setAiLoading] = useState(false);
+  const [aiAvailability, setAiAvailability] = useState<"checking" | "available" | "unavailable">("checking");
   const [error, setError] = useState("");
   const [aiStatus, setAiStatus] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
@@ -184,6 +185,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const visualization = report?.experience?.visualization;
   const relatedContent = report?.relatedContent ?? [];
   const aiReport = report?.aiReportBundle?.aiReport;
+  const aiProviderUnconfigured = aiAvailability === "unavailable";
   const supports = useMemo(() => professional?.evidenceGroups?.supports ?? [], [professional]);
   const risks = useMemo(() => professional?.evidenceGroups?.risks ?? [], [professional]);
   const otherEvidence = useMemo(() => professional?.evidenceGroups?.other ?? [], [professional]);
@@ -209,6 +211,23 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       cancelled = true;
     };
   }, [reportId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadAIAvailability() {
+      try {
+        const response = await fetch(`${apiBase()}/ready`);
+        const body = response.ok ? await response.json() as { ai?: { status?: string } } : null;
+        if (!cancelled) setAiAvailability(body?.ai?.status === "configured" ? "available" : "unavailable");
+      } catch {
+        if (!cancelled) setAiAvailability("checking");
+      }
+    }
+    loadAIAvailability();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function generateAIReport() {
     setAiLoading(true);
@@ -238,7 +257,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         experience: body.experience,
         relatedContent: report?.relatedContent
       });
-      setAiStatus(body.aiReportBundle?.fallbackUsed ? "AI 暂时不可用，已保留基础解读。" : "白话解读已生成。");
+      setAiStatus(
+        body.aiReportBundle?.failureCode === "PROVIDER_UNAVAILABLE"
+          ? "真实模型尚未配置，当前仅显示正式排盘与规则结论。"
+          : body.aiReportBundle?.fallbackUsed
+            ? "真实模型暂时未能完成解读，正式排盘和规则结论不受影响。"
+            : "真实模型解读已生成。"
+      );
       window.setTimeout(() => aiSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法生成 AI 解读");
@@ -326,9 +351,9 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             </div>
           </aside>
           <div className="inline-actions">
-            <button className="primary-button" type="button" onClick={generateAIReport} disabled={aiLoading}>
+            <button className="primary-button" type="button" onClick={generateAIReport} disabled={aiLoading || aiProviderUnconfigured}>
               <Sparkles aria-hidden="true" size={17} />
-              {aiLoading ? "正在结合问题解读" : report?.aiReportBundle ? "重新生成针对问题的解读" : "生成针对问题的解读"}
+              {aiLoading ? "正在结合问题解读" : aiProviderUnconfigured ? "真实模型未配置" : report?.aiReportBundle?.fallbackUsed ? "重试真实模型解读" : report?.aiReportBundle ? "重新生成针对问题的解读" : "生成针对问题的解读"}
             </button>
             <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
             <button type="button" onClick={exportReadableReport}>
@@ -344,7 +369,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               再次起卦
             </a>
           </div>
-          {aiStatus ? <p className="empty">{aiStatus}</p> : null}
+          {aiStatus ? <p className="empty">{aiStatus}</p> : aiProviderUnconfigured ? <p className="empty">真实模型尚未配置，当前仅显示正式排盘与规则结论。</p> : report?.aiReportBundle?.fallbackUsed ? <p className="empty">真实模型暂时未能完成解读，正式排盘和规则结论不受影响。</p> : null}
           <div className="report-trust-note" aria-label="解读边界">
             <ShieldCheck aria-hidden="true" size={17} />
             <span>AI 只解释当前报告，不会重新排盘或改动专业判断；需要时可展开完整依据复核。</span>
@@ -352,7 +377,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         </section>
       ) : null}
 
-      {report?.aiReportBundle ? (
+      {report?.aiReportBundle && !report.aiReportBundle.fallbackUsed && aiReport ? (
         <section className="panel report-section ai-report-section" id="ai-plain-language" ref={aiSectionRef}>
           <div className="ai-report-heading">
             <div>

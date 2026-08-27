@@ -40,13 +40,13 @@ pnpm install
 
 ## Quick UI Mode
 
-Use this mode to inspect the homepage, Liuyao workbench, reports, and Learn Hub without starting Docker. The API uses its development fallback stores; queued Worker jobs and production readiness are not available.
+Use this mode to inspect the homepage, Liuyao workbench, reports, and Learn Hub without starting Docker. The API uses its development fallback stores; queued Worker jobs and production readiness are not available. AI interpretation stays unavailable until a live provider is configured, and no simulated interpretation is generated.
 
 Terminal 1, API:
 
 ```bash
 cd /Users/goterra/Documents/Six
-API_PORT=4100 AI_PROVIDER=mock_success pnpm run dev:api
+API_PORT=4100 AI_PROVIDER=disabled pnpm run dev:api
 ```
 
 Terminal 2, Web:
@@ -60,17 +60,12 @@ Open `http://localhost:3200`.
 
 ### Real DeepSeek Mode
 
-Use a shell-only secret for local live-output testing. Do not place the key in source files, `.env.example`, screenshots, or logs.
+For persistent local use, place the live-provider settings in the repository-root `.env`. The file is ignored by Git, and the API and Worker development commands load it automatically. Do not place the key in source files, `.env.example`, screenshots, or logs.
 
 ```bash
 cd /Users/goterra/Documents/Six
-read -s "DEEPSEEK_API_KEY?DeepSeek API key: "
-export DEEPSEEK_API_KEY
-API_PORT=4100 \
-AI_PROVIDER=deepseek \
-AI_MODEL=deepseek-v4-flash \
-AI_TIMEOUT_MS=45000 \
-AI_MAX_OUTPUT_TOKENS=2200 \
+cp .env.example .env
+# Fill DEEPSEEK_API_KEY in .env, then start normally.
 pnpm run dev:api
 ```
 
@@ -80,7 +75,7 @@ Start the Web app in a second terminal with the Quick UI command above. Run the 
 AI_PROVIDER=deepseek AI_MODEL=deepseek-v4-flash pnpm run smoke:ai:live
 ```
 
-The report remains readable through deterministic fallback when the provider is unavailable or its output fails validation.
+The deterministic report remains readable when the provider is unavailable or its output fails validation. The interface explicitly marks AI interpretation as unavailable and does not substitute simulated interpretation.
 
 ## Full Local Mode
 
@@ -123,7 +118,8 @@ cd /Users/goterra/Documents/Six
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional \
 REDIS_URL=redis://localhost:6381 \
 API_PORT=4100 \
-AI_PROVIDER=mock_success \
+AI_PROVIDER=deepseek \
+DEEPSEEK_API_KEY="$DEEPSEEK_API_KEY" \
 pnpm run dev:api
 ```
 
@@ -146,7 +142,8 @@ Terminal 3:
 cd /Users/goterra/Documents/Six
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional \
 REDIS_URL=redis://localhost:6381 \
-AI_PROVIDER=mock_success \
+AI_PROVIDER=deepseek \
+DEEPSEEK_API_KEY="$DEEPSEEK_API_KEY" \
 pnpm run dev:worker
 ```
 

@@ -480,7 +480,10 @@ function liuyaoResponseFormat(input) {
             type: "object",
             additionalProperties: false,
             required: ["text", "candidateRef"],
-            properties: { text: { type: "string" }, candidateRef: timingRef },
+            properties: {
+              text: { type: "string", description: "Conditional candidate observation window only. Must say 候选观察窗口、仍需结合现实变化复核、不代表结果已经确定. Never use 一定、必定、保证、exact dates, or invented durations." },
+              candidateRef: timingRef,
+            },
           },
         },
         actionSuggestions: { type: "array", minItems: 2, maxItems: 4, items: { type: "string" } },
@@ -502,6 +505,18 @@ function parseModelOutput(raw) {
   } catch (err) {
     throw new AIReportValidationError("JSON_PARSE_FAILED", "AI response is not valid JSON.", { reason: err.message });
   }
+}
+
+function canonicalizeLiveControlledFields(raw, input) {
+  const output = parseModelOutput(raw);
+  if (output.questionResponse) {
+    output.questionResponse.directAnswer = deterministicDecisionAnswer(input, input.overallAssessmentFacts);
+  }
+  output.timingWindows = input.timingCandidates.slice(0, 2).map((candidate) => ({
+    text: `${candidate.window}仅作为候选观察窗口，仍需结合现实变化复核，不代表结果已经确定。`,
+    candidateRef: candidate.id,
+  }));
+  return output;
 }
 
 function textBlob(value) {
@@ -979,14 +994,20 @@ export class MockAIReportProvider extends DeterministicReportProvider {
   }
 }
 
-export function providerFromEnv({ rootDir = process.cwd(), mockMode }: { rootDir?: string; mockMode?: string } = {}): any {
-  if (mockMode) return new MockAIReportProvider({ mode: mockMode, delayMs: mockMode === "slow_success" ? 500 : 0 });
-  const provider = process.env.AI_PROVIDER ?? (process.env.DEEPSEEK_API_KEY ? "deepseek" : process.env.OPENAI_API_KEY ? "openai" : "deterministic");
+class UnavailableAIReportProvider {
+  provider = "unavailable";
+  model = "not-configured";
+
+  async generateReport() {
+    throw new AIReportValidationError("PROVIDER_UNAVAILABLE", "A live AI provider is not configured.");
+  }
+}
+
+export function providerFromEnv({ rootDir = process.cwd() }: { rootDir?: string } = {}): any {
+  const provider = process.env.AI_PROVIDER ?? (process.env.DEEPSEEK_API_KEY ? "deepseek" : process.env.OPENAI_API_KEY ? "openai" : "disabled");
   if (provider === "openai") return new OpenAIReportProvider({ rootDir });
   if (provider === "deepseek") return new DeepSeekReportProvider({ rootDir });
-  if (provider === "mock_success") return new MockAIReportProvider({ mode: "success" });
-  if (provider === "mock_failure") return new MockAIReportProvider({ mode: "throw" });
-  return new DeterministicReportProvider();
+  return new UnavailableAIReportProvider();
 }
 
 function fallbackBundle({ result, type, input, reason, provider, model }) {
@@ -1016,6 +1037,8 @@ export async function generateGroundedAIReport({ result, type, provider = provid
     result.aiReportBundle?.validationStatus === "VALID"
     && result.aiReportBundle?.aiSchemaVersion === AI_SCHEMA_VERSION
     && result.aiReportBundle?.promptVersion === (type === "liuyao" ? LIUYAO_PROMPT_VERSION : MEIHUA_PROMPT_VERSION)
+    && result.aiReportBundle?.aiProvider === provider.provider
+    && result.aiReportBundle?.aiModel === provider.model
   ) return { ...result.aiReportBundle, reportSource: "CACHE_REUSE", reused: true };
   const input = buildAIReportInput({ result, type, language });
   const cacheKey = `${input.reportId}:${input.inputHash}:${provider.provider}:${provider.model}`;
@@ -1036,11 +1059,14 @@ export async function generateGroundedAIReport({ result, type, provider = provid
             accumulatedUsage.outputTokens += Number(providerPayload.tokenUsage.outputTokens ?? 0);
             accumulatedUsage.totalTokens += Number(providerPayload.tokenUsage.totalTokens ?? 0);
           }
-          const validatedOutput = validateAIReport(providerPayload ? providerPayload.content : raw, input);
-          const output = provider.provider === "deepseek" || provider.provider === "openai"
+          const isLiveProvider = provider.provider === "deepseek" || provider.provider === "openai";
+          const modelOutput = providerPayload ? providerPayload.content : raw;
+          const groundedOutput = isLiveProvider ? canonicalizeLiveControlledFields(modelOutput, input) : modelOutput;
+          const validatedOutput = validateAIReport(groundedOutput, input);
+          const output = isLiveProvider
             ? plainGroundingValue(validatedOutput)
             : validatedOutput;
-          if (provider.provider === "deepseek" || provider.provider === "openai") validateAIPlainLanguage(output);
+          if (isLiveProvider) validateAIPlainLanguage(output);
           output.disclaimer = PUBLIC_AI_DISCLAIMER;
           return {
             aiReport: output,
@@ -1054,7 +1080,7 @@ export async function generateGroundedAIReport({ result, type, provider = provid
               inputTokenEstimate: estimateTokens(input),
               outputTokenEstimate: estimateTokens(output),
             },
-            reportSource: provider.provider === "deepseek" ? "DEEPSEEK_LIVE" : "OPENAI_LIVE",
+            reportSource: provider.provider === "deepseek" ? "DEEPSEEK_LIVE" : provider.provider === "openai" ? "OPENAI_LIVE" : "TEST_FIXTURE",
             validationStatus: "VALID",
             fallbackUsed: false,
             attemptCount,

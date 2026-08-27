@@ -16,7 +16,7 @@ export default defineConfig({
   expect: { timeout: 10_000 },
   webServer: [
     {
-      command: "API_PORT=4100 AI_PROVIDER=mock_success pnpm run dev:api",
+      command: "API_PORT=4100 AI_PROVIDER=disabled pnpm run dev:api",
       url: `${apiBaseURL}/health`,
       reuseExistingServer: false,
       timeout: 30_000,

@@ -192,9 +192,12 @@ export type ExperienceResponse = {
   persistence?: string;
   chartViewModel?: ChartViewModel;
   aiReportBundle?: {
+    aiProvider?: string;
+    aiModel?: string;
     reportSource?: string;
     validationStatus?: string;
     fallbackUsed?: boolean;
+    failureCode?: string;
     generatedAt?: string;
     latencyMs?: number;
     aiReport?: {

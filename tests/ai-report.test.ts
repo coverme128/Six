@@ -200,6 +200,26 @@ test("live providers retry one validation failure before deterministic fallback"
   assert.equal(calls, 2);
 });
 
+test("live provider decision and timing are replaced with deterministic controlled wording", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    const output = await generateValid(input);
+    output.questionResponse.directAnswer = "适合立刻投入全部资源。";
+    output.timingWindows[0].text = "这个时间必定兑现。";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 1);
+  assert.match(bundle.aiReport.questionResponse.directAnswer, /小步验证/u);
+  assert.doesNotMatch(bundle.aiReport.questionResponse.directAnswer, /立刻投入全部资源/u);
+  assert.match(bundle.aiReport.timingWindows[0].text, /候选观察窗口/u);
+  assert.doesNotMatch(bundle.aiReport.timingWindows[0].text, /一定|必定|保证/u);
+});
+
 test("live provider output translates known technical terms before public display", async () => {
   const result = liuyaoResult();
   const provider = new MockAIReportProvider({ mode: "success" });
@@ -238,15 +258,20 @@ test("DETERMINISTIC_ASSESSMENT_FIDELITY keeps AI ON and OFF judgment facts ident
 
 test("valid AI report can be saved and reused for the same report", async () => {
   const result = liuyaoResult();
-  const first = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "success" }) });
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const first = await generateGroundedAIReport({ result, type: "liuyao", provider });
   assert.equal(first.validationStatus, "VALID");
-  assert.equal(first.reportSource, "OPENAI_LIVE");
+  assert.equal(first.reportSource, "TEST_FIXTURE");
   assert.ok(Number.isFinite(first.latencyMs));
   result.aiReportBundle = first;
-  const second = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "throw" }) });
+  const second = await generateGroundedAIReport({ result, type: "liuyao", provider });
   assert.equal(second.reused, true);
   assert.equal(second.validationStatus, "VALID");
   assert.equal(second.reportSource, "CACHE_REUSE");
+
+  const providerChanged = await generateGroundedAIReport({ result, type: "liuyao", provider: new MockAIReportProvider({ mode: "throw" }) });
+  assert.equal(providerChanged.reused, undefined);
+  assert.equal(providerChanged.validationStatus, "FALLBACK");
 });
 
 test("anonymous AI limiter enforces device and IP short-window limits", () => {

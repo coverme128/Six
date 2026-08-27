@@ -13,7 +13,6 @@ import { publicExperience } from "../reports/public-experience.js";
 
 type GenerateAIOptions = {
   language?: "zh-CN" | "en-US";
-  mockMode?: string;
   ip?: string;
   deviceId?: string;
 };
@@ -26,10 +25,6 @@ const limiter = createAnonymousAILimiter({
 
 function rootDir() {
   return process.env.SIX_ROOT ?? process.cwd();
-}
-
-function allowMockMode() {
-  return !["beta", "production"].includes(process.env.APP_ENV ?? "development");
 }
 
 function attachAiReportBundle(result: unknown, aiReportBundle: unknown) {
@@ -54,14 +49,10 @@ export class AiReportService {
     if (options.language && !["zh-CN", "en-US"].includes(options.language)) {
       throw new BadRequestException({ code: "VALIDATION_ERROR", message: "Unsupported AI report language." });
     }
-    if (options.mockMode && !allowMockMode()) {
-      throw new BadRequestException({ code: "VALIDATION_ERROR", message: "mockMode is unavailable in beta/production." });
-    }
     try {
       const job = await enqueueAIReportJob({
         reportId,
         language: options.language,
-        mockMode: allowMockMode() ? options.mockMode : undefined,
         deviceId: options.deviceId
       });
       return {
@@ -88,10 +79,6 @@ export class AiReportService {
       throw new BadRequestException({ code: "VALIDATION_ERROR", message: "Unsupported AI report language." });
     }
 
-    if (options.mockMode && !allowMockMode()) {
-      throw new BadRequestException({ code: "VALIDATION_ERROR", message: "mockMode is unavailable in beta/production." });
-    }
-
     try {
       limiter.assertAllowed({ ip: options.ip, deviceId: options.deviceId });
     } catch (error) {
@@ -102,7 +89,7 @@ export class AiReportService {
     }
 
     const result = attachProductResultFacts(attachAiReportBundle(report.result, report.aiReportBundle), report.experience);
-    const provider = providerFromEnv({ rootDir: rootDir(), mockMode: allowMockMode() ? options.mockMode : undefined });
+    const provider = providerFromEnv({ rootDir: rootDir() });
     const aiReportBundle = await generateGroundedAIReport({
       result,
       type: report.type,

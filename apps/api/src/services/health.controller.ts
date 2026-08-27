@@ -13,13 +13,23 @@ export class HealthController {
   ready() {
     const database = databaseHealth();
     const redis = process.env.REDIS_URL ? "configured" : "unavailable";
+    const aiProvider = process.env.AI_PROVIDER ?? (process.env.DEEPSEEK_API_KEY ? "deepseek" : process.env.OPENAI_API_KEY ? "openai" : "disabled");
+    const aiConfigured = aiProvider === "deepseek"
+      ? Boolean(process.env.DEEPSEEK_API_KEY)
+      : aiProvider === "openai" && Boolean(process.env.OPENAI_API_KEY);
+    const ai = {
+      provider: aiProvider,
+      model: process.env.AI_MODEL ?? (aiProvider === "deepseek" ? "deepseek-v4-flash" : aiProvider === "openai" ? "gpt-4.1-mini" : null),
+      status: aiConfigured ? "configured" : "unavailable"
+    };
     const production = ["beta", "production"].includes(process.env.APP_ENV ?? "development");
-    if (production && (database.status !== "configured" || redis !== "configured")) {
+    if (production && (database.status !== "configured" || redis !== "configured" || !aiConfigured)) {
       throw new ServiceUnavailableException({
         code: "DEPENDENCIES_NOT_READY",
         message: "Production dependencies are not configured.",
         database,
         redis,
+        ai,
       });
     }
     return {
@@ -27,7 +37,8 @@ export class HealthController {
       version: SIX_PRODUCT_VERSION,
       architecture: SIX_ARCHITECTURE_TARGET,
       database,
-      redis
+      redis,
+      ai
     };
   }
 }

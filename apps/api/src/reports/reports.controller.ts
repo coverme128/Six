@@ -180,13 +180,12 @@ export class ReportsController {
   @Post(":id/ai")
   async generateAIReport(
     @Param("id") id: string,
-    @Body() body: { language?: "zh-CN" | "en-US"; mockMode?: string; deviceId?: string } = {},
+    @Body() body: { language?: "zh-CN" | "en-US"; deviceId?: string } = {},
     @Headers("x-forwarded-for") forwardedFor?: string,
     @Headers("x-real-ip") realIp?: string
   ) {
     return this.aiReport.generateForReport(id, {
       language: body.language,
-      mockMode: body.mockMode,
       deviceId: body.deviceId,
       ip: forwardedFor?.split(",")[0]?.trim() || realIp || "local"
     });
@@ -195,11 +194,10 @@ export class ReportsController {
   @Post(":id/ai/jobs")
   async enqueueAIReport(
     @Param("id") id: string,
-    @Body() body: { language?: "zh-CN" | "en-US"; mockMode?: string; deviceId?: string } = {}
+    @Body() body: { language?: "zh-CN" | "en-US"; deviceId?: string } = {}
   ) {
     return this.aiReport.enqueueForReport(id, {
       language: body.language,
-      mockMode: body.mockMode,
       deviceId: body.deviceId
     });
   }

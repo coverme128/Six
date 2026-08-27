@@ -22,7 +22,7 @@ async function generateAIReport(data: GenerateAIReportJobData) {
   if (!row) throw new Error(`Report not found: ${data.reportId}`);
   const type = publicType(row.type);
   const result = attachAiReportBundle(row.result, row.aiReport);
-  const provider = providerFromEnv({ rootDir: process.env.SIX_ROOT ?? process.cwd(), mockMode: data.mockMode });
+  const provider = providerFromEnv({ rootDir: process.env.SIX_ROOT ?? process.cwd() });
   const aiReportBundle = await generateGroundedAIReport({
     result,
     type,

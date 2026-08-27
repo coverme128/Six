@@ -18,7 +18,7 @@ Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for 
 
 Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report journey and all-user Learn Hub now include task-led entry, shared content navigation, a six-stage curriculum, six reality topics, report guidance, a 24-case lab, a combined-filter library, all 68 linked content visuals, and Liuyao-only public API filtering. Distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
 
-Live DeepSeek smoke requires `DEEPSEEK_API_KEY`; local regression uses the mock provider to validate success, failure, fallback, caching, health checks, readiness checks, rate limits, cost fallback, and UI behavior without external network dependency.
+Live DeepSeek output requires `DEEPSEEK_API_KEY`. User-facing runtime never substitutes mock output; isolated unit tests use injected fixtures to validate failure, fallback, caching, health checks, readiness checks, rate limits, and UI behavior without external network dependency.
 
 ## Scope
 

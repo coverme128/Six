@@ -6,7 +6,6 @@ export const GENERATE_AI_REPORT_JOB = "generate-ai-report";
 export type GenerateAIReportJobData = {
   reportId: string;
   language?: "zh-CN" | "en-US";
-  mockMode?: string;
   deviceId?: string;
 };
 
