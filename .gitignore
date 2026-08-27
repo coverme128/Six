@@ -2,6 +2,7 @@ node_modules/
 .pnpm-store/
 .turbo/
 .next/
+.next-*/
 dist/
 *.tsbuildinfo
 test-results/
@@ -11,6 +12,7 @@ data/runtime/*.json
 .env.*
 !.env.example
 apps/*/.next/
+apps/*/.next-*/
 apps/*/.turbo/
 apps/*/dist/
 packages/*/.turbo/

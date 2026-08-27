@@ -91,6 +91,7 @@ function publicSignalTitle(finding, resolved) {
   const code = finding.rule_code ?? finding.code ?? finding.rawCode;
   if (finding.rule_type === "yongshen" || code?.includes?.("job_search") || finding.evidenceKind === "direct_target_fact") return "观察重点";
   if (code === "YONGSHEN_HOLDS_WORLD" || finding.evidenceKind === "world_response_fact") return "主体状态";
+  if (code === "ALL_LINES_STATIC") return "当前节奏";
   if (code === "MOVING_LINE" || finding.evidenceKind === "moving_change_fact") return "变化动力";
   if (String(code).startsWith("MONTH_") || String(code).includes("_MONTH") || finding.dedupe_group?.startsWith?.("month-")) return "月建作用";
   if (String(code).startsWith("DAY_") || String(code).includes("_DAY") || finding.dedupe_group?.startsWith?.("day-")) return "日辰作用";
@@ -109,6 +110,7 @@ function publicSignalText(finding, chart, resolved) {
   if (code === "YONGSHEN_HOLDS_WORLD" || finding.evidenceKind === "world_response_fact") {
     return `世爻在第 ${chart.worldResponse?.worldLine ?? "-"} 爻，代表当事人的状态是这次判断的主轴。`;
   }
+  if (code === "ALL_LINES_STATIC") return finding.summary ?? "本盘没有动爻，当前更适合观察既有条件。";
   if (code === "MOVING_LINE" || finding.evidenceKind === "moving_change_fact") {
     const lines = finding.input_facts?.movingLines ?? chart.movingLines ?? [];
     const text = Array.isArray(lines) && lines.length ? lines.join("、") : "-";

@@ -69,8 +69,15 @@ function scenarioGuidance(presentationFacts, overall, supports, risks, actions) 
 export function buildGuidedViewModel(facts) {
   const productFacts = isLiuyaoProductResultFacts(facts) ? facts : null;
   const presentationFacts = productPresentationFacts(facts);
-  const supports = guidedSignals(deduplicateSignals(presentationFacts.positiveSignals)).slice(0, 4).map(publicSignal);
-  const risks = guidedSignals(deduplicateSignals(presentationFacts.negativeSignals)).slice(0, 4).map(publicSignal);
+  const allowedGraphNodes = productFacts?.evidenceGraph?.nodes.filter((item) => productFacts.decisionFacts?.allowedFindingRefs?.includes(item.id)) ?? [];
+  const useCompoundDecisionEvidence = allowedGraphNodes.some((item) => item.nodeType === "COMPOSITE" && !["ALL_LINES_STATIC", "MOVING_LINES_PRESENT"].includes(item.ruleId));
+  const graphSignal = (item) => ({ title: item.category === "SUPPORT" ? "支持条件" : "风险条件", text: item.meaning, priority: item.weight, mergedCount: 1 });
+  const supports = productFacts && useCompoundDecisionEvidence
+    ? allowedGraphNodes.filter((item) => item.category === "SUPPORT").slice(0, 4).map(graphSignal)
+    : guidedSignals(deduplicateSignals(presentationFacts.positiveSignals)).slice(0, 4).map(publicSignal);
+  const risks = productFacts && useCompoundDecisionEvidence
+    ? allowedGraphNodes.filter((item) => item.category === "RISK").slice(0, 4).map(graphSignal)
+    : guidedSignals(deduplicateSignals(presentationFacts.negativeSignals)).slice(0, 4).map(publicSignal);
   const simplifiedEvidence = guidedSignals(deduplicateSignals([...presentationFacts.positiveSignals, ...presentationFacts.negativeSignals, ...presentationFacts.neutralSignals])).slice(0, 12).map(publicSignal);
   const overall = productFacts?.overallAssessmentFacts;
   const decisionSupport = productFacts?.decisionSupportFacts ?? null;
@@ -104,6 +111,16 @@ export function buildGuidedViewModel(facts) {
       scopeNote: decisionSupport.scopeNote,
       hexagramChain: decisionSupport.hexagramChain,
       boundary: decisionSupport.boundary,
+      clarificationRequired: decisionSupport.clarificationRequired,
+      clarificationQuestion: decisionSupport.clarificationQuestion,
+      possibleModes: decisionSupport.possibleModes,
+      branchAssessments: decisionSupport.branchAssessments,
+    } : null,
+    questionClarification: productFacts?.questionProfile?.clarificationRequired ? {
+      required: true,
+      question: productFacts.questionProfile.clarificationQuestion,
+      options: productFacts.questionProfile.possibleModes,
+      reason: "不同加入身份对应的责任、收益和判断重点不同，确认后才能给出单一路径结论。",
     } : null,
     currentSituation: overall?.baseStateText ?? presentationFacts.situation.currentSituation,
     coreMatter: presentationFacts.topicRoleContext ? {

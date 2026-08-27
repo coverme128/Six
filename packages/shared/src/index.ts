@@ -12,6 +12,11 @@ export const LiuyaoChartRequestSchema = z.object({
   subtype: z.string().default("job_search"),
   values: z.array(z.number().int().min(6).max(9)).length(6).optional(),
   coins: z.array(z.array(z.number().int().min(2).max(3)).length(3)).length(6).optional(),
+  questionProfile: z
+    .object({
+      joinMode: z.enum(["EMPLOYMENT", "PARTNERSHIP", "PROJECT_COOPERATION", "INVESTMENT", "ADVISORY"])
+    })
+    .optional(),
   calendar: z
     .object({
       timezone: z.string().default("Asia/Shanghai"),

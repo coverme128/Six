@@ -42,7 +42,7 @@ export function selectContentExplanationSnippets({ productResultFacts, rootDir =
   const categories = ["RESULT_OVERVIEW", "YONGSHEN_CORE_FOCUS"];
   const dimensions = new Set((productResultFacts.evidenceGroupingFacts ?? []).map((item) => item.dimension));
   if (dimensions.has("subject_state") || dimensions.has("supporting_forces") || dimensions.has("blocking_forces")) categories.push("STRENGTH_STATE");
-  if (dimensions.has("change_direction") || productResultFacts.chartFacts?.movingLines?.length) categories.push("DYNAMICS");
+  if (productResultFacts.chartFacts?.movingLines?.length) categories.push("DYNAMICS");
   if ((productResultFacts.conflictResolutionFacts?.supportFindingRefs ?? []).length || (productResultFacts.conflictResolutionFacts?.blockingFindingRefs ?? []).length) {
     categories.push("SUPPORT_RISK_CONFLICT");
   }

@@ -68,12 +68,9 @@ test("core public surfaces keep approved visual structure", async ({ page, reque
 
   const reportId = await createReport(request);
   await page.goto(`/reports/${reportId}`);
-  await expect(page.locator(".ly-advanced-disclosure")).toBeVisible();
+  await expect(page.locator(".ly-advanced-disclosure")).toHaveCount(0);
   await stablePage(page);
   await expect(page.locator(".ly-visual-system")).toHaveScreenshot("report-visual-system.png", { animations: "disabled" });
-  await page.locator(".ly-advanced-disclosure > summary").click();
-  await expect(page.locator('[data-visual-id="VIS-LY-014"]')).toBeVisible();
-  await expect(page.locator(".ly-advanced-disclosure")).toHaveScreenshot("report-p1-visuals.png", { animations: "disabled" });
 });
 
 test("report exposes a coherent screen-reader summary and keyboard flow", async ({ page, request }, testInfo) => {

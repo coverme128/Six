@@ -2,8 +2,14 @@
 import { readJson } from "../dataStore.js";
 import { formatMethod } from "./terminologyFormatter.js";
 import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContext } from "./interpretationAssets.js";
+import {
+  buildDecisionFacts,
+  buildEvidenceGraph,
+  buildQuestionProfile,
+  buildTopicLens,
+} from "./decisionPipeline.js";
 
-export const LIUYAO_PRODUCT_RESULT_FACTS_VERSION = "LIUYAO_PRODUCT_RESULT_FACTS_V1";
+export const LIUYAO_PRODUCT_RESULT_FACTS_VERSION = "LIUYAO_PRODUCT_RESULT_FACTS_V2";
 export const LIUYAO_ASSESSMENT_VERSION = "LIUYAO_ASSESSMENT_RUNTIME_CLOSURE_V1";
 const AI_SCHEMA_VERSION = "AI_REPORT_V1";
 
@@ -54,6 +60,13 @@ function firstText(...values) {
 }
 
 function publicLine(line) {
+  const publicInfluence = (influence) => influence ? {
+    effect: influence.effect,
+    effectName: influence.effectName,
+    isSame: Boolean(influence.isSame),
+    isClash: Boolean(influence.isClash),
+    text: influence.text,
+  } : null;
   return {
     position: line.position,
     value: line.sum,
@@ -68,6 +81,8 @@ function publicLine(line) {
     isVoid: Boolean(line.isVoid),
     monthText: line.monthInfluence?.text,
     dayText: line.dayInfluence?.text,
+    monthInfluence: publicInfluence(line.monthInfluence),
+    dayInfluence: publicInfluence(line.dayInfluence),
     changedText: line.changed?.returnInfluence?.text,
   };
 }
@@ -166,6 +181,103 @@ function generalDecisionCopy(overallState) {
   return "当前信息还不足以支持一次性决定，先补齐现实证据再判断是否推进。";
 }
 
+function partnershipDimension({ code, label, lines, resolvedFindingFacts, chart, forcedState, summaries }) {
+  const base = decisionDimension({ code, label, lines, resolvedFindingFacts, chart });
+  const state = forcedState ?? base.state;
+  return { ...base, state, summary: summaries[state] ?? summaries.OBSERVE };
+}
+
+function buildPartnershipDecisionFacts({ chart, resolvedFindingFacts, overallAssessmentFacts, questionProfile, topicLens, evidenceGraph }) {
+  const response = chart.lines.filter((line) => line.isResponse);
+  const world = chart.lines.filter((line) => line.isWorld);
+  const terms = chart.lines.filter((line) => line.sixRelation === "parent");
+  const responsibilities = chart.lines.filter((line) => line.sixRelation === "officer_ghost");
+  const hasNode = (id) => evidenceGraph?.decisionNodes?.some((item) => item.id === id);
+  const dimensions = [
+    partnershipDimension({
+      code: "PARTNER_COMMITMENT", label: "朋友和项目方是否真正落实", lines: response, resolvedFindingFacts, chart,
+      summaries: {
+        SUPPORT: "对方回应存在可利用的启动条件，但仍要以负责人确认、资源到位和实际行动验证。",
+        RISK: "对方回应、权限或资源承诺尚不稳定；这表示落实度不足，不等于对方正在阻碍你。",
+        MIXED: "双方有共同推进基础，但对方的权限、资源或持续行动仍需逐项核实。",
+        OBSERVE: "暂时没有足够直接的落实信号，以项目负责人、资源和实际行动继续核对。",
+      },
+    }),
+    partnershipDimension({
+      code: "COST_AND_RETURN", label: "你的投入与承受边界", lines: world, resolvedFindingFacts, chart,
+      forcedState: hasNode("evidence:SELF_INPUT_FEEDS_RESPONSIBILITY") ? "RISK" : undefined,
+      summaries: {
+        SUPPORT: "你有一定参与基础，但仍需先限定时间、资源和责任上限。",
+        RISK: "更可能需要你先投入能力、时间或资源，扩大投入前必须确认回报和退出边界。",
+        MIXED: "你具备参与条件，同时也会承担消耗；先用有限任务验证承受范围。",
+        OBSERVE: "先明确自己可承受的时间、成本和责任上限，再判断投入程度。",
+      },
+    }),
+    partnershipDimension({
+      code: "WRITTEN_TERMS", label: "职责、权限、验收和合作约定", lines: terms, resolvedFindingFacts, chart,
+      forcedState: hasNode("evidence:CONTRACT_SUPPORTED_BUT_UNSETTLED") ? "MIXED" : undefined,
+      summaries: {
+        SUPPORT: "书面约定具备形成条件，但仍要看到真实文件、职责清单和验收标准。",
+        RISK: "职责、权限或正式流程尚不稳定，口头承诺不足以支持正式加入。",
+        MIXED: "合作约定具备形成条件但尚未落实，需要把职责、权限、验收和退出方式写清。",
+        OBSERVE: "当前缺少足够直接的书面信号，先补齐职责、权限、验收和退出约定。",
+      },
+    }),
+    partnershipDimension({
+      code: "PROJECT_RESPONSIBILITY", label: "项目责任、规则与执行压力", lines: responsibilities, resolvedFindingFacts, chart,
+      forcedState: hasNode("evidence:RESPONSIBILITY_AND_RULE_PRESSURE_ACTIVE") ? "RISK" : undefined,
+      summaries: {
+        SUPPORT: "项目责任和规则要求较明确，是否适合取决于你能否获得匹配的权限与资源。",
+        RISK: "项目责任、规则约束与执行压力较强，加入前要明确谁决策、谁验收、谁承担风险。",
+        MIXED: "项目有推进动力，也伴随较强责任压力，需要让权限、资源与责任相匹配。",
+        OBSERVE: "先确认监管要求、交付责任和风险承担，再判断是否适合加入。",
+      },
+    }),
+  ];
+  const state = overallAssessmentFacts.overallState;
+  const directAnswer = questionProfile?.clarificationRequired
+    ? "先明确你准备以什么身份加入。在身份未明确前，只适合继续了解或做有限合作验证，不建议全职加入、合伙、出资或重投入。"
+    : state === "FAVORABLE"
+    ? "可以认真推进，但仍建议先用一个小任务验证协作，再决定正式加入和投入程度。"
+    : state === "CAUTIOUS"
+      ? "暂不建议直接加入。先确认项目方能落实职责、权限、验收、投入与回报，再决定是否参与。"
+      : state === "TRANSITIONAL" || state === "MIXED"
+        ? "可以继续谈并做小范围验证，但暂不建议直接加入。先把职责、权限、验收、投入与回报落实清楚，再决定是否加大投入。"
+        : "目前不足以支持直接加入。先取得项目负责人、职责边界、资源和回报方面的可核验信息。";
+  return {
+    scenarioCode: "BUSINESS_PARTNERSHIP",
+    scenarioLabel: "项目合作",
+    directAnswer,
+    decisionMode: state === "CAUTIOUS" ? "HOLD_AND_VERIFY" : "CONDITIONAL_PROCEED",
+    dimensions,
+    proceedConditions: [
+      "朋友和实际项目负责人共同确认你的职责、权限与验收标准。",
+      "投入时间、责任上限、资源支持和回报方式形成可复核的约定。",
+      "先完成一个低成本试运行，确认协作和交付能够真实运转。",
+    ],
+    holdConditions: [
+      "只有朋友口头邀请，实际负责人、预算或权限仍不明确。",
+      "需要先投入大量时间、资金或承担责任，回报和退出机制却说不清。",
+    ],
+    actionTimeline: [
+      { phase: "现在", action: "约一次项目核对，只确认负责人、目标、你的角色、权限和交付物。" },
+      { phase: "条件明确后", action: "用一个边界清楚的小任务验证沟通、资源和验收效率。" },
+      { phase: "正式加入前", action: "把投入、责任、回报和退出条件写清，再作最终决定。" },
+    ],
+    scopeNote: questionProfile?.clarificationRequired
+      ? "“加入”的具体身份尚未明确，本次先保留入职、合伙、项目合作和投资等分支，只给出各分支共同成立的谨慎边界。"
+      : `本次按${questionProfile?.joinModeLabel ?? "项目合作"}理解，重点判断是否值得加入，以及哪些条件落实后才适合扩大投入。`,
+    clarificationRequired: Boolean(questionProfile?.clarificationRequired),
+    clarificationQuestion: questionProfile?.clarificationQuestion ?? null,
+    possibleModes: questionProfile?.possibleModes ?? [],
+    branchAssessments: questionProfile?.clarificationRequired ? (topicLens?.branches ?? []).map((branch) => ({
+      mode: branch.mode,
+      label: branch.label,
+      focus: branch.roles.filter((role) => role.importance === "primary").map((role) => role.practicalMeaning),
+    })) : [],
+  };
+}
+
 function buildJobSearchDecisionFacts({ chart, resolvedFindingFacts, overallAssessmentFacts }) {
   const byRelation = (relation) => chart.lines.filter((line) => line.sixRelation === relation);
   const world = chart.lines.filter((line) => line.isWorld);
@@ -248,18 +360,23 @@ function buildControlledHexagramChain(chart, decisionFacts) {
     return `第 ${line.position} 爻对应${source}，变化后更多落到${target}，${plainMovingImpact(line.changed?.returnInfluence?.code)}。`;
   });
   const primaryDimension = decisionFacts.dimensions?.[0];
+  const hasMovingLines = moving.length > 0;
   return {
     original: `本卦“${chart.originalHexagram?.name_zh}”记录当前起点。就本次问题而言，${primaryDimension?.summary ?? "需要先核对核心事项的现实条件。"}`,
     moving: moving.length ? moving.join("") : "本盘没有动爻，当前更适合观察已有条件是否出现实质变化。",
-    changed: `变卦“${chart.changedHexagram?.name_zh}”记录上述变化发生后的观察结构，不单独代表成功或失败。重点核对：${decisionFacts.proceedConditions?.[0] ?? "关键条件是否已经落实。"}`,
-    synthesis: `${decisionFacts.directAnswer} ${decisionFacts.holdConditions?.[0] ?? "主要承诺仍未落实时，先不要扩大投入。"}`,
+    changed: hasMovingLines
+      ? `变卦“${chart.changedHexagram?.name_zh}”记录上述变化发生后的观察结构，不单独代表成功或失败。重点核对：${decisionFacts.proceedConditions?.[0] ?? "关键条件是否已经落实。"}`
+      : `这是静卦，没有变卦，也没有新增的动变方向。后续重点核对：${decisionFacts.proceedConditions?.[0] ?? "关键条件是否已经落实。"}`,
+    synthesis: `判断重点不在等待卦象自行变化，而在核实条件是否真正落实。${decisionFacts.holdConditions?.[0] ?? "主要承诺仍未落实时，先不要扩大投入。"}`,
   };
 }
 
-function buildDecisionSupportFacts({ chart, topicRoleContext, resolvedFindingFacts, overallAssessmentFacts }) {
+function buildDecisionSupportFacts({ chart, topicRoleContext, resolvedFindingFacts, overallAssessmentFacts, questionProfile, topicLens, evidenceGraph }) {
   const mappingCode = `${chart.topic}:${chart.subtype}`;
   const jobSearchMappings = new Set(["career:job_search", "career:interview", "career:offer", "career:job_change"]);
-  const base = jobSearchMappings.has(mappingCode)
+  const base = mappingCode === "business:partnership"
+    ? buildPartnershipDecisionFacts({ chart, resolvedFindingFacts, overallAssessmentFacts, questionProfile, topicLens, evidenceGraph })
+    : jobSearchMappings.has(mappingCode)
     ? buildJobSearchDecisionFacts({ chart, resolvedFindingFacts, overallAssessmentFacts })
     : {
         scenarioCode: chart.topic?.toUpperCase?.() ?? "GENERAL",
@@ -323,20 +440,22 @@ function matchAssessmentPattern({ runtime, hasSupport, hasBlock, hasMoving }) {
   return patterns.find((item) => item.patternId === "LYX_ASSESS_UNCLEAR");
 }
 
-function conflictFacts({ runtime, support, block, resolvedFindingFacts }) {
+function conflictFacts({ runtime, evidenceGraph }) {
+  const support = evidenceGraph.nodes.filter((item) => item.category === "SUPPORT");
+  const block = evidenceGraph.nodes.filter((item) => item.category === "RISK");
   const policy = (runtime.conflictPolicies ?? []).find((item) => support.length && block.length
     ? item.policyId === "LYX_CONFLICT_SUPPORT_AND_BLOCK_COEXIST_V1"
     : item.policyId === "LYX_CONFLICT_SINGLE_DIRECTION_V1");
   const dominant = [
-    support[0]?.findingRef,
-    block[0]?.findingRef,
-    resolvedFindingFacts.find((item) => item.evidenceKind === "direct_target_fact")?.findingRef,
+    evidenceGraph.decisionNodes.find((item) => item.category === "SUPPORT")?.id ?? support[0]?.id,
+    evidenceGraph.decisionNodes.find((item) => item.category === "RISK")?.id ?? block[0]?.id,
+    evidenceGraph.decisionNodes.find((item) => item.category === "MIXED")?.id,
   ].filter(Boolean);
   return {
     conflictPolicyId: policy?.policyId ?? "LYX_CONFLICT_SINGLE_DIRECTION_V1",
     conflictState: support.length && block.length ? "UNRESOLVED" : "NONE",
-    supportFindingRefs: support.map((item) => item.findingRef),
-    blockingFindingRefs: block.map((item) => item.findingRef),
+    supportFindingRefs: support.map((item) => item.id),
+    blockingFindingRefs: block.map((item) => item.id),
     dominantFindingRefs: [...new Set(dominant)].slice(0, 4),
     resolutionSummary: support.length && block.length
       ? "支持与阻碍同时保留；总体判断不会被折算成单一加减分，而是按证据类别、直接性与变化状态说明。"
@@ -344,20 +463,27 @@ function conflictFacts({ runtime, support, block, resolvedFindingFacts }) {
   };
 }
 
-function buildOverallAssessment({ chart, runtime, resolvedFindingFacts, conflictResolutionFacts }) {
-  const support = relevantFindings(resolvedFindingFacts, "supporting_forces");
-  const block = relevantFindings(resolvedFindingFacts, "blocking_forces");
-  const moving = relevantFindings(resolvedFindingFacts, "change_direction");
+function buildOverallAssessment({ chart, runtime, evidenceGraph, conflictResolutionFacts }) {
+  const support = evidenceGraph.nodes.filter((item) => item.category === "SUPPORT");
+  const block = evidenceGraph.nodes.filter((item) => item.category === "RISK");
+  const mixed = evidenceGraph.nodes.filter((item) => item.category === "MIXED");
+  const decisionSupport = evidenceGraph.decisionNodes.find((item) => item.category === "SUPPORT");
+  const decisionRisk = evidenceGraph.decisionNodes.find((item) => item.category === "RISK");
+  const decisionMixed = evidenceGraph.decisionNodes.find((item) => item.category === "MIXED");
+  const hasMovingLines = (chart.movingLines ?? []).length > 0;
   const pattern = matchAssessmentPattern({
     runtime,
-    hasSupport: support.length > 0,
+    hasSupport: support.length > 0 || mixed.length > 0,
     hasBlock: block.length > 0,
-    hasMoving: moving.length > 0 || (chart.movingLines ?? []).length > 0,
+    hasMoving: hasMovingLines,
   });
   const baseState = pattern?.baseState ?? "UNCLEAR";
-  const dynamicDirection = (moving.length > 0 || (chart.movingLines ?? []).length > 0) ? "CHANGING" : "STATIC_OR_UNCLEAR";
+  const dynamicDirection = hasMovingLines ? "CHANGING" : "STATIC_OR_UNCLEAR";
   const overallState = pattern?.overallState ?? "UNCLEAR";
-  const title = `${pattern?.displayName ?? "暂不明朗"}：${chart.originalHexagram?.name_zh ?? "-"} → ${chart.changedHexagram?.name_zh ?? "-"}`;
+  const chartTitle = hasMovingLines
+    ? `${chart.originalHexagram?.name_zh ?? "-"} → ${chart.changedHexagram?.name_zh ?? "-"}`
+    : `${chart.originalHexagram?.name_zh ?? "-"}（静卦）`;
+  const title = `${pattern?.displayName ?? "暂不明朗"}：${chartTitle}`;
   return {
     assessmentVersion: LIUYAO_ASSESSMENT_VERSION,
     patternId: pattern?.patternId ?? "LYX_ASSESS_UNCLEAR",
@@ -372,9 +498,10 @@ function buildOverallAssessment({ chart, runtime, resolvedFindingFacts, conflict
     summary: pattern?.summary ?? "当前公开证据不足以形成清晰方向。",
     dominantFindingRefs: conflictResolutionFacts.dominantFindingRefs,
     basis: [
-      support[0]?.resolvedMeaning?.practicalMeaning ?? support[0]?.summary,
-      block[0]?.resolvedMeaning?.practicalMeaning ?? block[0]?.summary,
-      moving[0]?.summary,
+      decisionSupport?.meaning,
+      decisionRisk?.meaning ?? block.find((item) => !/辅助依据/u.test(item.meaning ?? ""))?.meaning,
+      decisionMixed?.meaning ?? mixed[0]?.meaning,
+      hasMovingLines ? evidenceGraph.nodes.find((item) => item.ruleId === "MOVING_LINES_PRESENT")?.meaning : "本盘六爻安静，当前更适合观察既有条件。",
     ].filter(Boolean),
     algorithmBoundary: "综合判断采用判断模式与冲突裁决，不使用简单的支持减阻碍计分。",
   };
@@ -452,11 +579,13 @@ export function buildLiuyaoProductResultFacts({ result, presentationFacts = null
   const runtime = readJson(PRODUCT_RUNTIME_PATH, rootDir);
   const topicRoleContext = resolveTopicRoleContext(chart, rootDir);
   const resolvedFindingFacts = findingFacts(result, chart, rootDir);
-  const support = relevantFindings(resolvedFindingFacts, "supporting_forces");
-  const block = relevantFindings(resolvedFindingFacts, "blocking_forces");
-  const conflictResolutionFacts = conflictFacts({ runtime, support, block, resolvedFindingFacts });
-  const overallAssessmentFacts = buildOverallAssessment({ chart, runtime, resolvedFindingFacts, conflictResolutionFacts });
-  const decisionSupportFacts = buildDecisionSupportFacts({ chart, topicRoleContext, resolvedFindingFacts, overallAssessmentFacts });
+  const questionProfile = buildQuestionProfile(chart);
+  const topicLens = buildTopicLens(chart, questionProfile, topicRoleContext);
+  const evidenceGraph = buildEvidenceGraph({ chart, resolvedFindingFacts, questionProfile, topicLens });
+  const conflictResolutionFacts = conflictFacts({ runtime, evidenceGraph });
+  const overallAssessmentFacts = buildOverallAssessment({ chart, runtime, evidenceGraph, conflictResolutionFacts });
+  const decisionSupportFacts = buildDecisionSupportFacts({ chart, topicRoleContext, resolvedFindingFacts, overallAssessmentFacts, questionProfile, topicLens, evidenceGraph });
+  const decisionFacts = buildDecisionFacts({ questionProfile, topicLens, evidenceGraph, decisionSupportFacts });
   const timingFacts = timingExplanationFacts(result, runtime);
   return {
     productFactsVersion: LIUYAO_PRODUCT_RESULT_FACTS_VERSION,
@@ -474,7 +603,10 @@ export function buildLiuyaoProductResultFacts({ result, presentationFacts = null
       mappingCode: `${chart.topic}:${chart.subtype}`,
       topicDisplayName: topicRoleContext.displayName,
       topicBindingStatus: topicRoleContext.bindingStatus,
+      questionProfile,
     },
+    questionProfile,
+    topicLens,
     calendarFacts: {
       policyVersion: chart.calendar?.policyVersion,
       provider: chart.calendar?.calendarProvider,
@@ -523,9 +655,11 @@ export function buildLiuyaoProductResultFacts({ result, presentationFacts = null
       limitation: item.limitation,
     })),
     evidenceGroupingFacts: groupEvidence(resolvedFindingFacts),
+    evidenceGraph,
     conflictResolutionFacts,
     overallAssessmentFacts,
     decisionSupportFacts,
+    decisionFacts,
     timingExplanationFacts: timingFacts,
     actionGuidanceFacts: actionGuidanceFacts(runtime, overallAssessmentFacts),
     knowledgeReferences: knowledgeReferences(chart),

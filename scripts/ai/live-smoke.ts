@@ -6,9 +6,12 @@ const ROOT = process.cwd();
 
 const ALL_CASES = [
   { caseId: "LY_CAREER_JOB", type: "liuyao", input: { question: "合成案例：求职推进是否顺利？", topic: "career", subtype: "job_search", values: [7, 8, 9, 7, 8, 6], calendar: { instantUtc: "2026-07-21T01:00:00Z", timezone: "Asia/Shanghai" } } },
+  { caseId: "LY_JOB_DECISION", type: "liuyao", input: { question: "2026 年我是否应该找工作？", topic: "career", subtype: "job_search", values: [7, 8, 9, 7, 8, 6], calendar: { instantUtc: "2026-08-27T01:00:00Z", timezone: "Asia/Shanghai" } } },
   { caseId: "LY_WEALTH_COLLECTION", type: "liuyao", input: { question: "合成案例：回款推进是否顺利？", topic: "wealth", subtype: "payment_collection", values: [9, 8, 7, 8, 7, 6], calendar: { instantUtc: "2026-03-05T14:00:00Z", timezone: "Asia/Shanghai" } } },
   { caseId: "LY_RELATIONSHIP", type: "liuyao", input: { question: "合成案例：关系沟通是否可缓和？", topic: "relationship", subtype: "reconciliation", values: [7, 7, 8, 9, 8, 7], calendar: { instantUtc: "2026-10-08T03:00:00Z", timezone: "Asia/Shanghai" } } },
   { caseId: "LY_MIXED_SUPPORT_BLOCK", type: "liuyao", input: { question: "合成案例：项目推进支持与阻碍如何？", topic: "business", subtype: "project_delivery", values: [8, 9, 8, 7, 6, 7], calendar: { instantUtc: "2026-02-04T00:10:00Z", timezone: "Asia/Shanghai" } } },
+  { caseId: "LY_PROJECT_JOIN", type: "liuyao", input: { question: "朋友做政务系统，邀请我加入，我是否应该加入？", topic: "business", subtype: "partnership", questionProfile: { joinMode: "PROJECT_COOPERATION" }, values: [8, 7, 7, 8, 8, 8], calendar: { instantUtc: "2026-08-27T07:27:31Z", timezone: "Asia/Shanghai" } } },
+  { caseId: "LY_QUESTION_FIRST_COMPANY", type: "liuyao", input: { question: "今年是否适合成立公司，自己当股东？", topic: "career", subtype: "job_search", values: [8, 7, 7, 8, 8, 8], calendar: { instantUtc: "2026-08-27T07:27:31Z", timezone: "Asia/Shanghai" } } },
   { caseId: "LY_TIMING_CANDIDATE", type: "liuyao", input: { question: "合成案例：近期是否有可观察窗口？", topic: "travel", subtype: "trip", values: [9, 7, 8, 9, 7, 8], calendar: { instantUtc: "2026-12-07T04:00:00Z", timezone: "Asia/Shanghai" } } },
 ];
 const requestedCase = process.env.AI_SMOKE_CASE;

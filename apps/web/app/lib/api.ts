@@ -24,6 +24,16 @@ export type GuidedViewModel = {
     scopeNote?: string;
     hexagramChain?: { original?: string; moving?: string; changed?: string; synthesis?: string };
     boundary?: string;
+    clarificationRequired?: boolean;
+    clarificationQuestion?: string | null;
+    possibleModes?: Array<{ code?: string; label?: string }>;
+    branchAssessments?: Array<{ mode?: string; label?: string; focus?: string[] }>;
+  } | null;
+  questionClarification?: {
+    required?: boolean;
+    question?: string;
+    options?: Array<{ code?: string; label?: string }>;
+    reason?: string;
   } | null;
   overallAssessment?: {
     state?: string;
@@ -216,6 +226,7 @@ export type ExperienceResponse = {
     aiProvider?: string;
     aiModel?: string;
     reportSource?: string;
+    promptVersion?: string;
     validationStatus?: string;
     fallbackUsed?: boolean;
     failureCode?: string;
@@ -226,6 +237,7 @@ export type ExperienceResponse = {
         focus?: string;
         directAnswer?: string;
         scopeNote?: string;
+        evidenceRefs?: string[];
       };
       hexagramReading?: {
         original?: string;
@@ -233,6 +245,20 @@ export type ExperienceResponse = {
         changed?: string;
         synthesis?: string;
       };
+      keyJudgments?: Array<{
+        title?: string;
+        professionalBasis?: string;
+        plainInterpretation?: string;
+        decisionImpact?: string;
+        evidenceRefs?: string[];
+      }>;
+      decisionBalance?: Array<{ gain?: string; cost?: string }>;
+      actionPlan?: {
+        now?: Array<{ text?: string; evidenceRefs?: string[] }>;
+        beforeDecision?: Array<{ text?: string; evidenceRefs?: string[] }>;
+        avoid?: Array<{ text?: string; evidenceRefs?: string[] }>;
+      };
+      finalTakeaway?: string;
       keyElements?: Array<{
         title?: string;
         professionalRole?: string;
@@ -252,7 +278,7 @@ export type ExperienceResponse = {
       changeDirection?: string;
       outcomeTrend?: { label?: string; text?: string };
       timingWindows?: Array<{ text?: string; candidateRef?: string }>;
-      actionSuggestions?: string[];
+      actionSuggestions?: Array<string | { text?: string; evidenceRefs?: string[] }>;
       evidenceSummary?: Array<{ text?: string; evidenceRefs?: string[] }>;
       limitations?: string[];
       disclaimer?: string;

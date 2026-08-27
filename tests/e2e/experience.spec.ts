@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { readFile } from "node:fs/promises";
 
 const apiBaseURL = process.env.E2E_API_BASE_URL ?? "http://127.0.0.1:4100/api/v1";
 
@@ -66,6 +67,18 @@ test("Homepage guides users from value to scenario and one focused question", as
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);
+});
+
+test("Ambiguous cooperation question asks for the intended join identity", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("link", { name: "从我的问题开始" }).click();
+  await page.getByRole("radio", { name: /合作 \/ 项目/ }).click();
+  await page.getByRole("textbox", { name: /你的问题/ }).fill("朋友做政务系统，邀请我加入，我是否应该加入？");
+
+  await expect(page.getByRole("group", { name: "你准备以什么方式加入？" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "继续起卦" })).toBeDisabled();
+  await page.getByRole("radio", { name: /项目合作/ }).click();
+  await expect(page.getByRole("button", { name: "继续起卦" })).toBeEnabled();
 });
 
 test("Knowledge center guides users by goal, stage, topic, and report order", async ({ page }) => {
@@ -254,23 +267,47 @@ test("Guided and Professional report DOM does not leak internal implementation f
   await page.goto(`/reports/${id}`);
   await expect(page.getByText("你的问题", { exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "体验验收是否能看懂？" })).toBeVisible();
-  await expect(page.locator(".report-answer-overview")).toBeVisible();
-  await expect(page.getByRole("button", { name: "生成针对问题的解读" })).toBeVisible();
+  await expect(page.locator(".ly-visual-system")).toBeVisible();
+  await expect(page.locator(".ai-report-entry, .ai-report-section")).toBeVisible();
   await expect(page.getByRole("link", { name: "查看专业依据" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "专业依据" })).toBeVisible();
-  await page.locator(".report-layer-disclosure > summary").first().click();
-  await page.locator(".ly-advanced-disclosure > summary").click();
-  await expect(page.locator('[data-visual-id="VIS-LY-011"]')).toBeVisible();
-  await expect(page.locator('[data-visual-id="VIS-LY-012"]')).toBeVisible();
-  await expect(page.locator('[data-visual-id="VIS-LY-013"]')).toBeVisible();
-  await expect(page.locator('[data-visual-id="VIS-LY-014"]')).toBeVisible();
+  await expect(page.locator(".ly-advanced-disclosure")).toHaveCount(0);
+  await expect(page.locator(".ly-visual-system")).not.toContainText("综合依据");
+  await expect(page.locator(".ly-visual-system")).not.toContainText("观察窗口");
+  await expect(page.locator(".ly-visual-system")).not.toContainText("进一步核验");
+  await expect(page.locator(".ly-state-focus")).toContainText("变化来源");
+  await expect(page.locator(".ly-state-focus")).toContainText("主体与外部");
+  await expect(page.locator(".ly-state-row")).toHaveCount(6);
+  await expect(page.locator(".ly-state-influence strong")).toHaveCount(12);
+  await expect(page.locator(".ly-state-tags i", { hasText: "世爻" })).toHaveCount(1);
+  await expect(page.locator(".ly-state-tags i", { hasText: "应爻" })).toHaveCount(1);
   await expect(page.locator(".ly-visual-system")).not.toContainText("Pattern and conflict policy");
+  const primaryLayoutBounds = await page.evaluate(() => {
+    const board = document.querySelector(".ly-board")?.getBoundingClientRect();
+    const side = document.querySelector(".ly-side-stack")?.getBoundingClientRect();
+    const lineRights = [...document.querySelectorAll(".ly-board-line")].map((line) => line.getBoundingClientRect().right);
+    return {
+      boardRight: board?.right ?? 0,
+      sideLeft: side?.left ?? 0,
+      maxLineRight: Math.max(...lineRights),
+    };
+  });
+  expect(primaryLayoutBounds.maxLineRight).toBeLessThanOrEqual(primaryLayoutBounds.boardRight + 1);
+  expect(primaryLayoutBounds.boardRight).toBeLessThanOrEqual(primaryLayoutBounds.sideLeft);
+  await page.locator(".report-more-actions > summary").first().click();
   await expect(page.getByTestId("export-visual-svg")).toBeVisible();
   await expect(page.getByTestId("print-report")).toBeVisible();
   const downloadPromise = page.waitForEvent("download");
   await page.getByTestId("export-visual-svg").click();
   const download = await downloadPromise;
   expect(download.suggestedFilename()).toMatch(/-visual-report\.svg$/u);
+  const downloadPath = await download.path();
+  expect(downloadPath).toBeTruthy();
+  const exportedSvg = await readFile(downloadPath!, "utf8");
+  expect(exportedSvg).toContain("世应位置");
+  for (const removed of ["主要支持", "主要风险", "观察窗口", "时间与复核顺序", "进一步核验"]) {
+    expect(exportedSvg).not.toContain(removed);
+  }
   const text = await reportText(page);
   for (const forbidden of ["LIUYAO_RULE_", "ruleFindingId", "subject_state", "AI_REPORT_V1", "OPENAI_LIVE", "promptVersion", "undefined", "null", "requestId"]) {
     expect(text).not.toContain(forbidden);
@@ -290,12 +327,13 @@ test("Experience endpoint separates public and internal presentation", async ({ 
   expect(internalJson.adminViewModel.rawFacts.chart).toBeTruthy();
 });
 
-test("Mobile report keeps conclusion and next action reachable without overflow", async ({ page, request }, testInfo) => {
+test("Mobile report keeps chart and AI interpretation reachable without overflow", async ({ page, request }, testInfo) => {
   test.skip(!testInfo.project.name.startsWith("mobile"), "mobile experience coverage");
   const id = await createReport(request);
   await page.goto(`/reports/${id}`);
   await expect(page.getByText("你的问题", { exact: true })).toBeVisible();
-  await expect(page.locator(".report-answer-overview")).toBeVisible();
+  await expect(page.locator(".ly-visual-system")).toBeVisible();
+  await expect(page.locator(".ai-report-entry, .ai-report-section")).toBeVisible();
   await expect(page.getByRole("link", { name: "查看专业依据" })).toBeVisible();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);

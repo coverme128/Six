@@ -44,6 +44,18 @@ function meihuaResult() {
   return result;
 }
 
+function staticPartnershipResult() {
+  const result = createLiuyaoChart({
+    question: "朋友做政务系统，邀请我加入，我是否应该加入？",
+    topic: "business",
+    subtype: "partnership",
+    values: [8, 7, 7, 8, 8, 8],
+    calendar: { instantUtc: "2026-08-27T07:27:31Z", timezone: "Asia/Shanghai" },
+  }, ROOT);
+  result.narrativeReport = buildLiuyaoReport(result);
+  return result;
+}
+
 async function validOutput(input) {
   return new MockAIReportProvider({ mode: "success" }).generateReport(input);
 }
@@ -54,7 +66,11 @@ test("AIReportInput contains only grounded chart, calendar and matched evidence 
   assert.equal(input.versions.calendarProvider, "lunar-javascript");
   assert.equal(input.versions.aiSchemaVersion, "AI_REPORT_V1");
   assert.ok(input.questionContext.questionDigest.sha256);
-  assert.equal(input.productResultFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V1");
+  assert.equal(input.productResultFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V2");
+  assert.equal(input.questionProfile.profileVersion, "LIUYAO_QUESTION_PROFILE_V1");
+  assert.equal(input.topicLens.lensVersion, "LIUYAO_TOPIC_LENS_V1");
+  assert.equal(input.evidenceGraph.graphVersion, "LIUYAO_EVIDENCE_GRAPH_V1");
+  assert.equal(input.decisionFacts.decisionFactsVersion, "LIUYAO_DECISION_FACTS_V1");
   assert.ok(input.overallAssessmentFacts.overallState);
   assert.ok(input.conflictResolutionFacts.conflictState);
   assert.ok(input.actionGuidanceFacts.items.length > 0);
@@ -78,8 +94,17 @@ test("DeepSeek provider uses the official Responses endpoint and minimizes provi
   assert.equal(payload.reportId, undefined);
   assert.equal(payload.inputHash, undefined);
   assert.equal(payload.questionContext.questionDigest, undefined);
-  assert.equal(payload.versions.promptVersion, "liuyao-report-v4");
-  assert.doesNotMatch(JSON.stringify(payload), /空亡|回头生|月建|日辰|同支日/u);
+  assert.equal(payload.versions.promptVersion, "liuyao-report-v8");
+  assert.equal(payload.chartFacts.lineFacts.length, 6);
+  assert.equal(payload.interpretationContract.mode, "QUESTION_FIRST");
+  assert.equal(payload.questionContext.question, "P2 AI 报告是否可信？");
+  assert.equal(payload.questionContext.topicCode, undefined);
+  assert.equal(payload.decisionFacts, undefined);
+  assert.ok(payload.allowedEvidenceRefs.length > 0);
+  assert.ok(payload.matchedRuleFindings.every((finding) => finding.ruleType !== "yongshen"));
+  assert.ok(payload.matchedRuleFindings.every((finding) => /^evidence:\d+$/u.test(finding.id)));
+  assert.ok(payload.matchedRuleFindings.every((finding) => finding.ruleCode === undefined));
+  assert.ok(payload.chartFacts.lineFacts.every((line) => !String(line.sixRelationName).includes("岗位与项目责任")));
 });
 
 test("AI question redaction removes common direct identifiers before provider use", () => {
@@ -94,8 +119,8 @@ test("valid AI output passes schema, fidelity and safety validation", async () =
   assert.equal(validated.schemaVersion, "AI_REPORT_V1");
   assert.match(validated.questionResponse.focus, /P2 AI 报告是否可信/u);
   assert.match(validated.hexagramReading.original, new RegExp(input.chartFacts.originalHexagram, "u"));
-  assert.ok(validated.keyElements.length >= 2);
-  assert.ok(validated.realityChecks.length >= 2);
+  assert.ok(validated.keyJudgments.length >= 3);
+  assert.ok(validated.actionPlan.now.length >= 1);
 });
 
 test("schema validator rejects missing field, illegal enum and illegal evidenceRef", async () => {
@@ -103,12 +128,12 @@ test("schema validator rejects missing field, illegal enum and illegal evidenceR
   const output = await validOutput(input);
 
   const missing = structuredClone(output);
-  delete missing.summary;
-  assert.throws(() => validateAIReportSchema(missing, input), /summary/u);
+  delete missing.finalTakeaway;
+  assert.throws(() => validateAIReportSchema(missing, input), /finalTakeaway/u);
 
-  const badEnum = structuredClone(output);
-  badEnum.outcomeTrend.label = "CERTAIN";
-  assert.throws(() => validateAIReportSchema(badEnum, input), /outcomeTrend/u);
+  const missingActions = structuredClone(output);
+  missingActions.actionPlan.now = [];
+  assert.throws(() => validateAIReportSchema(missingActions, input), /actionPlan.now/u);
 
   const badRef = structuredClone(output);
   badRef.supportingFactors[0].evidenceRefs = ["rule:NOT_MATCHED"];
@@ -158,6 +183,14 @@ test("plain-language validator rejects unexplained jargon and invented review in
   const inventedTiming = await validOutput(input);
   inventedTiming.actionSuggestions = ["一周后重新评估。", "观察现实变化。"];
   assert.throws(() => validateAIPlainLanguage(inventedTiming), /unsupported time interval/u);
+
+  const inventedOperatingPeriod = await validOutput(input);
+  inventedOperatingPeriod.actionPlan.now[0].text = "确认资金足以支撑至少一年的运营。";
+  assert.throws(() => validateAIPlainLanguage(inventedOperatingPeriod), /quantified operating/u);
+
+  const internalCode = await validOutput(input);
+  internalCode.actionPlan.now[0].text = "根据 RESPONSE_GENERATES_WORLD 继续推进。";
+  assert.throws(() => validateAIPlainLanguage(internalCode), /internal evidence/u);
 });
 
 test("type isolation rejects Liuyao reports with Meihua-only fields and Meihua reports with Liuyao-only fields", async () => {
@@ -165,6 +198,23 @@ test("type isolation rejects Liuyao reports with Meihua-only fields and Meihua r
   const liuyaoOutput = await validOutput(liuyaoInput);
   liuyaoOutput.currentSituation = "这里混入体卦和用卦。";
   assert.throws(() => validateAIReport(liuyaoOutput, liuyaoInput), /Meihua-only/u);
+
+  const ordinaryLiuyaoOutput = await validOutput(liuyaoInput);
+  ordinaryLiuyaoOutput.currentSituation = "使用卦象时仍应核对现实条件。";
+  assert.doesNotThrow(() => validateAIReport(ordinaryLiuyaoOutput, liuyaoInput));
+
+  for (const ordinaryText of ["运用卦象理解当前变化。", "利用卦象辅助分析。", "用卦名理解只是解释背景。"]) {
+    const ordinaryOutput = await validOutput(liuyaoInput);
+    ordinaryOutput.currentSituation = ordinaryText;
+    assert.doesNotThrow(() => validateAIReport(ordinaryOutput, liuyaoInput), ordinaryText);
+  }
+
+  const structuredContamination = await validOutput(liuyaoInput);
+  structuredContamination.useTrigram = "坤";
+  assert.throws(
+    () => validateAIReport(structuredContamination, liuyaoInput),
+    (error) => error.code === "TYPE_CONTAMINATION" && error.details?.matches?.some((item) => item.marker === "useTrigram" && item.path === "$.useTrigram"),
+  );
 
   const meihuaInput = buildAIReportInput({ result: meihuaResult(), type: "meihua" });
   const meihuaOutput = await validOutput(meihuaInput);
@@ -202,7 +252,50 @@ test("live providers retry one validation failure before deterministic fallback"
   assert.equal(calls, 2);
 });
 
-test("live provider decision and timing are replaced with deterministic controlled wording", async () => {
+test("live providers retry an incomplete structured response", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  let calls = 0;
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    calls += 1;
+    if (calls === 1) throw new AIReportValidationError("PROVIDER_INCOMPLETE", "response incomplete");
+    return generateValid(input);
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 2);
+});
+
+test("valid live provider wording is preserved while timing stays deterministically controlled", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    const output = await generateValid(input);
+    output.questionResponse.directAnswer = "可以先核实机会质量，再用小范围行动验证是否值得继续投入。";
+    output.hexagramReading.original = `本卦“${input.chartFacts.originalHexagram}”说明当前条件需要结合本题角色综合判断。`;
+    const ref = input.decisionFacts.allowedFindingRefs[0];
+    output.actionSuggestions = [
+      { text: "先核对最能改变决定的现实条件。", evidenceRefs: [ref] },
+      { text: "条件明确后再决定投入程度。", evidenceRefs: [ref] },
+    ];
+    output.timingWindows[0].text = "这个时间必定兑现。";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 1);
+  assert.equal(bundle.aiReport.questionResponse.directAnswer, "可以先核实机会质量，再用小范围行动验证是否值得继续投入。");
+  assert.match(bundle.aiReport.hexagramReading.original, /结合本题角色综合判断/u);
+  assert.equal(bundle.aiReport.actionSuggestions[0].text, "先核对最能改变决定的现实条件。");
+  assert.match(bundle.aiReport.timingWindows[0].text, /候选观察窗口/u);
+  assert.doesNotMatch(bundle.aiReport.timingWindows[0].text, /一定|必定|保证/u);
+});
+
+test("live provider cannot exceed DecisionFacts commitment boundary", async () => {
   const result = liuyaoResult();
   const provider = new MockAIReportProvider({ mode: "success" });
   const generateValid = provider.generateReport.bind(provider);
@@ -210,22 +303,78 @@ test("live provider decision and timing are replaced with deterministic controll
   provider.generateReport = async (input) => {
     const output = await generateValid(input);
     output.questionResponse.directAnswer = "适合立刻投入全部资源。";
-    output.questionResponse.scopeNote = "模型自行改变问题口径。";
-    output.hexagramReading.original = "模型自行补充卦名吉凶。";
-    output.actionSuggestions = ["模型自行发明行动。", "继续等待。"];
-    output.timingWindows[0].text = "这个时间必定兑现。";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "FALLBACK");
+  assert.equal(bundle.attemptCount, 3);
+  assert.equal(bundle.failureCode, "DECISION_DIRECTION_INVALID");
+});
+
+test("conditional boundary validator accepts explicit negation of direct commitment", async () => {
+  const input = buildAIReportInput({ result: liuyaoResult(), type: "liuyao" });
+  const output = await validOutput(input);
+  output.questionResponse.directAnswer = "可以继续了解，但暂不建议直接加入；先核实条件再做小范围验证。";
+  assert.doesNotThrow(() => validateAIReport(output, input));
+});
+
+test("static Liuyao output cannot claim moving lines or a coming transition", async () => {
+  const result = staticPartnershipResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  let calls = 0;
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    calls += 1;
+    const output = await generateValid(input);
+    if (calls === 1) {
+      output.currentSituation = "整体处于变化前夜。";
+      output.outcomeTrend.text = "动爻提示事情正在进入变化过程。";
+    }
+    return output;
+  };
+
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  const text = JSON.stringify(bundle.aiReport);
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.equal(bundle.attemptCount, 2);
+  assert.match(bundle.aiReport.questionResponse.directAnswer, /身份/u);
+  assert.match(bundle.aiReport.hexagramReading.changed, /没有新增的动变方向/u);
+  assert.doesNotMatch(text, /变化前夜|动爻提示事情|正在进入变化过程|第 - 爻发动|已有变化动力/u);
+});
+
+test("live provider may add conventional hexagram context without changing chart facts", async () => {
+  const result = staticPartnershipResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  let calls = 0;
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    calls += 1;
+    const output = await generateValid(input);
+    output.hexagramReading.original = "升卦六爻安静，传统解读强调循序推进；本次仍以具体爻位事实为判断依据。";
     return output;
   };
   const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
   assert.equal(bundle.validationStatus, "VALID");
   assert.equal(bundle.attemptCount, 1);
-  assert.match(bundle.aiReport.questionResponse.directAnswer, /小步验证/u);
-  assert.doesNotMatch(bundle.aiReport.questionResponse.directAnswer, /立刻投入全部资源/u);
-  assert.equal(bundle.aiReport.questionResponse.scopeNote, "本次按求职与工作机会理解，重点判断是否值得开始找，以及满足什么条件后再切换。");
-  assert.doesNotMatch(bundle.aiReport.hexagramReading.original, /自行补充|吉凶/u);
-  assert.doesNotMatch(JSON.stringify(bundle.aiReport.actionSuggestions), /自行发明/u);
-  assert.match(bundle.aiReport.timingWindows[0].text, /候选观察窗口/u);
-  assert.doesNotMatch(bundle.aiReport.timingWindows[0].text, /一定|必定|保证/u);
+  assert.match(bundle.aiReport.hexagramReading.original, /传统解读/u);
+});
+
+test("professional basis preserves Liuyao terms but removes internal rule codes", async () => {
+  const result = liuyaoResult();
+  const provider = new MockAIReportProvider({ mode: "success" });
+  const generateValid = provider.generateReport.bind(provider);
+  provider.provider = "deepseek";
+  provider.generateReport = async (input) => {
+    const output = await generateValid(input);
+    output.keyJudgments[0].professionalBasis = "四爻官鬼午火发动，午火生戌土，属于化泄（RESPONSE_GENERATES_WORLD）。";
+    return output;
+  };
+  const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
+  assert.equal(bundle.validationStatus, "VALID");
+  assert.match(bundle.aiReport.keyJudgments[0].professionalBasis, /官鬼|化泄/u);
+  assert.doesNotMatch(bundle.aiReport.keyJudgments[0].professionalBasis, /RESPONSE_GENERATES_WORLD/u);
 });
 
 test("live provider output translates known technical terms before public display", async () => {
@@ -235,13 +384,14 @@ test("live provider output translates known technical terms before public displa
   provider.provider = "deepseek";
   provider.generateReport = async (input) => {
     const output = await generateValid(input);
-    output.currentSituation = "对方目前处于空亡状态，后续可看同支日/月。";
+    output.currentSituation = "世爻需要主动投入，应爻目前处于空亡状态，官鬼与父母爻仍需核对，后续可看同支日/月。";
     return output;
   };
   const bundle = await generateGroundedAIReport({ result, type: "liuyao", provider });
   assert.equal(bundle.validationStatus, "VALID");
   assert.equal(bundle.attemptCount, 1);
-  assert.doesNotMatch(bundle.aiReport.currentSituation, /空亡|同支日/u);
+  assert.doesNotMatch(bundle.aiReport.currentSituation, /空亡|同支日|世爻|应爻|官鬼|父母爻/u);
+  assert.match(bundle.aiReport.currentSituation, /你的状态与投入|对方或项目方的回应|岗位与项目责任|合同与正式流程/u);
 });
 
 test("DETERMINISTIC_ASSESSMENT_FIDELITY keeps AI ON and OFF judgment facts identical", async () => {

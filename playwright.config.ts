@@ -4,8 +4,10 @@ import { defineConfig } from "@playwright/test";
 
 const chromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const launchOptions = existsSync(chromePath) ? { executablePath: chromePath } : {};
-const baseURL = "http://127.0.0.1:3200";
-const apiBaseURL = "http://127.0.0.1:4100/api/v1";
+const webPort = Number(process.env.E2E_WEB_PORT ?? 3200);
+const apiPort = Number(process.env.E2E_API_PORT ?? 4100);
+const baseURL = process.env.E2E_BASE_URL ?? `http://127.0.0.1:${webPort}`;
+const apiBaseURL = process.env.E2E_API_BASE_URL ?? `http://127.0.0.1:${apiPort}/api/v1`;
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -16,13 +18,13 @@ export default defineConfig({
   expect: { timeout: 10_000 },
   webServer: [
     {
-      command: "API_PORT=4100 AI_PROVIDER=disabled pnpm run dev:api",
+      command: `API_PORT=${apiPort} AI_PROVIDER=disabled pnpm run dev:api`,
       url: `${apiBaseURL}/health`,
       reuseExistingServer: false,
       timeout: 30_000,
     },
     {
-      command: `PORT=3200 NEXT_PUBLIC_API_BASE_URL=${apiBaseURL} pnpm run dev:web`,
+      command: `PORT=${webPort} NEXT_DIST_DIR=.next-e2e-${webPort} NEXT_PUBLIC_API_BASE_URL=${apiBaseURL} pnpm run dev:web`,
       url: baseURL,
       reuseExistingServer: false,
       timeout: 30_000,

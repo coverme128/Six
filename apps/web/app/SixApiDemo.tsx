@@ -30,6 +30,20 @@ const lineOptions = [
 ];
 
 type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
+type JoinMode = "EMPLOYMENT" | "PARTNERSHIP" | "PROJECT_COOPERATION" | "INVESTMENT" | "ADVISORY";
+
+const joinModes: Array<{ value: JoinMode; label: string; detail: string }> = [
+  { value: "EMPLOYMENT", label: "入职", detail: "作为员工或全职成员加入" },
+  { value: "PARTNERSHIP", label: "合伙", detail: "共同经营、分配收益或股权" },
+  { value: "PROJECT_COOPERATION", label: "项目合作", detail: "先围绕具体项目协作交付" },
+  { value: "INVESTMENT", label: "投资", detail: "投入资金或资源换取回报" },
+  { value: "ADVISORY", label: "兼职顾问", detail: "有限时间提供专业支持" },
+];
+
+function needsJoinModeClarification(scenarioId: string, question: string) {
+  if (scenarioId !== "business:partnership" || !/加入|参与|一起做|跟.{0,8}(?:做|干)/u.test(question)) return false;
+  return !/入职|上班|员工|职位|岗位|全职|offer|合伙|股权|创业|投资|出资|入股|投钱|顾问|兼职|咨询|项目合作|外包|承接/u.test(question);
+}
 
 type CastSubmission = {
   mode: LiuyaoCastMode;
@@ -219,6 +233,7 @@ export function SixApiDemo() {
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState("relationship:relationship_stability");
   const [scenarioGroup, setScenarioGroup] = useState("感情与合作");
+  const [joinMode, setJoinMode] = useState<JoinMode | "">("");
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
   const [coinLines, setCoinLines] = useState<number[][]>([]);
   const [digitalCoinsStarted, setDigitalCoinsStarted] = useState(false);
@@ -261,7 +276,9 @@ export function SixApiDemo() {
   const digitalCoinsReady = digitalCoinsStarted && digitalCoinLines.every((coins) => coins.length === 3 && coins.every((coin) => coin === "2" || coin === "3"));
   const manualReady = liuyaoValues.every((item) => ["6", "7", "8", "9"].includes(item));
   const liuyaoReady = liuyaoCastMode === "manual" ? manualReady : (liuyaoCastMode === "digitalCoins" ? digitalCoinsReady : coinLines.length === 6);
-  const canGenerate = Boolean(question.trim()) && liuyaoReady;
+  const joinModeRequired = needsJoinModeClarification(scenarioId, question);
+  const questionReady = Boolean(question.trim()) && (!joinModeRequired || Boolean(joinMode));
+  const canGenerate = questionReady && liuyaoReady;
 
   function switchLiuyaoCastMode(nextMode: LiuyaoCastMode) {
     setLiuyaoCastMode(nextMode);
@@ -284,6 +301,7 @@ export function SixApiDemo() {
 
   function chooseScenario(nextScenarioId: string) {
     setScenarioId(nextScenarioId);
+    setJoinMode("");
     setReport(null);
     moveToStep("question-step", "#question-input");
   }
@@ -324,9 +342,9 @@ export function SixApiDemo() {
     setLoading(true);
     setError("");
 
-    if (!question.trim() || (!submission && !canGenerate)) {
+    if (!questionReady || (!submission && !canGenerate)) {
       setLoading(false);
-      setError("请先填写问题并完成六爻生成。");
+      setError(joinModeRequired && !joinMode ? "请先确认你准备以什么身份加入。" : "请先填写问题并完成六爻生成。");
       return;
     }
 
@@ -339,6 +357,7 @@ export function SixApiDemo() {
       question,
       topic: scenario.topic,
       subtype: scenario.subtype,
+      ...(joinMode ? { questionProfile: { joinMode } } : {}),
       ...(submissionMode === "manual" ? { values: submissionValues } : {}),
       ...(submissionMode === "digitalCoins" ? { coins: submissionDigitalCoins.map((line) => line.map(Number)) } : {}),
       ...(submissionMode === "coins" || submissionMode === "auto" ? { coins: submissionCoins } : {}),
@@ -463,7 +482,10 @@ export function SixApiDemo() {
             <textarea
               id="question-input"
               value={question}
-              onChange={(event) => setQuestion(event.target.value)}
+              onChange={(event) => {
+                setQuestion(event.target.value);
+                setReport(null);
+              }}
               maxLength={500}
               rows={4}
               placeholder={scenario.placeholder}
@@ -472,6 +494,29 @@ export function SixApiDemo() {
             />
             <p id="question-help">一次聚焦一件事，例如“这段关系现在适合继续推进吗？” 不用填写姓名、电话、证件号等个人信息。</p>
           </label>
+
+          {joinModeRequired ? (
+            <fieldset className="join-mode-fieldset">
+              <legend>你准备以什么方式加入？</legend>
+              <p>身份不同，报告关注的责任、收益和风险也不同。</p>
+              <div role="radiogroup" aria-label="加入方式">
+                {joinModes.map((item) => (
+                  <button
+                    type="button"
+                    role="radio"
+                    aria-checked={joinMode === item.value}
+                    className={joinMode === item.value ? "active" : ""}
+                    key={item.value}
+                    onClick={() => setJoinMode(item.value)}
+                  >
+                    <strong>{item.label}</strong>
+                    <span>{item.detail}</span>
+                    {joinMode === item.value ? <Check aria-hidden="true" size={16} /> : null}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          ) : null}
 
           <div className="question-examples" aria-label="问题示例">
             <span>可以这样问</span>
@@ -485,7 +530,7 @@ export function SixApiDemo() {
           <button
             type="button"
             className="continue-button"
-            disabled={!question.trim()}
+            disabled={!questionReady}
             onClick={() => moveToStep("cast-step")}
           >
             继续起卦

@@ -35,10 +35,35 @@ function meihuaResult() {
   return result;
 }
 
+function staticPartnershipResult() {
+  const result = createLiuyaoChart({
+    question: "朋友做政务系统，邀请我加入，我是否应该加入？",
+    topic: "business",
+    subtype: "partnership",
+    values: [8, 7, 7, 8, 8, 8],
+    calendar: { instantUtc: "2026-08-27T07:27:31Z", timezone: "Asia/Shanghai" },
+  });
+  result.narrativeReport = buildLiuyaoReport(result);
+  return result;
+}
+
+function confirmedProjectCooperationResult() {
+  const result = createLiuyaoChart({
+    question: "朋友做政务系统，邀请我加入，我是否应该加入？",
+    topic: "business",
+    subtype: "partnership",
+    values: [8, 7, 7, 8, 8, 8],
+    questionProfile: { joinMode: "PROJECT_COOPERATION" },
+    calendar: { instantUtc: "2026-08-27T07:27:31Z", timezone: "Asia/Shanghai" },
+  });
+  result.narrativeReport = buildLiuyaoReport(result);
+  return result;
+}
+
 test("Experience bundle builds guided and professional viewmodels without admin leakage", () => {
   const bundle = buildExperienceBundle({ result: liuyaoResult(), type: "liuyao" });
   assert.equal(bundle.experienceVersion, "EXPERIENCE_ORCHESTRATION_V1");
-  assert.equal(bundle.productResultFacts.productFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V1");
+  assert.equal(bundle.productResultFacts.productFactsVersion, "LIUYAO_PRODUCT_RESULT_FACTS_V2");
   assert.ok(judgmentFactsSignature(bundle.productResultFacts)?.overallState);
   assert.ok(bundle.guidedViewModel.overallAssessment?.label);
   assert.ok(bundle.guidedViewModel.directAnswer);
@@ -109,9 +134,51 @@ test("Liuyao visualization bundle registers P0 and P1 visuals with same-ViewMode
   assert.ok(board.lines.some((line) => line.isWorld));
   assert.ok(board.lines.some((line) => line.isResponse));
   assert.ok(visualization.viewModels["VIS-LY-004"].roles.length >= 1);
-  assert.equal(visualization.viewModels["VIS-LY-007"].mode, "qualitative_no_score");
+  const strengthMatrix = visualization.viewModels["VIS-LY-007"];
+  assert.equal(strengthMatrix.mode, "qualitative_no_score");
+  assert.equal(strengthMatrix.lineStates.length, 6);
+  assert.ok(strengthMatrix.lineStates.every((line) => line.monthInfluence?.effect && line.dayInfluence?.effect));
+  assert.ok(strengthMatrix.lineStates.some((line) => line.isWorld));
+  assert.ok(strengthMatrix.lineStates.some((line) => line.isResponse));
   assert.ok(Array.isArray(visualization.viewModels["VIS-LY-011"].actions));
   assert.ok(Array.isArray(visualization.viewModels["VIS-LY-014"].steps));
+});
+
+test("Ambiguous join question stays static and asks for the missing identity before deciding", () => {
+  const bundle = buildExperienceBundle({ result: staticPartnershipResult(), type: "liuyao" });
+  const publicText = JSON.stringify(bundle);
+
+  assert.deepEqual(bundle.productResultFacts.chartFacts.movingLines, []);
+  assert.equal(bundle.productResultFacts.overallAssessmentFacts.dynamicDirection, "STATIC_OR_UNCLEAR");
+  assert.notEqual(bundle.productResultFacts.overallAssessmentFacts.overallState, "TRANSITIONAL");
+  assert.equal(bundle.guidedViewModel.decisionSupport.scenario, "BUSINESS_PARTNERSHIP");
+  assert.equal(bundle.guidedViewModel.decisionSupport.dimensions.length, 4);
+  assert.equal(bundle.productResultFacts.questionProfile.clarificationRequired, true);
+  assert.equal(bundle.productResultFacts.topicLens.status, "BRANCHED");
+  assert.equal(bundle.productResultFacts.decisionFacts.status, "BRANCHED_ASSESSMENT");
+  assert.match(bundle.guidedViewModel.directAnswer, /先明确你准备以什么身份加入/u);
+  assert.equal(bundle.guidedViewModel.questionClarification.required, true);
+  assert.doesNotMatch(publicText, /对方.{0,8}明显制约/u);
+  assert.match(publicText, /项目责任、规则与执行压力/u);
+  assert.match(bundle.guidedViewModel.decisionSupport.hexagramChain.changed, /静卦，没有变卦/u);
+  assert.doesNotMatch(publicText, /第 - 爻发动|正在进入变化过程|已有变化动力/u);
+  assert.ok(!bundle.contentExplanationSnippets.some((item) => item.category === "DYNAMICS"));
+});
+
+test("Confirmed project cooperation uses compound evidence instead of generic role polarity", () => {
+  const bundle = buildExperienceBundle({ result: confirmedProjectCooperationResult(), type: "liuyao" });
+  const nodes = bundle.productResultFacts.evidenceGraph.decisionNodes;
+
+  assert.equal(bundle.productResultFacts.questionProfile.joinMode, "PROJECT_COOPERATION");
+  assert.equal(bundle.productResultFacts.topicLens.activeLabel, "项目合作");
+  assert.equal(bundle.productResultFacts.decisionFacts.status, "READY");
+  assert.match(bundle.guidedViewModel.directAnswer, /小范围验证|暂不建议直接加入/u);
+  assert.equal(bundle.guidedViewModel.questionClarification, null);
+  assert.deepEqual(nodes.find((item) => item.id === "evidence:CONTRACT_SUPPORTED_BUT_UNSETTLED")?.factRefs, ["line:2", "line:5"]);
+  assert.match(nodes.find((item) => item.id === "evidence:RESPONSIBILITY_AND_RULE_PRESSURE_ACTIVE")?.meaning ?? "", /政府项目责任/u);
+  assert.match(nodes.find((item) => item.id === "evidence:SELF_INPUT_FEEDS_RESPONSIBILITY")?.meaning ?? "", /先投入能力、时间或资源/u);
+  assert.match(nodes.find((item) => item.id === "evidence:STATIC_CHART")?.meaning ?? "", /没有动爻/u);
+  assert.ok(bundle.professionalViewModel.evidenceGroups.risks.every((item) => item.evidenceKind === "综合证据"));
 });
 
 test("Liuyao scene selection drives automatic observation focus without user yongshen confirmation", () => {

@@ -7,69 +7,76 @@ import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
 import { renderLiuyaoVisualizationSvg } from "../../liuyao-visuals/export";
 
+const CURRENT_LIUYAO_AI_PROMPT = "liuyao-report-v8";
+
 function textList(items: Array<{ title?: string; text?: string }> = []) {
   return items.map((item) => `- ${item.text ?? item.title ?? ""}`).filter((item) => item.trim() !== "-").join("\n");
 }
 
-function decisionStateLabel(state?: string) {
-  if (state === "SUPPORT") return "具备支持";
-  if (state === "RISK") return "需要先处理";
-  if (state === "MIXED") return "有利有阻";
-  if (state === "OBSERVE") return "继续核对";
-  return "信息不足";
+function chartTransitionLabel(chart?: ChartViewModel) {
+  if (!chart || chart.type !== "liuyao") return "六爻报告";
+  return chart.movingLines?.length
+    ? `${chart.originalHexagram} → ${chart.changedHexagram}`
+    : `${chart.originalHexagram}（静卦，无变卦）`;
+}
+
+function actionText(item: string | { text?: string }) {
+  return typeof item === "string" ? item : item.text ?? "";
 }
 
 function buildReadableMarkdown(report: ExperienceResponse) {
   const guided = report.experience?.guidedViewModel;
   const professional = report.experience?.professionalViewModel;
   const chart = report.chartViewModel;
+  const aiReport = report.aiReportBundle?.aiReport;
+  const judgments = (aiReport?.keyJudgments ?? []).flatMap((item, index) => [
+    `### ${index + 1}. ${item.title ?? "关键判断"}`,
+    `专业依据：${item.professionalBasis ?? ""}`,
+    item.plainInterpretation ?? "",
+    `对决定的影响：${item.decisionImpact ?? ""}`,
+    "",
+  ]);
+  const actionGroup = (title: string, items: Array<{ text?: string }> = []) => [
+    `### ${title}`,
+    ...items.map((item) => `- ${item.text ?? ""}`),
+    "",
+  ];
   const lines = [
-    `# ${guided?.scenarioGuidance?.headline ?? guided?.headline ?? "六爻报告"}`,
+    `# ${guided?.question ?? "六爻报告"}`,
     "",
     `报告编号：${report.id}`,
     "类型：六爻",
     report.createdAt ? `生成时间：${new Date(report.createdAt).toLocaleString("zh-CN")}` : "",
     "",
-    "## 总体判断",
-    guided?.directAnswer ?? "",
-    guided?.overallAssessment?.label ?? "",
-    guided?.overallAssessment?.baseState ?? "",
-    guided?.overallAssessment?.dynamicDirection ?? "",
+    "## 直接回答",
+    aiReport?.questionResponse?.directAnswer ?? guided?.directAnswer ?? "",
+    aiReport?.questionResponse?.scopeNote ?? "",
     "",
-    "## 一句话结论",
-    guided?.summary ?? "",
-    "",
-    "## 当前局势",
-    guided?.currentSituation ?? "",
-    "",
-    "## 核心事项",
-    guided?.coreMatter?.summary ?? "",
-    "",
-    "## 观察重点",
-    guided?.observationFocus?.summary ?? "",
-    "",
-    "## 变化方向",
-    guided?.changeDirection ?? "",
-    "",
-    "## 时间提示",
-    guided?.timingHint ?? "",
-    "",
-    "## 主要支持",
-    textList(guided?.mainSupports),
-    "",
-    "## 主要阻碍",
-    textList(guided?.mainRisks),
-    "",
-    "## 下一步",
-    (guided?.recommendedActions ?? []).map((item) => `- ${item}`).join("\n"),
+    "## 卦象脉络",
+    aiReport?.hexagramReading?.synthesis ?? "",
+    aiReport?.hexagramReading?.original ?? "",
+    aiReport?.hexagramReading?.moving ?? "",
+    aiReport?.hexagramReading?.changed ?? "",
     "",
     "## 为什么这样判断",
-    guided?.whyThisAssessment?.conflictResolution ?? "",
-    (guided?.whyThisAssessment?.basis ?? []).map((item) => `- ${item}`).join("\n"),
+    ...judgments,
+    ...(aiReport?.decisionBalance?.length ? [
+      "## 这次决定中的取舍",
+      "| 可能获得 | 可能付出 |",
+      "| --- | --- |",
+      ...aiReport.decisionBalance.map((item) => `| ${item.gain ?? ""} | ${item.cost ?? ""} |`),
+      "",
+    ] : []),
+    "## 对你的实际建议",
+    ...actionGroup("现在可以做", aiReport?.actionPlan?.now),
+    ...actionGroup("作决定前确认", aiReport?.actionPlan?.beforeDecision),
+    ...actionGroup("需要避免", aiReport?.actionPlan?.avoid),
+    "## 一句话总结",
+    aiReport?.finalTakeaway ?? "",
     "",
     "## 专业盘面",
     chart?.type === "liuyao"
-      ? `本卦：${chart.originalHexagram ?? ""}\n变卦：${chart.changedHexagram ?? ""}\n动爻：${chart.movingLines?.join("、") || "无"}\n世爻：${chart.worldLine ?? ""}\n应爻：${chart.responseLine ?? ""}`
+      ? `本卦：${chart.originalHexagram ?? ""}\n${chart.movingLines?.length ? `变卦：${chart.changedHexagram ?? ""}` : "卦象：静卦，无变卦"}\n动爻：${chart.movingLines?.join("、") || "无"}\n世爻：${chart.worldLine ?? ""}\n应爻：${chart.responseLine ?? ""}`
       : "当前页面仅支持六爻报告。",
     "",
     "## 专业依据",
@@ -146,7 +153,7 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
       <div className="hexagram-layout">
         <div className="hexagram-figure" aria-label="六爻卦象">
           <strong>
-            {chart.originalHexagram} → {chart.changedHexagram}
+            {chartTransitionLabel(chart)}
           </strong>
           {lines.map((line) => (
             <HexagramLine key={`figure-line-${line.position}`} yinYang={line.yinYang} moving={line.moving} />
@@ -172,7 +179,7 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
       </div>
       <div className="fact-strip">
         <span>本卦 {chart.originalHexagram}</span>
-        <span>变卦 {chart.changedHexagram}</span>
+        <span>{chart.movingLines?.length ? `变卦 ${chart.changedHexagram}` : "静卦，无变卦"}</span>
         <span>动爻 {chart.movingLines?.length ? chart.movingLines.join("、") : "无"}</span>
         <span>世 {chart.worldLine ?? "-"}</span>
         <span>应 {chart.responseLine ?? "-"}</span>
@@ -189,11 +196,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [aiStatus, setAiStatus] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
   const aiSectionRef = useRef<HTMLElement | null>(null);
+  const autoAIRequestedRef = useRef(false);
   const guided = report?.experience?.guidedViewModel;
   const professional = report?.experience?.professionalViewModel;
   const visualization = report?.experience?.visualization;
   const relatedContent = report?.relatedContent ?? [];
-  const aiReport = report?.aiReportBundle?.aiReport;
+  const aiBundleIsCurrent = report?.aiReportBundle?.promptVersion === CURRENT_LIUYAO_AI_PROMPT;
+  const aiReport = aiBundleIsCurrent ? report?.aiReportBundle?.aiReport : null;
   const aiProviderUnconfigured = aiAvailability === "unavailable";
   const supports = useMemo(() => professional?.evidenceGroups?.supports ?? [], [professional]);
   const risks = useMemo(() => professional?.evidenceGroups?.risks ?? [], [professional]);
@@ -237,6 +246,20 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (
+      loading
+      || !report
+      || report.type !== "liuyao"
+      || aiAvailability !== "available"
+      || aiLoading
+      || autoAIRequestedRef.current
+      || (aiBundleIsCurrent && report.aiReportBundle?.aiReport)
+    ) return;
+    autoAIRequestedRef.current = true;
+    void generateAIReport();
+  }, [aiAvailability, aiBundleIsCurrent, aiLoading, loading, report]);
 
   async function generateAIReport() {
     setAiLoading(true);
@@ -298,91 +321,28 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       <section className="hero compact">
         <p className="eyebrow">你的问题</p>
         <h1>{guided?.question ?? "报告详情"}</h1>
-        <p>{guided?.directAnswer ?? aiReport?.questionResponse?.directAnswer ?? guided?.scenarioGuidance?.decisionFocus ?? guided?.overallAssessment?.label ?? "正在整理本次报告的回答。"}</p>
+        <p>先查看本次六爻盘面，再阅读结合原问题生成的 AI 解读。</p>
       </section>
 
       {loading ? <p className="empty">正在读取报告。</p> : null}
       {error ? <p className="error">{error}</p> : null}
 
-      {guided ? (
-        <section className="panel report-section report-answer-overview">
-          <div className="report-answer-heading">
-            <div>
-              <p className="eyebrow">当前回答</p>
-              <h2>{guided.directAnswer ?? guided.overallAssessment?.label ?? "仍需继续观察"}</h2>
-              <p className="section-kicker">先看能不能推进、要满足什么条件，再按需查看卦象解释和专业依据。</p>
-            </div>
-            <div className="fact-strip" aria-label="报告核心事实">
-              <span>{report?.chartViewModel?.type === "liuyao" ? `${report.chartViewModel.originalHexagram} → ${report.chartViewModel.changedHexagram}` : "六爻报告"}</span>
-              <span>{report?.chartViewModel?.type === "liuyao" && report.chartViewModel.movingLines?.length ? `第 ${report.chartViewModel.movingLines.join("、")} 爻变化` : "当前无明显动爻"}</span>
-            </div>
+      {report?.type === "liuyao" ? (
+        visualization ? <LiuyaoVisualSystemPanel visualization={visualization} /> : <ChartPanel chart={report?.chartViewModel} />
+      ) : null}
+
+      {guided && (!aiReport || report?.aiReportBundle?.fallbackUsed) ? (
+        <section className="panel report-section ai-report-entry" aria-live="polite">
+          <div>
+            <p className="eyebrow">AI 问题解读</p>
+            <h2>{aiLoading ? "正在结合原问题与完整盘面生成解读" : "结合你的问题，解释这份卦"}</h2>
+            <p>AI 会直接理解你的原始问题，并使用本次六爻、动变、世应、历法和规则事实组织回答，不套用预写场景结论。</p>
+            <small><ShieldCheck aria-hidden="true" size={15} />排盘事实不会被 AI 改写；手机号、邮箱和证件号会在发送前自动隐藏。</small>
           </div>
-          {guided.scenarioGuidance?.scenario === "RELATIONSHIP" ? (
-            <div className="relationship-summary" aria-label="感情关系结论">
-              <div className="relationship-direction">
-                <span>当前关系方向</span>
-                <strong>{guided.scenarioGuidance.direction}</strong>
-                <p>{guided.scenarioGuidance.interactionTrend}</p>
-              </div>
-              <div>
-                <span>你这边</span>
-                <strong>{guided.scenarioGuidance.selfSignal?.summary}</strong>
-              </div>
-              <div>
-                <span>对方与互动</span>
-                <strong>{guided.scenarioGuidance.otherSignal?.summary}</strong>
-              </div>
-              <div className="relationship-decision">
-                <span>现在更适合</span>
-                <strong>{guided.scenarioGuidance.decisionFocus}</strong>
-              </div>
-              <small>{guided.scenarioGuidance.boundary}</small>
-            </div>
-          ) : null}
-          {guided.decisionSupport ? (
-            <div className="decision-brief" aria-label="条件化决策建议">
-              <div className="decision-dimensions">
-                {guided.decisionSupport.dimensions?.map((item) => (
-                  <article key={item.code} data-state={item.state}>
-                    <div><span>{item.label}</span><strong>{decisionStateLabel(item.state)}</strong></div>
-                    <p>{item.summary}</p>
-                  </article>
-                ))}
-              </div>
-              <div className="decision-condition-grid">
-                <section>
-                  <span>满足这些条件，再加大投入</span>
-                  <ul>{guided.decisionSupport.proceedConditions?.map((item) => <li key={item}>{item}</li>)}</ul>
-                </section>
-                <section>
-                  <span>出现这些情况，先不要决定</span>
-                  <ul>{guided.decisionSupport.holdConditions?.map((item) => <li key={item}>{item}</li>)}</ul>
-                </section>
-              </div>
-              <section className="decision-timeline">
-                <span>接下来怎么做</span>
-                <ol>{guided.decisionSupport.actionTimeline?.map((item) => <li key={`${item.phase}-${item.action}`}><strong>{item.phase}</strong><p>{item.action}</p></li>)}</ol>
-              </section>
-              <small className="decision-boundary">{guided.decisionSupport.boundary}</small>
-            </div>
-          ) : (
-            <div className="report-answer-summary">
-              <div><span>现在怎么看</span><strong>{guided.overallAssessment?.baseState ?? guided.currentSituation}</strong><p>{guided.overallAssessment?.dynamicDirection ?? guided.changeDirection}</p></div>
-              <div><span>现在怎么做</span><strong>{guided.recommendedActions?.[0] ?? "先核对能改变决定的关键条件。"}</strong></div>
-            </div>
-          )}
-          <aside className="ai-generation-notice" aria-label="AI 白话解读说明">
-            <Sparkles aria-hidden="true" size={20} />
-            <div>
-              <strong>结合你的问题，解释这份卦</strong>
-              <p>AI 会把原问题、本卦、动爻、变卦和关键角色放在一起，说明它们如何影响当前决定及需要核验的现实条件。</p>
-              <small><ShieldCheck aria-hidden="true" size={15} />手机号、邮箱和证件号会在发送前自动隐藏，通常约 10 秒完成。</small>
-            </div>
-          </aside>
           <div className="inline-actions">
             <button className="primary-button" type="button" onClick={generateAIReport} disabled={aiLoading || aiProviderUnconfigured}>
               <Sparkles aria-hidden="true" size={17} />
-              {aiLoading ? "正在结合问题解读" : aiProviderUnconfigured ? "真实模型未配置" : report?.aiReportBundle?.fallbackUsed ? "重试真实模型解读" : report?.aiReportBundle ? "重新生成针对问题的解读" : "生成针对问题的解读"}
+              {aiLoading ? "AI 正在解读" : aiProviderUnconfigured ? "真实模型未配置" : report?.aiReportBundle?.fallbackUsed ? "重试真实模型解读" : "生成 AI 解读"}
             </button>
             <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
             <details className="report-more-actions">
@@ -395,11 +355,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               </div>
             </details>
           </div>
-          {aiStatus ? <p className="empty">{aiStatus}</p> : aiProviderUnconfigured ? <p className="empty">真实模型尚未配置，当前仅显示正式排盘与规则结论。</p> : report?.aiReportBundle?.fallbackUsed ? <p className="empty">真实模型暂时未能完成解读，正式排盘和规则结论不受影响。</p> : null}
-          <div className="report-trust-note" aria-label="解读边界">
-            <ShieldCheck aria-hidden="true" size={17} />
-            <span>AI 只解释当前报告，不会重新排盘或改动专业判断；需要时可展开完整依据复核。</span>
-          </div>
+          {aiStatus ? <p className="empty">{aiStatus}</p> : aiProviderUnconfigured ? <p className="empty">真实模型尚未配置，仍可查看完整盘面和专业依据。</p> : null}
         </section>
       ) : null}
 
@@ -408,124 +364,105 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           <div className="ai-report-heading">
             <div>
               <p className="eyebrow">针对你的问题</p>
-              <h2>{report.aiReportBundle.fallbackUsed ? "基础回答" : "问题解读"}</h2>
-              <p className="section-kicker">先回答是否适合，再解释本卦、变化和需要现实核验的条件。</p>
+              <h2>AI 解读</h2>
+              <p className="section-kicker">直接理解原始问题，并把完整六爻盘面转译成针对性的回答。</p>
             </div>
             <div className="fact-strip" aria-label="解读状态">
-              <span>{report.aiReportBundle.validationStatus === "VALID" ? "事实一致性已校验" : "确定性报告已保留"}</span>
-              <span>不改变排盘与判断</span>
+              <span>{report.aiReportBundle.validationStatus === "VALID" ? "排盘字段一致性已校验" : "确定性报告已保留"}</span>
+              <span>现实条件仍待核实</span>
             </div>
           </div>
 
           <div className="ai-report-lead">
             <span>对这个问题的直接回答</span>
-            <strong>{guided?.directAnswer ?? aiReport?.questionResponse?.directAnswer ?? aiReport?.summary ?? guided?.summary ?? "当前已保留基础报告，可继续查看结论和依据。"}</strong>
-            <p>{aiReport?.currentSituation ?? guided?.currentSituation}</p>
+            <strong>{aiReport?.questionResponse?.directAnswer ?? aiReport?.finalTakeaway ?? "当前解读已生成。"}</strong>
             {aiReport?.questionResponse?.scopeNote ? <small>本次理解范围：{aiReport.questionResponse.scopeNote}</small> : null}
+          </div>
+
+          <div className="inline-actions ai-report-actions">
+            <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
+            <details className="report-more-actions">
+              <summary><MoreHorizontal aria-hidden="true" size={18} />更多操作</summary>
+              <div>
+                <button type="button" onClick={exportReadableReport}><FileText aria-hidden="true" size={17} />下载文本</button>
+                <button data-testid="export-visual-svg" type="button" onClick={exportVisualReport} disabled={!visualization}><Download aria-hidden="true" size={17} />下载 SVG</button>
+                <button data-testid="print-report" type="button" onClick={() => window.print()}><Printer aria-hidden="true" size={17} />打印 / PDF</button>
+                <a className="text-link" href="/">再次起卦</a>
+              </div>
+            </details>
           </div>
 
           {aiReport ? (
             <>
               {aiReport.hexagramReading ? (
-                <section className="ai-hexagram-explanation" aria-labelledby="hexagram-explanation-title">
+                <section className="ai-analysis-block ai-hexagram-narrative" aria-labelledby="hexagram-explanation-title">
                   <div className="report-section-heading">
-                    <span>卦象如何影响这个问题</span>
-                    <h3 id="hexagram-explanation-title">
-                      {report.chartViewModel?.type === "liuyao" ? `${report.chartViewModel.originalHexagram} → ${report.chartViewModel.changedHexagram}` : "本次卦象变化"}
-                    </h3>
-                  </div>
-                  <div className="ai-hexagram-flow">
-                    <article>
-                      <span>1</span>
-                      <div><strong>本卦：当前起点</strong><p>{aiReport.hexagramReading.original}</p></div>
-                    </article>
-                    <article>
-                      <span>2</span>
-                      <div><strong>动爻：变化来源</strong><p>{aiReport.hexagramReading.moving}</p></div>
-                    </article>
-                    <article>
-                      <span>3</span>
-                      <div><strong>变卦：后续观察</strong><p>{aiReport.hexagramReading.changed}</p></div>
-                    </article>
+                    <span>{chartTransitionLabel(report.chartViewModel)}</span>
+                    <h3 id="hexagram-explanation-title">整体卦象脉络</h3>
                   </div>
                   <p className="ai-hexagram-synthesis">{aiReport.hexagramReading.synthesis}</p>
+                  <div className="ai-hexagram-notes">
+                    <p><strong>本卦</strong>{aiReport.hexagramReading.original}</p>
+                    <p><strong>动变</strong>{aiReport.hexagramReading.moving}</p>
+                    <p><strong>{report.chartViewModel?.type === "liuyao" && !report.chartViewModel.movingLines?.length ? "静卦" : "变卦"}</strong>{report.chartViewModel?.type === "liuyao" && !report.chartViewModel.movingLines?.length
+                      ? "这是静卦，没有变卦。当前先观察已有条件是否发生实质变化。"
+                      : aiReport.hexagramReading.changed}</p>
+                  </div>
                 </section>
               ) : null}
 
-              <details className="ai-supporting-details">
-                <summary>查看盘面角色与支持、阻碍</summary>
-                {(aiReport.keyElements ?? []).length ? (
-                  <section className="ai-key-elements">
-                    <div className="report-section-heading">
-                      <span>决策依据</span>
-                      <h3>专业角色对应哪些现实条件</h3>
-                    </div>
-                    <div className="ai-key-element-grid">
-                      {aiReport.keyElements?.map((item, index) => (
-                        <article key={`${item.title}-${index}`}>
-                          <small>盘面角色：{item.professionalRole}</small>
-                          <strong>{item.title}</strong>
-                          <p>{item.impact}</p>
-                          <div><span>现实中看什么</span>{item.observe}</div>
-                        </article>
-                      ))}
-                    </div>
-                  </section>
-                ) : null}
-                <div className="ai-factor-grid">
-                  <section>
-                    <h3>支持推进的事实</h3>
-                    {(aiReport.supportingFactors ?? []).length ? (
-                      <ul>{aiReport.supportingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
-                    ) : <p>当前没有足够明确的支持因素。</p>}
-                  </section>
-                  <section>
-                    <h3>需要先处理的事实</h3>
-                    {(aiReport.blockingFactors ?? []).length ? (
-                      <ul>{aiReport.blockingFactors?.map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul>
-                    ) : <p>当前没有足够明确的阻碍因素。</p>}
-                  </section>
-                </div>
-              </details>
-
-              {!guided?.decisionSupport && (aiReport.realityChecks ?? []).length ? (
-                <section className="ai-reality-checks">
+              {(aiReport.keyJudgments ?? []).length ? (
+                <section className="ai-analysis-block ai-judgment-section" aria-labelledby="key-judgments-title">
                   <div className="report-section-heading">
-                    <span>先核对，再决定</span>
-                    <h3>这份报告怎样落到现实</h3>
+                    <span>从证据到结论</span>
+                    <h3 id="key-judgments-title">为什么这样判断</h3>
                   </div>
-                  <div>
-                    {aiReport.realityChecks?.map((item, index) => (
+                  <div className="ai-judgment-list">
+                    {aiReport.keyJudgments?.map((item, index) => (
                       <article key={`${item.title}-${index}`}>
-                        <span>{index + 1}</span>
-                        <div><strong>{item.title}</strong><p>{item.check}</p><small>{item.signal}</small></div>
+                        <span className="ai-judgment-index">{index + 1}</span>
+                        <div>
+                          <h4>{item.title}</h4>
+                          <p className="ai-professional-basis"><strong>盘面依据</strong>{item.professionalBasis}</p>
+                          <p>{item.plainInterpretation}</p>
+                          <p className="ai-decision-impact"><strong>对决定的影响</strong>{item.decisionImpact}</p>
+                        </div>
                       </article>
                     ))}
                   </div>
                 </section>
               ) : null}
 
-              {!guided?.decisionSupport ? (
-                <section className="ai-next-actions">
-                  <span>现在可以做什么</span>
-                  <ol>{(aiReport.actionSuggestions ?? []).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
+              {(aiReport.decisionBalance ?? []).length ? (
+                <section className="ai-analysis-block ai-balance-section">
+                  <div className="report-section-heading">
+                    <span>不是简单的好或坏</span>
+                    <h3>这次决定中的取舍</h3>
+                  </div>
+                  <div className="ai-balance-table" role="table" aria-label="决定取舍">
+                    <div role="row"><strong role="columnheader">可能获得</strong><strong role="columnheader">可能付出</strong></div>
+                    {aiReport.decisionBalance?.map((item, index) => (
+                      <div role="row" key={`${item.gain}-${index}`}><span role="cell">{item.gain}</span><span role="cell">{item.cost}</span></div>
+                    ))}
+                  </div>
                 </section>
               ) : null}
 
-              <section className="ai-timing-note">
-                <span>什么时候再观察</span>
-                {(aiReport.timingWindows ?? []).length ? (
-                  <ul>{aiReport.timingWindows?.map((item, index) => <li key={`${item.candidateRef}-${index}`}>{item.text}</li>)}</ul>
-                ) : <p>当前没有足够明确的时间窗口，先以现实条件发生变化为复盘信号。</p>}
+              <section className="ai-analysis-block ai-action-plan" aria-labelledby="action-plan-title">
+                <div className="report-section-heading">
+                  <span>把判断落到现实</span>
+                  <h3 id="action-plan-title">对你的实际建议</h3>
+                </div>
+                <div>
+                  <section><h4>现在可以做</h4><ul>{(aiReport.actionPlan?.now ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
+                  <section><h4>作决定前确认</h4><ul>{(aiReport.actionPlan?.beforeDecision ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
+                  <section><h4>需要避免</h4><ul>{(aiReport.actionPlan?.avoid ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
+                </div>
               </section>
 
-              <details className="ai-evidence-details">
-                <summary>为什么得出这个结论</summary>
-                <div>
-                  {(aiReport.evidenceSummary ?? []).map((item, index) => <p key={`${item.text}-${index}`}>{item.text}</p>)}
-                  <a href="#professional-evidence">查看完整专业依据</a>
-                </div>
-              </details>
+              {aiReport.finalTakeaway ? <blockquote className="ai-final-takeaway"><span>一句话总结</span>{aiReport.finalTakeaway}</blockquote> : null}
+
+              {(aiReport.timingWindows ?? []).length ? <details className="ai-timing-note"><summary>候选观察时间</summary><ul>{(aiReport.timingWindows ?? []).map((item, index) => <li key={`${item.candidateRef}-${index}`}>{item.text}</li>)}</ul></details> : null}
 
               {(aiReport.limitations ?? []).length || aiReport.disclaimer ? (
                 <details className="ai-limitations">
@@ -539,17 +476,6 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             <p className="empty">AI 服务暂时不可用，本次排盘、正式判断和基础报告不受影响。</p>
           )}
         </section>
-      ) : null}
-
-      {report?.type === "liuyao" ? (
-        <details className="panel report-section report-layer-disclosure">
-          <summary>
-            <span><strong>查看六爻盘面与卦象图</strong><small>需要理解爻位、世应和动变时再展开</small></span>
-          </summary>
-          <div>
-            {visualization ? <LiuyaoVisualSystemPanel visualization={visualization} /> : <ChartPanel chart={report?.chartViewModel} />}
-          </div>
-        </details>
       ) : null}
 
       {relatedContent.length ? (
@@ -578,42 +504,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
               <span>动爻 {professional.chartSummary.movingLines.join(", ")}</span>
             ) : null}
           </div>
-          {professional.observationFocus ? (
-            <details className="evidence-details">
-              <summary>本次观察重点</summary>
-              <div className="preview-grid">
-                {(professional.observationFocus.roles ?? []).map((role) => (
-                  <div key={`${role.label}-${role.importance}`}>
-                    <h3>{role.label}</h3>
-                    <p>{role.meaning}</p>
-                    {role.lines?.length ? (
-                      role.lines.map((line) => (
-                        <p key={`${role.label}-${line.position}`}>
-                          第 {line.position} 爻
-                          {line.branchName ? ` / ${line.branchName}` : ""}
-                          {line.moving ? " / 动" : ""}
-                          {line.isWorld ? " / 世" : ""}
-                          {line.isResponse ? " / 应" : ""}
-                          {line.isVoid ? " / 空" : ""}
-                        </p>
-                      ))
-                    ) : (
-                      <p>本盘未见对应爻位，需结合世应与动爻观察。</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <p className="empty">观察重点由问题场景自动确定，用于保持本次报告前后一致。</p>
-            </details>
-          ) : null}
           {professional.auditChain ? (
             <details className="evidence-details">
               <summary>综合判断审计链</summary>
               <div className="preview-grid">
                 <div>
-                  <h3>问题与用神</h3>
-                  <p>{professional.auditChain.question?.topic}</p>
-                  <p>{professional.auditChain.yongshenSelection?.explanation}</p>
+                  <h3>排盘事实</h3>
+                  <p>{professional.chartSummary?.title}</p>
+                  <p>{professional.chartSummary?.movingLines?.length ? `动爻：${professional.chartSummary.movingLines.join("、")}` : "静卦，无动爻"}</p>
                 </div>
                 <div>
                   <h3>冲突裁决</h3>

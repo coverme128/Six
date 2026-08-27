@@ -5,11 +5,6 @@ import type { ReactNode } from "react";
 
 type VisualModel = Record<string, any>;
 
-function itemText(item: any) {
-  if (typeof item === "string") return item;
-  return item?.text ?? item?.title ?? item?.label ?? "";
-}
-
 function visual(bundle: LiuyaoVisualizationBundle | null | undefined, id: string): VisualModel | null {
   return bundle?.viewModels?.[id] ?? null;
 }
@@ -40,6 +35,7 @@ function EmptyState({ text = "当前报告没有足够事实展示该视觉。" 
 
 function SixLineBoard({ model }: { model: VisualModel | null }) {
   if (!model?.lines?.length) return <EmptyState />;
+  const hasMovingLines = model.lines.some((line: VisualModel) => line.moving);
   return (
     <div className="ly-board" aria-label="六爻盘面，上爻到初爻阅读">
       <div className="ly-board-head">
@@ -47,10 +43,10 @@ function SixLineBoard({ model }: { model: VisualModel | null }) {
           <span>本卦</span>
           <strong>{model.originalHexagram ?? "-"}</strong>
         </div>
-        <b aria-hidden="true">→</b>
+        <b aria-hidden="true">{hasMovingLines ? "→" : "·"}</b>
         <div>
-          <span>变卦</span>
-          <strong>{model.changedHexagram ?? "-"}</strong>
+          <span>{hasMovingLines ? "变卦" : "当前状态"}</span>
+          <strong>{hasMovingLines ? model.changedHexagram ?? "-" : "静卦，无变卦"}</strong>
         </div>
       </div>
       <div className="ly-board-lines" role="list">
@@ -84,16 +80,17 @@ function SixLineBoard({ model }: { model: VisualModel | null }) {
 }
 
 function PrimaryChanged({ model }: { model: VisualModel | null }) {
+  const hasTransition = Boolean(model?.transitionNotes?.length);
   return (
     <div className="ly-card ly-card-compact">
       <div className="ly-card-title">
         <span>卦象变化</span>
-        <strong>本卦 / 变卦</strong>
+        <strong>{hasTransition ? "本卦 / 变卦" : "静卦状态"}</strong>
       </div>
       <div className="ly-transition">
         <strong>{model?.originalHexagram ?? "-"}</strong>
-        <span>变化为</span>
-        <strong>{model?.changedHexagram ?? "-"}</strong>
+        <span>{hasTransition ? "变化为" : "当前无动爻"}</span>
+        <strong>{hasTransition ? model?.changedHexagram ?? "-" : "无变卦"}</strong>
       </div>
       {model?.transitionNotes?.length ? (
         <div className="ly-mini-list">
@@ -130,23 +127,14 @@ function CastingSequence({ model }: { model: VisualModel | null }) {
   );
 }
 
-function FocusPanel({ yongshen, shiYing }: { yongshen: VisualModel | null; shiYing: VisualModel | null }) {
+function FocusPanel({ shiYing }: { shiYing: VisualModel | null }) {
   return (
     <div className="ly-card ly-focus-card">
       <div className="ly-card-title">
         <span>关系坐标</span>
-        <strong>核心焦点与世应</strong>
+        <strong>世应位置</strong>
       </div>
-      <p>{yongshen?.explanation ?? yongshen?.observationSummary ?? "本次报告未返回核心焦点说明。"}</p>
-      <div className="ly-role-grid">
-        {(yongshen?.roles ?? []).slice(0, 4).map((role: VisualModel) => (
-          <div key={`role-${role.label}`}>
-            <strong>{role.label}</strong>
-            <small>{role.practicalMeaning}</small>
-            <span>{role.linePositions?.length ? `${role.linePositions.join("、")} 爻` : "未见对应爻"}</span>
-          </div>
-        ))}
-      </div>
+      <p>世爻标记主体位置，应爻标记相对方或外部位置。具体对应现实中的谁和什么事，由 AI 结合原始问题解释。</p>
       <div className="ly-shiying">
         <div>
           <Marker tone="shi">世</Marker>
@@ -184,21 +172,95 @@ function SixRelations({ model }: { model: VisualModel | null }) {
   );
 }
 
-function StrengthMatrix({ model }: { model: VisualModel | null }) {
+type InfluenceTone = "support" | "risk" | "neutral";
+
+function influenceStatus(influence: VisualModel | null | undefined, fallbackText?: string) {
+  const text = influence?.text ?? fallbackText ?? "";
+  if (influence?.isClash || text.includes("冲")) return { label: "冲", tone: "risk" as InfluenceTone };
+  if (influence?.isSame || influence?.effect === "same" || text.includes("同气")) return { label: "同气", tone: "support" as InfluenceTone };
+  if (influence?.effect === "generates" || text.includes("生扶")) return { label: "生扶", tone: "support" as InfluenceTone };
+  if (influence?.effect === "controls" || text.includes("克制")) return { label: "受克", tone: "risk" as InfluenceTone };
+  if (influence?.effect === "drains" || text.includes("泄气")) return { label: "泄气", tone: "risk" as InfluenceTone };
+  if (influence?.effect === "resists" || text.includes("耗力")) return { label: "耗力", tone: "risk" as InfluenceTone };
+  return { label: "待观察", tone: "neutral" as InfluenceTone };
+}
+
+function lineFocusLabels(line: VisualModel) {
+  return [
+    line.moving ? "动爻" : null,
+    line.isWorld ? "世爻" : null,
+    line.isResponse ? "应爻" : null,
+    line.isVoid ? "空亡" : null,
+    line.monthInfluence?.isClash || line.monthText?.includes("冲") ? "月冲" : null,
+    line.dayInfluence?.isClash || line.dayText?.includes("冲") ? "日冲" : null,
+  ].filter(Boolean) as string[];
+}
+
+function StrengthMatrix({ model, shiYing }: { model: VisualModel | null; shiYing: VisualModel | null }) {
+  const states = (model?.lineStates ?? []).map((line: VisualModel) => ({
+    ...line,
+    isWorld: line.isWorld || Number(line.position) === Number(shiYing?.world?.position),
+    isResponse: line.isResponse || Number(line.position) === Number(shiYing?.response?.position),
+  }));
+  const moving = states.filter((line: VisualModel) => line.moving);
+  const world = states.find((line: VisualModel) => line.isWorld);
+  const response = states.find((line: VisualModel) => line.isResponse);
+  const special = states.flatMap((line: VisualModel) => lineFocusLabels(line)
+    .filter((label) => !["动爻", "世爻", "应爻"].includes(label))
+    .map((label) => `${line.label}${label}`));
+
   return (
     <div className="ly-card ly-wide-card">
       <div className="ly-card-title">
-        <span>力量状态</span>
-        <strong>状态矩阵</strong>
+        <span>盘面状态</span>
+        <strong>关键爻与月日作用</strong>
       </div>
-      <div className="ly-matrix">
-        {(model?.lineStates ?? []).map((line: VisualModel) => (
-          <div key={`state-${line.position}`}>
-            <strong>{line.label}</strong>
-            <small>{[line.relationName, line.branchName].filter(Boolean).join(" / ")}</small>
-            <p>{[line.monthText, line.dayText, line.isVoid ? "空亡" : null, line.moving ? "发动" : null].filter(Boolean).join("；") || "暂无状态"}</p>
-          </div>
-        ))}
+      <div className="ly-state-focus" aria-label="盘面关注顺序">
+        <div>
+          <span>变化来源</span>
+          <strong>{moving.length ? moving.map((line: VisualModel) => line.label).join("、") : "静卦"}</strong>
+          <small>{moving.length ? "优先看动爻怎样变化" : "当前没有动爻"}</small>
+        </div>
+        <div>
+          <span>主体与外部</span>
+          <strong>{world ? `世 ${world.label}` : "世爻未标"} · {response ? `应 ${response.label}` : "应爻未标"}</strong>
+          <small>先分清主体与相对位置</small>
+        </div>
+        <div>
+          <span>特殊状态</span>
+          <strong>{special.slice(0, 2).join("、") || "暂无"}</strong>
+          <small>{special.length > 2 ? `另有 ${special.length - 2} 项` : "空亡与冲优先留意"}</small>
+        </div>
+      </div>
+      <div className="ly-state-matrix" role="list" aria-label="六爻月建与日辰状态">
+        {states.map((line: VisualModel) => {
+          const focusLabels = lineFocusLabels(line);
+          const month = influenceStatus(line.monthInfluence, line.monthText);
+          const day = influenceStatus(line.dayInfluence, line.dayText);
+          return (
+            <div className={focusLabels.length ? "ly-state-row is-focus" : "ly-state-row"} role="listitem" key={`state-${line.position}`}>
+              <div className="ly-state-identity">
+                <span>{line.label}</span>
+                <strong>{[line.relationName, line.branchName, line.elementName].filter(Boolean).join(" · ")}</strong>
+                <span className="ly-state-tags">
+                  {focusLabels.map((label) => <i className={`is-${label}`} key={`${line.position}-${label}`}>{label}</i>)}
+                </span>
+              </div>
+              <div className="ly-state-influence">
+                <span>月建</span>
+                <strong className={`is-${month.tone}`}><i aria-hidden="true" />{month.label}</strong>
+              </div>
+              <div className="ly-state-influence">
+                <span>日辰</span>
+                <strong className={`is-${day.tone}`}><i aria-hidden="true" />{day.label}</strong>
+              </div>
+              <details className="ly-state-detail">
+                <summary>关系明细</summary>
+                <p>{[line.monthText, line.dayText].filter(Boolean).join("；") || "暂无月日关系说明。"}</p>
+              </details>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -224,130 +286,18 @@ function Dynamics({ model }: { model: VisualModel | null }) {
   );
 }
 
-function EvidenceConflict({ model }: { model: VisualModel | null }) {
-  const support = (model?.evidence ?? []).filter((item: VisualModel) => item.polarity === "support").slice(0, 2);
-  const risk = (model?.evidence ?? []).filter((item: VisualModel) => item.polarity === "risk").slice(0, 2);
-  return (
-    <div className="ly-card ly-wide-card">
-      <div className="ly-card-title">
-        <span>综合依据</span>
-        <strong>证据冲突</strong>
-      </div>
-      <div className="ly-conflict-summary">
-        <Marker tone="neutral">{model?.conflictState === "NONE" ? "方向较一致" : "支持与阻碍并存"}</Marker>
-        <p>{model?.summary ?? "支持与风险按事实并列展示。"}</p>
-      </div>
-      <div className="ly-evidence-columns">
-        <div>
-          <strong>支持</strong>
-          {support.length ? support.map((item: VisualModel, index: number) => <p key={`support-${index}`}>{itemText(item)}</p>) : <EmptyState text="暂无明确支持证据。" />}
-        </div>
-        <div>
-          <strong>风险</strong>
-          {risk.length ? risk.map((item: VisualModel, index: number) => <p key={`risk-${index}`}>{itemText(item)}</p>) : <EmptyState text="暂无明确风险证据。" />}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Timing({ model }: { model: VisualModel | null }) {
-  return (
-    <div className="ly-card">
-      <div className="ly-card-title">
-        <span>观察窗口</span>
-        <strong>时间线索</strong>
-      </div>
-      <div className="ly-timeline">
-        {(model?.items ?? []).map((item: VisualModel, index: number) => (
-          <div key={`timing-${item.title ?? index}`}>
-            <span>{index + 1}</span>
-            <strong>{item.title ?? item.window ?? "候选窗口"}</strong>
-            <p>{item.text ?? item.explanation}</p>
-          </div>
-        ))}
-      </div>
-      <small className="ly-policy">时间只作为候选观察窗口，不是保证日期。</small>
-    </div>
-  );
-}
-
-function SupportRiskAction({ model }: { model: VisualModel | null }) {
-  const groups = [
-    { label: "可以借力", tone: "support" as const, items: model?.supports ?? [] },
-    { label: "需要处理", tone: "risk" as const, items: model?.risks ?? [] },
-    { label: "现在行动", tone: "neutral" as const, items: (model?.actions ?? []).map((text: string) => ({ text })) },
-  ];
-  return (
-    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-011">
-      <div className="ly-card-title"><span>决策整理</span><strong>支持、风险与行动</strong></div>
-      <div className="ly-decision-columns">
-        {groups.map((group) => (
-          <div key={group.label}>
-            <Marker tone={group.tone}>{group.label}</Marker>
-            {group.items.length ? group.items.slice(0, 4).map((item: VisualModel, index: number) => <p key={`${group.label}-${index}`}>{itemText(item)}</p>) : <EmptyState />}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function PatternExplanation({ model }: { model: VisualModel | null }) {
-  return (
-    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-012">
-      <div className="ly-card-title"><span>判断结构</span><strong>{model?.patternName ?? "综合判断模式"}</strong></div>
-      <p>{model?.summary ?? "当前没有额外的模式说明。"}</p>
-      <div className="ly-mini-list">
-        {(model?.basis ?? []).slice(0, 4).map((item: VisualModel, index: number) => <p key={`pattern-${index}`}><Marker>{index + 1}</Marker>{itemText(item)}</p>)}
-      </div>
-      <small className="ly-policy">综合判断按证据类别、直接性与变化状态整理，不采用简单加减分。</small>
-    </div>
-  );
-}
-
-function DecisionComparison({ model }: { model: VisualModel | null }) {
-  return (
-    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-013">
-      <div className="ly-card-title"><span>条件比较</span><strong>推进前先对照三件事</strong></div>
-      <div className="ly-comparison-columns">
-        {(model?.columns ?? []).map((column: VisualModel, index: number) => (
-          <div key={column.label}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <strong>{column.label}</strong>
-            {(column.items ?? []).slice(0, 3).map((item: VisualModel, itemIndex: number) => <p key={`${column.label}-${itemIndex}`}>{itemText(item)}</p>)}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function ReasoningFlow({ model }: { model: VisualModel | null }) {
-  return (
-    <div className="ly-card ly-wide-card" data-visual-id="VIS-LY-014">
-      <div className="ly-card-title"><span>复核顺序</span><strong>判断依据怎样连起来</strong></div>
-      <ol className="ly-reasoning-flow">
-        {(model?.steps ?? []).map((step: VisualModel, index: number) => (
-          <li key={`${step.label ?? step.title}-${index}`}>
-            <span>{index + 1}</span>
-            <div><strong>{step.label ?? step.title ?? `步骤 ${index + 1}`}</strong><p>{step.text ?? step.summary ?? step.description}</p></div>
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
-}
-
 export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: LiuyaoVisualizationBundle | null }) {
   if (!visualization?.viewModels) return null;
 
   const board = visual(visualization, "VIS-LY-001");
+  const movingLabels = (board?.lines ?? []).filter((line: VisualModel) => line.moving).map((line: VisualModel) => line.label);
   const staticSummary = [
-    `本卦${board?.originalHexagram ?? "未提供"}，变卦${board?.changedHexagram ?? "未提供"}。`,
+    movingLabels.length
+      ? `本卦${board?.originalHexagram ?? "未提供"}，变卦${board?.changedHexagram ?? "未提供"}。`
+      : `本卦${board?.originalHexagram ?? "未提供"}，静卦，无变卦。`,
     `盘面按上爻到初爻阅读，共${board?.lines?.length ?? 0}爻。`,
-    `动爻为${(board?.lines ?? []).filter((line: VisualModel) => line.moving).map((line: VisualModel) => line.label).join("、") || "无"}。`,
-    "以下依次展示核心焦点、世应、状态、证据、时间、支持风险和推理顺序。",
+    `动爻为${movingLabels.join("、") || "无"}。`,
+    "以下展示卦象、动变、世应、六亲与力量状态。",
   ].join("");
   return (
     <section className="panel report-section ly-visual-system" aria-describedby="liuyao-visual-system-summary" aria-labelledby="liuyao-visual-system-title">
@@ -356,7 +306,7 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
         <div>
           <p className="eyebrow">专业盘面</p>
           <h2 id="liuyao-visual-system-title">六爻视觉解读</h2>
-          <p className="section-kicker">从盘面、世应、动变、力量与时间线索理解结论，需要时再深入查看完整依据。</p>
+          <p className="section-kicker">先看本卦、动爻、变卦与世应位置，再阅读下方针对问题的 AI 解读。</p>
         </div>
       </div>
 
@@ -364,38 +314,23 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
         <SixLineBoard model={board} />
         <div className="ly-side-stack">
           <PrimaryChanged model={visual(visualization, "VIS-LY-002")} />
-          <FocusPanel yongshen={visual(visualization, "VIS-LY-004")} shiYing={visual(visualization, "VIS-LY-005")} />
+          <FocusPanel shiYing={visual(visualization, "VIS-LY-005")} />
         </div>
       </div>
 
       <div className="ly-layer-tabs" aria-label="移动端视觉层级">
         <span>盘面</span>
-        <span>焦点</span>
+        <span>动变</span>
+        <span>世应</span>
         <span>状态</span>
-        <span>证据</span>
       </div>
 
       <div className="ly-visual-grid">
         <CastingSequence model={visual(visualization, "VIS-LY-003")} />
         <SixRelations model={visual(visualization, "VIS-LY-006")} />
-        <StrengthMatrix model={visual(visualization, "VIS-LY-007")} />
+        <StrengthMatrix model={visual(visualization, "VIS-LY-007")} shiYing={visual(visualization, "VIS-LY-005")} />
         <Dynamics model={visual(visualization, "VIS-LY-008")} />
-        <EvidenceConflict model={visual(visualization, "VIS-LY-009")} />
-        <Timing model={visual(visualization, "VIS-LY-010")} />
       </div>
-
-      <details className="ly-advanced-disclosure">
-        <summary>
-          <span>进一步核验</span>
-          <p>查看支持、风险、判断模式和推理顺序</p>
-        </summary>
-        <div className="ly-visual-grid ly-advanced-grid">
-          <SupportRiskAction model={visual(visualization, "VIS-LY-011")} />
-          <PatternExplanation model={visual(visualization, "VIS-LY-012")} />
-          <DecisionComparison model={visual(visualization, "VIS-LY-013")} />
-          <ReasoningFlow model={visual(visualization, "VIS-LY-014")} />
-        </div>
-      </details>
     </section>
   );
 }

@@ -16,9 +16,13 @@ function bitText(value: unknown): string {
 }
 
 function reportExperience(report: PublicReportRecord) {
-  const experience = objectValue(report.experience);
-  if (report.type === "liuyao" && !experience.visualization) {
-    return buildExperienceBundle({ result: report.result, type: report.type });
+  if (report.type === "liuyao") {
+    const result = objectValue(report.result);
+    const { productResultFacts: _staleProductFacts, ...currentResult } = result;
+    return buildExperienceBundle({
+      result: { ...currentResult, aiReportBundle: report.aiReportBundle ?? currentResult.aiReportBundle },
+      type: report.type,
+    });
   }
   return report.experience;
 }

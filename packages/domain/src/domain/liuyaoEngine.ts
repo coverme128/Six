@@ -458,6 +458,7 @@ export function createLiuyaoChart(input = {}, rootDir = process.cwd()) {
     question: input.question ?? "",
     topic: input.topic ?? "career",
     subtype: input.subtype ?? "job_search",
+    questionProfile: input.questionProfile ?? null,
     rawCast: { values, coins: cast.coins, inputMode: cast.inputMode, lineOrder: "bottom_up" },
     originalBits,
     changedBits,

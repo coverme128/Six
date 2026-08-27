@@ -186,6 +186,9 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
     noRecompute: true,
   };
 
+  const professionalEvidenceGroups = professionalViewModel?.evidenceGroups ?? {};
+  const decisionConditions = [...array(professionalEvidenceGroups.supports), ...array(professionalEvidenceGroups.other).filter((item) => item.title === "需要同时看")];
+  const decisionRisks = array(professionalEvidenceGroups.risks);
   const viewModels = {
     "VIS-LY-001": {
       ...common,
@@ -275,10 +278,15 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
         label: displayLineName(line.position),
         relationName: line.sixRelationName,
         branchName: line.branchName,
+        elementName: line.elementName,
         monthText: line.monthText,
         dayText: line.dayText,
+        monthInfluence: line.monthInfluence,
+        dayInfluence: line.dayInfluence,
         isVoid: Boolean(line.isVoid),
         moving: Boolean(line.moving),
+        isWorld: Boolean(line.isWorld),
+        isResponse: Boolean(line.isResponse),
       })),
       categories: array(professionalViewModel?.auditChain?.strength),
     },
@@ -320,10 +328,11 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
       ...common,
       visualId: "VIS-LY-011",
       viewModel: "SupportRiskDecisionViewModel",
-      status: visualState(guidedViewModel?.mainSupports || guidedViewModel?.mainRisks),
+      status: visualState(decisionConditions.length || decisionRisks.length),
       title: "支持 / 风险 / 行动",
-      supports: guidedViewModel?.mainSupports ?? [],
-      risks: guidedViewModel?.mainRisks ?? [],
+      supportLabel: array(professionalEvidenceGroups.other).length ? "条件与不确定性" : "可以借力",
+      supports: decisionConditions,
+      risks: decisionRisks,
       actions: guidedViewModel?.recommendedActions ?? [],
     },
     "VIS-LY-012": {
@@ -341,11 +350,11 @@ export function buildLiuyaoVisualizationBundle({ productResultFacts, guidedViewM
       ...common,
       visualId: "VIS-LY-013",
       viewModel: "DecisionComparisonViewModel",
-      status: visualState(guidedViewModel?.mainSupports || guidedViewModel?.mainRisks),
+      status: visualState(decisionConditions.length || decisionRisks.length),
       title: "决策比较",
       columns: [
-        { label: "可推进条件", items: guidedViewModel?.mainSupports ?? [] },
-        { label: "需要处理的风险", items: guidedViewModel?.mainRisks ?? [] },
+        { label: "已有条件与待落实项", items: decisionConditions },
+        { label: "需要处理的风险", items: decisionRisks },
         { label: "建议动作", items: array(guidedViewModel?.recommendedActions).map((text) => ({ text })) },
       ],
     },
