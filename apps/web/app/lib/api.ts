@@ -1,6 +1,7 @@
 export type DivinationMode = "liuyao" | "meihua";
 
 export type GuidedViewModel = {
+  question?: string;
   headline?: string;
   summary?: string;
   overallAssessment?: {
@@ -197,6 +198,29 @@ export type ExperienceResponse = {
     generatedAt?: string;
     latencyMs?: number;
     aiReport?: {
+      questionResponse?: {
+        focus?: string;
+        directAnswer?: string;
+        scopeNote?: string;
+      };
+      hexagramReading?: {
+        original?: string;
+        moving?: string;
+        changed?: string;
+        synthesis?: string;
+      };
+      keyElements?: Array<{
+        title?: string;
+        professionalRole?: string;
+        impact?: string;
+        observe?: string;
+        evidenceRefs?: string[];
+      }>;
+      realityChecks?: Array<{
+        title?: string;
+        check?: string;
+        signal?: string;
+      }>;
       summary?: string;
       currentSituation?: string;
       supportingFactors?: Array<{ text?: string; evidenceRefs?: string[] }>;

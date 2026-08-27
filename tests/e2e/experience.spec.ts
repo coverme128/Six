@@ -24,6 +24,13 @@ async function reportText(page) {
 test("Homepage guides users from value to scenario and one focused question", async ({ page }) => {
   await page.goto("/");
 
+  const primaryNavigation = page.getByRole("navigation", { name: "主导航" });
+  await expect(primaryNavigation.getByRole("link", { name: "首页", exact: true })).toHaveAttribute("aria-current", "page");
+  await expect(primaryNavigation.getByRole("link", { name: "我的报告" })).toBeVisible();
+  await expect(primaryNavigation.getByRole("link", { name: "学习中心" })).toBeVisible();
+  await expect(primaryNavigation.getByRole("link", { name: "开始分析" })).toBeVisible();
+  await expect(primaryNavigation.getByRole("link", { name: "设置" })).toBeVisible();
+
   await expect(page.getByRole("heading", { name: "把一件难事，看清方向与下一步" })).toBeVisible();
   await expect(page.getByRole("link", { name: "从我的问题开始" })).toBeVisible();
 
@@ -43,24 +50,19 @@ test("Homepage guides users from value to scenario and one focused question", as
   await page.getByRole("tab", { name: "生活事务" }).click();
   await expect(page.getByRole("radio")).toHaveCount(3);
   await page.getByRole("radio", { name: /房产 \/ 居所/ }).click();
-  await expect(page.getByText("计划是否具备推进条件", { exact: true })).toBeVisible();
-  await expect(page.getByText("手续、资金或时间哪里会卡", { exact: true })).toBeVisible();
-  await expect(page.getByText("什么时候调整更稳妥", { exact: true })).toBeVisible();
-
-  await page.getByRole("button", { name: "按这个场景继续" }).click();
   await expect(page.getByRole("heading", { name: "写下此刻最想确认的一件事" })).toBeVisible();
   await page.getByRole("button", { name: "这次搬迁计划是否需要调整？" }).click();
   await expect(page.getByRole("textbox", { name: /你的问题/ })).toHaveValue("这次搬迁计划是否需要调整？");
-  await expect(page.getByRole("button", { name: "就问这个问题" })).toBeEnabled();
+  await expect(page.getByRole("button", { name: "继续起卦" })).toBeEnabled();
 
-  await page.getByRole("button", { name: "就问这个问题" }).click();
-  await expect(page.getByRole("heading", { name: "确认问题，开始起卦" })).toBeVisible();
+  await page.getByRole("button", { name: "继续起卦" }).click();
+  await expect(page.getByRole("heading", { name: "开始起卦", exact: true })).toBeVisible();
   await expect(page.getByText("排盘与判断依据不会由 AI 改写", { exact: true })).toBeVisible();
   await expect(page.getByText("更换起卦方式", { exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: "我自己逐爻摇" })).toBeHidden();
-  await page.getByRole("button", { name: "开始起卦", exact: true }).click();
-  await expect(page.getByText("起卦已完成", { exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: "生成我的六爻报告" })).toBeEnabled();
+  await page.getByRole("button", { name: "开始起卦并查看报告", exact: true }).click();
+  await page.waitForURL(/\/reports\/ly_/);
+  await expect(page.getByTestId("report-page")).toBeVisible();
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);
@@ -250,12 +252,13 @@ test("Guided and Professional report DOM does not leak internal implementation f
   test.skip(testInfo.project.name !== "desktop", "desktop experience leakage coverage");
   const id = await createReport(request);
   await page.goto(`/reports/${id}`);
-  await expect(page.getByRole("heading", { name: "总体判断" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "主要支持", exact: true })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "主要阻碍", exact: true })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "为什么这样判断" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "查看依据" })).toBeVisible();
+  await expect(page.getByText("你的问题", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "体验验收是否能看懂？" })).toBeVisible();
+  await expect(page.locator(".report-answer-overview")).toBeVisible();
+  await expect(page.getByRole("button", { name: "生成针对问题的解读" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "查看专业依据" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "专业依据" })).toBeVisible();
+  await page.locator(".report-layer-disclosure > summary").first().click();
   await page.locator(".ly-advanced-disclosure > summary").click();
   await expect(page.locator('[data-visual-id="VIS-LY-011"]')).toBeVisible();
   await expect(page.locator('[data-visual-id="VIS-LY-012"]')).toBeVisible();
@@ -291,8 +294,9 @@ test("Mobile report keeps conclusion and next action reachable without overflow"
   test.skip(!testInfo.project.name.startsWith("mobile"), "mobile experience coverage");
   const id = await createReport(request);
   await page.goto(`/reports/${id}`);
-  await expect(page.getByRole("heading", { name: "总体判断" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "查看依据" })).toBeVisible();
+  await expect(page.getByText("你的问题", { exact: true })).toBeVisible();
+  await expect(page.locator(".report-answer-overview")).toBeVisible();
+  await expect(page.getByRole("link", { name: "查看专业依据" })).toBeVisible();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(2);
 });

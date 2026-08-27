@@ -58,6 +58,8 @@ test("AIReportInput contains only grounded chart, calendar and matched evidence 
   assert.ok(input.overallAssessmentFacts.overallState);
   assert.ok(input.conflictResolutionFacts.conflictState);
   assert.ok(input.actionGuidanceFacts.items.length > 0);
+  assert.equal(input.chartFacts.lineFacts.length, 6);
+  assert.ok(input.chartFacts.lineFacts.some((line) => line.moving));
   assert.ok(input.deterministicJudgmentSignature.overallState);
   assert.ok(!("candidateRulePool" in input));
   assert.ok(input.matchedRuleFindings.every((finding) => finding.id.startsWith("rule:")));
@@ -74,7 +76,7 @@ test("DeepSeek provider uses the official Responses endpoint and minimizes provi
   assert.equal(payload.reportId, undefined);
   assert.equal(payload.inputHash, undefined);
   assert.equal(payload.questionContext.questionDigest, undefined);
-  assert.equal(payload.versions.promptVersion, "liuyao-report-v2");
+  assert.equal(payload.versions.promptVersion, "liuyao-report-v3");
   assert.doesNotMatch(JSON.stringify(payload), /空亡|回头生|月建|日辰|同支日/u);
 });
 
@@ -88,6 +90,10 @@ test("valid AI output passes schema, fidelity and safety validation", async () =
   const output = await validOutput(input);
   const validated = validateAIReport(output, input);
   assert.equal(validated.schemaVersion, "AI_REPORT_V1");
+  assert.match(validated.questionResponse.focus, /P2 AI 报告是否可信/u);
+  assert.match(validated.hexagramReading.original, new RegExp(input.chartFacts.originalHexagram, "u"));
+  assert.ok(validated.keyElements.length >= 2);
+  assert.ok(validated.realityChecks.length >= 2);
 });
 
 test("schema validator rejects missing field, illegal enum and illegal evidenceRef", async () => {

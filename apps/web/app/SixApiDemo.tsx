@@ -31,6 +31,13 @@ const lineOptions = [
 
 type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
 
+type CastSubmission = {
+  mode: LiuyaoCastMode;
+  coins?: number[][];
+  digitalCoins?: string[][];
+  values?: number[];
+};
+
 const scenarios = [
   {
     id: "career:job_search",
@@ -266,23 +273,44 @@ export function SixApiDemo() {
     setReport(null);
   }
 
-  function addCoinLine() {
-    if (coinLines.length >= 6) return;
-    setCoinLines([...coinLines, tossCoins()]);
-    setReport(null);
+  function moveToStep(id: string, focusSelector?: string) {
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (focusSelector) {
+        window.setTimeout(() => document.querySelector<HTMLElement>(focusSelector)?.focus({ preventScroll: true }), 360);
+      }
+    }, 40);
   }
 
-  function autoCastSixLines() {
-    setCoinLines(Array.from({ length: 6 }, tossCoins));
+  function chooseScenario(nextScenarioId: string) {
+    setScenarioId(nextScenarioId);
+    setReport(null);
+    moveToStep("question-step", "#question-input");
+  }
+
+  function addCoinLine() {
+    if (coinLines.length >= 6) return;
+    const nextLines = [...coinLines, tossCoins()];
+    setCoinLines(nextLines);
+    setReport(null);
+    if (nextLines.length === 6) void generateReport({ mode: "coins", coins: nextLines });
+  }
+
+  function autoCastSixLines(generateAfterCast = false) {
+    const nextLines = Array.from({ length: 6 }, tossCoins);
+    setCoinLines(nextLines);
     setLiuyaoCastMode("auto");
     setReport(null);
+    if (generateAfterCast) void generateReport({ mode: "auto", coins: nextLines });
   }
 
   function startDigitalCoins() {
+    const nextLines = autoDigitalCoinLines();
     setDigitalCoinsStarted(true);
-    setDigitalCoinLines(autoDigitalCoinLines());
+    setDigitalCoinLines(nextLines);
     setError("");
     setReport(null);
+    void generateReport({ mode: "digitalCoins", digitalCoins: nextLines });
   }
 
   function resetDigitalCoins() {
@@ -291,24 +319,29 @@ export function SixApiDemo() {
     setReport(null);
   }
 
-  async function createReport(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function generateReport(submission?: CastSubmission) {
+    if (loading) return;
     setLoading(true);
     setError("");
 
-    if (!canGenerate) {
+    if (!question.trim() || (!submission && !canGenerate)) {
       setLoading(false);
       setError("请先填写问题并完成六爻生成。");
       return;
     }
 
+    const submissionMode = submission?.mode ?? liuyaoCastMode;
+    const submissionCoins = submission?.coins ?? coinLines;
+    const submissionDigitalCoins = submission?.digitalCoins ?? digitalCoinLines;
+    const submissionValues = submission?.values ?? castValues;
+
     const payload = {
       question,
       topic: scenario.topic,
       subtype: scenario.subtype,
-      ...(liuyaoCastMode === "manual" ? { values: castValues } : {}),
-      ...(liuyaoCastMode === "digitalCoins" ? { coins: digitalCoinLines.map((line) => line.map(Number)) } : {}),
-      ...(liuyaoCastMode === "coins" || liuyaoCastMode === "auto" ? { coins: coinLines } : {}),
+      ...(submissionMode === "manual" ? { values: submissionValues } : {}),
+      ...(submissionMode === "digitalCoins" ? { coins: submissionDigitalCoins.map((line) => line.map(Number)) } : {}),
+      ...(submissionMode === "coins" || submissionMode === "auto" ? { coins: submissionCoins } : {}),
       calendar: { timezone: "Asia/Shanghai" }
     };
 
@@ -323,11 +356,17 @@ export function SixApiDemo() {
       const experience = await fetch(`${apiBase()}/reports/${encodeURIComponent(createdJson.id)}/experience`);
       if (!experience.ok) throw new Error(await readError(experience));
       setReport((await experience.json()) as ExperienceResponse);
+      window.location.assign(`/reports/${encodeURIComponent(createdJson.id)}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法连接 API");
     } finally {
       setLoading(false);
     }
+  }
+
+  function createReport(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    void generateReport();
   }
 
   return (
@@ -387,10 +426,7 @@ export function SixApiDemo() {
                       type="button"
                       className={`scenario-option scenario-${item.topic}${active ? " active" : ""}`}
                       key={item.id}
-                      onClick={() => {
-                        setScenarioId(item.id);
-                        setReport(null);
-                      }}
+                      onClick={() => chooseScenario(item.id)}
                       role="radio"
                       aria-checked={active}
                     >
@@ -407,28 +443,6 @@ export function SixApiDemo() {
             </div>
           </fieldset>
 
-          <div className="scenario-selection-summary" aria-live="polite">
-            <div className="selection-summary-title">
-              <span className={`scenario-icon scenario-${scenario.topic}`}><ScenarioIcon icon={scenario.icon} /></span>
-              <div>
-                <span>已选择</span>
-                <h3>{scenario.label}</h3>
-              </div>
-            </div>
-            <div className="scenario-answer-grid">
-              {scenario.reportPreview.map((item, index) => (
-                <div key={item}>
-                  <span>{["先看方向", "再找卡点", "落到行动"][index]}</span>
-                  <strong>{item}</strong>
-                </div>
-              ))}
-            </div>
-            <p className="scenario-boundary"><ShieldCheck aria-hidden="true" size={18} />{scenario.boundary}</p>
-            <button type="button" className="continue-button" onClick={() => document.getElementById("question-step")?.scrollIntoView({ behavior: "smooth" })}>
-              按这个场景继续
-              <ArrowRight aria-hidden="true" size={17} />
-            </button>
-          </div>
         </section>
 
         <section className="journey-screen question-step" id="question-step">
@@ -447,6 +461,7 @@ export function SixApiDemo() {
           <label className="question-box prominent">
             <span>你的问题</span>
             <textarea
+              id="question-input"
               value={question}
               onChange={(event) => setQuestion(event.target.value)}
               maxLength={500}
@@ -471,9 +486,9 @@ export function SixApiDemo() {
             type="button"
             className="continue-button"
             disabled={!question.trim()}
-            onClick={() => document.getElementById("cast-step")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => moveToStep("cast-step")}
           >
-            就问这个问题
+            继续起卦
             <ArrowRight aria-hidden="true" size={17} />
           </button>
         </section>
@@ -482,8 +497,8 @@ export function SixApiDemo() {
           <header className="journey-heading compact">
             <div>
               <span className="journey-step">第 3 步</span>
-              <h2>确认问题，开始起卦</h2>
-              <p>确认这是你此刻最想了解的问题，然后开始起卦。</p>
+              <h2>开始起卦</h2>
+              <p>默认由系统一次完成六爻，完成后直接打开你的报告。</p>
             </div>
             <div className="question-confirmation">
               <FileSearch aria-hidden="true" size={18} />
@@ -598,10 +613,10 @@ export function SixApiDemo() {
                   <div className="ritual-panel">
                     <div>
                       <strong>数字铜钱法</strong>
-                      <span>点击开始后，系统会一次生成六爻铜钱面；你只需确认问题，再生成报告。</span>
+                      <span>系统会一次生成六爻铜钱面，并直接整理报告。</span>
                     </div>
-                    <button type="button" onClick={startDigitalCoins}>
-                      开始起卦
+                    <button type="button" disabled={loading} onClick={startDigitalCoins}>
+                      {loading ? "正在生成报告" : "开始起卦并查看报告"}
                     </button>
                   </div>
                 )}
@@ -612,9 +627,11 @@ export function SixApiDemo() {
                   <div className="ritual-panel">
                     <div>
                       <strong>准备好了就开始</strong>
-                      <span>系统会一次完成六爻，并保留每一爻的铜钱面。</span>
+                      <span>系统会一次完成六爻，保留铜钱面并直接整理报告。</span>
                     </div>
-                    <button type="button" onClick={autoCastSixLines}>开始起卦</button>
+                    <button type="button" disabled={loading} onClick={() => autoCastSixLines(true)}>
+                      {loading ? "正在生成报告" : "开始起卦并查看报告"}
+                    </button>
                   </div>
                 ) : (
                   <>
@@ -649,7 +666,7 @@ export function SixApiDemo() {
                       {liuyaoCastMode === "auto" ? (
                         <>
                           <span className="completion-badge">起卦已完成</span>
-                          <button type="button" className="tertiary-button" onClick={autoCastSixLines}>重新起卦</button>
+                          <button type="button" className="tertiary-button" onClick={() => autoCastSixLines(false)}>重新起卦</button>
                         </>
                       ) : coinLines.length >= 6 ? (
                         <span className="completion-badge">六爻已完成</span>
@@ -666,15 +683,10 @@ export function SixApiDemo() {
             )}
           </fieldset>
 
-          <div className="confirmation-strip">
-            <strong>当前进度</strong>
-            <span>{`${scenario.label} · ${question.trim() ? "问题已确认" : "等待问题"} · ${liuyaoReady ? "六爻已完成" : "等待起卦"}`}</span>
-          </div>
-
-          {canGenerate || loading ? (
+          {canGenerate && (liuyaoCastMode === "manual" || Boolean(error)) ? (
             <div className="form-actions final-actions">
               <button type="submit" disabled={loading}>
-                {loading ? "正在整理报告" : "生成我的六爻报告"}
+                {loading ? "正在整理报告" : error ? "重新生成并查看报告" : "生成并查看报告"}
               </button>
               {report ? <button type="button" className="tertiary-button" onClick={() => setReport(null)} disabled={loading}>移除当前结果</button> : null}
             </div>

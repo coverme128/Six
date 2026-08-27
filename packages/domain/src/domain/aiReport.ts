@@ -8,7 +8,7 @@ import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContex
 import { buildLiuyaoProductResultFacts, judgmentFactsSignature } from "./presentation/productResultFacts.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
-export const LIUYAO_PROMPT_VERSION = "liuyao-report-v2";
+export const LIUYAO_PROMPT_VERSION = "liuyao-report-v3";
 export const MEIHUA_PROMPT_VERSION = "meihua-report-v1";
 
 const OUTCOME_LABELS = new Set(["FAVORABLE", "MIXED", "CAUTIOUS", "UNCLEAR"]);
@@ -92,7 +92,12 @@ function plainGroundingValue(value) {
       .replace(/空亡状态/gu, "回应信号尚未稳定")
       .replace(/空亡/gu, "信号尚未稳定")
       .replace(/月建/gu, "当前阶段的外部环境")
-      .replace(/日辰/gu, "近期条件");
+      .replace(/日辰/gu, "近期条件")
+      .replace(/[子丑寅卯辰巳午未申酉戌亥]与[子丑寅卯辰巳午未申酉戌亥]同气/gu, "当前条件相互呼应")
+      .replace(/[子丑寅卯辰巳午未申酉戌亥]生扶[子丑寅卯辰巳午未申酉戌亥]/gu, "当前条件提供支持")
+      .replace(/[子丑寅卯辰巳午未申酉戌亥]生[子丑寅卯辰巳午未申酉戌亥]，自身有泄气/gu, "一方提供支持，但自身投入也会增加")
+      .replace(/[子丑寅卯辰巳午未申酉戌亥]克[子丑寅卯辰巳午未申酉戌亥]，需要主动耗力/gu, "存在制约，需要额外投入")
+      .replace(/[子丑寅卯辰巳午未申酉戌亥]泄于[子丑寅卯辰巳午未申酉戌亥]/gu, "变化后力量有所分散");
   }
   if (Array.isArray(value)) return value.map(plainGroundingValue);
   if (value && typeof value === "object") {
@@ -175,7 +180,7 @@ function knowledgeReferences(result) {
 
 function liuyaoChartFacts(chart) {
   return {
-    chartFactIds: ["chart:original_hexagram", "chart:changed_hexagram", "chart:moving_lines", "chart:world_response"],
+    chartFactIds: ["chart:original_hexagram", "chart:changed_hexagram", "chart:moving_lines", "chart:world_response", "chart:line_facts"],
     originalHexagram: chart.originalHexagram.name_zh,
     changedHexagram: chart.changedHexagram.name_zh,
     originalHexagramCode: chart.originalHexagram.code,
@@ -185,6 +190,25 @@ function liuyaoChartFacts(chart) {
     responseLine: chart.worldResponse.responseLine,
     methodCode: chart.methodCode,
     yongshen: chart.topic ? { topic: chart.topic, subtype: chart.subtype } : null,
+    lineFacts: (chart.lines ?? []).map((line) => ({
+      position: line.position,
+      yinYang: line.originalBit === "1" ? "阳" : "阴",
+      moving: Boolean(line.moving),
+      sixRelationName: line.sixRelationName,
+      branchName: line.branchName,
+      elementName: line.elementName,
+      isWorld: Boolean(line.isWorld),
+      isResponse: Boolean(line.isResponse),
+      signalStable: !line.isVoid,
+      monthInfluence: line.monthInfluence?.text ?? null,
+      dayInfluence: line.dayInfluence?.text ?? null,
+      changed: line.moving ? {
+        sixRelationName: line.changed?.sixRelationName ?? null,
+        branchName: line.changed?.branchName ?? null,
+        elementName: line.changed?.elementName ?? null,
+        influence: line.changed?.returnInfluence?.text ?? null,
+      } : null,
+    })),
   };
 }
 
@@ -334,6 +358,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     resolvedTopicRoles: input.resolvedTopicRoles,
     versions: input.versions,
     questionDigest: input.questionContext.questionDigest,
+    lineFacts: input.chartFacts.lineFacts,
   });
   return input;
 }
@@ -365,13 +390,35 @@ function liuyaoResponseFormat(input) {
       evidenceRefs: { type: "array", minItems: 1, items: evidenceRef },
     },
   };
+  const keyElement = {
+    type: "object",
+    additionalProperties: false,
+    required: ["title", "professionalRole", "impact", "observe", "evidenceRefs"],
+    properties: {
+      title: { type: "string" },
+      professionalRole: { type: "string" },
+      impact: { type: "string" },
+      observe: { type: "string" },
+      evidenceRefs: { type: "array", minItems: 1, items: evidenceRef },
+    },
+  };
+  const realityCheck = {
+    type: "object",
+    additionalProperties: false,
+    required: ["title", "check", "signal"],
+    properties: {
+      title: { type: "string" },
+      check: { type: "string" },
+      signal: { type: "string" },
+    },
+  };
   return {
     type: "json_schema",
     name: "liuyao_report",
     schema: {
       type: "object",
       additionalProperties: false,
-      required: ["schemaVersion", "factClaims", "summary", "currentSituation", "supportingFactors", "blockingFactors", "changeDirection", "outcomeTrend", "timingWindows", "actionSuggestions", "evidenceSummary", "limitations", "disclaimer"],
+      required: ["schemaVersion", "factClaims", "questionResponse", "hexagramReading", "keyElements", "realityChecks", "summary", "currentSituation", "supportingFactors", "blockingFactors", "changeDirection", "outcomeTrend", "timingWindows", "actionSuggestions", "evidenceSummary", "limitations", "disclaimer"],
       properties: {
         schemaVersion: { type: "string", enum: [AI_SCHEMA_VERSION] },
         factClaims: {
@@ -389,6 +436,29 @@ function liuyaoResponseFormat(input) {
             xunKong: { type: "array", const: input.calendarFacts?.xunKong ?? [], items: { type: "string" } },
           },
         },
+        questionResponse: {
+          type: "object",
+          additionalProperties: false,
+          required: ["focus", "directAnswer", "scopeNote"],
+          properties: {
+            focus: { type: "string" },
+            directAnswer: { type: "string" },
+            scopeNote: { type: "string" },
+          },
+        },
+        hexagramReading: {
+          type: "object",
+          additionalProperties: false,
+          required: ["original", "moving", "changed", "synthesis"],
+          properties: {
+            original: { type: "string" },
+            moving: { type: "string" },
+            changed: { type: "string" },
+            synthesis: { type: "string" },
+          },
+        },
+        keyElements: { type: "array", minItems: 2, maxItems: 4, items: keyElement },
+        realityChecks: { type: "array", minItems: 2, maxItems: 4, items: realityCheck },
         summary: { type: "string" },
         currentSituation: { type: "string" },
         supportingFactors: { type: "array", maxItems: 3, items: factor },
@@ -454,6 +524,9 @@ function evidenceRefsFromOutput(output) {
   for (const item of [...output.supportingFactors, ...output.blockingFactors]) {
     refs.push(...item.evidenceRefs);
   }
+  for (const item of output.keyElements ?? []) {
+    if (typeof item === "object" && Array.isArray(item.evidenceRefs)) refs.push(...item.evidenceRefs);
+  }
   for (const item of output.evidenceSummary) {
     assertValid(item && typeof item.text === "string" && item.text.trim().length > 0, "SCHEMA_FIELD_MISSING", "evidence summary text is required.");
     assertValid(Array.isArray(item.evidenceRefs), "SCHEMA_FIELD_MISSING", "evidence summary refs must be an array.");
@@ -490,6 +563,29 @@ export function validateAIReportSchema(raw, input) {
     assertValid(typeof output[key] === "string" && output[key].trim().length > 0, "SCHEMA_FIELD_MISSING", `AI output missing ${key}.`);
   }
   assertValid(output.factClaims && typeof output.factClaims === "object", "SCHEMA_FIELD_MISSING", "AI output missing factClaims.");
+  if (input.reportType === "LIUYAO") {
+    assertValid(output.questionResponse && typeof output.questionResponse === "object", "SCHEMA_FIELD_MISSING", "AI output missing questionResponse.");
+    assertValid(output.hexagramReading && typeof output.hexagramReading === "object", "SCHEMA_FIELD_MISSING", "AI output missing hexagramReading.");
+    for (const key of ["focus", "directAnswer", "scopeNote"]) {
+      assertValid(typeof output.questionResponse[key] === "string" && output.questionResponse[key].trim().length > 0, "SCHEMA_FIELD_MISSING", `questionResponse.${key} is required.`);
+    }
+    for (const key of ["original", "moving", "changed", "synthesis"]) {
+      assertValid(typeof output.hexagramReading[key] === "string" && output.hexagramReading[key].trim().length > 0, "SCHEMA_FIELD_MISSING", `hexagramReading.${key} is required.`);
+    }
+    assertValid(Array.isArray(output.keyElements) && output.keyElements.length >= 2, "SCHEMA_FIELD_MISSING", "keyElements must include at least two items.");
+    assertValid(Array.isArray(output.realityChecks) && output.realityChecks.length >= 2, "SCHEMA_FIELD_MISSING", "realityChecks must include at least two items.");
+    for (const item of output.keyElements) {
+      for (const key of ["title", "professionalRole", "impact", "observe"]) {
+        assertValid(typeof item[key] === "string" && item[key].trim().length > 0, "SCHEMA_FIELD_MISSING", `keyElements.${key} is required.`);
+      }
+      assertValid(Array.isArray(item.evidenceRefs) && item.evidenceRefs.length > 0, "EVIDENCE_REF_MISSING", "key element evidenceRefs are required.");
+    }
+    for (const item of output.realityChecks) {
+      for (const key of ["title", "check", "signal"]) {
+        assertValid(typeof item[key] === "string" && item[key].trim().length > 0, "SCHEMA_FIELD_MISSING", `realityChecks.${key} is required.`);
+      }
+    }
+  }
   assertValid(Array.isArray(output.supportingFactors), "SCHEMA_FIELD_MISSING", "supportingFactors must be an array.");
   assertValid(Array.isArray(output.blockingFactors), "SCHEMA_FIELD_MISSING", "blockingFactors must be an array.");
   assertValid(output.outcomeTrend && OUTCOME_LABELS.has(output.outcomeTrend.label), "SCHEMA_ENUM_INVALID", "outcomeTrend.label is invalid.");
@@ -570,6 +666,10 @@ export function validateAIReportSafety(output) {
 
 export function validateAIPlainLanguage(output) {
   const userFacingText = textBlob({
+    questionResponse: output.questionResponse,
+    hexagramReading: output.hexagramReading,
+    keyElements: output.keyElements,
+    realityChecks: output.realityChecks,
     summary: output.summary,
     currentSituation: output.currentSituation,
     supportingFactors: output.supportingFactors,
@@ -591,6 +691,106 @@ export function validateAIReport(raw, input) {
   validateAIReportFidelity(output, input);
   validateAIReportSafety(output);
   return output;
+}
+
+function deterministicDecisionAnswer(input, overall) {
+  const state = overall?.overallState;
+  if (state === "FAVORABLE") return "当前可以继续推进，但仍要先核对关键条件，不把有利信号当成结果承诺。";
+  if (state === "CAUTIOUS") return "当前更适合先补条件和降低投入，等主要阻碍出现实质变化后再决定是否推进。";
+  if (state === "TRANSITIONAL" || state === "MIXED") return "可以继续了解并小步验证，但暂不适合只凭“像是机会”就直接重投入。";
+  return "当前信息不足以支持一次性决定，先补齐对方承诺、责任边界和现实资源。";
+}
+
+function roleObservation(label = "") {
+  if (label.includes("官鬼")) return "核对机会是否已经转成明确的职责、验收标准和风险边界。";
+  if (label.includes("父母")) return "核对书面约定、合同手续、交付范围和信息是否完整。";
+  if (label.includes("世爻")) return "观察自己能否稳定承担时间、压力和持续投入，而不是只看一时情绪。";
+  if (label.includes("应爻")) return "观察对方是否给出明确资源、权限、时间安排和持续行动。";
+  return "把这个因素转成可以从沟通、文件或行动中核实的现实信号。";
+}
+
+function contextualRoleTitle(input, role) {
+  const question = input.questionContext?.question ?? "";
+  const label = role?.label ?? role?.professionalRole ?? "";
+  const isProject = /项目|合作|参与|合伙|政务系统/u.test(question);
+  if (isProject && label.includes("官鬼")) return "项目机会、责任和约束";
+  if (isProject && label.includes("父母")) return "合作约定、交付范围和手续";
+  if (isProject && label.includes("世爻")) return "你的投入能力与承受边界";
+  if (isProject && label.includes("应爻")) return "朋友及项目方的实际回应";
+  return String(role?.practicalMeaning ?? role?.meaning ?? label ?? "关键因素").replace(/[。；]+$/u, "");
+}
+
+function contextualFactorText(input, kind, fallback) {
+  const question = input.questionContext?.question ?? "";
+  if (/项目|合作|参与|合伙|政务系统/u.test(question)) {
+    return kind === "support"
+      ? "你并非完全缺乏参与基础，这个项目值得继续了解和小步验证，但还不能据此判断已经适合重投入。"
+      : "外部回应和合作条件仍会消耗资源，需要先把职责、交付、权限和投入边界说清楚。";
+  }
+  return fallback;
+}
+
+function roleLine(input, role) {
+  const positions = [
+    ...(role?.linePositions ?? []),
+    ...(role?.lines ?? []).map((line) => line.position),
+  ];
+  return (input.chartFacts?.lineFacts ?? []).find((line) => positions.includes(line.position));
+}
+
+function deterministicKeyElements(input, support, blocking) {
+  const roles = input.resolvedTopicRoles?.roles ?? [];
+  const fallbackRefs = [support?.id, blocking?.id, "chart:line_facts"].filter(Boolean);
+  const elements = roles.slice(0, 4).map((role, index) => {
+    const line = roleLine(input, role);
+    const influenceParts = [...new Set(plainGroundingValue([
+      line?.monthInfluence,
+      line?.dayInfluence,
+      line?.changed?.influence,
+    ].filter(Boolean)).filter(Boolean))];
+    const influence = influenceParts.join("；");
+    const ref = role.label?.includes("世爻") || role.label?.includes("应爻")
+      ? "chart:world_response"
+      : line?.moving ? "chart:moving_lines" : fallbackRefs[index % fallbackRefs.length] ?? "chart:line_facts";
+    return {
+      title: contextualRoleTitle(input, role),
+      professionalRole: role.label ?? role.professionalRole ?? "盘面角色",
+      impact: influence || `这个角色用于理解${role.practicalMeaning ?? role.meaning ?? "本次问题中的关键条件"}，不能单独等同于吉凶。`,
+      observe: roleObservation(role.label),
+      evidenceRefs: [ref],
+    };
+  });
+  if (elements.length >= 2) return elements;
+  return [
+    {
+      title: "你能主动调整的条件",
+      professionalRole: "主体位置",
+      impact: "报告会优先区分你能控制的投入与外部条件。",
+      observe: "确认自己的时间、资源和承受边界。",
+      evidenceRefs: ["chart:world_response"],
+    },
+    {
+      title: "外部回应与事情进展",
+      professionalRole: "相对方位置",
+      impact: "外部回应是否稳定，会影响这件事能否继续推进。",
+      observe: "以对方明确回复和实际行动为准。",
+      evidenceRefs: ["chart:world_response"],
+    },
+  ];
+}
+
+function deterministicRealityChecks(input) {
+  const roles = input.resolvedTopicRoles?.roles ?? [];
+  const checks = roles.slice(0, 3).map((role) => ({
+    title: contextualRoleTitle(input, role),
+    check: roleObservation(role.label),
+    signal: "以明确回复、书面约定、已投入资源或实际行动为准。",
+  }));
+  if (checks.length >= 2) return checks;
+  return [
+    { title: "对方承诺", check: "确认对方给出的资源、权限和时间安排是否具体。", signal: "以明确回复或已发生的行动为准。" },
+    { title: "投入边界", check: "确认自己需要承担的时间、成本和责任上限。", signal: "以可接受的最小投入方案为准。" },
+  ];
 }
 
 export class DeterministicReportProvider {
@@ -625,19 +825,50 @@ export class DeterministicReportProvider {
     const blocking = input.aggregatedEvidence.blockingForces[0] ?? input.matchedRuleFindings[1] ?? support;
     const overall = input.overallAssessmentFacts;
     const actions = input.actionGuidanceFacts?.items ?? ["先处理可验证的阻碍条件。", "把报告作为辅助参考，不替代现实决策。"];
+    const topic = input.resolvedTopicRoles?.displayName ?? input.questionContext?.topicCode ?? "当前问题";
+    const moving = (input.chartFacts?.lineFacts ?? []).filter((line) => line.moving);
+    const movingText = moving.length
+      ? moving.map((line) => `第 ${line.position} 爻从“${line.sixRelationName ?? "当前角色"}”发生变化${line.changed?.sixRelationName ? `，转向“${line.changed.sixRelationName}”` : ""}`).join("；")
+      : "本次没有明显动爻，变化方向需要更多现实信号确认";
+    const supportText = contextualFactorText(input, "support", plainGroundingValue(
+      input.resolvedFindings?.find((item) => item.evidenceRef === support?.id)?.practicalMeaning
+      ?? support?.summary
+      ?? "当前存在可利用的支持条件。",
+    ));
+    const blockingText = contextualFactorText(input, "blocking", plainGroundingValue(
+      input.resolvedFindings?.find((item) => item.evidenceRef === blocking?.id)?.practicalMeaning
+      ?? blocking?.summary
+      ?? "当前也存在需要先处理的制约条件。",
+    ));
+    const liuyaoExplanation = input.reportType === "LIUYAO" ? {
+      questionResponse: {
+        focus: input.questionContext?.question || "本次具体问题",
+        directAnswer: deterministicDecisionAnswer(input, overall),
+        scopeNote: `本次系统按“${topic}”口径组织盘面。${input.resolvedTopicRoles?.clarificationTriggers?.[0] ?? "如果实际决定与该口径不同，应先重新确认问题重点。"}`,
+      },
+      hexagramReading: {
+        original: `本卦“${input.chartFacts.originalHexagram}”是这次判断的当前起点。它不单独代表适合或不适合，需要结合本次问题中的关键角色一起看。`,
+        moving: `${movingText}。这说明变化来自具体环节，不应只把卦名变化理解成简单的好坏转换。`,
+        changed: `变卦“${input.chartFacts.changedHexagram}”表示上述变化发生后需要继续观察的结构，不代表结果已经发生。`,
+        synthesis: `从“${input.chartFacts.originalHexagram}”到“${input.chartFacts.changedHexagram}”，重点是核实动爻对应的现实变化是否真正出现。`,
+      },
+      keyElements: deterministicKeyElements(input, support, blocking),
+      realityChecks: deterministicRealityChecks(input),
+    } : {};
     return {
       schemaVersion: AI_SCHEMA_VERSION,
       factClaims,
+      ...liuyaoExplanation,
       summary: overall?.summary ?? `${input.chartFacts.originalHexagram}之${input.chartFacts.changedHexagram}，以已命中的证据谨慎判断。`,
       currentSituation: overall?.baseStateText ?? "当前解读只基于排盘事实、CAL_STD_V1 历法事实和已命中的公开证据。",
-      supportingFactors: support ? [{ text: "现有依据中存在可利用的支持条件，可结合现实行动继续验证。", evidenceRefs: [support.id] }] : [],
-      blockingFactors: blocking ? [{ text: "现有依据中也有需要先处理的制约条件，不宜忽略。", evidenceRefs: [blocking.id] }] : [],
+      supportingFactors: support ? [{ text: supportText, evidenceRefs: [support.id] }] : [],
+      blockingFactors: blocking ? [{ text: blockingText, evidenceRefs: [blocking.id] }] : [],
       changeDirection: overall?.dynamicDirectionText ?? "变化方向以动爻、体用或已列证据为准，不作保证性判断。",
       outcomeTrend: { label: aiOutcomeLabel(overall?.overallState), text: overall?.headline ?? "支持与阻碍需要并看，结果仍取决于现实行动和后续条件。" },
       timingWindows: timing ? [{ text: "当前只提供候选观察窗口，仍需结合现实变化复核。", candidateRef: timing.id }] : [],
       actionSuggestions: actions,
-      evidenceSummary: support ? [{ text: "核心证据来自已命中规则。", evidenceRefs: [support.id] }] : [],
-      limitations: ["这是传统文化解释，不承诺结果。"],
+      evidenceSummary: support ? [{ text: supportText, evidenceRefs: [support.id] }] : [],
+      limitations: ["盘面只能整理当前条件和变化线索，最终是否适合仍要由现实投入、合作边界和对方行动验证。"],
       disclaimer: "本报告仅供参考，不构成医疗、法律或投资建议。",
     };
   }
@@ -655,7 +886,7 @@ export class OpenAIReportProvider {
   }
 
   promptFor(input) {
-    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v2.md" : "prompts/meihua-report-v1.md";
+    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v3.md" : "prompts/meihua-report-v1.md";
     return readFileSync(resolve(this.rootDir, file), "utf8");
   }
 
@@ -781,7 +1012,11 @@ function fallbackBundle({ result, type, input, reason, provider, model }) {
 const inFlight = new Map();
 
 export async function generateGroundedAIReport({ result, type, provider = providerFromEnv(), language = "zh-CN" }) {
-  if (result.aiReportBundle?.validationStatus === "VALID") return { ...result.aiReportBundle, reportSource: "CACHE_REUSE", reused: true };
+  if (
+    result.aiReportBundle?.validationStatus === "VALID"
+    && result.aiReportBundle?.aiSchemaVersion === AI_SCHEMA_VERSION
+    && result.aiReportBundle?.promptVersion === (type === "liuyao" ? LIUYAO_PROMPT_VERSION : MEIHUA_PROMPT_VERSION)
+  ) return { ...result.aiReportBundle, reportSource: "CACHE_REUSE", reused: true };
   const input = buildAIReportInput({ result, type, language });
   const cacheKey = `${input.reportId}:${input.inputHash}:${provider.provider}:${provider.model}`;
   if (inFlight.has(cacheKey)) return inFlight.get(cacheKey);
