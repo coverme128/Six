@@ -5,7 +5,7 @@
     <rect x="22" y="28" width="670" height="744" rx="12" fill="#DAD4C8" opacity=".55"/>
     <rect width="670" height="744" rx="10" fill="#FFFCF6" stroke="#CFC5B6" stroke-width="2"/>
     <rect width="670" height="72" rx="10" fill="#171717"/><rect y="62" width="670" height="10" fill="#171717"/>
-    <text x="34" y="44" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FBF8F1">六爻问题分析报告</text><text x="635" y="44" text-anchor="end" font-family="system-ui,sans-serif" font-size="14" fill="#CFC5B6">事实已核对</text>
+    <text x="34" y="44" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FBF8F1">六爻问题分析报告</text><text x="635" y="44" text-anchor="end" font-family="system-ui,sans-serif" font-size="14" fill="#CFC5B6">历史版式示意</text>
     <text x="34" y="116" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#496F63">总体判断</text>
     <text x="34" y="158" font-family="system-ui,sans-serif" font-size="30" font-weight="760" fill="#171717">可以继续，但先验证关键条件</text>
     <text x="34" y="194" font-family="system-ui,sans-serif" font-size="17" fill="#5D5A54">当前有推进基础，节奏不宜过快。</text>

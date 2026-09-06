@@ -1,59 +1,53 @@
 import type { Metadata } from "next";
 import { AppNav } from "./AppNav";
 import { SixApiDemo } from "./SixApiDemo";
-import { ArrowDown, BookOpen, FileCheck2, Route, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
+import example from "./example/report.json";
 
 export const metadata: Metadata = {
-  title: "六爻问题分析｜看清方向、阻碍与下一步",
-  description: "从一个具体问题出发，得到确定性排盘、场景化判断、现实行动建议与可复核依据。",
+  title: "六爻问题分析｜从你的问题开始",
+  description: "输入你关心的问题，获得六爻排盘与针对问题的 AI 解读。结合卦象依据，梳理需要现实核验的条件。",
   alternates: { canonical: "/" },
-  openGraph: {
-    title: "六爻问题分析｜把一件难事看清方向与下一步",
-    description: "先得到容易理解的判断，再按需查看盘面与依据。",
-    images: [{ url: "/liuyao-visual-system/product/home-report-proof.svg", alt: "六爻可复核报告结果预览" }],
-  },
 };
 
 export default function HomePage() {
+  const board = example.visualization.viewModels["VIS-LY-001"];
   return (
-    <main className="shell">
+    <main className="shell home-shell">
       <AppNav current="workbench" />
-
-      <section className="product-hero">
-        <div className="product-hero-copy">
-          <p className="eyebrow">六爻问题分析</p>
-          <h1>把一件难事，看清方向与下一步</h1>
-          <p className="hero-lead">从你真正关心的问题出发，先得到容易理解的判断，再按需查看盘面与依据。</p>
-          <div className="hero-actions">
-            <a className="primary-link" href="#question-step">
-              从我的问题开始
-              <ArrowDown aria-hidden="true" size={17} />
-            </a>
-            <a className="secondary-link" href="/content">
-              <BookOpen aria-hidden="true" size={17} />
-              我想先学习
-            </a>
-          </div>
-          <div className="hero-outcomes" aria-label="你会先得到什么">
-            <div>
-              <Route aria-hidden="true" size={20} />
-              <span><strong>方向</strong>继续、调整，还是先观察</span>
-            </div>
-            <div>
-              <ShieldCheck aria-hidden="true" size={20} />
-              <span><strong>关键点</strong>哪里在支持，哪里最容易卡住</span>
-            </div>
-            <div>
-              <FileCheck2 aria-hidden="true" size={20} />
-              <span><strong>下一步</strong>现在最值得验证和行动的事</span>
-            </div>
-          </div>
-          <p className="hero-assurance">确定性排盘 · 判断有依据 · AI 只负责解释</p>
-        </div>
-        <img className="product-hero-mobile-proof" src="/liuyao-visual-system/product/home-report-proof-strip.svg" alt="报告先展示总体判断，再区分支持、阻碍和下一步" />
-      </section>
-
+      <header className="home-intro">
+        <h1>六爻问题分析</h1>
+        <p>把正在犹豫的事说出来，结合卦象看清依据与下一步。</p>
+      </header>
       <SixApiDemo />
+      <section className="home-report-sample" aria-labelledby="sample-title">
+        <header className="home-section-heading">
+          <div><p className="eyebrow">报告示例 · 演示问题，真实模型生成</p><h2 id="sample-title">先看一份完整解读</h2></div>
+          <a href="/example">查看完整报告<ArrowRight size={18} aria-hidden="true" /></a>
+        </header>
+        <div className="home-sample-body">
+          <figure className="home-sample-chart">
+            <figcaption><strong>{board.originalHexagram}</strong><span>静卦 · 无变卦</span></figcaption>
+            <div className="home-chart-lines" aria-label="示例升卦，从上爻到初爻">
+              {board.lines.map((line) => <div key={line.position}>
+                <span>{line.label}</span><span className={`sample-line ${line.yinYang === "阴" ? "broken" : ""}`} aria-label={line.yinYang}><i />{line.yinYang === "阴" ? <i /> : null}</span>
+                <span>{line.sixRelationName}</span><b>{line.isWorld ? "世" : line.isResponse ? "应" : ""}</b>
+              </div>)}
+            </div>
+          </figure>
+          <div className="home-sample-answer">
+            <p className="sample-question">本次问题：只出资、不参与经营，今年适合入股吗？</p>
+            <h3>AI 对这个问题的回答</h3><p>{example.interpretation.questionResponse.directAnswer}</p>
+            <a href="/example#example-reasons">查看判断依据与行动建议<ArrowRight size={17} aria-hidden="true" /></a>
+            <small>这是演示问题的解读，不是对你的判断。卦象解释不代表已核实现实情况。</small>
+          </div>
+        </div>
+      </section>
+      <section className="home-learning" aria-labelledby="home-learn-title">
+        <img src="/liuyao-visual-system/editorial/final/lesson-cover/ED-LY-004-learn-lesson-cover-800x1000.png" alt="六爻学习笔记与关系图插画" width={120} height={150} loading="lazy" />
+        <div><p className="eyebrow">学习中心</p><h2 id="home-learn-title">从看懂一份卦开始</h2><p>入门教程、术语解释与报告阅读。</p><a href="/content"><BookOpen size={18} aria-hidden="true" />开始学习<ArrowRight size={18} aria-hidden="true" /></a></div>
+      </section>
+      <footer className="home-boundary">六爻属于传统文化解释，不保证现实结果，也不替代医疗、法律、财务等专业意见。</footer>
     </main>
   );
 }

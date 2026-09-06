@@ -1,7 +1,7 @@
 import { ArrowRight, Settings } from "lucide-react";
 
 type AppNavProps = {
-  current?: "workbench" | "history" | "content" | "settings" | "report";
+  current?: "workbench" | "history" | "content" | "settings" | "report" | "example";
 };
 
 const links = [
@@ -41,8 +41,8 @@ export function AppNav({ current = "workbench" }: AppNavProps) {
         >
           <Settings aria-hidden="true" size={18} />
         </a>
-        <a className="nav-primary-action" href="/#question-step">
-          开始分析
+        <a className={current === "workbench" ? "nav-example-action" : "nav-primary-action"} href={current === "workbench" ? "/example" : "/#question-step"}>
+          {current === "workbench" ? "报告示例" : "开始分析"}
           <ArrowRight aria-hidden="true" size={17} />
         </a>
       </div>

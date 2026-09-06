@@ -12,7 +12,6 @@ import {
   Handshake,
   HeartHandshake,
   HeartPulse,
-  History,
   House,
   Scale,
   Search,
@@ -76,7 +75,7 @@ const scenarios = [
     hint: "合作方、合同、项目推进",
     icon: Handshake,
     placeholder: "例如：这个合作方是否值得继续深入推进？",
-    examples: ["这个合作方值得继续深入推进吗？", "这个项目接下来最可能卡在哪里？"],
+    examples: ["这个项目合作值得继续参与吗？", "今年是否适合成立公司，自己负责经营？"],
     focus: ["对方状态", "合作阻力", "项目稳定性"],
     reportPreview: ["合作有没有推进基础", "双方可能卡在哪里", "下一步怎样验证诚意"],
     boundary: "不替代合同审查，重点辅助判断合作节奏和风险。"
@@ -90,7 +89,7 @@ const scenarios = [
     hint: "关系状态、对方态度",
     icon: HeartHandshake,
     placeholder: "例如：这段关系接下来是否适合继续推进？",
-    examples: ["这段关系接下来适合继续推进吗？", "我们最近反复拉扯的原因是什么？"],
+    examples: ["这段恋爱关系适合继续推进吗？", "我与前任现在适合尝试复合吗？", "我与恋人最近反复争执，该如何沟通？"],
     focus: ["双方状态", "互动阻力", "关系变化"],
     reportPreview: ["关系正在靠近还是疏远", "互动为什么反复或受阻", "现在适合沟通还是观察"],
     boundary: "不替你决定关系，只帮助拆解当下互动结构。"
@@ -185,6 +184,16 @@ function scenarioById(id: string) {
   return scenarios.find((item) => item.id === id) ?? scenarios[0]!;
 }
 
+const coreScenes = [
+  { id: "relationship", label: "感情关系", icon: HeartHandshake, scenario: "relationship:relationship_stability" },
+  { id: "career", label: "工作事业", icon: BriefcaseBusiness, scenario: "career:job_search" },
+  { id: "business", label: "合作创业", icon: Handshake, scenario: "business:partnership" },
+  { id: "wealth", label: "财务收支", icon: WalletCards, scenario: "wealth:income" },
+  { id: "study", label: "学业考试", icon: GraduationCap, scenario: "study:exam" },
+  { id: "life", label: "生活事务", icon: House, scenario: "property:buy_house" },
+] as const;
+const lifeTopics = ["property", "travel", "goods", "legal", "health"];
+
 function ScenarioIcon({ icon: Icon }: { icon: LucideIcon }) {
   return <Icon aria-hidden="true" strokeWidth={1.8} />;
 }
@@ -218,8 +227,10 @@ function autoDigitalCoinLines() {
 export function SixApiDemo() {
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState("relationship:relationship_stability");
+  const [activeScene, setActiveScene] = useState<string | null>(null);
   const [understanding, setUnderstanding] = useState<UnderstandingResult | null>(null);
   const [clarification, setClarification] = useState("");
+  const [draftReady, setDraftReady] = useState(false);
   const [understandingBusy, setUnderstandingBusy] = useState(false);
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
   const [coinLines, setCoinLines] = useState<number[][]>([]);
@@ -242,10 +253,28 @@ export function SixApiDemo() {
     const matched = scenarios.find((item) => item.topic === requestedScenario || item.id === requestedScenario);
     if (matched) {
       setScenarioId(matched.id);
+      setActiveScene(coreScenes.find((item) => item.scenario === matched.id)?.id ?? "life");
     }
     const requestedQuestion = new URLSearchParams(window.location.search).get("question");
-    if (requestedQuestion?.trim()) setQuestion(requestedQuestion.trim().slice(0, 240));
+    if (requestedQuestion?.trim()) setQuestion(requestedQuestion.trim().slice(0, 500));
+    else {
+      try {
+        const draft = JSON.parse(sessionStorage.getItem("six-question-draft") ?? "null");
+        if (draft && Date.now() - draft.savedAt < 30 * 60 * 1000 && typeof draft.question === "string") {
+          setQuestion(draft.question.slice(0, 500));
+          if (typeof draft.clarification === "string") setClarification(draft.clarification.slice(0, 500));
+        }
+      } catch { /* Storage may be disabled; the form remains usable. */ }
+    }
+    setDraftReady(true);
   }, []);
+  useEffect(() => {
+    if (!draftReady) return;
+    try {
+      if (question.trim()) sessionStorage.setItem("six-question-draft", JSON.stringify({ question, clarification, savedAt: Date.now() }));
+      else sessionStorage.removeItem("six-question-draft");
+    } catch { /* A draft is optional, never a prerequisite for starting. */ }
+  }, [question, clarification, draftReady]);
   const castValues = useMemo(
     () => {
       if (liuyaoCastMode === "manual") return liuyaoValues.map((item) => Number(item));
@@ -380,6 +409,7 @@ export function SixApiDemo() {
       const experience = await fetch(`${apiBase()}/reports/${encodeURIComponent(createdJson.id)}/experience`);
       if (!experience.ok) throw new Error(await readError(experience));
       setReport((await experience.json()) as ExperienceResponse);
+      try { sessionStorage.removeItem("six-question-draft"); } catch { /* Ignore unavailable browser storage. */ }
       window.location.assign(`/reports/${encodeURIComponent(createdJson.id)}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法连接 API");
@@ -399,13 +429,27 @@ export function SixApiDemo() {
         <section className="journey-screen question-step" id="question-step">
           <header className="journey-heading compact">
             <div>
-              <h2>你现在最想看清哪件事？</h2>
+              <h2>你想问什么？</h2>
             </div>
-            <a className="history-link" href="/history"><History aria-hidden="true" size={17} />历史报告</a>
           </header>
 
+          <div className="home-scenes" role="group" aria-label="问题场景（可选）">
+            {coreScenes.map((item) => <button type="button" className={`home-scene scene-${item.id}`} key={item.id} aria-pressed={activeScene === item.id} aria-expanded={activeScene === item.id} aria-controls="scene-examples" disabled={understandingBusy || loading} onClick={() => {
+              const next = activeScene === item.id ? null : item.id;
+              setActiveScene(next);
+              if (next) chooseScenario(item.scenario);
+            }}><ScenarioIcon icon={item.icon} /><span>{item.label}</span></button>)}
+          </div>
+          <div id="scene-examples" className="home-scene-examples" hidden={!activeScene}>
+            {activeScene === "life" ? <label className="life-topic-select">生活事项<select value={scenarioId} disabled={understandingBusy || loading} onChange={(event) => chooseScenario(event.target.value)}>{scenarios.filter((item) => lifeTopics.includes(item.topic)).map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label> : null}
+            <div className="scene-example-list">
+              {scenario.examples.map((example) => <button type="button" key={example} disabled={understandingBusy || loading} onClick={() => { changeQuestion(example); document.getElementById("question-input")?.focus(); }}>{example}<ArrowRight size={14} aria-hidden="true" /></button>)}
+            </div>
+            {["health", "legal", "wealth"].includes(scenario.topic) ? <p className="scene-boundary">{scenario.boundary}</p> : null}
+          </div>
+
           <label className="question-box prominent">
-            <span>你的问题</span>
+            <span className="sr-only">你的问题</span>
             <textarea
               id="question-input"
               value={question}
@@ -413,27 +457,15 @@ export function SixApiDemo() {
               disabled={understandingBusy || loading}
               maxLength={500}
               rows={4}
-              placeholder="例如：今年是否适合成立公司，自己当股东？"
+              placeholder="把具体事情和你正在犹豫的决定写在这里……"
               required
               aria-describedby="question-help"
             />
-            <p id="question-help">一次聚焦一件事，例如“这段关系现在适合继续推进吗？” 不用填写姓名、电话、证件号等个人信息。</p>
+            <p id="question-help">请勿填写姓名、电话或证件号。</p>
           </label>
 
           <QuestionClarification key={understanding?.understanding.clarificationQuestion} result={understanding} busy={understandingBusy || loading} onAnswer={(answer) => void prepareQuestion(answer)} />
           {questionReady ? <p className="question-understood">{understanding?.understanding.summary}</p> : null}
-
-          <details className="question-examples">
-            <summary>看看提问示例</summary>
-            <div className="question-example-topics">
-              {scenarios.map((item) => <button type="button" key={item.id} aria-pressed={scenarioId === item.id} disabled={understandingBusy || loading} onClick={() => chooseScenario(item.id)}><ScenarioIcon icon={item.icon} />{item.label}</button>)}
-            </div>
-            <div>
-              {scenario.examples.map((example) => (
-                <button type="button" key={example} disabled={understandingBusy || loading} onClick={() => changeQuestion(example)}>{example}</button>
-              ))}
-            </div>
-          </details>
 
           <button
             type="button"
@@ -447,6 +479,7 @@ export function SixApiDemo() {
           </button>
           {!understanding || questionReady ? <button className="text-link" type="button" disabled={!question.trim() || understandingBusy || loading} onClick={() => { setLiuyaoCastMode("manual"); void prepareQuestion("", false); }}>手动摇卦或录入已有卦爻</button> : null}
           {error ? <p className="error" role="alert">{error}</p> : null}
+          <p className="question-service-boundary">AI 会结合原问题与六爻盘面解读；现实条件仍需你核实。</p>
         </section>
 
         <section className="journey-screen cast-step" id="cast-step" hidden={!questionReady || liuyaoCastMode === "auto"}>
@@ -656,7 +689,6 @@ export function SixApiDemo() {
         </div>
       ) : null}
 
-      {error ? <p className="error">{error}</p> : null}
 
       {guided ? (
         <div className="result-card">
