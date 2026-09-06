@@ -1,6 +1,8 @@
 # Liuyao Local Startup Guide
 
-Last reviewed: 2026-08-25
+Last reviewed: 2026-09-02
+
+For data inventory, backups, migration, restore verification, and rollback, see the [SIX backup and migration guide](backup-and-migration.md). Starting PostgreSQL alone does not enable persistence: the API must use its `DATABASE_URL`, and a saved report must remain readable after API restart.
 
 ## Runtime Shape
 
@@ -42,6 +44,8 @@ pnpm install
 
 Use this mode to inspect the homepage, Liuyao workbench, reports, and Learn Hub without starting Docker. The API uses its development fallback stores; queued Worker jobs and production readiness are not available. AI interpretation stays unavailable until a live provider is configured, and no simulated interpretation is generated.
 
+Reports in `memory` or `memory-fallback` mode are not database backups and may disappear when the API process exits. Preserve important in-memory reports before changing modes or restarting.
+
 Terminal 1, API:
 
 ```bash
@@ -64,7 +68,7 @@ For persistent local use, place the live-provider settings in the repository-roo
 
 ```bash
 cd /Users/goterra/Documents/Six
-cp .env.example .env
+test -e .env || cp .env.example .env
 # Fill DEEPSEEK_API_KEY in .env, then start normally.
 pnpm run dev:api
 ```
@@ -98,16 +102,16 @@ Redis:      redis://localhost:6381
 
 ### 2. Initialize the database
 
-Run this after the first infrastructure start and whenever a new migration is added:
+For a new empty development database, apply committed migrations and initialize content:
 
 ```bash
 cd /Users/goterra/Documents/Six
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:generate
-DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:migrate
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm --filter @six/database exec prisma migrate deploy --schema prisma/schema.prisma
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:seed
 ```
 
-`db:seed` is required only for first initialization or an intentional seed refresh. It does not need to run before every development session.
+`db:seed` is required only for first initialization or an intentional seed refresh. It updates existing content and must not run automatically after restoring a backup. For an existing database, back it up before applying new migrations. `pnpm db:migrate` runs `prisma migrate dev` and is reserved for authoring migrations in development; use `migrate deploy` for existing committed migrations and deployment.
 
 ### 3. Start the API
 
@@ -172,7 +176,7 @@ curl -s http://localhost:4100/api/v1/health
 curl -s http://localhost:4100/api/v1/ready
 ```
 
-In beta/production mode, `/ready` must return HTTP 503 when required PostgreSQL or Redis dependencies are unavailable. This is expected protection, not an instruction to bypass readiness.
+The current `/ready` implementation checks whether database, Redis, and AI configuration is present. In beta/production mode, missing required configuration returns HTTP 503, but a configured URL does not prove the dependency is reachable. Verify actual database access and the create-report / `persistence: prisma` / API-restart / read-same-report sequence in the backup guide.
 
 ## Docker Isolation And Conflicts
 

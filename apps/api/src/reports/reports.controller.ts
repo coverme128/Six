@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { BadRequestException, Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { z } from "zod";
 import { buildExperienceBundle } from "@six/domain/presentation";
 import { HybridContentRepository, reportContentRecommendations } from "@six/domain/content-framework";
 
@@ -195,6 +196,13 @@ export class ReportsController {
     });
   }
 
+  @Post(":id/understanding")
+  async reviseUnderstanding(@Param("id") id: string, @Body() body: unknown) {
+    const parsed = z.object({ clarification: z.string().trim().min(1).max(500), understandingToken: z.string().max(12000).optional(), revision: z.number().int().positive() }).safeParse(body);
+    if (!parsed.success) throw new BadRequestException({ code: "VALIDATION_ERROR", message: "请填写补充信息，并刷新到报告的当前版本。" });
+    return this.aiReport.reviseForReport(id, { clarification: parsed.data.clarification!, revision: parsed.data.revision!, understandingToken: parsed.data.understandingToken });
+  }
+
   @Post(":id/ai/jobs")
   async enqueueAIReport(
     @Param("id") id: string,
@@ -216,6 +224,13 @@ export class ReportsController {
       createdAt: report.createdAt,
       persistence: report.persistence,
       aiReportBundle: report.aiReportBundle,
+      questionUnderstanding: objectValue(objectValue(report.result).chart).questionProfile ?? null,
+      interpretationRevision: objectValue(report.result).interpretationRevision ?? 1,
+      interpretationHistory: (Array.isArray(objectValue(report.result).interpretationHistory) ? objectValue(report.result).interpretationHistory as any[] : []).map((item) => ({
+        revision: item.revision, recordedAt: item.recordedAt,
+        summary: item.questionProfile?.summary ?? "此前的问题理解",
+        directAnswer: item.aiReportBundle?.aiReport?.questionResponse?.directAnswer ?? null,
+      })),
       chartViewModel: publicChartView(report),
       experience: publicExperience(reportExperience(report)),
       relatedContent: (reportContentRecommendations as any)({ report, repository: contentRepository(), limit: 6 }).items

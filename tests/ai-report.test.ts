@@ -94,7 +94,7 @@ test("DeepSeek provider uses the official Responses endpoint and minimizes provi
   assert.equal(payload.reportId, undefined);
   assert.equal(payload.inputHash, undefined);
   assert.equal(payload.questionContext.questionDigest, undefined);
-  assert.equal(payload.versions.promptVersion, "liuyao-report-v8");
+  assert.equal(payload.versions.promptVersion, "liuyao-report-v9");
   assert.equal(payload.chartFacts.lineFacts.length, 6);
   assert.equal(payload.interpretationContract.mode, "QUESTION_FIRST");
   assert.equal(payload.questionContext.question, "P2 AI 报告是否可信？");
@@ -191,6 +191,18 @@ test("plain-language validator rejects unexplained jargon and invented review in
   const internalCode = await validOutput(input);
   internalCode.actionPlan.now[0].text = "根据 RESPONSE_GENERATES_WORLD 继续推进。";
   assert.throws(() => validateAIPlainLanguage(internalCode), /internal evidence/u);
+});
+
+test("question-first interpretation separates terminology quality from blocking safety gates", async () => {
+  const input = buildAIReportInput({ result: liuyaoResult(), type: "liuyao" });
+  const output = await validOutput(input);
+  output.hexagramReading.original = "世爻表示本次观察中的主体位置，不能据此断言你的现实状况。";
+  output.keyJudgments[0].plainInterpretation = "空亡是传统盘面状态，不证明合同没有落实，应核对书面约定。";
+  const warnings: any[] = [];
+  assert.doesNotThrow(() => validateAIPlainLanguage(output, { questionFirst: true, warnings }));
+  assert.equal(warnings[0].code, "READABILITY_TERMINOLOGY");
+  output.actionPlan.now[0].text = "一周后一定落实。";
+  assert.throws(() => validateAIPlainLanguage(output, { questionFirst: true }), /unsupported time interval/u);
 });
 
 test("type isolation rejects Liuyao reports with Meihua-only fields and Meihua reports with Liuyao-only fields", async () => {

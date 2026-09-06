@@ -467,10 +467,40 @@ article {
   width: 100%;
 }
 
+.report-reading-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
+.report-reading-links > a { color: var(--accent); text-underline-offset: 4px; }
+
 .workbench {
   display: block;
   margin-top: 0;
 }
+
+.journey-screen[hidden] { display: none; }
+.journey-form button[hidden] { display: none; }
+.journey-screen.question-step { min-height: auto; }
+.journey-form button.text-link, [data-testid="report-page"] button.text-link { background: transparent; color: var(--accent); width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; border-radius: 0; border-bottom: 1px solid var(--line); white-space: normal; text-align: left; }
+.question-step > .continue-button, .question-clarification button { white-space: normal; }
+.question-clarification { margin: 0; padding: 20px 0; border: 0; border-top: 1px solid var(--line); min-width: 0; }
+.question-clarification legend { font-size: 18px; font-weight: 600; padding: 0; }
+.clarification-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 10px; margin: 16px 0; }
+.clarification-options label { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; background: #fff; }
+.clarification-options label:has(input:checked) { border-color: #246355; background: #edf5f0; }
+.clarification-options input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: #246355; }
+.clarification-freeform, .report-understanding-editor > label { display: grid; gap: 8px; margin: 16px 0; }
+.clarification-freeform input, .report-understanding-editor textarea { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 6px; padding: 12px; font: inherit; background: #fff; }
+.question-understood { border-left: 3px solid #246355; padding: 8px 16px; margin: 0; }
+.question-examples summary { cursor: pointer; font-weight: 600; }
+.question-example-topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.question-example-topics button { display: inline-flex; align-items: center; gap: 6px; }
+.question-example-topics svg { width: 18px; height: 18px; }
+.report-understanding-editor, .report-revision-history { padding: 24px 0; border-block: 1px solid var(--line); margin: 20px 0; }
+.report-revision-history summary { cursor: pointer; font-weight: 600; }
+.report-revision-history article { border-top: 1px solid var(--line); padding: 16px 0; }
+.report-understanding-editor h2 { font-size: 22px; }
+.report-understanding-editor textarea { resize: vertical; }
+.ly-extra-facts > summary { cursor: pointer; padding: 16px 0; font-weight: 600; }
+[data-testid="report-page"] .hero h1 { font-size: 26px; line-height: 1.45; overflow-wrap: anywhere; }
+.report-understanding-editor + .error { position: relative; }
 
 .journey-form {
   display: grid;

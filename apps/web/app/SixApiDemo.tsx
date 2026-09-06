@@ -2,10 +2,10 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { apiBase, readError, type ExperienceResponse } from "./lib/api";
+import { QuestionClarification, understandQuestion, type UnderstandingResult } from "./QuestionUnderstanding";
 import {
   ArrowRight,
   BriefcaseBusiness,
-  Check,
   Compass,
   FileSearch,
   GraduationCap,
@@ -30,20 +30,6 @@ const lineOptions = [
 ];
 
 type LiuyaoCastMode = "coins" | "digitalCoins" | "auto" | "manual";
-type JoinMode = "EMPLOYMENT" | "PARTNERSHIP" | "PROJECT_COOPERATION" | "INVESTMENT" | "ADVISORY";
-
-const joinModes: Array<{ value: JoinMode; label: string; detail: string }> = [
-  { value: "EMPLOYMENT", label: "入职", detail: "作为员工或全职成员加入" },
-  { value: "PARTNERSHIP", label: "合伙", detail: "共同经营、分配收益或股权" },
-  { value: "PROJECT_COOPERATION", label: "项目合作", detail: "先围绕具体项目协作交付" },
-  { value: "INVESTMENT", label: "投资", detail: "投入资金或资源换取回报" },
-  { value: "ADVISORY", label: "兼职顾问", detail: "有限时间提供专业支持" },
-];
-
-function needsJoinModeClarification(scenarioId: string, question: string) {
-  if (scenarioId !== "business:partnership" || !/加入|参与|一起做|跟.{0,8}(?:做|干)/u.test(question)) return false;
-  return !/入职|上班|员工|职位|岗位|全职|offer|合伙|股权|创业|投资|出资|入股|投钱|顾问|兼职|咨询|项目合作|外包|承接/u.test(question);
-}
 
 type CastSubmission = {
   mode: LiuyaoCastMode;
@@ -232,8 +218,9 @@ function autoDigitalCoinLines() {
 export function SixApiDemo() {
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState("relationship:relationship_stability");
-  const [scenarioGroup, setScenarioGroup] = useState("感情与合作");
-  const [joinMode, setJoinMode] = useState<JoinMode | "">("");
+  const [understanding, setUnderstanding] = useState<UnderstandingResult | null>(null);
+  const [clarification, setClarification] = useState("");
+  const [understandingBusy, setUnderstandingBusy] = useState(false);
   const [liuyaoCastMode, setLiuyaoCastMode] = useState<LiuyaoCastMode>("auto");
   const [coinLines, setCoinLines] = useState<number[][]>([]);
   const [digitalCoinsStarted, setDigitalCoinsStarted] = useState(false);
@@ -247,11 +234,6 @@ export function SixApiDemo() {
 
   const guided = report?.experience?.guidedViewModel;
   const scenario = scenarioById(scenarioId);
-  const scenarioGroups = useMemo(
-    () => ["感情与合作", "工作与钱", "生活事务", "健康与纠纷"].map((group) => ({ group, items: scenarios.filter((item) => item.group === group) })),
-    []
-  );
-  const currentScenarioGroup = scenarioGroups.find((group) => group.group === scenarioGroup) ?? scenarioGroups[0]!;
   const supports = useMemo(() => guided?.mainSupports?.slice(0, 3) ?? [], [guided]);
   const risks = useMemo(() => guided?.mainRisks?.slice(0, 3) ?? [], [guided]);
 
@@ -260,7 +242,6 @@ export function SixApiDemo() {
     const matched = scenarios.find((item) => item.topic === requestedScenario || item.id === requestedScenario);
     if (matched) {
       setScenarioId(matched.id);
-      setScenarioGroup(matched.group);
     }
     const requestedQuestion = new URLSearchParams(window.location.search).get("question");
     if (requestedQuestion?.trim()) setQuestion(requestedQuestion.trim().slice(0, 240));
@@ -276,8 +257,7 @@ export function SixApiDemo() {
   const digitalCoinsReady = digitalCoinsStarted && digitalCoinLines.every((coins) => coins.length === 3 && coins.every((coin) => coin === "2" || coin === "3"));
   const manualReady = liuyaoValues.every((item) => ["6", "7", "8", "9"].includes(item));
   const liuyaoReady = liuyaoCastMode === "manual" ? manualReady : (liuyaoCastMode === "digitalCoins" ? digitalCoinsReady : coinLines.length === 6);
-  const joinModeRequired = needsJoinModeClarification(scenarioId, question);
-  const questionReady = Boolean(question.trim()) && (!joinModeRequired || Boolean(joinMode));
+  const questionReady = Boolean(question.trim()) && Boolean(understanding && ["RESOLVED", "BRANCHED"].includes(understanding.understanding.status));
   const canGenerate = questionReady && liuyaoReady;
 
   function switchLiuyaoCastMode(nextMode: LiuyaoCastMode) {
@@ -301,9 +281,35 @@ export function SixApiDemo() {
 
   function chooseScenario(nextScenarioId: string) {
     setScenarioId(nextScenarioId);
-    setJoinMode("");
     setReport(null);
-    moveToStep("question-step", "#question-input");
+  }
+
+  function changeQuestion(value: string) {
+    setQuestion(value);
+    setUnderstanding(null);
+    setClarification("");
+    setCoinLines([]);
+    setReport(null);
+  }
+
+  async function prepareQuestion(answer = "", generateImmediately = liuyaoCastMode === "auto") {
+    if (understandingBusy || loading) return;
+    setUnderstandingBusy(true);
+    setError("");
+    const nextClarification = answer ? [clarification, answer].filter(Boolean).join("；").slice(0, 500) : clarification;
+    try {
+      const result = await understandQuestion(question, nextClarification);
+      setUnderstanding(result);
+      setClarification(nextClarification);
+      if (["RESOLVED", "BRANCHED"].includes(result.understanding.status)) {
+        if (generateImmediately) {
+          const nextLines = coinLines.length === 6 ? coinLines : Array.from({ length: 6 }, tossCoins);
+          setCoinLines(nextLines);
+          await generateReport({ mode: "auto", coins: nextLines }, result, nextClarification);
+        } else moveToStep("cast-step");
+      }
+    } catch (err) { setError(err instanceof Error ? err.message : "暂时无法理解问题，请重试。"); }
+    finally { setUnderstandingBusy(false); }
   }
 
   function addCoinLine() {
@@ -337,14 +343,14 @@ export function SixApiDemo() {
     setReport(null);
   }
 
-  async function generateReport(submission?: CastSubmission) {
+  async function generateReport(submission?: CastSubmission, understood = understanding, answer = clarification) {
     if (loading) return;
     setLoading(true);
     setError("");
 
-    if (!questionReady || (!submission && !canGenerate)) {
+    if (!understood || !["RESOLVED", "BRANCHED"].includes(understood.understanding.status) || (!submission && !canGenerate)) {
       setLoading(false);
-      setError(joinModeRequired && !joinMode ? "请先确认你准备以什么身份加入。" : "请先填写问题并完成六爻生成。");
+      setError("请先填写问题并完成问题确认。");
       return;
     }
 
@@ -355,9 +361,8 @@ export function SixApiDemo() {
 
     const payload = {
       question,
-      topic: scenario.topic,
-      subtype: scenario.subtype,
-      ...(joinMode ? { questionProfile: { joinMode } } : {}),
+      understandingToken: understood.understandingToken,
+      clarification: answer,
       ...(submissionMode === "manual" ? { values: submissionValues } : {}),
       ...(submissionMode === "digitalCoins" ? { coins: submissionDigitalCoins.map((line) => line.map(Number)) } : {}),
       ...(submissionMode === "coins" || submissionMode === "auto" ? { coins: submissionCoins } : {}),
@@ -391,90 +396,12 @@ export function SixApiDemo() {
   return (
     <section className="workbench" id="liuyao-workbench">
       <form className="journey-form" onSubmit={createReport}>
-        <section className="journey-screen scenario-step" id="scenario-step">
-          <header className="journey-heading">
-            <div>
-              <span className="journey-step">第 1 步</span>
-              <h2>你现在最想看清哪件事？</h2>
-              <p>按你正在面对的事情来选。找不到完全一致的选项时，选择最接近的一项即可。</p>
-            </div>
-            <a className="history-link" href="/history">
-              <History aria-hidden="true" size={17} />
-              历史报告
-            </a>
-          </header>
-
-          <fieldset className="scenario-fieldset">
-            <legend className="sr-only">选择问题场景</legend>
-            <div className="scenario-category-tabs" role="tablist" aria-label="问题类型">
-              {scenarioGroups.map((group) => (
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={scenarioGroup === group.group}
-                  className={scenarioGroup === group.group ? "active" : ""}
-                  key={group.group}
-                  onClick={() => {
-                    setScenarioGroup(group.group);
-                    setScenarioId(group.items[0]!.id);
-                    setReport(null);
-                  }}
-                >
-                  {group.group}
-                </button>
-              ))}
-            </div>
-            <div className="scenario-group">
-              <div className="scenario-group-title">
-                <strong>{currentScenarioGroup.group}</strong>
-                <span>{
-                  currentScenarioGroup.group === "感情与合作"
-                    ? "感情走向、对方态度与合作关系"
-                    : currentScenarioGroup.group === "工作与钱"
-                      ? "工作机会、收入与学习发展"
-                      : currentScenarioGroup.group === "生活事务"
-                        ? "居所、出行、寻物与具体计划"
-                        : "健康问题先找医生，纠纷问题先找律师"
-                }</span>
-              </div>
-              <div className={`scenario-grid${currentScenarioGroup.items.length <= 2 ? " compact" : ""}`} role="radiogroup" aria-label={`${currentScenarioGroup.group}场景`}>
-                {currentScenarioGroup.items.map((item) => {
-                  const active = scenarioId === item.id;
-                  return (
-                    <button
-                      type="button"
-                      className={`scenario-option scenario-${item.topic}${active ? " active" : ""}`}
-                      key={item.id}
-                      onClick={() => chooseScenario(item.id)}
-                      role="radio"
-                      aria-checked={active}
-                    >
-                      <span className="scenario-icon"><ScenarioIcon icon={item.icon} /></span>
-                      <span className="scenario-copy">
-                        <strong>{item.label}</strong>
-                        <small>{item.hint}</small>
-                      </span>
-                      <span className="scenario-check" aria-hidden="true">{active ? <Check size={16} /> : null}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </fieldset>
-
-        </section>
-
         <section className="journey-screen question-step" id="question-step">
           <header className="journey-heading compact">
             <div>
-              <span className="journey-step">第 2 步</span>
-              <h2>写下此刻最想确认的一件事</h2>
-              <p>说清相关的人、当前情况，以及你正在犹豫的选择，报告会更贴近你的实际处境。</p>
+              <h2>你现在最想看清哪件事？</h2>
             </div>
-            <div className="selected-scenario-pill">
-              <ScenarioIcon icon={scenario.icon} />
-              <span>{scenario.label}</span>
-            </div>
+            <a className="history-link" href="/history"><History aria-hidden="true" size={17} />历史报告</a>
           </header>
 
           <label className="question-box prominent">
@@ -482,66 +409,49 @@ export function SixApiDemo() {
             <textarea
               id="question-input"
               value={question}
-              onChange={(event) => {
-                setQuestion(event.target.value);
-                setReport(null);
-              }}
+              onChange={(event) => changeQuestion(event.target.value)}
+              disabled={understandingBusy || loading}
               maxLength={500}
               rows={4}
-              placeholder={scenario.placeholder}
+              placeholder="例如：今年是否适合成立公司，自己当股东？"
               required
               aria-describedby="question-help"
             />
             <p id="question-help">一次聚焦一件事，例如“这段关系现在适合继续推进吗？” 不用填写姓名、电话、证件号等个人信息。</p>
           </label>
 
-          {joinModeRequired ? (
-            <fieldset className="join-mode-fieldset">
-              <legend>你准备以什么方式加入？</legend>
-              <p>身份不同，报告关注的责任、收益和风险也不同。</p>
-              <div role="radiogroup" aria-label="加入方式">
-                {joinModes.map((item) => (
-                  <button
-                    type="button"
-                    role="radio"
-                    aria-checked={joinMode === item.value}
-                    className={joinMode === item.value ? "active" : ""}
-                    key={item.value}
-                    onClick={() => setJoinMode(item.value)}
-                  >
-                    <strong>{item.label}</strong>
-                    <span>{item.detail}</span>
-                    {joinMode === item.value ? <Check aria-hidden="true" size={16} /> : null}
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-          ) : null}
+          <QuestionClarification key={understanding?.understanding.clarificationQuestion} result={understanding} busy={understandingBusy || loading} onAnswer={(answer) => void prepareQuestion(answer)} />
+          {questionReady ? <p className="question-understood">{understanding?.understanding.summary}</p> : null}
 
-          <div className="question-examples" aria-label="问题示例">
-            <span>可以这样问</span>
+          <details className="question-examples">
+            <summary>看看提问示例</summary>
+            <div className="question-example-topics">
+              {scenarios.map((item) => <button type="button" key={item.id} aria-pressed={scenarioId === item.id} disabled={understandingBusy || loading} onClick={() => chooseScenario(item.id)}><ScenarioIcon icon={item.icon} />{item.label}</button>)}
+            </div>
             <div>
               {scenario.examples.map((example) => (
-                <button type="button" key={example} onClick={() => setQuestion(example)}>{example}</button>
+                <button type="button" key={example} disabled={understandingBusy || loading} onClick={() => changeQuestion(example)}>{example}</button>
               ))}
             </div>
-          </div>
+          </details>
 
           <button
             type="button"
             className="continue-button"
-            disabled={!questionReady}
-            onClick={() => moveToStep("cast-step")}
+            hidden={Boolean(understanding && ["CLARIFY", "SPLIT"].includes(understanding.understanding.status))}
+            disabled={!question.trim() || understandingBusy || loading}
+            onClick={() => { setLiuyaoCastMode("auto"); void prepareQuestion("", true); }}
           >
-            继续起卦
+            {understandingBusy ? "正在理解你的问题" : loading ? "正在生成报告" : "开始起卦并查看报告"}
             <ArrowRight aria-hidden="true" size={17} />
           </button>
+          {!understanding || questionReady ? <button className="text-link" type="button" disabled={!question.trim() || understandingBusy || loading} onClick={() => { setLiuyaoCastMode("manual"); void prepareQuestion("", false); }}>手动摇卦或录入已有卦爻</button> : null}
+          {error ? <p className="error" role="alert">{error}</p> : null}
         </section>
 
-        <section className="journey-screen cast-step" id="cast-step">
+        <section className="journey-screen cast-step" id="cast-step" hidden={!questionReady || liuyaoCastMode === "auto"}>
           <header className="journey-heading compact">
             <div>
-              <span className="journey-step">第 3 步</span>
               <h2>开始起卦</h2>
               <p>默认由系统一次完成六爻，完成后直接打开你的报告。</p>
             </div>

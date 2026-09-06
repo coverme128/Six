@@ -41,7 +41,7 @@ export function AppNav({ current = "workbench" }: AppNavProps) {
         >
           <Settings aria-hidden="true" size={18} />
         </a>
-        <a className="nav-primary-action" href="/#scenario-step">
+        <a className="nav-primary-action" href="/#question-step">
           开始分析
           <ArrowRight aria-hidden="true" size={17} />
         </a>

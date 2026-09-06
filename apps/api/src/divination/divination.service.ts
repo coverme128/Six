@@ -8,6 +8,7 @@ import type { LiuyaoChartRequest, MeihuaChartRequest } from "@six/shared";
 
 import { ReportStoreService } from "../reports/report-store.service.js";
 import type { DivinationType, PublicReportRecord } from "../reports/report.types.js";
+import { QuestionUnderstandingService } from "../ai/question-understanding.service.js";
 
 function chartHashOf(result: any): string {
   return result?.chart?.chartHash ?? "";
@@ -26,10 +27,14 @@ function publicCreatedReport(record: PublicReportRecord) {
 
 @Injectable()
 export class DivinationService {
-  constructor(@Inject(ReportStoreService) private readonly reportStore: ReportStoreService) {}
+  constructor(
+    @Inject(ReportStoreService) private readonly reportStore: ReportStoreService,
+    @Inject(QuestionUnderstandingService) private readonly questions: QuestionUnderstandingService,
+  ) {}
 
   async createLiuyao(input: LiuyaoChartRequest) {
-    const result = createLiuyaoChart(input, process.env.SIX_ROOT);
+    const understood = await this.questions.resolve(input);
+    const result = createLiuyaoChart({ ...input, ...understood }, process.env.SIX_ROOT);
     return publicCreatedReport(await this.storeReport("liuyao", result));
   }
 

@@ -55,7 +55,7 @@ export default async function CollectionDetailPage({ params }: { params: Promise
           <ol>{collection.recommended_content.map((item, itemIndex) => <li key={item.contentId}><a href={item.route}><span>{String(itemIndex + 1).padStart(2, "0")}</span><div><em>{itemIndex === 0 ? "建立基础" : itemIndex === 1 ? "理解关键结构" : "转成阅读与行动"}</em><strong>{item.title}</strong></div><ArrowRight aria-hidden="true" size={19} /></a></li>)}</ol>
         </section>
 
-        <section className="collection-tool-cta"><div><p className="eyebrow">学完就去实践</p><h2>带着一个具体问题，开始一次完整分析</h2><p>报告会保留问题、排盘事实、判断依据和行动建议，方便之后复盘。</p></div><a className="primary-link" href="/#scenario-step">{collection.tool_cta} <ArrowRight aria-hidden="true" size={17} /></a></section>
+        <section className="collection-tool-cta"><div><p className="eyebrow">学完就去实践</p><h2>带着一个具体问题，开始一次完整分析</h2><p>报告会保留问题、排盘事实、判断依据和行动建议，方便之后复盘。</p></div><a className="primary-link" href="/#question-step">{collection.tool_cta} <ArrowRight aria-hidden="true" size={17} /></a></section>
 
         <nav className="collection-pagination" aria-label="其他学习合集">
           {previous ? <a href={`/content/collection/${previous.slug}`}><ArrowLeft aria-hidden="true" size={17} /><span><small>上一套</small><strong>{previous.title}</strong></span></a> : <span />}

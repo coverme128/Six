@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Download, FileText, MoreHorizontal, Printer, ShieldCheck, Sparkles } from "lucide-react";
+import { Download, FileText, MoreHorizontal, Printer, ShieldCheck, Sparkles, PencilLine } from "lucide-react";
+import { QuestionClarification, understandQuestion, type UnderstandingResult } from "../../QuestionUnderstanding";
 import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
 import { renderLiuyaoVisualizationSvg } from "../../liuyao-visuals/export";
 
-const CURRENT_LIUYAO_AI_PROMPT = "liuyao-report-v8";
+const CURRENT_LIUYAO_AI_PROMPT = "liuyao-report-v9";
 
 function textList(items: Array<{ title?: string; text?: string }> = []) {
   return items.map((item) => `- ${item.text ?? item.title ?? ""}`).filter((item) => item.trim() !== "-").join("\n");
@@ -49,7 +50,7 @@ function buildReadableMarkdown(report: ExperienceResponse) {
     report.createdAt ? `生成时间：${new Date(report.createdAt).toLocaleString("zh-CN")}` : "",
     "",
     "## 直接回答",
-    aiReport?.questionResponse?.directAnswer ?? guided?.directAnswer ?? "",
+    aiReport?.questionResponse?.directAnswer ?? "AI 解读尚未完成。",
     aiReport?.questionResponse?.scopeNote ?? "",
     "",
     "## 卦象脉络",
@@ -195,6 +196,10 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [error, setError] = useState("");
   const [aiStatus, setAiStatus] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
+  const [editingUnderstanding, setEditingUnderstanding] = useState(false);
+  const [supplement, setSupplement] = useState("");
+  const [understandingResult, setUnderstandingResult] = useState<UnderstandingResult | null>(null);
+  const [revisionBusy, setRevisionBusy] = useState(false);
   const aiSectionRef = useRef<HTMLElement | null>(null);
   const autoAIRequestedRef = useRef(false);
   const guided = report?.experience?.guidedViewModel;
@@ -254,12 +259,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       || report.type !== "liuyao"
       || aiAvailability !== "available"
       || aiLoading
+      || revisionBusy
+      || editingUnderstanding
       || autoAIRequestedRef.current
       || (aiBundleIsCurrent && report.aiReportBundle?.aiReport)
     ) return;
     autoAIRequestedRef.current = true;
     void generateAIReport();
-  }, [aiAvailability, aiBundleIsCurrent, aiLoading, loading, report]);
+  }, [aiAvailability, aiBundleIsCurrent, aiLoading, loading, report, revisionBusy, editingUnderstanding]);
 
   async function generateAIReport() {
     setAiLoading(true);
@@ -271,7 +278,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ language: "zh-CN", deviceId: "anonymous-web" })
       });
-      if (!response.ok) throw new Error(await readError(response));
+      if (!response.ok) {
+        const failure = await response.json();
+        if (failure.understanding) {
+          setUnderstandingResult(failure);
+          setEditingUnderstanding(true);
+        }
+        throw new Error(failure.message ?? "暂时无法生成解读");
+      }
       const body = (await response.json()) as {
         reportId: string;
         reportType: ExperienceResponse["type"];
@@ -280,6 +294,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         experience?: ExperienceResponse["experience"];
       };
       setReport({
+        ...report,
         id: body.reportId,
         type: body.reportType,
         createdAt: report?.createdAt,
@@ -296,12 +311,39 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             ? "真实模型暂时未能完成解读，正式排盘和规则结论不受影响。"
             : "真实模型解读已生成。"
       );
-      window.setTimeout(() => aiSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+      const refreshed = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
+      if (refreshed.ok) setReport(await refreshed.json());
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法生成 AI 解读");
     } finally {
       setAiLoading(false);
     }
+  }
+
+  async function updateUnderstanding(answer = "") {
+    if (!report || revisionBusy || aiLoading) return;
+    setRevisionBusy(true);
+    setError("");
+    const clarification = [supplement, answer].filter(Boolean).join("；").slice(0, 500);
+    setSupplement(clarification);
+    try {
+      const understood = await understandQuestion(guided?.question ?? "", clarification);
+      setUnderstandingResult(understood);
+      if (["CLARIFY", "SPLIT"].includes(understood.understanding.status)) return;
+      const response = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/understanding`, {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ clarification, understandingToken: understood.understandingToken, revision: report.interpretationRevision ?? 1 }),
+      });
+      if (!response.ok) throw new Error(await readError(response));
+      const refreshed = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
+      if (!refreshed.ok) throw new Error(await readError(refreshed));
+      autoAIRequestedRef.current = false;
+      setReport(await refreshed.json());
+      setEditingUnderstanding(false);
+      setUnderstandingResult(null);
+      setAiStatus("已更新问题理解，正在沿用原卦解读。");
+    } catch (err) { setError(err instanceof Error ? err.message : "暂时无法更新理解。"); }
+    finally { setRevisionBusy(false); }
   }
 
   function exportReadableReport() {
@@ -321,8 +363,19 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       <section className="hero compact">
         <p className="eyebrow">你的问题</p>
         <h1>{guided?.question ?? "报告详情"}</h1>
-        <p>先查看本次六爻盘面，再阅读结合原问题生成的 AI 解读。</p>
+        {report?.questionUnderstanding?.summary ? <p>{report.questionUnderstanding.summary}</p> : null}
+        {report ? <div className="report-reading-links"><a href="#ai-plain-language">阅读 AI 解读</a><button type="button" className="text-link" disabled={aiLoading || revisionBusy} onClick={() => { setEditingUnderstanding(!editingUnderstanding); setSupplement(report.questionUnderstanding?.clarification ?? ""); setUnderstandingResult(null); }}><PencilLine size={16} />补充或纠正理解</button></div> : null}
       </section>
+
+      {editingUnderstanding ? <section className="report-understanding-editor">
+        <h2>补充这次问题</h2>
+        <label>背景或需要纠正的理解
+          <textarea value={supplement} disabled={revisionBusy} maxLength={500} rows={3} onChange={(event) => { setSupplement(event.target.value); setUnderstandingResult(null); }} placeholder="例如：我说的是入股并参与经营，不是作为员工入职。" />
+        </label>
+        <p>沿用原卦与起卦时间，旧版解读会保留。</p>
+        <QuestionClarification key={understandingResult?.understanding.clarificationQuestion} result={understandingResult} busy={revisionBusy} onAnswer={(answer) => void updateUnderstanding(answer)} />
+        <button type="button" className="primary-button" disabled={revisionBusy || !supplement.trim()} onClick={() => void updateUnderstanding()}>{revisionBusy ? "正在更新理解" : "更新本次解读"}</button>
+      </section> : null}
 
       {loading ? <p className="empty">正在读取报告。</p> : null}
       {error ? <p className="error">{error}</p> : null}
@@ -332,11 +385,11 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       ) : null}
 
       {guided && (!aiReport || report?.aiReportBundle?.fallbackUsed) ? (
-        <section className="panel report-section ai-report-entry" aria-live="polite">
+        <section className="panel report-section ai-report-entry" id="ai-plain-language" aria-live="polite">
           <div>
             <p className="eyebrow">AI 问题解读</p>
             <h2>{aiLoading ? "正在结合原问题与完整盘面生成解读" : "结合你的问题，解释这份卦"}</h2>
-            <p>AI 会直接理解你的原始问题，并使用本次六爻、动变、世应、历法和规则事实组织回答，不套用预写场景结论。</p>
+            <p>{aiLoading ? "盘面已就绪，你可以先查看卦象。" : "解读将回答你的问题，并说明关键依据与下一步建议。"}</p>
             <small><ShieldCheck aria-hidden="true" size={15} />排盘事实不会被 AI 改写；手机号、邮箱和证件号会在发送前自动隐藏。</small>
           </div>
           <div className="inline-actions">
@@ -365,7 +418,6 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             <div>
               <p className="eyebrow">针对你的问题</p>
               <h2>AI 解读</h2>
-              <p className="section-kicker">直接理解原始问题，并把完整六爻盘面转译成针对性的回答。</p>
             </div>
             <div className="fact-strip" aria-label="解读状态">
               <span>{report.aiReportBundle.validationStatus === "VALID" ? "排盘字段一致性已校验" : "确定性报告已保留"}</span>
@@ -405,7 +457,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                     <p><strong>本卦</strong>{aiReport.hexagramReading.original}</p>
                     <p><strong>动变</strong>{aiReport.hexagramReading.moving}</p>
                     <p><strong>{report.chartViewModel?.type === "liuyao" && !report.chartViewModel.movingLines?.length ? "静卦" : "变卦"}</strong>{report.chartViewModel?.type === "liuyao" && !report.chartViewModel.movingLines?.length
-                      ? "这是静卦，没有变卦。当前先观察已有条件是否发生实质变化。"
+                      ? aiReport.hexagramReading.changed
                       : aiReport.hexagramReading.changed}</p>
                   </div>
                 </section>
@@ -492,6 +544,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           </div>
         </details>
       ) : null}
+
+      {report?.interpretationHistory?.length ? <details className="report-revision-history">
+        <summary>此前的解读版本（{report.interpretationHistory.length}）</summary>
+        {report.interpretationHistory.map((item) => <article key={item.revision}>
+          <h3>第 {item.revision} 版</h3><p>{item.summary}</p>
+          {item.directAnswer ? <p>{item.directAnswer}</p> : <p>该版本未生成 AI 解读。</p>}
+        </article>)}
+      </details> : null}
 
       {professional ? (
         <section className="panel report-section" id="professional-evidence">

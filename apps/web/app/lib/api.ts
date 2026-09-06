@@ -221,6 +221,9 @@ export type ExperienceResponse = {
   type: DivinationMode;
   createdAt?: string;
   persistence?: string;
+  questionUnderstanding?: import("@six/shared").QuestionUnderstanding & { profileVersion?: string; clarification?: string };
+  interpretationRevision?: number;
+  interpretationHistory?: Array<{ revision: number; recordedAt: string; summary: string; directAnswer?: string }>;
   chartViewModel?: ChartViewModel;
   aiReportBundle?: {
     aiProvider?: string;

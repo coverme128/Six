@@ -318,19 +318,15 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
         </div>
       </div>
 
-      <div className="ly-layer-tabs" aria-label="移动端视觉层级">
-        <span>盘面</span>
-        <span>动变</span>
-        <span>世应</span>
-        <span>状态</span>
-      </div>
-
+      <details className="ly-extra-facts">
+        <summary>力量状态、角色分布与起卦记录</summary>
       <div className="ly-visual-grid">
         <CastingSequence model={visual(visualization, "VIS-LY-003")} />
         <SixRelations model={visual(visualization, "VIS-LY-006")} />
         <StrengthMatrix model={visual(visualization, "VIS-LY-007")} shiYing={visual(visualization, "VIS-LY-005")} />
         <Dynamics model={visual(visualization, "VIS-LY-008")} />
       </div>
+      </details>
     </section>
   );
 }

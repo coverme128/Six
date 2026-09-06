@@ -68,6 +68,16 @@ function inferJoinMode(question = "") {
 }
 
 export function buildQuestionProfile(chart) {
+  if (chart.questionProfile?.profileVersion === "LIUYAO_QUESTION_PROFILE_V2") {
+    const profile = chart.questionProfile;
+    return {
+      ...profile,
+      clarificationRequired: profile.status === "CLARIFY" || profile.status === "SPLIT",
+      clarificationStatus: profile.status,
+      possibleModes: [],
+      joinModeLabel: JOIN_MODES[profile.joinMode]?.label ?? "按原问题理解",
+    };
+  }
   const question = String(chart.question ?? "");
   const suppliedMode = chart.questionProfile?.joinMode;
   const inferredMode = suppliedMode && JOIN_MODES[suppliedMode] ? suppliedMode : inferJoinMode(question);

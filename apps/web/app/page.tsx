@@ -25,7 +25,7 @@ export default function HomePage() {
           <h1>把一件难事，看清方向与下一步</h1>
           <p className="hero-lead">从你真正关心的问题出发，先得到容易理解的判断，再按需查看盘面与依据。</p>
           <div className="hero-actions">
-            <a className="primary-link" href="#scenario-step">
+            <a className="primary-link" href="#question-step">
               从我的问题开始
               <ArrowDown aria-hidden="true" size={17} />
             </a>

@@ -4,6 +4,8 @@ import { randomUUID } from "node:crypto";
 type ErrorBody = {
   code?: string;
   message?: string | string[];
+  understanding?: unknown;
+  understandingToken?: string;
 };
 
 @Catch()
@@ -19,6 +21,7 @@ export class PublicExceptionFilter implements ExceptionFilter {
       code: normalized.code ?? (status === HttpStatus.INTERNAL_SERVER_ERROR ? "INTERNAL_ERROR" : "REQUEST_FAILED"),
       message: message ?? (exception instanceof Error ? exception.message : "Request failed."),
       traceId: randomUUID(),
+      ...(normalized.understanding ? { understanding: normalized.understanding, understandingToken: normalized.understandingToken } : {}),
     });
   }
 }

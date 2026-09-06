@@ -32,7 +32,7 @@ Live DeepSeek output requires `DEEPSEEK_API_KEY`. User-facing runtime never subs
 - v1.2 deterministic fixture coverage for coin casting, najia, six relations, six spirits, timezone normalization, and basic meihua casting.
 - Public Web product with Liuyao casting, three-coin/manual line input, Liuyao board rendering, formal report URLs, local history replay, settings, export/clear history, Learn Hub, topic journeys, knowledge search, and CORE_V1 metadata.
 - `/api/v1` routes for Liuyao casts/charts/analyze/report/yongshen, unified report detail, settings, export, clear history, content and knowledge. Meihua routes remain legacy compatibility endpoints and must not be linked from public Web surfaces.
-- File-backed local history and report replay in `data/runtime/history.json`.
+- PostgreSQL-backed report history when database writes succeed; otherwise reports remain in process memory. The active API does not write `data/runtime/history.json`.
 - Structured narrative reports with section-level `findingIds`, `knowledgeIds`, engine versions, and report template versions.
 - Playwright E2E coverage for Liuyao coin/manual flows, invalid input, Meihua two-number/time flows, history replay, friendly errors, content detail routes, settings, export/clear history, and mobile viewports 360/390/430.
 - Production calendar provider `CAL_STD_V1` with structured Gregorian, IANA timezone, four-pillar, solar-term boundary, month-build, day-chen, xun, xun-kong, day-change policy, provider version, and calculated-facts snapshot output.
@@ -47,7 +47,7 @@ Live DeepSeek output requires `DEEPSEEK_API_KEY`. User-facing runtime never subs
 - Next Web Liuyao casting workbench that reads `/experience` and renders Guided, scenario-specific, and Professional ViewModels.
 - Next Web report history and detail pages backed by `GET /api/v1/reports` and `GET /api/v1/reports/:id/experience`.
 - Next Web content, settings, and export paths backed by `GET /api/v1/content`, `GET /api/v1/content/:contentType/:slug`, `GET/PUT /api/v1/settings`, and `GET /api/v1/reports/:id/export`.
-- PostgreSQL seed path for `app_settings` and 158 system `content_entries`, plus report persistence with deterministic result, narrative report, and P4-X experience.
+- PostgreSQL seed path for `app_settings` and file-backed content entries, plus report persistence with deterministic result, narrative report, and P4-X experience. Actual persisted counts and backup requirements are recorded in the backup guide.
 - Grounded AI report generation through `POST /api/v1/reports/:id/ai` and BullMQ-backed `POST /api/v1/reports/:id/ai/jobs`, persisted in Prisma and rendered on the Next report detail page.
 
 ## Architecture
@@ -73,11 +73,15 @@ Local infrastructure (full mode):
 ```bash
 docker compose -p six up -d
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:generate
-DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:migrate
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm --filter @six/database exec prisma migrate deploy --schema prisma/schema.prisma
 DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:seed
 ```
 
 For the complete first-run, daily-start, port-isolation, health-check, and shutdown procedure, see [docs/development/local-startup.md](docs/development/local-startup.md).
+
+For question understanding, necessary clarification, same-chart interpretation revisions, and real-model regression checks, see [docs/development/question-first-report-flow.md](docs/development/question-first-report-flow.md).
+
+For SIX-only database inventory, file/asset backup, restore rehearsal, machine migration, and rollback, see [docs/development/backup-and-migration.md](docs/development/backup-and-migration.md). Run `db:seed` above only for first initialization or an intentional content refresh, not after restoring a backup. Configured database credentials alone do not prove that reports were persisted.
 
 ## Commands
 
@@ -123,7 +127,7 @@ P4-A demo content under `fixtures/content/p4-demo-package/` is `DEMO_ONLY`, vali
 ## Runtime Checks
 
 - `GET /api/v1/health` returns only `{ "status": "ok" }`.
-- `GET /api/v1/ready` checks app initialization, architecture metadata, database availability, and Redis configuration without returning secrets.
+- `GET /api/v1/ready` reports architecture metadata and database/Redis/AI configuration presence without returning secrets; it does not prove live database connectivity or successful writes.
 - Public API errors are normalized as `{ code, message, traceId }`.
 
 ## Staging Environment
@@ -151,7 +155,7 @@ INTERNAL_STATUS_TOKEN or platform basic auth
 
 Production code executes rules only through `data/production/core-v1-rule-profile.json` and its `core-v1-*` datasets. Candidate rule pools are present only for whitelist traceability checks and remain outside the executable rule set.
 
-New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CAL_STD_V1_LIGHT` remain readable and are not rewritten. Runtime history under `data/runtime/` is local development state and can be cleared without changing source seed data.
+New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CAL_STD_V1_LIGHT` remain readable and are not rewritten. Any legacy files under `data/runtime/` must be assessed before deletion; the active API uses Prisma or process memory instead of that history file.
 
 ## Migration Boundary
 

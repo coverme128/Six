@@ -3,6 +3,8 @@ import { LiuyaoChartRequestSchema, MeihuaChartRequestSchema } from "@six/shared"
 import type { z, ZodTypeAny } from "zod";
 
 import { DivinationService } from "./divination.service.js";
+import { QuestionUnderstandingService } from "../ai/question-understanding.service.js";
+import { QuestionRequestSchema } from "@six/shared";
 
 function parseRequest<TSchema extends ZodTypeAny>(schema: TSchema, body: unknown): z.output<TSchema> {
   const parsed = schema.safeParse(body);
@@ -18,7 +20,15 @@ function parseRequest<TSchema extends ZodTypeAny>(schema: TSchema, body: unknown
 
 @Controller()
 export class DivinationController {
-  constructor(@Inject(DivinationService) private readonly divinationService: DivinationService) {}
+  constructor(
+    @Inject(DivinationService) private readonly divinationService: DivinationService,
+    @Inject(QuestionUnderstandingService) private readonly questions: QuestionUnderstandingService,
+  ) {}
+
+  @Post("liuyao/questions/understand")
+  async understand(@Body() body: unknown) {
+    return this.questions.understand(parseRequest(QuestionRequestSchema, body));
+  }
 
   @Post("liuyao/charts")
   async createLiuyao(@Body() body: unknown) {

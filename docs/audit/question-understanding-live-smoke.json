@@ -1,0 +1,163 @@
+{
+  "testedAt": "2026-09-06T07:20:36.266Z",
+  "results": [
+    {
+      "question": "2026年我是否应该找工作？",
+      "understanding": {
+        "status": "RESOLVED",
+        "primaryIntent": "决定2026年是否找工作",
+        "decisionObject": "2026年的求职决策",
+        "summary": "考虑2026年是否应该找工作。",
+        "route": "career:job_search",
+        "joinMode": "UNCLARIFIED",
+        "secondaryConcerns": [],
+        "timeHorizon": "2026年",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": ""
+      },
+      "latencyMs": 1021
+    },
+    {
+      "question": "今年是否适合成立公司，自己当股东并负责经营？",
+      "understanding": {
+        "status": "RESOLVED",
+        "primaryIntent": "决定今年是否成立公司并自己当股东负责经营",
+        "decisionObject": "成立公司并自己当股东负责经营",
+        "summary": "考虑今年成立公司，自己持股并负责经营。",
+        "route": "business:partnership",
+        "joinMode": "PARTNERSHIP",
+        "secondaryConcerns": [],
+        "timeHorizon": "今年",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": ""
+      },
+      "latencyMs": 1307
+    },
+    {
+      "question": "朋友让我加入他的政务系统项目，适合吗？",
+      "understanding": {
+        "status": "CLARIFY",
+        "primaryIntent": "决定是否加入朋友的政务系统项目",
+        "decisionObject": "朋友的政务系统项目",
+        "summary": "考虑是否加入朋友发起的政务系统项目，需要先明确参与方式。",
+        "route": "general:decision",
+        "joinMode": "UNCLARIFIED",
+        "secondaryConcerns": [],
+        "timeHorizon": "",
+        "clarificationQuestion": "你加入这个项目是作为员工、合伙人、项目合作，还是投资方？",
+        "options": [
+          "员工",
+          "合伙人",
+          "项目合作",
+          "投资方",
+          "还没确定"
+        ],
+        "uncertainty": ""
+      },
+      "latencyMs": 1006
+    },
+    {
+      "question": "朋友让我加入他的政务系统项目，适合吗？",
+      "clarification": "加入身份还没确定，想先了解不同方式的区别。",
+      "understanding": {
+        "status": "BRANCHED",
+        "primaryIntent": "判断是否加入朋友的政务系统项目",
+        "decisionObject": "加入朋友政务系统项目的身份与方式",
+        "summary": "想了解以不同身份加入朋友政务系统项目是否合适。",
+        "route": "general:decision",
+        "joinMode": "UNCLARIFIED",
+        "secondaryConcerns": [],
+        "timeHorizon": "",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": "你加入该项目更接近哪种方式？"
+      },
+      "latencyMs": 1341
+    },
+    {
+      "question": "今年适合找工作吗？另外我的感情会怎样？",
+      "understanding": {
+        "status": "SPLIT",
+        "primaryIntent": "询问今年找工作的适宜性以及感情运势",
+        "decisionObject": "今年的工作机会与感情状况",
+        "summary": "同时询问今年找工作是否合适以及感情发展如何。",
+        "route": "general:decision",
+        "joinMode": "UNCLARIFIED",
+        "secondaryConcerns": [],
+        "timeHorizon": "今年",
+        "clarificationQuestion": "您希望先了解哪一方面的情况？",
+        "options": [
+          "找工作",
+          "感情"
+        ],
+        "uncertainty": ""
+      },
+      "latencyMs": 1231
+    },
+    {
+      "question": "今年适合找工作吗？另外我的感情会怎样？",
+      "clarification": "这次只问找工作。",
+      "understanding": {
+        "status": "RESOLVED",
+        "primaryIntent": "决定今年是否找工作",
+        "decisionObject": "今年的求职行动",
+        "summary": "考虑今年找工作，想了解是否合适。",
+        "route": "career:job_search",
+        "joinMode": "UNCLARIFIED",
+        "secondaryConcerns": [],
+        "timeHorizon": "今年",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": ""
+      },
+      "latencyMs": 945
+    },
+    {
+      "question": "我准备和朋友一起经营公司，担心收益和朋友关系，是否适合成为合伙人？",
+      "understanding": {
+        "status": "RESOLVED",
+        "primaryIntent": "决定是否与朋友合伙经营公司",
+        "decisionObject": "与朋友合伙经营公司的决定",
+        "summary": "考虑和朋友一起经营公司，担心收益和友情受影响，在犹豫是否适合当合伙人。",
+        "route": "business:partnership",
+        "joinMode": "PARTNERSHIP",
+        "secondaryConcerns": [
+          "收益",
+          "朋友关系"
+        ],
+        "timeHorizon": "",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": ""
+      },
+      "latencyMs": 939
+    },
+    {
+      "question": "我不是找工作，而是考虑出资成为股东，不参与经营，适合吗？",
+      "understanding": {
+        "status": "RESOLVED",
+        "primaryIntent": "考虑出资成为股东但不参与经营是否适合",
+        "decisionObject": "出资成为股东但不参与经营的决定",
+        "summary": "考虑出资成为股东，但不参与经营，想评估是否适合。",
+        "route": "wealth:income",
+        "joinMode": "INVESTMENT",
+        "secondaryConcerns": [],
+        "timeHorizon": "",
+        "clarificationQuestion": "",
+        "options": [],
+        "uncertainty": ""
+      },
+      "latencyMs": 1125
+    }
+  ],
+  "reportId": "ly_mtphe7di_kc17sx",
+  "persistence": "prisma",
+  "castUnchanged": true,
+  "originalAnswer": "今年成立公司并非不可行，但卦象显示当前时机更偏向“蓄势”而非“冲刺”：你自身状态与资金条件存在不稳定因素，外部环境也尚未完全明朗。建议今年以筹备和验证为主，先把商业模式、资金与合伙人责任边界落实清楚，再择机正式启动，不宜在条件未定时仓促投入全部资源。",
+  "revisedAnswer": "今年被动入股这家公司并非最佳时机，卦象显示你自身的出资状态存在不稳定因素，且整体局面偏于维持现状而非推进新动作。若仍有意向，建议以小额、可退出的方式先观察，并重点核实对方的经营与财务信息，不宜一次性投入大额资金。",
+  "revision": 2,
+  "aiSource": "DEEPSEEK_LIVE",
+  "cacheReused": true
+}

@@ -1,0 +1,1455 @@
+{
+  "provenance": {
+    "kind": "SYNTHETIC_QUESTION_LIVE_MODEL",
+    "generatedAt": "2026-09-06T07:20:36.019Z",
+    "promptVersion": "liuyao-report-v9",
+    "provider": "deepseek"
+  },
+  "question": "今年是否适合成立公司，自己当股东并负责经营？",
+  "clarification": "更正：我只出资，不参与日常经营，想判断是否适合被动入股。",
+  "understanding": "考虑今年以出资方式入股公司，但不参与日常经营，想判断是否适合。",
+  "visualization": {
+    "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+    "readiness": "P0_P1_READY_WITH_STATIC_EXPORT",
+    "packageStatus": "DATA_IMPORTED",
+    "registry": [
+      {
+        "visualId": "VIS-LY-001",
+        "viewModel": "SixLineBoardViewModel",
+        "priority": "P0",
+        "title": "六爻盘面",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-002",
+        "viewModel": "PrimaryChangedHexagramViewModel",
+        "priority": "P0",
+        "title": "本卦 / 变卦",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-003",
+        "viewModel": "CastingSequenceViewModel",
+        "priority": "P0",
+        "title": "起卦序列",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-004",
+        "viewModel": "YongshenEvidenceViewModel",
+        "priority": "P0",
+        "title": "核心焦点",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-005",
+        "viewModel": "ShiYingRelationshipViewModel",
+        "priority": "P0",
+        "title": "世应关系",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-006",
+        "viewModel": "SixRelationsRoleMapViewModel",
+        "priority": "P0",
+        "title": "六亲角色",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-007",
+        "viewModel": "StrengthStateMatrixViewModel",
+        "priority": "P0",
+        "title": "状态矩阵",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-008",
+        "viewModel": "DynamicTransformationViewModel",
+        "priority": "P0",
+        "title": "动爻变化",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-009",
+        "viewModel": "EvidenceConflictViewModel",
+        "priority": "P0",
+        "title": "证据冲突",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-010",
+        "viewModel": "TimingTimelineViewModel",
+        "priority": "P0",
+        "title": "时间线索",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-011",
+        "viewModel": "SupportRiskDecisionViewModel",
+        "priority": "P1",
+        "title": "支持 / 风险 / 行动",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-012",
+        "viewModel": "PatternExplanationViewModel",
+        "priority": "P1",
+        "title": "判断模式",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-013",
+        "viewModel": "DecisionComparisonViewModel",
+        "priority": "P1",
+        "title": "决策比较",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      },
+      {
+        "visualId": "VIS-LY-014",
+        "viewModel": "CalculationReasoningFlowViewModel",
+        "priority": "P1",
+        "title": "推理链路",
+        "implementation": "react_svg",
+        "dataPolicy": "facts_only_no_recompute",
+        "contexts": [
+          "guided",
+          "professional",
+          "report",
+          "static_export"
+        ]
+      }
+    ],
+    "p0VisualIds": [
+      "VIS-LY-001",
+      "VIS-LY-002",
+      "VIS-LY-003",
+      "VIS-LY-004",
+      "VIS-LY-005",
+      "VIS-LY-006",
+      "VIS-LY-007",
+      "VIS-LY-008",
+      "VIS-LY-009",
+      "VIS-LY-010"
+    ],
+    "p1VisualIds": [
+      "VIS-LY-011",
+      "VIS-LY-012",
+      "VIS-LY-013",
+      "VIS-LY-014"
+    ],
+    "contextMapping": {
+      "guided": [
+        "VIS-LY-001",
+        "VIS-LY-002",
+        "VIS-LY-004",
+        "VIS-LY-005",
+        "VIS-LY-008",
+        "VIS-LY-009",
+        "VIS-LY-010",
+        "VIS-LY-011"
+      ],
+      "professional": [
+        "VIS-LY-001",
+        "VIS-LY-004",
+        "VIS-LY-005",
+        "VIS-LY-006",
+        "VIS-LY-007",
+        "VIS-LY-008",
+        "VIS-LY-009",
+        "VIS-LY-010",
+        "VIS-LY-012",
+        "VIS-LY-014"
+      ],
+      "report": [
+        "VIS-LY-001",
+        "VIS-LY-002",
+        "VIS-LY-004",
+        "VIS-LY-005",
+        "VIS-LY-008",
+        "VIS-LY-009",
+        "VIS-LY-010"
+      ],
+      "staticExport": [
+        "VIS-LY-001",
+        "VIS-LY-002",
+        "VIS-LY-004",
+        "VIS-LY-005",
+        "VIS-LY-009",
+        "VIS-LY-010",
+        "VIS-LY-011",
+        "VIS-LY-012",
+        "VIS-LY-014"
+      ]
+    },
+    "staticExport": {
+      "status": "IMPLEMENTED_SAME_VIEWMODEL_SVG_PRINT_PDF",
+      "contractPath": "data/liuyao/visual-system/export/static-export-contract.md"
+    },
+    "viewModels": {
+      "VIS-LY-001": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-001",
+        "viewModel": "SixLineBoardViewModel",
+        "status": "ready",
+        "title": "六爻盘面",
+        "originalHexagram": "升",
+        "changedHexagram": null,
+        "movingLines": [],
+        "worldLine": 4,
+        "responseLine": 1,
+        "readingOrder": "top_to_bottom_display",
+        "castingOrder": "bottom_to_top_source",
+        "lines": [
+          {
+            "position": 6,
+            "label": "上爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false,
+            "sixSpiritName": "白虎",
+            "sixRelationName": "官鬼",
+            "branchName": "酉",
+            "elementName": "金",
+            "isWorld": false,
+            "isResponse": false,
+            "isVoid": true,
+            "monthText": "申与酉同气",
+            "dayText": "未生扶酉",
+            "roleLabels": [],
+            "encodings": {
+              "lineShape": "broken",
+              "movement": "static_line",
+              "anchors": [
+                "void"
+              ]
+            }
+          },
+          {
+            "position": 5,
+            "label": "五爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false,
+            "sixSpiritName": "螣蛇",
+            "sixRelationName": "父母",
+            "branchName": "亥",
+            "elementName": "水",
+            "isWorld": false,
+            "isResponse": false,
+            "isVoid": false,
+            "monthText": "申生扶亥",
+            "dayText": "未克制亥",
+            "roleLabels": [],
+            "encodings": {
+              "lineShape": "broken",
+              "movement": "static_line",
+              "anchors": []
+            }
+          },
+          {
+            "position": 4,
+            "label": "四爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false,
+            "sixSpiritName": "勾陈",
+            "sixRelationName": "妻财",
+            "branchName": "丑",
+            "elementName": "土",
+            "isWorld": true,
+            "isResponse": false,
+            "isVoid": false,
+            "monthText": "丑生申，自身有泄气",
+            "dayText": "未冲丑",
+            "roleLabels": [
+              {
+                "label": "妻财",
+                "importance": "primary",
+                "meaning": "收益、资源、现实可得之物"
+              },
+              {
+                "label": "世爻",
+                "importance": "secondary",
+                "meaning": "当事人自身状态与主动性"
+              }
+            ],
+            "encodings": {
+              "lineShape": "broken",
+              "movement": "static_line",
+              "anchors": [
+                "shi"
+              ]
+            }
+          },
+          {
+            "position": 3,
+            "label": "三爻",
+            "value": 7,
+            "yinYang": "阳",
+            "moving": false,
+            "sixSpiritName": "朱雀",
+            "sixRelationName": "官鬼",
+            "branchName": "酉",
+            "elementName": "金",
+            "isWorld": false,
+            "isResponse": false,
+            "isVoid": true,
+            "monthText": "申与酉同气",
+            "dayText": "未生扶酉",
+            "roleLabels": [],
+            "encodings": {
+              "lineShape": "solid",
+              "movement": "static_line",
+              "anchors": [
+                "void"
+              ]
+            }
+          },
+          {
+            "position": 2,
+            "label": "二爻",
+            "value": 7,
+            "yinYang": "阳",
+            "moving": false,
+            "sixSpiritName": "青龙",
+            "sixRelationName": "父母",
+            "branchName": "亥",
+            "elementName": "水",
+            "isWorld": false,
+            "isResponse": false,
+            "isVoid": false,
+            "monthText": "申生扶亥",
+            "dayText": "未克制亥",
+            "roleLabels": [],
+            "encodings": {
+              "lineShape": "solid",
+              "movement": "static_line",
+              "anchors": []
+            }
+          },
+          {
+            "position": 1,
+            "label": "初爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false,
+            "sixSpiritName": "玄武",
+            "sixRelationName": "妻财",
+            "branchName": "丑",
+            "elementName": "土",
+            "isWorld": false,
+            "isResponse": true,
+            "isVoid": false,
+            "monthText": "丑生申，自身有泄气",
+            "dayText": "未冲丑",
+            "roleLabels": [
+              {
+                "label": "妻财",
+                "importance": "primary",
+                "meaning": "收益、资源、现实可得之物"
+              }
+            ],
+            "encodings": {
+              "lineShape": "broken",
+              "movement": "static_line",
+              "anchors": [
+                "ying"
+              ]
+            }
+          }
+        ],
+        "legend": [
+          "阳爻 / 阴爻",
+          "动爻",
+          "世",
+          "应",
+          "用神 / 观察角色",
+          "空亡"
+        ]
+      },
+      "VIS-LY-002": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-002",
+        "viewModel": "PrimaryChangedHexagramViewModel",
+        "status": "ready",
+        "title": "本卦与变卦",
+        "originalHexagram": "升",
+        "changedHexagram": null,
+        "movingLines": [],
+        "summary": "升（静卦，无变卦）",
+        "transitionNotes": []
+      },
+      "VIS-LY-003": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-003",
+        "viewModel": "CastingSequenceViewModel",
+        "status": "ready",
+        "title": "起卦序列",
+        "sourceOrder": "初爻到上爻",
+        "lines": [
+          {
+            "position": 1,
+            "label": "初爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false
+          },
+          {
+            "position": 2,
+            "label": "二爻",
+            "value": 7,
+            "yinYang": "阳",
+            "moving": false
+          },
+          {
+            "position": 3,
+            "label": "三爻",
+            "value": 7,
+            "yinYang": "阳",
+            "moving": false
+          },
+          {
+            "position": 4,
+            "label": "四爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false
+          },
+          {
+            "position": 5,
+            "label": "五爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false
+          },
+          {
+            "position": 6,
+            "label": "上爻",
+            "value": 8,
+            "yinYang": "阴",
+            "moving": false
+          }
+        ]
+      },
+      "VIS-LY-004": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-004",
+        "viewModel": "YongshenEvidenceViewModel",
+        "status": "ready",
+        "title": "核心焦点",
+        "topic": "收入 / 财运",
+        "explanation": "本次按「收入 / 财运」理解，核心先看「目标收益、现金、交易价值或可获得资源。」。",
+        "roles": [
+          {
+            "label": "妻财",
+            "professionalMeaning": "妻财",
+            "practicalMeaning": "目标收益、现金、交易价值或可获得资源。",
+            "importance": "primary",
+            "linePositions": [
+              1,
+              4
+            ]
+          },
+          {
+            "label": "子孙",
+            "professionalMeaning": "子孙",
+            "practicalMeaning": "生财来源、产出、客户需求或促成收益的因素。",
+            "importance": "secondary",
+            "linePositions": []
+          },
+          {
+            "label": "世爻",
+            "professionalMeaning": "世爻",
+            "practicalMeaning": "当事人自身状态、主动性与承受力。",
+            "importance": "secondary",
+            "linePositions": [
+              4
+            ]
+          }
+        ],
+        "observationSummary": "系统按问题场景自动聚焦：妻财、子孙、世爻。"
+      },
+      "VIS-LY-005": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-005",
+        "viewModel": "ShiYingRelationshipViewModel",
+        "status": "ready",
+        "title": "世应关系",
+        "world": {
+          "position": 4,
+          "label": "四爻",
+          "value": 8,
+          "yinYang": "阴",
+          "moving": false,
+          "sixSpiritName": "勾陈",
+          "sixRelationName": "妻财",
+          "branchName": "丑",
+          "elementName": "土",
+          "isWorld": true,
+          "isResponse": false,
+          "isVoid": false,
+          "monthText": "丑生申，自身有泄气",
+          "dayText": "未冲丑",
+          "roleLabels": [
+            {
+              "label": "妻财",
+              "importance": "primary",
+              "meaning": "收益、资源、现实可得之物"
+            },
+            {
+              "label": "世爻",
+              "importance": "secondary",
+              "meaning": "当事人自身状态与主动性"
+            }
+          ],
+          "encodings": {
+            "lineShape": "broken",
+            "movement": "static_line",
+            "anchors": [
+              "shi"
+            ]
+          }
+        },
+        "response": {
+          "position": 1,
+          "label": "初爻",
+          "value": 8,
+          "yinYang": "阴",
+          "moving": false,
+          "sixSpiritName": "玄武",
+          "sixRelationName": "妻财",
+          "branchName": "丑",
+          "elementName": "土",
+          "isWorld": false,
+          "isResponse": true,
+          "isVoid": false,
+          "monthText": "丑生申，自身有泄气",
+          "dayText": "未冲丑",
+          "roleLabels": [
+            {
+              "label": "妻财",
+              "importance": "primary",
+              "meaning": "收益、资源、现实可得之物"
+            }
+          ],
+          "encodings": {
+            "lineShape": "broken",
+            "movement": "static_line",
+            "anchors": [
+              "ying"
+            ]
+          }
+        },
+        "summary": "世应只呈现盘面给出的主体/相对方位置，不硬编码为固定人称。"
+      },
+      "VIS-LY-006": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-006",
+        "viewModel": "SixRelationsRoleMapViewModel",
+        "status": "ready",
+        "title": "六亲角色",
+        "relations": [
+          {
+            "relationName": "官鬼",
+            "lines": [
+              {
+                "position": 6,
+                "label": "上爻",
+                "branchName": "酉",
+                "elementName": "金",
+                "moving": false,
+                "isWorld": false,
+                "isResponse": false
+              },
+              {
+                "position": 3,
+                "label": "三爻",
+                "branchName": "酉",
+                "elementName": "金",
+                "moving": false,
+                "isWorld": false,
+                "isResponse": false
+              }
+            ]
+          },
+          {
+            "relationName": "父母",
+            "lines": [
+              {
+                "position": 5,
+                "label": "五爻",
+                "branchName": "亥",
+                "elementName": "水",
+                "moving": false,
+                "isWorld": false,
+                "isResponse": false
+              },
+              {
+                "position": 2,
+                "label": "二爻",
+                "branchName": "亥",
+                "elementName": "水",
+                "moving": false,
+                "isWorld": false,
+                "isResponse": false
+              }
+            ]
+          },
+          {
+            "relationName": "妻财",
+            "lines": [
+              {
+                "position": 4,
+                "label": "四爻",
+                "branchName": "丑",
+                "elementName": "土",
+                "moving": false,
+                "isWorld": true,
+                "isResponse": false
+              },
+              {
+                "position": 1,
+                "label": "初爻",
+                "branchName": "丑",
+                "elementName": "土",
+                "moving": false,
+                "isWorld": false,
+                "isResponse": true
+              }
+            ]
+          }
+        ]
+      },
+      "VIS-LY-007": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-007",
+        "viewModel": "StrengthStateMatrixViewModel",
+        "status": "ready",
+        "title": "状态矩阵",
+        "mode": "qualitative_no_score",
+        "lineStates": [
+          {
+            "position": 6,
+            "label": "上爻",
+            "relationName": "官鬼",
+            "branchName": "酉",
+            "elementName": "金",
+            "monthText": "申与酉同气",
+            "dayText": "未生扶酉",
+            "monthInfluence": {
+              "effect": "same",
+              "effectName": "同气",
+              "isSame": false,
+              "isClash": false,
+              "text": "申与酉同气"
+            },
+            "dayInfluence": {
+              "effect": "generates",
+              "effectName": "生扶",
+              "isSame": false,
+              "isClash": false,
+              "text": "未生扶酉"
+            },
+            "isVoid": true,
+            "moving": false,
+            "isWorld": false,
+            "isResponse": false
+          },
+          {
+            "position": 5,
+            "label": "五爻",
+            "relationName": "父母",
+            "branchName": "亥",
+            "elementName": "水",
+            "monthText": "申生扶亥",
+            "dayText": "未克制亥",
+            "monthInfluence": {
+              "effect": "generates",
+              "effectName": "生扶",
+              "isSame": false,
+              "isClash": false,
+              "text": "申生扶亥"
+            },
+            "dayInfluence": {
+              "effect": "controls",
+              "effectName": "克制",
+              "isSame": false,
+              "isClash": false,
+              "text": "未克制亥"
+            },
+            "isVoid": false,
+            "moving": false,
+            "isWorld": false,
+            "isResponse": false
+          },
+          {
+            "position": 4,
+            "label": "四爻",
+            "relationName": "妻财",
+            "branchName": "丑",
+            "elementName": "土",
+            "monthText": "丑生申，自身有泄气",
+            "dayText": "未冲丑",
+            "monthInfluence": {
+              "effect": "drains",
+              "effectName": "泄气",
+              "isSame": false,
+              "isClash": false,
+              "text": "丑生申，自身有泄气"
+            },
+            "dayInfluence": {
+              "effect": "same",
+              "effectName": "冲",
+              "isSame": false,
+              "isClash": true,
+              "text": "未冲丑"
+            },
+            "isVoid": false,
+            "moving": false,
+            "isWorld": true,
+            "isResponse": false
+          },
+          {
+            "position": 3,
+            "label": "三爻",
+            "relationName": "官鬼",
+            "branchName": "酉",
+            "elementName": "金",
+            "monthText": "申与酉同气",
+            "dayText": "未生扶酉",
+            "monthInfluence": {
+              "effect": "same",
+              "effectName": "同气",
+              "isSame": false,
+              "isClash": false,
+              "text": "申与酉同气"
+            },
+            "dayInfluence": {
+              "effect": "generates",
+              "effectName": "生扶",
+              "isSame": false,
+              "isClash": false,
+              "text": "未生扶酉"
+            },
+            "isVoid": true,
+            "moving": false,
+            "isWorld": false,
+            "isResponse": false
+          },
+          {
+            "position": 2,
+            "label": "二爻",
+            "relationName": "父母",
+            "branchName": "亥",
+            "elementName": "水",
+            "monthText": "申生扶亥",
+            "dayText": "未克制亥",
+            "monthInfluence": {
+              "effect": "generates",
+              "effectName": "生扶",
+              "isSame": false,
+              "isClash": false,
+              "text": "申生扶亥"
+            },
+            "dayInfluence": {
+              "effect": "controls",
+              "effectName": "克制",
+              "isSame": false,
+              "isClash": false,
+              "text": "未克制亥"
+            },
+            "isVoid": false,
+            "moving": false,
+            "isWorld": false,
+            "isResponse": false
+          },
+          {
+            "position": 1,
+            "label": "初爻",
+            "relationName": "妻财",
+            "branchName": "丑",
+            "elementName": "土",
+            "monthText": "丑生申，自身有泄气",
+            "dayText": "未冲丑",
+            "monthInfluence": {
+              "effect": "drains",
+              "effectName": "泄气",
+              "isSame": false,
+              "isClash": false,
+              "text": "丑生申，自身有泄气"
+            },
+            "dayInfluence": {
+              "effect": "same",
+              "effectName": "冲",
+              "isSame": false,
+              "isClash": true,
+              "text": "未冲丑"
+            },
+            "isVoid": false,
+            "moving": false,
+            "isWorld": false,
+            "isResponse": true
+          }
+        ],
+        "categories": [
+          {
+            "label": "主体状态",
+            "count": 2
+          },
+          {
+            "label": "支持力量",
+            "count": 2
+          },
+          {
+            "label": "阻碍力量",
+            "count": 2
+          }
+        ]
+      },
+      "VIS-LY-008": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-008",
+        "viewModel": "DynamicTransformationViewModel",
+        "status": "partial",
+        "title": "动爻变化",
+        "movingLines": [],
+        "summary": "变化动力不突出"
+      },
+      "VIS-LY-009": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-009",
+        "viewModel": "EvidenceConflictViewModel",
+        "status": "ready",
+        "title": "证据冲突",
+        "conflictState": "UNRESOLVED",
+        "summary": "支持与阻碍同时保留；总体判断不会被折算成单一加减分，而是按证据类别、直接性与变化状态说明。",
+        "evidence": [
+          {
+            "title": "主体状态",
+            "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+            "priority": "P1",
+            "evidenceKind": "world_response_fact",
+            "polarity": "support"
+          },
+          {
+            "title": "未命名信息",
+            "text": "父母角色存在支持证据。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "polarity": "support"
+          },
+          {
+            "title": "核心事项",
+            "text": "妻财：目标收益、现金、交易价值或可获得资源。；子孙：生财来源、产出、客户需求或促成收益的因素。；世爻：当事人自身状态、主动性与承受力。",
+            "priority": "P2",
+            "evidenceKind": "direct_target_fact",
+            "polarity": "support"
+          },
+          {
+            "title": "主体状态",
+            "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+            "priority": "P2",
+            "evidenceKind": "world_response_fact",
+            "polarity": "support"
+          },
+          {
+            "title": "当前节奏",
+            "text": "本盘没有动爻，当前更适合观察既有条件。",
+            "priority": "P2",
+            "evidenceKind": "moving_change_fact",
+            "polarity": "support"
+          },
+          {
+            "title": "月建作用",
+            "text": "月建作用于第 1 爻（妻财 / 丑）：丑生申，自身有泄气。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "polarity": "risk"
+          },
+          {
+            "title": "用神逢日冲",
+            "text": "第 1 爻（妻财 / 丑）受日辰冲动，需要作为不稳定因素观察。 日冲可能意味着变化、压力或触发，具体意义需结合动静、旺衰及问题类型判断。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "polarity": "risk"
+          },
+          {
+            "title": "核心事项",
+            "text": "妻财：目标收益、现金、交易价值或可获得资源。；子孙：生财来源、产出、客户需求或促成收益的因素。；世爻：当事人自身状态、主动性与承受力。",
+            "priority": "P2",
+            "evidenceKind": "direct_target_fact",
+            "polarity": "neutral"
+          }
+        ]
+      },
+      "VIS-LY-010": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-010",
+        "viewModel": "TimingTimelineViewModel",
+        "status": "ready",
+        "title": "时间线索",
+        "precisionPolicy": "candidate_window_not_guaranteed_date",
+        "items": [
+          {
+            "title": "丑支对应的后续日/月窗口",
+            "text": "丑支对应的后续日/月窗口可作为观察窗口；这不是保证日期，仍需结合现实进展复核。",
+            "rank": 80
+          }
+        ]
+      },
+      "VIS-LY-011": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-011",
+        "viewModel": "SupportRiskDecisionViewModel",
+        "status": "ready",
+        "title": "支持 / 风险 / 行动",
+        "supportLabel": "条件与不确定性",
+        "supports": [
+          {
+            "title": "主体状态",
+            "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+            "priority": "P1",
+            "evidenceKind": "world_response_fact",
+            "mergedCount": 1
+          },
+          {
+            "title": "未命名信息",
+            "text": "父母角色存在支持证据。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "mergedCount": 1
+          },
+          {
+            "title": "核心事项",
+            "text": "妻财：目标收益、现金、交易价值或可获得资源。；子孙：生财来源、产出、客户需求或促成收益的因素。；世爻：当事人自身状态、主动性与承受力。",
+            "priority": "P2",
+            "evidenceKind": "direct_target_fact",
+            "mergedCount": 1
+          },
+          {
+            "title": "主体状态",
+            "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+            "priority": "P2",
+            "evidenceKind": "world_response_fact",
+            "mergedCount": 1
+          },
+          {
+            "title": "当前节奏",
+            "text": "本盘没有动爻，当前更适合观察既有条件。",
+            "priority": "P2",
+            "evidenceKind": "moving_change_fact",
+            "mergedCount": 1
+          }
+        ],
+        "risks": [
+          {
+            "title": "月建作用",
+            "text": "月建作用于第 1 爻（妻财 / 丑）：丑生申，自身有泄气。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "mergedCount": 1
+          },
+          {
+            "title": "用神逢日冲",
+            "text": "第 1 爻（妻财 / 丑）受日辰冲动，需要作为不稳定因素观察。 日冲可能意味着变化、压力或触发，具体意义需结合动静、旺衰及问题类型判断。",
+            "priority": "P1",
+            "evidenceKind": "strength_fact",
+            "mergedCount": 1
+          }
+        ],
+        "actions": [
+          "先验证最能改变决定的一项现实条件。",
+          "对照报告中的支持与阻碍，确认哪一项已经实质变化。",
+          "检查责任、资源和可承受边界是否都已明确。"
+        ]
+      },
+      "VIS-LY-012": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-012",
+        "viewModel": "PatternExplanationViewModel",
+        "status": "ready",
+        "title": "判断模式",
+        "patternName": "有利有阻",
+        "summary": "当前支持与阻碍并存，需要并看双方依据，不能只按单一方向判断。",
+        "basis": [
+          "日冲可能意味着变化、压力或触发，具体意义需结合动静、旺衰及问题类型判断。",
+          "本盘六爻安静，当前更适合观察既有条件。"
+        ],
+        "boundary": "综合判断采用判断模式与冲突裁决，不使用简单的支持减阻碍计分。"
+      },
+      "VIS-LY-013": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-013",
+        "viewModel": "DecisionComparisonViewModel",
+        "status": "ready",
+        "title": "决策比较",
+        "columns": [
+          {
+            "label": "已有条件与待落实项",
+            "items": [
+              {
+                "title": "主体状态",
+                "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+                "priority": "P1",
+                "evidenceKind": "world_response_fact",
+                "mergedCount": 1
+              },
+              {
+                "title": "未命名信息",
+                "text": "父母角色存在支持证据。",
+                "priority": "P1",
+                "evidenceKind": "strength_fact",
+                "mergedCount": 1
+              },
+              {
+                "title": "核心事项",
+                "text": "妻财：目标收益、现金、交易价值或可获得资源。；子孙：生财来源、产出、客户需求或促成收益的因素。；世爻：当事人自身状态、主动性与承受力。",
+                "priority": "P2",
+                "evidenceKind": "direct_target_fact",
+                "mergedCount": 1
+              },
+              {
+                "title": "主体状态",
+                "text": "世爻在第 4 爻，代表当事人的状态是这次判断的主轴。",
+                "priority": "P2",
+                "evidenceKind": "world_response_fact",
+                "mergedCount": 1
+              },
+              {
+                "title": "当前节奏",
+                "text": "本盘没有动爻，当前更适合观察既有条件。",
+                "priority": "P2",
+                "evidenceKind": "moving_change_fact",
+                "mergedCount": 1
+              }
+            ]
+          },
+          {
+            "label": "需要处理的风险",
+            "items": [
+              {
+                "title": "月建作用",
+                "text": "月建作用于第 1 爻（妻财 / 丑）：丑生申，自身有泄气。",
+                "priority": "P1",
+                "evidenceKind": "strength_fact",
+                "mergedCount": 1
+              },
+              {
+                "title": "用神逢日冲",
+                "text": "第 1 爻（妻财 / 丑）受日辰冲动，需要作为不稳定因素观察。 日冲可能意味着变化、压力或触发，具体意义需结合动静、旺衰及问题类型判断。",
+                "priority": "P1",
+                "evidenceKind": "strength_fact",
+                "mergedCount": 1
+              }
+            ]
+          },
+          {
+            "label": "建议动作",
+            "items": [
+              {
+                "text": "先验证最能改变决定的一项现实条件。"
+              },
+              {
+                "text": "对照报告中的支持与阻碍，确认哪一项已经实质变化。"
+              },
+              {
+                "text": "检查责任、资源和可承受边界是否都已明确。"
+              }
+            ]
+          }
+        ]
+      },
+      "VIS-LY-014": {
+        "visualSystemVersion": "LIUYAO_VISUAL_SYSTEM_V1",
+        "registryVersion": "VISUALIZATION_REGISTRY_V1",
+        "sourcePolicy": "ProductResultFacts -> Presentation ViewModels -> Visualization ViewModels",
+        "noRecompute": true,
+        "visualId": "VIS-LY-014",
+        "viewModel": "CalculationReasoningFlowViewModel",
+        "status": "ready",
+        "title": "推理链路",
+        "steps": [
+          {
+            "label": "问题绑定",
+            "text": "收入 / 财运",
+            "source": "questionContext"
+          },
+          {
+            "label": "取用神",
+            "text": "本次按「收入 / 财运」理解，核心先看「目标收益、现金、交易价值或可获得资源。」。",
+            "source": "yongshenSelectionFacts"
+          },
+          {
+            "label": "盘面事实",
+            "text": "升（静卦，无变卦）",
+            "source": "chartFacts"
+          },
+          {
+            "label": "证据整理",
+            "text": "支持与阻碍同时保留；总体判断不会被折算成单一加减分，而是按证据类别、直接性与变化状态说明。",
+            "source": "conflictResolutionFacts"
+          },
+          {
+            "label": "总体判断",
+            "text": "当前支持与阻碍并存，需要并看双方依据，不能只按单一方向判断。",
+            "source": "overallAssessmentFacts"
+          },
+          {
+            "label": "时间与行动",
+            "text": "丑支对应的后续日/月窗口可作为观察窗口；这不是保证日期，仍需结合现实进展复核。",
+            "source": "timingExplanationFacts"
+          }
+        ]
+      }
+    }
+  },
+  "interpretation": {
+    "actionPlan": {
+      "now": [
+        {
+          "text": "暂缓大额投入，先以小额资金或可退出的方式试探性参与，观察公司实际运营情况与资金流向，避免一次性重仓。",
+          "evidenceRefs": [
+            "chart:world_response",
+            "evidence:3",
+            "evidence:4",
+            "evidence:8",
+            "evidence:9"
+          ]
+        },
+        {
+          "text": "主动收集公司的财务报告、经营数据、股东结构等公开信息，重点核实对方提供的资料与实际经营状况是否一致。",
+          "evidenceRefs": [
+            "chart:line_facts",
+            "evidence:11",
+            "evidence:12"
+          ]
+        },
+        {
+          "text": "与公司现有股东或管理层进行深入沟通，了解公司真实的经营难点与资金需求，判断对方是否对资金有迫切依赖。",
+          "evidenceRefs": [
+            "chart:world_response",
+            "evidence:6",
+            "evidence:7"
+          ]
+        }
+      ],
+      "avoid": [
+        {
+          "text": "避免在信息不充分的情况下仓促签约或打款，尤其不要仅凭对方口头承诺或初步意向就投入大额资金。",
+          "evidenceRefs": [
+            "chart:moving_lines",
+            "evidence:9"
+          ]
+        },
+        {
+          "text": "避免忽视合同细节中的退出限制、竞业条款或额外出资义务，这些条款可能在你未参与经营的情况下对你形成不利约束。",
+          "evidenceRefs": [
+            "chart:line_facts",
+            "evidence:12"
+          ]
+        },
+        {
+          "text": "避免将全部可投资金集中投入这一项目，世应双方均不稳定，分散投资或保留充足现金流是更稳妥的选择。",
+          "evidenceRefs": [
+            "chart:world_response",
+            "evidence:1",
+            "evidence:2",
+            "evidence:3",
+            "evidence:4",
+            "evidence:8"
+          ]
+        }
+      ],
+      "beforeDecision": [
+        {
+          "text": "请专业律师审查入股协议，重点关注退出机制、股权稀释条款、信息披露义务、责任承担等关键内容，确保被动股东权益有明确保障。",
+          "evidenceRefs": [
+            "chart:line_facts",
+            "evidence:11",
+            "evidence:12"
+          ]
+        },
+        {
+          "text": "核实公司的法律状态，包括是否存在未决诉讼、行政处罚、债务纠纷等隐性风险，确认官鬼爻所代表的经营风险是否已在现实中显现。",
+          "evidenceRefs": [
+            "chart:line_facts",
+            "calendar:xun_kong",
+            "evidence:14",
+            "evidence:15"
+          ]
+        },
+        {
+          "text": "设定明确的退出条件和止损线，确保在入股后若发现实际情况与预期不符，能够及时撤出资金而非被动套牢。",
+          "evidenceRefs": [
+            "chart:world_response",
+            "evidence:3",
+            "evidence:4",
+            "evidence:8"
+          ]
+        }
+      ]
+    },
+    "disclaimer": "本报告用于传统文化研究与个人决策复盘，不承诺现实结果，也不替代医疗、法律、财务或其他专业意见。",
+    "factClaims": {
+      "dayChen": "wei",
+      "xunKong": [
+        "shen",
+        "you"
+      ],
+      "worldLine": 4,
+      "monthBuild": "shen",
+      "movingLines": [],
+      "responseLine": 1,
+      "changedHexagram": "升",
+      "originalHexagram": "升"
+    },
+    "limitations": [
+      "本报告基于六爻卦象分析，属于传统决策参考工具，不构成投资建议或对现实结果的保证。",
+      "卦象显示的不稳定信号反映的是当前时间点的能量状态，现实中的公司经营状况、财务数据、法律风险等需通过实际调查核实。",
+      "本卦六爻安静，缺乏动爻信息，对事情发展方向的指示相对有限，建议结合后续实际情况变化重新评估。",
+      "报告中的时间窗口仅为传统卦象分析的候选观察期，不代表任何确定的结果日期。"
+    ],
+    "keyJudgments": [
+      {
+        "title": "你的出资状态存在不稳定因素",
+        "evidenceRefs": [
+          "chart:world_response",
+          "evidence:3",
+          "evidence:4",
+          "evidence:5",
+          "evidence:8",
+          "evidence:13"
+        ],
+        "decisionImpact": "这是本卦最重要的信号，直接削弱了\"今年适合入股\"的判断。世爻不稳意味着你作为出资方，资金的安全性和灵活性都打了折扣，应优先考虑控制投入规模。",
+        "professionalBasis": "世爻（第4爻）为妻财丑土，月建申金泄丑土之气，日辰未土冲动丑土，世爻自身有泄气且受日辰冲动，状态不稳定。",
+        "plainInterpretation": "代表你自身出资行为的爻位（世爻）同时受到两个方向的压力：一方面被当前月份的力量消耗，另一方面被当天的力量冲击。这暗示你的资金投入可能面临不稳定局面，比如资金被占用、回报不如预期，或投入后难以灵活调整。"
+      },
+      {
+        "title": "对方（公司方）同样存在不稳定信号",
+        "evidenceRefs": [
+          "chart:world_response",
+          "evidence:1",
+          "evidence:2",
+          "evidence:6",
+          "evidence:7",
+          "evidence:8"
+        ],
+        "decisionImpact": "世应双方都不稳定，意味着合作基础本身就不够扎实。虽然世应同气说明双方有合作的可能，但\"同病相怜\"式的共振并不能抵消各自的不稳定，反而提示需要更谨慎地评估对方。",
+        "professionalBasis": "应爻（第1爻）为妻财丑土，与世爻同支同气，但同样受月建泄气、日辰冲动，状态与世爻相似地不稳定。",
+        "plainInterpretation": "代表公司或对方一方的爻位（应爻）与你的状态几乎一样——同样被消耗、被冲击。这说明对方那边的情况可能也不够稳固，比如公司的经营状况、财务健康度或管理层的稳定性存在隐患。"
+      },
+      {
+        "title": "卦象安静，缺乏推进动力",
+        "evidenceRefs": [
+          "chart:moving_lines",
+          "chart:changed_hexagram",
+          "evidence:9"
+        ],
+        "decisionImpact": "这一信号支持\"暂缓或小步试探\"的策略。既然卦象本身没有推动力，强行推进可能事倍功半，不如等待更明确的时机或条件出现。",
+        "professionalBasis": "本卦六爻安静，无动爻，无变卦。传统解读中，六爻安静代表事情处于静止状态，缺乏内在推动力。",
+        "plainInterpretation": "整卦没有任何一个爻发动，说明这件事目前缺乏\"动起来\"的能量。换句话说，卦象没有显示出入股这件事在近期有自然推进的势头，更像是需要外力推动才能成行。"
+      },
+      {
+        "title": "合同与文书层面存在支持但伴随制约",
+        "evidenceRefs": [
+          "chart:line_facts",
+          "evidence:11",
+          "evidence:12"
+        ],
+        "decisionImpact": "这一信号提示：如果决定推进，合同审查是重中之重。不要因为整体框架看起来合理就忽略细节，尤其要关注退出机制、责任划分等关键条款。",
+        "professionalBasis": "父母爻（第2、5爻）为亥水，月建申金生扶亥水，但日辰未土克制亥水，形成支持与制约并存的局面。",
+        "plainInterpretation": "父母爻在六爻中代表合同、文书、协议等。卦象显示这些方面既有被扶持的一面（月建生助），也有被压制的一面（日辰克制）。这意味着入股相关的合同条款、法律文件可能整体有利，但其中存在某些细节或条款对你不利，需要仔细审查。"
+      },
+      {
+        "title": "经营风险层面有支撑但需持续观察",
+        "evidenceRefs": [
+          "chart:line_facts",
+          "calendar:xun_kong",
+          "evidence:14",
+          "evidence:15"
+        ],
+        "decisionImpact": "空亡的官鬼爻是一把双刃剑：短期看风险可能不会立刻爆发，但空亡也意味着不确定性高，未来随时可能\"填实\"而显现。这进一步支持\"先观察、后投入\"的策略，不宜在风险尚未明朗时贸然重仓。",
+        "professionalBasis": "官鬼爻（第3、6爻）为酉金，月建申金与酉金同气相助，日辰未土生扶酉金，整体得到支持。但官鬼爻本身处于旬空状态（申酉空亡）。",
+        "plainInterpretation": "官鬼爻代表经营风险、管理压力或潜在麻烦。卦象显示这些方面目前有力量支撑（可能意味着公司有应对风险的能力），但官鬼爻落空亡，说明这些风险目前\"悬而未决\"——要么尚未显现，要么暂时不会爆发。"
+      }
+    ],
+    "finalTakeaway": "今年被动入股该公司并非最佳时机，卦象显示双方状态均不稳定且缺乏推进动力，若仍有意向应以小额试探、严格审查合同、设定退出条件为前提，不宜重仓投入。",
+    "schemaVersion": "AI_REPORT_V1",
+    "timingWindows": [
+      {
+        "text": "后续阶段仅作为候选观察窗口，仍需结合现实变化复核，不代表结果已经确定。",
+        "candidateRef": "timing:1"
+      }
+    ],
+    "decisionBalance": [
+      {
+        "cost": "世应双方同时受日辰冲动且被月建泄气，资金与对方状态都不够稳定，投入后可能面临回报不确定或资金难以及时退出的风险。",
+        "gain": "世应同气，双方在条件上存在相互呼应的基础，合作并非完全不可行；升卦本身带有渐进上升的意象，若操作得当仍有发展空间。"
+      },
+      {
+        "cost": "父母爻同时被日辰克制，合同细节中可能存在对你不利的条款，需要投入精力仔细审查，否则容易在细节上吃亏。",
+        "gain": "父母爻（合同文书）得到月建生扶，说明协议层面存在有利基础，合同框架可能对你有一定保障。"
+      },
+      {
+        "cost": "官鬼爻落空亡，风险处于\"未落实\"状态，不确定性高；一旦空亡填实，风险可能集中显现，而作为不参与经营的被动股东，你应对能力有限。",
+        "gain": "官鬼爻（经营风险）得到月建与日辰双重支持，暗示公司可能具备一定的抗风险能力，短期内重大风险爆发的概率不高。"
+      }
+    ],
+    "hexagramReading": {
+      "moving": "本卦六爻安静，没有任何爻发动，因此不存在变卦。六爻安静在传统解读中常表示当前局面处于相对静止状态，事情尚未到必须变动或推进的节点，更适合观察和等待条件成熟。",
+      "changed": "这是静卦，没有变卦，也没有新增的动变方向。后续重点核对：关键参与者给出明确回复或实际行动。",
+      "original": "本卦为地风升，象征从下往上、逐步上升的态势。卦象本身带有渐进发展的意味，暗示事情若推进，更可能是缓慢积累而非一蹴而就。结合你的问题，这提示入股之事即便可行，也更适合以渐进、分阶段的方式处理，而非一次性大动作。",
+      "synthesis": "整体来看，卦象呈现的是一个\"有条件但需谨慎\"的局面。升卦的上升意象与六爻安静的静止状态形成对比：前者暗示此事有发展的可能，后者则提示当前并非主动推进的时机。结合你\"只出资不经营\"的被动角色，卦象似乎在提醒你：在没有足够把握前，不宜急于投入，先让事情自己发展一段时间再作判断更为稳妥。"
+    },
+    "questionResponse": {
+      "focus": "判断今年是否适合以纯出资、不参与经营的方式被动入股该公司",
+      "scopeNote": "本报告仅针对你以出资方式被动入股该公司这一决策，不涉及你亲自经营或其他投资标的。",
+      "directAnswer": "今年被动入股这家公司并非最佳时机，卦象显示你自身的出资状态存在不稳定因素，且整体局面偏于维持现状而非推进新动作。若仍有意向，建议以小额、可退出的方式先观察，并重点核实对方的经营与财务信息，不宜一次性投入大额资金。",
+      "evidenceRefs": [
+        "chart:original_hexagram",
+        "chart:world_response",
+        "chart:line_facts",
+        "evidence:1",
+        "evidence:2",
+        "evidence:3",
+        "evidence:4",
+        "evidence:5",
+        "evidence:6",
+        "evidence:7",
+        "evidence:8",
+        "evidence:9",
+        "evidence:10"
+      ]
+    }
+  }
+}

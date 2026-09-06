@@ -21,6 +21,9 @@ async function generateAIReport(data: GenerateAIReportJobData) {
   const row = await prisma.report.findUnique({ where: { id: data.reportId } });
   if (!row) throw new Error(`Report not found: ${data.reportId}`);
   const type = publicType(row.type);
+  if (type === "liuyao" && (row.result as any)?.chart?.questionProfile?.profileVersion !== "LIUYAO_QUESTION_PROFILE_V2") {
+    throw new Error("QUESTION_UNDERSTANDING_REQUIRED: open the report to confirm its question before queueing interpretation.");
+  }
   const result = attachAiReportBundle(row.result, row.aiReport);
   const provider = providerFromEnv({ rootDir: process.env.SIX_ROOT ?? process.cwd() });
   const aiReportBundle = await generateGroundedAIReport({
@@ -32,14 +35,15 @@ async function generateAIReport(data: GenerateAIReportJobData) {
   const updatedResult = attachAiReportBundle(result, aiReportBundle);
   const experience = buildExperienceBundle({ result: updatedResult, type });
 
-  await prisma.report.update({
-    where: { id: data.reportId },
+  const saved = await prisma.report.updateMany({
+    where: { id: data.reportId, updatedAt: row.updatedAt },
     data: {
       result: updatedResult as object,
       aiReport: aiReportBundle as object,
       experience: experience as object
     }
   });
+  if (saved.count !== 1) throw new Error("REPORT_CHANGED: a newer report revision was preserved.");
 
   return {
     ok: true,

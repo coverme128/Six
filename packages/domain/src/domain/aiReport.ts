@@ -8,7 +8,7 @@ import { resolveFindingExplanation, resolveRelationships, resolveTopicRoleContex
 import { buildLiuyaoProductResultFacts, judgmentFactsSignature } from "./presentation/productResultFacts.js";
 
 export const AI_SCHEMA_VERSION = "AI_REPORT_V1";
-export const LIUYAO_PROMPT_VERSION = "liuyao-report-v8";
+export const LIUYAO_PROMPT_VERSION = "liuyao-report-v9";
 export const MEIHUA_PROMPT_VERSION = "meihua-report-v1";
 
 const OUTCOME_LABELS = new Set(["FAVORABLE", "MIXED", "CAUTIOUS", "UNCLEAR"]);
@@ -85,6 +85,9 @@ export function redactQuestionForAI(question = "") {
 
 function plainGroundingValue(value, fieldName = null) {
   if (typeof value === "string") {
+    if (fieldName === "professionalRole" || fieldName === "professionalBasis") {
+      return value.replace(/\s*[（(]?[A-Z][A-Z0-9_]{3,}[）)]?/gu, "").trim();
+    }
     const grounded = value
       .replace(/同支日\s*\/\s*月|同支日或月份|同支日月/gu, "后续条件更匹配的观察时段")
       .replace(/回头生/gu, "变化后得到支持")
@@ -117,6 +120,17 @@ function plainGroundingValue(value, fieldName = null) {
   return value;
 }
 
+function cleanAIVisibleReferences(value, fieldName = "") {
+  if (["evidenceRefs", "candidateRef", "factClaims", "schemaVersion", "reportType"].includes(fieldName)) return value;
+  if (typeof value === "string") return value
+    .replace(/[（(]\s*(?:(?:evidence|chart|calendar|timing|knowledge):[a-zA-Z0-9_:-]+[\s,，、;；]*)+[）)]/gu, "")
+    .replace(/\b(?:evidence|chart|calendar|timing|knowledge):[a-zA-Z0-9_:-]+/gu, "")
+    .trim();
+  if (Array.isArray(value)) return value.map((item) => cleanAIVisibleReferences(item, fieldName));
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, cleanAIVisibleReferences(item, key)]));
+  return value;
+}
+
 function evidenceRefForFinding(finding) {
   return finding.rule_code ? `rule:${finding.rule_code}` : `finding:${finding.id}`;
 }
@@ -132,6 +146,7 @@ function findingForAI(finding) {
     dimension: finding.dimension,
     summary: finding.summary,
     evidenceKind: finding.evidence_kind,
+    inputFacts: finding.inputFacts ?? finding.input_facts ?? null,
   };
 }
 
@@ -308,7 +323,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     ? (result.productResultFacts ?? buildLiuyaoProductResultFacts({ result }))
     : null;
   const matchedRuleFindings = type === "liuyao"
-    ? (result.report?.evidence ?? []).map(findingForAI)
+    ? (chart.questionProfile?.profileVersion === "LIUYAO_QUESTION_PROFILE_V2" ? result.findings ?? result.report?.evidence ?? [] : result.report?.evidence ?? []).map(findingForAI)
     : (result.report?.evidence ?? []).map(meihuaEvidenceForAI);
   const resolvedSemantics = resolvedSemanticsForAI(result, type);
   const input = {
@@ -316,6 +331,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     reportType: type === "liuyao" ? "LIUYAO" : "MEIHUA",
     questionContext: {
       question: redactQuestionForAI(chart.question),
+      clarification: redactQuestionForAI(chart.questionProfile?.clarification ?? ""),
       questionDigest: questionDigest(chart.question),
       topicCode: chart.topic ?? null,
       subtypeCode: chart.subtype ?? null,
@@ -379,6 +395,7 @@ export function buildAIReportInput({ result, type, language = "zh-CN" }) {
     resolvedTopicRoles: input.resolvedTopicRoles,
     versions: input.versions,
     questionDigest: input.questionContext.questionDigest,
+    clarification: input.questionContext.clarification,
     lineFacts: input.chartFacts.lineFacts,
   });
   return input;
@@ -408,6 +425,7 @@ export function buildAIProviderPayload(input) {
   if (input.reportType === "LIUYAO") {
     return {
       reportType: input.reportType,
+      ...(input.validationFeedback ? { correctionRequest: input.validationFeedback } : {}),
       interpretationContract: {
         mode: "QUESTION_FIRST",
         instruction: "直接理解用户原始问题，再把完整六爻事实转译为针对该问题的解释。不得沿用与问题无关的预设场景文案。",
@@ -416,6 +434,7 @@ export function buildAIProviderPayload(input) {
       },
       questionContext: {
         question: input.questionContext.question,
+        clarification: input.questionContext.clarification,
         language: input.questionContext.language,
         privacy: input.questionContext.privacy,
       },
@@ -424,6 +443,12 @@ export function buildAIProviderPayload(input) {
         yongshen: null,
       },
       calendarFacts: input.calendarFacts,
+      questionUnderstanding: input.questionProfile?.profileVersion === "LIUYAO_QUESTION_PROFILE_V2" ? JSON.parse(JSON.stringify(input.questionProfile, (_key, value) => typeof value === "string" ? redactQuestionForAI(value) : value)) : null,
+      ruleScope: {
+        route: input.questionProfile?.route ?? null,
+        status: input.questionProfile?.status ?? "LEGACY_UNCONFIRMED",
+        instruction: "日月、空亡、生克、动变是计算事实；支持、风险、角色与现实含义属于当前口径下的判断。保留并解释相反信号；弱或空不等于对方实际阻挠，也不证明现实承诺未落实。主问题之外的事项不作独立预测。",
+      },
       matchedRuleFindings: liuyaoProviderFindings(input),
       resolvedRelationships: input.resolvedRelationships.map(({ relationId: _relationId, bindingStatus: _bindingStatus, ...item }) => item),
       timingCandidates: input.timingCandidates,
@@ -804,7 +829,7 @@ export function validateAIReportFidelity(output, input) {
     if (input.questionProfile?.clarificationRequired) {
       assertValid(/身份|入职|合伙|项目合作|投资|顾问|明确/u.test(directAnswer), "QUESTION_CLARIFICATION_MISSING", "Ambiguous question must surface clarification or branches.");
     }
-    if (["CONDITIONAL_PROCEED", "CLARIFY_THEN_PROCEED"].includes(input.decisionFacts?.stance)) {
+    if (input.questionProfile?.profileVersion !== "LIUYAO_QUESTION_PROFILE_V2" && ["CONDITIONAL_PROCEED", "CLARIFY_THEN_PROCEED"].includes(input.decisionFacts?.stance)) {
       assertValid(!exceedsCommitmentBoundary(directAnswer), "DECISION_DIRECTION_INVALID", "AI answer exceeds the allowed decision boundary.");
       assertValid(/先|暂不|条件|明确|核实|验证|有限|小范围/u.test(directAnswer), "DECISION_CONDITION_MISSING", "Conditional decision answer must state a condition or verification step.");
     }
@@ -845,7 +870,7 @@ export function validateAIReportSafety(output) {
   return true;
 }
 
-export function validateAIPlainLanguage(output) {
+export function validateAIPlainLanguage(output, { questionFirst = false, warnings = [] as any[] } = {}) {
   const visibleTextItems = (items = []) => items.map((item) => typeof item === "string" ? item : item?.text ?? "");
   const ordinaryLanguageText = textBlob({
     questionResponse: output.questionResponse ? {
@@ -853,7 +878,7 @@ export function validateAIPlainLanguage(output) {
       directAnswer: output.questionResponse.directAnswer,
       scopeNote: output.questionResponse.scopeNote,
     } : null,
-    hexagramReading: output.hexagramReading,
+    hexagramReading: questionFirst ? null : output.hexagramReading,
     keyElements: (output.keyElements ?? []).map((item) => ({ title: item.title, impact: item.impact, observe: item.observe })),
     realityChecks: output.realityChecks,
     summary: output.summary,
@@ -879,7 +904,13 @@ export function validateAIPlainLanguage(output) {
     } : null,
     finalTakeaway: output.finalTakeaway,
   });
-  assertValid(!/空亡|回头生|月建|日辰|同支日|同支月|世爻|应爻|官鬼|父母爻|妻财|兄弟爻/u.test(ordinaryLanguageText), "PLAIN_LANGUAGE_INVALID", "AI explanation contains unexplained professional terminology.");
+  const jargon = [...new Set(ordinaryLanguageText.match(/空亡|回头生|月建|日辰|同支日|同支月|世爻|应爻|官鬼|父母爻|妻财|兄弟爻/gu) ?? [])];
+  if (questionFirst && jargon.length > 0) {
+    // A word match cannot distinguish an explained term from unexplained jargon.
+    warnings.push({ code: "READABILITY_TERMINOLOGY", terms: jargon });
+  } else {
+    assertValid(jargon.length === 0, "PLAIN_LANGUAGE_INVALID", `AI ordinary-language fields contain professional terminology: ${jargon.join("、")}. Move these terms to professionalBasis; explain their impact in ordinary prose.`);
+  }
   assertValid(!/\b[A-Z][A-Z0-9_]{4,}\b/u.test(ordinaryLanguageText), "PLAIN_LANGUAGE_INVALID", "AI explanation exposes an internal evidence or rule code.");
   assertValid(!/[子丑寅卯辰巳午未申酉戌亥]支(?:窗口|日|月)/u.test(ordinaryLanguageText), "PLAIN_LANGUAGE_INVALID", "AI explanation exposes an unexplained earthly-branch timing label.");
   const actionAndChecks = textBlob({ actionSuggestions: output.actionSuggestions, realityChecks: output.realityChecks, actionPlan: output.actionPlan });
@@ -1130,11 +1161,30 @@ export class OpenAIReportProvider {
   }
 
   promptFor(input) {
-    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v7.md" : "prompts/meihua-report-v1.md";
+    const file = input.reportType === "LIUYAO" ? "prompts/liuyao-report-v9.md" : "prompts/meihua-report-v1.md";
     return readFileSync(resolve(this.rootDir, file), "utf8");
   }
 
   async generateReport(input) {
+    return this.requestJSON({
+      instructions: this.promptFor(input),
+      payload: buildAIProviderPayload(input),
+      format: input.reportType === "LIUYAO" ? liuyaoResponseFormat(input) : { type: "json_object" },
+      maxOutputTokens: this.maxOutputTokens,
+    });
+  }
+
+  async generateQuestionUnderstanding(payload, format = { type: "json_object" }) {
+    return this.requestJSON({
+      instructions: readFileSync(resolve(this.rootDir, "prompts/liuyao-question-v1.md"), "utf8"),
+      payload,
+      format,
+      maxOutputTokens: 1200,
+      temperature: 0,
+    });
+  }
+
+  async requestJSON({ instructions, payload, format, maxOutputTokens, temperature = 0.2 }) {
     if (!this.apiKey) throw new AIReportValidationError("PROVIDER_UNAVAILABLE", "AI provider API key is not configured.");
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), this.timeoutMs);
@@ -1148,13 +1198,13 @@ export class OpenAIReportProvider {
         signal: controller.signal,
         body: JSON.stringify({
           model: this.model,
-          instructions: this.promptFor(input),
-          input: JSON.stringify(buildAIProviderPayload(input)),
-          max_output_tokens: this.maxOutputTokens,
-          temperature: 0.2,
+          instructions,
+          input: JSON.stringify(payload),
+          max_output_tokens: maxOutputTokens,
+          temperature,
+          text: { format },
           ...(this.provider === "deepseek" ? {
             reasoning: { effort: "none" },
-            text: { format: input.reportType === "LIUYAO" ? liuyaoResponseFormat(input) : { type: "json_object" } },
           } : {}),
         }),
       });
@@ -1293,9 +1343,10 @@ export async function generateGroundedAIReport({ result, type, provider = provid
           const groundedOutput = isLiveProvider ? canonicalizeLiveControlledFields(modelOutput, input) : modelOutput;
           const validatedOutput = validateAIReport(groundedOutput, input);
           const output = isLiveProvider
-            ? plainGroundingValue(validatedOutput)
+            ? input.questionProfile?.profileVersion === "LIUYAO_QUESTION_PROFILE_V2" ? cleanAIVisibleReferences(validatedOutput) : plainGroundingValue(validatedOutput)
             : validatedOutput;
-          if (isLiveProvider) validateAIPlainLanguage(output);
+          const presentationWarnings = [];
+          if (isLiveProvider) validateAIPlainLanguage(output, { questionFirst: input.questionProfile?.profileVersion === "LIUYAO_QUESTION_PROFILE_V2", warnings: presentationWarnings });
           output.disclaimer = PUBLIC_AI_DISCLAIMER;
           return {
             aiReport: output,
@@ -1311,6 +1362,7 @@ export async function generateGroundedAIReport({ result, type, provider = provid
             },
             reportSource: provider.provider === "deepseek" ? "DEEPSEEK_LIVE" : provider.provider === "openai" ? "OPENAI_LIVE" : "TEST_FIXTURE",
             validationStatus: "VALID",
+            presentationWarnings,
             fallbackUsed: false,
             attemptCount,
             inputHash: input.inputHash,
@@ -1318,9 +1370,12 @@ export async function generateGroundedAIReport({ result, type, provider = provid
           };
         } catch (err) {
           if (process.env.AI_DEBUG_VALIDATION === "1" && err instanceof AIReportValidationError) {
-            console.error(JSON.stringify({ attempt: attemptCount, validationCode: err.code, details: err.details ?? null }));
+            console.error(JSON.stringify({ attempt: attemptCount, validationCode: err.code, message: err.message, details: err.details ?? null }));
           }
-          if (attemptCount < maxAttempts && err instanceof AIReportValidationError && retryableValidationCodes.has(err.code)) continue;
+          if (attemptCount < maxAttempts && err instanceof AIReportValidationError && retryableValidationCodes.has(err.code)) {
+            input.validationFeedback = { code: err.code, instruction: "重新输出完整 JSON。上次输出未通过校验：" + err.message + "。专业术语只放 professionalBasis，其他字段用自然中文解释，不输出内部编号。保留准确盘面与用户原意。" };
+            continue;
+          }
           throw err;
         }
       }
