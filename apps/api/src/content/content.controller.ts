@@ -55,14 +55,33 @@ function contentDetail(entry: any) {
   };
 }
 
-function includePreviewContent() {
-  return !["beta", "production"].includes(process.env.APP_ENV ?? "development");
+const meihuaOnlyPattern = /((?<!具)体卦|(?<!利)(?<!使)用卦|体用|互卦|外应|梅花(?:易数|起卦|时间起卦))/u;
+
+function containsMeihuaOnlySemantics(entry: any) {
+  return meihuaOnlyPattern.test(JSON.stringify({
+    title: entry.title,
+    summary: entry.summary,
+    body: entry.body,
+    tags: entry.tags
+  }));
 }
 
 function publicContentEntries(entries: any[]) {
-  const liuyaoProductEntries = entries.filter((entry) => String(entry.domain).toLowerCase() !== "meihua");
-  if (includePreviewContent()) return liuyaoProductEntries;
-  return liuyaoProductEntries.filter((entry) => entry.reviewStatus === "PUBLICATION_READY");
+  return entries.filter(
+    (entry) =>
+      String(entry.domain).toLowerCase() === "liuyao" &&
+      entry.reviewStatus === "PUBLICATION_READY" &&
+      !containsMeihuaOnlySemantics(entry)
+  );
+}
+
+function reviewStatusFromDatabase(status: string) {
+  if (status === "PUBLISHED") return "PUBLICATION_READY";
+  if (status === "IN_REVIEW") return "REVIEW_REQUIRED";
+  if (status === "APPROVED") return "REVIEWED";
+  if (status === "ARCHIVED") return "DEFERRED";
+  if (status === "INTERNAL_ONLY") return "INTERNAL_ONLY";
+  return "DEMO_ONLY";
 }
 
 function matchesQuery(entry: any, query: Record<string, string>) {
@@ -99,7 +118,13 @@ async function databaseContentEntries() {
     const rows = await prisma.contentEntry.findMany({
       orderBy: [{ type: "asc" }, { slug: "asc" }]
     });
-    return rows.map((row) => row.payload);
+    return rows.map((row) => ({
+      ...(row.payload as Record<string, unknown>),
+      reviewStatus: reviewStatusFromDatabase(row.status),
+      runtimePublicationStatus: row.status,
+      runtimeCreatedAt: row.createdAt.toISOString(),
+      runtimeUpdatedAt: row.updatedAt.toISOString()
+    }));
   } catch {
     return null;
   }

@@ -1,4 +1,4 @@
-import { BookOpen, FileSearch, FileText, Images, Layers3, Route, Target, TestTube2 } from "lucide-react";
+import { BookOpen, FileSearch, FileText, Images, Layers3, Route, Target } from "lucide-react";
 
 const contentSections = [
   { key: "home", label: "知识首页", href: "/content", icon: BookOpen },
@@ -6,7 +6,6 @@ const contentSections = [
   { key: "collections", label: "学习合集", href: "/content/collections", icon: Layers3 },
   { key: "topics", label: "现实专题", href: "/content#topics", icon: Target },
   { key: "report", label: "报告阅读", href: "/content#report-guide", icon: FileText },
-  { key: "cases", label: "案例练习", href: "/content#case-lab", icon: TestTube2 },
   { key: "visuals", label: "图解知识", href: "/content#visual-atlas", icon: Images },
   { key: "library", label: "全部资料", href: "/content/library", icon: FileSearch },
 ] as const;

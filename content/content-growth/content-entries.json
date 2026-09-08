@@ -1,6 +1,6 @@
 {
   "schemaVersion": "CONTENT_SCHEMA_V1",
-  "generatedAt": "2026-08-22T00:00:00.000Z",
+  "generatedAt": "2026-09-08T13:05:54.108Z",
   "source": "Liuyao Content Growth Batch 01-07",
   "items": [
     {
@@ -17234,16 +17234,16 @@
         "title": "六爻中的“用神”到底是什么｜六爻角色与用神基础",
         "description": "用神是问题驱动的专业焦点：系统先理解用户问什么，再依据正式角色与用神规则确定需要重点观察的对象。本文重点说明把用神理解为本次问题的核心观察对象，而不是所谓“最吉利的爻”。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "canonicalPath": "/content/tutorial/what-is-yongshen-in-liuyao",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻中的“用神”到底是什么",
         "ogDescription": "用神是问题驱动的专业焦点：系统先理解用户问什么，再依据正式角色与用神规则确定需要重点观察的对象。本文重点说明把用神理解为本次问题的核心观察对象，而不是所谓“最吉利的爻”。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "ogImage": "/content-growth/visuals/B03-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -17399,16 +17399,16 @@
         "title": "为什么同一个卦，不同问题可能选择不同用神｜六爻角色与用神基础",
         "description": "同一盘面包含多层角色信息；问题不同，核心任务、目标对象和关系结构也不同，因此用神选择不能脱离问题主题。本文重点说明解释六爻为什么必须围绕具体问题组织观察重点，而不能脱离问题机械读卦。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "canonicalPath": "/content/tutorial/why-yongshen-changes-by-question",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么同一个卦，不同问题可能选择不同用神",
         "ogDescription": "同一盘面包含多层角色信息；问题不同，核心任务、目标对象和关系结构也不同，因此用神选择不能脱离问题主题。本文重点说明解释六爻为什么必须围绕具体问题组织观察重点，而不能脱离问题机械读卦。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "ogImage": "/content-growth/visuals/B03-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -17568,16 +17568,16 @@
         "title": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼｜六爻角色与用神基础",
         "description": "六亲在六爻中承担的是结构化角色分类。名称来自传统体系，但进入现实问题时，需要结合问题主题解释为文书、资源、竞争、产出、收益、职责等不同角色。本文重点说明建立“六亲是角色分类系统”的现代 Mental Model，避免字面主义。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/six-relations-are-role-categories",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲为什么不是字面意义上的父母、兄弟、子孙、妻财、官鬼",
         "ogDescription": "六亲在六爻中承担的是结构化角色分类。名称来自传统体系，但进入现实问题时，需要结合问题主题解释为文书、资源、竞争、产出、收益、职责等不同角色。本文重点说明建立“六亲是角色分类系统”的现代 Mental Model，避免字面主义。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -17736,16 +17736,16 @@
         "title": "父母爻通常代表什么｜六爻角色与用神基础",
         "description": "父母爻可以作为文书、合同、资料、证件、制度、房屋、保护或长辈等角色的传统分类入口，但不能脱离问题主题固定翻译。本文重点说明解释父母类角色的基础语义，同时强调上下文与正式规则 的优先级。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/parent-line-role-meaning",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "父母爻通常代表什么",
         "ogDescription": "父母爻可以作为文书、合同、资料、证件、制度、房屋、保护或长辈等角色的传统分类入口，但不能脱离问题主题固定翻译。本文重点说明解释父母类角色的基础语义，同时强调上下文与正式规则 的优先级。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-04.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -17905,16 +17905,16 @@
         "title": "兄弟爻通常代表什么｜六爻角色与用神基础",
         "description": "兄弟爻常被用于组织同类主体、同辈关系、同行、伙伴、竞争或资源分担等语义；它的作用取决于问题任务与后续关系状态。本文重点说明解释兄弟类角色可能对应同辈、同行、伙伴、竞争与资源分担，避免天然负面化。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/sibling-line-role-meaning",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "兄弟爻通常代表什么",
         "ogDescription": "兄弟爻常被用于组织同类主体、同辈关系、同行、伙伴、竞争或资源分担等语义；它的作用取决于问题任务与后续关系状态。本文重点说明解释兄弟类角色可能对应同辈、同行、伙伴、竞争与资源分担，避免天然负面化。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18073,16 +18073,16 @@
         "title": "子孙爻通常代表什么｜六爻角色与用神基础",
         "description": "子孙爻可以进入成果、产出、解决路径、释放、子女、娱乐或缓解等角色语义，但并不等于单一的“好结果”。本文重点说明解释子孙类角色的产出、解决、成果、缓解等基础含义，并保留多义性。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "canonicalPath": "/content/tutorial/child-line-role-meaning",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "子孙爻通常代表什么",
         "ogDescription": "子孙爻可以进入成果、产出、解决路径、释放、子女、娱乐或缓解等角色语义，但并不等于单一的“好结果”。本文重点说明解释子孙类角色的产出、解决、成果、缓解等基础含义，并保留多义性。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "ogImage": "/content-growth/visuals/B03-VIS-06.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18241,16 +18241,16 @@
         "title": "妻财爻通常代表什么｜六爻角色与用神基础",
         "description": "妻财爻在不同问题中可以连接财富、收入、交易所得、现实资源或传统伴侣角色，但内容呈现必须区分“角色语义”与“结果承诺”。本文重点说明解释收益、收入、资源与传统伴侣角色的基础映射，避免字面与投资承诺。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/wealth-line-role-meaning",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "妻财爻通常代表什么",
         "ogDescription": "妻财爻在不同问题中可以连接财富、收入、交易所得、现实资源或传统伴侣角色，但内容呈现必须区分“角色语义”与“结果承诺”。本文重点说明解释收益、收入、资源与传统伴侣角色的基础映射，避免字面与投资承诺。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18409,16 +18409,16 @@
         "title": "官鬼爻通常代表什么｜六爻角色与用神基础",
         "description": "官鬼爻可以进入职位、责任、制度压力、规则约束、风险、官方事务等角色语义；传统健康问法中也可能出现相关角色，但产品不能据此做医疗诊断。本文重点说明解释职位、责任、压力、约束、风险等基础角色，并明确健康内容不作为医疗诊断。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/official-ghost-line-role-meaning",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "官鬼爻通常代表什么",
         "ogDescription": "官鬼爻可以进入职位、责任、制度压力、规则约束、风险、官方事务等角色语义；传统健康问法中也可能出现相关角色，但产品不能据此做医疗诊断。本文重点说明解释职位、责任、压力、约束、风险等基础角色，并明确健康内容不作为医疗诊断。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-08.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18579,16 +18579,16 @@
         "title": "六亲角色如何与现实问题建立映射｜六爻角色与用神基础",
         "description": "角色映射不是关键词匹配，而是一条受问题主题约束的内容与规则协作链：先理解用户任务，再识别对象和关系，最后由正式 Registry 给出可用角色。本文重点说明建立从现实问题到主题、任务对象、角色、六亲候选和用神候选的结构化路径。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/map-real-world-roles-to-six-relations",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲角色如何与现实问题建立映射",
         "ogDescription": "角色映射不是关键词匹配，而是一条受问题主题约束的内容与规则协作链：先理解用户任务，再识别对象和关系，最后由正式 Registry 给出可用角色。本文重点说明建立从现实问题到主题、任务对象、角色、六亲候选和用神候选的结构化路径。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18748,16 +18748,16 @@
         "title": "事业和工作问题中，应该怎样理解不同六亲角色｜六爻角色与用神基础",
         "description": "事业问题通常包含多个现实对象：职位机会、组织规则、合同材料、收入回报、同行竞争、工作成果以及管理压力。六亲系统用于把这些对象组织进可判断结构。本文重点说明用事业场景说明职位、公司、合同、收入、竞争、成果和压力如何成为不同角色候选。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/six-relations-in-career-questions",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "事业和工作问题中，应该怎样理解不同六亲角色",
         "ogDescription": "事业问题通常包含多个现实对象：职位机会、组织规则、合同材料、收入回报、同行竞争、工作成果以及管理压力。六亲系统用于把这些对象组织进可判断结构。本文重点说明用事业场景说明职位、公司、合同、收入、竞争、成果和压力如何成为不同角色候选。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -18915,16 +18915,16 @@
         "title": "财务与商业问题中，六亲角色如何变化｜六爻角色与用神基础",
         "description": "财务与商业问题往往同时包含资金、交易、合同、合作、成本、竞争、成果和规则约束。六亲映射的价值是把这些对象区分，而不是给一个词贴上唯一结论。本文重点说明说明收入、资金、合同、合作方、竞争、成果与规则风险在商业问题中的角色差异。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/six-relations-in-business-finance",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "财务与商业问题中，六亲角色如何变化",
         "ogDescription": "财务与商业问题往往同时包含资金、交易、合同、合作、成本、竞争、成果和规则约束。六亲映射的价值是把这些对象区分，而不是给一个词贴上唯一结论。本文重点说明说明收入、资金、合同、合作方、竞争、成果与规则风险在商业问题中的角色差异。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19086,16 +19086,16 @@
         "title": "感情与关系问题中，为什么不能只看一个六亲｜六爻角色与用神基础",
         "description": "关系问题天然包含至少两个主体及其互动。仅盯住一个六亲，会丢失求测方立场、对方位置、相互作用和其它支持或阻碍条件。本文重点说明说明关系问题需要世应、双方角色、用神与支持/阻碍结构共同解释。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/relationship-questions-need-multiple-roles",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "感情与关系问题中，为什么不能只看一个六亲",
         "ogDescription": "关系问题天然包含至少两个主体及其互动。仅盯住一个六亲，会丢失求测方立场、对方位置、相互作用和其它支持或阻碍条件。本文重点说明说明关系问题需要世应、双方角色、用神与支持/阻碍结构共同解释。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19254,16 +19254,16 @@
         "title": "世爻在六爻判断中代表什么｜六爻角色与用神基础",
         "description": "世爻提供一个关系分析坐标，用来组织求测方、当前立场或问题中的一侧。具体代表谁、代表什么，需要结合问题主题与角色规则。本文重点说明解释世爻是分析坐标，常与求测方或当前立场相关，但不等于永远固定的“我”。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/what-shi-line-represents",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "世爻在六爻判断中代表什么",
         "ogDescription": "世爻提供一个关系分析坐标，用来组织求测方、当前立场或问题中的一侧。具体代表谁、代表什么，需要结合问题主题与角色规则。本文重点说明解释世爻是分析坐标，常与求测方或当前立场相关，但不等于永远固定的“我”。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19422,16 +19422,16 @@
         "title": "应爻在六爻判断中代表什么｜六爻角色与用神基础",
         "description": "应爻与世爻形成重要的对应坐标，可用于组织另一方、外部对象或环境侧信息；但它不是“永远等于对方”的固定标签。本文重点说明解释应爻作为对应关系坐标，可能连接对方、外部对象或环境一侧。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "canonicalPath": "/content/tutorial/what-ying-line-represents",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应爻在六爻判断中代表什么",
         "ogDescription": "应爻与世爻形成重要的对应坐标，可用于组织另一方、外部对象或环境侧信息；但它不是“永远等于对方”的固定标签。本文重点说明解释应爻作为对应关系坐标，可能连接对方、外部对象或环境一侧。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "ogImage": "/content-growth/visuals/B03-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19595,16 +19595,16 @@
         "title": "世应关系为什么是六爻关系分析的重要基础｜六爻角色与用神基础",
         "description": "世应把关系型问题中的两侧放进同一坐标系，使“谁作用于谁、是支持、制约还是同类关系”可以被结构化表达。本文重点说明解释世与应之间的生、克、比和等基础关系语义，不进行旺衰与最终吉凶裁决。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "canonicalPath": "/content/tutorial/why-shi-ying-relationship-matters",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "世应关系为什么是六爻关系分析的重要基础",
         "ogDescription": "世应把关系型问题中的两侧放进同一坐标系，使“谁作用于谁、是支持、制约还是同类关系”可以被结构化表达。本文重点说明解释世与应之间的生、克、比和等基础关系语义，不进行旺衰与最终吉凶裁决。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，也让 专业阅读 用户能够核验角色来源。",
         "ogImage": "/content-growth/visuals/B03-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19769,16 +19769,16 @@
         "title": "原神、忌神和仇神分别是什么｜六爻角色与用神基础",
         "description": "围绕用神，传统六爻会进一步组织支持链与阻碍链。原神、忌神、仇神用于表达不同的作用位置，但标签本身并不是最终结论。本文重点说明解释用神辅助角色之间的基本逻辑关系，同时避免把标签直接等同吉凶。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "canonicalPath": "/content/tutorial/yuan-shen-ji-shen-chou-shen",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "原神、忌神和仇神分别是什么",
         "ogDescription": "围绕用神，传统六爻会进一步组织支持链与阻碍链。原神、忌神、仇神用于表达不同的作用位置，但标签本身并不是最终结论。本文重点说明解释用神辅助角色之间的基本逻辑关系，同时避免把标签直接等同吉凶。同时区分内容解释、项目正式规则与后续判断边界，帮助普通用户看懂报告，",
         "ogImage": "/content-growth/visuals/B03-VIS-06.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -19938,16 +19938,16 @@
         "title": "支持因素与阻碍因素应该如何从专业关系中理解｜六爻角色与用神基础",
         "description": "引导阅读 报告不应该把所有专业术语直接堆给用户，而应把经过规则确认的关系事实转化成“主要支持”“主要阻碍”“竞争”“消耗”“缓解”等可行动表达。本文重点说明说明专业关系如何经过 Relationship Meaning 与 Presenter 转化为 引导阅读 的支持、阻碍、竞争、消耗等语言",
         "canonicalPath": "/content/tutorial/professional-relations-to-supports-risks",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "支持因素与阻碍因素应该如何从专业关系中理解",
         "ogDescription": "引导阅读 报告不应该把所有专业术语直接堆给用户，而应把经过规则确认的关系事实转化成“主要支持”“主要阻碍”“竞争”“消耗”“缓解”等可行动表达。本文重点说明说明专业关系如何经过 Relationship Meaning 与 Presenter 转化为 引导阅读 的支持、阻碍、竞争、消耗等语言",
         "ogImage": "/content-growth/visuals/B03-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20102,16 +20102,16 @@
         "title": "怎样核验一份六爻报告中的用神与角色判断｜六爻角色与用神基础",
         "description": "核验用神与角色判断的重点不是重新解一遍卦，而是确认“问题是否被正确理解、角色是否匹配、用神是否来自正式规则、AI 是否只解释已有事实”。本文重点说明提供从原问题、主题、角色、六亲、用神、世应、关系到证据的 专业阅读 核验路径。同时区分内容解释、项目正式规则与后续判断边界，",
         "canonicalPath": "/content/tutorial/audit-yongshen-and-role-selection",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "怎样核验一份六爻报告中的用神与角色判断",
         "ogDescription": "核验用神与角色判断的重点不是重新解一遍卦，而是确认“问题是否被正确理解、角色是否匹配、用神是否来自正式规则、AI 是否只解释已有事实”。本文重点说明提供从原问题、主题、角色、六亲、用神、世应、关系到证据的 专业阅读 核验路径。同时区分内容解释、项目正式规则与后续判断边界，",
         "ogImage": "/content-growth/visuals/B03-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20186,16 +20186,16 @@
         "title": "用神",
         "description": "围绕本次问题由正式规则确定的核心观察对象，不是“最吉利的爻”。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-01-用神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "用神",
         "ogDescription": "围绕本次问题由正式规则确定的核心观察对象，不是“最吉利的爻”。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20270,16 +20270,16 @@
         "title": "用神候选",
         "description": "在问题主题与现实角色识别后，进入正式用神规则核验的候选观察对象。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-02-用神候选",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "用神候选",
         "ogDescription": "在问题主题与现实角色识别后，进入正式用神规则核验的候选观察对象。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20354,16 +20354,16 @@
         "title": "角色映射",
         "description": "把现实任务中的人物、资源、制度、目标等对象转换为六爻可处理角色的过程。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-03-角色映射",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "角色映射",
         "ogDescription": "把现实任务中的人物、资源、制度、目标等对象转换为六爻可处理角色的过程。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20438,16 +20438,16 @@
         "title": "问题主题",
         "description": "对本次占问任务类型的结构化描述，是角色和用神选择的重要上下文。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-04-问题主题",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "问题主题",
         "ogDescription": "对本次占问任务类型的结构化描述，是角色和用神选择的重要上下文。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20522,16 +20522,16 @@
         "title": "求测主体",
         "description": "本次问题中发起判断、承担决策或代表当前立场的一侧。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-05-求测主体",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "求测主体",
         "ogDescription": "本次问题中发起判断、承担决策或代表当前立场的一侧。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20606,16 +20606,16 @@
         "title": "目标对象",
         "description": "用户真正想观察的事件、资源、职位、合同、收益或其它核心对象。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-06-目标对象",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "目标对象",
         "ogDescription": "用户真正想观察的事件、资源、职位、合同、收益或其它核心对象。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20690,16 +20690,16 @@
         "title": "关系对象",
         "description": "与求测主体发生互动、合作、竞争、约束或交换的另一侧对象。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-07-关系对象",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "关系对象",
         "ogDescription": "与求测主体发生互动、合作、竞争、约束或交换的另一侧对象。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20774,16 +20774,16 @@
         "title": "支持角色",
         "description": "经正式关系规则确认后，对核心观察对象形成支持或缓解作用的角色。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-08-支持角色",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "支持角色",
         "ogDescription": "经正式关系规则确认后，对核心观察对象形成支持或缓解作用的角色。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20858,16 +20858,16 @@
         "title": "阻碍角色",
         "description": "经正式关系规则确认后，对核心观察对象形成制约、消耗或阻碍作用的角色。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-09-阻碍角色",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "阻碍角色",
         "ogDescription": "经正式关系规则确认后，对核心观察对象形成制约、消耗或阻碍作用的角色。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -20942,16 +20942,16 @@
         "title": "中性角色",
         "description": "在当前问题中暂未被规则确认为主要支持或主要阻碍的相关角色。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-10-中性角色",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "中性角色",
         "ogDescription": "在当前问题中暂未被规则确认为主要支持或主要阻碍的相关角色。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21026,16 +21026,16 @@
         "title": "六亲在现实问题中的角色｜六爻知识",
         "description": "父母、兄弟、子孙、妻财、官鬼五类专业角色名称组成的关系分类系统。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-11-六亲",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲在现实问题中的角色",
         "ogDescription": "父母、兄弟、子孙、妻财、官鬼五类专业角色名称组成的关系分类系统。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21110,16 +21110,16 @@
         "title": "父母爻",
         "description": "可连接文书、合同、资料、制度、房屋、保护或长辈等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-12-父母爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "父母爻",
         "ogDescription": "可连接文书、合同、资料、制度、房屋、保护或长辈等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21194,16 +21194,16 @@
         "title": "兄弟爻",
         "description": "可连接同辈、同行、伙伴、竞争、分担或资源消耗等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-13-兄弟爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "兄弟爻",
         "ogDescription": "可连接同辈、同行、伙伴、竞争、分担或资源消耗等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21278,16 +21278,16 @@
         "title": "子孙爻",
         "description": "可连接产出、成果、解决、释放、缓解、子女或娱乐等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-14-子孙爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "子孙爻",
         "ogDescription": "可连接产出、成果、解决、释放、缓解、子女或娱乐等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21362,16 +21362,16 @@
         "title": "妻财爻",
         "description": "可连接财富、收入、交易所得、现实资源及特定传统关系角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-15-妻财爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "妻财爻",
         "ogDescription": "可连接财富、收入、交易所得、现实资源及特定传统关系角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21446,16 +21446,16 @@
         "title": "官鬼爻",
         "description": "可连接职位、责任、压力、规则约束、风险或官方事务等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-16-官鬼爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "官鬼爻",
         "ogDescription": "可连接职位、责任、压力、规则约束、风险或官方事务等角色的六亲类别。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21530,16 +21530,16 @@
         "title": "六亲现实映射",
         "description": "把传统六亲类别翻译为当前现实问题中的具体人物、资源、制度和任务对象。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-17-六亲现实映射",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲现实映射",
         "ogDescription": "把传统六亲类别翻译为当前现实问题中的具体人物、资源、制度和任务对象。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21614,16 +21614,16 @@
         "title": "六亲多义性",
         "description": "同一六亲在不同问题中可以承担不同现实意义，不能固定成单一关键词。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-18-六亲多义性",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲多义性",
         "ogDescription": "同一六亲在不同问题中可以承担不同现实意义，不能固定成单一关键词。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21698,16 +21698,16 @@
         "title": "六亲上下文",
         "description": "决定六亲如何解释的问题主题、对象、时间和关系背景。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-19-六亲上下文",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲上下文",
         "ogDescription": "决定六亲如何解释的问题主题、对象、时间和关系背景。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21782,16 +21782,16 @@
         "title": "六亲角色冲突",
         "description": "当一个现实对象存在多个可能映射时，需要依正式 Registry 消除歧义而非由 AI 猜测。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-20-六亲角色冲突",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六亲角色冲突",
         "ogDescription": "当一个现实对象存在多个可能映射时，需要依正式 Registry 消除歧义而非由 AI 猜测。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21866,16 +21866,16 @@
         "title": "世爻在问题中的主体位置｜六爻知识",
         "description": "用于组织求测方、当前立场或问题一侧的重要分析坐标，具体角色依上下文确定。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-21-世爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "世爻在问题中的主体位置",
         "ogDescription": "用于组织求测方、当前立场或问题一侧的重要分析坐标，具体角色依上下文确定。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -21950,16 +21950,16 @@
         "title": "应爻在问题中的对应位置｜六爻知识",
         "description": "与世爻形成对应关系的分析坐标，可连接另一方、外部对象或环境侧。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-22-应爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应爻在问题中的对应位置",
         "ogDescription": "与世爻形成对应关系的分析坐标，可连接另一方、外部对象或环境侧。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22034,16 +22034,16 @@
         "title": "世应关系",
         "description": "世爻与应爻之间的作用方向和关系类型，是关系问题的重要结构信息。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-23-世应关系",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "世应关系",
         "ogDescription": "世爻与应爻之间的作用方向和关系类型，是关系问题的重要结构信息。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22118,16 +22118,16 @@
         "title": "生",
         "description": "表示一个对象对另一个对象形成生扶或支持方向的基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-24-生",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "生",
         "ogDescription": "表示一个对象对另一个对象形成生扶或支持方向的基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22202,16 +22202,16 @@
         "title": "克",
         "description": "表示一个对象对另一个对象形成制约或限制方向的基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-25-克",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "克",
         "ogDescription": "表示一个对象对另一个对象形成制约或限制方向的基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22286,16 +22286,16 @@
         "title": "比和",
         "description": "表示关系双方处于同类或相对平行状态的一种基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-26-比和",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "比和",
         "ogDescription": "表示关系双方处于同类或相对平行状态的一种基础关系语义。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22370,16 +22370,16 @@
         "title": "关系方向",
         "description": "区分谁作用于谁的方向信息，用于避免把“生克”只看成没有主体的标签。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-27-关系方向",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "关系方向",
         "ogDescription": "区分谁作用于谁的方向信息，用于避免把“生克”只看成没有主体的标签。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22454,16 +22454,16 @@
         "title": "原神",
         "description": "围绕用神形成支持链的传统辅助角色概念，实际作用仍需后续规则确认。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-28-原神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "原神",
         "ogDescription": "围绕用神形成支持链的传统辅助角色概念，实际作用仍需后续规则确认。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22538,16 +22538,16 @@
         "title": "忌神",
         "description": "围绕用神形成阻碍链的传统辅助角色概念，不能直接等同最终坏结果。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-29-忌神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "忌神",
         "ogDescription": "围绕用神形成阻碍链的传统辅助角色概念，不能直接等同最终坏结果。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22622,16 +22622,16 @@
         "title": "仇神",
         "description": "与支持链发生制约关系的传统辅助角色概念，实际效力需结合完整规则。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-30-仇神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "仇神",
         "ogDescription": "与支持链发生制约关系的传统辅助角色概念，实际效力需结合完整规则。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22706,16 +22706,16 @@
         "title": "用神支持链",
         "description": "围绕用神组织支持来源、作用方向与证据的关系链，而非单一吉利标签。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-31-用神支持链",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "用神支持链",
         "ogDescription": "围绕用神组织支持来源、作用方向与证据的关系链，而非单一吉利标签。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22790,16 +22790,16 @@
         "title": "用神阻碍链",
         "description": "围绕用神组织制约、消耗或阻碍来源的关系链，而非单一凶险标签。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-32-用神阻碍链",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "用神阻碍链",
         "ogDescription": "围绕用神组织制约、消耗或阻碍来源的关系链，而非单一凶险标签。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22874,16 +22874,16 @@
         "title": "主要支持",
         "description": "Presenter 从已确认专业关系与证据中提炼出的高优先级用户可读支持因素。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-33-主要支持",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "主要支持",
         "ogDescription": "Presenter 从已确认专业关系与证据中提炼出的高优先级用户可读支持因素。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -22958,16 +22958,16 @@
         "title": "主要阻碍",
         "description": "Presenter 从已确认专业关系与证据中提炼出的高优先级用户可读阻碍因素。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-34-主要阻碍",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "主要阻碍",
         "ogDescription": "Presenter 从已确认专业关系与证据中提炼出的高优先级用户可读阻碍因素。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -23042,16 +23042,16 @@
         "title": "角色判断依据",
         "description": "解释问题主题、角色映射、用神与关系结论为何成立的可核验依据集合。它帮助用户把专业术语放回具体问题中理解。",
         "canonicalPath": "/content/knowledge/b03-kc-35-角色判断依据",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "角色判断依据",
         "ogDescription": "解释问题主题、角色映射、用神与关系结论为何成立的可核验依据集合。它帮助用户把专业术语放回具体问题中理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -25759,16 +25759,16 @@
         "title": "六爻中的旺衰到底是什么意思｜六爻专业规则基础",
         "description": "旺衰用于描述关键爻在当前时间与关系环境中的状态强弱，是后续判断的一部分，不是把“旺”直接翻译为好、把“衰”直接翻译为坏。 核心对象、月日环境、支持来源、受制关系与其它状态会共同影响专业判断；项目实际强弱等级和优先级必须由 Strength Registry 核验。",
         "canonicalPath": "/content/tutorial/liuyao-strength-status",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻中的旺衰到底是什么意思",
         "ogDescription": "旺衰用于描述关键爻在当前时间与关系环境中的状态强弱，是后续判断的一部分，不是把“旺”直接翻译为好、把“衰”直接翻译为坏。 核心对象、月日环境、支持来源、受制关系与其它状态会共同影响专业判断；项目实际强弱等级和优先级必须由 Strength Registry 核验。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -25920,16 +25920,16 @@
         "title": "月建在六爻判断中负责什么｜六爻专业规则基础",
         "description": "月建用于表达占问时所处的月度时间环境，是判断爻状态的重要背景因素之一。 它提供环境性支持或制约线索，但具体效力、权重和与其它事实的优先级属于项目 Strength Registry，内容层不能自行设定。",
         "canonicalPath": "/content/tutorial/month-branch-role",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月建在六爻判断中负责什么",
         "ogDescription": "月建用于表达占问时所处的月度时间环境，是判断爻状态的重要背景因素之一。 它提供环境性支持或制约线索，但具体效力、权重和与其它事实的优先级属于项目 Strength Registry，内容层不能自行设定。",
         "ogImage": "/content-growth/visuals/B04-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26080,16 +26080,16 @@
         "title": "日辰在六爻判断中负责什么｜六爻专业规则基础",
         "description": "日辰提供占问当日的即时环境信息，会参与关键爻状态、关系与变化的专业判断。 日辰不能脱离月建、用神、动变和其它状态单独成为最终结论；实际 Rule ID 与效力条件需仓库核验。",
         "canonicalPath": "/content/tutorial/day-branch-role",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "日辰在六爻判断中负责什么",
         "ogDescription": "日辰提供占问当日的即时环境信息，会参与关键爻状态、关系与变化的专业判断。 日辰不能脱离月建、用神、动变和其它状态单独成为最终结论；实际 Rule ID 与效力条件需仓库核验。",
         "ogImage": "/content-growth/visuals/B04-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26245,16 +26245,16 @@
         "title": "月建与日辰应该怎样一起理解｜六爻专业规则基础",
         "description": "月建和日辰提供不同层次的时间环境信息，产品需要把二者都作为证据来源，而不是让用户在二者之间二选一。 具体出现冲突时如何裁决、谁在什么条件下优先，必须服从 Strength Registry 与 证据冲突处理 Registry。",
         "canonicalPath": "/content/tutorial/month-and-day-context",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月建与日辰应该怎样一起理解",
         "ogDescription": "月建和日辰提供不同层次的时间环境信息，产品需要把二者都作为证据来源，而不是让用户在二者之间二选一。 具体出现冲突时如何裁决、谁在什么条件下优先，必须服从 Strength Registry 与 证据冲突处理 Registry。",
         "ogImage": "/content-growth/visuals/B04-VIS-04.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26407,16 +26407,16 @@
         "title": "什么是得令、得地与得助｜六爻专业规则基础",
         "description": "得令、得地、得助可用于理解对象获得时间、位置或关系支持的不同来源，但项目是否采用这些同名分类及其权重必须以正式规则为准。 内容层只负责解释“支持从哪里来”的 Mental Model，不建立评分公式，也不把支持数量直接换算成吉凶。",
         "canonicalPath": "/content/tutorial/sources-of-support",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么是得令、得地与得助",
         "ogDescription": "得令、得地、得助可用于理解对象获得时间、位置或关系支持的不同来源，但项目是否采用这些同名分类及其权重必须以正式规则为准。 内容层只负责解释“支持从哪里来”的 Mental Model，不建立评分公式，也不把支持数量直接换算成吉凶。",
         "ogImage": "/content-growth/visuals/B04-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26572,16 +26572,16 @@
         "title": "什么是受制、受克与消耗｜六爻专业规则基础",
         "description": "受制、受克与消耗描述不同形式的限制、压力或资源流失，是理解阻碍来源的专业语言。 单个制约事实不等于失败；需要结合对象强弱、作用方向、动变以及其它证据综合判断。界面还应提供“查看依据”入口，使用户能从一句结论回到对象、状态、关系与证据，而不是把自然语言当作不可核验的判断。",
         "canonicalPath": "/content/tutorial/constraint-control-consumption",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么是受制、受克与消耗",
         "ogDescription": "受制、受克与消耗描述不同形式的限制、压力或资源流失，是理解阻碍来源的专业语言。 单个制约事实不等于失败；需要结合对象强弱、作用方向、动变以及其它证据综合判断。界面还应提供“查看依据”入口，使用户能从一句结论回到对象、状态、关系与证据，而不是把自然语言当作不可核验的判断。",
         "ogImage": "/content-growth/visuals/B04-VIS-06.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26737,16 +26737,16 @@
         "title": "旬空是什么意思，为什么不能简单理解成“没有”｜六爻专业规则基础",
         "description": "旬空是一类与干支时间结构有关的专业状态，不能机械理解为对象不存在、完全无效或永久失去作用。 具体何时形成、何时变化、怎样进入 Timing 与 Conflict 规则，必须以项目正式 Registry 为准。",
         "canonicalPath": "/content/tutorial/xunkong-explained",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旬空是什么意思，为什么不能简单理解成“没有”",
         "ogDescription": "旬空是一类与干支时间结构有关的专业状态，不能机械理解为对象不存在、完全无效或永久失去作用。 具体何时形成、何时变化、怎样进入 Timing 与 Conflict 规则，必须以项目正式 Registry 为准。",
         "ogImage": "/content-growth/visuals/B04-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -26900,16 +26900,16 @@
         "title": "月破是什么意思，它在报告中应怎样理解｜六爻专业规则基础",
         "description": "月破是一类重要状态信号，用于说明对象与月度环境之间存在特定关系，但不能被直接翻译成“必凶”或“必败”。 其真实效力必须结合对象角色、用神、动静、其它状态与项目规则；内容层只提供用户可读解释。",
         "canonicalPath": "/content/tutorial/yuepo-explained",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月破是什么意思，它在报告中应怎样理解",
         "ogDescription": "月破是一类重要状态信号，用于说明对象与月度环境之间存在特定关系，但不能被直接翻译成“必凶”或“必败”。 其真实效力必须结合对象角色、用神、动静、其它状态与项目规则；内容层只提供用户可读解释。",
         "ogImage": "/content-growth/visuals/B04-VIS-08.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27066,16 +27066,16 @@
         "title": "日冲是什么意思，它与月破有什么不同｜六爻专业规则基础",
         "description": "日冲来自日层面的冲关系，月破来自月层面的特定状态来源，两者不能因为都有“冲破”语感就当作同一个规则。 冲起、冲实等更细规则若没有正式规则 依据，本 Batch 不自行展开或写死。",
         "canonicalPath": "/content/tutorial/richong-vs-yuepo",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "日冲是什么意思，它与月破有什么不同",
         "ogDescription": "日冲来自日层面的冲关系，月破来自月层面的特定状态来源，两者不能因为都有“冲破”语感就当作同一个规则。 冲起、冲实等更细规则若没有正式规则 依据，本 Batch 不自行展开或写死。",
         "ogImage": "/content-growth/visuals/B04-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27232,16 +27232,16 @@
         "title": "动爻为什么是六爻变化判断的重要信息｜六爻专业规则基础",
         "description": "动爻表示盘面中发生变化的关键位置，为后续变爻、关系变化和动态规则提供入口。 动不等于凶，也不自动等于事件一定发生；必须结合六亲、用神、旺衰、生克和 Dynamic Rule Registry。",
         "canonicalPath": "/content/tutorial/moving-line-dynamics",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "动爻为什么是六爻变化判断的重要信息",
         "ogDescription": "动爻表示盘面中发生变化的关键位置，为后续变爻、关系变化和动态规则提供入口。 动不等于凶，也不自动等于事件一定发生；必须结合六亲、用神、旺衰、生克和 Dynamic Rule Registry。",
         "ogImage": "/content-growth/visuals/B04-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27398,16 +27398,16 @@
         "title": "变爻在六爻判断中负责什么｜六爻专业规则基础",
         "description": "变爻承接动爻变化后的新状态与关系信息，用于描述变化之后可能出现的支持、制约或方向。 变爻不是“最终结果”的同义词；它必须与原始动爻、对象角色和其它规则共同理解。界面还应提供“查看依据”入口，使用户能从一句结论回到对象、状态、关系与证据，而不是把自然语言当作不可核验的判断。",
         "canonicalPath": "/content/tutorial/changed-line-role",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "变爻在六爻判断中负责什么",
         "ogDescription": "变爻承接动爻变化后的新状态与关系信息，用于描述变化之后可能出现的支持、制约或方向。 变爻不是“最终结果”的同义词；它必须与原始动爻、对象角色和其它规则共同理解。界面还应提供“查看依据”入口，使用户能从一句结论回到对象、状态、关系与证据，而不是把自然语言当作不可核验的判断。",
         "ogImage": "/content-growth/visuals/B04-VIS-11.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27564,16 +27564,16 @@
         "title": "回头生与回头克应该怎样理解｜六爻专业规则基础",
         "description": "回头生与回头克用于描述动爻变化后，变爻对原动爻形成的支持性或制约性作用方向。 具体成立条件、效力和优先级属于 Dynamic Rule Registry；内容层不能用通行口诀代替项目规则。",
         "canonicalPath": "/content/tutorial/returning-support-and-control",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回头生与回头克应该怎样理解",
         "ogDescription": "回头生与回头克用于描述动爻变化后，变爻对原动爻形成的支持性或制约性作用方向。 具体成立条件、效力和优先级属于 Dynamic Rule Registry；内容层不能用通行口诀代替项目规则。",
         "ogImage": "/content-growth/visuals/B04-VIS-12.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27728,16 +27728,16 @@
         "title": "进神与退神是什么意思｜六爻专业规则基础",
         "description": "进神与退神可作为变化方向增强或减弱的专业语义入口，但“进”不等于成功，“退”也不等于失败。 具体构成条件和与旺衰、动变的组合规则必须读取 Dynamic Rule Registry 后才能标记 VERIFIED。",
         "canonicalPath": "/content/tutorial/advancing-and-retreating-spirit",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "进神与退神是什么意思",
         "ogDescription": "进神与退神可作为变化方向增强或减弱的专业语义入口，但“进”不等于成功，“退”也不等于失败。 具体构成条件和与旺衰、动变的组合规则必须读取 Dynamic Rule Registry 后才能标记 VERIFIED。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -27892,16 +27892,16 @@
         "title": "伏神与飞神应该怎样理解｜六爻专业规则基础",
         "description": "伏神与飞神用于组织显性盘面与伏藏信息之间的结构关系，帮助专业用户理解“当前可见”和“隐藏关联”。 伏藏不等于永远不起作用，飞伏关系的具体条件与判断必须以项目专业规则为准。",
         "canonicalPath": "/content/tutorial/hidden-and-flying-spirit",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "伏神与飞神应该怎样理解",
         "ogDescription": "伏神与飞神用于组织显性盘面与伏藏信息之间的结构关系，帮助专业用户理解“当前可见”和“隐藏关联”。 伏藏不等于永远不起作用，飞伏关系的具体条件与判断必须以项目专业规则为准。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28058,16 +28058,16 @@
         "title": "生、克、制、化如何共同构成关系判断｜六爻专业规则基础",
         "description": "生、克、制、化等关系可被产品转换为支持、制约、消耗、缓解或转化等用户语言。 任何单一关系都不能直接成为最终结果；关系方向、对象状态、动变与证据优先级共同决定 Presenter 应如何表达。",
         "canonicalPath": "/content/tutorial/generating-controlling-transforming",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "生、克、制、化如何共同构成关系判断",
         "ogDescription": "生、克、制、化等关系可被产品转换为支持、制约、消耗、缓解或转化等用户语言。 任何单一关系都不能直接成为最终结果；关系方向、对象状态、动变与证据优先级共同决定 Presenter 应如何表达。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28222,16 +28222,16 @@
         "title": "为什么六爻报告中可能同时出现支持和阻碍｜六爻专业规则基础",
         "description": "同一盘面可能同时存在多个对象、多个关系、多个时间因素和多条规则，因此报告出现支持与阻碍并存并不矛盾。 产品需要保留这些证据的来源与方向，再由 证据冲突处理 Registry 组织综合表达，而不是强行压成单一吉凶。",
         "canonicalPath": "/content/tutorial/supports-and-obstacles-coexist",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么六爻报告中可能同时出现支持和阻碍",
         "ogDescription": "同一盘面可能同时存在多个对象、多个关系、多个时间因素和多条规则，因此报告出现支持与阻碍并存并不矛盾。 产品需要保留这些证据的来源与方向，再由 证据冲突处理 Registry 组织综合表达，而不是强行压成单一吉凶。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28390,16 +28390,16 @@
         "title": "当多条六爻证据互相冲突时，应该怎样理解｜六爻专业规则基础",
         "description": "判断依据 Conflict 描述的是多个专业事实或规则在当前问题上给出不同方向的信息，需要经过正式冲突解决逻辑后再进入用户结论。 AI 只能解释 Conflict Resolver 已输出的状态，不能挑选自己喜欢的证据，也不能为了流畅把冲突隐藏掉。",
         "canonicalPath": "/content/tutorial/evidence-conflict-in-liuyao",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "当多条六爻证据互相冲突时，应该怎样理解",
         "ogDescription": "判断依据 Conflict 描述的是多个专业事实或规则在当前问题上给出不同方向的信息，需要经过正式冲突解决逻辑后再进入用户结论。 AI 只能解释 Conflict Resolver 已输出的状态，不能挑选自己喜欢的证据，也不能为了流畅把冲突隐藏掉。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28552,16 +28552,16 @@
         "title": "六爻中的“格局”为什么不能脱离基础事实单独判断｜六爻专业规则基础",
         "description": "Pattern 是由多项条件共同形成的结构化识别结果，它应当建立在底层事实与规则之上，而不是覆盖或替代所有基础证据。 任何正式格局都必须来自 Pattern Registry；本 Batch 不新增高级格局，也不从文章反向生成 Pattern 条件。",
         "canonicalPath": "/content/tutorial/patterns-and-base-facts",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻中的“格局”为什么不能脱离基础事实单独判断",
         "ogDescription": "Pattern 是由多项条件共同形成的结构化识别结果，它应当建立在底层事实与规则之上，而不是覆盖或替代所有基础证据。 任何正式格局都必须来自 Pattern Registry；本 Batch 不新增高级格局，也不从文章反向生成 Pattern 条件。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28720,16 +28720,16 @@
         "title": "六爻中的应期是什么｜六爻专业规则基础",
         "description": "应期是围绕已识别专业事实形成的时间候选或时间窗口，用来提示值得关注的时间节点，而不是承诺某件事一定在某日发生。 候选如何形成、排序与展示必须来自 Timing Explanation Facts 与正式 Timing Rules；未经校准不得显示人为置信百分比。",
         "canonicalPath": "/content/tutorial/timing-candidates",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻中的应期是什么",
         "ogDescription": "应期是围绕已识别专业事实形成的时间候选或时间窗口，用来提示值得关注的时间节点，而不是承诺某件事一定在某日发生。 候选如何形成、排序与展示必须来自 Timing Explanation Facts 与正式 Timing Rules；未经校准不得显示人为置信百分比。",
         "ogImage": "/content-growth/visuals/B04-VIS-01.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28884,16 +28884,16 @@
         "title": "怎样核验一份六爻报告中的旺衰、动变与应期判断｜六爻专业规则基础",
         "description": "专业阅读 核验应沿核心对象、月日环境、状态、动变、关系、Pattern、判断依据 Conflict 与 Timing Candidates 逐层回溯。 重点检查 AI 是否超出 报告事实、时间是否被写成承诺、支持与阻碍是否都有证据，以及未核验规则是",
         "canonicalPath": "/content/tutorial/audit-strength-dynamics-timing",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "怎样核验一份六爻报告中的旺衰、动变与应期判断",
         "ogDescription": "专业阅读 核验应沿核心对象、月日环境、状态、动变、关系、Pattern、判断依据 Conflict 与 Timing Candidates 逐层回溯。 重点检查 AI 是否超出 报告事实、时间是否被写成承诺、支持与阻碍是否都有证据，以及未核验规则是否被错误包装为 VERIFIED。",
         "ogImage": "/content-growth/visuals/B04-VIS-12.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -28968,16 +28968,16 @@
         "title": "月建",
         "description": "月建是月度时间环境。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-01-月建",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月建",
         "ogDescription": "月建是月度时间环境。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29052,16 +29052,16 @@
         "title": "日辰",
         "description": "日辰是当日即时环境。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-02-日辰",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "日辰",
         "ogDescription": "日辰是当日即时环境。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29136,16 +29136,16 @@
         "title": "月日环境",
         "description": "月日环境是月建与日辰共同形成的时间背景。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-03-月日环境",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月日环境",
         "ogDescription": "月日环境是月建与日辰共同形成的时间背景。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29220,16 +29220,16 @@
         "title": "得令",
         "description": "得令是来自月令环境的支持状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-04-得令",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "得令",
         "ogDescription": "得令是来自月令环境的支持状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29304,16 +29304,16 @@
         "title": "得助",
         "description": "得助是来自同类或相关关系的支持来源。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-05-得助",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "得助",
         "ogDescription": "得助是来自同类或相关关系的支持来源。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29388,16 +29388,16 @@
         "title": "受制",
         "description": "受制是受到外部条件限制。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-06-受制",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "受制",
         "ogDescription": "受制是受到外部条件限制。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29472,16 +29472,16 @@
         "title": "受克",
         "description": "受克是处于克制关系作用下。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-07-受克",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "受克",
         "ogDescription": "受克是处于克制关系作用下。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29556,16 +29556,16 @@
         "title": "消耗",
         "description": "消耗是资源或力量被持续分流。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-08-消耗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "消耗",
         "ogDescription": "消耗是资源或力量被持续分流。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29640,16 +29640,16 @@
         "title": "旬空",
         "description": "旬空是与旬结构有关的特殊状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-09-旬空",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旬空",
         "ogDescription": "旬空是与旬结构有关的特殊状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29724,16 +29724,16 @@
         "title": "月破",
         "description": "月破是与月度环境形成特定破关系的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-10-月破",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月破",
         "ogDescription": "月破是与月度环境形成特定破关系的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29808,16 +29808,16 @@
         "title": "日冲",
         "description": "日冲是与当日地支形成冲关系的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-11-日冲",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "日冲",
         "ogDescription": "日冲是与当日地支形成冲关系的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29892,16 +29892,16 @@
         "title": "状态恢复",
         "description": "状态恢复是用于内容层表达某些状态可能随条件或时间变化的概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-12-状态恢复",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "状态恢复",
         "ogDescription": "状态恢复是用于内容层表达某些状态可能随条件或时间变化的概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -29976,16 +29976,16 @@
         "title": "状态冲突",
         "description": "状态冲突是同一对象出现方向不同的状态证据。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-13-状态冲突",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "状态冲突",
         "ogDescription": "状态冲突是同一对象出现方向不同的状态证据。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30060,16 +30060,16 @@
         "title": "证据一致",
         "description": "证据一致是多条关键证据方向基本一致。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-14-证据一致",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "证据一致",
         "ogDescription": "证据一致是多条关键证据方向基本一致。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30144,16 +30144,16 @@
         "title": "专业判断中的依据不足｜六爻知识",
         "description": "依据不足是现有事实不足以支持稳定结论。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-15-依据不足",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "专业判断中的依据不足",
         "ogDescription": "依据不足是现有事实不足以支持稳定结论。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30228,16 +30228,16 @@
         "title": "动爻作用",
         "description": "动爻作用是动爻带来的变化入口与动态关系信息。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-16-动爻作用",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "动爻作用",
         "ogDescription": "动爻作用是动爻带来的变化入口与动态关系信息。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30312,16 +30312,16 @@
         "title": "变爻作用",
         "description": "变爻作用是变化后形成的新状态和关系信息。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-17-变爻作用",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "变爻作用",
         "ogDescription": "变爻作用是变化后形成的新状态和关系信息。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30396,16 +30396,16 @@
         "title": "回头生",
         "description": "回头生是变爻对原动爻形成支持方向的专业关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-18-回头生",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回头生",
         "ogDescription": "回头生是变爻对原动爻形成支持方向的专业关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30480,16 +30480,16 @@
         "title": "回头克",
         "description": "回头克是变爻对原动爻形成制约方向的专业关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-19-回头克",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回头克",
         "ogDescription": "回头克是变爻对原动爻形成制约方向的专业关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30564,16 +30564,16 @@
         "title": "进神",
         "description": "进神是用于描述变化增强方向的传统动态概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-20-进神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "进神",
         "ogDescription": "进神是用于描述变化增强方向的传统动态概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30648,16 +30648,16 @@
         "title": "退神",
         "description": "退神是用于描述变化减弱方向的传统动态概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-21-退神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "退神",
         "ogDescription": "退神是用于描述变化减弱方向的传统动态概念。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30732,16 +30732,16 @@
         "title": "伏神",
         "description": "伏神是用于组织伏藏信息的专业结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-22-伏神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "伏神",
         "ogDescription": "伏神是用于组织伏藏信息的专业结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30816,16 +30816,16 @@
         "title": "飞神",
         "description": "飞神是与伏神形成显隐关系的专业结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-23-飞神",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "飞神",
         "ogDescription": "飞神是与伏神形成显隐关系的专业结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30900,16 +30900,16 @@
         "title": "动变链",
         "description": "动变链是从动爻到变爻再到动态关系证据的完整链路。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-24-动变链",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "动变链",
         "ogDescription": "动变链是从动爻到变爻再到动态关系证据的完整链路。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -30984,16 +30984,16 @@
         "title": "生扶",
         "description": "生扶是对目标形成支持方向的关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-25-生扶",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "生扶",
         "ogDescription": "生扶是对目标形成支持方向的关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31068,16 +31068,16 @@
         "title": "克制",
         "description": "克制是对目标形成限制方向的关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-26-克制",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "克制",
         "ogDescription": "克制是对目标形成限制方向的关系。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31152,16 +31152,16 @@
         "title": "制化",
         "description": "制化是多条关系互相制约或转化的结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-27-制化",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "制化",
         "ogDescription": "制化是多条关系互相制约或转化的结构。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31236,16 +31236,16 @@
         "title": "旺衰动变中的证据冲突｜六爻知识",
         "description": "证据冲突是关键 判断依据 指向不同方向的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-28-证据冲突",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旺衰动变中的证据冲突",
         "ogDescription": "证据冲突是关键 判断依据 指向不同方向的状态。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31320,16 +31320,16 @@
         "title": "格局",
         "description": "格局是由多个条件共同识别的 Pattern 结果。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-29-格局",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "格局",
         "ogDescription": "格局是由多个条件共同识别的 Pattern 结果。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31404,16 +31404,16 @@
         "title": "综合判断",
         "description": "综合判断是多个专业事实经优先级与冲突规则整理后的结果。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-30-综合判断",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "综合判断",
         "ogDescription": "综合判断是多个专业事实经优先级与冲突规则整理后的结果。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31488,16 +31488,16 @@
         "title": "应期",
         "description": "应期是围绕已确认专业事实形成的时间判断。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-31-应期",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应期",
         "ogDescription": "应期是围绕已确认专业事实形成的时间判断。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31572,16 +31572,16 @@
         "title": "时间候选",
         "description": "时间候选是正式 Timing 规则产出的候选时间节点。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-32-时间候选",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "时间候选",
         "ogDescription": "时间候选是正式 Timing 规则产出的候选时间节点。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31656,16 +31656,16 @@
         "title": "时间窗口",
         "description": "时间窗口是多个相关候选形成的可关注时间范围。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-33-时间窗口",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "时间窗口",
         "ogDescription": "时间窗口是多个相关候选形成的可关注时间范围。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31740,16 +31740,16 @@
         "title": "时间不确定性",
         "description": "时间不确定性是对时间判断仍存在条件与证据限制的表达。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-34-时间不确定性",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "时间不确定性",
         "ogDescription": "时间不确定性是对时间判断仍存在条件与证据限制的表达。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31824,16 +31824,16 @@
         "title": "应期依据",
         "description": "应期依据是支撑时间候选的专业事实与 Timing 判断依据。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "canonicalPath": "/content/knowledge/b04-kc-35-应期依据",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应期依据",
         "ogDescription": "应期依据是支撑时间候选的专业事实与 Timing 判断依据。它用于帮助理解当前对象的状态、变化或证据位置，但不能脱离完整盘面直接换算成吉凶结论。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31901,16 +31901,16 @@
         "title": "旺衰是不是吉凶",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-01-旺衰是不是吉凶",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旺衰是不是吉凶",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -31978,16 +31978,16 @@
         "title": "月建和日辰哪个更重要",
         "description": "不能脱离当前项目规则给出固定排序。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-02-月建和日辰哪个更重要",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月建和日辰哪个更重要",
         "ogDescription": "不能脱离当前项目规则给出固定排序。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32055,16 +32055,16 @@
         "title": "什么叫得令",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-03-什么叫得令",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么叫得令",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32132,16 +32132,16 @@
         "title": "什么叫得助",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-04-什么叫得助",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么叫得助",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32210,16 +32210,16 @@
         "title": "被克是不是一定不好",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-05-被克是不是一定不好",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "被克是不是一定不好",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32288,16 +32288,16 @@
         "title": "月日意见不一致怎么办",
         "description": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-06-月日意见不一致怎么办",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月日意见不一致怎么办",
         "ogDescription": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32366,16 +32366,16 @@
         "title": "旺是不是一定成功",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-07-旺是不是一定成功",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旺是不是一定成功",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32444,16 +32444,16 @@
         "title": "衰是不是一定失败",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-08-衰是不是一定失败",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "衰是不是一定失败",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32522,16 +32522,16 @@
         "title": "为什么同一个爻在不同时间状态不同",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-09-为什么同一个爻在不同时间状态不同",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么同一个爻在不同时间状态不同",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32600,16 +32600,16 @@
         "title": "普通用户是否需要自己计算旺衰",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-10-普通用户是否需要自己计算旺衰",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "普通用户是否需要自己计算旺衰",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32679,16 +32679,16 @@
         "title": "旬空是不是没有",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-11-旬空是不是没有",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旬空是不是没有",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32758,16 +32758,16 @@
         "title": "旬空是不是一定无效",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-12-旬空是不是一定无效",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旬空是不是一定无效",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32837,16 +32837,16 @@
         "title": "月破是不是一定坏",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-13-月破是不是一定坏",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月破是不是一定坏",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32916,16 +32916,16 @@
         "title": "日冲是不是一定凶",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-14-日冲是不是一定凶",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "日冲是不是一定凶",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -32995,16 +32995,16 @@
         "title": "旬空和月破有什么区别",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-15-旬空和月破有什么区别",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "旬空和月破有什么区别",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33074,16 +33074,16 @@
         "title": "月破和日冲有什么区别",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-16-月破和日冲有什么区别",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "月破和日冲有什么区别",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33153,16 +33153,16 @@
         "title": "状态会不会随时间改变",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-17-状态会不会随时间改变",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "状态会不会随时间改变",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33232,16 +33232,16 @@
         "title": "引导阅读 报告为什么不展示全部状态",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-18-guided-报告为什么不展示全部状态",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "引导阅读 报告为什么不展示全部状态",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33311,16 +33311,16 @@
         "title": "动爻为什么重要",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-19-动爻为什么重要",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "动爻为什么重要",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33390,16 +33390,16 @@
         "title": "动爻是不是一定代表变化",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-20-动爻是不是一定代表变化",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "动爻是不是一定代表变化",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33468,16 +33468,16 @@
         "title": "变爻是不是结果",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-21-变爻是不是结果",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "变爻是不是结果",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33546,16 +33546,16 @@
         "title": "回头生是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-22-回头生是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回头生是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33624,16 +33624,16 @@
         "title": "回头克是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-23-回头克是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回头克是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33702,16 +33702,16 @@
         "title": "进神是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-24-进神是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "进神是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33780,16 +33780,16 @@
         "title": "退神是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-25-退神是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "退神是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33858,16 +33858,16 @@
         "title": "伏神是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-26-伏神是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "伏神是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -33936,16 +33936,16 @@
         "title": "飞神是什么",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-27-飞神是什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "飞神是什么",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34014,16 +34014,16 @@
         "title": "多个动爻应该怎样理解",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-28-多个动爻应该怎样理解",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "多个动爻应该怎样理解",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34093,16 +34093,16 @@
         "title": "为什么同时有支持和阻碍",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-29-为什么同时有支持和阻碍",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么同时有支持和阻碍",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34172,16 +34172,16 @@
         "title": "规则冲突怎么办",
         "description": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-30-规则冲突怎么办",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "规则冲突怎么办",
         "ogDescription": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34251,16 +34251,16 @@
         "title": "AI 如何处理冲突",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-31-ai-如何处理冲突",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "AI 如何处理冲突",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34330,16 +34330,16 @@
         "title": "什么是证据一致",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-32-什么是证据一致",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么是证据一致",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34409,16 +34409,16 @@
         "title": "什么是依据不足",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-33-什么是依据不足",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "什么是依据不足",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34488,16 +34488,16 @@
         "title": "格局能不能覆盖其它规则",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-34-格局能不能覆盖其它规则",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "格局能不能覆盖其它规则",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34567,16 +34567,16 @@
         "title": "为什么不能只看一个吉凶标签",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-35-为什么不能只看一个吉凶标签",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么不能只看一个吉凶标签",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34646,16 +34646,16 @@
         "title": "应期是不是确定日期",
         "description": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-36-应期是不是确定日期",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应期是不是确定日期",
         "ogDescription": "不能这样机械判断。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34724,16 +34724,16 @@
         "title": "为什么会有多个时间候选",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-37-为什么会有多个时间候选",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么会有多个时间候选",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34802,16 +34802,16 @@
         "title": "应期依据从哪里来",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-38-应期依据从哪里来",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "应期依据从哪里来",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34880,16 +34880,16 @@
         "title": "AI 能不能自己预测时间",
         "description": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-39-ai-能不能自己预测时间",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "AI 能不能自己预测时间",
         "ogDescription": "它是六爻专业分析中的一个结构化概念。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -34958,16 +34958,16 @@
         "title": "时间候选没有实现怎么办",
         "description": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "canonicalPath": "/content/faq/b04-faq-40-时间候选没有实现怎么办",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "时间候选没有实现怎么办",
         "ogDescription": "应保留冲突或缺口，并按照正式规则处理。需要结合核心对象、月日环境、状态、动变和 判断依据 理解；具体 Rule 条件以项目正式 Registry 为准。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35057,16 +35057,16 @@
         "title": "想换工作时，六爻应该怎样问才有决策价值｜六爻现实决策指南",
         "description": "继续留下还是考虑新机会时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/job-change-01",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "想换工作时，六爻应该怎样问才有决策价值",
         "ogDescription": "继续留下还是考虑新机会时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35154,16 +35154,16 @@
         "title": "如何用六爻分析一个新的工作机会｜六爻现实决策指南",
         "description": "比较一份具体 Offer 是否值得继续推进时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/job-offer-02",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "如何用六爻分析一个新的工作机会",
         "ogDescription": "比较一份具体 Offer 是否值得继续推进时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35251,16 +35251,16 @@
         "title": "求职和面试问题，六爻应该重点看什么｜六爻现实决策指南",
         "description": "理解一次招聘或面试流程中的关键条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/job-interview-03",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "求职和面试问题，六爻应该重点看什么",
         "ogDescription": "理解一次招聘或面试流程中的关键条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35348,16 +35348,16 @@
         "title": "六爻怎么看工作中的阻碍与压力来源｜六爻现实决策指南",
         "description": "识别工作阻力主要来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/career-04",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻怎么看工作中的阻碍与压力来源",
         "ogDescription": "识别工作阻力主要来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35445,16 +35445,16 @@
         "title": "升职与职业发展问题，怎样用六爻建立判断框架｜六爻现实决策指南",
         "description": "评估升职与职业发展的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/promotion-05",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "升职与职业发展问题，怎样用六爻建立判断框架",
         "ogDescription": "评估升职与职业发展的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-02.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35543,16 +35543,16 @@
         "title": "开始一项商业合作前，六爻可以帮助看什么｜六爻现实决策指南",
         "description": "在合作启动前梳理关键风险和条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/business-partnership-06",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "开始一项商业合作前，六爻可以帮助看什么",
         "ogDescription": "在合作启动前梳理关键风险和条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35640,16 +35640,16 @@
         "title": "如何用六爻分析一个项目能不能顺利推进｜六爻现实决策指南",
         "description": "判断项目推进的结构性条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/project-07",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "如何用六爻分析一个项目能不能顺利推进",
         "ogDescription": "判断项目推进的结构性条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35737,16 +35737,16 @@
         "title": "合作谈判进入僵局时，六爻报告应该怎样理解｜六爻现实决策指南",
         "description": "在谈判僵局中识别下一步时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/negotiation-08",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "合作谈判进入僵局时，六爻报告应该怎样理解",
         "ogDescription": "在谈判僵局中识别下一步时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35834,16 +35834,16 @@
         "title": "选择合作伙伴时，六爻应该怎样使用｜六爻现实决策指南",
         "description": "评估合作关系是否值得继续了解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/business-partnership-09",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "选择合作伙伴时，六爻应该怎样使用",
         "ogDescription": "评估合作关系是否值得继续了解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -35931,16 +35931,16 @@
         "title": "商业项目什么时候值得继续，什么时候应该重新评估｜六爻现实决策指南",
         "description": "决定继续、观察、调整还是重新评估时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/project-10",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "商业项目什么时候值得继续，什么时候应该重新评估",
         "ogDescription": "决定继续、观察、调整还是重新评估时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-03.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36029,16 +36029,16 @@
         "title": "六爻如何看一笔款项能否顺利回收｜六爻现实决策指南",
         "description": "分析回款、应收或借款归还的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/payment-collection-11",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻如何看一笔款项能否顺利回收",
         "ogDescription": "分析回款、应收或借款归还的条件时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36126,16 +36126,16 @@
         "title": "项目资金出现压力时，六爻应该怎样分析｜六爻现实决策指南",
         "description": "理解项目资金压力的来源与应对优先级时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/cashflow-12",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "项目资金出现压力时，六爻应该怎样分析",
         "ogDescription": "理解项目资金压力的来源与应对优先级时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36223,16 +36223,16 @@
         "title": "面对一项投资机会，六爻可以做什么、不能做什么｜六爻现实决策指南",
         "description": "给投资问题建立严格风险边界时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/investment-context-13",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "面对一项投资机会，六爻可以做什么、不能做什么",
         "ogDescription": "给投资问题建立严格风险边界时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36320,16 +36320,16 @@
         "title": "收入变化问题，六爻报告应该怎样阅读｜六爻现实决策指南",
         "description": "理解收入变化可能受哪些条件影响时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/income-14",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "收入变化问题，六爻报告应该怎样阅读",
         "ogDescription": "理解收入变化可能受哪些条件影响时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36417,16 +36417,16 @@
         "title": "为什么六爻中的“财”不等于投资一定赚钱｜六爻现实决策指南",
         "description": "纠正“妻财=赚钱”的机械理解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/investment-context-15",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "为什么六爻中的“财”不等于投资一定赚钱",
         "ogDescription": "纠正“妻财=赚钱”的机械理解时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-05.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36515,16 +36515,16 @@
         "title": "感情问题怎样提问，六爻结果才更容易理解｜六爻现实决策指南",
         "description": "把“爱不爱”改写成可分析的关系问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/relationship-16",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "感情问题怎样提问，六爻结果才更容易理解",
         "ogDescription": "把“爱不爱”改写成可分析的关系问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36612,16 +36612,16 @@
         "title": "如何用六爻理解一段关系中的双方状态｜六爻现实决策指南",
         "description": "理解关系双方与互动结构时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/relationship-17",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "如何用六爻理解一段关系中的双方状态",
         "ogDescription": "理解关系双方与互动结构时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36709,16 +36709,16 @@
         "title": "关系出现冲突时，六爻报告应该怎么看｜六爻现实决策指南",
         "description": "识别关系冲突来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/relationship-18",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "关系出现冲突时，六爻报告应该怎么看",
         "ogDescription": "识别关系冲突来自哪里时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36806,16 +36806,16 @@
         "title": "复合问题为什么不能只看“能不能复合”｜六爻现实决策指南",
         "description": "把复合问题从二元结果改成条件分析时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/reconciliation-19",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "复合问题为什么不能只看“能不能复合”",
         "ogDescription": "把复合问题从二元结果改成条件分析时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -36903,16 +36903,16 @@
         "title": "六爻中的感情判断为什么不能只看妻财或官鬼｜六爻现实决策指南",
         "description": "避免用单一六亲判断关系时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/relationship-20",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻中的感情判断为什么不能只看妻财或官鬼",
         "ogDescription": "避免用单一六亲判断关系时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-07.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37001,16 +37001,16 @@
         "title": "考试之前，六爻问题应该怎样问｜六爻现实决策指南",
         "description": "把考试焦虑改写成准备与发挥问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/exam-21",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "考试之前，六爻问题应该怎样问",
         "ogDescription": "把考试焦虑改写成准备与发挥问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37098,16 +37098,16 @@
         "title": "怎么看六爻报告里的考试支持与阻碍｜六爻现实决策指南",
         "description": "理解考试报告中的支持与阻碍时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/exam-22",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "怎么看六爻报告里的考试支持与阻碍",
         "ogDescription": "理解考试报告中的支持与阻碍时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37195,16 +37195,16 @@
         "title": "录取、入学和资格审核问题应该怎样分析｜六爻现实决策指南",
         "description": "理解申请与审核流程中的关键角色时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/admission-23",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "录取、入学和资格审核问题应该怎样分析",
         "ogDescription": "理解申请与审核流程中的关键角色时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37292,16 +37292,16 @@
         "title": "求职准备中，六爻能帮助发现哪些问题｜六爻现实决策指南",
         "description": "检查求职准备而非某一次面试结果时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/job-search-24",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "求职准备中，六爻能帮助发现哪些问题",
         "ogDescription": "检查求职准备而非某一次面试结果时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37389,16 +37389,16 @@
         "title": "考试或求职结果不确定时，如何避免反复起卦｜六爻现实决策指南",
         "description": "在等待结果时管理焦虑与行动时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/exam-25",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "考试或求职结果不确定时，如何避免反复起卦",
         "ogDescription": "在等待结果时管理焦虑与行动时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-09.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37487,16 +37487,16 @@
         "title": "出行前，六爻可以帮助确认哪些问题｜六爻现实决策指南",
         "description": "出行前梳理计划与风险时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/travel-26",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "出行前，六爻可以帮助确认哪些问题",
         "ogDescription": "出行前梳理计划与风险时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37584,16 +37584,16 @@
         "title": "行程是否需要调整，六爻报告应该怎样看｜六爻现实决策指南",
         "description": "在行程变化时决定是否准备替代方案时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/travel-27",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "行程是否需要调整，六爻报告应该怎样看",
         "ogDescription": "在行程变化时决定是否准备替代方案时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37681,16 +37681,16 @@
         "title": "项目、会议或重要安排的时间问题应该怎样问｜六爻现实决策指南",
         "description": "给重要安排建立合理的时间问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/schedule-28",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "项目、会议或重要安排的时间问题应该怎样问",
         "ogDescription": "给重要安排建立合理的时间问题时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37778,16 +37778,16 @@
         "title": "计划出现延误时，六爻中的时间提示应该怎样理解｜六爻现实决策指南",
         "description": "理解延误中的时间候选与条件变化时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/delay-29",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "计划出现延误时，六爻中的时间提示应该怎样理解",
         "ogDescription": "理解延误中的时间候选与条件变化时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37879,16 +37879,16 @@
         "title": "如何把六爻结果转成一份现实行动计划｜六爻现实决策指南",
         "description": "把报告转成下一步可执行动作时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "canonicalPath": "/content/tutorial/schedule-30",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "如何把六爻结果转成一份现实行动计划",
         "ogDescription": "把报告转成下一步可执行动作时，不要把六爻压缩成“成或不成”。更有效的方式是把问题拆成对象、角色、支持、阻碍、变化、时间与现实核验，再把报告转成下一步行动。",
         "ogImage": "/content-growth/visuals/B05-VIS-10.svg",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -37957,16 +37957,16 @@
         "title": "六爻能不能告诉我该不该辞职",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-01-六爻能不能告诉我该不该辞职",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻能不能告诉我该不该辞职",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38035,16 +38035,16 @@
         "title": "可以比较两个工作机会吗",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-02-可以比较两个工作机会吗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "可以比较两个工作机会吗",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38113,16 +38113,16 @@
         "title": "升职问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-03-升职问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "升职问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38191,16 +38191,16 @@
         "title": "面试问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-04-面试问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "面试问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38269,16 +38269,16 @@
         "title": "工作阻碍怎么看",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-05-工作阻碍怎么看",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "工作阻碍怎么看",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38347,16 +38347,16 @@
         "title": "同一个工作问题多久可以再问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-06-同一个工作问题多久可以再问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "同一个工作问题多久可以再问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38425,16 +38425,16 @@
         "title": "可以用六爻判断合作方可靠吗",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-07-可以用六爻判断合作方可靠吗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "可以用六爻判断合作方可靠吗",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38503,16 +38503,16 @@
         "title": "项目能不能做怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-08-项目能不能做怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "项目能不能做怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38581,16 +38581,16 @@
         "title": "谈判问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-09-谈判问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "谈判问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38659,16 +38659,16 @@
         "title": "合同是否能签怎么理解",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-10-合同是否能签怎么理解",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "合同是否能签怎么理解",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38737,16 +38737,16 @@
         "title": "合作问题是否只看应爻",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-11-合作问题是否只看应爻",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "合作问题是否只看应爻",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38815,16 +38815,16 @@
         "title": "可以用六爻预测股票吗",
         "description": "不能把六爻作为股票价格预测或买卖建议工具。它只能帮助整理风险与条件，投资决策应依靠研究、实时数据和持牌专业意见。",
         "canonicalPath": "/content/faq/b05-faq-12-可以用六爻预测股票吗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "可以用六爻预测股票吗",
         "ogDescription": "不能把六爻作为股票价格预测或买卖建议工具。它只能帮助整理风险与条件，投资决策应依靠研究、实时数据和持牌专业意见。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38893,16 +38893,16 @@
         "title": "回款问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-13-回款问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "回款问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -38971,16 +38971,16 @@
         "title": "投资问题应该怎么限定",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-14-投资问题应该怎么限定",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "投资问题应该怎么限定",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39049,16 +39049,16 @@
         "title": "妻财旺是不是一定赚钱",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-15-妻财旺是不是一定赚钱",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "妻财旺是不是一定赚钱",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39127,16 +39127,16 @@
         "title": "六爻能不能代替财务分析",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-16-六爻能不能代替财务分析",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻能不能代替财务分析",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39205,16 +39205,16 @@
         "title": "六爻能不能知道对方心里想什么",
         "description": "不能。报告只能组织关系结构、双方位置、支持和阻碍，不能确认对方没有表达出来的真实思想、动机或隐私。",
         "canonicalPath": "/content/faq/b05-faq-17-六爻能不能知道对方心里想什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻能不能知道对方心里想什么",
         "ogDescription": "不能。报告只能组织关系结构、双方位置、支持和阻碍，不能确认对方没有表达出来的真实思想、动机或隐私。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39283,16 +39283,16 @@
         "title": "复合问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-18-复合问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "复合问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39361,16 +39361,16 @@
         "title": "感情是否只看妻财官鬼",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-19-感情是否只看妻财官鬼",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "感情是否只看妻财官鬼",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39439,16 +39439,16 @@
         "title": "世应相克是不是一定分手",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-20-世应相克是不是一定分手",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "世应相克是不是一定分手",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39517,16 +39517,16 @@
         "title": "多久可以重新问一次关系问题",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-21-多久可以重新问一次关系问题",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "多久可以重新问一次关系问题",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39595,16 +39595,16 @@
         "title": "六爻能不能预测具体分数",
         "description": "不应把六爻作为精确分数预测工具。考试最直接的依据仍是学习准备、考试规则与实际发挥。",
         "canonicalPath": "/content/faq/b05-faq-22-六爻能不能预测具体分数",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻能不能预测具体分数",
         "ogDescription": "不应把六爻作为精确分数预测工具。考试最直接的依据仍是学习准备、考试规则与实际发挥。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39673,16 +39673,16 @@
         "title": "考试问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-23-考试问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "考试问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39751,16 +39751,16 @@
         "title": "录取问题重点看什么",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-24-录取问题重点看什么",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "录取问题重点看什么",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39829,16 +39829,16 @@
         "title": "求职和面试应该分开问吗",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-25-求职和面试应该分开问吗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "求职和面试应该分开问吗",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39907,16 +39907,16 @@
         "title": "考试前反复起卦有帮助吗",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-26-考试前反复起卦有帮助吗",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "考试前反复起卦有帮助吗",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -39985,16 +39985,16 @@
         "title": "六爻能不能代替天气预报",
         "description": "不能。天气预警、交通动态和政府安全信息必须以官方实时来源为准，六爻只能辅助整理计划、风险与备选方案。",
         "canonicalPath": "/content/faq/b05-faq-27-六爻能不能代替天气预报",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "六爻能不能代替天气预报",
         "ogDescription": "不能。天气预警、交通动态和政府安全信息必须以官方实时来源为准，六爻只能辅助整理计划、风险与备选方案。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -40063,16 +40063,16 @@
         "title": "行程问题怎么问",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-28-行程问题怎么问",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "行程问题怎么问",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -40141,16 +40141,16 @@
         "title": "时间提示是不是确定时间",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-29-时间提示是不是确定时间",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "时间提示是不是确定时间",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -40219,16 +40219,16 @@
         "title": "官方安全信息和六爻结果冲突怎么办",
         "description": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "canonicalPath": "/content/faq/b05-faq-30-官方安全信息和六爻结果冲突怎么办",
-        "index": true,
-        "follow": true,
+        "index": false,
+        "follow": false,
         "ogTitle": "官方安全信息和六爻结果冲突怎么办",
         "ogDescription": "可以作为结构化决策辅助，但应先明确对象、任务与时间范围，并结合现实信息、完整报告和专业边界理解。",
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "PUBLICATION_READY",
+      "reviewStatus": "REVIEW_REQUIRED",
       "contentVersion": "1.0",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
+      "publishedAt": null,
       "updatedAt": "2026-08-22T00:00:00.000Z"
     },
     {
@@ -40934,7 +40934,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-01-是否考虑更换当前工作"
+        "contentUrl": "/content/tutorial/b05-case-01-是否考虑更换当前工作",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -40993,7 +40995,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41029,7 +41031,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-02-一个新的-offer-是否值得进一步推进"
+        "contentUrl": "/content/tutorial/b05-case-02-一个新的-offer-是否值得进一步推进",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41088,7 +41092,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41124,7 +41128,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-03-两家公司是否适合继续合作"
+        "contentUrl": "/content/tutorial/b05-case-03-两家公司是否适合继续合作",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41183,7 +41189,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41219,7 +41225,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-04-项目谈判迟迟没有推进"
+        "contentUrl": "/content/tutorial/b05-case-04-项目谈判迟迟没有推进",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41278,7 +41286,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41314,7 +41322,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-05-一笔项目回款出现延迟"
+        "contentUrl": "/content/tutorial/b05-case-05-一笔项目回款出现延迟",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41373,7 +41383,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41409,7 +41419,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-06-项目资金压力增加"
+        "contentUrl": "/content/tutorial/b05-case-06-项目资金压力增加",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41468,7 +41480,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41504,7 +41516,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-07-一段关系近期沟通持续恶化"
+        "contentUrl": "/content/tutorial/b05-case-07-一段关系近期沟通持续恶化",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41563,7 +41577,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41599,7 +41613,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-08-是否适合重新尝试恢复一段关系"
+        "contentUrl": "/content/tutorial/b05-case-08-是否适合重新尝试恢复一段关系",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41658,7 +41674,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41694,7 +41710,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-09-等待重要考试结果期间如何理解报告"
+        "contentUrl": "/content/tutorial/b05-case-09-等待重要考试结果期间如何理解报告",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41753,7 +41771,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41789,7 +41807,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-10-某次招聘流程迟迟没有结果"
+        "contentUrl": "/content/tutorial/b05-case-10-某次招聘流程迟迟没有结果",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41848,7 +41868,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41884,7 +41904,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-11-重要行程是否需要准备替代方案"
+        "contentUrl": "/content/tutorial/b05-case-11-重要行程是否需要准备替代方案",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -41943,7 +41965,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -41979,7 +42001,9 @@
           "等待正式信息",
           "条件变化后重新评估"
         ],
-        "contentUrl": "/content/tutorial/b05-case-12-重要会议安排反复调整"
+        "contentUrl": "/content/tutorial/b05-case-12-重要会议安排反复调整",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B05_EDUCATIONAL_CASE",
@@ -42038,7 +42062,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42058,7 +42082,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-01-用神得到支持-但整体仍存在阻碍"
+        "contentUrl": "/content/tutorial/b06-case-01-用神得到支持-但整体仍存在阻碍",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42109,7 +42135,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42129,7 +42155,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-02-核心对象状态偏弱-但存在明显辅助力量"
+        "contentUrl": "/content/tutorial/b06-case-02-核心对象状态偏弱-但存在明显辅助力量",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42180,7 +42208,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42200,7 +42228,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-03-世应关系存在制约-但其它条件提供支持"
+        "contentUrl": "/content/tutorial/b06-case-03-世应关系存在制约-但其它条件提供支持",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42251,7 +42281,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42271,7 +42301,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-04-旬空信号出现-但不应直接解释为-没有结果"
+        "contentUrl": "/content/tutorial/b06-case-04-旬空信号出现-但不应直接解释为-没有结果",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42322,7 +42354,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42342,7 +42374,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-05-月破出现-但其它证据不能被忽略"
+        "contentUrl": "/content/tutorial/b06-case-05-月破出现-但其它证据不能被忽略",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42393,7 +42427,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42413,7 +42447,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-06-多个动爻同时出现时如何避免过度解读"
+        "contentUrl": "/content/tutorial/b06-case-06-多个动爻同时出现时如何避免过度解读",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42464,7 +42500,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42484,7 +42520,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-07-回头生出现时为什么不能直接下成功结论"
+        "contentUrl": "/content/tutorial/b06-case-07-回头生出现时为什么不能直接下成功结论",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42535,7 +42573,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42555,7 +42593,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-08-回头克出现时为什么不能直接下失败结论"
+        "contentUrl": "/content/tutorial/b06-case-08-回头克出现时为什么不能直接下失败结论",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42606,7 +42646,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42626,7 +42666,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-09-支持与阻碍强度接近时如何表达"
+        "contentUrl": "/content/tutorial/b06-case-09-支持与阻碍强度接近时如何表达",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42677,7 +42719,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42697,7 +42739,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-10-关键-evidence-发生冲突时如何形成保守结论"
+        "contentUrl": "/content/tutorial/b06-case-10-关键-evidence-发生冲突时如何形成保守结论",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42748,7 +42792,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42768,7 +42812,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-11-多个应期候选同时存在时如何呈现"
+        "contentUrl": "/content/tutorial/b06-case-11-多个应期候选同时存在时如何呈现",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42819,7 +42865,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -42839,7 +42885,9 @@
         "userQuestion": "这是用于报告解释结构验证的抽象教学问题，不代表真实用户或真实卦例。",
         "analysisSequence": [],
         "actionFramework": [],
-        "contentUrl": "/content/tutorial/b06-case-12-依据不足时-报告为什么应该拒绝强结论"
+        "contentUrl": "/content/tutorial/b06-case-12-依据不足时-报告为什么应该拒绝强结论",
+        "commercialDisposition": "NOT_FOR_COMMERCIAL_FINALIZATION_YET",
+        "internalOnlyReason": "Teaching case lacks a traceable deterministic engine fixture."
       },
       "domain": "liuyao",
       "category": "B06_EDUCATIONAL_CASE",
@@ -42890,7 +42938,7 @@
         "ogImage": "/og-default.png",
         "twitterCard": "summary_large_image"
       },
-      "reviewStatus": "DEMO_ONLY",
+      "reviewStatus": "INTERNAL_ONLY",
       "contentVersion": "1.0",
       "publishedAt": null,
       "updatedAt": "2026-08-10T00:00:00.000Z"
@@ -43047,5 +43095,10 @@
       "publishedAt": "2026-08-13T00:00:00.000Z",
       "updatedAt": "2026-08-10T00:00:00.000Z"
     }
-  ]
+  ],
+  "publicationPolicy": {
+    "sourceOfTruth": "RUNTIME_DATABASE_CONTENT_STATUS",
+    "automaticPromotion": "FROZEN",
+    "publicRule": "PUBLISHED_AND_LIUYAO_ONLY"
+  }
 }

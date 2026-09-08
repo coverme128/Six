@@ -25,6 +25,7 @@ enum ContentStatus {
   APPROVED
   PUBLISHED
   ARCHIVED
+  INTERNAL_ONLY
 }
 
 model AnonymousDevice {

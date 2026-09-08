@@ -27,6 +27,7 @@ function toContentStatus(reviewStatus?: string): ContentStatus {
   if (reviewStatus === "REVIEWED") return "APPROVED";
   if (reviewStatus === "REVIEW_REQUIRED") return "IN_REVIEW";
   if (reviewStatus === "DEFERRED") return "ARCHIVED";
+  if (reviewStatus === "INTERNAL_ONLY") return "INTERNAL_ONLY";
   return "DRAFT";
 }
 
@@ -62,7 +63,6 @@ async function main() {
       update: {
         title: entry.title,
         summary: entry.summary,
-        status: toContentStatus(entry.reviewStatus),
         payload: entry
       },
       create: {

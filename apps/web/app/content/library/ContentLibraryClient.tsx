@@ -15,7 +15,6 @@ const moduleFilters = [
   { key: "B03", label: "角色与关系", detail: "用神、六亲、世应与角色映射", match: (item: ContentSummary) => item.contentId.startsWith("B03-") },
   { key: "B04", label: "力量与时间", detail: "旺衰、动变、冲突与应期", match: (item: ContentSummary) => item.contentId.startsWith("B04-") },
   { key: "B05", label: "现实问题", detail: "感情、工作、合作、财务与计划", match: (item: ContentSummary) => item.contentId.startsWith("B05-") && !item.contentId.includes("-CASE-") },
-  { key: "cases", label: "教学案例", detail: "现实问题与报告解释练习", match: (item: ContentSummary) => item.contentId.includes("-CASE-") },
   { key: "reference", label: "术语与卦象", detail: "概念、八卦与六十四卦", match: (item: ContentSummary) => ["GLOSSARY", "TRIGRAM", "HEXAGRAM"].includes(item.contentType) },
 ] as const;
 
@@ -24,7 +23,6 @@ const formatFilters = [
   { key: "TUTORIAL", label: "教程", match: (item: ContentSummary) => item.contentType === "TUTORIAL" && !item.contentId.includes("-CASE-") },
   { key: "KNOWLEDGE", label: "知识卡", match: (item: ContentSummary) => item.contentType === "KNOWLEDGE" },
   { key: "FAQ", label: "问答", match: (item: ContentSummary) => item.contentType === "FAQ" },
-  { key: "CASE", label: "案例", match: (item: ContentSummary) => item.contentId.includes("-CASE-") },
   { key: "REFERENCE", label: "参考资料", match: (item: ContentSummary) => ["GLOSSARY", "TRIGRAM", "HEXAGRAM"].includes(item.contentType) },
 ] as const;
 

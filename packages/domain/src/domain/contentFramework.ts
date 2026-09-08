@@ -6,7 +6,7 @@ import { dirname, join, resolve } from "node:path";
 import { indexes, loadDomainData } from "./dataStore.js";
 
 export const CONTENT_SCHEMA_VERSION = "CONTENT_SCHEMA_V1";
-export const PUBLICATION_STATUSES = new Set(["DRAFT", "REVIEW_REQUIRED", "REVIEWED", "PUBLICATION_READY", "DEFERRED", "DEMO_ONLY"]);
+export const PUBLICATION_STATUSES = new Set(["DRAFT", "REVIEW_REQUIRED", "REVIEWED", "PUBLICATION_READY", "DEFERRED", "DEMO_ONLY", "INTERNAL_ONLY"]);
 export const PUBLIC_CONTENT_STATUSES = new Set(["PUBLICATION_READY"]);
 export const CONTENT_TYPES = new Set(["LANDING_PAGE", "TRUST_PAGE", "KNOWLEDGE", "GLOSSARY", "TUTORIAL", "BLOG", "TRIGRAM", "HEXAGRAM", "FAQ", "LEARNING_PATH"]);
 export const CTA_CODES = new Set([

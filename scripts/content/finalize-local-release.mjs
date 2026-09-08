@@ -432,16 +432,12 @@ function finalizeContentReview() {
       noInternalReviewToken: !/(VERIFY_IN_REPOSITORY|ProductResultFacts|CORE_V1|RuleCode|项目 Registry)/u.test(publicContentText(item)),
     };
     const approved = Object.values(checks).every(Boolean);
-    if (approved) {
-      item.reviewStatus = "PUBLICATION_READY";
-      item.body.evidenceStatus = "REPOSITORY_ALIGNED";
-      item.body.repositoryReview = { status: "APPROVED", reviewedAt: generatedAt, method: "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT" };
-      item.seoMetadata.index = true;
-      item.seoMetadata.follow = true;
-      item.updatedAt = generatedAt;
-      item.publishedAt ||= generatedAt;
-    }
-    reviews.push({ contentId: item.contentId, title: item.title, batch, contentType: item.contentType, checks, status: approved ? "APPROVED" : "BLOCKED" });
+    item.body.repositoryReview = {
+      status: approved ? "CHECKS_PASSED_STATUS_FROZEN" : "BLOCKED",
+      reviewedAt: generatedAt,
+      method: "CANONICAL_REGISTRY_ALIGNMENT_AND_EDITORIAL_GUARDRAIL_AUDIT"
+    };
+    reviews.push({ contentId: item.contentId, title: item.title, batch, contentType: item.contentType, checks, status: approved ? "CHECKS_PASSED_STATUS_FROZEN" : "BLOCKED" });
   }
   document.generatedAt = generatedAt;
   writeJson(path, document);
@@ -450,11 +446,12 @@ function finalizeContentReview() {
     generatedAt,
     scope: "B03_B04_B05_REPOSITORY_ALIGNMENT_AND_EDITORIAL_REVIEW",
     reviewed: reviews.length,
-    approved: reviews.filter((review) => review.status === "APPROVED").length,
+    approved: 0,
+    checksPassedStatusFrozen: reviews.filter((review) => review.status === "CHECKS_PASSED_STATUS_FROZEN").length,
     blocked: reviews.filter((review) => review.status === "BLOCKED").length,
     statusCounts,
     professionalRulesModified: false,
-    status: reviews.every((review) => review.status === "APPROVED") ? "COMPLETE" : "BLOCKED",
+    status: reviews.every((review) => review.status !== "BLOCKED") ? "STATUS_FROZEN" : "BLOCKED",
     reviews,
   };
   writeJson(resolve(rootDir, "data/content-growth/editorial-review-audit.json"), audit);

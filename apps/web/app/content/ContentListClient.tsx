@@ -99,14 +99,18 @@ function JourneyNavigator({ items }: { items: ContentSummary[] }) {
   );
 }
 
-function CollectionGateway() {
+function CollectionGateway({ items }: { items: ContentSummary[] }) {
+  const publicIds = new Set(items.map((item) => item.contentId));
   const featuredIds = new Set(["COL-02", "COL-03", "COL-09", "COL-10"]);
-  const featured = learningCollections.filter((collection) => featuredIds.has(collection.collection_id));
+  const available = learningCollections.filter((collection) => collection.recommended_content.every((item) => publicIds.has(item.contentId)));
+  const preferred = available.filter((collection) => featuredIds.has(collection.collection_id));
+  const featured = preferred.length ? preferred : available.slice(0, 4);
+  if (!available.length) return null;
   return (
     <section className="hub-collection-gateway" id="collections">
       <div className="section-heading">
         <div><p className="eyebrow">按目标连续学习</p><h2>一次只学一组，不在资料库里反复挑选</h2><p>每套合集只有三篇核心内容，顺序、适用人群和学习结果都已经整理好。</p></div>
-        <a className="text-link" href="/content/collections">查看全部 12 套合集 <ArrowRight aria-hidden="true" size={15} /></a>
+        <a className="text-link" href="/content/collections">查看当前 {available.length} 套合集 <ArrowRight aria-hidden="true" size={15} /></a>
       </div>
       <div className="hub-collection-grid">
         {featured.map((collection) => <a href={`/content/collection/${collection.slug}`} key={collection.collection_id}>
@@ -228,10 +232,12 @@ function VisualAtlas({ items, assets }: { items: ContentSummary[]; assets: HubVi
 function CaseLab({ items }: { items: ContentSummary[] }) {
   const realWorldCases = items.filter((item) => item.contentId.startsWith("B05-CASE-")).slice(0, 4);
   const reportCases = items.filter((item) => item.contentId.startsWith("B06-CASE-")).slice(0, 4);
+  if (!realWorldCases.length && !reportCases.length) return null;
+  const caseCount = items.filter((item) => /^B0[56]-CASE-/u.test(item.contentId)).length;
   return (
     <section className="case-lab" id="case-lab">
       <div className="section-heading">
-        <div><p className="eyebrow">案例练习</p><h2>用 24 个教学案例练习怎样判断</h2><p>先看现实问题怎样被拆开，再练习支持、阻碍、冲突和保守结论如何共同成立。</p></div>
+        <div><p className="eyebrow">案例练习</p><h2>用 {caseCount} 个教学案例练习怎样判断</h2><p>先看现实问题怎样被拆开，再练习支持、阻碍、冲突和保守结论如何共同成立。</p></div>
         <a className="text-link" href="/content/library?module=cases">查看全部案例 <ArrowRight aria-hidden="true" size={15} /></a>
       </div>
       <div className="case-lab-columns">
@@ -296,7 +302,8 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
   }, []);
 
   const learnHub = items.find((item) => item.contentType === "LEARNING_PATH") ?? items[0];
-  const activeStageDefinition = pathStages.find((stage) => stage.key === activeStage) ?? pathStages[0]!;
+  const availablePathStages = pathStages.filter((stage) => items.some((item) => item.contentType === "TUTORIAL" && stage.match(item)));
+  const activeStageDefinition = availablePathStages.find((stage) => stage.key === activeStage) ?? availablePathStages[0] ?? pathStages[0]!;
   const stageItems = items.filter(activeStageDefinition.match).filter((item) => item.contentType === "TUTORIAL").slice(0, 3);
   const tutorialCount = items.filter((item) => item.contentType === "TUTORIAL").length;
   const knowledgeCount = items.filter((item) => ["KNOWLEDGE", "GLOSSARY"].includes(item.contentType)).length;
@@ -333,20 +340,20 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
       {!loading && !error ? (
         <>
           <JourneyNavigator items={items} />
-          <CollectionGateway />
+          <CollectionGateway items={items} />
 
           <section className="learning-program" id="learning-path">
             <div className="section-heading">
               <div>
                 <p className="eyebrow">循序学习</p>
-                <h2>六个阶段，按顺序建立理解</h2>
+                <h2>{availablePathStages.length} 个当前可学阶段，按顺序建立理解</h2>
                 <p>左侧选择阶段，右侧只给出本阶段前三篇，不需要在完整内容库里挑选。</p>
               </div>
               {learnHub ? <a className="text-link" href={contentHref(learnHub)}>查看完整学习路径</a> : null}
             </div>
             <div className="hub-layout">
               <nav className="learning-rail" aria-label="六爻学习阶段">
-                {pathStages.map((stage, index) => (
+                {availablePathStages.map((stage, index) => (
                   <button
                     aria-current={activeStage === stage.key ? "step" : undefined}
                     className={activeStage === stage.key ? "path-step active" : "path-step"}
@@ -363,7 +370,7 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
 
               <section className="stage-panel" aria-live="polite">
                 <header>
-                  <span>第 {pathStages.findIndex((stage) => stage.key === activeStage) + 1} 阶段</span>
+                  <span>第 {Math.max(0, availablePathStages.findIndex((stage) => stage.key === activeStage)) + 1} 阶段</span>
                   <h3>{activeStageDefinition.title}</h3>
                   <p>{activeStageDefinition.detail}</p>
                 </header>

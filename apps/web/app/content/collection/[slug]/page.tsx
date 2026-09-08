@@ -2,11 +2,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CheckCircle2, Clock3, Target, UserRound } from "lucide-react";
 import { AppNav } from "../../../AppNav";
+import { apiBase, type ContentSummary } from "../../../lib/api";
 import { ContentSectionNav } from "../../ContentSectionNav";
 import { collectionForSlug, learningCollections } from "../../collectionProfiles";
 
-export function generateStaticParams() {
-  return learningCollections.map((collection) => ({ slug: collection.slug }));
+export const dynamic = "force-dynamic";
+
+async function publicContentIds() {
+  try {
+    const response = await fetch(`${apiBase()}/content`, { cache: "no-store" });
+    if (!response.ok) return new Set<string>();
+    const body = await response.json() as { items?: ContentSummary[] };
+    return new Set((body.items ?? []).map((item) => item.contentId));
+  } catch {
+    return new Set<string>();
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -25,9 +35,12 @@ export default async function CollectionDetailPage({ params }: { params: Promise
   const { slug } = await params;
   const collection = collectionForSlug(slug);
   if (!collection) notFound();
-  const index = learningCollections.findIndex((item) => item.slug === collection.slug);
-  const previous = index > 0 ? learningCollections[index - 1] : undefined;
-  const next = index < learningCollections.length - 1 ? learningCollections[index + 1] : undefined;
+  const publicIds = await publicContentIds();
+  const availableCollections = learningCollections.filter((item) => item.recommended_content.every((entry) => publicIds.has(entry.contentId)));
+  if (!availableCollections.some((item) => item.slug === collection.slug)) notFound();
+  const index = availableCollections.findIndex((item) => item.slug === collection.slug);
+  const previous = index > 0 ? availableCollections[index - 1] : undefined;
+  const next = index < availableCollections.length - 1 ? availableCollections[index + 1] : undefined;
 
   return (
     <main className="shell">

@@ -75,17 +75,17 @@ test("Batch 07 adds one Learn Hub and no editorial content types", () => {
   assert.equal(batch07Entries.filter((item) => ["TUTORIAL", "KNOWLEDGE", "FAQ"].includes(item.contentType)).length, 0);
 });
 
-test("Batch 00 through 07 keep their declared content boundaries", () => {
+test("Batch 00 through 07 keep their commercial-finalization boundaries", () => {
   const catalog = readJson<{ items: any[] }>("content/content-growth/content-entries.json");
-  const expected: Record<string, { total: number; publicationReady: number; demoOnly: number }> = {
-    B00: { total: 0, publicationReady: 0, demoOnly: 0 },
-    B01: { total: 78, publicationReady: 78, demoOnly: 0 },
-    B02: { total: 93, publicationReady: 93, demoOnly: 0 },
-    B03: { total: 88, publicationReady: 88, demoOnly: 0 },
-    B04: { total: 95, publicationReady: 95, demoOnly: 0 },
-    B05: { total: 72, publicationReady: 60, demoOnly: 12 },
-    B06: { total: 12, publicationReady: 0, demoOnly: 12 },
-    B07: { total: 1, publicationReady: 1, demoOnly: 0 },
+  const expected: Record<string, { total: number; publicationReady: number; reviewRequired: number; internalOnly: number }> = {
+    B00: { total: 0, publicationReady: 0, reviewRequired: 0, internalOnly: 0 },
+    B01: { total: 78, publicationReady: 78, reviewRequired: 0, internalOnly: 0 },
+    B02: { total: 93, publicationReady: 93, reviewRequired: 0, internalOnly: 0 },
+    B03: { total: 88, publicationReady: 35, reviewRequired: 53, internalOnly: 0 },
+    B04: { total: 95, publicationReady: 0, reviewRequired: 95, internalOnly: 0 },
+    B05: { total: 72, publicationReady: 0, reviewRequired: 60, internalOnly: 12 },
+    B06: { total: 12, publicationReady: 0, reviewRequired: 0, internalOnly: 12 },
+    B07: { total: 1, publicationReady: 1, reviewRequired: 0, internalOnly: 0 },
   };
   const batchFor = (item: any) => item.contentId === "LIUYAO_LEARN_HUB" ? "B07" : /^B0[1-6]-/u.exec(item.contentId)?.[0].slice(0, 3);
 
@@ -93,10 +93,25 @@ test("Batch 00 through 07 keep their declared content boundaries", () => {
     const entries = catalog.items.filter((item) => batchFor(item) === batch);
     assert.equal(entries.length, counts.total, `${batch} total`);
     assert.equal(entries.filter((item) => item.reviewStatus === "PUBLICATION_READY").length, counts.publicationReady, `${batch} publication ready`);
-    assert.equal(entries.filter((item) => item.reviewStatus === "DEMO_ONLY").length, counts.demoOnly, `${batch} demo only`);
+    assert.equal(entries.filter((item) => item.reviewStatus === "REVIEW_REQUIRED").length, counts.reviewRequired, `${batch} review required`);
+    assert.equal(entries.filter((item) => item.reviewStatus === "INTERNAL_ONLY").length, counts.internalOnly, `${batch} internal only`);
   }
   assert.equal(catalog.items.filter((item) => item.contentId.startsWith("B05-CASE-")).length, 12);
   assert.equal(catalog.items.filter((item) => item.contentId.startsWith("B06-CASE-")).length, 12);
+});
+
+test("commercial-finalization preparation keeps cases internal and freezes automatic promotion", () => {
+  const catalog = readJson<{ publicationPolicy?: any; items: any[] }>("content/content-growth/content-entries.json");
+  const cases = catalog.items.filter((item) => /^B0[56]-CASE-/u.test(item.contentId));
+  const targetArticles = catalog.items.filter((item) => item.contentType === "TUTORIAL" && /^B0[345]-A/u.test(item.contentId));
+  const finalizer = readFileSync(resolve(root, "scripts/content/finalize-local-release.mjs"), "utf8");
+
+  assert.equal(cases.length, 24);
+  assert.ok(cases.every((item) => item.reviewStatus === "INTERNAL_ONLY" && item.seoMetadata?.index === false));
+  assert.ok(targetArticles.every((item) => item.reviewStatus === "REVIEW_REQUIRED"));
+  assert.equal(catalog.publicationPolicy?.sourceOfTruth, "RUNTIME_DATABASE_CONTENT_STATUS");
+  assert.equal(catalog.publicationPolicy?.automaticPromotion, "FROZEN");
+  assert.doesNotMatch(finalizer, /item\.reviewStatus\s*=\s*["']PUBLICATION_READY["']/u);
 });
 
 test("all 68 visuals remain semantic and Batch 07 contributes 16 product assets", () => {
