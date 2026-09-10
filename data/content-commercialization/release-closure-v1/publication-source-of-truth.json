@@ -1,0 +1,29 @@
+{
+  "single_source_of_truth": "RUNTIME_DATABASE_PUBLICATION_STATUS",
+  "public_status": "PUBLICATION_READY",
+  "non_public_statuses": [
+    "REVIEW_REQUIRED",
+    "INTERNAL_ONLY",
+    "DEMO_ONLY",
+    "ARCHIVED"
+  ],
+  "all_public_surfaces": [
+    "HOME_COUNTS",
+    "CONTENT_LIBRARY",
+    "LEARN_HUB",
+    "TOPIC_LANDING",
+    "COLLECTION",
+    "SEARCH",
+    "RECOMMENDATION",
+    "RELATED_CONTENT",
+    "SITEMAP",
+    "SEO_INDEX"
+  ],
+  "rules": [
+    "No manifest expected count may be displayed as public content count.",
+    "No collection/topic static ready flag may override runtime content status.",
+    "Merged aliases never generate a second public page.",
+    "Removed or internal content never appears in LIUYAO public search/index.",
+    "Cases remain excluded from all public surfaces until a separate real-engine case program exists."
+  ]
+}

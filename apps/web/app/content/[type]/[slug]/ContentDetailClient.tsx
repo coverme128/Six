@@ -37,7 +37,7 @@ function bodyRecord(body: unknown): Record<string, unknown> {
 
 function contentSections(body: unknown) {
   const sections = bodyRecord(body).sections;
-  return Array.isArray(sections) ? sections as Array<{ heading?: string; body?: string }> : [];
+  return Array.isArray(sections) ? sections as Array<{ heading?: string; body?: string; blocks?: Array<{ type?: string; text?: string; items?: string[] }> }> : [];
 }
 
 function keyTakeaways(body: unknown) {
@@ -77,7 +77,7 @@ function articleSectionGroups(body: unknown) {
 
   for (const section of contentSections(body)) {
     const heading = section.heading?.trim() ?? "";
-    if (!heading || heading === frameworkHeading || heading === "常见误区" || heading === "使用边界") continue;
+    if (!heading || heading === frameworkHeading || heading === "关键结论" || heading === "常见误区" || heading === "使用边界") continue;
     if (heading.startsWith("在产品中的")) continue;
     if (heading.includes("适用场景、停止条件与现实验证")) {
       supporting.push(section);
@@ -87,6 +87,15 @@ function articleSectionGroups(body: unknown) {
   }
 
   return { primary, supporting };
+}
+
+function ArticleSectionBody({ section }: { section: { body?: string; blocks?: Array<{ type?: string; text?: string; items?: string[] }> } }) {
+  if (!section.blocks?.length) return <>{paragraphs(section.body).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</>;
+  return <>{section.blocks.map((block, index) => {
+    if (block.type === "unordered_list") return <ul className="article-content-list" key={index}>{block.items?.map((item) => <li key={item}>{item}</li>)}</ul>;
+    if (block.type === "ordered_list") return <ol className="article-content-list ordered" key={index}>{block.items?.map((item) => <li key={item}>{item}</li>)}</ol>;
+    return block.text ? <p key={index}>{block.text}</p> : null;
+  })}</>;
 }
 
 function sectionLabel(heading: string, index: number) {
@@ -326,7 +335,7 @@ function ArticleContent({ item, related }: { item: ContentDetail; related: Conte
       {visualRefs(item.body).length ? (
         <figure className="article-concept-visual">
           <ZoomableImage alt={`${item.title}的判断流程图`} className="article-concept-image" src={`/content-growth/visuals/${visualRefs(item.body)[0]}.svg`} />
-          <figcaption>先保留一个判断基准，再用现实变化决定是否需要重新评估。</figcaption>
+          <figcaption>图解：{item.title}的核心关系与阅读顺序。</figcaption>
         </figure>
       ) : null}
 
@@ -347,7 +356,7 @@ function ArticleContent({ item, related }: { item: ContentDetail; related: Conte
             <section id={`article-section-${index + 1}`} key={`${section.heading}-${index}`}>
               <p className="article-section-label">{sectionLabel(section.heading ?? "", index)}</p>
               {section.heading ? <h2>{section.heading}</h2> : null}
-              {paragraphs(section.body).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              <ArticleSectionBody section={section} />
             </section>
           ))}
 
@@ -396,7 +405,13 @@ function ArticleContent({ item, related }: { item: ContentDetail; related: Conte
 function ReferenceContent({ item, related }: { item: ContentDetail; related: ContentSummary[] }) {
   const practicalMeaning = stringValue(item.body, "practicalMeaning");
   const professionalDefinition = stringValue(item.body, "professionalDefinition").split(/系统需|CAL_[A-Z0-9_]+/u)[0]?.trim();
-  const misunderstandings = stringList(item.body, "commonMisunderstanding");
+  const misunderstandings = stringList(item.body, "commonMisunderstandings").length
+    ? stringList(item.body, "commonMisunderstandings")
+    : stringList(item.body, "commonMisunderstanding");
+  const examples = stringList(item.body, "examples");
+  const whenUserSeesIt = stringValue(item.body, "whenUserSeesIt");
+  const boundary = stringValue(item.body, "boundary") || publicLimitations(item.knownLimitations)[0] || "";
+  const sections = contentSections(item.body).filter((section) => !["它是什么", "为什么值得理解", "在六爻里怎样使用", "一个具体例子", "常见误区", "边界与限制"].includes(section.heading ?? ""));
   const relevantItems = related.filter((entry) => entry.contentId !== item.contentId && entry.title !== item.title);
   const firstRelatedKind = (Object.keys(relatedKindConfig) as RelatedKind[]).find((kind) => relatedItems(relevantItems, kind).length) ?? "KNOWLEDGE";
   const [activeRelated, setActiveRelated] = useState<RelatedKind>(firstRelatedKind);
@@ -404,18 +419,40 @@ function ReferenceContent({ item, related }: { item: ContentDetail; related: Con
   return (
     <>
       <section className="reference-hero">
-        <p className="eyebrow">{typeLabels[item.contentType] ?? "六爻知识"}</p>
-        <h1>{item.title}</h1>
-        <p className="reference-definition">{item.summary}</p>
-        <div className="reference-meta"><span>{difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span><span>六爻基础</span></div>
+        <div>
+          <p className="eyebrow">{typeLabels[item.contentType] ?? "六爻知识"}</p>
+          <h1>{item.title}</h1>
+          <p className="reference-definition">{item.summary}</p>
+          <div className="reference-meta"><span>{difficultyLabels[item.difficulty ?? ""] ?? "通用"}</span><span>六爻基础</span></div>
+        </div>
+        <ZoomableImage alt={`${item.title}知识图解`} className="reference-hero-visual" src={editorialVisualFor(item)} />
       </section>
 
-      {professionalDefinition || practicalMeaning || misunderstandings.length ? (
+      {professionalDefinition || practicalMeaning || whenUserSeesIt ? (
         <section className="reference-usage">
-          {professionalDefinition ? <div><p className="eyebrow">准确理解</p><h2>{professionalDefinition}</h2></div> : null}
-          {practicalMeaning ? <div><p className="eyebrow">实际怎么用</p><p>{practicalMeaning}</p></div> : null}
-          {misunderstandings.length ? <div><p className="eyebrow">容易混淆</p><ul>{misunderstandings.map((text) => <li key={text}>{text}</li>)}</ul></div> : null}
+          {professionalDefinition ? <div><p className="eyebrow">准确理解</p><p>{professionalDefinition}</p></div> : null}
+          {practicalMeaning ? <div><p className="eyebrow">对你有什么用</p><p>{practicalMeaning}</p></div> : null}
+          {whenUserSeesIt ? <div><p className="eyebrow">会在哪里看到</p><p>{whenUserSeesIt}</p></div> : null}
         </section>
+      ) : null}
+
+      {examples.length || sections.length ? (
+        <div className="reference-reading-layout">
+          <aside className="reference-toc">
+            <strong>快速理解</strong>
+            <nav aria-label="知识内容目录">
+              {examples.length ? <a href="#reference-example">看一个例子</a> : null}
+              {sections.map((section, index) => <a href={`#reference-section-${index + 1}`} key={`${section.heading}-${index}`}>{section.heading}</a>)}
+              {misunderstandings.length ? <a href="#reference-misunderstandings">避开常见误区</a> : null}
+            </nav>
+          </aside>
+          <article className="reference-flow">
+            {examples.length ? <section id="reference-example"><p className="article-section-label">放到报告里理解</p><h2>看一个具体例子</h2>{examples.map((example) => <p key={example}>{example}</p>)}</section> : null}
+            {sections.map((section, index) => <section id={`reference-section-${index + 1}`} key={`${section.heading}-${index}`}><p className="article-section-label">继续理解</p>{section.heading ? <h2>{section.heading}</h2> : null}<ArticleSectionBody section={section} /></section>)}
+            {misunderstandings.length ? <section className="reference-misunderstandings" id="reference-misunderstandings"><p className="article-section-label">避免误读</p><h2>容易混淆的地方</h2><ul>{misunderstandings.map((text) => <li key={text}>{text}</li>)}</ul></section> : null}
+            {boundary ? <aside className="reference-boundary"><strong>使用边界</strong><p>{boundary}</p></aside> : null}
+          </article>
+        </div>
       ) : null}
 
       <ArticleRelatedContent active={activeRelated} items={relevantItems} onSelect={setActiveRelated} title={item.contentType === "GLOSSARY" && activeRelated === "KNOWLEDGE" ? `和“${item.title}”一起理解的概念` : undefined} />
@@ -428,6 +465,8 @@ function FaqContent({ item, related }: { item: ContentDetail; related: ContentSu
   const question = stringValue(item.body, "question") || item.title;
   const shortAnswer = stringValue(item.body, "shortAnswer") || item.summary;
   const fullAnswer = stringValue(item.body, "fullAnswer");
+  const answerParagraphs = stringList(item.body, "answerParagraphs");
+  const queryVariants = stringList(item.body, "queryVariants").filter((variant) => variant !== question);
   const limitations = publicLimitations(item.knownLimitations);
   const firstRelatedKind = (Object.keys(relatedKindConfig) as RelatedKind[]).find((kind) => relatedItems(related, kind).length) ?? "KNOWLEDGE";
   const [activeRelated, setActiveRelated] = useState<RelatedKind>(firstRelatedKind);
@@ -439,7 +478,11 @@ function FaqContent({ item, related }: { item: ContentDetail; related: ContentSu
         <h1>{question}</h1>
         <div className="faq-short-answer"><span>简短回答</span><p>{shortAnswer}</p></div>
       </section>
-      {fullAnswer ? <section className="faq-full-answer"><p className="eyebrow">具体怎么理解</p><h2>{fullAnswer}</h2></section> : null}
+      {fullAnswer ? <section className="faq-full-answer">
+        <div className="faq-answer-heading"><p className="eyebrow">展开理解</p><h2>为什么这样回答</h2></div>
+        <div className="faq-answer-copy">{(answerParagraphs.length ? answerParagraphs : [fullAnswer]).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </section> : null}
+      {queryVariants.length ? <section className="faq-query-variants"><strong>你也可能这样问</strong><div>{queryVariants.map((variant) => <span key={variant}>{variant}</span>)}</div></section> : null}
       {limitations.length ? <aside className="faq-boundary"><strong>使用提醒</strong>{limitations.map((text) => <p key={text}>{text}</p>)}</aside> : null}
       <ArticleRelatedContent active={activeRelated} items={related} onSelect={setActiveRelated} />
       <a className="reference-back-link" href="/content">返回知识中心 <ArrowRight aria-hidden="true" size={16} /></a>
@@ -646,7 +689,7 @@ export function ContentDetailClient({ type, slug }: { type: string; slug: string
 
       {item?.contentType === "LANDING_PAGE" ? <TopicContent item={item} related={related} /> : item?.contentType === "LEARNING_PATH" ? (
         <LearningPathContent item={item} related={related} />
-      ) : item?.contentType === "GLOSSARY" || item?.contentType === "KNOWLEDGE" ? (
+      ) : item && ["GLOSSARY", "KNOWLEDGE", "TRIGRAM", "HEXAGRAM"].includes(item.contentType) ? (
         <ReferenceContent item={item} related={related} />
       ) : item?.contentType === "FAQ" ? (
         <FaqContent item={item} related={related} />

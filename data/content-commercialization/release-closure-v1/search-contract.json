@@ -1,0 +1,23 @@
+{
+  "corpus_filter": "domain=LIUYAO AND publication_status=PUBLICATION_READY AND canonical=true",
+  "alias_resolution": true,
+  "query_variant_resolution": true,
+  "body_search_required": true,
+  "ranking_order": [
+    "exact_title_or_question",
+    "alias_or_query_variant_exact_match",
+    "title_question_semantic_match",
+    "summary_definition_match",
+    "body_match",
+    "related_content_boost"
+  ],
+  "content_type_labels_required": true,
+  "status_labels_admin_only": true,
+  "no_public_results_for": [
+    "INTERNAL_ONLY",
+    "DEMO_ONLY",
+    "REVIEW_REQUIRED",
+    "REMOVED_FROM_LIUYAO"
+  ],
+  "cases_in_public_search": false
+}

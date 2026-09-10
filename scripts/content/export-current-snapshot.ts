@@ -170,7 +170,7 @@ function exportArticle(entry: any, collections: any[]) {
     key_takeaways: strings(body.keyTakeaways),
     body,
     body_sections: Array.isArray(body.sections) ? body.sections : null,
-    body_markdown: textValue(body.bodyMarkdown, sectionsMarkdown(body.sections)),
+    body_markdown: textValue(body.bodyMarkdown, body.markdown, sectionsMarkdown(body.sections)),
     practical_framework: body.practicalFramework ?? null,
     common_misunderstandings: body.commonMisunderstandings ?? null,
     examples: body.examples ?? null,

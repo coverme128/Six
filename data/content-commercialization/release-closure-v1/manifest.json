@@ -1,0 +1,30 @@
+{
+  "packageName": "liuyao-content-commercial-finalization-batch-04-release-closure",
+  "version": "1.0",
+  "domain": "LIUYAO",
+  "scope": "GLOBAL_CONTENT_CANONICALIZATION_PUBLICATION_CLOSURE",
+  "sourceSnapshot": "liuyao-current-content-repository-snapshot-v1.0.zip",
+  "dependsOn": [
+    "liuyao-content-commercial-finalization-batch-01-articles-v1.0.zip",
+    "liuyao-content-commercial-finalization-batch-02-knowledge-v1.0.zip",
+    "liuyao-content-commercial-finalization-batch-03-faq-v1.0.zip"
+  ],
+  "counts": {
+    "snapshot_content_scope": 536,
+    "canonical_editorial_assets": 457,
+    "articles": 68,
+    "knowledge_or_foundation_canonical": 228,
+    "canonical_faq": 161,
+    "merged_alias_sources": 57,
+    "removed_from_liuyao": 15,
+    "internal_only": 7,
+    "cases_public": 0,
+    "ready_for_runtime_release_gate": 240,
+    "professional_review_required": 217,
+    "publication_ready_after_import": "MUST_BE_RECALCULATED_FROM_RUNTIME_DB; DO_NOT USE PACKAGE EXPECTED COUNTS"
+  },
+  "casesIncluded": false,
+  "professionalRulesModified": false,
+  "stableIdsDeleted": false,
+  "status": "LIUYAO_CONTENT_COMMERCIAL_CLOSURE_DATA_READY"
+}

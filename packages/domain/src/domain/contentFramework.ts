@@ -47,11 +47,18 @@ const SAFE_FUNNELS = new Set(["AWARENESS", "EDUCATION", "TRUST", "CONVERSION", "
 const SAFE_INTENTS = new Set(["INFORMATIONAL", "COMPARISON", "TRANSACTIONAL", "NAVIGATIONAL"]);
 const SAFE_DIFFICULTY = new Set(["BEGINNER", "INTERMEDIATE", "ADVANCED"]);
 const SAFETY_PATTERNS = [
-  /保证.*(成功|结果|准确|应期)/u,
-  /确诊|替代医生|停止治疗/u,
-  /法律意见|必胜诉/u,
-  /稳赚|保证收益|确定回报/u,
+  /(?<!不)(?<!不是)(?<!不能)(?<!无法)(?<!不应)保证.*(成功|结果|准确|应期)/u,
+  /(?<!不)(?<!不能)(?<!无法)(?<!不可)(?:确诊|替代医生|停止治疗)/u,
+  /(?:可以|能够|可)替代(?:律师|法律意见)|必胜诉/u,
+  /稳赚|(?<!不)(?<!不是)(?<!不能)(?<!无法)(?<!不应)保证收益|(?<!不)(?<!不是)(?<!不能)(?<!无法)(?<!不应)确定回报/u,
 ];
+
+function visibleBodyStrings(value) {
+  if (typeof value === "string") return [value];
+  if (Array.isArray(value)) return value.flatMap(visibleBodyStrings);
+  if (value && typeof value === "object") return Object.values(value).flatMap(visibleBodyStrings);
+  return [];
+}
 
 function arrayOf(value) {
   return Array.isArray(value) ? value : [];
@@ -187,9 +194,9 @@ export function validateContentEntry(entry, { publicOnly = false } = {}) {
   for (const event of entry.analyticsEvents) {
     if (!ANALYTICS_EVENTS.has(event)) errors.push({ code: "CONTENT_ANALYTICS_INVALID", field: event });
   }
-  const safetyText = `${entry.title}\n${entry.summary}\n${JSON.stringify(entry.body ?? {})}`;
+  const safetyFields = [entry.title, entry.summary, ...visibleBodyStrings(entry.body ?? {})];
   for (const pattern of SAFETY_PATTERNS) {
-    if (pattern.test(safetyText)) errors.push({ code: "CONTENT_SAFETY_LANGUAGE", field: "body" });
+    if (safetyFields.some((text) => pattern.test(text))) errors.push({ code: "CONTENT_SAFETY_LANGUAGE", field: "body" });
   }
   return errors;
 }
@@ -274,19 +281,39 @@ export class FileBasedContentRepository {
 export function existingSeedEntries(rootDir = process.cwd()) {
   const data = loadDomainData(rootDir);
   const idx = indexes(data);
+  const commercialStatus = (item) => {
+    const decision = item.commercial_decision?.decision;
+    if (decision === "REWRITE") return "REVIEW_REQUIRED";
+    if (decision === "REMOVE") return "DEFERRED";
+    if (decision === "MERGE" || decision === "INTERNAL_ONLY") return "INTERNAL_ONLY";
+    return "DEMO_ONLY";
+  };
+  const commercialBody = (item, base = {}) => ({
+    ...base,
+    ...(item.commercial_content ?? {}),
+    commercialDecision: item.commercial_decision ?? null,
+    commercialClosure: item.commercial_closure ?? null,
+  });
+  const closureRelated = (item) => item.commercial_content?.relatedContentRefs ?? [];
   const knowledge = data.knowledgeNodes.map((node) => normalizeContentEntry({
     contentId: `knowledge:${node.code}`,
     contentType: "KNOWLEDGE",
     title: node.title_zh,
     slug: node.slug ?? node.code,
     canonicalPath: `/knowledge/${node.slug ?? node.code}`,
-    summary: node.summary,
-    domain: node.domain,
+    summary: node.commercial_content?.shortDefinition ?? node.summary,
+    body: commercialBody(node),
+    domain: node.commercial_content ? "liuyao" : node.domain,
     category: node.category,
     difficulty: node.difficulty,
     prerequisiteContentIds: node.prerequisites?.map((code) => `knowledge:${code}`) ?? [],
-    reviewStatus: "DEMO_ONLY",
-    seoMetadata: { index: false },
+    relatedKnowledgeIds: node.commercial_content?.relatedKnowledgeRefs,
+    relatedContentIds: [...new Set([...(node.commercial_content?.articleRefs ?? []), ...closureRelated(node)])],
+    faqIds: node.commercial_content?.faqRefs,
+    secondaryKeywords: node.commercial_content?.aliases,
+    knownLimitations: node.commercial_content?.boundary ? [node.commercial_content.boundary] : [],
+    reviewStatus: commercialStatus(node),
+    seoMetadata: node.commercial_content?.seo ?? { index: false },
     contentVersion: node.version,
   }));
   const glossary = data.glossary.map((item) => normalizeContentEntry({
@@ -295,11 +322,15 @@ export function existingSeedEntries(rootDir = process.cwd()) {
     title: item.name_zh,
     slug: item.code,
     canonicalPath: `/glossary/${item.code}`,
-    summary: item.definition_zh,
-    domain: "iching",
+    summary: item.commercial_content?.shortDefinition ?? item.definition_zh,
+    body: commercialBody(item),
+    domain: item.commercial_content ? "liuyao" : "iching",
     category: "glossary",
-    reviewStatus: "DEMO_ONLY",
-    seoMetadata: { index: false },
+    secondaryKeywords: item.commercial_content?.aliases,
+    relatedContentIds: closureRelated(item),
+    knownLimitations: item.commercial_content?.boundary ? [item.commercial_content.boundary] : [],
+    reviewStatus: commercialStatus(item),
+    seoMetadata: item.commercial_content?.seo ?? { index: false },
     contentVersion: "1.0.0",
   }));
   const trigrams = data.trigrams.map((item) => normalizeContentEntry({
@@ -308,12 +339,15 @@ export function existingSeedEntries(rootDir = process.cwd()) {
     title: `${item.name_zh}卦`,
     slug: `trigram-${item.code}`,
     canonicalPath: `/trigrams/${item.code}`,
-    summary: `${item.name_zh}，${item.nature}象，五行属${item.element}。`,
-    body: item,
-    domain: "iching",
+    summary: item.commercial_content?.shortDefinition ?? `${item.name_zh}，${item.nature}象，五行属${item.element}。`,
+    body: commercialBody(item, item),
+    domain: item.commercial_content ? "liuyao" : "iching",
     category: "trigram",
-    reviewStatus: "DEMO_ONLY",
-    seoMetadata: { index: false },
+    secondaryKeywords: item.commercial_content?.aliases,
+    relatedContentIds: closureRelated(item),
+    knownLimitations: item.commercial_content?.boundary ? [item.commercial_content.boundary] : [],
+    reviewStatus: commercialStatus(item),
+    seoMetadata: item.commercial_content?.seo ?? { index: false },
     contentVersion: data.trigrams.version ?? "1.0.0",
   }));
   const hexagrams = data.hexagrams.map((item) => normalizeContentEntry({
@@ -322,12 +356,15 @@ export function existingSeedEntries(rootDir = process.cwd()) {
     title: `${item.sequence}. ${item.name_zh}`,
     slug: item.code,
     canonicalPath: `/hexagrams/${item.code}`,
-    summary: `${item.name_zh}卦，上卦${idx.trigramByCode.get(item.upper_trigram)?.name_zh ?? item.upper_trigram}，下卦${idx.trigramByCode.get(item.lower_trigram)?.name_zh ?? item.lower_trigram}。`,
-    body: item,
-    domain: "iching",
+    summary: item.commercial_content?.shortDefinition ?? `${item.name_zh}卦，上卦${idx.trigramByCode.get(item.upper_trigram)?.name_zh ?? item.upper_trigram}，下卦${idx.trigramByCode.get(item.lower_trigram)?.name_zh ?? item.lower_trigram}。`,
+    body: commercialBody(item, item),
+    domain: item.commercial_content ? "liuyao" : "iching",
     category: "hexagram",
-    reviewStatus: "DEMO_ONLY",
-    seoMetadata: { index: false },
+    secondaryKeywords: item.commercial_content?.aliases,
+    relatedContentIds: closureRelated(item),
+    knownLimitations: item.commercial_content?.boundary ? [item.commercial_content.boundary] : [],
+    reviewStatus: commercialStatus(item),
+    seoMetadata: item.commercial_content?.seo ?? { index: false },
     contentVersion: data.hexagrams.version ?? "1.0.0",
   }));
 

@@ -4,152 +4,980 @@
     {
       "code": "original_hexagram",
       "name_zh": "本卦",
-      "definition_zh": "起卦得到的初始六爻结构。"
+      "definition_zh": "起卦得到的初始六爻结构。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-21",
+        "merge_target": "B02-KC-21",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-21",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "changed_hexagram",
       "name_zh": "变卦",
-      "definition_zh": "动爻阴阳翻转后形成的卦。"
+      "definition_zh": "动爻阴阳翻转后形成的卦。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-22",
+        "merge_target": "B02-KC-22",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-22",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "moving_line",
       "name_zh": "动爻",
-      "definition_zh": "六爻值为6或9、发生变化的爻。"
+      "definition_zh": "六爻值为6或9、发生变化的爻。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-20",
+        "merge_target": "B02-KC-20",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-20",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "najia",
       "name_zh": "纳甲",
-      "definition_zh": "将八卦六爻配置天干地支的装卦体系。"
+      "definition_zh": "将八卦六爻配置天干地支的装卦体系。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-33",
+        "merge_target": "B02-KC-33",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-33",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "eight_palaces",
       "name_zh": "八宫",
-      "definition_zh": "六十四卦按八个纯卦宫系组织的体系。"
+      "definition_zh": "六十四卦按八个纯卦宫系组织的体系。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-31",
+        "merge_target": "B02-KC-31",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-31",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "world_line",
       "name_zh": "世爻",
-      "definition_zh": "盘中代表求测主体或我方的核心位置。"
+      "definition_zh": "盘中代表求测主体或我方的核心位置。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-35",
+        "merge_target": "B02-KC-35",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-35",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "response_line",
       "name_zh": "应爻",
-      "definition_zh": "盘中代表对方、外部或相对方的位置。"
+      "definition_zh": "盘中代表对方、外部或相对方的位置。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-36",
+        "merge_target": "B02-KC-36",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-36",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "six_relations",
       "name_zh": "六亲",
-      "definition_zh": "父母、兄弟、子孙、妻财、官鬼的角色映射体系。"
+      "definition_zh": "父母、兄弟、子孙、妻财、官鬼的角色映射体系。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-37",
+        "merge_target": "B02-KC-37",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-37",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "six_spirits",
       "name_zh": "六神",
-      "definition_zh": "青龙、朱雀、勾陈、螣蛇、白虎、玄武，用于补充状态表现。"
+      "definition_zh": "青龙、朱雀、勾陈、螣蛇、白虎、玄武，用于补充状态表现。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B02-KC-38",
+        "merge_target": "B02-KC-38",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B02-KC-38",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "useful_god",
       "name_zh": "用神",
-      "definition_zh": "针对具体问题选定的主要观察角色或爻。"
+      "definition_zh": "针对具体问题选定的主要观察角色或爻。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B03-KC-01",
+        "merge_target": "B03-KC-01",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B03-KC-01",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "source_god",
       "name_zh": "原神",
-      "definition_zh": "生扶用神的六亲/力量角色。"
+      "definition_zh": "生扶用神的六亲/力量角色。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B03-KC-28",
+        "merge_target": "B03-KC-28",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B03-KC-28",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "avoid_god",
       "name_zh": "忌神",
-      "definition_zh": "对用神形成主要克制的角色。"
+      "definition_zh": "对用神形成主要克制的角色。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B03-KC-29",
+        "merge_target": "B03-KC-29",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B03-KC-29",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "strength",
       "name_zh": "旺衰",
-      "definition_zh": "根据月建、日辰、动静等证据判断爻的有效力量状态。"
+      "definition_zh": "根据月建、日辰、动静等证据判断爻的有效力量状态。",
+      "commercial_decision": {
+        "decision": "INTERNAL_ONLY",
+        "canonical_content_id": "glossary:strength",
+        "merge_target": null,
+        "reason": "不作为独立公开页，保留为内部术语或未来 alias。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "INTERNAL_ONLY",
+        "canonicalContentId": "glossary:strength",
+        "releaseLane": "INTERNAL_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "NO_PUBLIC_ROUTE",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "month_command",
       "name_zh": "月建",
-      "definition_zh": "六爻中以节气月为基础的月令事实。"
+      "definition_zh": "六爻中以节气月为基础的月令事实。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-01",
+        "merge_target": "B04-KC-01",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-01",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "day_influence",
       "name_zh": "日辰",
-      "definition_zh": "起卦当日干支对盘中各爻的作用事实。"
+      "definition_zh": "起卦当日干支对盘中各爻的作用事实。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-02",
+        "merge_target": "B04-KC-02",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-02",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "xun_void",
       "name_zh": "旬空",
-      "definition_zh": "按日柱所属旬计算的两个空亡地支。"
+      "definition_zh": "按日柱所属旬计算的两个空亡地支。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-09",
+        "merge_target": "B04-KC-09",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-09",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "month_break",
       "name_zh": "月破",
-      "definition_zh": "地支与月建相冲形成的传统状态候选。"
+      "definition_zh": "地支与月建相冲形成的传统状态候选。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-10",
+        "merge_target": "B04-KC-10",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-10",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "return_generation",
       "name_zh": "回头生",
-      "definition_zh": "变爻五行反过来生原动爻。"
+      "definition_zh": "变爻五行反过来生原动爻。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-18",
+        "merge_target": "B04-KC-18",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-18",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "return_control",
       "name_zh": "回头克",
-      "definition_zh": "变爻五行反过来克原动爻。"
+      "definition_zh": "变爻五行反过来克原动爻。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-19",
+        "merge_target": "B04-KC-19",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-19",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "six_clash",
       "name_zh": "六冲",
-      "definition_zh": "六组地支相冲关系或特定卦类概念，具体格局需版本化。"
+      "definition_zh": "六组地支相冲关系或特定卦类概念，具体格局需版本化。",
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "glossary:six_clash",
+        "merge_target": null,
+        "reason": "常用六爻关系术语，当前无等价 Canonical Knowledge，保留并成熟化。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。",
+      "commercial_content": {
+        "displayName": "六冲",
+        "shortDefinition": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。",
+        "professionalDefinition": "六冲需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+        "practicalMeaning": "用户看到“六冲”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+        "guidedMeaning": "用户看到“六冲”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+        "commonMisunderstandings": [
+          "把“六冲”当成单独决定结果的规则",
+          "记住“六冲”但不知道它何时真正进入本题判断"
+        ],
+        "examples": [
+          "例如，学习“六冲”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“六冲”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "用户看到“六冲”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "用户看到“六冲”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "六冲需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "六冲需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，学习“六冲”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，学习“六冲”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“六冲”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“六冲”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "把它用于实际阅读",
+            "body": "实际阅读“六冲”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "实际阅读“六冲”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把“六冲”当成单独决定结果的规则\n- 记住“六冲”但不知道它何时真正进入本题判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把“六冲”当成单独决定结果的规则",
+                  "记住“六冲”但不知道它何时真正进入本题判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“六冲”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“六冲”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 六冲\n\n## 它是什么\n\n六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。\n\n## 为什么值得理解\n\n用户看到“六冲”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n六冲需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“六冲”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“六冲”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“六冲”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“六冲”当成单独决定结果的规则\n- 记住“六冲”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“六冲”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "glossary:six_clash",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "REVIEW_REQUIRED",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "六冲",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "六冲",
+          "updatedAt": null,
+          "contentType": "GLOSSARY",
+          "description": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/glossary/six_clash",
+          "ogDescription": "六冲用于描述地支之间成对相冲的关系，也可能出现在特定卦类称谓中；实际解释必须区分“地支相冲”和“卦的六冲属性”。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "glossary:six_clash",
+        "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+        "professionalReviewStatus": "REVIEW_REQUIRED",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_SUPPORT"
+      }
     },
     {
       "code": "six_harmony",
       "name_zh": "六合",
-      "definition_zh": "六组地支相合关系或特定卦类概念，具体格局需版本化。"
+      "definition_zh": "六组地支相合关系或特定卦类概念，具体格局需版本化。",
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "glossary:six_harmony",
+        "merge_target": null,
+        "reason": "常用六爻关系术语，当前无等价 Canonical Knowledge，保留并成熟化。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。",
+      "commercial_content": {
+        "displayName": "六合",
+        "shortDefinition": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。",
+        "professionalDefinition": "六合需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+        "practicalMeaning": "用户看到“六合”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+        "guidedMeaning": "用户看到“六合”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+        "commonMisunderstandings": [
+          "把“六合”当成单独决定结果的规则",
+          "记住“六合”但不知道它何时真正进入本题判断"
+        ],
+        "examples": [
+          "例如，学习“六合”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“六合”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "用户看到“六合”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "用户看到“六合”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "六合需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "六合需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，学习“六合”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，学习“六合”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“六合”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“六合”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "把它用于实际阅读",
+            "body": "实际阅读“六合”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "实际阅读“六合”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把“六合”当成单独决定结果的规则\n- 记住“六合”但不知道它何时真正进入本题判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把“六合”当成单独决定结果的规则",
+                  "记住“六合”但不知道它何时真正进入本题判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“六合”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“六合”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 六合\n\n## 它是什么\n\n六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。\n\n## 为什么值得理解\n\n用户看到“六合”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n六合需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“六合”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“六合”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“六合”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“六合”当成单独决定结果的规则\n- 记住“六合”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“六合”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "glossary:six_harmony",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "REVIEW_REQUIRED",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "六合",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "六合",
+          "updatedAt": null,
+          "contentType": "GLOSSARY",
+          "description": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/glossary/six_harmony",
+          "ogDescription": "六合用于描述地支之间成对相合的关系，也可能出现在特定卦类称谓中；“合”不等于事情一定成功，仍要看对象和上下文。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "glossary:six_harmony",
+        "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+        "professionalReviewStatus": "REVIEW_REQUIRED",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_SUPPORT"
+      }
     },
     {
       "code": "timing",
       "name_zh": "应期",
-      "definition_zh": "根据盘中状态生成事件可能对应时间窗口的传统推断。"
+      "definition_zh": "根据盘中状态生成事件可能对应时间窗口的传统推断。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B04-KC-31",
+        "merge_target": "B04-KC-31",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B04-KC-31",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "mutual_hexagram",
       "name_zh": "互卦",
-      "definition_zh": "梅花中由二三四爻与三四五爻组成的中间结构。"
+      "definition_zh": "梅花中由二三四爻与三四五爻组成的中间结构。",
+      "commercial_decision": {
+        "decision": "REMOVE",
+        "canonical_content_id": "glossary:mutual_hexagram",
+        "merge_target": null,
+        "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "REMOVE",
+        "canonicalContentId": "glossary:mutual_hexagram",
+        "releaseLane": "REMOVED_FROM_LIUYAO",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "body_trigram",
       "name_zh": "体卦",
-      "definition_zh": "梅花中用于表示主体的一卦。"
+      "definition_zh": "梅花中用于表示主体的一卦。",
+      "commercial_decision": {
+        "decision": "REMOVE",
+        "canonical_content_id": "glossary:body_trigram",
+        "merge_target": null,
+        "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "REMOVE",
+        "canonicalContentId": "glossary:body_trigram",
+        "releaseLane": "REMOVED_FROM_LIUYAO",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "use_trigram",
       "name_zh": "用卦",
-      "definition_zh": "梅花中用于表示外部作用或事件对象的一卦。"
+      "definition_zh": "梅花中用于表示外部作用或事件对象的一卦。",
+      "commercial_decision": {
+        "decision": "REMOVE",
+        "canonical_content_id": "glossary:use_trigram",
+        "merge_target": null,
+        "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "REMOVE",
+        "canonicalContentId": "glossary:use_trigram",
+        "releaseLane": "REMOVED_FROM_LIUYAO",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "external_sign",
       "name_zh": "外应",
-      "definition_zh": "起卦时或问事过程中出现的外部现象，被作为象义候选。"
+      "definition_zh": "起卦时或问事过程中出现的外部现象，被作为象义候选。",
+      "commercial_decision": {
+        "decision": "REMOVE",
+        "canonical_content_id": "glossary:external_sign",
+        "merge_target": null,
+        "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "REMOVE",
+        "canonicalContentId": "glossary:external_sign",
+        "releaseLane": "REMOVED_FROM_LIUYAO",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "evidence",
       "name_zh": "证据",
-      "definition_zh": "系统用于解释规则命中的结构化事实。"
+      "definition_zh": "系统用于解释规则命中的结构化事实。",
+      "commercial_decision": {
+        "decision": "MERGE",
+        "canonical_content_id": "B01-KC-22",
+        "merge_target": "B01-KC-22",
+        "reason": "Glossary 与 Canonical Knowledge 重复，作为 alias/search synonym 保留。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "MERGE",
+        "canonicalContentId": "B01-KC-22",
+        "releaseLane": "ALIAS_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "chart_hash",
       "name_zh": "盘哈希",
-      "definition_zh": "由标准化输入与算法版本生成的可复现标识。"
+      "definition_zh": "由标准化输入与算法版本生成的可复现标识。",
+      "commercial_decision": {
+        "decision": "INTERNAL_ONLY",
+        "canonical_content_id": "glossary:chart_hash",
+        "merge_target": null,
+        "reason": "工程/测试术语，不属于普通用户学习资产。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "INTERNAL_ONLY",
+        "canonicalContentId": "glossary:chart_hash",
+        "releaseLane": "INTERNAL_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "NO_PUBLIC_ROUTE",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "golden_fixture",
       "name_zh": "黄金样本",
-      "definition_zh": "经人工或权威基准确认、用于回归测试的样本。"
+      "definition_zh": "经人工或权威基准确认、用于回归测试的样本。",
+      "commercial_decision": {
+        "decision": "INTERNAL_ONLY",
+        "canonical_content_id": "glossary:golden_fixture",
+        "merge_target": null,
+        "reason": "工程/测试术语，不属于普通用户学习资产。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "INTERNAL_ONLY",
+        "canonicalContentId": "glossary:golden_fixture",
+        "releaseLane": "INTERNAL_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "NO_PUBLIC_ROUTE",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     },
     {
       "code": "generated_fixture",
       "name_zh": "生成测试样本",
-      "definition_zh": "由固定规则自动生成，仅用于算法一致性测试。"
+      "definition_zh": "由固定规则自动生成，仅用于算法一致性测试。",
+      "commercial_decision": {
+        "decision": "INTERNAL_ONLY",
+        "canonical_content_id": "glossary:generated_fixture",
+        "merge_target": null,
+        "reason": "工程/测试术语，不属于普通用户学习资产。",
+        "stable_id_action": "KEEP"
+      },
+      "commercial_closure": {
+        "decision": "INTERNAL_ONLY",
+        "canonicalContentId": "glossary:generated_fixture",
+        "releaseLane": "INTERNAL_ONLY",
+        "professionalReviewStatus": "NOT_APPLICABLE",
+        "recommendedRuntimeStatus": "INTERNAL_ONLY",
+        "publicRouteAction": "NO_PUBLIC_ROUTE",
+        "track": null
+      },
+      "commercial_content": {
+        "relatedContentRefs": []
+      }
     }
   ]
 }

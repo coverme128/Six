@@ -1,0 +1,67 @@
+{
+  "version": "COMMERCIAL_V1",
+  "primary_navigation": [
+    {
+      "id": "START",
+      "title": "从这里开始",
+      "subtitle": "先学会怎样提问、起卦和读懂一份报告。",
+      "tracks": [
+        "START_QUESTION",
+        "START_CASTING",
+        "START_REPORT",
+        "START_CASTING_STRUCTURE",
+        "START_TRUST_REPORT"
+      ],
+      "primary_cta": "开始一次六爻占问",
+      "mobile_priority": 1
+    },
+    {
+      "id": "REAL_WORLD",
+      "title": "按现实问题",
+      "subtitle": "从你真正要处理的工作、合作、资金、关系、考试或出行问题进入。",
+      "tracks": [
+        "REAL_CAREER",
+        "REAL_BUSINESS",
+        "REAL_FINANCE",
+        "REAL_RELATIONSHIP",
+        "REAL_STUDY_JOB",
+        "REAL_TRAVEL"
+      ],
+      "primary_cta": "选择你的问题类型",
+      "mobile_priority": 2
+    },
+    {
+      "id": "DEEP_LEARN",
+      "title": "深入理解",
+      "subtitle": "系统学习角色与用神、旺衰、动变、冲突和时间判断。",
+      "tracks": [
+        "DEEP_ROLE_RELATIONSHIP",
+        "DEEP_STATE_DYNAMIC_TIMING",
+        "FOUNDATION_ICHING",
+        "FOUNDATION_SUPPORT"
+      ],
+      "primary_cta": "进入专业学习路径",
+      "mobile_priority": 3
+    }
+  ],
+  "secondary_help": {
+    "title": "可信性与使用边界",
+    "tracks": [
+      "TRUST_HELP"
+    ],
+    "placement": "footer_or_contextual_help",
+    "not_primary_navigation": true
+  },
+  "mobile_first_fold": {
+    "required": [
+      "user_goal_selector",
+      "single_primary_cta",
+      "three_main_paths"
+    ],
+    "prohibited": [
+      "12_collections_as_top_nav",
+      "10_topics_as_top_nav",
+      "horizontal_cutoff_knowledge_tabs"
+    ]
+  }
+}

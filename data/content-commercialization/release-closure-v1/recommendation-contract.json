@@ -1,0 +1,12 @@
+{
+  "source": "canonical content graph + runtime publication status",
+  "rules": [
+    "Recommend only PUBLICATION_READY canonical targets.",
+    "Never recommend a merged source ID; resolve to canonical target first.",
+    "Never recommend INTERNAL_ONLY/DEMO_ONLY/REVIEW_REQUIRED.",
+    "Prefer same user task or direct knowledge/FAQ companion relations.",
+    "Do not recommend cases.",
+    "High-risk topics must preserve official/professional-information-first boundaries."
+  ],
+  "dedup_key": "canonical_content_id"
+}

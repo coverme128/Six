@@ -6,7 +6,7 @@ import { AppNav } from "../AppNav";
 import { apiBase, readError, type ContentSummary } from "../lib/api";
 import { ContentSectionNav } from "./ContentSectionNav";
 import { learningCollections } from "./collectionProfiles";
-import { topicProfileList, type TopicProfile } from "./topicProfiles";
+import { supportedTopicProfileList, type TopicProfile } from "./topicProfiles";
 
 const pathStages = [
   { key: "B01", title: "先知道怎么使用", detail: "适用问题、提问方法与可信边界", match: (item: ContentSummary) => item.contentId.startsWith("B01-") },
@@ -49,10 +49,9 @@ const visualGroupDefinitions = [
 ] as const;
 
 const userJourneys = [
-  { key: "new", label: "第一次了解", eyebrow: "从可靠基础开始", title: "先知道六爻适合解决什么，再学怎样提问", detail: "用最短路径理解适用范围、一次一问和完整起卦流程。", href: "#learning-path", cta: "进入入门路径", ids: ["B01-A01", "B01-A02", "B02-A02"] },
-  { key: "problem", label: "带着问题来", eyebrow: "先进入现实场景", title: "从正在发生的事情开始，而不是先背术语", detail: "按感情、工作、合作、财务、考试或计划进入对应专题。", href: "#topics", cta: "选择现实专题", ids: ["B05-A16", "B05-A01", "B05-A06"] },
-  { key: "report", label: "正在看报告", eyebrow: "先结论，后依据", title: "按固定顺序读懂支持、风险、变化与下一步", detail: "先抓住可行动信息，需要核验时再进入专业事实。", href: "#report-guide", cta: "按步骤读报告", ids: ["B01-A14", "B01-A06", "B04-A19"] },
-  { key: "advanced", label: "系统与进阶", eyebrow: "建立完整知识结构", title: "沿着角色、力量、动变和时间逐层核验", detail: "适合已经有基础，希望系统理解专业依据的用户。", href: "#visual-atlas", cta: "进入图解知识", ids: ["B03-A01", "B04-A01", "B04-A20"] },
+  { key: "start", label: "从这里开始", eyebrow: "第一次使用或正在看报告", title: "先学会怎样提问、起卦和读懂一份报告", detail: "用最短路径建立正确的使用方式，已有报告也从这里进入。", href: "#learning-path", cta: "进入入门路径" },
+  { key: "problem", label: "按现实问题", eyebrow: "带着正在发生的事情来", title: "从工作、合作、资金、关系、考试或出行进入", detail: "先找到与你当前决定最接近的专题，再看需要核验的现实条件。", href: "#topics", cta: "选择问题专题" },
+  { key: "deep", label: "深入理解", eyebrow: "系统理解专业依据", title: "沿着角色、旺衰、动变、冲突和时间逐层学习", detail: "适合已经有基础，希望看懂盘面与判断依据的用户。", href: "#visual-atlas", cta: "进入专业学习" },
 ] as const;
 
 function contentHref(item: ContentSummary) {
@@ -71,14 +70,13 @@ function TopicCard({ profile }: { profile: TopicProfile }) {
   );
 }
 
-function JourneyNavigator({ items }: { items: ContentSummary[] }) {
+function JourneyNavigator() {
   const [activeKey, setActiveKey] = useState<(typeof userJourneys)[number]["key"]>(userJourneys[0]!.key);
   const active = userJourneys.find((journey) => journey.key === activeKey) ?? userJourneys[0]!;
-  const recommendations = active.ids.map((id) => items.find((item) => item.contentId === id)).filter((item): item is ContentSummary => Boolean(item));
 
   return (
     <section className="journey-navigator" aria-labelledby="journey-heading">
-      <div className="section-heading compact-heading"><div><p className="eyebrow">按当前目标进入</p><h2 id="journey-heading">你现在需要哪一种帮助？</h2></div></div>
+      <div className="journey-prompt"><span>选择你的目标</span><strong id="journey-heading">你现在想做什么？</strong></div>
       <div aria-label="选择当前目标" className="journey-tabs" role="tablist">
         {userJourneys.map((journey, index) => <button aria-controls="journey-panel" aria-selected={activeKey === journey.key} className={activeKey === journey.key ? "active" : ""} id={`journey-tab-${journey.key}`} key={journey.key} onClick={() => setActiveKey(journey.key)} onKeyDown={(event) => {
           if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
@@ -91,9 +89,6 @@ function JourneyNavigator({ items }: { items: ContentSummary[] }) {
       </div>
       <div aria-labelledby={`journey-tab-${active.key}`} className="journey-panel" id="journey-panel" role="tabpanel">
         <div className="journey-summary"><p>{active.eyebrow}</p><h3>{active.title}</h3><span>{active.detail}</span><a className="primary-link" href={active.href}>{active.cta} <ArrowRight aria-hidden="true" size={16} /></a></div>
-        <ol>
-          {recommendations.map((item, index) => <li key={item.contentId}><a href={contentHref(item)}><em>{String(index + 1).padStart(2, "0")}</em><span><strong>{item.title}</strong><small>{item.summary}</small></span><ArrowRight aria-hidden="true" size={16} /></a></li>)}
-        </ol>
       </div>
     </section>
   );
@@ -319,6 +314,7 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
           <p className="eyebrow">六爻学习中心</p>
           <h1>先找到你要解决的事，再进入对应知识</h1>
           <p>无论第一次接触、正在读报告、带着现实问题，还是希望系统进阶，都有明确入口。</p>
+          <JourneyNavigator />
           <form action="/content/library" className="hub-search" method="get">
             <label><span className="sr-only">搜索六爻知识</span><Search aria-hidden="true" size={19} /><input name="q" placeholder="搜索一个术语、问题或报告概念" /></label>
             <button type="submit">搜索知识</button>
@@ -339,7 +335,6 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
 
       {!loading && !error ? (
         <>
-          <JourneyNavigator items={items} />
           <CollectionGateway items={items} />
 
           <section className="learning-program" id="learning-path">
@@ -397,9 +392,9 @@ export function ContentListClient({ visualAssets }: { visualAssets: HubVisualAss
               </div>
             </div>
             <div className="topic-category-list">
-              {topicCategories.map((category) => <section className="topic-category-group" key={category.name}>
-                <header><div><strong>{category.name}</strong><p>{category.detail}</p></div><span>{topicProfileList.filter((profile) => profile.category === category.name).length} 个专题</span></header>
-                <div className="topic-grid">{topicProfileList.filter((profile) => profile.category === category.name).map((profile) => <TopicCard profile={profile} key={profile.id} />)}</div>
+              {topicCategories.filter((category) => supportedTopicProfileList.some((profile) => profile.category === category.name)).map((category) => <section className="topic-category-group" key={category.name}>
+                <header><div><strong>{category.name}</strong><p>{category.detail}</p></div><span>{supportedTopicProfileList.filter((profile) => profile.category === category.name).length} 个专题</span></header>
+                <div className="topic-grid">{supportedTopicProfileList.filter((profile) => profile.category === category.name).map((profile) => <TopicCard profile={profile} key={profile.id} />)}</div>
               </section>)}
             </div>
           </section>

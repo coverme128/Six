@@ -1,6 +1,6 @@
 # Liuyao Local Startup Guide
 
-Last reviewed: 2026-09-02
+Last reviewed: 2026-09-10
 
 For data inventory, backups, migration, restore verification, and rollback, see the [SIX backup and migration guide](backup-and-migration.md). Starting PostgreSQL alone does not enable persistence: the API must use its `DATABASE_URL`, and a saved report must remain readable after API restart.
 
@@ -112,6 +112,21 @@ DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm
 ```
 
 `db:seed` is required only for first initialization or an intentional seed refresh. It updates existing content and must not run automatically after restoring a backup. For an existing database, back it up before applying new migrations. `pnpm db:migrate` runs `prisma migrate dev` and is reserved for authoring migrations in development; use `migrate deploy` for existing committed migrations and deployment.
+
+After applying commercial-finalization Batch 01–04, an intentional content refresh should use the repository files as the source and then run `db:seed` once. The expected current content state is 603 total records: 493 `IN_REVIEW`, 7 `PUBLISHED`, 88 `INTERNAL_ONLY`, and 15 `ARCHIVED`. Development mode shows the 493 review records together with the 7 published records so they can be checked locally; beta/production mode only exposes the 7 published records.
+
+Do not run the four package import commands during ordinary startup. They are replay tools for rebuilding the repository from the original ZIP packages. Their order is fixed:
+
+```bash
+pnpm content:import-articles -- /absolute/path/to/liuyao-content-commercial-finalization-batch-01-articles-v1.0.zip
+pnpm content:import-knowledge -- /absolute/path/to/liuyao-content-commercial-finalization-batch-02-knowledge-v1.0.zip
+pnpm content:import-faq -- /absolute/path/to/liuyao-content-commercial-finalization-batch-03-faq-v1.0.zip
+pnpm content:import-closure -- /absolute/path/to/liuyao-content-commercial-finalization-batch-04-release-closure-v1.0.zip
+DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:seed
+pnpm content:qa
+```
+
+The import sequence does not authorize production publication. Review the [commercial closure implementation report](../content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md) before changing any Runtime publication status.
 
 ### 3. Start the API
 

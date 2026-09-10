@@ -16,7 +16,7 @@ Current Public Beta P2.1/P3-A status: `DEEPSEEK_LOCAL_LIVE_SMOKE_VERIFIED_STAGIN
 
 Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
 
-Current commercial experience status: `LIUYAO_LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_EXCLUDED`. The homepage-to-report journey and all-user Learn Hub now include task-led entry, shared content navigation, a six-stage curriculum, six reality topics, report guidance, a 24-case lab, a combined-filter library, all 68 linked content visuals, and Liuyao-only public API filtering. Distribution assets, same-ViewModel SVG/print/PDF export, and visual/accessibility automation are complete locally. This is not `PRODUCTION_READY`; HTTPS staging, live provider smoke, production PostgreSQL/Redis readiness, performance, caching, observability, and real-device evidence remain release gates.
+Current commercial content status: `LIUYAO_CONTENT_COMMERCIAL_READY_WITH_BLOCKERS`. Commercial-finalization Batch 01–04 is imported and governed across all 603 repository entries. The all-user Learn Hub now starts with three user goals, five currently available learning stages, six supported reality topics, 12 secondary learning collections, a four-step report-reading route, a combined-filter library, and all 68 linked content visuals. Local preview exposes 500 reviewable/public entries; production filtering currently exposes only 7 approved navigation/topic entries. Articles, knowledge cards, and FAQs remain review-gated until independent editorial and Liuyao domain review is complete. This is not `PRODUCTION_READY`; production deployment and environment evidence remain excluded.
 
 Live DeepSeek output requires `DEEPSEEK_API_KEY`. User-facing runtime never substitutes mock output; isolated unit tests use injected fixtures to validate failure, fallback, caching, health checks, readiness checks, rate limits, and UI behavior without external network dependency.
 
@@ -83,6 +83,8 @@ For question understanding, necessary clarification, same-chart interpretation r
 
 For SIX-only database inventory, file/asset backup, restore rehearsal, machine migration, and rollback, see [docs/development/backup-and-migration.md](docs/development/backup-and-migration.md). Run `db:seed` above only for first initialization or an intentional content refresh, not after restoring a backup. Configured database credentials alone do not prove that reports were persisted.
 
+For the current content decision counts, Runtime publication boundary, search/SEO behavior, and remaining review blockers, see [docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md](docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md).
+
 ## Commands
 
 ```bash
@@ -107,6 +109,10 @@ pnpm run smoke:ai:live
 pnpm run content:validate
 pnpm run content:dry-run
 pnpm run content:import
+pnpm run content:import-articles
+pnpm run content:import-knowledge
+pnpm run content:import-faq
+pnpm run content:import-closure
 pnpm run content:qa
 pnpm run content:seo
 pnpm run content:rehearsal
@@ -159,4 +165,4 @@ New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CA
 
 ## Migration Boundary
 
-The professional TypeScript stack is the active architecture. `apps/web` creates Liuyao reports through `apps/api`, lists Liuyao history, opens Guided/Professional report details, generates grounded AI report bundles, browses 421 `PUBLICATION_READY` entries through a designed Learn Hub, edits persisted runtime settings, and exports report JSON plus same-ViewModel report SVG/print/PDF. P4-X has been rechecked against the monorepo/Prisma/Worker architecture. Admin governance, HTTPS staging, live OpenAI smoke, production performance, caching, observability, and real-device review remain release steps. See [docs/production/96-liuyao-public-beta-commercial-readiness.md](docs/production/96-liuyao-public-beta-commercial-readiness.md) for the current consolidated status.
+The professional TypeScript stack is the active architecture. `apps/web` creates Liuyao reports through `apps/api`, lists Liuyao history, opens Guided/Professional report details, generates grounded AI report bundles, and browses the Runtime-governed Learn Hub. Development exposes review-gated content for local inspection; beta/production exposes only `PUBLICATION_READY` records. Current production semantics yield 7 public entries, while 493 entries remain in review. P4-X has been rechecked against the monorepo/Prisma/Worker architecture. Admin governance, HTTPS staging, production performance, caching, observability, and real-device review remain release steps. See [docs/production/96-liuyao-public-beta-commercial-readiness.md](docs/production/96-liuyao-public-beta-commercial-readiness.md) for the consolidated platform gate and the commercial closure report for the current content gate.

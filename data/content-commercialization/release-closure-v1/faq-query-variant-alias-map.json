@@ -1,0 +1,74 @@
+[
+  {
+    "source_faq_id": "B02-FAQ-31",
+    "source_question": "重新生成 AI 解释会改变卦象吗？",
+    "canonical_faq_id": "B01-FAQ-22",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B03-FAQ-17",
+    "source_question": "六亲意义由什么决定",
+    "canonical_faq_id": "B03-FAQ-16",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B03-FAQ-30",
+    "source_question": "普通用户需要自己选用神吗",
+    "canonical_faq_id": "B03-FAQ-05",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B03-FAQ-33",
+    "source_question": "重新生成 AI 解释会不会改变用神",
+    "canonical_faq_id": "B03-FAQ-32",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B05-FAQ-06",
+    "source_question": "同一个工作问题多久可以再问",
+    "canonical_faq_id": "B01-FAQ-14",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B05-FAQ-21",
+    "source_question": "多久可以重新问一次关系问题",
+    "canonical_faq_id": "B01-FAQ-14",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B05-FAQ-26",
+    "source_question": "考试前反复起卦有帮助吗",
+    "canonical_faq_id": "B01-FAQ-11",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_faq_id": "B05-FAQ-29",
+    "source_question": "时间提示是不是确定时间",
+    "canonical_faq_id": "B01-FAQ-19",
+    "relationship": "QUERY_VARIANT",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "ALIAS_NOT_SEPARATE_INDEX",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  }
+]

@@ -1,12 +1,12 @@
 # Non-Video Visual Asset Completion Audit
 
-Last verified: 2026-08-23
+Last verified: 2026-09-10
 
-Status: `COMPLETE_LOCAL_SCOPE_PRODUCTION_RELEASE_EXCLUDED`
+Status: `VISUAL_ASSETS_COMPLETE_CONTENT_RELEASE_GATES_APPLY`
 
 ## Conclusion
 
-Every declared and product-required non-video visual layer now has a final local file and a user-facing product route. The 12 Batch 07 learning collections have deterministic covers and public guided-learning pages. Reality-topic coverage now matches all 10 homepage scenarios, and the homepage has dedicated desktop and mobile report-result visuals.
+Every declared and product-required non-video visual layer has a final local file and a local review route. The 12 Batch 07 learning collections have deterministic covers and guided-learning pages. Ten reality-topic illustrations remain available, while the commercial Learn Hub promotes only the six topics with sufficient current content depth; the other four stay hidden/noindex. The homepage has dedicated desktop and mobile report-result visuals.
 
 Video files, video covers, and storyboards are excluded from this audit by request.
 
@@ -40,11 +40,11 @@ Each file is 1200x675, uses the `LIUYAO_VISUAL_SYSTEM_V1` marker, has an accessi
 
 - `data/content-growth/distribution/collections.json` now includes a real `cover_path` for every collection.
 - `data/content-growth/distribution/manifest.json` reports `collectionCovers: 12` and verifies that every cover file exists.
-- `/content/collections` exposes all 12 collections by learning stage; `/content/collection/[slug]` provides audience, outcome, ordered reading and previous/next navigation.
+- Development review mode exposes all 12 collections when their linked content is visible; `/content/collection/[slug]` provides audience, outcome, ordered reading and previous/next navigation. Production only exposes a collection after all three linked records pass the Runtime release gate.
 - `/content/distribution` remains the noindex operations preview for channel-production derivatives.
-- `/content` exposes 10 reality topics matching all homepage scenarios, while `/content/topic/[slug]` provides a task-specific visual, question examples, four reading lenses and a safety boundary.
+- `/content` exposes six commercially supported reality topics. Four additional topic illustrations and routes remain local/noindex until content-depth and safety gates are satisfied; every topic detail keeps its task-specific visual, question examples, reading lenses, and boundary.
 - `tests/content-batch07-assets.test.ts` verifies all 224 non-video files at their declared layers.
 
 ## Release boundary
 
-This closes local file generation and product-preview coverage. Production image optimization, CDN delivery, remote cache headers, and real-channel publishing evidence remain release-environment work.
+This closes local file generation and product-preview coverage. Visual completion does not promote related editorial content. Content review, production image optimization, CDN delivery, remote cache headers, and real-channel publishing evidence remain separate release gates.

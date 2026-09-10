@@ -1,3 +1,5 @@
+import topicPolicyData from "../../../../data/content-commercialization/release-closure-v1/topic-landing-policy.json";
+
 export type TopicProfile = {
   id: string;
   slug: string;
@@ -156,6 +158,15 @@ export const topicProfileList: TopicProfile[] = [
     ], recommendedContentIds: ["B05-A26", "B05-A27", "B05-A29"],
   },
 ];
+
+const supportedTopicIds = new Set(topicPolicyData.filter((item) => item.navigation_state === "SUPPORTED_SECONDARY_LANDING").map((item) => item.topic_id));
+
+export const supportedTopicProfileList = topicProfileList.filter((profile) => supportedTopicIds.has(profile.id));
+
+export function topicIsPublicCandidate(slug: string) {
+  const profile = topicProfileForSlug(slug);
+  return Boolean(profile && supportedTopicIds.has(profile.id));
+}
 
 const topicProfiles = Object.fromEntries(topicProfileList.filter((profile) => profile.contentId).map((profile) => [profile.contentId, profile])) as Record<string, TopicProfile>;
 

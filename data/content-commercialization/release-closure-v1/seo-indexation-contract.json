@@ -1,0 +1,19 @@
+{
+  "indexable_only_if": [
+    "canonical=true",
+    "publication_status=PUBLICATION_READY",
+    "domain=LIUYAO or approved ICHING foundation path",
+    "not merged alias",
+    "not internal",
+    "not removed"
+  ],
+  "merged_alias_behavior": "301_OR_INTERNAL_RESOLVE_TO_CANONICAL + NOINDEX",
+  "review_required_behavior": "NOINDEX + NOT_IN_SITEMAP",
+  "internal_behavior": "NOINDEX + NOT_IN_SITEMAP",
+  "topic_minimum_content_gate": {
+    "min_public_articles": 2,
+    "min_total_public_items": 5,
+    "otherwise": "NOINDEX_AND_HIDE_FROM_MAIN_NAV"
+  },
+  "sitemap_source": "same runtime publication query as public API"
+}

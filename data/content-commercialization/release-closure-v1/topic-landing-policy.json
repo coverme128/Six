@@ -1,0 +1,72 @@
+[
+  {
+    "topic_id": "relationship",
+    "title": "感情与关系",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  },
+  {
+    "topic_id": "business",
+    "title": "合作与项目",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  },
+  {
+    "topic_id": "career",
+    "title": "事业与工作",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  },
+  {
+    "topic_id": "wealth",
+    "title": "资金与财务",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  },
+  {
+    "topic_id": "study",
+    "title": "考试与求职",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  },
+  {
+    "topic_id": "property",
+    "title": "房产与居所",
+    "navigation_state": "HIDE_FROM_MAIN_NAV_AND_NOINDEX",
+    "index_policy": "NOINDEX",
+    "reason": "当前没有独立完成的商业内容纵深，且部分属于高风险或弱支撑场景，不应为凑专题数量公开。"
+  },
+  {
+    "topic_id": "legal",
+    "title": "纠纷与协商",
+    "navigation_state": "HIDE_FROM_MAIN_NAV_AND_NOINDEX",
+    "index_policy": "NOINDEX",
+    "reason": "当前没有独立完成的商业内容纵深，且部分属于高风险或弱支撑场景，不应为凑专题数量公开。"
+  },
+  {
+    "topic_id": "health",
+    "title": "健康与恢复",
+    "navigation_state": "HIDE_FROM_MAIN_NAV_AND_NOINDEX",
+    "index_policy": "NOINDEX",
+    "reason": "当前没有独立完成的商业内容纵深，且部分属于高风险或弱支撑场景，不应为凑专题数量公开。"
+  },
+  {
+    "topic_id": "goods",
+    "title": "寻物与物品",
+    "navigation_state": "HIDE_FROM_MAIN_NAV_AND_NOINDEX",
+    "index_policy": "NOINDEX",
+    "reason": "当前没有独立完成的商业内容纵深，且部分属于高风险或弱支撑场景，不应为凑专题数量公开。"
+  },
+  {
+    "topic_id": "travel",
+    "title": "出行与计划",
+    "navigation_state": "SUPPORTED_SECONDARY_LANDING",
+    "index_policy": "INDEX_ONLY_AFTER_MINIMUM_PUBLIC_CONTENT_GATE",
+    "reason": "有对应 B05 商业最终化 Article/FAQ 体系，可作为“按现实问题”二级入口。"
+  }
+]

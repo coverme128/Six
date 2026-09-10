@@ -6,7 +6,7 @@
     "category": "foundation",
     "difficulty": "beginner",
     "prerequisites": [],
-    "summary": "阴阳是卦爻与变化判断的最基础抽象。",
+    "summary": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -19,7 +19,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-yinyang",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "阴阳",
+      "shortDefinition": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "阴阳需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“阴阳”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“阴阳”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“阴阳”当成单独决定结果的规则",
+        "记住“阴阳”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“阴阳”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“阴阳”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“阴阳”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“阴阳”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "阴阳需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "阴阳需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“阴阳”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“阴阳”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“阴阳”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“阴阳”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "把“阴阳”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把“阴阳”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“阴阳”当成单独决定结果的规则\n- 记住“阴阳”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“阴阳”当成单独决定结果的规则",
+                "记住“阴阳”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“阴阳”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“阴阳”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 阴阳\n\n## 它是什么\n\n阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“阴阳”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n阴阳需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“阴阳”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“阴阳”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n把“阴阳”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。\n\n## 常见误区\n\n- 把“阴阳”当成单独决定结果的规则\n- 记住“阴阳”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“阴阳”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-yinyang",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "阴阳",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "阴阳",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-yinyang",
+        "ogDescription": "阴阳是卦爻与变化判断的最基础抽象。学习“阴阳”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-yinyang",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-five-elements",
@@ -30,7 +177,7 @@
     "prerequisites": [
       "core-yinyang"
     ],
-    "summary": "木火土金水及生克关系的公共基础。",
+    "summary": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -43,7 +190,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-five-elements",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "五行",
+      "shortDefinition": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "五行需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“五行”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“五行”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“五行”当成单独决定结果的规则",
+        "记住“五行”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“五行”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“五行”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“五行”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“五行”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "五行需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "五行需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“五行”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“五行”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“五行”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“五行”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "把“五行”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把“五行”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“五行”当成单独决定结果的规则\n- 记住“五行”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“五行”当成单独决定结果的规则",
+                "记住“五行”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“五行”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“五行”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 五行\n\n## 它是什么\n\n木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“五行”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n五行需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“五行”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“五行”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n把“五行”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。\n\n## 常见误区\n\n- 把“五行”当成单独决定结果的规则\n- 记住“五行”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“五行”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-five-elements",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "五行",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "五行",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-five-elements",
+        "ogDescription": "木火土金水及生克关系的公共基础。学习“五行”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-five-elements",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-eight-trigrams",
@@ -54,7 +348,7 @@
     "prerequisites": [
       "core-yinyang"
     ],
-    "summary": "乾坤震巽坎离艮兑的基础结构与属性。",
+    "summary": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -67,7 +361,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-eight-trigrams",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "八卦",
+      "shortDefinition": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "八卦需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“八卦”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“八卦”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“八卦”当成单独决定结果的规则",
+        "记住“八卦”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“八卦”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“八卦”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“八卦”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“八卦”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "八卦需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "八卦需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“八卦”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“八卦”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“八卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“八卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "把“八卦”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把“八卦”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“八卦”当成单独决定结果的规则\n- 记住“八卦”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“八卦”当成单独决定结果的规则",
+                "记住“八卦”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“八卦”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“八卦”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 八卦\n\n## 它是什么\n\n乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“八卦”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n八卦需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“八卦”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“八卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n把“八卦”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。\n\n## 常见误区\n\n- 把“八卦”当成单独决定结果的规则\n- 记住“八卦”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“八卦”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-eight-trigrams",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "八卦",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "八卦",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-eight-trigrams",
+        "ogDescription": "乾坤震巽坎离艮兑的基础结构与属性。学习“八卦”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-eight-trigrams",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-hexagrams",
@@ -91,7 +532,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-28",
+      "merge_target": "B02-KC-28",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-28",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "core-stems",
@@ -102,7 +562,7 @@
     "prerequisites": [
       "core-five-elements"
     ],
-    "summary": "十天干及其阴阳五行属性。",
+    "summary": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -115,7 +575,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-stems",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "天干",
+      "shortDefinition": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "天干需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“天干”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“天干”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“天干”当成单独决定结果的规则",
+        "记住“天干”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“天干”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“天干”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“天干”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“天干”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "天干需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "天干需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“天干”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“天干”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“天干”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“天干”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "把“天干”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把“天干”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“天干”当成单独决定结果的规则\n- 记住“天干”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“天干”当成单独决定结果的规则",
+                "记住“天干”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“天干”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“天干”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 天干\n\n## 它是什么\n\n十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“天干”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n天干需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“天干”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“天干”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n把“天干”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。\n\n## 常见误区\n\n- 把“天干”当成单独决定结果的规则\n- 记住“天干”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“天干”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-stems",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "天干",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "天干",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-stems",
+        "ogDescription": "十天干及其阴阳五行属性。学习“天干”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-stems",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-branches",
@@ -126,7 +733,7 @@
     "prerequisites": [
       "core-five-elements"
     ],
-    "summary": "十二地支及其五行、时令和关系。",
+    "summary": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -139,7 +746,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-branches",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "地支",
+      "shortDefinition": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "地支需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“地支”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“地支”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“地支”当成单独决定结果的规则",
+        "记住“地支”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“地支”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“地支”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“地支”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“地支”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "地支需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "地支需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“地支”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“地支”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“地支”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“地支”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "把“地支”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把“地支”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“地支”当成单独决定结果的规则\n- 记住“地支”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“地支”当成单独决定结果的规则",
+                "记住“地支”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“地支”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“地支”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 地支\n\n## 它是什么\n\n十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“地支”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n地支需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“地支”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“地支”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n把“地支”学到能使用，不是背一句定义，而是能在盘面或报告里认出它、知道它与哪些概念相连，并能说清它不能单独推出什么。这样基础知识才真正服务于后续六爻阅读。\n\n## 常见误区\n\n- 把“地支”当成单独决定结果的规则\n- 记住“地支”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“地支”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-branches",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "地支",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "地支",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-branches",
+        "ogDescription": "十二地支及其五行、时令和关系。学习“地支”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-branches",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-branch-relations",
@@ -150,7 +904,7 @@
     "prerequisites": [
       "core-branches"
     ],
-    "summary": "冲、合、刑、害、破等关系的统一知识节点。",
+    "summary": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -163,7 +917,144 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-branch-relations",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "地支关系",
+      "shortDefinition": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "地支关系需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“地支关系”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“地支关系”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“地支关系”当成单独决定结果的规则",
+        "记住“地支关系”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“地支关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“地支关系”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“地支关系”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“地支关系”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "地支关系需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "地支关系需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“地支关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“地支关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“地支关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“地支关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“地支关系”当成单独决定结果的规则\n- 记住“地支关系”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“地支关系”当成单独决定结果的规则",
+                "记住“地支关系”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“地支关系”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“地支关系”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 地支关系\n\n## 它是什么\n\n冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“地支关系”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n地支关系需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“地支关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“地支关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把“地支关系”当成单独决定结果的规则\n- 记住“地支关系”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“地支关系”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-branch-relations",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "地支关系",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "地支关系",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-branch-relations",
+        "ogDescription": "冲、合、刑、害、破等关系的统一知识节点。学习“地支关系”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-branch-relations",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-solar-terms",
@@ -175,7 +1066,7 @@
       "core-stems",
       "core-branches"
     ],
-    "summary": "用于历法上下文和月建判断的节气体系。",
+    "summary": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -188,7 +1079,144 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-solar-terms",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "节气与月建",
+      "shortDefinition": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "节气与月建需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“节气与月建”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“节气与月建”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“节气与月建”当成单独决定结果的规则",
+        "记住“节气与月建”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“节气与月建”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“节气与月建”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“节气与月建”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“节气与月建”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "节气与月建需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "节气与月建需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“节气与月建”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“节气与月建”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“节气与月建”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“节气与月建”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“节气与月建”当成单独决定结果的规则\n- 记住“节气与月建”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“节气与月建”当成单独决定结果的规则",
+                "记住“节气与月建”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“节气与月建”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“节气与月建”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 节气与月建\n\n## 它是什么\n\n用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“节气与月建”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n节气与月建需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“节气与月建”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“节气与月建”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把“节气与月建”当成单独决定结果的规则\n- 记住“节气与月建”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“节气与月建”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-solar-terms",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "节气与月建",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "节气与月建",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-solar-terms",
+        "ogDescription": "用于历法上下文和月建判断的节气体系。学习“节气与月建”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-solar-terms",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-sexagenary-cycle",
@@ -200,7 +1228,7 @@
       "core-stems",
       "core-branches"
     ],
-    "summary": "天干地支组合形成的六十甲子。",
+    "summary": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -213,7 +1241,144 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:core-sexagenary-cycle",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "六十甲子",
+      "shortDefinition": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "六十甲子需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“六十甲子”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“六十甲子”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“六十甲子”当成单独决定结果的规则",
+        "记住“六十甲子”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“六十甲子”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“六十甲子”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“六十甲子”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“六十甲子”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "六十甲子需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "六十甲子需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“六十甲子”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“六十甲子”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“六十甲子”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“六十甲子”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“六十甲子”当成单独决定结果的规则\n- 记住“六十甲子”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“六十甲子”当成单独决定结果的规则",
+                "记住“六十甲子”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“六十甲子”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“六十甲子”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 六十甲子\n\n## 它是什么\n\n天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“六十甲子”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n六十甲子需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“六十甲子”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“六十甲子”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把“六十甲子”当成单独决定结果的规则\n- 记住“六十甲子”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“六十甲子”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:core-sexagenary-cycle",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "六十甲子",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "六十甲子",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/core-sexagenary-cycle",
+        "ogDescription": "天干地支组合形成的六十甲子。学习“六十甲子”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:core-sexagenary-cycle",
+      "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+      "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "core-xunkong",
@@ -237,7 +1402,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-09",
+      "merge_target": "B04-KC-09",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-09",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-overview",
@@ -261,7 +1445,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-01",
+      "merge_target": "B02-KC-01",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-01",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-casting",
@@ -285,7 +1488,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-03",
+      "merge_target": "B02-KC-03",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-03",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-coin-method",
@@ -309,7 +1531,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-02",
+      "merge_target": "B02-KC-02",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-02",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-line-values",
@@ -333,7 +1574,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-18",
+      "merge_target": "B02-KC-18",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-18",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-original-changed",
@@ -357,7 +1617,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-21",
+      "merge_target": "B02-KC-21",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-21",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-najia",
@@ -383,7 +1662,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-33",
+      "merge_target": "B02-KC-33",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-33",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-eight-palaces",
@@ -407,7 +1705,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-31",
+      "merge_target": "B02-KC-31",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-31",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-world-response",
@@ -431,7 +1748,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-23",
+      "merge_target": "B03-KC-23",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-23",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-six-relations",
@@ -456,7 +1792,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-37",
+      "merge_target": "B02-KC-37",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-37",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-six-spirits",
@@ -480,7 +1835,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-38",
+      "merge_target": "B02-KC-38",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-38",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-question-classification",
@@ -504,7 +1878,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-04",
+      "merge_target": "B03-KC-04",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-04",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-yongshen",
@@ -529,7 +1922,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-01",
+      "merge_target": "B03-KC-01",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-01",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-yuanshen",
@@ -554,7 +1966,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-28",
+      "merge_target": "B03-KC-28",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-28",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-jishen",
@@ -579,7 +2010,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-29",
+      "merge_target": "B03-KC-29",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-29",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-choushen",
@@ -604,7 +2054,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B03-KC-30",
+      "merge_target": "B03-KC-30",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B03-KC-30",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-strength-overview",
@@ -616,7 +2085,7 @@
       "liuyao-yongshen",
       "core-solar-terms"
     ],
-    "summary": "判断爻在时间与关系环境中的实际力量。",
+    "summary": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -629,7 +2098,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:liuyao-strength-overview",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "旺衰",
+      "shortDefinition": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。",
+      "professionalDefinition": "成熟的旺衰解释应说明状态作用在哪个爻、来自哪些已确认条件，并与动变、冲合、旬空、月破等其它事实一起看。没有正式评分规则时，不应生成百分制或强弱指数。",
+      "practicalMeaning": "看到“旺”或“衰”时，先问它描述的是谁、由哪些条件形成、是否同时存在相反依据，再看它在综合判断里有多大权重。",
+      "guidedMeaning": "看到“旺”或“衰”时，先问它描述的是谁、由哪些条件形成、是否同时存在相反依据，再看它在综合判断里有多大权重。",
+      "commonMisunderstandings": [
+        "把“旺衰”当成单独决定结果的规则",
+        "记住“旺衰”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“旺衰”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“旺衰”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "看到“旺”或“衰”时，先问它描述的是谁、由哪些条件形成、是否同时存在相反依据，再看它在综合判断里有多大权重。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“旺”或“衰”时，先问它描述的是谁、由哪些条件形成、是否同时存在相反依据，再看它在综合判断里有多大权重。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "成熟的旺衰解释应说明状态作用在哪个爻、来自哪些已确认条件，并与动变、冲合、旬空、月破等其它事实一起看。没有正式评分规则时，不应生成百分制或强弱指数。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "成熟的旺衰解释应说明状态作用在哪个爻、来自哪些已确认条件，并与动变、冲合、旬空、月破等其它事实一起看。没有正式评分规则时，不应生成百分制或强弱指数。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“旺衰”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“旺衰”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“旺衰”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“旺衰”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "实际阅读“旺衰”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "实际阅读“旺衰”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“旺衰”当成单独决定结果的规则\n- 记住“旺衰”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“旺衰”当成单独决定结果的规则",
+                "记住“旺衰”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“旺衰”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“旺衰”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 旺衰\n\n## 它是什么\n\n旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。\n\n## 为什么值得理解\n\n看到“旺”或“衰”时，先问它描述的是谁、由哪些条件形成、是否同时存在相反依据，再看它在综合判断里有多大权重。\n\n## 在六爻里怎样使用\n\n成熟的旺衰解释应说明状态作用在哪个爻、来自哪些已确认条件，并与动变、冲合、旬空、月破等其它事实一起看。没有正式评分规则时，不应生成百分制或强弱指数。\n\n## 一个具体例子\n\n例如，学习“旺衰”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“旺衰”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“旺衰”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“旺衰”当成单独决定结果的规则\n- 记住“旺衰”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“旺衰”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-strength-overview",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "旺衰",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "旺衰",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/liuyao-strength-overview",
+        "ogDescription": "旺衰用于描述爻在月日环境、关系和其它条件中的实际状态强弱。它不是“好坏分数”，而是综合判断的一项基础状态信息。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-strength-overview",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "liuyao-month-command",
@@ -654,7 +2270,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-01",
+      "merge_target": "B04-KC-01",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-01",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-day-support",
@@ -679,7 +2314,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-02",
+      "merge_target": "B04-KC-02",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-02",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-void",
@@ -704,7 +2358,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-09",
+      "merge_target": "B04-KC-09",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-09",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-month-break",
@@ -729,7 +2402,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-10",
+      "merge_target": "B04-KC-10",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-10",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-tomb-storage",
@@ -741,7 +2433,7 @@
       "liuyao-strength-overview",
       "core-branches"
     ],
-    "summary": "入墓、出墓等状态的结构化表达。",
+    "summary": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -754,7 +2446,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:liuyao-tomb-storage",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "墓库",
+      "shortDefinition": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。",
+      "professionalDefinition": "墓库若进入报告，应来自已经确认的盘面事实和专业规则。知识页只解释阅读方式：明确作用对象、成立条件、与其它状态的关系，以及是否影响综合判断。",
+      "practicalMeaning": "普通用户不需要背所有墓库规则；更重要的是确认报告为什么命中这一状态，以及它是否真的指向本题核心对象。",
+      "guidedMeaning": "普通用户不需要背所有墓库规则；更重要的是确认报告为什么命中这一状态，以及它是否真的指向本题核心对象。",
+      "commonMisunderstandings": [
+        "把“墓库”当成单独决定结果的规则",
+        "记住“墓库”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“墓库”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“墓库”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "普通用户不需要背所有墓库规则；更重要的是确认报告为什么命中这一状态，以及它是否真的指向本题核心对象。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "普通用户不需要背所有墓库规则；更重要的是确认报告为什么命中这一状态，以及它是否真的指向本题核心对象。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "墓库若进入报告，应来自已经确认的盘面事实和专业规则。知识页只解释阅读方式：明确作用对象、成立条件、与其它状态的关系，以及是否影响综合判断。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "墓库若进入报告，应来自已经确认的盘面事实和专业规则。知识页只解释阅读方式：明确作用对象、成立条件、与其它状态的关系，以及是否影响综合判断。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“墓库”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“墓库”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“墓库”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“墓库”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "实际阅读“墓库”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "实际阅读“墓库”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“墓库”当成单独决定结果的规则\n- 记住“墓库”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“墓库”当成单独决定结果的规则",
+                "记住“墓库”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“墓库”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“墓库”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 墓库\n\n## 它是什么\n\n墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。\n\n## 为什么值得理解\n\n普通用户不需要背所有墓库规则；更重要的是确认报告为什么命中这一状态，以及它是否真的指向本题核心对象。\n\n## 在六爻里怎样使用\n\n墓库若进入报告，应来自已经确认的盘面事实和专业规则。知识页只解释阅读方式：明确作用对象、成立条件、与其它状态的关系，以及是否影响综合判断。\n\n## 一个具体例子\n\n例如，学习“墓库”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“墓库”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“墓库”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“墓库”当成单独决定结果的规则\n- 记住“墓库”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“墓库”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-tomb-storage",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "墓库",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "墓库",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/liuyao-tomb-storage",
+        "ogDescription": "墓库是传统六爻中用于描述某些地支状态和收纳关系的专业概念。具体成立条件和作用必须依赖正式规则，不能靠内容页自行推导。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-tomb-storage",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "liuyao-moving-lines",
@@ -778,7 +2617,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B02-KC-20",
+      "merge_target": "B02-KC-20",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B02-KC-20",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-changed-lines",
@@ -802,7 +2660,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "INTERNAL_ONLY",
+      "canonical_content_id": "knowledge:liuyao-changed-lines",
+      "merge_target": null,
+      "reason": "缺少足够独立用户任务或与核心知识重复，暂不进入公开路径。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "INTERNAL_ONLY",
+      "canonicalContentId": "knowledge:liuyao-changed-lines",
+      "releaseLane": "INTERNAL_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "NO_PUBLIC_ROUTE",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-return-generate-control",
@@ -827,7 +2704,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-18",
+      "merge_target": "B04-KC-18",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-18",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-advance-retreat",
@@ -838,7 +2734,7 @@
     "prerequisites": [
       "liuyao-changed-lines"
     ],
-    "summary": "部分地支变化中的进退趋势，具体口径受审核控制。",
+    "summary": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -851,7 +2747,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:liuyao-advance-retreat",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "化进与化退",
+      "shortDefinition": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "化进与化退需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“化进与化退”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“化进与化退”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“化进与化退”当成单独决定结果的规则",
+        "记住“化进与化退”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“化进与化退”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“化进与化退”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“化进与化退”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“化进与化退”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "化进与化退需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "化进与化退需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“化进与化退”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“化进与化退”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“化进与化退”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“化进与化退”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "实际阅读“化进与化退”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "实际阅读“化进与化退”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“化进与化退”当成单独决定结果的规则\n- 记住“化进与化退”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“化进与化退”当成单独决定结果的规则",
+                "记住“化进与化退”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“化进与化退”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“化进与化退”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 化进与化退\n\n## 它是什么\n\n部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“化进与化退”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n化进与化退需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“化进与化退”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“化进与化退”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“化进与化退”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“化进与化退”当成单独决定结果的规则\n- 记住“化进与化退”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“化进与化退”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-advance-retreat",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "化进与化退",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "化进与化退",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/liuyao-advance-retreat",
+        "ogDescription": "部分地支变化中的进退趋势，具体口径受审核控制。学习“化进与化退”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-advance-retreat",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "liuyao-relations-engine",
@@ -864,7 +2907,7 @@
       "liuyao-strength-overview",
       "core-branch-relations"
     ],
-    "summary": "组合五行、冲合与强弱形成关系证据。",
+    "summary": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -877,7 +2920,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:liuyao-relations-engine",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "生克制化",
+      "shortDefinition": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。",
+      "professionalDefinition": "生克制化需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+      "practicalMeaning": "用户看到“生克制化”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "guidedMeaning": "用户看到“生克制化”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+      "commonMisunderstandings": [
+        "把“生克制化”当成单独决定结果的规则",
+        "记住“生克制化”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“生克制化”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“生克制化”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "用户看到“生克制化”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "用户看到“生克制化”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "生克制化需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "生克制化需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“生克制化”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“生克制化”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“生克制化”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“生克制化”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "实际阅读“生克制化”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "实际阅读“生克制化”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“生克制化”当成单独决定结果的规则\n- 记住“生克制化”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“生克制化”当成单独决定结果的规则",
+                "记住“生克制化”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“生克制化”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“生克制化”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 生克制化\n\n## 它是什么\n\n组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。\n\n## 为什么值得理解\n\n用户看到“生克制化”时，应先确认它作用于谁、属于哪一层信息，以及报告后续结论是否真的使用了它。\n\n## 在六爻里怎样使用\n\n生克制化需要放回本次问题和盘面结构中理解。它可以帮助说明结构、角色、状态或关系，但不能绕过其它专业事实直接成为最终结论。\n\n## 一个具体例子\n\n例如，学习“生克制化”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“生克制化”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“生克制化”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“生克制化”当成单独决定结果的规则\n- 记住“生克制化”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“生克制化”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-relations-engine",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "生克制化",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "生克制化",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/liuyao-relations-engine",
+        "ogDescription": "组合五行、冲合与强弱形成关系证据。学习“生克制化”时，应同时理解它与本次问题和其它盘面信息的关系。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-relations-engine",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "liuyao-clash-harmony",
@@ -888,7 +3078,7 @@
     "prerequisites": [
       "liuyao-relations-engine"
     ],
-    "summary": "处理世应、用神及关键爻之间的冲合。",
+    "summary": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -901,7 +3091,154 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:liuyao-clash-harmony",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "冲合关系",
+      "shortDefinition": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。",
+      "professionalDefinition": "任何冲合判断都应说明谁与谁形成关系、关系类型是什么、是否作用于用神或世应等核心对象，以及是否被其它事实改变。",
+      "practicalMeaning": "看到“冲”或“合”时，不要只问它好不好，而要追问它影响谁、改变了什么、是否真正进入本题核心判断。",
+      "guidedMeaning": "看到“冲”或“合”时，不要只问它好不好，而要追问它影响谁、改变了什么、是否真正进入本题核心判断。",
+      "commonMisunderstandings": [
+        "把“冲合关系”当成单独决定结果的规则",
+        "记住“冲合关系”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“冲合关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“冲合关系”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "看到“冲”或“合”时，不要只问它好不好，而要追问它影响谁、改变了什么、是否真正进入本题核心判断。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“冲”或“合”时，不要只问它好不好，而要追问它影响谁、改变了什么、是否真正进入本题核心判断。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "任何冲合判断都应说明谁与谁形成关系、关系类型是什么、是否作用于用神或世应等核心对象，以及是否被其它事实改变。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "任何冲合判断都应说明谁与谁形成关系、关系类型是什么、是否作用于用神或世应等核心对象，以及是否被其它事实改变。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“冲合关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“冲合关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“冲合关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“冲合关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "把它用于实际阅读",
+          "body": "实际阅读“冲合关系”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "实际阅读“冲合关系”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“冲合关系”当成单独决定结果的规则\n- 记住“冲合关系”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“冲合关系”当成单独决定结果的规则",
+                "记住“冲合关系”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“冲合关系”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“冲合关系”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 冲合关系\n\n## 它是什么\n\n冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。\n\n## 为什么值得理解\n\n看到“冲”或“合”时，不要只问它好不好，而要追问它影响谁、改变了什么、是否真正进入本题核心判断。\n\n## 在六爻里怎样使用\n\n任何冲合判断都应说明谁与谁形成关系、关系类型是什么、是否作用于用神或世应等核心对象，以及是否被其它事实改变。\n\n## 一个具体例子\n\n例如，学习“冲合关系”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“冲合关系”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 把它用于实际阅读\n\n实际阅读“冲合关系”时，至少要记录三个信息：作用对象、作用方向、与其它依据是否一致。少了其中任何一项，都不适合把它直接提升成主要支持、主要阻碍或确定性时间结论。\n\n## 常见误区\n\n- 把“冲合关系”当成单独决定结果的规则\n- 记住“冲合关系”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“冲合关系”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-clash-harmony",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "冲合关系",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "冲合关系",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/liuyao-clash-harmony",
+        "ogDescription": "冲合关系用于描述关键爻或地支之间的互动结构。它本身不是最终吉凶，需要结合对象、方向、状态和本题角色一起解释。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:liuyao-clash-harmony",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "liuyao-patterns",
@@ -926,7 +3263,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-29",
+      "merge_target": "B04-KC-29",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-29",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-outcome",
@@ -952,7 +3308,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-30",
+      "merge_target": "B04-KC-30",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-30",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-timing",
@@ -978,7 +3353,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B04-KC-31",
+      "merge_target": "B04-KC-31",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B04-KC-31",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "liuyao-reading-workflow",
@@ -1002,7 +3396,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B01-KC-14",
+      "merge_target": "B01-KC-14",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B01-KC-14",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-overview",
@@ -1026,7 +3439,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-overview",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-overview",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-number-casting",
@@ -1050,7 +3482,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-number-casting",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-number-casting",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-time-casting",
@@ -1075,7 +3526,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-time-casting",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-time-casting",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-original-mutual-changed",
@@ -1099,7 +3569,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-original-mutual-changed",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-original-mutual-changed",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-body-use",
@@ -1123,7 +3612,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-body-use",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-body-use",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-five-element-relation",
@@ -1148,7 +3656,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-five-element-relation",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-five-element-relation",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-seasonal-strength",
@@ -1173,7 +3700,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-seasonal-strength",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-seasonal-strength",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-symbolism",
@@ -1197,7 +3743,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-symbolism",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-symbolism",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-external-signs",
@@ -1221,7 +3786,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-external-signs",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-external-signs",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-interpretation",
@@ -1247,7 +3831,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-interpretation",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-interpretation",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "meihua-timing",
@@ -1271,7 +3874,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REMOVE",
+      "canonical_content_id": "knowledge:meihua-timing",
+      "merge_target": null,
+      "reason": "梅花内容不进入六爻公开学习路径；Stable ID 保留供梅花域使用。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "REMOVE",
+      "canonicalContentId": "knowledge:meihua-timing",
+      "releaseLane": "REMOVED_FROM_LIUYAO",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REMOVE_FROM_LIUYAO_PUBLIC_PATH",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "method-liuyao-vs-meihua",
@@ -1296,7 +3918,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "INTERNAL_ONLY",
+      "canonical_content_id": "knowledge:method-liuyao-vs-meihua",
+      "merge_target": null,
+      "reason": "跨域比较内容退出六爻核心学习路径。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "INTERNAL_ONLY",
+      "canonicalContentId": "knowledge:method-liuyao-vs-meihua",
+      "releaseLane": "INTERNAL_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "NO_PUBLIC_ROUTE",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "content-how-to-read-chart",
@@ -1309,7 +3950,7 @@
       "liuyao-six-relations",
       "liuyao-six-spirits"
     ],
-    "summary": "面向用户界面的盘面阅读教程。",
+    "summary": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。",
     "canonical_status": "ACTIVE",
     "content_readiness": "OUTLINE_READY",
     "source_refs": [],
@@ -1322,7 +3963,144 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "REWRITE",
+      "canonical_content_id": "knowledge:content-how-to-read-chart",
+      "merge_target": null,
+      "reason": "具有独立用户任务，成熟化后保留。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_content": {
+      "displayName": "如何读懂一张六爻盘",
+      "shortDefinition": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。",
+      "professionalDefinition": "专业盘面包含多个事实层。用户阅读时应先确认问题语义和核心对象，再进入状态和关系判断；否则容易把一个醒目的六亲、卦名或动爻误当成整张盘的结论。",
+      "practicalMeaning": "这张知识页可作为报告阅读入口，帮助用户知道每一层回答什么问题、哪些内容只是定位，哪些内容才真正构成支持或阻碍。",
+      "guidedMeaning": "这张知识页可作为报告阅读入口，帮助用户知道每一层回答什么问题、哪些内容只是定位，哪些内容才真正构成支持或阻碍。",
+      "commonMisunderstandings": [
+        "把“如何读懂一张六爻盘”当成单独决定结果的规则",
+        "记住“如何读懂一张六爻盘”但不知道它何时真正进入本题判断"
+      ],
+      "examples": [
+        "例如，学习“如何读懂一张六爻盘”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+      ],
+      "aliases": [],
+      "relatedKnowledgeRefs": [],
+      "articleRefs": [],
+      "faqRefs": [],
+      "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+      "reportUsage": [],
+      "boundary": "“如何读懂一张六爻盘”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "sections": [
+        {
+          "heading": "它是什么",
+          "body": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。"
+            }
+          ]
+        },
+        {
+          "heading": "为什么值得理解",
+          "body": "这张知识页可作为报告阅读入口，帮助用户知道每一层回答什么问题、哪些内容只是定位，哪些内容才真正构成支持或阻碍。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "这张知识页可作为报告阅读入口，帮助用户知道每一层回答什么问题、哪些内容只是定位，哪些内容才真正构成支持或阻碍。"
+            }
+          ]
+        },
+        {
+          "heading": "在六爻里怎样使用",
+          "body": "专业盘面包含多个事实层。用户阅读时应先确认问题语义和核心对象，再进入状态和关系判断；否则容易把一个醒目的六亲、卦名或动爻误当成整张盘的结论。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "专业盘面包含多个事实层。用户阅读时应先确认问题语义和核心对象，再进入状态和关系判断；否则容易把一个醒目的六亲、卦名或动爻误当成整张盘的结论。"
+            }
+          ]
+        },
+        {
+          "heading": "一个具体例子",
+          "body": "例如，学习“如何读懂一张六爻盘”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "例如，学习“如何读懂一张六爻盘”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。"
+            }
+          ]
+        },
+        {
+          "heading": "阅读报告时怎么核对",
+          "body": "看到“如何读懂一张六爻盘”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "看到“如何读懂一张六爻盘”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+            }
+          ]
+        },
+        {
+          "heading": "常见误区",
+          "body": "- 把“如何读懂一张六爻盘”当成单独决定结果的规则\n- 记住“如何读懂一张六爻盘”但不知道它何时真正进入本题判断",
+          "blocks": [
+            {
+              "type": "unordered_list",
+              "items": [
+                "把“如何读懂一张六爻盘”当成单独决定结果的规则",
+                "记住“如何读懂一张六爻盘”但不知道它何时真正进入本题判断"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "边界与限制",
+          "body": "“如何读懂一张六爻盘”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "“如何读懂一张六爻盘”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。"
+            }
+          ]
+        }
+      ],
+      "markdown": "# 如何读懂一张六爻盘\n\n## 它是什么\n\n读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。\n\n## 为什么值得理解\n\n这张知识页可作为报告阅读入口，帮助用户知道每一层回答什么问题、哪些内容只是定位，哪些内容才真正构成支持或阻碍。\n\n## 在六爻里怎样使用\n\n专业盘面包含多个事实层。用户阅读时应先确认问题语义和核心对象，再进入状态和关系判断；否则容易把一个醒目的六亲、卦名或动爻误当成整张盘的结论。\n\n## 一个具体例子\n\n例如，学习“如何读懂一张六爻盘”时先掌握它在卦象、历法或爻位中的基础作用，再观察它如何被六爻排盘和专业判断使用。\n\n## 阅读报告时怎么核对\n\n看到“如何读懂一张六爻盘”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把“如何读懂一张六爻盘”当成单独决定结果的规则\n- 记住“如何读懂一张六爻盘”但不知道它何时真正进入本题判断\n\n## 边界与限制\n\n“如何读懂一张六爻盘”用于学习和报告理解，不替代完整六爻判断，也不替用户做现实决定。",
+      "editorialDecision": "REWRITE",
+      "canonicalContentId": "knowledge:content-how-to-read-chart",
+      "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+      "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "repositoryReview": {
+        "status": "REVIEW_REQUIRED",
+        "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+      },
+      "seo": {
+        "index": false,
+        "title": "如何读懂一张六爻盘",
+        "follow": false,
+        "ogImage": "/og-default.png",
+        "ogTitle": "如何读懂一张六爻盘",
+        "updatedAt": null,
+        "contentType": "KNOWLEDGE",
+        "description": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。",
+        "publishedAt": null,
+        "twitterCard": "summary_large_image",
+        "canonicalPath": "/knowledge/content-how-to-read-chart",
+        "ogDescription": "读六爻盘最有效的方法不是一次看完所有术语，而是按“问题—本卦/变卦—世应与用神—旺衰—动变—依据—时间”逐层阅读。"
+      },
+      "relatedContentRefs": []
+    },
+    "commercial_closure": {
+      "decision": "REWRITE",
+      "canonicalContentId": "knowledge:content-how-to-read-chart",
+      "releaseLane": "PROFESSIONAL_REVIEW_REQUIRED",
+      "professionalReviewStatus": "REVIEW_REQUIRED",
+      "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+      "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+      "track": "FOUNDATION_SUPPORT"
+    }
   },
   {
     "code": "content-how-to-ask",
@@ -1346,7 +4124,26 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B01-KC-02",
+      "merge_target": "B01-KC-02",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B01-KC-02",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   },
   {
     "code": "content-evidence-reading",
@@ -1370,6 +4167,25 @@
       "knowledge_card",
       "case_linking"
     ],
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "commercial_decision": {
+      "decision": "MERGE",
+      "canonical_content_id": "B01-KC-22",
+      "merge_target": "B01-KC-22",
+      "reason": "后加 Demo Knowledge 与既有 Stable Knowledge 重复，合并到 Canonical。",
+      "stable_id_action": "KEEP"
+    },
+    "commercial_closure": {
+      "decision": "MERGE",
+      "canonicalContentId": "B01-KC-22",
+      "releaseLane": "ALIAS_ONLY",
+      "professionalReviewStatus": "NOT_APPLICABLE",
+      "recommendedRuntimeStatus": "INTERNAL_ONLY",
+      "publicRouteAction": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+      "track": null
+    },
+    "commercial_content": {
+      "relatedContentRefs": []
+    }
   }
 ]

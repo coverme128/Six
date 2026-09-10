@@ -31,6 +31,11 @@ function toContentStatus(reviewStatus?: string): ContentStatus {
   return "DRAFT";
 }
 
+function requiresRuntimeDemotion(entry: any) {
+  const decision = entry.body?.commercialDecision?.decision ?? entry.body?.commercial_decision?.decision;
+  return entry.body?.repositoryReview?.status === "REVIEW_REQUIRED" || ["MERGE", "REMOVE", "INTERNAL_ONLY"].includes(decision);
+}
+
 async function main() {
   if (!process.env.DATABASE_URL) {
     console.log(JSON.stringify({ ok: true, database: databaseHealth(), seeded: false }, null, 2));
@@ -53,6 +58,9 @@ async function main() {
 
   let contentEntries = 0;
   for (const entry of entries) {
+    const demotion = requiresRuntimeDemotion(entry)
+      ? { status: toContentStatus(entry.reviewStatus), publishedAt: null }
+      : {};
     await prisma.contentEntry.upsert({
       where: {
         type_slug: {
@@ -63,7 +71,8 @@ async function main() {
       update: {
         title: entry.title,
         summary: entry.summary,
-        payload: entry
+        payload: entry,
+        ...demotion
       },
       create: {
         id: entry.contentId,

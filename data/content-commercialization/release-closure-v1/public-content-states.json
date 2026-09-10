@@ -1,0 +1,29 @@
+{
+  "LOADING": {
+    "copy": "正在加载内容…"
+  },
+  "EMPTY_SEARCH": {
+    "copy": "没有找到匹配的六爻内容。试试换一个更具体的术语或问题。"
+  },
+  "COLLECTION_NOT_ENOUGH_PUBLIC_ITEMS": {
+    "behavior": "HIDE_COLLECTION",
+    "admin_reason": "MINIMUM_PUBLIC_ITEMS_NOT_MET"
+  },
+  "TOPIC_NOT_ENOUGH_PUBLIC_ITEMS": {
+    "behavior": "HIDE_OR_NOINDEX",
+    "admin_reason": "TOPIC_CONTENT_GATE_NOT_MET"
+  },
+  "MERGED_CONTENT": {
+    "behavior": "REDIRECT_TO_CANONICAL"
+  },
+  "REVIEW_REQUIRED": {
+    "public_behavior": "NOT_VISIBLE",
+    "admin_copy": "内容待专业或发布审核"
+  },
+  "INTERNAL_ONLY": {
+    "public_behavior": "NOT_VISIBLE"
+  },
+  "CASE": {
+    "public_behavior": "NOT_VISIBLE"
+  }
+}

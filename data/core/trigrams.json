@@ -12,7 +12,155 @@
       "direction": "northwest",
       "family": "father",
       "nature": "heaven",
-      "meihua_number": 1
+      "meihua_number": 1,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:qian",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "乾卦",
+        "shortDefinition": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，乾常联系“刚健、主动、创造与持续行动”，方向配西北，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，乾首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，乾首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把乾的象征意义直接等同于现实结果",
+          "看到乾就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为乾，这只能说明其卦象结构包含乾这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“乾”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，乾首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，乾首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，乾常联系“刚健、主动、创造与持续行动”，方向配西北，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，乾常联系“刚健、主动、创造与持续行动”，方向配西北，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为乾，这只能说明其卦象结构包含乾这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为乾，这只能说明其卦象结构包含乾这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名乾，卦符 ☰，自然象为天，五行配金，方向配西北。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名乾，卦符 ☰，自然象为天，五行配金，方向配西北。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“乾卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“乾卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把乾的象征意义直接等同于现实结果\n- 看到乾就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把乾的象征意义直接等同于现实结果",
+                  "看到乾就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“乾”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“乾”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 乾卦\n\n## 它是什么\n\n乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，乾首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，乾常联系“刚健、主动、创造与持续行动”，方向配西北，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为乾，这只能说明其卦象结构包含乾这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名乾，卦符 ☰，自然象为天，五行配金，方向配西北。\n\n## 阅读报告时怎么核对\n\n看到“乾卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把乾的象征意义直接等同于现实结果\n- 看到乾就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“乾”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:qian",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "乾卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "乾卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/qian",
+          "ogDescription": "乾（☰）是八个经卦之一，以天为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:qian",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "dui",
@@ -24,7 +172,155 @@
       "direction": "west",
       "family": "youngest_daughter",
       "nature": "lake",
-      "meihua_number": 2
+      "meihua_number": 2,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:dui",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "兑卦",
+        "shortDefinition": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，兑常联系“交流、悦纳、开放与交换”，方向配西，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，兑首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，兑首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把兑的象征意义直接等同于现实结果",
+          "看到兑就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为兑，这只能说明其卦象结构包含兑这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“兑”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，兑首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，兑首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，兑常联系“交流、悦纳、开放与交换”，方向配西，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，兑常联系“交流、悦纳、开放与交换”，方向配西，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为兑，这只能说明其卦象结构包含兑这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为兑，这只能说明其卦象结构包含兑这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名兑，卦符 ☱，自然象为泽，五行配金，方向配西。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名兑，卦符 ☱，自然象为泽，五行配金，方向配西。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“兑卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“兑卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把兑的象征意义直接等同于现实结果\n- 看到兑就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把兑的象征意义直接等同于现实结果",
+                  "看到兑就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“兑”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“兑”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 兑卦\n\n## 它是什么\n\n兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，兑首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，兑常联系“交流、悦纳、开放与交换”，方向配西，五行配金。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为兑，这只能说明其卦象结构包含兑这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名兑，卦符 ☱，自然象为泽，五行配金，方向配西。\n\n## 阅读报告时怎么核对\n\n看到“兑卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把兑的象征意义直接等同于现实结果\n- 看到兑就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“兑”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:dui",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "兑卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "兑卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/dui",
+          "ogDescription": "兑（☱）是八个经卦之一，以泽为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:dui",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "li",
@@ -36,7 +332,155 @@
       "direction": "south",
       "family": "middle_daughter",
       "nature": "fire",
-      "meihua_number": 3
+      "meihua_number": 3,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:li",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "离卦",
+        "shortDefinition": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，离常联系“明晰、依附、显现与辨识”，方向配南，五行配火。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，离首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，离首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把离的象征意义直接等同于现实结果",
+          "看到离就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为离，这只能说明其卦象结构包含离这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“离”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，离首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，离首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，离常联系“明晰、依附、显现与辨识”，方向配南，五行配火。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，离常联系“明晰、依附、显现与辨识”，方向配南，五行配火。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为离，这只能说明其卦象结构包含离这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为离，这只能说明其卦象结构包含离这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名离，卦符 ☲，自然象为火，五行配火，方向配南。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名离，卦符 ☲，自然象为火，五行配火，方向配南。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“离卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“离卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把离的象征意义直接等同于现实结果\n- 看到离就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把离的象征意义直接等同于现实结果",
+                  "看到离就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“离”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“离”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 离卦\n\n## 它是什么\n\n离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，离首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，离常联系“明晰、依附、显现与辨识”，方向配南，五行配火。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为离，这只能说明其卦象结构包含离这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名离，卦符 ☲，自然象为火，五行配火，方向配南。\n\n## 阅读报告时怎么核对\n\n看到“离卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把离的象征意义直接等同于现实结果\n- 看到离就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“离”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:li",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "离卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "离卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/li",
+          "ogDescription": "离（☲）是八个经卦之一，以火为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:li",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "zhen",
@@ -48,7 +492,155 @@
       "direction": "east",
       "family": "eldest_son",
       "nature": "thunder",
-      "meihua_number": 4
+      "meihua_number": 4,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:zhen",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "震卦",
+        "shortDefinition": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，震常联系“启动、震动、行动与变化”，方向配东，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，震首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，震首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把震的象征意义直接等同于现实结果",
+          "看到震就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为震，这只能说明其卦象结构包含震这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“震”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，震首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，震首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，震常联系“启动、震动、行动与变化”，方向配东，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，震常联系“启动、震动、行动与变化”，方向配东，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为震，这只能说明其卦象结构包含震这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为震，这只能说明其卦象结构包含震这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名震，卦符 ☳，自然象为雷，五行配木，方向配东。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名震，卦符 ☳，自然象为雷，五行配木，方向配东。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“震卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“震卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把震的象征意义直接等同于现实结果\n- 看到震就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把震的象征意义直接等同于现实结果",
+                  "看到震就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“震”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“震”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 震卦\n\n## 它是什么\n\n震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，震首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，震常联系“启动、震动、行动与变化”，方向配东，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为震，这只能说明其卦象结构包含震这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名震，卦符 ☳，自然象为雷，五行配木，方向配东。\n\n## 阅读报告时怎么核对\n\n看到“震卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把震的象征意义直接等同于现实结果\n- 看到震就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“震”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:zhen",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "震卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "震卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/zhen",
+          "ogDescription": "震（☳）是八个经卦之一，以雷为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:zhen",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "xun",
@@ -60,7 +652,155 @@
       "direction": "southeast",
       "family": "eldest_daughter",
       "nature": "wind",
-      "meihua_number": 5
+      "meihua_number": 5,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:xun",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "巽卦",
+        "shortDefinition": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，巽常联系“进入、渗透、渐进与适应”，方向配东南，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，巽首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，巽首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把巽的象征意义直接等同于现实结果",
+          "看到巽就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为巽，这只能说明其卦象结构包含巽这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“巽”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，巽首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，巽首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，巽常联系“进入、渗透、渐进与适应”，方向配东南，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，巽常联系“进入、渗透、渐进与适应”，方向配东南，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为巽，这只能说明其卦象结构包含巽这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为巽，这只能说明其卦象结构包含巽这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名巽，卦符 ☴，自然象为风，五行配木，方向配东南。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名巽，卦符 ☴，自然象为风，五行配木，方向配东南。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“巽卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“巽卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把巽的象征意义直接等同于现实结果\n- 看到巽就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把巽的象征意义直接等同于现实结果",
+                  "看到巽就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“巽”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“巽”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 巽卦\n\n## 它是什么\n\n巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，巽首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，巽常联系“进入、渗透、渐进与适应”，方向配东南，五行配木。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为巽，这只能说明其卦象结构包含巽这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名巽，卦符 ☴，自然象为风，五行配木，方向配东南。\n\n## 阅读报告时怎么核对\n\n看到“巽卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把巽的象征意义直接等同于现实结果\n- 看到巽就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“巽”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:xun",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "巽卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "巽卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/xun",
+          "ogDescription": "巽（☴）是八个经卦之一，以风为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:xun",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "kan",
@@ -72,7 +812,155 @@
       "direction": "north",
       "family": "middle_son",
       "nature": "water",
-      "meihua_number": 6
+      "meihua_number": 6,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:kan",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "坎卦",
+        "shortDefinition": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，坎常联系“险阻、流动、深度与谨慎”，方向配北，五行配水。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，坎首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，坎首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把坎的象征意义直接等同于现实结果",
+          "看到坎就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为坎，这只能说明其卦象结构包含坎这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“坎”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，坎首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，坎首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，坎常联系“险阻、流动、深度与谨慎”，方向配北，五行配水。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，坎常联系“险阻、流动、深度与谨慎”，方向配北，五行配水。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为坎，这只能说明其卦象结构包含坎这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为坎，这只能说明其卦象结构包含坎这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名坎，卦符 ☵，自然象为水，五行配水，方向配北。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名坎，卦符 ☵，自然象为水，五行配水，方向配北。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“坎卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“坎卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把坎的象征意义直接等同于现实结果\n- 看到坎就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把坎的象征意义直接等同于现实结果",
+                  "看到坎就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“坎”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“坎”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 坎卦\n\n## 它是什么\n\n坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，坎首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，坎常联系“险阻、流动、深度与谨慎”，方向配北，五行配水。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为坎，这只能说明其卦象结构包含坎这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名坎，卦符 ☵，自然象为水，五行配水，方向配北。\n\n## 阅读报告时怎么核对\n\n看到“坎卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把坎的象征意义直接等同于现实结果\n- 看到坎就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“坎”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:kan",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "坎卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "坎卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/kan",
+          "ogDescription": "坎（☵）是八个经卦之一，以水为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:kan",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "gen",
@@ -84,7 +972,155 @@
       "direction": "northeast",
       "family": "youngest_son",
       "nature": "mountain",
-      "meihua_number": 7
+      "meihua_number": 7,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:gen",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "艮卦",
+        "shortDefinition": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，艮常联系“停止、界限、稳定与收束”，方向配东北，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，艮首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，艮首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把艮的象征意义直接等同于现实结果",
+          "看到艮就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为艮，这只能说明其卦象结构包含艮这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“艮”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，艮首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，艮首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，艮常联系“停止、界限、稳定与收束”，方向配东北，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，艮常联系“停止、界限、稳定与收束”，方向配东北，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为艮，这只能说明其卦象结构包含艮这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为艮，这只能说明其卦象结构包含艮这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名艮，卦符 ☶，自然象为山，五行配土，方向配东北。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名艮，卦符 ☶，自然象为山，五行配土，方向配东北。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“艮卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“艮卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把艮的象征意义直接等同于现实结果\n- 看到艮就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把艮的象征意义直接等同于现实结果",
+                  "看到艮就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“艮”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“艮”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 艮卦\n\n## 它是什么\n\n艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，艮首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，艮常联系“停止、界限、稳定与收束”，方向配东北，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为艮，这只能说明其卦象结构包含艮这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名艮，卦符 ☶，自然象为山，五行配土，方向配东北。\n\n## 阅读报告时怎么核对\n\n看到“艮卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把艮的象征意义直接等同于现实结果\n- 看到艮就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“艮”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:gen",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "艮卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "艮卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/gen",
+          "ogDescription": "艮（☶）是八个经卦之一，以山为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:gen",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     },
     {
       "code": "kun",
@@ -96,7 +1132,155 @@
       "direction": "southwest",
       "family": "mother",
       "nature": "earth",
-      "meihua_number": 8
+      "meihua_number": 8,
+      "commercial_decision": {
+        "decision": "REWRITE",
+        "canonical_content_id": "trigram:kun",
+        "merge_target": null,
+        "reason": "保留为易学基础结构页，成熟化并限制其对六爻结论的权重。",
+        "stable_id_action": "KEEP"
+      },
+      "summary": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+      "commercial_content": {
+        "displayName": "坤卦",
+        "shortDefinition": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+        "professionalDefinition": "传统上，坤常联系“承载、顺应、包容与配合”，方向配西南，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+        "practicalMeaning": "在六爻盘里，坤首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "guidedMeaning": "在六爻盘里，坤首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+        "commonMisunderstandings": [
+          "把坤的象征意义直接等同于现实结果",
+          "看到坤就跳过具体爻位和关系判断"
+        ],
+        "examples": [
+          "例如，某重卦的上卦为坤，这只能说明其卦象结构包含坤这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+        ],
+        "aliases": [],
+        "relatedKnowledgeRefs": [],
+        "articleRefs": [],
+        "faqRefs": [],
+        "whenUserSeesIt": "知识中心、相关报告帮助或专题学习路径中按需展示。",
+        "reportUsage": [],
+        "boundary": "“坤”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "sections": [
+          {
+            "heading": "它是什么",
+            "body": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+              }
+            ]
+          },
+          {
+            "heading": "为什么值得理解",
+            "body": "在六爻盘里，坤首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "在六爻盘里，坤首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。"
+              }
+            ]
+          },
+          {
+            "heading": "在六爻里怎样使用",
+            "body": "传统上，坤常联系“承载、顺应、包容与配合”，方向配西南，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "传统上，坤常联系“承载、顺应、包容与配合”，方向配西南，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。"
+              }
+            ]
+          },
+          {
+            "heading": "一个具体例子",
+            "body": "例如，某重卦的上卦为坤，这只能说明其卦象结构包含坤这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "例如，某重卦的上卦为坤，这只能说明其卦象结构包含坤这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。"
+              }
+            ]
+          },
+          {
+            "heading": "进一步理解",
+            "body": "基本识别：卦名坤，卦符 ☷，自然象为地，五行配土，方向配西南。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "基本识别：卦名坤，卦符 ☷，自然象为地，五行配土，方向配西南。"
+              }
+            ]
+          },
+          {
+            "heading": "阅读报告时怎么核对",
+            "body": "看到“坤卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "看到“坤卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。"
+              }
+            ]
+          },
+          {
+            "heading": "常见误区",
+            "body": "- 把坤的象征意义直接等同于现实结果\n- 看到坤就跳过具体爻位和关系判断",
+            "blocks": [
+              {
+                "type": "unordered_list",
+                "items": [
+                  "把坤的象征意义直接等同于现实结果",
+                  "看到坤就跳过具体爻位和关系判断"
+                ]
+              }
+            ]
+          },
+          {
+            "heading": "边界与限制",
+            "body": "“坤”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "“坤”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。"
+              }
+            ]
+          }
+        ],
+        "markdown": "# 坤卦\n\n## 它是什么\n\n坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。\n\n## 为什么值得理解\n\n在六爻盘里，坤首先告诉你卦象结构。真正涉及本题结果时，还需继续看纳甲、六亲、世应、用神、旺衰和动变。\n\n## 在六爻里怎样使用\n\n传统上，坤常联系“承载、顺应、包容与配合”，方向配西南，五行配土。这些属性用于理解卦象结构，不等于本次六爻判断的直接结论。\n\n## 一个具体例子\n\n例如，某重卦的上卦为坤，这只能说明其卦象结构包含坤这一层。若报告进一步谈支持或阻碍，仍必须给出六爻专业事实。\n\n## 进一步理解\n\n基本识别：卦名坤，卦符 ☷，自然象为地，五行配土，方向配西南。\n\n## 阅读报告时怎么核对\n\n看到“坤卦”时，先确认它作用于哪一个对象、属于哪一层信息，以及报告后续结论是否真正引用了它。高质量解释应把专业名词重新连接到本次问题，而不是只堆术语。\n\n## 常见误区\n\n- 把坤的象征意义直接等同于现实结果\n- 看到坤就跳过具体爻位和关系判断\n\n## 边界与限制\n\n“坤”属于传统易学/六爻的基础知识，可以帮助理解盘面，但不能脱离本次问题、确定性排盘和专业判断事实单独推出吉凶或现实结果。",
+        "editorialDecision": "REWRITE",
+        "canonicalContentId": "trigram:kun",
+        "editorialCompletionStatus": "IMPORTED_PENDING_DOMAIN_AND_RUNTIME_REVIEW",
+        "sourceEditorialClaim": "COMMERCIAL_EDITORIAL_COMPLETE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "repositoryReview": {
+          "status": "REVIEW_REQUIRED",
+          "method": "COMMERCIAL_BATCH_02_PENDING_DOMAIN_AND_RUNTIME_RELEASE_GATE"
+        },
+        "seo": {
+          "index": false,
+          "title": "坤卦",
+          "follow": false,
+          "ogImage": "/og-default.png",
+          "ogTitle": "坤卦",
+          "updatedAt": null,
+          "contentType": "TRIGRAM",
+          "description": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。",
+          "publishedAt": null,
+          "twitterCard": "summary_large_image",
+          "canonicalPath": "/trigrams/kun",
+          "ogDescription": "坤（☷）是八个经卦之一，以地为基本自然象；三爻结构可作为上卦或下卦参与组成六十四卦。"
+        },
+        "relatedContentRefs": []
+      },
+      "commercial_closure": {
+        "decision": "REWRITE",
+        "canonicalContentId": "trigram:kun",
+        "releaseLane": "READY_FOR_RUNTIME_RELEASE_GATE",
+        "professionalReviewStatus": "EDITORIAL_REVIEW_COMPLETE",
+        "recommendedRuntimeStatus": "REVIEW_REQUIRED",
+        "publicRouteAction": "KEEP_CANONICAL_ROUTE_AFTER_RELEASE_GATE",
+        "track": "FOUNDATION_ICHING"
+      }
     }
   ]
 }

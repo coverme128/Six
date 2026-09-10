@@ -1,0 +1,122 @@
+[
+  {
+    "collection_id": "COL-01",
+    "title": "六爻入门",
+    "navigation_lane": "START_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-02",
+    "title": "如何正确提问",
+    "navigation_lane": "START_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-03",
+    "title": "起卦与排盘",
+    "navigation_lane": "START_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-04",
+    "title": "六亲与用神",
+    "navigation_lane": "DEEP_LEARNING_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-05",
+    "title": "世应与关系",
+    "navigation_lane": "DEEP_LEARNING_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-06",
+    "title": "旺衰与月日",
+    "navigation_lane": "DEEP_LEARNING_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-07",
+    "title": "动爻与变化",
+    "navigation_lane": "DEEP_LEARNING_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-08",
+    "title": "应期与不确定性",
+    "navigation_lane": "DEEP_LEARNING_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-09",
+    "title": "如何看六爻报告",
+    "navigation_lane": "START_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-10",
+    "title": "事业与商业",
+    "navigation_lane": "REAL_WORLD_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-11",
+    "title": "感情与人生安排",
+    "navigation_lane": "REAL_WORLD_SECONDARY_PATH",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  },
+  {
+    "collection_id": "COL-12",
+    "title": "系统可信性与 AI",
+    "navigation_lane": "TRUST_HELP_ONLY",
+    "top_level_navigation": false,
+    "runtime_item_rule": "Only canonical PUBLICATION_READY items are renderable.",
+    "minimum_public_items": 3,
+    "empty_behavior": "HIDE_COLLECTION",
+    "stable_id_action": "KEEP"
+  }
+]

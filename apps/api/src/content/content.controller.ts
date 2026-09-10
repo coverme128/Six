@@ -67,12 +67,15 @@ function containsMeihuaOnlySemantics(entry: any) {
 }
 
 function publicContentEntries(entries: any[]) {
-  return entries.filter(
-    (entry) =>
-      String(entry.domain).toLowerCase() === "liuyao" &&
-      entry.reviewStatus === "PUBLICATION_READY" &&
-      !containsMeihuaOnlySemantics(entry)
-  );
+  const production = ["beta", "production"].includes(process.env.APP_ENV ?? "development");
+  return entries.filter((entry) => {
+    const decision = entry.body?.commercialClosure?.decision ?? entry.body?.commercialDecision?.decision ?? entry.body?.commercial_decision?.decision;
+    if (["MERGE", "REMOVE", "INTERNAL_ONLY"].includes(decision)) return false;
+    if (String(entry.domain).toLowerCase() !== "liuyao" || containsMeihuaOnlySemantics(entry)) return false;
+    return production
+      ? entry.reviewStatus === "PUBLICATION_READY"
+      : ["PUBLICATION_READY", "REVIEWED", "REVIEW_REQUIRED"].includes(entry.reviewStatus);
+  });
 }
 
 function reviewStatusFromDatabase(status: string) {
@@ -92,23 +95,28 @@ function matchesQuery(entry: any, query: Record<string, string>) {
   });
 }
 
-function searchEntry(entry: any, query: string) {
+function searchableBodyStrings(value: unknown, key = ""): string[] {
+  if (["commercialDecision", "commercialClosure", "repositoryReview", "sourceRefs"].includes(key)) return [];
+  if (typeof value === "string") return [value];
+  if (Array.isArray(value)) return value.flatMap((item) => searchableBodyStrings(item));
+  if (!value || typeof value !== "object") return [];
+  return Object.entries(value).flatMap(([childKey, child]) => searchableBodyStrings(child, childKey));
+}
+
+function searchScore(entry: any, query: string) {
   const needle = query.trim().toLowerCase();
-  if (!needle) return true;
-  const haystack = [
-    entry.contentId,
-    entry.contentType,
-    entry.title,
-    entry.slug,
-    entry.summary,
-    entry.domain,
-    entry.category,
-    ...(entry.tags ?? [])
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-  return haystack.includes(needle);
+  if (!needle) return 1;
+  const title = String(entry.title ?? "").toLowerCase();
+  const aliases = [...(entry.secondaryKeywords ?? []), ...(Array.isArray(entry.body?.aliases) ? entry.body.aliases : []), ...(Array.isArray(entry.body?.queryVariants) ? entry.body.queryVariants : [])].map((value) => String(value).toLowerCase());
+  const summary = String(entry.summary ?? "").toLowerCase();
+  const body = searchableBodyStrings(entry.body).join(" ").toLowerCase();
+  if (title === needle) return 100;
+  if (aliases.includes(needle)) return 90;
+  if (title.includes(needle)) return 70;
+  if (aliases.some((value) => value.includes(needle))) return 60;
+  if (summary.includes(needle)) return 45;
+  if (body.includes(needle)) return 25;
+  return `${entry.contentId} ${entry.slug} ${entry.category} ${(entry.tags ?? []).join(" ")}`.toLowerCase().includes(needle) ? 10 : 0;
 }
 
 async function databaseContentEntries() {
@@ -194,7 +202,10 @@ export class ContentController {
       query: query ?? "",
       items: entries
         .filter((entry) => matchesQuery(entry, filterQuery))
-        .filter((entry) => searchEntry(entry, query ?? ""))
+        .map((entry) => ({ entry, score: searchScore(entry, query ?? "") }))
+        .filter(({ score }) => score > 0)
+        .sort((left, right) => right.score - left.score || String(left.entry.title).localeCompare(String(right.entry.title), "zh-CN"))
+        .map(({ entry }) => entry)
         .map(contentSummary)
     };
   }
@@ -217,12 +228,19 @@ export class ContentController {
 
   @Get("content/:contentType/:slug")
   async contentDetail(@Param("contentType") contentType: string, @Param("slug") slug: string) {
-    const entries = await contentEntries();
-    const item = entries.find(
+    const databaseEntries = await databaseContentEntries();
+    const allEntries = databaseEntries ?? new HybridContentRepository({ rootDir: rootDir(), includePreview: true }).list();
+    const entries = publicContentEntries(allEntries);
+    let item = entries.find(
       (entry) =>
         String(entry.contentType).toLowerCase() === String(contentType).toLowerCase() &&
         String(entry.slug).toLowerCase() === String(slug).toLowerCase()
     );
+    if (!item) {
+      const source = allEntries.find((entry) => String(entry.contentType).toLowerCase() === String(contentType).toLowerCase() && String(entry.slug).toLowerCase() === String(slug).toLowerCase());
+      const decision = source?.body?.commercialClosure ?? source?.body?.commercialDecision;
+      if (decision?.decision === "MERGE") item = entries.find((entry) => entry.contentId === (decision.canonicalContentId ?? decision.mergeTarget));
+    }
     if (!item) throw new NotFoundException({ code: "CONTENT_NOT_FOUND", message: "未找到内容。" });
     return contentDetail(item);
   }

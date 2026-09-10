@@ -73,6 +73,21 @@ test("CONTENT_SCHEMA_V1 accepts valid entries and rejects unsafe publication sta
   assert.ok(validateContentEntry(badStatus).some((error) => error.code === "CONTENT_STATUS_INVALID"));
   const unsafe = validEntry({ contentId: "content:unsafe", slug: "unsafe", canonicalPath: "/knowledge/unsafe", summary: "保证成功。" });
   assert.ok(validateContentEntry(unsafe).some((error) => error.code === "CONTENT_SAFETY_LANGUAGE"));
+  const explicitBoundary = validEntry({
+    contentId: "content:boundary",
+    slug: "boundary",
+    canonicalPath: "/knowledge/boundary",
+    summary: "不能保证收益，也不能保证结果。",
+    body: { sections: [{ body: "时间窗口不是应期承诺。" }] },
+  });
+  assert.ok(!validateContentEntry(explicitBoundary).some((error) => error.code === "CONTENT_SAFETY_LANGUAGE"));
+  const professionalBoundary = validEntry({
+    contentId: "content:professional-boundary",
+    slug: "professional-boundary",
+    canonicalPath: "/knowledge/professional-boundary",
+    summary: "不能替代医生诊断，也不应替代法律意见。",
+  });
+  assert.ok(!validateContentEntry(professionalBoundary).some((error) => error.code === "CONTENT_SAFETY_LANGUAGE"));
 });
 
 test("ContentQAValidator rejects duplicate slug and canonical path", () => {

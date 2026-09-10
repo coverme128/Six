@@ -1,8 +1,8 @@
 # Liuyao Public Beta Commercial Readiness
 
-Last reviewed: 2026-08-19
+Last reviewed: 2026-09-10
 
-Status: `LOCAL_SCOPE_COMPLETE_PRODUCTION_RELEASE_GATES_OPEN`
+Status: `LOCAL_PRODUCT_COMPLETE_CONTENT_AND_PRODUCTION_GATES_OPEN`
 
 ## Decision
 
@@ -63,9 +63,9 @@ The scenario presentation must be a translation of supplied ProductResultFacts a
 
 ```text
 Learn Hub
--> beginner entry or real-world topic
+-> start, real-world problem, or deep-learning goal
 -> article/topic explanation
--> six-stage guided learning path
+-> currently available guided learning stage
 -> related content
 -> Liuyao workbench
 ```
@@ -79,13 +79,15 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 - Homepage primary actions: `开始六爻分析` and `进入学习中心`.
 - Direct shortcuts: relationship, career, wealth, and business.
 - Relationship-specific Guided presentation implemented without modifying formal assessment facts.
-- Dedicated Learn Hub implemented with four intent-led entries, 12 public learning collections, 10 scenario-matched topic entries, six learning stages, combined filters, and progressive disclosure.
-- Six topic landing pages and one six-stage guided learning path are `PUBLICATION_READY`.
+- Dedicated Learn Hub implemented with three goal-led entries, five knowledge-navigation destinations, 12 secondary learning collections, six supported topic entries, five currently visible learning stages, combined filters, and progressive disclosure.
+- Six topic landing pages and one learning path are `PUBLICATION_READY`; collections appear only when their three linked records are Runtime-visible.
 - Batch content: 445 Liuyao entries.
 - Runtime catalog: 603 entries including 158 system seed entries.
-- Public entries: 421.
-- Historical Meihua seed records: 11, all non-public and outside the 421 public entries.
-- Content QA: 0 errors, 0 warnings, 0 isolated, 0 missing incoming links, 0 missing outgoing links.
+- Commercial-finalization governance: 536/536 decisions, 457 canonical assets, 57 aliases, 15 removals, 7 internal-only decisions, and 1193 graph edges.
+- Runtime states: 7 `PUBLICATION_READY`, 493 `REVIEW_REQUIRED`, 88 `INTERNAL_ONLY`, and 15 `DEFERRED`.
+- Development-visible entries: 500. Beta/production-visible entries: 7. No article, knowledge card, or FAQ is currently production-visible.
+- Historical Meihua records remain non-public.
+- Content QA: 0 errors, 0 warnings, 0 isolated, one expected no-incoming-link Learn Hub root, and 0 missing outgoing links.
 
 ### Visual system
 
@@ -102,6 +104,7 @@ The hub must remain task-oriented and scannable. It must not degrade into a flat
 
 - Production/beta readiness returns HTTP 503 when PostgreSQL or Redis dependencies are unavailable.
 - Production content filtering exposes only `PUBLICATION_READY` entries.
+- Production API and sitemap expose 7 entries; review/internal/alias/removed records and internal terminology are excluded.
 - Deterministic report remains usable when AI falls back.
 
 ### Latest local validation
@@ -120,6 +123,7 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 
 | Gate | Current state | Required evidence |
 | --- | --- | --- |
+| Commercial content review | Open | Resolve Batch 01 article review, Batch 02 editorial/domain review, 36 repeated FAQ sentence groups, and approve eligible records individually |
 | HTTPS staging | Open | Deployed Web/API/Worker with stable URLs and secrets outside Git |
 | Dependency readiness | Open | PostgreSQL and Redis configured; `/ready` returns 200 only when both are usable |
 | Live AI provider | Complete locally | Five Liuyao scenarios validated with DeepSeek structured output, fact/evidence/safety/plain-language gates, automatic retry, and deterministic fallback; staging evidence remains open |
@@ -134,6 +138,7 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 
 - Do not label local UI completion as `PRODUCTION_READY`.
 - Do not expose `REVIEW_REQUIRED` or `DEMO_ONLY` content in production public APIs or sitemap.
+- Do not bulk-promote the 240 editorially complete candidates without deterministic professional approval.
 - Do not add a new divination method to the public navigation without a new product decision.
 - Do not let scenario UI reinterpret or recompute deterministic findings.
 - Do not use editorial AI images to encode real chart facts.
@@ -142,9 +147,10 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 
 ## Next Execution Order
 
-1. Complete HTTPS staging with PostgreSQL, Redis, and live provider smoke.
-2. Add production performance, caching, observability, and real-device evidence.
-3. Resolve the backend Meihua compatibility boundary in a separately approved migration.
+1. Complete independent editorial and Liuyao domain review; remove the remaining FAQ template repetition and promote approved records individually.
+2. Complete HTTPS staging with PostgreSQL, Redis, and live provider smoke.
+3. Add production performance, caching, observability, and real-device evidence.
+4. Resolve the backend Meihua compatibility boundary in a separately approved migration.
 
 ## Source Documents
 
@@ -153,5 +159,6 @@ The product may be marked `PRODUCTION_READY` only after all P0 release gates bel
 - `docs/production/94-product-experience-brief.md`
 - `docs/production/95-ux-interaction-design-spec.md`
 - `docs/content-growth/integration/full-content-growth-integration-report.md`
+- `docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md`
 - `LIUYAO_VISUAL_SYSTEM_IMPLEMENTATION_REPORT.md`
 - `data/liuyao/visual-system/qa/final-visual-readiness-report.md`

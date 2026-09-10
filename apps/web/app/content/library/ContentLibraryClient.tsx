@@ -45,6 +45,7 @@ export function ContentLibraryClient() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
+  const [searchMatches, setSearchMatches] = useState<ContentSummary[] | null>(null);
   const [moduleKey, setModuleKey] = useState("all");
   const [formatKey, setFormatKey] = useState("all");
   const [difficulty, setDifficulty] = useState("all");
@@ -71,12 +72,34 @@ export function ContentLibraryClient() {
     return () => { cancelled = true; };
   }, []);
 
+  useEffect(() => {
+    const needle = query.trim();
+    if (!needle) {
+      setSearchMatches(null);
+      return;
+    }
+    let cancelled = false;
+    const timeout = window.setTimeout(() => {
+      fetch(`${apiBase()}/content/search?q=${encodeURIComponent(needle)}`)
+        .then(async (response) => {
+          if (!response.ok) throw new Error(await readError(response));
+          return response.json() as Promise<{ items?: ContentSummary[] }>;
+        })
+        .then((body) => { if (!cancelled) setSearchMatches(body.items ?? []); })
+        .catch(() => { if (!cancelled) setSearchMatches([]); });
+    }, 180);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timeout);
+    };
+  }, [query]);
+
   const filtered = useMemo(() => {
     const moduleFilter = moduleFilters.find((filter) => filter.key === moduleKey) ?? moduleFilters[0];
     const formatFilter = formatFilters.find((filter) => filter.key === formatKey) ?? formatFilters[0];
-    const needle = query.trim().toLowerCase();
-    return items.filter(moduleFilter.match).filter(formatFilter.match).filter((item) => difficulty === "all" || item.difficulty === difficulty).filter((item) => !needle || `${item.title} ${item.summary ?? ""}`.toLowerCase().includes(needle));
-  }, [difficulty, formatKey, items, moduleKey, query]);
+    const candidates = searchMatches ?? items;
+    return candidates.filter(moduleFilter.match).filter(formatFilter.match).filter((item) => difficulty === "all" || item.difficulty === difficulty);
+  }, [difficulty, formatKey, items, moduleKey, searchMatches]);
 
   function resetLimit() {
     setLimit(18);

@@ -79,11 +79,11 @@ test("Batch 00 through 07 keep their commercial-finalization boundaries", () => 
   const catalog = readJson<{ items: any[] }>("content/content-growth/content-entries.json");
   const expected: Record<string, { total: number; publicationReady: number; reviewRequired: number; internalOnly: number }> = {
     B00: { total: 0, publicationReady: 0, reviewRequired: 0, internalOnly: 0 },
-    B01: { total: 78, publicationReady: 78, reviewRequired: 0, internalOnly: 0 },
-    B02: { total: 93, publicationReady: 93, reviewRequired: 0, internalOnly: 0 },
-    B03: { total: 88, publicationReady: 35, reviewRequired: 53, internalOnly: 0 },
-    B04: { total: 95, publicationReady: 0, reviewRequired: 95, internalOnly: 0 },
-    B05: { total: 72, publicationReady: 0, reviewRequired: 60, internalOnly: 12 },
+    B01: { total: 78, publicationReady: 0, reviewRequired: 78, internalOnly: 0 },
+    B02: { total: 93, publicationReady: 0, reviewRequired: 92, internalOnly: 1 },
+    B03: { total: 88, publicationReady: 0, reviewRequired: 85, internalOnly: 3 },
+    B04: { total: 95, publicationReady: 0, reviewRequired: 94, internalOnly: 1 },
+    B05: { total: 72, publicationReady: 0, reviewRequired: 56, internalOnly: 16 },
     B06: { total: 12, publicationReady: 0, reviewRequired: 0, internalOnly: 12 },
     B07: { total: 1, publicationReady: 1, reviewRequired: 0, internalOnly: 0 },
   };
@@ -109,7 +109,11 @@ test("commercial-finalization preparation keeps cases internal and freezes autom
   assert.equal(cases.length, 24);
   assert.ok(cases.every((item) => item.reviewStatus === "INTERNAL_ONLY" && item.seoMetadata?.index === false));
   assert.ok(targetArticles.every((item) => item.reviewStatus === "REVIEW_REQUIRED"));
-  assert.equal(catalog.publicationPolicy?.sourceOfTruth, "RUNTIME_DATABASE_CONTENT_STATUS");
+  assert.ok(targetArticles.every((item) => item.body.sections.length >= 8));
+  assert.ok(targetArticles.every((item) => item.body.sections.every((section: any) => section.body && Array.isArray(section.blocks) && section.blocks.length)));
+  assert.ok(targetArticles.every((item) => item.body.editorialCompletionStatus === "IMPORTED_PENDING_EDITORIAL_AND_DOMAIN_REVIEW"));
+  assert.ok(targetArticles.every((item) => item.body.repositoryReview?.status === "REVIEW_REQUIRED"));
+  assert.equal(catalog.publicationPolicy?.sourceOfTruth, "RUNTIME_DATABASE_PUBLICATION_STATUS");
   assert.equal(catalog.publicationPolicy?.automaticPromotion, "FROZEN");
   assert.doesNotMatch(finalizer, /item\.reviewStatus\s*=\s*["']PUBLICATION_READY["']/u);
 });

@@ -1,0 +1,443 @@
+[
+  {
+    "source_content_id": "glossary:avoid_god",
+    "source_title": "忌神",
+    "canonical_content_id": "B03-KC-29",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:changed_hexagram",
+    "source_title": "变卦",
+    "canonical_content_id": "B02-KC-22",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:day_influence",
+    "source_title": "日辰",
+    "canonical_content_id": "B04-KC-02",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:eight_palaces",
+    "source_title": "八宫",
+    "canonical_content_id": "B02-KC-31",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:evidence",
+    "source_title": "证据",
+    "canonical_content_id": "B01-KC-22",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:month_break",
+    "source_title": "月破",
+    "canonical_content_id": "B04-KC-10",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:month_command",
+    "source_title": "月建",
+    "canonical_content_id": "B04-KC-01",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:moving_line",
+    "source_title": "动爻",
+    "canonical_content_id": "B02-KC-20",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:najia",
+    "source_title": "纳甲",
+    "canonical_content_id": "B02-KC-33",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:original_hexagram",
+    "source_title": "本卦",
+    "canonical_content_id": "B02-KC-21",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:response_line",
+    "source_title": "应爻",
+    "canonical_content_id": "B02-KC-36",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:return_control",
+    "source_title": "回头克",
+    "canonical_content_id": "B04-KC-19",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:return_generation",
+    "source_title": "回头生",
+    "canonical_content_id": "B04-KC-18",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:six_relations",
+    "source_title": "六亲",
+    "canonical_content_id": "B02-KC-37",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:six_spirits",
+    "source_title": "六神",
+    "canonical_content_id": "B02-KC-38",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:source_god",
+    "source_title": "原神",
+    "canonical_content_id": "B03-KC-28",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:timing",
+    "source_title": "应期",
+    "canonical_content_id": "B04-KC-31",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:useful_god",
+    "source_title": "用神",
+    "canonical_content_id": "B03-KC-01",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:world_line",
+    "source_title": "世爻",
+    "canonical_content_id": "B02-KC-35",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "glossary:xun_void",
+    "source_title": "旬空",
+    "canonical_content_id": "B04-KC-09",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:content-evidence-reading",
+    "source_title": "如何阅读判断依据",
+    "canonical_content_id": "B01-KC-22",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:content-how-to-ask",
+    "source_title": "如何提出适合占问的问题",
+    "canonical_content_id": "B01-KC-02",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:core-hexagrams",
+    "source_title": "六十四卦",
+    "canonical_content_id": "B02-KC-28",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:core-xunkong",
+    "source_title": "旬空",
+    "canonical_content_id": "B04-KC-09",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-casting",
+    "source_title": "起卦",
+    "canonical_content_id": "B02-KC-03",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-choushen",
+    "source_title": "仇神",
+    "canonical_content_id": "B03-KC-30",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-coin-method",
+    "source_title": "三枚铜钱法",
+    "canonical_content_id": "B02-KC-02",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-day-support",
+    "source_title": "日辰",
+    "canonical_content_id": "B04-KC-02",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-eight-palaces",
+    "source_title": "八宫",
+    "canonical_content_id": "B02-KC-31",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-jishen",
+    "source_title": "忌神",
+    "canonical_content_id": "B03-KC-29",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-line-values",
+    "source_title": "老阴少阳少阴老阳",
+    "canonical_content_id": "B02-KC-18",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-month-break",
+    "source_title": "月破",
+    "canonical_content_id": "B04-KC-10",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-month-command",
+    "source_title": "月建",
+    "canonical_content_id": "B04-KC-01",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-moving-lines",
+    "source_title": "动爻",
+    "canonical_content_id": "B02-KC-20",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-najia",
+    "source_title": "纳甲",
+    "canonical_content_id": "B02-KC-33",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-original-changed",
+    "source_title": "本卦与变卦",
+    "canonical_content_id": "B02-KC-21",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-outcome",
+    "source_title": "结果判断",
+    "canonical_content_id": "B04-KC-30",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-overview",
+    "source_title": "六爻是什么",
+    "canonical_content_id": "B02-KC-01",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-patterns",
+    "source_title": "格局与模式",
+    "canonical_content_id": "B04-KC-29",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-question-classification",
+    "source_title": "问题分类",
+    "canonical_content_id": "B03-KC-04",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-reading-workflow",
+    "source_title": "完整断卦流程",
+    "canonical_content_id": "B01-KC-14",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-return-generate-control",
+    "source_title": "回头生与回头克",
+    "canonical_content_id": "B04-KC-18",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-six-relations",
+    "source_title": "六亲",
+    "canonical_content_id": "B02-KC-37",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-six-spirits",
+    "source_title": "六神",
+    "canonical_content_id": "B02-KC-38",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-timing",
+    "source_title": "应期",
+    "canonical_content_id": "B04-KC-31",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-void",
+    "source_title": "旬空",
+    "canonical_content_id": "B04-KC-09",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-world-response",
+    "source_title": "世应",
+    "canonical_content_id": "B03-KC-23",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-yongshen",
+    "source_title": "用神",
+    "canonical_content_id": "B03-KC-01",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  },
+  {
+    "source_content_id": "knowledge:liuyao-yuanshen",
+    "source_title": "原神",
+    "canonical_content_id": "B03-KC-28",
+    "relationship": "ALIAS_OR_DUPLICATE",
+    "public_route_action": "REDIRECT_OR_RESOLVE_TO_CANONICAL",
+    "search_behavior": "INDEX_AS_ALIAS_NOT_AS_SEPARATE_RESULT",
+    "stable_id_action": "KEEP_SOURCE_ID"
+  }
+]

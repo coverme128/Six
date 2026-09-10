@@ -4,9 +4,10 @@
 
 - DATA_READY: yes
 - CONTENT_INTEGRATED: yes
-- EXPERIENCE_READY: local product and asset scope complete; staging not verified
-- SEO_READY: 421 `PUBLICATION_READY` batch entries are indexable; `DEMO_ONLY` remains noindex/not-public
-- LEARN_HUB_READY: yes; designed hub, 10 scenario-matched public topics, 12 public learning collections, and one six-stage learning path
+- COMMERCIAL_FINALIZATION: Batch 01–04 imported; 536/536 unified decisions mapped
+- EXPERIENCE_READY: local review experience and asset scope complete; staging not verified
+- SEO_READY: production sitemap contains only 7 currently approved entries; review/internal/alias/removed content is excluded
+- LEARN_HUB_READY: yes; three primary user goals, six supported topics, 12 secondary learning collections, and five currently visible learning stages
 - STAGING_READY: no
 - PRODUCTION_READY: no
 
@@ -22,11 +23,11 @@
     "LANDING_PAGE": 6,
     "LEARNING_PATH": 1
   },
-  "byStatus": {
-    "PUBLICATION_READY": 421,
-    "REVIEW_REQUIRED": 0,
-    "DEMO_ONLY": 24
-  },
+  "commercialDecisionScope": 536,
+  "canonicalAssets": 457,
+  "aliases": 57,
+  "removed": 15,
+  "internalOnlyDecisions": 7,
   "visuals": 68,
   "mappings": 79,
   "snippets": 400
@@ -35,35 +36,37 @@
 
 这里的 `visuals: 68` 表示八个原始数据包中已去重并接入运行时的 SVG 数量。原包只有 SVG；现有 68 张已完成逐张语义复核、七类差异化构图、统一视觉系统接入与浏览器资产验收。完整口径见 `docs/design/content-visual-production-audit-v2.md`。
 
-The 445 entries above are the Batch 01-07 Liuyao package. The complete runtime catalog also includes 158 system seed entries, for 603 total entries:
+The original 445 entries remain the Batch 01-07 source package. Commercial-finalization Batch 01–04 governs that package together with the system seed layer, producing 603 Runtime records:
 
 ```json
 {
   "runtimeContentEntries": 603,
   "byReviewStatus": {
-    "PUBLICATION_READY": 421,
-    "REVIEW_REQUIRED": 0,
-    "DEMO_ONLY": 182
+    "PUBLICATION_READY": 7,
+    "REVIEW_REQUIRED": 493,
+    "INTERNAL_ONLY": 88,
+    "DEFERRED": 15
   },
   "isolatedContentCount": 0,
-  "noIncomingLinksCount": 0,
+  "noIncomingLinksCount": 1,
   "noOutgoingLinksCount": 0
 }
 ```
 
-The system seed layer retains historical compatibility records. The public content API now excludes all 11 Meihua seed records in local, staging, and production modes; the visible Liuyao catalog is therefore 592 records locally. The remaining I Ching reference entries support terminology, trigram, and hexagram lookup inside the Liuyao learning experience.
+The one no-incoming-link item is the expected Learn Hub root. Development exposes 500 `PUBLICATION_READY` or `REVIEW_REQUIRED` Liuyao entries for local review. Beta/production exposes only 7 `PUBLICATION_READY` records: 6 landing/topic entries and 1 learning path. The remaining I Ching reference entries support terminology, trigram, and hexagram lookup inside the Liuyao learning experience but stay review-gated.
 
 ## Public Information Architecture
 
-`/content` is a designed Liuyao Learn Hub rather than a generic content inventory. It begins with four user states: first-time understanding, bringing a real question, reading an existing report, and systematic or advanced study. A shared seven-destination content navigation then connects:
+`/content` is a designed Liuyao Learn Hub rather than a generic content inventory. It begins with three user goals: start or read a report, enter through a real question, and learn the professional structure. A shared five-destination content navigation connects:
 
-- the six-stage learning path;
+- the five currently visible learning stages;
 - six real-world topic entries;
 - a four-step report-reading route;
-- a 24-case lab covering real questions and report explanation;
 - the complete 68-asset visual knowledge atlas;
 - concept, FAQ, terminology, trigram, and hexagram reference gateways;
 - a dedicated `/content/library` with combined topic, format, difficulty, and keyword filters.
+
+The 12 collections remain secondary guided-learning routes and do not occupy top navigation. The sixth case-reading stage and the 24 cases remain internal until their release gate is explicitly cleared.
 
 Detail pages add user-readable breadcrumbs, previous/next sequencing, typed related-learning tabs, and enlarged visual inspection. Batch identifiers and implementation metadata remain internal.
 
@@ -89,13 +92,20 @@ Published topic entries:
 - Batch 06: `BATCH_IMPORT_PASS_WITH_NON_BLOCKING_ALIGNMENT_PENDING` (12 content entries, 0 visuals, 26 unresolved records)
 - Batch 07: `BATCH_IMPORT_PASS` (1 content entries, 68 visuals, 76 unresolved records)
 
-The unresolved counts above are retained from the original batch intake reports and describe package-level alignment/review records at import time. They are not current link-graph warnings. The consolidated repository QA now reports 0 errors, 0 warnings, and no missing incoming or outgoing links.
+The unresolved counts above are retained from the original batch intake reports and describe package-level alignment/review records at import time. They are not current link-graph warnings. The consolidated repository QA now reports 0 errors, 0 warnings, 0 isolated content, no missing outgoing links, and one expected no-incoming-link Learn Hub root.
+
+Commercial-finalization overlay:
+
+- Batch 01: 68 article rewrites plus 10 non-public governance decisions imported; independent editorial audit remains blocked.
+- Batch 02: 228 canonical knowledge/foundation rewrites, 49 aliases, 15 removals, and 6 internal-only decisions imported; professional review remains open.
+- Batch 03: 161 canonical FAQ rewrites, 8 query aliases, and 1 internal-only decision imported; 36 repeated long-sentence groups remain an editorial blocker.
+- Batch 04: 536 unified decisions, 1193 graph edges, 67 navigation-reference migrations, Runtime publication policy, search/SEO contracts, and Learn Hub commercial IA installed.
 
 ## Final Gate
 
-`FULL_LIUYAO_CONTENT_GROWTH_REGRESSION` has local data, linking, presentation, and contract coverage. `pnpm run content:qa` passes with 0 errors and 0 warnings. Production filtering exposes only `PUBLICATION_READY` entries.
+`FULL_LIUYAO_CONTENT_GROWTH_REGRESSION` has local data, linking, presentation, and contract coverage. `pnpm run content:qa` passes across 603 entries with 0 errors, 0 warnings, and 0 isolated content. Production API and sitemap filtering expose only the 7 `PUBLICATION_READY` entries. Searches for internal terminology, Meihua-only language, review-state labels, and batch IDs return no production results.
 
-HTTPS staging, live AI smoke, search analytics, editorial outcome review, and production performance evidence remain outside this local integration. See `docs/production/96-liuyao-public-beta-commercial-readiness.md` for the consolidated release gate.
+The content release status is `LIUYAO_CONTENT_COMMERCIAL_READY_WITH_BLOCKERS`, not production ready. Independent editorial/domain review and the remaining FAQ de-templating are required before article, knowledge, and FAQ records can be promoted one by one. HTTPS staging, search analytics, and production performance evidence also remain outside this local integration. See `docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md` for the content gate and `docs/production/96-liuyao-public-beta-commercial-readiness.md` for the platform gate.
 
 ## Distribution Deliverables
 

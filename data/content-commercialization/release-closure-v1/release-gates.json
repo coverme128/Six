@@ -1,0 +1,75 @@
+{
+  "P0": [
+    {
+      "gate": "UNIFIED_DECISION_COVERAGE",
+      "expected": 536,
+      "rule": "Every snapshot content ID has a final decision."
+    },
+    {
+      "gate": "CANONICAL_EDITORIAL_ASSET_COUNT",
+      "expected": 457,
+      "rule": "68 Article + 228 Knowledge + 161 FAQ canonical assets."
+    },
+    {
+      "gate": "MERGED_ALIAS_COUNT",
+      "expected": 57,
+      "rule": "49 Knowledge + 8 FAQ merge sources resolve to canonical IDs."
+    },
+    {
+      "gate": "LIUYAO_REMOVE_COUNT",
+      "expected": 15,
+      "rule": "Meihua leakage removed from LIUYAO public path."
+    },
+    {
+      "gate": "INTERNAL_ONLY_COUNT",
+      "expected": 7,
+      "rule": "6 Knowledge/Glossary + 1 FAQ stay internal."
+    },
+    {
+      "gate": "CASES_PUBLIC_COUNT",
+      "expected": 0,
+      "rule": "24 cases are excluded."
+    },
+    {
+      "gate": "INTERNAL_ENGINEERING_LANGUAGE",
+      "expected": 0,
+      "scope": "public user-facing content"
+    },
+    {
+      "gate": "MEIHUA_PUBLIC_LEAKAGE",
+      "expected": 0
+    },
+    {
+      "gate": "PUBLIC_COUNT_SOURCE_CONSISTENCY",
+      "expected": "PASS"
+    },
+    {
+      "gate": "PUBLIC_ROUTE_STATUS_CONSISTENCY",
+      "expected": "PASS"
+    },
+    {
+      "gate": "SEARCH_STATUS_CONSISTENCY",
+      "expected": "PASS"
+    },
+    {
+      "gate": "SITEMAP_STATUS_CONSISTENCY",
+      "expected": "PASS"
+    },
+    {
+      "gate": "COLLECTION_STATUS_CONSISTENCY",
+      "expected": "PASS"
+    },
+    {
+      "gate": "MOBILE_FIRST_FOLD",
+      "expected": "PASS"
+    }
+  ],
+  "release_lanes": {
+    "READY_FOR_RUNTIME_RELEASE_GATE": 240,
+    "PROFESSIONAL_REVIEW_REQUIRED": 217,
+    "ALIAS_ONLY": 57,
+    "REMOVED_FROM_LIUYAO": 15,
+    "INTERNAL_ONLY": 7
+  },
+  "important": "READY_FOR_RUNTIME_RELEASE_GATE does not mean PUBLICATION_READY. Codex must run repository/domain/runtime gates before changing DB status."
+}
