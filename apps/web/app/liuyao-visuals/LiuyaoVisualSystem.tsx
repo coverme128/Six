@@ -33,7 +33,7 @@ function EmptyState({ text = "当前报告没有足够事实展示该视觉。" 
   return <p className="ly-empty">{text}</p>;
 }
 
-function SixLineBoard({ model }: { model: VisualModel | null }) {
+function SixLineBoard({ model, highlightedLines = [] }: { model: VisualModel | null; highlightedLines?: number[] }) {
   if (!model?.lines?.length) return <EmptyState />;
   const hasMovingLines = model.lines.some((line: VisualModel) => line.moving);
   return (
@@ -51,8 +51,8 @@ function SixLineBoard({ model }: { model: VisualModel | null }) {
       </div>
       <div className="ly-board-lines" role="list">
         {model.lines.map((line: VisualModel) => (
-          <div className="ly-board-line" role="listitem" key={`ly-line-${line.position}`}>
-            <span className="ly-line-label">{line.label}</span>
+          <div className={`ly-board-line${highlightedLines.includes(line.position) ? " evidence-highlight" : ""}`} role="listitem" tabIndex={-1} id={`chart-line-${line.position}`} key={`ly-line-${line.position}`}>
+            <span className="ly-line-label">{line.label}{highlightedLines.includes(line.position) ? <small>关联依据</small> : null}</span>
             <LineGlyph line={line} />
             <span className="ly-line-main">
               <strong>{line.sixRelationName ?? "-"}</strong>
@@ -286,7 +286,7 @@ function Dynamics({ model }: { model: VisualModel | null }) {
   );
 }
 
-export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: LiuyaoVisualizationBundle | null }) {
+export function LiuyaoVisualSystemPanel({ visualization, highlightedLines = [] }: { visualization?: LiuyaoVisualizationBundle | null; highlightedLines?: number[] }) {
   if (!visualization?.viewModels) return null;
 
   const board = visual(visualization, "VIS-LY-001");
@@ -306,12 +306,11 @@ export function LiuyaoVisualSystemPanel({ visualization }: { visualization?: Liu
         <div>
           <p className="eyebrow">专业盘面</p>
           <h2 id="liuyao-visual-system-title">六爻视觉解读</h2>
-          <p className="section-kicker">先看本卦、动爻、变卦与世应位置，再阅读下方针对问题的 AI 解读。</p>
         </div>
       </div>
 
       <div className="ly-primary-layout">
-        <SixLineBoard model={board} />
+        <SixLineBoard model={board} highlightedLines={highlightedLines} />
         <div className="ly-side-stack">
           <PrimaryChanged model={visual(visualization, "VIS-LY-002")} />
           <FocusPanel shiYing={visual(visualization, "VIS-LY-005")} />

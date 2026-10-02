@@ -1,4 +1,5 @@
 "use client";
+import { RequestProgress } from "./RequestProgress";
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { LiuyaoChartRequestSchema, QuestionUnderstandingSchema } from "@six/shared";
@@ -236,6 +237,7 @@ export function SixApiDemo() {
   const [restored, setRestored] = useState(false);
   const [understandingFailed, setUnderstandingFailed] = useState(false);
   const requestController = useRef<AbortController | null>(null);
+  const methodPickerRef = useRef<HTMLDetailsElement | null>(null);
   const submitting = useRef(false);
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState("relationship:relationship_stability");
@@ -252,6 +254,7 @@ export function SixApiDemo() {
   );
   const [liuyaoValues, setLiuyaoValues] = useState(["", "", "", "", "", ""]);
   const [loading, setLoading] = useState(false);
+  const [requestStage, setRequestStage] = useState<"understanding" | "saving" | "opening">("understanding");
   const [error, setError] = useState("");
   const [report, setReport] = useState<ExperienceResponse | null>(null);
 
@@ -327,6 +330,8 @@ export function SixApiDemo() {
     if (locked || nextMode === liuyaoCastMode) return;
     if ((coinLines.length || digitalCoinsStarted || liuyaoValues.some(Boolean)) && !window.confirm("切换方式会清除当前尚未提交的卦爻，确定切换吗？")) return;
     setLiuyaoCastMode(nextMode);
+    if (methodPickerRef.current) methodPickerRef.current.open = false;
+    if (nextMode === "auto") moveToStep("question-step", "#question-input");
     setInstantUtc(""); setRequestId(""); setUnderstandingFailed(false);
     setCoinLines([]);
     setDigitalCoinsStarted(false);
@@ -362,6 +367,7 @@ export function SixApiDemo() {
   async function prepareQuestion(answer = "", generateImmediately = liuyaoCastMode === "auto") {
     if (understandingBusy || loading) return;
     setUnderstandingBusy(true);
+    setRequestStage("understanding");
     setError("");
     const nextClarification = answer ? [clarification, answer].filter(Boolean).join("；").slice(0, 500) : clarification;
     setClarification(nextClarification);
@@ -445,6 +451,7 @@ export function SixApiDemo() {
     // Persist the cast before any remote work. A retry uses the exact same input and identifier.
     persistDraft({ instantUtc: fixedInstant, requestId: castId, coins: submissionCoins, digitalCoins: submissionDigitalCoins });
     if (!submittedPayload && !defer && !["RESOLVED", "BRANCHED"].includes(understood?.understanding.status ?? "")) {
+      setRequestStage("understanding");
       requestController.current = new AbortController();
       try { understood = await understandQuestion(question, answer, requestController.current.signal); }
       catch (err) { setUnderstandingFailed(true); throw err; }
@@ -465,6 +472,7 @@ export function SixApiDemo() {
     setSubmittedPayload(payload);
     persistDraft({ submittedPayload: payload, instantUtc: fixedInstant, requestId: castId, coins: submissionCoins, digitalCoins: submissionDigitalCoins });
 
+      setRequestStage("saving");
       const created = await workspaceFetch(`${apiBase()}/liuyao/charts`, {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -479,6 +487,7 @@ export function SixApiDemo() {
       }
       const createdJson = (await created.json()) as ExperienceResponse;
       setCreatedId(createdJson.id);
+      setRequestStage("opening");
       persistDraft({ createdId: createdJson.id, submittedPayload: payload, instantUtc: fixedInstant, requestId: castId });
       try { sessionStorage.removeItem("six-question-draft"); } catch { /* Legacy draft cleanup. */ }
       window.location.assign(`/reports/${encodeURIComponent(createdJson.id)}`);
@@ -566,12 +575,14 @@ export function SixApiDemo() {
             disabled={!question.trim() || locked}
             onClick={() => { setLiuyaoCastMode("auto"); void prepareQuestion("", true); }}
           >
-            {understandingBusy ? "正在理解你的问题" : loading ? "正在生成报告" : "开始起卦并查看报告"}
+            {understandingBusy || loading ? requestStage === "understanding" ? "正在理解问题" : "正在保存原卦" : "开始起卦并查看报告"}
             <ArrowRight aria-hidden="true" size={17} />
           </button>
-          {liuyaoCastMode === "auto" && !submittedPayload ? <button className="text-link" type="button" disabled={!question.trim() || locked} onClick={() => { switchLiuyaoCastMode("manual"); moveToStep("cast-step"); }}>手动摇卦或录入已有卦爻</button> : null}
-          {error && liuyaoCastMode === "auto" ? <p className="error" role="alert">{error}</p> : null}
-          {understandingBusy ? <button className="text-link" type="button" onClick={() => requestController.current?.abort()}>暂停，保留问题</button> : null}
+          {liuyaoCastMode === "auto" && !submittedPayload ? <div className="cast-alternative-actions">
+            <button className="text-link" type="button" disabled={!question.trim() || locked} onClick={() => { switchLiuyaoCastMode("coins"); moveToStep("cast-step"); }}>自己逐爻摇</button>
+            <button className="text-link" type="button" disabled={!question.trim() || locked} onClick={() => { switchLiuyaoCastMode("manual"); moveToStep("cast-step"); }}>录入已有卦</button>
+          </div> : null}
+          {error && liuyaoCastMode === "auto" ? <div className="error" role="alert"><p>{error}</p><p>{submittedPayload ? "盘面已保存在本机，服务端保存结果尚待确认。点击“继续保存原卦”重试，不会重新起卦。" : "问题已保留，可重试；已记录的卦爻会继续沿用。"}</p></div> : null}
           {understandingFailed && liuyaoCastMode === "auto" ? <button className="secondary" type="button" disabled={loading || understandingBusy} onClick={saveWithoutAI}>先保存卦盘，稍后继续解读</button> : null}
           <p className="question-service-boundary">AI 会结合原问题与六爻盘面解读；现实条件仍需你核实。</p>
         </section>
@@ -593,20 +604,17 @@ export function SixApiDemo() {
               <div>
                 <strong>{liuyaoCastMode === "auto" ? "系统代摇" : liuyaoCastMode === "coins" ? "逐爻摇铜钱" : liuyaoCastMode === "digitalCoins" ? "数字铜钱法" : "手动录入爻值"}</strong>
               </div>
-              <details className="cast-method-picker">
+              <details className="cast-method-picker" ref={methodPickerRef}>
                 <summary>更换起卦方式</summary>
-                <div className="method-grid">
-                  <button type="button" className={liuyaoCastMode === "auto" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("auto")}>
+                <div className="method-grid" role="group" aria-label="起卦方式">
+                  <button type="button" aria-pressed={liuyaoCastMode === "auto"} className={liuyaoCastMode === "auto" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("auto")}>
                     <Sparkles aria-hidden="true" size={17} />
                     系统代摇（推荐）
                   </button>
-                  <button type="button" className={liuyaoCastMode === "coins" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("coins")}>
+                  <button type="button" aria-pressed={liuyaoCastMode === "coins"} className={liuyaoCastMode === "coins" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("coins")}>
                     我自己逐爻摇
                   </button>
-                  <button type="button" className={liuyaoCastMode === "digitalCoins" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("digitalCoins")}>
-                    使用数字铜钱
-                  </button>
-                  <button type="button" className={liuyaoCastMode === "manual" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("manual")}>
+                  <button type="button" aria-pressed={liuyaoCastMode === "manual"} className={liuyaoCastMode === "manual" ? "" : "secondary"} onClick={() => switchLiuyaoCastMode("manual")}>
                     手动录入爻值
                   </button>
                 </div>
@@ -763,13 +771,12 @@ export function SixApiDemo() {
           </fieldset>
 
           {instantUtc ? <p className="section-kicker">起卦记录：{wallTime(instantUtc, timezone).replace("T", " ")}（{timezone}）</p> : null}
-          {error ? <p className="error" role="alert">{error}</p> : null}
-          {loading ? <button type="button" className="text-link" onClick={() => requestController.current?.abort()}>暂停等待，保留盘面</button> : null}
+          {error ? <div className="error" role="alert"><p>{error}</p><p>{createdId ? "报告已保存，可以继续查看。" : submittedPayload ? "本机已保留完整盘面，服务端保存结果尚待确认。继续保存会沿用同一份记录。" : "问题与已录入的卦爻仍在当前草稿中。"}</p></div> : null}
           {understandingFailed ? <button className="secondary" type="button" disabled={loading || understandingBusy} onClick={saveWithoutAI}>先保存卦盘，稍后继续解读</button> : null}
           {canGenerate && !createdId && (liuyaoCastMode === "manual" || Boolean(error)) ? (
             <div className="form-actions final-actions">
               <button type="submit" disabled={loading}>
-                {loading ? "正在保存盘面并准备解读" : submittedPayload ? "继续保存原卦" : "保存此卦并查看解读"}
+                {loading || understandingBusy ? requestStage === "understanding" ? "正在理解问题" : "正在保存原卦" : submittedPayload ? "继续保存原卦" : "保存此卦并查看解读"}
               </button>
               {report ? <button type="button" className="tertiary-button" onClick={() => setReport(null)} disabled={loading}>移除当前结果</button> : null}
             </div>
@@ -777,12 +784,11 @@ export function SixApiDemo() {
         </section>
       </form>
 
-      {loading ? (
-        <div className="processing-panel" role="status">
-          <strong>正在生成报告</strong>
-          <span>排盘、整理依据、生成阅读层级。</span>
-        </div>
-      ) : null}
+      {loading || understandingBusy ? <RequestProgress
+        label={requestStage === "understanding" ? "正在理解问题" : requestStage === "saving" ? "正在排盘并保存报告" : "报告已保存，正在打开"}
+        detail={requestStage === "understanding" ? "正在确认你问的事情；此时尚未生成 AI 解读。" : requestStage === "saving" ? "正在提交本次固定盘面；无需再次摇卦。" : "接下来会基于这份盘面生成 AI 解读。"}
+        onPause={requestStage === "opening" ? undefined : () => requestController.current?.abort()}
+      /> : null}
 
 
       {guided ? (

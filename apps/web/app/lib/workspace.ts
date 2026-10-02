@@ -17,13 +17,15 @@ export async function workspaceFetch(url: string, options: RequestInit = {}, tim
   const headers = new Headers(options.headers);
   headers.set("x-six-workspace", workspaceToken());
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  let timedOut = false;
+  const timer = setTimeout(() => { timedOut = true; controller.abort(); }, timeoutMs);
   const abort = () => controller.abort();
   options.signal?.addEventListener("abort", abort, { once: true });
   if (options.signal?.aborted) abort();
   try { return await fetch(url, { ...options, headers, signal: controller.signal }); }
   catch (error) {
-    if (controller.signal.aborted) throw new Error("请求已暂停或等待超时。已记录的盘面不会重摇，可以继续重试。");
+    if (controller.signal.aborted) throw new Error(timedOut ? "等待服务响应超时，请重试当前请求。" : "已暂停等待。服务端可能仍在处理，请继续原请求确认结果。");
+    if (error instanceof TypeError) throw new Error("暂时无法连接服务，请检查网络后重试。");
     throw error;
   } finally { clearTimeout(timer); options.signal?.removeEventListener("abort", abort); }
 }

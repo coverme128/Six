@@ -8,6 +8,8 @@ import { AppNav } from "../../AppNav";
 import { apiBase, readError, type ChartViewModel, type ExperienceResponse } from "../../lib/api";
 import { LiuyaoVisualSystemPanel } from "../../liuyao-visuals/LiuyaoVisualSystem";
 import { renderLiuyaoVisualizationSvg } from "../../liuyao-visuals/export";
+import { RequestProgress } from "../../RequestProgress";
+import { resolveReportEvidence } from "../../lib/report-evidence";
 
 const CURRENT_LIUYAO_AI_PROMPT = "liuyao-report-v9";
 
@@ -20,10 +22,6 @@ function chartTransitionLabel(chart?: ChartViewModel) {
   return chart.movingLines?.length
     ? `${chart.originalHexagram} → ${chart.changedHexagram}`
     : `${chart.originalHexagram}（静卦，无变卦）`;
-}
-
-function actionText(item: string | { text?: string }) {
-  return typeof item === "string" ? item : item.text ?? "";
 }
 
 function buildReadableMarkdown(report: ExperienceResponse) {
@@ -144,7 +142,7 @@ function LineTags({ line }: { line: NonNullable<Extract<ChartViewModel, { type: 
   return <small>{tags.join(" / ") || "-"}</small>;
 }
 
-function ChartPanel({ chart }: { chart?: ChartViewModel }) {
+function ChartPanel({ chart, highlightedLines = [] }: { chart?: ChartViewModel; highlightedLines?: number[] }) {
   if (!chart || chart.type !== "liuyao") return null;
 
   const lines = [...(chart.lines ?? [])].sort((a, b) => Number(b.position ?? 0) - Number(a.position ?? 0));
@@ -163,7 +161,7 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
         </div>
         <div className="line-table">
           {lines.map((line) => (
-            <div className="line-row" key={`line-row-${line.position}`}>
+            <div className={`line-row${highlightedLines.includes(line.position!) ? " evidence-highlight" : ""}`} tabIndex={-1} id={`chart-line-${line.position}`} key={`line-row-${line.position}`}>
               <span>第 {line.position} 爻</span>
               <HexagramLine yinYang={line.yinYang} moving={line.moving} />
               <strong>
@@ -202,6 +200,11 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [supplement, setSupplement] = useState("");
   const [understandingResult, setUnderstandingResult] = useState<UnderstandingResult | null>(null);
   const [revisionBusy, setRevisionBusy] = useState(false);
+  const [selectedJudgment, setSelectedJudgment] = useState<number | null>(null);
+  const [rawEvidence, setRawEvidence] = useState<Record<string, any> | null>(null);
+  const [evidenceBusy, setEvidenceBusy] = useState(false);
+  const [evidenceError, setEvidenceError] = useState("");
+  const aiController = useRef<AbortController | null>(null);
   const aiSectionRef = useRef<HTMLElement | null>(null);
   const autoAIRequestedRef = useRef(false);
   const guided = report?.experience?.guidedViewModel;
@@ -214,6 +217,27 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   const supports = useMemo(() => professional?.evidenceGroups?.supports ?? [], [professional]);
   const risks = useMemo(() => professional?.evidenceGroups?.risks ?? [], [professional]);
   const otherEvidence = useMemo(() => professional?.evidenceGroups?.other ?? [], [professional]);
+  const judgment = selectedJudgment === null ? null : aiReport?.keyJudgments?.[selectedJudgment];
+  const evidence = resolveReportEvidence(judgment?.evidenceRefs ?? [], report?.chartViewModel, rawEvidence);
+  const hasAI = Boolean(aiReport && !report?.aiReportBundle?.fallbackUsed);
+
+  useEffect(() => () => aiController.current?.abort(), []);
+
+  async function showJudgmentEvidence(index: number) {
+    setSelectedJudgment(index);
+    setEvidenceError("");
+    if (!rawEvidence) {
+      setEvidenceBusy(true);
+      try {
+        const response = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}`, {}, 15000);
+        if (!response.ok) throw new Error(await readError(response));
+        setRawEvidence(await response.json());
+      } catch (err) { setEvidenceError(err instanceof Error ? err.message : "暂时无法读取依据"); }
+      finally { setEvidenceBusy(false); }
+    }
+    document.getElementById("judgment-evidence")?.focus();
+    document.getElementById("judgment-evidence")?.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -271,6 +295,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   }, [aiAvailability, aiBundleIsCurrent, aiLoading, loading, report, revisionBusy, editingUnderstanding]);
 
   async function generateAIReport() {
+    if (aiLoading) return;
+    aiController.current = new AbortController();
     setAiLoading(true);
     setAiStatus("");
     setError("");
@@ -278,6 +304,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       const response = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/ai`, {
         method: "POST",
         headers: { "content-type": "application/json" },
+        signal: aiController.current.signal,
         body: JSON.stringify({ language: "zh-CN" })
       });
       if (!response.ok) {
@@ -313,8 +340,11 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             ? "真实模型暂时未能完成解读，正式排盘和规则结论不受影响。"
             : "真实模型解读已生成。"
       );
-      const refreshed = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
-      if (refreshed.ok) setReport(await refreshed.json());
+      // The successful response already contains the interpretation; a failed refresh must not turn success into an AI failure.
+      try {
+        const refreshed = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`, {}, 15000);
+        if (refreshed.ok) setReport(await refreshed.json());
+      } catch { /* Keep the successful AI response visible. */ }
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法生成 AI 解读");
     } finally {
@@ -340,6 +370,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       const refreshed = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
       if (!refreshed.ok) throw new Error(await readError(refreshed));
       autoAIRequestedRef.current = false;
+      setRawEvidence(null); setSelectedJudgment(null);
       setReport(await refreshed.json());
       setEditingUnderstanding(false);
       setUnderstandingResult(null);
@@ -359,14 +390,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
   }
 
   return (
-    <main className="shell" data-testid="report-page">
+    <main className="shell report-reader" data-testid="report-page">
       <AppNav current="report" />
 
-      <section className="hero compact">
+      <section className="report-question-header">
         <p className="eyebrow">你的问题</p>
         <h1>{guided?.question ?? "报告详情"}</h1>
-        {report?.questionUnderstanding?.summary ? <p>{report.questionUnderstanding.summary}</p> : null}
-        {report ? <div className="report-reading-links"><a href="#ai-plain-language">阅读 AI 解读</a><button type="button" className="text-link" disabled={aiLoading || revisionBusy} onClick={() => { setEditingUnderstanding(!editingUnderstanding); setSupplement(report.questionUnderstanding?.clarification ?? ""); setUnderstandingResult(null); }}><PencilLine size={16} />补充或纠正理解</button></div> : null}
+        {report ? <div className="report-reading-links"><button type="button" className="text-link" disabled={aiLoading || revisionBusy} onClick={() => { setEditingUnderstanding(!editingUnderstanding); setSupplement(report.questionUnderstanding?.clarification ?? ""); setUnderstandingResult(null); }}><PencilLine size={16} />补充或纠正理解</button></div> : null}
       </section>
 
       {editingUnderstanding ? <section className="report-understanding-editor">
@@ -379,14 +409,28 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
         <button type="button" className="primary-button" disabled={revisionBusy || !supplement.trim()} onClick={() => void updateUnderstanding()}>{revisionBusy ? "正在更新理解" : "更新本次解读"}</button>
       </section> : null}
 
-      {loading ? <p className="empty">正在读取报告。</p> : null}
+      {loading ? <RequestProgress label="正在读取报告" detail="正在读取已保存的盘面与解读。" /> : null}
       {error ? <p className="error">{error}</p> : null}
+      {error && report ? <p role="status">原卦已保留，解读尚未确认完成。可重试解读，无需再次起卦。{report.persistence !== "prisma" ? "当前仅为临时存储，请下载需要保留的盘面。" : ""}</p> : null}
       {error && !report && !loading ? <button type="button" onClick={() => setReloadCount((value) => value + 1)}>重新读取这份报告</button> : null}
       {report && report.persistence !== "prisma" ? <p className="error" role="status">当前为本地临时存储，服务重启后报告可能丢失。请下载需要保留的内容；长期保存需要连接数据库。</p> : null}
 
-      {report?.type === "liuyao" ? (
-        visualization ? <LiuyaoVisualSystemPanel visualization={visualization} /> : <ChartPanel chart={report?.chartViewModel} />
-      ) : null}
+      {report ? <nav className="report-section-nav" aria-label="报告章节">
+        <a href="#ai-plain-language">AI 解读</a><a href="#report-chart">六爻盘面</a><a href="#professional-evidence">专业依据</a>
+      </nav> : null}
+
+      {report?.chartViewModel?.type === "liuyao" ? <section className="report-overview" aria-label="本次卦象与回答">
+        <a className="report-mini-chart" href="#report-chart" aria-label="查看完整六爻盘面">
+          <strong>{chartTransitionLabel(report.chartViewModel)}</strong>
+          <div>{[...(report.chartViewModel.lines ?? [])].sort((a, b) => (b.position ?? 0) - (a.position ?? 0)).map(line => <div key={line.position}><span>{line.position === 6 ? "上爻" : line.position === 1 ? "初爻" : `${line.position} 爻`}</span><HexagramLine yinYang={line.yinYang} moving={line.moving} /><small>{[line.isWorld ? "世" : "", line.isResponse ? "应" : "", line.moving ? "动" : ""].filter(Boolean).join(" · ")}</small></div>)}</div>
+          <small>查看完整盘面 →</small>
+        </a>
+        <div className="report-answer" id="report-answer"><p className="eyebrow">{hasAI ? "AI 对你的回答" : "本次盘面"}</p>
+          <h2>{hasAI ? aiReport?.questionResponse?.directAnswer ?? aiReport?.finalTakeaway : "卦盘已就绪，等待 AI 解读"}</h2>
+          {hasAI && aiReport?.questionResponse?.scopeNote ? <details><summary>本次问题理解</summary><p>{aiReport.questionResponse.scopeNote}</p></details> : null}
+          <p className="report-boundary">卦象解释仅供参考，现实条件仍需核实。</p>
+        </div>
+      </section> : null}
 
       {guided && (!aiReport || report?.aiReportBundle?.fallbackUsed) ? (
         <section className="panel report-section ai-report-entry" id="ai-plain-language" aria-live="polite">
@@ -396,10 +440,11 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             <p>{aiLoading ? "盘面已就绪，你可以先查看卦象。" : "解读将回答你的问题，并说明关键依据与下一步建议。"}</p>
             <small><ShieldCheck aria-hidden="true" size={15} />排盘事实不会被 AI 改写；手机号、邮箱和证件号会在发送前自动隐藏。</small>
           </div>
+          {aiLoading ? <RequestProgress label="正在生成 AI 解读" detail="原卦已记录，正在等待真实模型返回并完成一致性校验。" onPause={() => aiController.current?.abort()} /> : null}
           <div className="inline-actions">
             <button className="primary-button" type="button" onClick={generateAIReport} disabled={aiLoading || aiProviderUnconfigured}>
               <Sparkles aria-hidden="true" size={17} />
-              {aiLoading ? "AI 正在解读" : aiProviderUnconfigured ? "真实模型未配置" : report?.aiReportBundle?.fallbackUsed ? "重试真实模型解读" : "生成 AI 解读"}
+              {aiLoading ? "AI 正在解读" : aiProviderUnconfigured ? "真实模型未配置" : error || report?.aiReportBundle?.fallbackUsed ? "重试原卦解读" : "生成 AI 解读"}
             </button>
             <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
             <details className="report-more-actions">
@@ -429,12 +474,6 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             </div>
           </div>
 
-          <div className="ai-report-lead">
-            <span>对这个问题的直接回答</span>
-            <strong>{aiReport?.questionResponse?.directAnswer ?? aiReport?.finalTakeaway ?? "当前解读已生成。"}</strong>
-            {aiReport?.questionResponse?.scopeNote ? <small>本次理解范围：{aiReport.questionResponse.scopeNote}</small> : null}
-          </div>
-
           <div className="inline-actions ai-report-actions">
             <a className="secondary-link" href="#professional-evidence">查看专业依据</a>
             <details className="report-more-actions">
@@ -450,8 +489,17 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
 
           {aiReport ? (
             <>
+              <section className="ai-analysis-block ai-action-plan" aria-labelledby="action-plan-title">
+                <h3 id="action-plan-title">接下来怎么做</h3>
+                <div>
+                  <section><h4>现在可以做</h4><ul>{(aiReport.actionPlan?.now ?? []).map((item, index) => <li key={index}>{item.text}</li>)}</ul></section>
+                  <section><h4>作决定前确认</h4><ul>{(aiReport.actionPlan?.beforeDecision ?? []).map((item, index) => <li key={index}>{item.text}</li>)}</ul></section>
+                  <section><h4>需要避免</h4><ul>{(aiReport.actionPlan?.avoid ?? []).map((item, index) => <li key={index}>{item.text}</li>)}</ul></section>
+                </div>
+              </section>
               {aiReport.hexagramReading ? (
-                <section className="ai-analysis-block ai-hexagram-narrative" aria-labelledby="hexagram-explanation-title">
+                <details className="ai-analysis-block ai-hexagram-narrative">
+                  <summary>本卦、动爻与变卦如何影响判断</summary>
                   <div className="report-section-heading">
                     <span>{chartTransitionLabel(report.chartViewModel)}</span>
                     <h3 id="hexagram-explanation-title">整体卦象脉络</h3>
@@ -464,7 +512,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                       ? aiReport.hexagramReading.changed
                       : aiReport.hexagramReading.changed}</p>
                   </div>
-                </section>
+                </details>
               ) : null}
 
               {(aiReport.keyJudgments ?? []).length ? (
@@ -475,13 +523,13 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                   </div>
                   <div className="ai-judgment-list">
                     {aiReport.keyJudgments?.map((item, index) => (
-                      <article key={`${item.title}-${index}`}>
+                      <article id={`ai-judgment-${index}`} tabIndex={-1} key={`${item.title}-${index}`}>
                         <span className="ai-judgment-index">{index + 1}</span>
                         <div>
                           <h4>{item.title}</h4>
-                          <p className="ai-professional-basis"><strong>盘面依据</strong>{item.professionalBasis}</p>
                           <p>{item.plainInterpretation}</p>
                           <p className="ai-decision-impact"><strong>对决定的影响</strong>{item.decisionImpact}</p>
+                          <button className="text-link judgment-source-button" type="button" disabled={evidenceBusy} onClick={() => void showJudgmentEvidence(index)}>查看此条盘面依据</button>
                         </div>
                       </article>
                     ))}
@@ -504,20 +552,6 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
                 </section>
               ) : null}
 
-              <section className="ai-analysis-block ai-action-plan" aria-labelledby="action-plan-title">
-                <div className="report-section-heading">
-                  <span>把判断落到现实</span>
-                  <h3 id="action-plan-title">对你的实际建议</h3>
-                </div>
-                <div>
-                  <section><h4>现在可以做</h4><ul>{(aiReport.actionPlan?.now ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
-                  <section><h4>作决定前确认</h4><ul>{(aiReport.actionPlan?.beforeDecision ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
-                  <section><h4>需要避免</h4><ul>{(aiReport.actionPlan?.avoid ?? []).map((item, index) => <li key={`${item.text}-${index}`}>{item.text}</li>)}</ul></section>
-                </div>
-              </section>
-
-              {aiReport.finalTakeaway ? <blockquote className="ai-final-takeaway"><span>一句话总结</span>{aiReport.finalTakeaway}</blockquote> : null}
-
               {(aiReport.timingWindows ?? []).length ? <details className="ai-timing-note"><summary>候选观察时间</summary><ul>{(aiReport.timingWindows ?? []).map((item, index) => <li key={`${item.candidateRef}-${index}`}>{item.text}</li>)}</ul></details> : null}
 
               {(aiReport.limitations ?? []).length || aiReport.disclaimer ? (
@@ -533,6 +567,25 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
           )}
         </section>
       ) : null}
+
+      {report?.type === "liuyao" ? <section id="report-chart" aria-label="完整六爻盘面">
+        {judgment ? <section id="judgment-evidence" className="judgment-evidence" tabIndex={-1} aria-label="当前判断的引用依据">
+          <div className="judgment-evidence-heading"><h2>{judgment.title}</h2><a href={`#ai-judgment-${selectedJudgment}`} onClick={() => document.getElementById(`ai-judgment-${selectedJudgment}`)?.focus()}>返回这条判断</a></div>
+          <p><strong>AI 的传统解释</strong> {judgment.professionalBasis}</p>
+          {evidenceBusy ? <p role="status">正在读取引用来源…</p> : null}
+          {evidenceError ? <p role="alert">{evidenceError} <button type="button" onClick={() => void showJudgmentEvidence(selectedJudgment!)}>重试读取依据</button></p> : null}
+          {evidence.lines.length ? <div className="evidence-line-links" aria-label="关联爻位">{evidence.lines.map(position => <a href={`#chart-line-${position}`} key={position}>第 {position} 爻</a>)}</div> : null}
+          {evidence.sources.length ? <details className="evidence-source-list" key={selectedJudgment} open={evidence.sources.length <= 3}><summary>引用的 {evidence.sources.length} 条盘面与规则记录</summary>
+          {evidence.sources.map(source => <article key={source.ref}><strong>{source.kind === "规则解释" ? "命中规则的解释" : `${source.kind} · ${source.title}`}</strong><p>{source.text}</p>
+            <details className="evidence-reference"><summary>来源编号</summary><p>{source.ref}{source.kind === "规则解释" ? ` · ${source.title}` : ""}</p></details>
+          </article>)}
+          </details> : null}
+          {!evidenceBusy && (evidence.unresolved.length || !judgment.evidenceRefs?.length) ? <p>部分引用在本报告中没有可定位的记录，未据此推测爻位。<a href="#professional-evidence">查看已保存的专业依据</a></p> : null}
+          <p className="report-boundary">以上核对排盘与规则来源，不代表已核实对方态度、合同或现实结果。</p>
+          <button type="button" className="text-link" onClick={() => setSelectedJudgment(null)}>清除依据高亮</button>
+        </section> : null}
+        {visualization ? <LiuyaoVisualSystemPanel visualization={visualization} highlightedLines={evidence.lines} /> : <ChartPanel chart={report.chartViewModel} highlightedLines={evidence.lines} />}
+      </section> : null}
 
       {relatedContent.length ? (
         <details className="panel report-section report-layer-disclosure">
