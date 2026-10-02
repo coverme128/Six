@@ -28,22 +28,22 @@ export class QuestionUnderstandingService {
   private readonly limiter = createAnonymousAILimiter({ maxPerIp: 120, maxPerDevice: 120, windowMs: 3600000 });
   private readonly pending = new Map<string, Promise<UnderstandingResult>>();
 
-  async understand(input: QuestionInput): Promise<UnderstandingResult> {
+  async understand(input: QuestionInput, ownerId = "internal"): Promise<UnderstandingResult> {
     const parsed = QuestionRequestSchema.safeParse(input);
     if (!parsed.success) throw new BadRequestException({ code: "VALIDATION_ERROR", message: "请填写不超过 500 字的问题或补充信息。" });
     const source = parsed.data;
     const cached = this.verify(input.understandingToken, source);
     if (cached) return cached;
-    const key = this.digest(JSON.stringify(source));
+    const key = this.digest(ownerId + JSON.stringify(source));
     const existing = this.pending.get(key);
     if (existing) return existing;
-    const task = this.classify(source);
+    const task = this.classify(source, ownerId);
     this.pending.set(key, task);
     try { return await task; } finally { this.pending.delete(key); }
   }
 
-  async resolve(input: QuestionInput) {
-    const result = await this.understand(input);
+  async resolve(input: QuestionInput, ownerId = "internal") {
+    const result = await this.understand(input, ownerId);
     if (["CLARIFY", "SPLIT"].includes(result.understanding.status)) {
       throw new BadRequestException({ code: "QUESTION_CLARIFICATION_REQUIRED", message: result.understanding.clarificationQuestion, ...result });
     }
@@ -74,8 +74,8 @@ export class QuestionUnderstandingService {
     } catch { return null; }
   }
 
-  private async classify(source: { question: string; clarification: string }): Promise<UnderstandingResult> {
-    try { this.limiter.assertAllowed({ ip: "question-service", deviceId: "question-service" }); }
+  private async classify(source: { question: string; clarification: string }, ownerId: string): Promise<UnderstandingResult> {
+    try { this.limiter.assertAllowed({ ip: ownerId, deviceId: ownerId }); }
     catch { throw new BadRequestException({ code: "AI_RATE_LIMITED", message: "问题理解请求较多，请稍后重试。" }); }
     const provider = providerFromEnv({ rootDir: process.env.SIX_ROOT ?? process.cwd() });
     if (typeof provider.generateQuestionUnderstanding !== "function") {

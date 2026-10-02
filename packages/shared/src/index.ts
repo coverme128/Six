@@ -27,6 +27,8 @@ export const QuestionUnderstandingSchema = z.object({
 export type QuestionUnderstanding = z.infer<typeof QuestionUnderstandingSchema>;
 
 export const LiuyaoChartRequestSchema = z.object({
+  requestId: z.string().uuid(),
+  deferUnderstanding: z.boolean().default(false),
   question: z.string().trim().min(1).max(500),
   topic: z.string().optional(),
   subtype: z.string().optional(),
@@ -42,9 +44,8 @@ export const LiuyaoChartRequestSchema = z.object({
   calendar: z
     .object({
       timezone: z.string().default("Asia/Shanghai"),
-      instantUtc: z.string().optional()
+      instantUtc: z.string().datetime({ offset: true })
     })
-    .optional()
 });
 
 export const MeihuaChartRequestSchema = z.object({

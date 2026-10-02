@@ -39,7 +39,7 @@ test("six visible scene shortcuts do not become mandatory report classification"
   assert.ok(source.indexOf('className="home-scenes"') < source.indexOf('id="question-input"'));
   assert.match(source, /aria-pressed=\{activeScene === item.id\}/);
   assert.match(source, /hidden=\{!activeScene\}/);
-  const payload = source.match(/const payload = \{([\s\S]*?)\n    \};/)?.[1];
+  const payload = source.match(/const payload = [^\n]*LiuyaoChartRequestSchema.parse\(\{([\s\S]*?)\n    \}\);/)?.[1];
   assert.ok(payload);
   assert.doesNotMatch(payload, /scenarioId|activeScene|topic:|subtype:/);
   assert.match(payload, /understandingToken/);

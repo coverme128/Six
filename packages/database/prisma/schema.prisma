@@ -39,6 +39,8 @@ model AnonymousDevice {
 
 model Report {
   id            String           @id
+  ownerId       String?
+  requestHash   String?
   type          ReportType
   question      String
   chartHash     String
@@ -53,6 +55,7 @@ model Report {
   updatedAt     DateTime         @updatedAt
 
   @@index([type, createdAt])
+  @@index([ownerId, createdAt])
   @@map("reports")
 }
 

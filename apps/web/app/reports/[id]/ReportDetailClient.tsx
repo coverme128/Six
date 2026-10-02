@@ -1,4 +1,5 @@
 "use client";
+import { workspaceFetch } from "../../lib/workspace";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Download, FileText, MoreHorizontal, Printer, ShieldCheck, Sparkles, PencilLine } from "lucide-react";
@@ -191,6 +192,7 @@ function ChartPanel({ chart }: { chart?: ChartViewModel }) {
 
 export function ReportDetailClient({ reportId }: { reportId: string }) {
   const [loading, setLoading] = useState(true);
+  const [reloadCount, setReloadCount] = useState(0);
   const [aiLoading, setAiLoading] = useState(false);
   const [aiAvailability, setAiAvailability] = useState<"checking" | "available" | "unavailable">("checking");
   const [error, setError] = useState("");
@@ -219,7 +221,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       setLoading(true);
       setError("");
       try {
-        const response = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
+        const response = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
         if (!response.ok) throw new Error(await readError(response));
         const body = (await response.json()) as ExperienceResponse;
         if (!cancelled) setReport(body);
@@ -233,14 +235,14 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
     return () => {
       cancelled = true;
     };
-  }, [reportId]);
+  }, [reportId, reloadCount]);
 
   useEffect(() => {
     let cancelled = false;
     async function loadAIAvailability() {
       try {
-        const response = await fetch(`${apiBase()}/ready`);
-        const body = response.ok ? await response.json() as { ai?: { status?: string } } : null;
+        const response = await workspaceFetch(`${apiBase()}/ai/status`, {}, 15000);
+        const body = await response.json() as { ai?: { status?: string } };
         if (!cancelled) setAiAvailability(body?.ai?.status === "configured" ? "available" : "unavailable");
       } catch {
         if (!cancelled) setAiAvailability("checking");
@@ -273,10 +275,10 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
     setAiStatus("");
     setError("");
     try {
-      const response = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/ai`, {
+      const response = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/ai`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ language: "zh-CN", deviceId: "anonymous-web" })
+        body: JSON.stringify({ language: "zh-CN" })
       });
       if (!response.ok) {
         const failure = await response.json();
@@ -311,7 +313,7 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
             ? "真实模型暂时未能完成解读，正式排盘和规则结论不受影响。"
             : "真实模型解读已生成。"
       );
-      const refreshed = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
+      const refreshed = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
       if (refreshed.ok) setReport(await refreshed.json());
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法生成 AI 解读");
@@ -330,12 +332,12 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
       const understood = await understandQuestion(guided?.question ?? "", clarification);
       setUnderstandingResult(understood);
       if (["CLARIFY", "SPLIT"].includes(understood.understanding.status)) return;
-      const response = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/understanding`, {
+      const response = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/understanding`, {
         method: "POST", headers: { "content-type": "application/json" },
         body: JSON.stringify({ clarification, understandingToken: understood.understandingToken, revision: report.interpretationRevision ?? 1 }),
       });
       if (!response.ok) throw new Error(await readError(response));
-      const refreshed = await fetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
+      const refreshed = await workspaceFetch(`${apiBase()}/reports/${encodeURIComponent(reportId)}/experience`);
       if (!refreshed.ok) throw new Error(await readError(refreshed));
       autoAIRequestedRef.current = false;
       setReport(await refreshed.json());
@@ -379,6 +381,8 @@ export function ReportDetailClient({ reportId }: { reportId: string }) {
 
       {loading ? <p className="empty">正在读取报告。</p> : null}
       {error ? <p className="error">{error}</p> : null}
+      {error && !report && !loading ? <button type="button" onClick={() => setReloadCount((value) => value + 1)}>重新读取这份报告</button> : null}
+      {report && report.persistence !== "prisma" ? <p className="error" role="status">当前为本地临时存储，服务重启后报告可能丢失。请下载需要保留的内容；长期保存需要连接数据库。</p> : null}
 
       {report?.type === "liuyao" ? (
         visualization ? <LiuyaoVisualSystemPanel visualization={visualization} /> : <ChartPanel chart={report?.chartViewModel} />

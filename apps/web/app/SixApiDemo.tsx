@@ -1,7 +1,10 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
-import { apiBase, readError, type ExperienceResponse } from "./lib/api";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { LiuyaoChartRequestSchema, QuestionUnderstandingSchema } from "@six/shared";
+import { workspaceFetch, workspaceToken } from "./lib/workspace";
+import { originalCastInstant, wallTime } from "./lib/cast-time";
+import { apiBase, type ExperienceResponse } from "./lib/api";
 import { QuestionClarification, understandQuestion, type UnderstandingResult } from "./QuestionUnderstanding";
 import {
   ArrowRight,
@@ -15,7 +18,6 @@ import {
   House,
   Scale,
   Search,
-  ShieldCheck,
   Sparkles,
   WalletCards,
   type LucideIcon
@@ -199,7 +201,7 @@ function ScenarioIcon({ icon: Icon }: { icon: LucideIcon }) {
 }
 
 function tossCoins() {
-  return Array.from({ length: 3 }, () => (Math.random() > 0.5 ? 3 : 2));
+  return Array.from(crypto.getRandomValues(new Uint8Array(3)), (value) => value % 2 ? 3 : 2);
 }
 
 function lineValue(coins: number[]) {
@@ -225,6 +227,16 @@ function autoDigitalCoinLines() {
 }
 
 export function SixApiDemo() {
+  const [castTime, setCastTime] = useState("");
+  const [timezone, setTimezone] = useState("Asia/Shanghai");
+  const [instantUtc, setInstantUtc] = useState("");
+  const [requestId, setRequestId] = useState("");
+  const [submittedPayload, setSubmittedPayload] = useState<ReturnType<typeof LiuyaoChartRequestSchema.parse> | null>(null);
+  const [createdId, setCreatedId] = useState("");
+  const [restored, setRestored] = useState(false);
+  const [understandingFailed, setUnderstandingFailed] = useState(false);
+  const requestController = useRef<AbortController | null>(null);
+  const submitting = useRef(false);
   const [question, setQuestion] = useState("");
   const [scenarioId, setScenarioId] = useState("relationship:relationship_stability");
   const [activeScene, setActiveScene] = useState<string | null>(null);
@@ -259,22 +271,43 @@ export function SixApiDemo() {
     if (requestedQuestion?.trim()) setQuestion(requestedQuestion.trim().slice(0, 500));
     else {
       try {
-        const draft = JSON.parse(sessionStorage.getItem("six-question-draft") ?? "null");
-        if (draft && Date.now() - draft.savedAt < 30 * 60 * 1000 && typeof draft.question === "string") {
+        const draft = JSON.parse(localStorage.getItem("six-cast-draft-v2") ?? sessionStorage.getItem("six-question-draft") ?? "null");
+        if (draft && Date.now() - draft.savedAt < 7 * 24 * 60 * 60 * 1000 && typeof draft.question === "string") {
           setQuestion(draft.question.slice(0, 500));
           if (typeof draft.clarification === "string") setClarification(draft.clarification.slice(0, 500));
+          if (["auto", "manual", "coins", "digitalCoins"].includes(draft.mode)) setLiuyaoCastMode(draft.mode);
+          if (Array.isArray(draft.values) && draft.values.length === 6 && draft.values.every((v: unknown) => ["", "6", "7", "8", "9"].includes(String(v)))) setLiuyaoValues(draft.values.map(String));
+          if (Array.isArray(draft.coins) && draft.coins.length <= 6 && draft.coins.every((line: any) => Array.isArray(line) && line.length === 3 && line.every((v: unknown) => v === 2 || v === 3))) setCoinLines(draft.coins);
+          if (Array.isArray(draft.digitalCoins) && draft.digitalCoins.length === 6 && draft.digitalCoins.every((line: any) => Array.isArray(line) && line.length === 3 && line.every((v: unknown) => ["", "2", "3"].includes(String(v))))) {
+            setDigitalCoinLines(draft.digitalCoins); setDigitalCoinsStarted(Boolean(draft.digitalCoinsStarted));
+          }
+          if (typeof draft.timezone === "string") { new Intl.DateTimeFormat("en", { timeZone: draft.timezone }); setTimezone(draft.timezone); }
+          if (typeof draft.castTime === "string") setCastTime(draft.castTime);
+          if (typeof draft.instantUtc === "string" && Number.isFinite(Date.parse(draft.instantUtc))) setInstantUtc(draft.instantUtc);
+          if (typeof draft.requestId === "string") setRequestId(draft.requestId);
+          if (draft.understanding && QuestionUnderstandingSchema.safeParse(draft.understanding.understanding).success) setUnderstanding(draft.understanding);
+          if (LiuyaoChartRequestSchema.safeParse(draft.submittedPayload).success) setSubmittedPayload(draft.submittedPayload);
+          if (typeof draft.createdId === "string") setCreatedId(draft.createdId);
+          setRestored(true);
         }
       } catch { /* Storage may be disabled; the form remains usable. */ }
     }
     setDraftReady(true);
   }, []);
+  function persistDraft(overrides: Record<string, unknown> = {}) {
+    workspaceToken();
+    localStorage.setItem("six-cast-draft-v2", JSON.stringify({ question, clarification, mode: liuyaoCastMode, values: liuyaoValues,
+      coins: coinLines, digitalCoins: digitalCoinLines, digitalCoinsStarted, castTime, timezone, instantUtc, requestId,
+      understanding, submittedPayload, createdId, savedAt: Date.now(), ...overrides }));
+  }
   useEffect(() => {
     if (!draftReady) return;
     try {
-      if (question.trim()) sessionStorage.setItem("six-question-draft", JSON.stringify({ question, clarification, savedAt: Date.now() }));
-      else sessionStorage.removeItem("six-question-draft");
-    } catch { /* A draft is optional, never a prerequisite for starting. */ }
-  }, [question, clarification, draftReady]);
+      if (question.trim()) persistDraft();
+      else localStorage.removeItem("six-cast-draft-v2");
+    } catch { setError("浏览器未能保存草稿，请允许本站本地存储后继续。"); }
+  }, [question, clarification, draftReady, liuyaoCastMode, liuyaoValues, coinLines, digitalCoinLines, digitalCoinsStarted, castTime, timezone, instantUtc, requestId, understanding, submittedPayload, createdId]);
+  useEffect(() => () => requestController.current?.abort(), []);
   const castValues = useMemo(
     () => {
       if (liuyaoCastMode === "manual") return liuyaoValues.map((item) => Number(item));
@@ -287,10 +320,14 @@ export function SixApiDemo() {
   const manualReady = liuyaoValues.every((item) => ["6", "7", "8", "9"].includes(item));
   const liuyaoReady = liuyaoCastMode === "manual" ? manualReady : (liuyaoCastMode === "digitalCoins" ? digitalCoinsReady : coinLines.length === 6);
   const questionReady = Boolean(question.trim()) && Boolean(understanding && ["RESOLVED", "BRANCHED"].includes(understanding.understanding.status));
-  const canGenerate = questionReady && liuyaoReady;
+  const canGenerate = Boolean(question.trim()) && liuyaoReady;
+  const locked = loading || understandingBusy || Boolean(submittedPayload);
 
   function switchLiuyaoCastMode(nextMode: LiuyaoCastMode) {
+    if (locked || nextMode === liuyaoCastMode) return;
+    if ((coinLines.length || digitalCoinsStarted || liuyaoValues.some(Boolean)) && !window.confirm("切换方式会清除当前尚未提交的卦爻，确定切换吗？")) return;
     setLiuyaoCastMode(nextMode);
+    setInstantUtc(""); setRequestId(""); setUnderstandingFailed(false);
     setCoinLines([]);
     setDigitalCoinsStarted(false);
     setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
@@ -314,11 +351,12 @@ export function SixApiDemo() {
   }
 
   function changeQuestion(value: string) {
+    if (locked) return;
     setQuestion(value);
     setUnderstanding(null);
     setClarification("");
-    setCoinLines([]);
     setReport(null);
+    setUnderstandingFailed(false);
   }
 
   async function prepareQuestion(answer = "", generateImmediately = liuyaoCastMode === "auto") {
@@ -326,8 +364,10 @@ export function SixApiDemo() {
     setUnderstandingBusy(true);
     setError("");
     const nextClarification = answer ? [clarification, answer].filter(Boolean).join("；").slice(0, 500) : clarification;
+    setClarification(nextClarification);
+    requestController.current = new AbortController();
     try {
-      const result = await understandQuestion(question, nextClarification);
+      const result = await understandQuestion(question, nextClarification, requestController.current.signal);
       setUnderstanding(result);
       setClarification(nextClarification);
       if (["RESOLVED", "BRANCHED"].includes(result.understanding.status)) {
@@ -335,21 +375,25 @@ export function SixApiDemo() {
           const nextLines = coinLines.length === 6 ? coinLines : Array.from({ length: 6 }, tossCoins);
           setCoinLines(nextLines);
           await generateReport({ mode: "auto", coins: nextLines }, result, nextClarification);
-        } else moveToStep("cast-step");
+        } else if (canGenerate) await generateReport(undefined, result, nextClarification);
+        else moveToStep("cast-step");
       }
-    } catch (err) { setError(err instanceof Error ? err.message : "暂时无法理解问题，请重试。"); }
+    } catch (err) { setUnderstandingFailed(true); setError(err instanceof Error ? err.message : "暂时无法理解问题，请重试。"); }
     finally { setUnderstandingBusy(false); }
   }
 
   function addCoinLine() {
     if (coinLines.length >= 6) return;
     const nextLines = [...coinLines, tossCoins()];
+    if (!instantUtc) setInstantUtc(new Date().toISOString());
     setCoinLines(nextLines);
     setReport(null);
     if (nextLines.length === 6) void generateReport({ mode: "coins", coins: nextLines });
   }
 
   function autoCastSixLines(generateAfterCast = false) {
+    if (coinLines.length && !window.confirm("重新起卦会放弃当前尚未提交的卦爻，确定继续吗？")) return;
+    setInstantUtc(""); setRequestId("");
     const nextLines = Array.from({ length: 6 }, tossCoins);
     setCoinLines(nextLines);
     setLiuyaoCastMode("auto");
@@ -367,19 +411,25 @@ export function SixApiDemo() {
   }
 
   function resetDigitalCoins() {
+    if (!window.confirm("放弃当前数字铜钱记录并重新起卦？")) return;
+    setInstantUtc(""); setRequestId("");
     setDigitalCoinsStarted(false);
     setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
     setReport(null);
   }
 
-  async function generateReport(submission?: CastSubmission, understood = understanding, answer = clarification) {
-    if (loading) return;
+  async function generateReport(submission?: CastSubmission, understood = understanding, answer = clarification, defer = false) {
+    if (submitting.current) return;
+    if (createdId) { window.location.assign(`/reports/${encodeURIComponent(createdId)}`); return; }
+    submitting.current = true;
+    requestController.current = new AbortController();
     setLoading(true);
     setError("");
 
-    if (!understood || !["RESOLVED", "BRANCHED"].includes(understood.understanding.status) || (!submission && !canGenerate)) {
+    if (!submittedPayload && (!question.trim() || (!submission && !canGenerate))) {
       setLoading(false);
-      setError("请先填写问题并完成问题确认。");
+      submitting.current = false;
+      setError("请填写问题并完成六爻记录。");
       return;
     }
 
@@ -388,32 +438,54 @@ export function SixApiDemo() {
     const submissionDigitalCoins = submission?.digitalCoins ?? digitalCoinLines;
     const submissionValues = submission?.values ?? castValues;
 
-    const payload = {
+    try {
+    const fixedInstant = submittedPayload?.calendar.instantUtc ?? (submissionMode === "manual" ? originalCastInstant(castTime, timezone) : instantUtc || new Date().toISOString());
+    const castId = submittedPayload?.requestId ?? (requestId || crypto.randomUUID());
+    setInstantUtc(fixedInstant); setRequestId(castId);
+    // Persist the cast before any remote work. A retry uses the exact same input and identifier.
+    persistDraft({ instantUtc: fixedInstant, requestId: castId, coins: submissionCoins, digitalCoins: submissionDigitalCoins });
+    if (!submittedPayload && !defer && !["RESOLVED", "BRANCHED"].includes(understood?.understanding.status ?? "")) {
+      requestController.current = new AbortController();
+      try { understood = await understandQuestion(question, answer, requestController.current.signal); }
+      catch (err) { setUnderstandingFailed(true); throw err; }
+      setUnderstanding(understood);
+      if (["CLARIFY", "SPLIT"].includes(understood.understanding.status)) { moveToStep("question-step"); return; }
+    }
+    const payload = submittedPayload ? { ...submittedPayload, deferUnderstanding: defer || submittedPayload.deferUnderstanding } : LiuyaoChartRequestSchema.parse({
+      requestId: castId,
+      deferUnderstanding: defer,
       question,
-      understandingToken: understood.understandingToken,
+      understandingToken: understood?.understandingToken,
       clarification: answer,
       ...(submissionMode === "manual" ? { values: submissionValues } : {}),
       ...(submissionMode === "digitalCoins" ? { coins: submissionDigitalCoins.map((line) => line.map(Number)) } : {}),
       ...(submissionMode === "coins" || submissionMode === "auto" ? { coins: submissionCoins } : {}),
-      calendar: { timezone: "Asia/Shanghai" }
-    };
+      calendar: { timezone, instantUtc: fixedInstant }
+    });
+    setSubmittedPayload(payload);
+    persistDraft({ submittedPayload: payload, instantUtc: fixedInstant, requestId: castId, coins: submissionCoins, digitalCoins: submissionDigitalCoins });
 
-    try {
-      const created = await fetch(`${apiBase()}/liuyao/charts`, {
+      const created = await workspaceFetch(`${apiBase()}/liuyao/charts`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        signal: requestController.current?.signal,
       });
-      if (!created.ok) throw new Error(await readError(created));
+      if (!created.ok) {
+        const failure = await created.json();
+        if (["QUESTION_PROVIDER_UNAVAILABLE", "QUESTION_UNDERSTANDING_FAILED", "AI_RATE_LIMITED"].includes(failure.code)) setUnderstandingFailed(true);
+        if (failure.understanding) { setUnderstanding(failure); setSubmittedPayload(null); persistDraft({ submittedPayload: null }); moveToStep("question-step"); }
+        throw new Error(failure.message ?? "报告暂未保存，请重试。");
+      }
       const createdJson = (await created.json()) as ExperienceResponse;
-      const experience = await fetch(`${apiBase()}/reports/${encodeURIComponent(createdJson.id)}/experience`);
-      if (!experience.ok) throw new Error(await readError(experience));
-      setReport((await experience.json()) as ExperienceResponse);
-      try { sessionStorage.removeItem("six-question-draft"); } catch { /* Ignore unavailable browser storage. */ }
+      setCreatedId(createdJson.id);
+      persistDraft({ createdId: createdJson.id, submittedPayload: payload, instantUtc: fixedInstant, requestId: castId });
+      try { sessionStorage.removeItem("six-question-draft"); } catch { /* Legacy draft cleanup. */ }
       window.location.assign(`/reports/${encodeURIComponent(createdJson.id)}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "暂时无法连接 API");
     } finally {
+      submitting.current = false;
       setLoading(false);
     }
   }
@@ -423,8 +495,28 @@ export function SixApiDemo() {
     void generateReport();
   }
 
+  function startNewQuestion() {
+    if (!window.confirm(createdId ? "开始新的问题？已经保存的报告仍在“我的报告”中。" : "放弃当前草稿并重新开始？已经记录的卦爻将被清除。")) return;
+    setQuestion(""); setClarification(""); setUnderstanding(null); setSubmittedPayload(null); setCreatedId("");
+    setCoinLines([]); setLiuyaoValues(["", "", "", "", "", ""]); setDigitalCoinsStarted(false);
+    setDigitalCoinLines(Array.from({ length: 6 }, () => ["", "", ""]));
+    setInstantUtc(""); setCastTime(""); setRequestId(""); setLiuyaoCastMode("auto"); setError(""); setRestored(false); setUnderstandingFailed(false);
+    localStorage.removeItem("six-cast-draft-v2"); sessionStorage.removeItem("six-question-draft");
+  }
+
+  function saveWithoutAI() {
+    const coins = coinLines.length === 6 ? coinLines : Array.from({ length: 6 }, tossCoins);
+    if (liuyaoCastMode === "auto") { setCoinLines(coins); void generateReport({ mode: "auto", coins }, understanding, clarification, true); }
+    else void generateReport(undefined, understanding, clarification, true);
+  }
+
   return (
     <section className="workbench" id="liuyao-workbench">
+      {restored || submittedPayload || createdId ? <div className="cast-recovery" role="status">
+        <span>{createdId ? "本次报告已保存。" : submittedPayload ? "本次盘面已锁定，重试不会重新起卦。" : "已恢复未完成的问题和卦爻。"}</span>
+        {createdId ? <a href={`/reports/${encodeURIComponent(createdId)}`}>继续查看报告</a> : submittedPayload ? <button type="button" disabled={loading || understandingBusy} onClick={() => void generateReport()}>继续保存原卦</button> : null}
+        <button type="button" className="text-link" disabled={loading || understandingBusy} onClick={startNewQuestion}>{createdId ? "开始新问题" : "放弃草稿"}</button>
+      </div> : null}
       <form className="journey-form" onSubmit={createReport}>
         <section className="journey-screen question-step" id="question-step">
           <header className="journey-heading compact">
@@ -454,7 +546,7 @@ export function SixApiDemo() {
               id="question-input"
               value={question}
               onChange={(event) => changeQuestion(event.target.value)}
-              disabled={understandingBusy || loading}
+              disabled={locked}
               maxLength={500}
               rows={4}
               placeholder="把具体事情和你正在犹豫的决定写在这里……"
@@ -470,23 +562,24 @@ export function SixApiDemo() {
           <button
             type="button"
             className="continue-button"
-            hidden={Boolean(understanding && ["CLARIFY", "SPLIT"].includes(understanding.understanding.status))}
-            disabled={!question.trim() || understandingBusy || loading}
+            hidden={liuyaoCastMode !== "auto" || Boolean(submittedPayload) || Boolean(understanding && ["CLARIFY", "SPLIT"].includes(understanding.understanding.status))}
+            disabled={!question.trim() || locked}
             onClick={() => { setLiuyaoCastMode("auto"); void prepareQuestion("", true); }}
           >
             {understandingBusy ? "正在理解你的问题" : loading ? "正在生成报告" : "开始起卦并查看报告"}
             <ArrowRight aria-hidden="true" size={17} />
           </button>
-          {!understanding || questionReady ? <button className="text-link" type="button" disabled={!question.trim() || understandingBusy || loading} onClick={() => { setLiuyaoCastMode("manual"); void prepareQuestion("", false); }}>手动摇卦或录入已有卦爻</button> : null}
-          {error ? <p className="error" role="alert">{error}</p> : null}
+          {liuyaoCastMode === "auto" && !submittedPayload ? <button className="text-link" type="button" disabled={!question.trim() || locked} onClick={() => { switchLiuyaoCastMode("manual"); moveToStep("cast-step"); }}>手动摇卦或录入已有卦爻</button> : null}
+          {error && liuyaoCastMode === "auto" ? <p className="error" role="alert">{error}</p> : null}
+          {understandingBusy ? <button className="text-link" type="button" onClick={() => requestController.current?.abort()}>暂停，保留问题</button> : null}
+          {understandingFailed && liuyaoCastMode === "auto" ? <button className="secondary" type="button" disabled={loading || understandingBusy} onClick={saveWithoutAI}>先保存卦盘，稍后继续解读</button> : null}
           <p className="question-service-boundary">AI 会结合原问题与六爻盘面解读；现实条件仍需你核实。</p>
         </section>
 
-        <section className="journey-screen cast-step" id="cast-step" hidden={!questionReady || liuyaoCastMode === "auto"}>
+        <section className="journey-screen cast-step" id="cast-step" hidden={liuyaoCastMode === "auto"}>
           <header className="journey-heading compact">
             <div>
-              <h2>开始起卦</h2>
-              <p>默认由系统一次完成六爻，完成后直接打开你的报告。</p>
+              <h2>{liuyaoCastMode === "manual" ? "录入已有卦" : "逐爻起卦"}</h2>
             </div>
             <div className="question-confirmation">
               <FileSearch aria-hidden="true" size={18} />
@@ -494,28 +587,11 @@ export function SixApiDemo() {
             </div>
           </header>
 
-          <aside className="trust-note" aria-label="报告生成说明">
-            <ShieldCheck aria-hidden="true" size={20} />
-            <div>
-              <strong>排盘与判断依据不会由 AI 改写</strong>
-              <span>AI 只负责把正式结果解释清楚，不替换本次盘面和规则判断。</span>
-              <details className="trust-disclosure">
-                <summary>了解报告如何生成与复核</summary>
-                <div>
-                  <span><strong>先生成盘面</strong>本卦、变卦与动爻在报告文字生成前确定。</span>
-                  <span><strong>判断有来源</strong>主要结论、支持与阻碍可以回到对应依据。</span>
-                  <span><strong>解释有边界</strong>AI 不重新排盘，不修改正式判断，也不承诺现实结果。</span>
-                </div>
-              </details>
-            </div>
-          </aside>
-
-          <fieldset className="cast-method-fieldset">
+          <fieldset className="cast-method-fieldset" disabled={locked}>
             <legend className="sr-only">选择并完成起卦</legend>
             <div className="cast-method-header">
               <div>
                 <strong>{liuyaoCastMode === "auto" ? "系统代摇" : liuyaoCastMode === "coins" ? "逐爻摇铜钱" : liuyaoCastMode === "digitalCoins" ? "数字铜钱法" : "手动录入爻值"}</strong>
-                <span>{liuyaoCastMode === "auto" ? "推荐方式，一次完成六爻" : "已选择自定义起卦方式"}</span>
               </div>
               <details className="cast-method-picker">
                 <summary>更换起卦方式</summary>
@@ -538,10 +614,17 @@ export function SixApiDemo() {
             </div>
 
             {liuyaoCastMode === "manual" ? (
+              <>
+              <div className="cast-time-fields">
+                <div className="cast-time-entry"><label>原起卦日期与时间<input type="datetime-local" value={castTime} onChange={(event) => setCastTime(event.target.value)} required /></label><button className="text-link" type="button" onClick={() => setCastTime(wallTime(new Date().toISOString(), timezone))}>使用当前时间</button></div>
+                <label>起卦地时区<select value={timezone} onChange={(event) => setTimezone(event.target.value)}>
+                  {["Asia/Shanghai", "Asia/Hong_Kong", "Asia/Taipei", "Asia/Tokyo", "Europe/London", "America/New_York", "America/Los_Angeles", "UTC"].map((zone) => <option key={zone} value={zone}>{zone === "Asia/Shanghai" ? "中国标准时间 (UTC+8)" : zone}</option>)}
+                </select></label>
+              </div>
               <div className="line-grid">
                 {liuyaoValues.map((value, index) => (
                   <label key={`line-${index}`}>
-                    <span>第 {index + 1} 爻</span>
+                    <span>{index === 0 ? "初爻（最下方）" : index === 5 ? "上爻（最上方）" : `第 ${index + 1} 爻`}</span>
                     <select
                       value={value}
                       onChange={(event) => {
@@ -560,12 +643,20 @@ export function SixApiDemo() {
                   </label>
                 ))}
               </div>
+              <div className="cast-preview" aria-label="本次录入的卦爻，从上爻到初爻">
+                {[...liuyaoValues].reverse().map((value, index) => <div className="cast-preview-row" key={index}>
+                  <span>{index === 0 ? "上爻" : index === 5 ? "初爻" : `${6 - index} 爻`}</span>
+                  <span className={`cast-preview-line ${!value ? "pending" : Number(value) % 2 ? "yang" : "yin"}`} aria-label={value ? Number(value) % 2 ? "阳" : "阴" : "未录入"}><i /><i /></span>
+                  <span>{value ? lineInfo(value).short : "未录入"}{value === "6" || value === "9" ? " · 动" : ""}</span>
+                </div>)}
+              </div>
+              </>
             ) : liuyaoCastMode === "digitalCoins" ? (
               <div className="cast-flow">
                 {digitalCoinsStarted ? (
                   <>
                     <p className="section-kicker">
-                      系统已按数字铜钱法自动生成六爻，阳面记 3，阴面记 2。确认后即可生成报告。
+                      六爻已记录，正在用本次盘面整理报告。
                     </p>
                     <div className="coin-number-grid" aria-label="数字铜钱法">
                       {digitalCoinLines.map((coins, lineIndex) => {
@@ -662,7 +753,7 @@ export function SixApiDemo() {
                         <button type="button" onClick={addCoinLine}>摇第 {coinLines.length + 1} 爻</button>
                       )}
                       {liuyaoCastMode === "coins" && coinLines.length ? (
-                        <button type="button" className="tertiary-button" onClick={() => setCoinLines([])}>重新逐爻起卦</button>
+                        <button type="button" className="tertiary-button" onClick={() => { if (window.confirm("放弃当前卦爻并从初爻重新开始？")) { setCoinLines([]); setInstantUtc(""); setRequestId(""); } }}>重新逐爻起卦</button>
                       ) : null}
                     </div>
                   </>
@@ -671,10 +762,14 @@ export function SixApiDemo() {
             )}
           </fieldset>
 
-          {canGenerate && (liuyaoCastMode === "manual" || Boolean(error)) ? (
+          {instantUtc ? <p className="section-kicker">起卦记录：{wallTime(instantUtc, timezone).replace("T", " ")}（{timezone}）</p> : null}
+          {error ? <p className="error" role="alert">{error}</p> : null}
+          {loading ? <button type="button" className="text-link" onClick={() => requestController.current?.abort()}>暂停等待，保留盘面</button> : null}
+          {understandingFailed ? <button className="secondary" type="button" disabled={loading || understandingBusy} onClick={saveWithoutAI}>先保存卦盘，稍后继续解读</button> : null}
+          {canGenerate && !createdId && (liuyaoCastMode === "manual" || Boolean(error)) ? (
             <div className="form-actions final-actions">
               <button type="submit" disabled={loading}>
-                {loading ? "正在整理报告" : error ? "重新生成并查看报告" : "生成并查看报告"}
+                {loading ? "正在保存盘面并准备解读" : submittedPayload ? "继续保存原卦" : "保存此卦并查看解读"}
               </button>
               {report ? <button type="button" className="tertiary-button" onClick={() => setReport(null)} disabled={loading}>移除当前结果</button> : null}
             </div>

@@ -8381,3 +8381,16 @@ article p:last-child {
   .example-narrative .example-direct-answer { font-size: 19px; }
   .example-tradeoffs > div { grid-template-columns: 1fr; gap: 0; }
 }
+/* Cast recovery and original-time entry are part of the workbench, not report content. */
+.cast-recovery { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:16px 0; border-bottom:1px solid #ccd6d2; margin-bottom:20px; }
+.cast-time-fields { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; margin:20px 0; }
+.cast-time-fields label { display:grid; gap:8px; min-width:0; }
+.cast-time-fields input, .cast-time-fields select { width:100%; min-width:0; min-height:44px; padding:10px; border:1px solid #bdc9c4; border-radius:4px; background:#fff; color:#202923; font:inherit; }
+.cast-preview { display:grid; gap:12px; max-width:360px; margin:24px auto 8px; }
+.cast-preview-row { display:grid; grid-template-columns:48px minmax(80px,1fr) 88px; gap:16px; align-items:center; font-size:14px; }
+.cast-preview-line { display:flex; height:8px; gap:0; }
+.cast-preview-line i { flex:1; background:#245d53; }
+.cast-preview-line.yin { gap:14px; }
+.cast-preview-line.pending i { background:#cbd2d0; }
+.cast-method-fieldset:disabled { opacity:.72; }
+@media (max-width:600px) { .cast-time-fields { grid-template-columns:minmax(0,1fr); } .cast-recovery { align-items:flex-start; } }

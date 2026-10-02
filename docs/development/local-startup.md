@@ -44,7 +44,7 @@ pnpm install
 
 Use this mode to inspect the homepage, Liuyao workbench, reports, and Learn Hub without starting Docker. The API uses its development fallback stores; queued Worker jobs and production readiness are not available. AI interpretation stays unavailable until a live provider is configured, and no simulated interpretation is generated.
 
-Reports in `memory` or `memory-fallback` mode are not database backups and may disappear when the API process exits. Preserve important in-memory reports before changing modes or restarting.
+Reports in development `memory` mode are not database backups and disappear when the API process exits. Preserve important in-memory reports before changing modes or restarting. Database write failures now return an error instead of successful `memory-fallback`; beta/production creation requires database configuration. Apply the new workspace migration and review [workspace ownership and legacy report assignment](workbench-p0-closure.md) before upgrading an existing database.
 
 Terminal 1, API:
 

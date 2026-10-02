@@ -1,5 +1,6 @@
-import { BadRequestException, Body, Controller, Inject, Post } from "@nestjs/common";
-import { LiuyaoChartRequestSchema, MeihuaChartRequestSchema } from "@six/shared";
+import { BadRequestException, Body, Controller, Inject, Post, Req, GoneException } from "@nestjs/common";
+import { workspaceOwner } from "../reports/workspace-access.js";
+import { LiuyaoChartRequestSchema } from "@six/shared";
 import type { z, ZodTypeAny } from "zod";
 
 import { DivinationService } from "./divination.service.js";
@@ -26,24 +27,24 @@ export class DivinationController {
   ) {}
 
   @Post("liuyao/questions/understand")
-  async understand(@Body() body: unknown) {
-    return this.questions.understand(parseRequest(QuestionRequestSchema, body));
+  async understand(@Body() body: unknown, @Req() request: any) {
+    const owner = workspaceOwner(request.headers["x-six-workspace"]);
+    return this.questions.understand(parseRequest(QuestionRequestSchema, body), owner);
   }
 
   @Post("liuyao/charts")
-  async createLiuyao(@Body() body: unknown) {
+  async createLiuyao(@Body() body: unknown, @Req() request: any) {
     const input = parseRequest(LiuyaoChartRequestSchema, body);
-    return this.divinationService.createLiuyao(input);
+    return this.divinationService.createLiuyao(input, workspaceOwner(request.headers["x-six-workspace"]));
   }
 
   @Post("meihua/charts")
-  async createMeihua(@Body() body: unknown) {
-    const input = parseRequest(MeihuaChartRequestSchema, body);
-    return this.divinationService.createMeihua(input);
+  async createMeihua() {
+    throw new GoneException("当前仅支持六爻。");
   }
 
   @Post("reports/demo")
   async demoReport() {
-    return this.divinationService.createDemo();
+    throw new GoneException("请使用首页的静态报告示例。");
   }
 }

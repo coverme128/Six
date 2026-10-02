@@ -26,7 +26,7 @@ function liveTransport(t: any, output: unknown = resolved) {
 }
 
 test("missing route does not become job search", () => {
-  const request = LiuyaoChartRequestSchema.parse({ question: "是否成立公司" });
+  const request = LiuyaoChartRequestSchema.parse({ question: "是否成立公司", requestId: crypto.randomUUID(), calendar: { instantUtc: "2026-08-27T00:00:00Z" } });
   assert.equal(request.topic, undefined);
   const result = createLiuyaoChart({ question: request.question, values: [8, 7, 7, 8, 8, 8] });
   assert.equal(result.chart.topic, "general");
@@ -65,6 +65,15 @@ test("provider unavailable never fabricates classification", async (t) => {
   liveTransport(t);
   process.env.AI_PROVIDER = "disabled";
   await assert.rejects(new QuestionUnderstandingService().understand({ question: "是否创业" }), (error: any) => error.getResponse().code === "QUESTION_PROVIDER_UNAVAILABLE");
+});
+
+test("question limits belong to the workspace, not every visitor together", async (t) => {
+  liveTransport(t);
+  const service = new QuestionUnderstandingService();
+  for (let i = 0; i < 120; i++) await service.understand({ question: `问题${i}` }, "workspace-a");
+  await assert.rejects(service.understand({ question: "超过额度" }, "workspace-a"), (error: any) => error.getResponse().code === "AI_RATE_LIMITED");
+  const other = await service.understand({ question: "另一个用户的问题" }, "workspace-b");
+  assert.equal(other.understanding.status, "RESOLVED");
 });
 
 test("ignored focus selection is retried with correction feedback, never silently accepted", async (t) => {

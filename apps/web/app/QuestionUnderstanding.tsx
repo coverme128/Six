@@ -3,14 +3,16 @@
 import { useState } from "react";
 import type { QuestionUnderstanding } from "@six/shared";
 import { apiBase, readError } from "./lib/api";
+import { workspaceFetch } from "./lib/workspace";
 
 export type UnderstandingResult = { understanding: QuestionUnderstanding; understandingToken: string };
 
-export async function understandQuestion(question: string, clarification = ""): Promise<UnderstandingResult> {
-  const response = await fetch(`${apiBase()}/liuyao/questions/understand`, {
+export async function understandQuestion(question: string, clarification = "", signal?: AbortSignal): Promise<UnderstandingResult> {
+  const response = await workspaceFetch(`${apiBase()}/liuyao/questions/understand`, {
     method: "POST", headers: { "content-type": "application/json" },
     body: JSON.stringify({ question, clarification }),
-  });
+    signal,
+  }, 45000);
   if (!response.ok) throw new Error(await readError(response));
   return response.json();
 }

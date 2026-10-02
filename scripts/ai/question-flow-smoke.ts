@@ -1,15 +1,17 @@
 import assert from "node:assert/strict";
 import { writeFileSync } from "node:fs";
+import { randomBytes, randomUUID } from "node:crypto";
 
 const base = process.env.AI_SMOKE_API_BASE ?? "http://127.0.0.1:4100/api/v1";
+const headers = { "content-type": "application/json", "x-six-workspace": randomBytes(32).toString("hex") };
 async function post(path: string, input: unknown) {
-  const response = await fetch(`${base}${path}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(input) });
+  const response = await fetch(`${base}${path}`, { method: "POST", headers, body: JSON.stringify(input) });
   const body = await response.json();
   assert.ok(response.ok, `${path}: ${body.code ?? response.status} ${body.message ?? ""}`);
   return body;
 }
 async function get(path: string) {
-  const response = await fetch(`${base}${path}`);
+  const response = await fetch(`${base}${path}`, { headers });
   assert.ok(response.ok);
   return response.json();
 }
@@ -38,6 +40,7 @@ for (const item of cases) {
 const question = cases[1].question;
 const prepared = await post("/liuyao/questions/understand", { question });
 const created = await post("/liuyao/charts", {
+  requestId: randomUUID(),
   question, topic: "career", subtype: "job_search", understandingToken: prepared.understandingToken,
   values: [8, 7, 7, 8, 8, 8], calendar: { instantUtc: "2026-09-06T06:00:00.000Z", timezone: "Asia/Shanghai" },
 });

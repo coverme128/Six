@@ -2,6 +2,8 @@ export type DivinationType = "liuyao" | "meihua";
 
 export type PublicReportRecord = {
   id: string;
+  ownerId?: string | null;
+  requestHash?: string | null;
   type: DivinationType;
   question: string;
   chartHash: string;

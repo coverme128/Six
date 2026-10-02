@@ -69,7 +69,7 @@ export class AiReportService {
       if (!current || current.type !== "liuyao") throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到六爻报告。" });
       const previous = current.result as any;
       if (Number(previous.interpretationRevision ?? 1) !== input.revision) throw new ConflictException({ code: "REPORT_CHANGED", message: "报告已更新，请刷新后再补充。" });
-      const understood = await this.questions.resolve({ question: current.question, ...input });
+      const understood = await this.questions.resolve({ question: current.question, ...input }, current.ownerId ?? "internal");
       const saved = await this.applyUnderstanding(current, understood);
       const result = saved.result as any;
       return { reportId, revision: result.interpretationRevision, persistence: saved.persistence };
@@ -159,7 +159,7 @@ export class AiReportService {
     }
 
     if (report.type === "liuyao" && (report.result as any)?.chart?.questionProfile?.profileVersion !== "LIUYAO_QUESTION_PROFILE_V2") {
-      const understood = await this.questions.resolve({ question: report.question });
+      const understood = await this.questions.resolve({ question: report.question, clarification: (report.result as any)?.pendingQuestion?.clarification ?? "" }, report.ownerId ?? "internal");
       report = await this.applyUnderstanding(report, understood);
     }
     const baseResult = attachAiReportBundle(withoutStoredProductFacts(report.result), report.aiReportBundle);

@@ -20,6 +20,7 @@
     "test:ai": "pnpm --filter @six/domain build && node --import tsx --test tests/ai-report.test.ts",
     "test:contract": "node --import tsx --test tests/api-contract.test.ts",
     "test:questions": "pnpm --filter @six/shared build && pnpm --filter @six/domain build && TSX_TSCONFIG_PATH=apps/api/tsconfig.json node --import tsx --test apps/api/tests/question-understanding.node.ts",
+    "test:workbench": "pnpm --filter @six/shared build && TSX_TSCONFIG_PATH=apps/api/tsconfig.json node --import tsx --test apps/api/tests/workbench-safety.node.ts",
     "smoke:questions:live": "tsx scripts/ai/question-flow-smoke.ts",
     "test:home": "node --import tsx --test tests/home-example.test.ts",
     "test:experience": "pnpm --filter @six/domain build && node --import tsx --test tests/presentation.test.ts",

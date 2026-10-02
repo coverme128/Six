@@ -1,4 +1,5 @@
-import { BadRequestException, Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query } from "@nestjs/common";
+import { BadRequestException, Body, Controller, Delete, ForbiddenException, Get, Headers, Inject, NotFoundException, Param, Post, Query, Req, UseGuards } from "@nestjs/common";
+import { WorkspaceAccessGuard } from "./workspace-access.js";
 import { z } from "zod";
 import { buildExperienceBundle } from "@six/domain/presentation";
 import { HybridContentRepository, reportContentRecommendations } from "@six/domain/content-framework";
@@ -152,6 +153,7 @@ function contentRepository() {
 }
 
 @Controller("reports")
+@UseGuards(WorkspaceAccessGuard)
 export class ReportsController {
   constructor(
     @Inject(ReportStoreService)
@@ -161,10 +163,11 @@ export class ReportsController {
   ) {}
 
   @Get()
-  async listReports(@Query("limit") limit?: string) {
+  async listReports(@Req() request: any, @Query("limit") limit?: string) {
     const parsedLimit = Number(limit ?? 20);
     return {
-      items: await this.reportStore.list(Number.isFinite(parsedLimit) ? Math.min(Math.max(parsedLimit, 1), 50) : 20)
+      ownerId: request.workspaceOwner,
+      items: await this.reportStore.list(Number.isFinite(parsedLimit) ? Math.min(Math.max(parsedLimit, 1), 50) : 20, request.workspaceOwner)
     };
   }
 
@@ -172,7 +175,9 @@ export class ReportsController {
   async getReport(@Param("id") id: string) {
     const report = await this.reportStore.find(id);
     if (!report) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
-    return report;
+    return { id: report.id, type: report.type, question: report.question, chartHash: report.chartHash,
+      createdAt: report.createdAt, result: report.result, narrativeReport: report.narrativeReport,
+      aiReportBundle: report.aiReportBundle, experience: report.experience, persistence: report.persistence };
   }
 
   @Get(":id/export")
@@ -184,15 +189,14 @@ export class ReportsController {
 
   @Post(":id/ai")
   async generateAIReport(
+    @Req() request: any,
     @Param("id") id: string,
-    @Body() body: { language?: "zh-CN" | "en-US"; deviceId?: string } = {},
-    @Headers("x-forwarded-for") forwardedFor?: string,
-    @Headers("x-real-ip") realIp?: string
+    @Body() body: { language?: "zh-CN" | "en-US"; deviceId?: string } = {}
   ) {
     return this.aiReport.generateForReport(id, {
       language: body.language,
-      deviceId: body.deviceId,
-      ip: forwardedFor?.split(",")[0]?.trim() || realIp || "local"
+      deviceId: request.workspaceOwner,
+      ip: request.ip ?? "local"
     });
   }
 
@@ -205,12 +209,14 @@ export class ReportsController {
 
   @Post(":id/ai/jobs")
   async enqueueAIReport(
+    @Req() request: any,
     @Param("id") id: string,
     @Body() body: { language?: "zh-CN" | "en-US"; deviceId?: string } = {}
   ) {
     return this.aiReport.enqueueForReport(id, {
       language: body.language,
-      deviceId: body.deviceId
+      deviceId: request.workspaceOwner,
+      ip: request.ip ?? "local"
     });
   }
 
@@ -238,13 +244,13 @@ export class ReportsController {
   }
 
   @Delete()
-  async clearReports() {
-    return { deleted: await this.reportStore.clear() };
+  async clearReports(@Req() request: any) {
+    return { deleted: await this.reportStore.clear(request.workspaceOwner) };
   }
 
   @Delete(":id")
-  async deleteReport(@Param("id") id: string) {
-    const deleted = await this.reportStore.delete(id);
+  async deleteReport(@Param("id") id: string, @Req() request: any) {
+    const deleted = await this.reportStore.delete(id, request.workspaceOwner);
     if (!deleted) throw new NotFoundException({ code: "REPORT_NOT_FOUND", message: "未找到该报告。" });
     return { deleted: true };
   }

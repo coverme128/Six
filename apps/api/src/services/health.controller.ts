@@ -10,6 +10,12 @@ export class HealthController {
     return { status: "ok" };
   }
 
+  @Get("ai/status")
+  aiStatus() {
+    const provider = providerFromEnv();
+    return { ai: { status: provider.apiKey ? "configured" : "unavailable" } };
+  }
+
   @Get("/ready")
   ready() {
     const database = databaseHealth();
