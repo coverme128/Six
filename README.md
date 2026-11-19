@@ -1,168 +1,88 @@
-# SIX Liuyao Public Beta Scope
+# SIX · 六爻问题分析
 
-Current architecture status: `PNPM_TURBO_TYPESCRIPT_STACK_READY` + `DOMAIN_TYPESCRIPT_PACKAGE_READY` + `API_REPORT_STORE_BRIDGE_READY` + `NEXT_WEB_CAST_WORKBENCH_READY` + `NEXT_WEB_HISTORY_DETAIL_READY` + `NEXT_WEB_CONTENT_SETTINGS_EXPORT_READY` + `PRISMA_PERSISTENCE_READY` + `API_WORKER_AI_REPORT_READY` + `P4X_UPGRADE_RECHECKED_FOR_MONOREPO_STACK` + `LEGACY_MJS_RUNTIME_REMOVED`.
+SIX 是一个围绕具体问题的六爻学习与报告应用。用户写下正在考虑的事情，系统记录起卦时间与六爻盘面，使用确定性规则生成可复核的事实，再由 AI 结合原问题解释卦象、判断依据和现实中值得核实的条件。
 
-This repository is a `pnpm@9.15.4` + Turborepo TypeScript workspace with Next.js Web/Admin shells, a NestJS API, a BullMQ worker, Prisma/PostgreSQL migrations, Redis queue scaffolding, Zod shared schemas, Vitest workspace tests, and Playwright regression coverage. The active public product is Liuyao-only: homepage scenarios, casting, reports, history, settings, Learn Hub, topic pages, and public metadata no longer expose Meihua. Legacy Meihua domain code and API contracts remain only for backward compatibility and are not part of the current public product promise.
+六爻属于传统文化解释。报告不保证现实结果，也不替代医疗、法律、财务等专业意见。AI 解释不会重新排盘；现实情况仍需用户自行核实。
 
-This repository now contains the v1.3 `LIUYAO_CORE_V1` production whitelist implementation.
+## 界面预览
 
-Current local Web status: `LOCAL_PRODUCT_COMPLETE` for the W1 local-only product scope.
+| 提问与起卦 | 报告示例 |
+| --- | --- |
+| ![首页提问工作台，显示常见问题场景和六爻起卦入口](docs/images/home-workbench.png) | ![演示报告，显示六爻盘面和卦象变化](docs/images/report-example.png) |
 
-Current Public Beta P1 status: `PRODUCTION_CALENDAR_READY`.
+![演示报告的 AI 解读，显示针对问题的回答和判断依据](docs/images/report-ai-reading.png)
 
-Current Public Beta P2 implementation status: `GROUNDED_AI_REPORT_CODE_READY`.
+截图来自当前仓库的本地界面。报告截图使用[仓库内的演示问题](apps/web/app/example/report.json)，不包含真实用户报告。演示问题的模型输出已保存为样例数据；实际提问需要配置真实 AI 服务。
 
-Current Public Beta P2.1/P3-A status: `DEEPSEEK_LOCAL_LIVE_SMOKE_VERIFIED_STAGING_PENDING`. The five-scenario Liuyao live smoke is verified locally; HTTPS staging and deployment secrets remain outside Git and are still required.
+## 可以做什么
 
-Current P4-A content framework status: `CONTENT_SEO_GROWTH_FRAMEWORK_READY` for local framework readiness only. This does not change the pending P2.1/P3-A/P3-B deployment gates.
+- 从感情、工作、合作、财务、学业及生活事项进入，也可以直接输入自己的问题；场景入口不是强制分类。
+- 选择系统代摇、逐爻摇卦，或录入已有的六爻与原起卦时间。
+- 查看本卦、动爻、变卦、世应、六亲及计算依据；静卦标记为无变卦。
+- 在有真实模型配置时生成针对问题的 AI 解读，查看行动建议，并从关键判断定位到关联证据和爻位。
+- 在当前浏览器查看自己的报告，下载文本或 SVG，并浏览学习中心的教程、知识卡和问答。
 
-Current commercial content status: `LIUYAO_CONTENT_COMMERCIAL_READY_WITH_BLOCKERS`. Commercial-finalization Batch 01–04 is imported and governed across all 603 repository entries. The all-user Learn Hub now starts with three user goals, five currently available learning stages, six supported reality topics, 12 secondary learning collections, a four-step report-reading route, a combined-filter library, and all 68 linked content visuals. Local preview exposes 500 reviewable/public entries; production filtering currently exposes only 7 approved navigation/topic entries. Articles, knowledge cards, and FAQs remain review-gated until independent editorial and Liuyao domain review is complete. This is not `PRODUCTION_READY`; production deployment and environment evidence remain excluded.
+## 本地运行
 
-Live DeepSeek output requires `DEEPSEEK_API_KEY`. User-facing runtime never substitutes mock output; isolated unit tests use injected fixtures to validate failure, fallback, caching, health checks, readiness checks, rate limits, and UI behavior without external network dependency.
-
-## Scope
-
-- Explicit `RuleProfileLoader`, defaulting to `LIUYAO_CORE_V1`.
-- CORE_V1 data import with 45/24/14/47/18 production units.
-- Candidate rule-pool traceability checks for every CORE_V1 whitelist key.
-- Release tier fail-fast checks for `CORE_V1`, `ADVANCED_BETA`, `REVIEW_REQUIRED`, and `DEPRECATED`.
-- Default feature flags with Advanced Beta, Review Required, precise timing, and diagnostic health language closed.
-- Six-dimension report aggregation with evidence deduplication, a hard evidence cap of 15, and at most 5 public timing candidates.
-- AI input validation that only accepts matched rule codes and explicit `FACT`, `SIGNAL`, or `CANDIDATE_OR_GUARDRAIL` findings.
-- v1.2 deterministic fixture coverage for coin casting, najia, six relations, six spirits, timezone normalization, and basic meihua casting.
-- Public Web product with Liuyao casting, three-coin/manual line input, Liuyao board rendering, formal report URLs, local history replay, settings, export/clear history, Learn Hub, topic journeys, knowledge search, and CORE_V1 metadata.
-- `/api/v1` routes for Liuyao casts/charts/analyze/report/yongshen, unified report detail, settings, export, clear history, content and knowledge. Meihua routes remain legacy compatibility endpoints and must not be linked from public Web surfaces.
-- PostgreSQL-backed report history when database writes succeed; otherwise reports remain in process memory. The active API does not write `data/runtime/history.json`.
-- Structured narrative reports with section-level `findingIds`, `knowledgeIds`, engine versions, and report template versions.
-- Playwright E2E coverage for Liuyao coin/manual flows, invalid input, Meihua two-number/time flows, history replay, friendly errors, content detail routes, settings, export/clear history, and mobile viewports 360/390/430.
-- Production calendar provider `CAL_STD_V1` with structured Gregorian, IANA timezone, four-pillar, solar-term boundary, month-build, day-chen, xun, xun-kong, day-change policy, provider version, and calculated-facts snapshot output.
-- Calendar golden QA with 240 fixtures, including 144 `lunar_python@1.4.8` cross-checked Asia/Shanghai anchor/boundary cases and timezone/DST expansion cases.
-- Grounded AI report pipeline with AI input contract, OpenAI provider, deterministic fallback provider, schema validation, fact fidelity validation, safety validation, anonymous rate limits, prompt versioning, report-level reuse, and fallback-safe UI.
-- P2.1 audit fields on AI report bundles: `reportSource`, `latencyMs`, `tokenUsage`, `provider`, `model`, `promptVersion`, `aiSchemaVersion`, `fallbackUsed`, and `validationStatus`.
-- P3-A local staging foundation with `GET /health`, `GET /ready`, protected-capable `GET /internal/status`, structured JSON logs, aggregate AI metrics, divination and AI rate limits, daily AI budget fallback, and AI concurrency fallback.
-- P4-A content, SEO and growth framework with `CONTENT_SCHEMA_V1`, file-based content repository, content package importer, QA reports, CTA registry, analytics event allowlist, metadata/structured data helpers, `robots.txt`, `sitemap.xml`, content APIs, report-to-content recommendations, and noindex demo fixtures.
-- P4-X product presentation orchestration with `DivinationResultFacts`, Guided/Professional/Admin ViewModels, terminology registry, priority/dedup, state contracts, and visibility matrix.
-- Professional stack migration with `apps/web`, `apps/admin`, `apps/api`, `apps/worker`, and `packages/domain/shared/database/queue/ui/testing`.
-- Nest API service/store bridge with Zod validation, deterministic chart/report generation, P4-X experience output, Prisma persistence, and memory fallback.
-- Next Web Liuyao casting workbench that reads `/experience` and renders Guided, scenario-specific, and Professional ViewModels.
-- Next Web report history and detail pages backed by `GET /api/v1/reports` and `GET /api/v1/reports/:id/experience`.
-- Next Web content, settings, and export paths backed by `GET /api/v1/content`, `GET /api/v1/content/:contentType/:slug`, `GET/PUT /api/v1/settings`, and `GET /api/v1/reports/:id/export`.
-- PostgreSQL seed path for `app_settings` and file-backed content entries, plus report persistence with deterministic result, narrative report, and P4-X experience. Actual persisted counts and backup requirements are recorded in the backup guide.
-- Grounded AI report generation through `POST /api/v1/reports/:id/ai` and BullMQ-backed `POST /api/v1/reports/:id/ai/jobs`, persisted in Prisma and rendered on the Next report detail page.
-
-## Architecture
-
-```text
-pnpm workspace + Turborepo
-        ↓
-apps/web        Next.js 15 + React 19 public product shell
-apps/admin      Next.js 15 + React 19 internal admin shell
-apps/api        NestJS 10 API service
-apps/worker     BullMQ worker
-        ↓
-packages/domain TypeScript deterministic Liuyao + legacy Meihua compatibility + CAL/CORE/AI/presentation package
-packages/shared Zod schemas and shared constants
-packages/database Prisma schema for PostgreSQL 16
-packages/queue  Redis 7 + BullMQ helpers
-packages/ui     Shared React UI package
-packages/testing Shared test helpers
-```
-
-Local infrastructure (full mode):
-
-```bash
-docker compose -p six up -d
-DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:generate
-DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm --filter @six/database exec prisma migrate deploy --schema prisma/schema.prisma
-DATABASE_URL=postgresql://postgres:postgres@localhost:5434/six_professional pnpm db:seed
-```
-
-For the complete first-run, daily-start, port-isolation, health-check, and shutdown procedure, see [docs/development/local-startup.md](docs/development/local-startup.md).
-
-For question understanding, necessary clarification, same-chart interpretation revisions, and real-model regression checks, see [docs/development/question-first-report-flow.md](docs/development/question-first-report-flow.md).
-
-For SIX-only database inventory, file/asset backup, restore rehearsal, machine migration, and rollback, see [docs/development/backup-and-migration.md](docs/development/backup-and-migration.md). Run `db:seed` above only for first initialization or an intentional content refresh, not after restoring a backup. Configured database credentials alone do not prove that reports were persisted.
-
-For the current content decision counts, Runtime publication boundary, search/SEO behavior, and remaining review blockers, see [docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md](docs/content-growth/LIUYAO_CONTENT_COMMERCIAL_CLOSURE_IMPLEMENTATION_REPORT.md).
-
-## Commands
+需要 Node.js 20、`pnpm@9.15.4`。以下方式可先查看界面和确定性排盘，AI 解读保持不可用，报告暂存于 API 进程内存中。
 
 ```bash
 pnpm install
-pnpm run dev
-pnpm run dev:web
-pnpm run dev:admin
-pnpm run dev:api
-pnpm run dev:worker
-pnpm run build
-pnpm run lint
-pnpm run typecheck
-pnpm run test
-pnpm run validate:v13
-pnpm run test:domain
-pnpm run test:contract
-pnpm run test:e2e
-pnpm run test:ai
-pnpm run test:calendar
-pnpm run fixtures:calendar
-pnpm run smoke:ai:live
-pnpm run content:validate
-pnpm run content:dry-run
-pnpm run content:import
-pnpm run content:import-articles
-pnpm run content:import-knowledge
-pnpm run content:import-faq
-pnpm run content:import-closure
-pnpm run content:qa
-pnpm run content:seo
-pnpm run content:rehearsal
-pnpm run content:finalize-local
-pnpm run content:test-assets
-pnpm run validate
-pnpm run validate:p1
-pnpm run validate:p2
-pnpm run validate:p4-framework
-pnpm run validate:experience
-pnpm run validate:w1
 ```
 
-`pnpm run smoke:ai:live` exits as skipped when the selected provider key is absent. A passing P2.1 run executes five Liuyao live cases and confirms `reportSource = DEEPSEEK_LIVE` when `AI_PROVIDER=deepseek`.
+分别打开两个终端：
 
-P4-A demo content under `fixtures/content/p4-demo-package/` is `DEMO_ONLY`, validates checksums, and is used for isolated import rehearsal. It is not indexed and is not published by default.
-
-## Runtime Checks
-
-- `GET /api/v1/health` returns only `{ "status": "ok" }`.
-- `GET /api/v1/ready` reports architecture metadata and database/Redis/AI configuration presence without returning secrets; it does not prove live database connectivity or successful writes.
-- Public API errors are normalized as `{ code, message, traceId }`.
-
-## Staging Environment
-
-`.env.example` intentionally contains placeholders only and must not contain real secrets. Staging should configure secrets and controls in the deployment platform:
-
-```text
-NODE_ENV=production
-APP_ENV=staging
-DEEPSEEK_API_KEY
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-AI_PROVIDER=deepseek
-AI_MODEL=deepseek-v4-flash
-AI_TIMEOUT_MS
-AI_MAX_OUTPUT_TOKENS
-AI_RATE_LIMIT_WINDOW_MS
-AI_RATE_LIMIT_MAX
-DIVINATION_RATE_LIMIT_MAX
-AI_CONCURRENCY_MAX
-AI_DAILY_BUDGET_LIMIT
-INTERNAL_STATUS_TOKEN or platform basic auth
+```bash
+API_PORT=4000 AI_PROVIDER=disabled pnpm dev:api
 ```
 
-## Production Boundary
+```bash
+PORT=3200 NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:4000/api/v1 pnpm dev:web
+```
 
-Production code executes rules only through `data/production/core-v1-rule-profile.json` and its `core-v1-*` datasets. Candidate rule pools are present only for whitelist traceability checks and remain outside the executable rule set.
+访问 <http://localhost:3200>。可直接打开 <http://localhost:3200/example> 查看无需 API 密钥的完整演示报告。
 
-New Liuyao reports use `CAL_STD_V1`. Historical reports that already contain `CAL_STD_V1_LIGHT` remain readable and are not rewritten. Any legacy files under `data/runtime/` must be assessed before deletion; the active API uses Prisma or process memory instead of that history file.
+需要持久化报告和队列时，使用独立的 PostgreSQL、Redis 与数据库迁移。完整步骤见[本地启动指南](docs/development/local-startup.md)；现有数据迁移与备份见[备份指南](docs/development/backup-and-migration.md)。Docker Compose 只启动 PostgreSQL 与 Redis，Web/API 仍由本地 Node.js 进程运行。
 
-## Migration Boundary
+## 真实 AI 解读
 
-The professional TypeScript stack is the active architecture. `apps/web` creates Liuyao reports through `apps/api`, lists Liuyao history, opens Guided/Professional report details, generates grounded AI report bundles, and browses the Runtime-governed Learn Hub. Development exposes review-gated content for local inspection; beta/production exposes only `PUBLICATION_READY` records. Current production semantics yield 7 public entries, while 493 entries remain in review. P4-X has been rechecked against the monorepo/Prisma/Worker architecture. Admin governance, HTTPS staging, production performance, caching, observability, and real-device review remain release steps. See [docs/production/96-liuyao-public-beta-commercial-readiness.md](docs/production/96-liuyao-public-beta-commercial-readiness.md) for the consolidated platform gate and the commercial closure report for the current content gate.
+将 `.env.example` 复制为仓库根目录的 `.env`，在本机设置 `DEEPSEEK_API_KEY`，然后按[启动指南](docs/development/local-startup.md#real-deepseek-mode)运行 API 与 Web。密钥只提供给服务端，**不要**放入 `NEXT_PUBLIC_*` 变量、源代码、截图或提交记录。没有配置或模型不可用时，界面会显示状态，不会用模拟解读冒充真实输出。
+
+`.env`、`.env.*` 默认被 Git 忽略，只有不含真实密钥的 `.env.example` 可以提交。本仓库的示例数据库密码只适用于隔离的本地开发环境，部署时请自行设置独立凭据。
+
+## 项目结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `apps/web` | Next.js 用户界面与报告阅读 |
+| `apps/api` | NestJS API、报告保存和 AI 服务 |
+| `apps/worker` | BullMQ 后台任务 |
+| `apps/admin` | 内部管理界面 |
+| `packages/domain` | 六爻排盘、历法、规则与报告结构 |
+| `packages/database` | Prisma 模型与迁移 |
+| `packages/shared` | 共享类型和校验 |
+| `data`、`content` | 规则、内容与视觉资源 |
+
+当前面向用户的产品只展示六爻。仓库中保留的梅花代码用于旧数据和接口兼容，不属于当前用户流程。
+
+## 开发与验证
+
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test:domain
+pnpm test:contract
+pnpm test:home
+```
+
+端到端测试见 `tests/e2e` 与 `playwright.config.ts`。内容导入、校验与发布状态见[内容文档](docs/content-growth/README.md)。部分文章、知识卡和 FAQ 仍处于审核状态；本地可预览的内容不等于已经获准公开发布。
+
+## 数据与发布边界
+
+浏览器会为匿名用户保存本地身份与未完成草稿。清除站点数据或换浏览器后，当前版本无法自动恢复报告。未连接 PostgreSQL 的开发模式会把报告暂存在 API 进程内存中，服务重启后可能丢失。
+
+当前仓库提供本地开发与验证所需的代码和文档。公开部署还需要独立完成密钥配置、持久化、内容审核、运行环境和真实设备验收；仓库中的截图及演示报告不代表生产环境已就绪。
+
+## 许可证
+
+尚未选择开源许可证。公开仓库不自动授予他人复制、修改或分发代码与视觉内容的权利；正式开放复用前，需要由项目所有者选择并加入相应许可证，同时确认内容及图片资产的授权范围。
